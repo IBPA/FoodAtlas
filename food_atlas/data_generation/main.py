@@ -13,7 +13,10 @@ sys.path.append('..')
 import pandas as pd  # noqa: E402
 from pandarallel import pandarallel  # noqa: E402
 
+<<<<<<< HEAD
 from common_utils.foodatlas_types import FoodAtlasEntity, FoodAtlasRelation  # noqa: E402
+=======
+>>>>>>> dev_local
 from common_utils.foodatlas_types import CandidateEntity, CandidateRelation  # noqa: E402
 
 
@@ -251,14 +254,18 @@ def generate_hypotheses(
     df: pd.DataFrame,
     hypotheses_filepath: str,
 ):
+<<<<<<< HEAD
     df = df.copy().head(20)
 
+=======
+>>>>>>> dev_local
     def _read_foodatlasent(x):
         return eval(x, globals())
     df["chemicals"] = df["chemicals"].apply(_read_foodatlasent)
     df["species"] = df["species"].apply(_read_foodatlasent)
     df["food_parts"] = df["food_parts"].apply(_read_foodatlasent)
 
+<<<<<<< HEAD
     print(df)
     sys.exit()
 
@@ -277,6 +284,61 @@ def generate_hypotheses(
             newrow["head_type"] = "food_part"
             newrow["tail_type"] = "chemical"
             newrows.append(newrow)
+=======
+    species_contains_chemical = CandidateRelation(
+        name='contains',
+        translation='contains',
+        head_type='species',
+        tail_type='chemical',
+    )
+
+    species_with_part_contains_chemical = CandidateRelation(
+        name='contains',
+        translation='contains',
+        head_type='species_with_part',
+        tail_type='chemical',
+    )
+
+    has_part = CandidateRelation(
+        name='hasPart',
+        translation='has part',
+        head_type='species',
+        tail_type='species_with_part',
+    )
+
+    def _f(row):
+        newrows = []
+
+        if not row["food_parts"]:
+            for s, c in product(row["species"], row["chemicals"]):
+                newrow = row.copy().drop(["chemicals", "species", "food_parts"])
+                newrow["head"] = s
+                newrow["relation"] = species_contains_chemical
+                newrow["tail"] = c
+                newrows.append(newrow)
+        else:
+            for s, p, c in product(row["species"], row["food_parts"], row["chemicals"]):
+                # contains
+                newrow = row.copy().drop(["chemicals", "species", "food_parts"])
+
+                species_with_part = CandidateEntity(
+                    type="species_with_part",
+                    name=f"{s.name} {p.name}"
+                )
+
+                newrow["head"] = species_with_part
+                newrow["relation"] = species_with_part_contains_chemical
+                newrow["tail"] = c
+                newrows.append(newrow)
+
+                # hasPart
+                newrow = row.copy().drop(["chemicals", "species", "food_parts"])
+
+                newrow["head"] = s
+                newrow["relation"] = has_part
+                newrow["tail"] = species_with_part
+                newrows.append(newrow)
+>>>>>>> dev_local
 
         return newrows
 
