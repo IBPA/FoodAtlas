@@ -1,0 +1,194 @@
+# -*- coding: utf-8 -*-
+"""Dataset methods for natural language inference.
+
+Tokenization -> lower casing -> stop words removal -> lemmatization
+
+Authors:
+    Fangzhou Li - fzli@ucdavis.edu
+
+Todo:
+    * TODOs
+
+"""
+import torch
+from torch.utils.data import Dataset, DataLoader
+from torch.nn.utils.rnn import pad_sequence
+from transformers import AutoTokenizer, PreTrainedTokenizerBase
+import pandas as pd
+
+
+def _truncate_seq_pair(tokens_a, tokens_b, max_length):
+    """Truncates a sequence pair in place to the maximum length.
+    This is a simple heuristic which will always truncate the longer sequence
+    one token at a time. This makes more sense than truncating an equal percent
+    of tokens from each, since if one sequence is very short then each token
+    that's truncated likely contains more information than a longer sequence.
+
+    Reference: https://github.com/huggingface/transformers/blob/main/examples/
+    legacy/run_swag.py
+
+    Args:
+        tokens_a: A list of tokens.
+        tokens_b: A list of tokens.
+        max_length: Maximum length of the output sequence.
+
+    Returns:
+        A truncated list of tokens.
+
+    """
+
+    while True:
+        total_length = len(tokens_a) + len(tokens_b)
+        if total_length <= max_length:
+            break
+        if len(tokens_a) > len(tokens_b):
+            tokens_a.pop()
+        else:
+            tokens_b.pop()
+
+
+class FoodAtlasNLIDataset(Dataset):
+    """NLI dataset class.
+    Reference: https://www.kaggle.com/code/tks0123456789/nli-by-bert-pytorch.
+
+    Args:
+        premises: list of premises
+        hypotheses: list of hypotheses
+        labels: list of labels
+        tokenizer: tokenizer
+        max_seq_len: maximum sequence length
+
+    """
+
+    def __init__(
+            self,
+            premises: list[str],
+            hypotheses: list[str],
+            tokenizer: PreTrainedTokenizerBase,
+            labels: list[int] = None,
+            label_mapper: dict = {
+                'entail': 1, 'not_entail': 0
+            },
+            max_seq_len: int = 512):
+        if labels is not None:
+            self.labels = torch.Tensor(
+                [label_mapper[label] for label in labels]
+            )
+
+        self.max_tokens = 0
+        self.inputs = []
+        for p, h in zip(premises, hypotheses):
+            p_ids = tokenizer.encode(p, add_special_tokens=False)
+            h_ids = tokenizer.encode(h, add_special_tokens=False)
+            _truncate_seq_pair(p_ids, h_ids, max_seq_len - 3)
+
+            input_ids = [tokenizer.cls_token_id] \
+                + p_ids \
+                + [tokenizer.sep_token_id] \
+                + h_ids \
+                + [tokenizer.sep_token_id]
+            attention_mask = [1] * len(input_ids)
+            token_type_ids = [0] * (len(p_ids) + 2) + [1] * (len(h_ids) + 1)
+
+            self.inputs.append([
+                torch.Tensor(input_ids),
+                torch.Tensor(attention_mask),
+                torch.Tensor(token_type_ids)
+            ])
+            self.max_tokens = max(self.max_tokens, len(input_ids))
+
+        print("Longest Sequence Length:", self.max_tokens)
+
+    def __len__(self):
+        return len(self.inputs)
+
+    def __getitem__(self, idx):
+        return self.inputs[idx], self.labels[idx]
+
+
+def collate_fn_padding(batch):
+    """Collate function for padding.
+
+    Args:
+        batch: A list of samples.
+
+    Returns:
+        A list of samples.
+
+    """
+    inputs, labels = list(zip(*batch))
+
+    input_ids_batch, attention_mask_batch, token_type_ids_batch = zip(*inputs)
+    input_ids_batch = pad_sequence(
+        input_ids_batch, batch_first=True, padding_value=0)
+    attention_mask_batch = pad_sequence(
+        attention_mask_batch, batch_first=True, padding_value=0)
+    token_type_ids_batch = pad_sequence(
+        token_type_ids_batch, batch_first=True, padding_value=1)
+
+    return input_ids_batch, attention_mask_batch, token_type_ids_batch, \
+        torch.stack(labels, dim=0)
+
+
+def get_food_atlas_data_loader(
+        data: pd.DataFrame,
+        tokenizer: PreTrainedTokenizerBase,
+        max_seq_len: int = 512,
+        batch_size: int = 1,
+        shuffle: bool = True,
+        num_workers: int = 0,
+        collate_fn: callable = None,
+        ):
+    """Get data loader for food atlas dataset.
+
+    Args:
+        data: dataframe
+        tokenizer: tokenizer
+        max_seq_len: maximum sequence length
+        batch_size: batch size
+        shuffle: whether to shuffle the data
+        num_workers: number of workers
+        collate_fn: collate function
+
+    Returns:
+        data loader
+
+    """
+    dataset = FoodAtlasNLIDataset(
+        premises=data['premise'].tolist(),
+        hypotheses=data['hypothesis'].tolist(),
+        labels=data['label'].tolist(),
+        tokenizer=tokenizer,
+        max_seq_len=max_seq_len
+    )
+
+    data_loader = DataLoader(
+        dataset=dataset,
+        batch_size=batch_size,
+        shuffle=shuffle,
+        num_workers=num_workers,
+        collate_fn=collate_fn
+    )
+
+    return data_loader
+
+
+if __name__ == '__main__':
+    torch.manual_seed(0)
+
+    from transformers import BertTokenizer
+    import pandas as pd
+
+    data = pd.read_csv("outputs/test.csv", sep="\t")
+    data = data[['premise', 'hypothesis_string', 'label']]
+    data = data.rename({'hypothesis_string': 'hypothesis'}, axis=1)
+    tokenizer = AutoTokenizer.from_pretrained('dmis-lab/biobert-v1.1')
+    tokenizer._pad_token_type_id = 1
+
+    get_food_atlas_data_loader(
+        data=data,
+        tokenizer=tokenizer,
+        max_seq_len=100,
+        batch_size=4,
+        collate_fn=collate_fn_padding,
+    )
