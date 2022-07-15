@@ -1,0 +1,9 @@
+pycodestyle
+-i https://download.pytorch.org/whl/cu113
+torch
+-i https://download.pytorch.org/whl/cu113
+torchvision
+-i https://download.pytorch.org/whl/cu113
+torchaudio
+pandas>=1.4.3
+transformers>=4.20.1
