@@ -1,5 +1,5 @@
 from ast import literal_eval
-from collections import namedtuple
+from collections import namedtuple, Counter
 from pathlib import Path
 from typing import Dict, List, Any
 
@@ -26,7 +26,7 @@ class FoodAtlasEntity():
     _TYPES = [
         "chemical",
         "species",
-        "species_with_part"
+        "species_with_part",
         "food_part",
     ]
 
@@ -143,8 +143,13 @@ class FoodAtlasEntity():
     def num_entities(self) -> int:
         return self.df_entities.shape[0]
 
-    def save(self) -> None:
-        self.df_entities.to_csv(self.entities_filepath, sep='\t', index=False)
+    def save(self, entities_filepath: str = None) -> None:
+        if entities_filepath:
+            print(f"Saving entities to a new filepath: {entities_filepath}")
+            self.df_entities.to_csv(entities_filepath, sep='\t', index=False)
+        else:
+            print(f"Saving entities to original filepath: {self.entities_filepath}")
+            self.df_entities.to_csv(self.entities_filepath, sep='\t', index=False)
 
 
 class FoodAtlasRelation():
@@ -152,13 +157,9 @@ class FoodAtlasRelation():
         "foodatlas_id",
         "name",
         "translation",
-        "head_type",
-        "tail_type",
     ]
 
     _DEFAULTS = [
-        None,
-        None,
         None,
         None,
         None,
@@ -192,16 +193,11 @@ class FoodAtlasRelation():
             self,
             name: str,
             translation: str,
-            head_type: str,
-            tail_type: str,
     ) -> pd.Series:
         # check for duplicates
         for idx, row in self.df_relations.iterrows():
             if row.name == name:
                 assert translation == row.translation
-                assert head_type == row.head_type
-                assert tail_type == row.tail_type
-
                 return row
 
         # no duplicates
@@ -209,8 +205,6 @@ class FoodAtlasRelation():
             "foodatlas_id": self.avail_id,
             "name": name,
             "translation": translation,
-            "head_type": head_type,
-            "tail_type": tail_type,
         }
         row = pd.Series(new_data, name=name)
         self.df_relations = pd.concat([self.df_relations, pd.DataFrame(row).transpose()])
@@ -226,8 +220,13 @@ class FoodAtlasRelation():
     def num_relations(self) -> int:
         return self.df_relations.shape[0]
 
-    def save(self) -> None:
-        self.df_relations.to_csv(self.relations_filepath, sep='\t', index=False)
+    def save(self, relations_filepath: str = None) -> None:
+        if relations_filepath:
+            print(f"Saving relations to a new filepath: {relations_filepath}")
+            self.df_relations.to_csv(relations_filepath, sep='\t', index=False)
+        else:
+            print(f"Saving relations to original filepath: {self.relations_filepath}")
+            self.df_relations.to_csv(self.relations_filepath, sep='\t', index=False)
 
 
 CandidateEntity = namedtuple(
@@ -242,6 +241,62 @@ CandidateRelation = namedtuple(
     FoodAtlasRelation._COLUMNS,
     defaults=FoodAtlasRelation._DEFAULTS,
 )
+
+
+def merge_candidate_entities(
+    candidate_entities: List[CandidateEntity],
+    using: str,
+) -> List[CandidateEntity]:
+
+    if using in ["NCBI_taxonomy", "MESH"]:
+        duplicate_ids = [e.other_db_ids[using]
+                         for e in candidate_entities if e.other_db_ids[using]]
+        duplicate_ids = [x for x, count in Counter(duplicate_ids).items() if count > 1]
+
+        if duplicate_ids:
+            for duplicate_id in duplicate_ids:
+                duplicates = [e for e in candidate_entities
+                              if e.other_db_ids[using] == duplicate_id]
+
+                type = []
+                name = []
+                synonyms = []
+                other_db_ids = {}
+                for d in duplicates:
+                    if d.foodatlas_id is not None:
+                        raise ValueError("Candidate entities cannot have foodatlas ID!")
+                    type.append(d.type)
+                    name.append(d.name)
+                    synonyms.extend(d.synonyms)
+                    other_db_ids = {**other_db_ids, **d.other_db_ids}
+
+                type = list(set(type))
+                name = list(set(name))
+                synonyms = list(set(synonyms))
+
+                assert len(type) == 1
+
+                if type == "NCBI_taxonomy":
+                    assert len(name) == 1
+                elif type == "MESH":
+                    if len(name) > 1:
+                        synonyms = list(set(synonyms + name[1:]))
+                        name = name[0]
+
+                merged = CandidateEntity(
+                    type=type[0],
+                    name=name[0],
+                    synonyms=synonyms,
+                    other_db_ids=other_db_ids,
+                )
+
+                for d in duplicates:
+                    candidate_entities.remove(d)
+                candidate_entities.append(merged)
+
+        return candidate_entities
+    else:
+        raise NotImplementedError()
 
 
 if __name__ == '__main__':

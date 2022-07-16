@@ -46,13 +46,8 @@ def main():
     # read data
     df = pd.read_csv(args.food_filepath)
     df.dropna(subset="ncbi_taxonomy_id", inplace=True)
-    df = df[["name", "name_scientific"]]
-
-    rename_dict = {
-        "name": "food_name",
-        "name_scientific": "food_name_synonyms",
-    }
-    df.rename(rename_dict, inplace=True, axis=1)
+    df = df[["name", "name_scientific", "ncbi_taxonomy_id"]]
+    df["ncbi_taxonomy_id"] = df["ncbi_taxonomy_id"].astype(int)
     df.drop_duplicates(inplace=True)
 
     df.to_csv(args.output_filepath, sep='\t', index=False)
