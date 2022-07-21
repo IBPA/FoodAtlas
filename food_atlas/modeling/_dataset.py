@@ -13,7 +13,7 @@ Todo:
 import torch
 from torch.utils.data import Dataset, DataLoader
 from torch.nn.utils.rnn import pad_sequence
-from transformers import AutoTokenizer, PreTrainedTokenizerBase
+from transformers import PreTrainedTokenizerBase
 import pandas as pd
 
 
@@ -71,7 +71,7 @@ class FoodAtlasNLIDataset(Dataset):
             },
             max_seq_len: int = 512):
         if labels is not None:
-            self.labels = torch.Tensor(
+            self.labels = torch.LongTensor(
                 [label_mapper[label] for label in labels]
             )
 
@@ -91,9 +91,9 @@ class FoodAtlasNLIDataset(Dataset):
             token_type_ids = [0] * (len(p_ids) + 2) + [1] * (len(h_ids) + 1)
 
             self.inputs.append([
-                torch.Tensor(input_ids),
-                torch.Tensor(attention_mask),
-                torch.Tensor(token_type_ids)
+                torch.LongTensor(input_ids),
+                torch.IntTensor(attention_mask),
+                torch.IntTensor(token_type_ids)
             ])
             self.max_tokens = max(self.max_tokens, len(input_ids))
 
@@ -113,7 +113,10 @@ def collate_fn_padding(batch):
         batch: A list of samples.
 
     Returns:
-        A list of samples.
+        A tuple of (inputs, labels). Inputs are tuples of the following:
+            input_ids: A tensor of shape (batch_size, seq_len)
+            attention_mask: A tensor of shape (batch_size, seq_len)
+            token_type_ids: A tensor of shape (batch_size, seq_len)
 
     """
     inputs, labels = list(zip(*batch))
@@ -126,18 +129,19 @@ def collate_fn_padding(batch):
     token_type_ids_batch = pad_sequence(
         token_type_ids_batch, batch_first=True, padding_value=1)
 
-    return input_ids_batch, attention_mask_batch, token_type_ids_batch, \
+    return (input_ids_batch, attention_mask_batch, token_type_ids_batch), \
         torch.stack(labels, dim=0)
 
 
-def get_food_atlas_data_loader(
-        data: pd.DataFrame,
+def get_food_atlas_data_loaders(
+        path_data_train: str,
+        path_data_test: str,
         tokenizer: PreTrainedTokenizerBase,
         max_seq_len: int = 512,
         batch_size: int = 1,
         shuffle: bool = True,
         num_workers: int = 0,
-        collate_fn: callable = None,
+        collate_fn: callable = collate_fn_padding,
         ):
     """Get data loader for food atlas dataset.
 
@@ -151,44 +155,32 @@ def get_food_atlas_data_loader(
         collate_fn: collate function
 
     Returns:
-        data loader
+        data loaders for training and testing
 
     """
-    dataset = FoodAtlasNLIDataset(
-        premises=data['premise'].tolist(),
-        hypotheses=data['hypothesis'].tolist(),
-        labels=data['label'].tolist(),
-        tokenizer=tokenizer,
-        max_seq_len=max_seq_len
-    )
+    data_loaders = []
+    for path in [path_data_train, path_data_test]:
+        data = pd.read_csv(path, sep='\t')
+        data = data[['premise', 'hypothesis_string', 'label']]
+        data = data.rename(
+            {'hypothesis_string': 'hypothesis'}, axis=1
+        )
+        dataset = FoodAtlasNLIDataset(
+            premises=data['premise'].tolist(),
+            hypotheses=data['hypothesis'].tolist(),
+            labels=data['label'].tolist(),
+            tokenizer=tokenizer,
+            max_seq_len=max_seq_len
+        )
+        data_loader = DataLoader(
+            dataset=dataset,
+            batch_size=batch_size,
+            shuffle=shuffle,
+            num_workers=num_workers,
+            collate_fn=collate_fn
+        )
+        data_loaders += [data_loader]
 
-    data_loader = DataLoader(
-        dataset=dataset,
-        batch_size=batch_size,
-        shuffle=shuffle,
-        num_workers=num_workers,
-        collate_fn=collate_fn
-    )
+    data_loader_train, data_loader_test = data_loaders
 
-    return data_loader
-
-
-if __name__ == '__main__':
-    torch.manual_seed(0)
-
-    from transformers import BertTokenizer
-    import pandas as pd
-
-    data = pd.read_csv("outputs/test.csv", sep="\t")
-    data = data[['premise', 'hypothesis_string', 'label']]
-    data = data.rename({'hypothesis_string': 'hypothesis'}, axis=1)
-    tokenizer = AutoTokenizer.from_pretrained('dmis-lab/biobert-v1.1')
-    tokenizer._pad_token_type_id = 1
-
-    get_food_atlas_data_loader(
-        data=data,
-        tokenizer=tokenizer,
-        max_seq_len=100,
-        batch_size=4,
-        collate_fn=collate_fn_padding,
-    )
+    return data_loader_train, data_loader_test
