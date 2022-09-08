@@ -135,19 +135,19 @@ def collate_fn_padding(batch):
 
 def get_food_atlas_data_loaders(
         path_data_train: str,
-        path_data_test: str,
         tokenizer: PreTrainedTokenizerBase,
+        path_data_test: str = None,
         max_seq_len: int = 512,
         batch_size: int = 1,
         shuffle: bool = True,
         num_workers: int = 0,
-        collate_fn: callable = collate_fn_padding,
-        ):
+        collate_fn: callable = collate_fn_padding):
     """Get data loader for food atlas dataset.
 
     Args:
-        data: dataframe
+        path_data_train: path to the training data
         tokenizer: tokenizer
+        path_data_test: path to the testing data
         max_seq_len: maximum sequence length
         batch_size: batch size
         shuffle: whether to shuffle the data
@@ -160,25 +160,28 @@ def get_food_atlas_data_loaders(
     """
     data_loaders = []
     for path in [path_data_train, path_data_test]:
-        data = pd.read_csv(path, sep='\t')
-        data = data[['premise', 'hypothesis_string', 'label']]
-        data = data.rename(
-            {'hypothesis_string': 'hypothesis'}, axis=1
-        )
-        dataset = FoodAtlasNLIDataset(
-            premises=data['premise'].tolist(),
-            hypotheses=data['hypothesis'].tolist(),
-            labels=data['label'].tolist(),
-            tokenizer=tokenizer,
-            max_seq_len=max_seq_len
-        )
-        data_loader = DataLoader(
-            dataset=dataset,
-            batch_size=batch_size,
-            shuffle=shuffle,
-            num_workers=num_workers,
-            collate_fn=collate_fn
-        )
+        if path is not None:
+            data = pd.read_csv(path)
+            data = data[['premise', 'hypothesis_string', 'label']]
+            data = data.rename(
+                {'hypothesis_string': 'hypothesis'}, axis=1
+            )
+            dataset = FoodAtlasNLIDataset(
+                premises=data['premise'].tolist(),
+                hypotheses=data['hypothesis'].tolist(),
+                labels=data['label'].tolist(),
+                tokenizer=tokenizer,
+                max_seq_len=max_seq_len
+            )
+            data_loader = DataLoader(
+                dataset=dataset,
+                batch_size=batch_size,
+                shuffle=shuffle,
+                num_workers=num_workers,
+                collate_fn=collate_fn
+            )
+        else:
+            data_loader = None
         data_loaders += [data_loader]
 
     data_loader_train, data_loader_test = data_loaders
