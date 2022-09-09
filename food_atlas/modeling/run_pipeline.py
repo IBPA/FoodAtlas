@@ -4,8 +4,9 @@ import pandas as pd
 import click
 
 from . import (
+    load_model,
     train_nli_model,
-    get_food_atlas_data_loader
+    get_food_atlas_data_loaders,
 )
 
 
@@ -26,15 +27,16 @@ def main(
 
     # Load NLI model from hugging face if the first cycle. Otherwise, load from
     #   disk.
-    if is_first_cycle:
-        pass
-    else:
-        pass
-    tokenizer = AutoTokenizer.from_pretrained(path_or_name_nli_model)
-    tokenizer._pad_token_type_id = 1
+    # if is_first_cycle:
+    #     pass
+    # else:
+    #     pass
+    # tokenizer = AutoTokenizer.from_pretrained(path_or_name_nli_model)
+    # tokenizer._pad_token_type_id = 1
+    model, tokenizer = load_model(path_or_name_nli_model)
 
     # Load datasets.
-    data_train_loader, data_test_loader = get_food_atlas_data_loader(
+    data_train_loader, data_test_loader = get_food_atlas_data_loaders(
         path_data_train,
         path_data_test,
         tokenizer=tokenizer,
