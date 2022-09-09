@@ -1,0 +1,20 @@
+premise	hypothesis_string	label
+Xanthoangelol (XA) and 4-hydroxyderrcin (4-HD), phytochemicals extracted from Angelica keiskei, have been reported to possess various biological properties.	Angelica contains 4-hydroxyderrcin	entail
+Xanthoangelol (XA) and 4-hydroxyderrcin (4-HD), phytochemicals extracted from Angelica keiskei, have been reported to possess various biological properties.	Angelica contains Xanthoangelol	entail
+Angelica keiskei (Ashitaba in Japanese), a traditional herb in Japan, contains abundant prenylated chalcones.	Angelica contains chalcones	entail
+An ethanol extract of Angelica keiskei (Miq.)	Angelica contains ethanol	entail
+Xanthoangelol, a major chalcone constituent of Angelica keiskei, induces apoptosis in neuroblastoma and leukemia cells.	Angelica contains chalcone	entail
+Xanthoangelol, a major chalcone constituent of Angelica keiskei, induces apoptosis in neuroblastoma and leukemia cells.	Angelica contains Xanthoangelol	entail
+The method was then successfully applied for the rapid identification of phenolics contained in an EtOH extract of Angelica keiskei.	Angelica contains phenolics	entail
+The method was then successfully applied for the rapid identification of phenolics contained in an EtOH extract of Angelica keiskei.	Angelica contains EtOH	entail
+The plant Angelica keiskei contains two main physiologically active flavonoid chalcones, 4-hydroxyderricin and xanthoangelol.	Angelica contains 4-hydroxyderricin	entail
+The plant Angelica keiskei contains two main physiologically active flavonoid chalcones, 4-hydroxyderricin and xanthoangelol.	Angelica contains flavonoid chalcones	entail
+The plant Angelica keiskei contains two main physiologically active flavonoid chalcones, 4-hydroxyderricin and xanthoangelol.	Angelica contains xanthoangelol	entail
+Xanthoangelol (XA) and 4-hydroxyderrcin (4-HD), phytochemicals extracted from Angelica keiskei, have been reported to possess various biological properties.	Angelica contains vitamin C	not_entail
+Xanthoangelol (XA) and 4-hydroxyderrcin (4-HD), phytochemicals extracted from Angelica keiskei, have been reported to possess various biological properties.	Angelica contains oxygen	not_entail
+Angelica keiskei (Ashitaba in Japanese), a traditional herb in Japan, contains abundant prenylated chalcones.	Angelica contains sugar	not_entail
+An ethanol extract of Angelica keiskei (Miq.)	Orange contains ethanol	not_entail
+Xanthoangelol, a major chalcone constituent of Angelica keiskei, induces apoptosis in neuroblastoma and leukemia cells.	Apple contains chalcone	not_entail
+Xanthoangelol, a major chalcone constituent of Angelica keiskei, induces apoptosis in neuroblastoma and leukemia cells.	Beef contains Xanthoangelol	not_entail
+The method was then successfully applied for the rapid identification of phenolics contained in an EtOH extract of Angelica keiskei.	Cabbage contains phenolics	not_entail
+The method was then successfully applied for the rapid identification of phenolics contained in an oil extract of Angelica keiskei.	Angelica contains EtOH	not_entail
