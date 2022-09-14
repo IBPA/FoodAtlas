@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Dict, List, Any
 
 import pandas as pd
+pd.options.mode.chained_assignment = None
 
 
 class FoodAtlasEntity():
@@ -27,7 +28,6 @@ class FoodAtlasEntity():
         "chemical",
         "species",
         "species_with_part",
-        "food_part",
     ]
 
     _OTHER_DBS = [
@@ -74,59 +74,58 @@ class FoodAtlasEntity():
 
     def add(
             self,
-            type: str,
+            type_: str,
             name: str,
             synonyms: List[str] = [],
             other_db_ids: Dict[str, Any] = {},
     ) -> pd.Series:
+        # lower case
+        type_ = type_.lower()
+        name = name.lower()
+        synonyms = [x.lower() for x in synonyms]
+
         # check integrity
-        assert type in self._TYPES
+        assert type_ in self._TYPES
         assert set(other_db_ids.keys()).issubset(self._OTHER_DBS)
 
         # check for duplicates
-        for idx, row in self.df_entities.iterrows():
-            ns = [row.name] + row.synonyms
-            input_ns = [name] + synonyms
+        def _check_duplicate(row):
+            x = row["other_db_ids"]
+            shared = {k: x[k] for k in x if k in other_db_ids and x[k] == other_db_ids[k]}
+            return True if len(shared) >= 1 and row.type == type_ else False
+        dup_idx = self.df_entities.apply(_check_duplicate, axis=1)
 
-            ns_lower = [x.lower() for x in ns]
-            input_ns_lower = [x.lower() for x in input_ns]
+        df_duplicates = self.df_entities[dup_idx]
 
-            if set(ns_lower) & set(input_ns_lower) and row.type == type:
-                print(f"Entity {name} already exists!")
+        # duplicates exist!
+        if df_duplicates.shape[0] > 0:
+            if df_duplicates.shape[0] >= 2:
+                print(type_, name, synonyms, other_db_ids)
+                print(df_duplicates)
+                raise ValueError("Cannot have more than two matching rows!")
 
-                new_synonyms = row.synonyms
-                for x in input_ns:
-                    if x.lower() == row.name.lower() or x.lower() in ns_lower:
-                        continue
-                    new_synonyms.append(x)
+            entity = df_duplicates.iloc[0]
+            name_and_synonyms = [entity.name] + entity.synonyms
+            input_name_and_synonyms = [name] + synonyms
 
-                row.synonyms = new_synonyms
+            new_synonyms = entity.synonyms
+            for x in input_name_and_synonyms:
+                if x in name_and_synonyms:
+                    continue
+                new_synonyms.append(x)
 
-                # db_ids
-                if len(other_db_ids) > 0:
-                    input_db_ids = other_db_ids
-                    db_ids = row.other_db_ids
+            entity.at["synonyms"] = new_synonyms
+            entity.at["other_db_ids"] = {**other_db_ids, **entity.other_db_ids}
 
-                    if not set(input_db_ids.keys()) & set(db_ids.keys()):
-                        db_ids = {**input_db_ids, **db_ids}
-                    else:
-                        # see if there is conflict
-                        conflicting_dbs = list(set(input_db_ids.keys()) & set(db_ids.keys()))
-                        for db in conflicting_dbs:
-                            if input_db_ids[db] != db_ids[db]:
-                                raise ValueError(f"DB ID does not match: {input_db_ids} | {db_ids}")
-
-                    row.other_db_ids = db_ids
-
-                self.df_entities.loc[idx] = row
-                return row
+            self.df_entities.update(entity)
+            return entity
 
         # no duplicates
         new_data = {
             "foodatlas_id": self.avail_id,
-            "type": type,
+            "type": type_,
             "name": name,
-            "synonyms": synonyms,
+            "synonyms": [x for x in synonyms],
             "other_db_ids": other_db_ids,
         }
         row = pd.Series(new_data, name=name)
@@ -136,6 +135,9 @@ class FoodAtlasEntity():
 
     def get_all_entities(self) -> pd.DataFrame:
         return self.df_entities
+
+    def get_entities_by_type(self, type_: str) -> pd.DataFrame:
+        return self.df_entities[self.df_entities["type"] == type_]
 
     def print_all_entities(self) -> None:
         print(self.df_entities)
