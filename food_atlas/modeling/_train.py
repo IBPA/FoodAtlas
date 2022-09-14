@@ -43,7 +43,7 @@ def train_nli_model(
         model,
         data_loader_train,
         data_loader_val=None,
-        epochs=100,
+        epochs=1,
         lr=1e-3,
         device='cuda'):
     """
