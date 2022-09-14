@@ -67,7 +67,7 @@ class FoodAtlasNLIDataset(Dataset):
             tokenizer: PreTrainedTokenizerBase,
             labels: list[int] = None,
             label_mapper: dict = {
-                'entail': 1, 'not_entail': 0
+                'Entails': 1, 'Does not entail': 0
             },
             max_seq_len: int = 512):
         if labels is not None:
