@@ -1,3 +1,9 @@
 #!/bin/bash
 
-srun --time=05:00:00 --ntasks 1 --cpus-per-task 4 --gres gpu:1 --mem 8G --pty bash
+srun \
+    --time=24:00:00 \
+    --ntasks 1 \
+    --cpus-per-task 8 \
+    --gres gpu:1 \
+    --mem 25G \
+    --pty bash
