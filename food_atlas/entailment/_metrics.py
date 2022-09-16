@@ -8,14 +8,15 @@ from sklearn.metrics import (
 def get_all_metrics(y_true, y_pred, y_score=None):
     """
     """
-    tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
+    tn, fp, fn, tp = confusion_matrix(y_true, y_pred, labels=[0, 1]).ravel()
 
     metrics = {
         'accuracy': (tp + tn) / (tp + tn + fp + fn),
         'precision': tp / (tp + fp),
         'recall': tp / (tp + fn),
         'f1': 2 * tp / (2 * tp + fp + fn),
-        'auc': roc_auc_score(y_true, y_score) if y_score is not None else None,
+        'auroc': roc_auc_score(
+            y_true, y_score) if y_score is not None else None,
         'ap': average_precision_score(
             y_true, y_score) if y_score is not None else None,
         'sensitivity': tp / (tp + fn),

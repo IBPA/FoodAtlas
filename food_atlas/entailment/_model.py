@@ -9,7 +9,6 @@ Todo:
 
 """
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
-import pandas as pd
 
 
 def load_model(path_or_name):

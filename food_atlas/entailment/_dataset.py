@@ -141,7 +141,8 @@ def get_food_atlas_data_loaders(
         batch_size: int = 1,
         shuffle: bool = True,
         num_workers: int = 0,
-        collate_fn: callable = collate_fn_padding):
+        collate_fn: callable = collate_fn_padding,
+        verbose: bool = True):
     """Get data loader for food atlas dataset.
 
     Args:
@@ -153,23 +154,32 @@ def get_food_atlas_data_loaders(
         shuffle: whether to shuffle the data
         num_workers: number of workers
         collate_fn: collate function
+        verbose: whether to print out the information
 
     Returns:
         data loaders for training and testing
 
     """
     data_loaders = []
-    for path in [path_data_train, path_data_test]:
+    for path, name in zip(
+            [path_data_train, path_data_test], ['train', 'test']):
         if path is not None:
-            data = pd.read_csv(path)
-            data = data[['premise', 'hypothesis_string', 'label']]
+            data = pd.read_csv(path, sep='\t')
+            data = data[['premise', 'hypothesis_string', 'answer']]
             data = data.rename(
                 {'hypothesis_string': 'hypothesis'}, axis=1
             )
+            data = data[~(data['answer'] == 'Skip')]
+
+            if verbose:
+                print(f"==={name} set info start===")
+                print(data['answer'].value_counts())
+                print(f"===={name} set info end====")
+
             dataset = FoodAtlasNLIDataset(
                 premises=data['premise'].tolist(),
                 hypotheses=data['hypothesis'].tolist(),
-                labels=data['label'].tolist(),
+                labels=data['answer'].tolist(),
                 tokenizer=tokenizer,
                 max_seq_len=max_seq_len
             )
