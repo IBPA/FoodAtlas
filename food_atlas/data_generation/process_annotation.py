@@ -13,19 +13,20 @@ from common_utils.foodatlas_types import CandidateEntity, CandidateRelation  # n
 from common_utils.foodatlas_types import FoodAtlasEntity, FoodAtlasRelation  # noqa: E402
 
 
-PH_PAIRS_FILEPATH = "../../output/data_generation/ph_pairs_*.txt"
-PRE_ANNOTATION_FILEPATH = "../../output/data_generation/pre_annotation_*.tsv"
-POST_ANNOTATION_FILEPATH = "../../output/data_generation/post_annotation_*.tsv"
+PH_PAIRS_FILEPATH = "../../outputs/data_generation/ph_pairs_*.txt"
+PRE_ANNOTATION_FILEPATH = "../../outputs/data_generation/pre_annotation_*.tsv"
+POST_ANNOTATION_FILEPATH = "../../outputs/data_generation/post_annotation_*.tsv"
 RANDOM_STATE = 530
-KG_OUTPUT_DIR = "../../output/kg"
-REMAINING_FILEPATH = "../../output/data_generation/remaining.tsv"
-VAL_PRE_ANNOTATION_FILEPATH = "../../output/data_generation/val_pre_annotation.tsv"
-TEST_PRE_ANNOTATION_FILEPATH = "../../output/data_generation/test_pre_annotation.tsv"
-VAL_POST_ANNOTATION_FILEPATH = "../../output/data_generation/val_post_annotation.tsv"
-TEST_POST_ANNOTATION_FILEPATH = "../../output/data_generation/test_post_annotation.tsv"
-TRAIN_FILEPATH = "../../output/data_generation/train.tsv"
-VAL_FILEPATH = "../../output/data_generation/val.tsv"
-TEST_FILEPATH = "../../output/data_generation/test.tsv"
+KG_OUTPUT_DIR = "../../outputs/kg"
+REMAINING_FILEPATH = "../../outputs/data_generation/remaining.tsv"
+VAL_PRE_ANNOTATION_FILEPATH = "../../outputs/data_generation/val_pre_annotation.tsv"
+TEST_PRE_ANNOTATION_FILEPATH = "../../outputs/data_generation/test_pre_annotation.tsv"
+VAL_POST_ANNOTATION_FILEPATH = "../../outputs/data_generation/val_post_annotation.tsv"
+TEST_POST_ANNOTATION_FILEPATH = "../../outputs/data_generation/test_post_annotation.tsv"
+TRAIN_FILEPATH = "../../outputs/data_generation/train.tsv"
+VAL_FILEPATH = "../../outputs/data_generation/val.tsv"
+TEST_FILEPATH = "../../outputs/data_generation/test.tsv"
+TO_PREDICT_FILEPATH = "../../outputs/data_generation/to_predict_*.tsv"
 VAL_NUM_PREMISE = 500
 TEST_NUM_PREMISE = 500
 PER_ROUND_NUM_PREMISE = 500
@@ -74,7 +75,7 @@ def parse_argument() -> argparse.Namespace:
     )
 
     parser.add_argument(
-        "--reamining_filepath",
+        "--remaining_filepath",
         type=str,
         default=REMAINING_FILEPATH,
         help=f"Remaining PH pairs filepath. (Default: {REMAINING_FILEPATH})",
@@ -148,6 +149,13 @@ def parse_argument() -> argparse.Namespace:
         type=str,
         default=TEST_FILEPATH,
         help=f"Test set final processed filepath. (Default: {TEST_FILEPATH})",
+    )
+
+    parser.add_argument(
+        "--to_predict_filepath",
+        type=str,
+        default=TO_PREDICT_FILEPATH,
+        help=f"To predict filepath. (Default: {TO_PREDICT_FILEPATH})",
     )
 
     parser.add_argument(
@@ -230,7 +238,8 @@ def generate_pre_annotation(
         todo: str,
         per_round_num_premise: int,
         random_state: int,
-        reamining_filepath: str = None,
+        remaining_filepath: str,
+        to_predict_filepath: str,
         val_num_premise: int = None,
         val_pre_annotation_filepath: str = None,
         test_num_premise: int = None,
@@ -255,7 +264,7 @@ def generate_pre_annotation(
         print(f"df_val shape: {df_val.shape}")
         print(f"df_test shape: {df_test.shape}")
 
-        df_remaining.to_csv(reamining_filepath, sep='\t', index=False)
+        df_remaining.to_csv(remaining_filepath, sep='\t', index=False)
         df_val.to_csv(val_pre_annotation_filepath, sep='\t', index=False)
         df_test.to_csv(test_pre_annotation_filepath, sep='\t', index=False)
 
@@ -266,6 +275,12 @@ def generate_pre_annotation(
         filepath = pre_annotation_filepath.replace("*", str(cur_round))
         print(f"Saving {todo} to {filepath}")
         df_to_annotate.to_csv(filepath, sep='\t', index=False)
+
+        df_to_test = df_remaining[df_remaining["premise"].apply(
+            lambda x: x not in this_round_premises)]
+        filepath = to_predict_filepath.replace("*", str(cur_round))
+        print(f"Saving to_predict to {filepath}")
+        df_to_test.to_csv(filepath, sep='\t', index=False)
 
         return
 
@@ -599,7 +614,8 @@ def main():
             todo=todo[0],
             per_round_num_premise=args.per_round_num_premise,
             random_state=args.random_state,
-            reamining_filepath=args.reamining_filepath,
+            remaining_filepath=args.remaining_filepath,
+            to_predict_filepath=args.to_predict_filepath,
             val_num_premise=args.val_num_premise,
             val_pre_annotation_filepath=args.val_pre_annotation_filepath,
             test_num_premise=args.test_num_premise,
@@ -627,6 +643,8 @@ def main():
             todo=todo[1],
             per_round_num_premise=args.per_round_num_premise,
             random_state=args.random_state,
+            remaining_filepath=args.remaining_filepath,
+            to_predict_filepath=args.to_predict_filepath,
         )
 
 

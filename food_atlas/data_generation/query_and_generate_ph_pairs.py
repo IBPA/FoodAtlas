@@ -21,9 +21,9 @@ from common_utils.foodatlas_types import merge_candidate_entities  # noqa: E402
 
 FOOD_NAMES_FILEPATH = "../../data/FooDB/foodb_foods.txt"
 QUERY_FSTRING = "{} contains"
-QUERY_RESULTS_FILEPATH = "../../output/data_generation/query_results.txt"
+QUERY_RESULTS_FILEPATH = "../../outputs/data_generation/query_results.txt"
 FOOD_PARTS_FILEPATH = "../../data/FoodAtlas/food_parts.txt"
-PH_PAIRS_FILEPATH = "../../output/data_generation/ph_pairs_{}.txt"
+PH_PAIRS_FILEPATH = "../../outputs/data_generation/ph_pairs_{}.txt"
 ENTITIES_FILEPATH = "../../data/FoodAtlas/entities.txt"
 RELATIONS_FILEPATH = "../../data/FoodAtlas/relations.txt"
 
@@ -125,7 +125,7 @@ def query_litsense(
     relations_filepath: str,
     delay: float = 1.0,
 ) -> Optional[pd.DataFrame]:
-    # make output dir
+    # make outputs dir
     query_results_dir = "/".join(query_results_filepath.split("/")[:-1])
     Path(query_results_dir).mkdir(parents=True, exist_ok=True)
 

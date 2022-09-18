@@ -24,7 +24,7 @@ print(f"Number of query foods: {len(query_foods)}")
 
 # count PH pairs
 df_ph_pairs = pd.read_csv(
-    os.path.join(root_dir, 'output/data_generation/ph_pairs_20220721_100213.txt'),
+    os.path.join(root_dir, 'outputs/data_generation/ph_pairs_20220721_100213.txt'),
     sep='\t',
     keep_default_na=False,
 )
@@ -85,16 +85,16 @@ for idx, row in df_ph_pairs.iterrows():
         )
         added.append(str(tail))
 
-fa_ent.save(os.path.join(root_dir, 'output/analysis_codes/entities.txt'))
+fa_ent.save(os.path.join(root_dir, 'outputs/analysis_codes/entities.txt'))
 
 # count val/test stats
 df_val = pd.read_csv(
-    os.path.join(root_dir, "output/data_generation/val.tsv"),
+    os.path.join(root_dir, "outputs/data_generation/val.tsv"),
     sep='\t',
 )
 
 df_test = pd.read_csv(
-    os.path.join(root_dir, "output/data_generation/test.tsv"),
+    os.path.join(root_dir, "outputs/data_generation/test.tsv"),
     sep='\t',
 )
 
