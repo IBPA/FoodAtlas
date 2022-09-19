@@ -178,22 +178,37 @@ def main():
         df_predicted_orig = df_predicted.copy()
         df_predicted["uncertainty"] = df_predicted["prob"].apply(lambda x: min(x, 1-x))
 
-        df_predicted["entailment_rank"] = df_predicted["prob"].rank(ascending=False)
+        df_predicted["certain_pos_rank"] = df_predicted["prob"].rank(ascending=False)
+        df_predicted["certain_neg_rank"] = df_predicted["prob"].rank(ascending=True)
         df_predicted["uncertainty_rank"] = df_predicted["uncertainty"].rank(ascending=False)
 
         df_grouped_by_premise = df_predicted.\
-            groupby("premise")[["entailment_rank", "uncertainty_rank"]].\
+            groupby("premise")[["certain_pos_rank", "certain_neg_rank", "uncertainty_rank"]].\
             agg(lambda x: np.mean(list(x))).reset_index()
 
         df_grouped_by_premise["coin_flip"] = [
             random.random() for _ in range(df_grouped_by_premise.shape[0])]
+
+        def _select(row):
+            if row["coin_flip"] < 1/3:
+                return row["certain_pos_rank"]
+            elif row["coin_flip"] < 2/3:
+                return row["certain_neg_rank"]
+            else:
+                return row["uncertainty_rank"]
+
+        def _select_reason(x):
+            if x < 1/3:
+                return "certain_pos"
+            elif x < 2/3:
+                return "certain_neg"
+            else:
+                return "uncertain"
+
         df_grouped_by_premise["representative_rank"] = df_grouped_by_premise.apply(
-            lambda row: row["entailment_rank"] if row["coin_flip"] < 0.5
-            else row["uncertainty_rank"],
-            axis=1)
-        df_grouped_by_premise["certain_or_uncertain"] = \
-            df_grouped_by_premise["coin_flip"].apply(
-                lambda x: "certain" if x < 0.5 else "uncertain")
+            lambda row: _select(row), axis=1)
+        df_grouped_by_premise["selected_reason"] = df_grouped_by_premise["coin_flip"].apply(
+            lambda x: _select_reason(x))
         df_grouped_by_premise.sort_values("representative_rank", inplace=True)
 
         sampling_reason_filepath = args.sampling_reason_filepath.replace('*', str(args.round - 1))
@@ -209,8 +224,9 @@ def main():
 
         df_to_annotate = df_predicted_orig[df_predicted_orig["premise"].apply(
             lambda x: x in selected_premises)].copy()
-        df_to_annotate["certain_or_uncertain"] = df_to_annotate["premise"].apply(
-            lambda x: df_grouped_by_premise.at[x, "certain_or_uncertain"])
+        df_to_annotate["selected_reason"] = df_to_annotate["premise"].apply(
+            lambda x: df_grouped_by_premise.at[x, "selected_reason"])
+        print(f"df_to_annotate shape: {df_to_annotate.shape}")
 
         df_to_predict = df_predicted_orig[df_predicted_orig["premise"].apply(
             lambda x: x not in selected_premises)].copy()
