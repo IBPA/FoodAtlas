@@ -8,21 +8,19 @@ import click
 
 from . import (
     load_model,
-    get_all_metrics,
     evaluate,
-    get_food_atlas_data_loaders
+    get_food_atlas_data_loader,
 )
+from .utils import get_all_metrics
 
 
 @click.command()
-@click.argument('path-data-train', type=click.Path(exists=True))
 @click.argument('path-data-test', type=click.Path(exists=True))
 @click.argument('path-or-name-nli-model', type=str)
 @click.argument('path-output-dir', type=str)
 @click.option('--metric', type=str, default=None)
 @click.option('--random-seed', type=int, default=42)
 def main(
-        path_data_train,
         path_data_test,
         path_or_name_nli_model,
         path_output_dir,
@@ -35,11 +33,12 @@ def main(
         model.load_state_dict(
             torch.load(f'{path_output_dir}/best_{metric}/model_state.pt'))
 
-    _, data_loader_test = get_food_atlas_data_loaders(
-        path_data_train,
-        path_data_test=path_data_test,
+    data_loader_test = get_food_atlas_data_loader(
+        path_data_test,
         tokenizer=tokenizer,
-        batch_size=16)  # Does not matter for evaluation.
+        train=False,
+        batch_size=16,  # Does not matter for evaluation.
+        shuffle=False)
 
     y_true, y_pred, y_score, loss = evaluate(
         model,

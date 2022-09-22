@@ -11,8 +11,9 @@ import click
 from .. import (
     load_model,
     train,
-    get_food_atlas_data_loaders
+    get_food_atlas_data_loader,
 )
+torch.cuda.empty_cache()
 
 
 def train_tuning_wrapper(
@@ -26,11 +27,20 @@ def train_tuning_wrapper(
         verbose=True):
     """
     """
-    data_loader_train, data_loader_val = get_food_atlas_data_loaders(
+    data_loader_train = get_food_atlas_data_loader(
         path_data_train,
-        path_data_test=path_data_val,
         tokenizer=tokenizer,
+        train=True,
         batch_size=batch_size,
+        shuffle=True,
+        verbose=verbose)
+
+    data_loader_val = get_food_atlas_data_loader(
+        path_data_val,
+        tokenizer=tokenizer,
+        train=True,
+        batch_size=16,
+        shuffle=False,
         verbose=verbose)
 
     result = train(
@@ -65,8 +75,11 @@ def main(
     # Train with grid search.
     results = {}
     failed = []
-    BATCH_SIZE_RANGE = [16, 32]
-    LEARNING_RATE_RANGE = [2e-5, 3e-5, 5e-5]
+    # BATCH_SIZE_RANGE = [16, 32]
+    # LEARNING_RATE_RANGE = [2e-5, 3e-5, 5e-5]
+    # EPOCHS_RANGE = [2, 3, 4]
+    BATCH_SIZE_RANGE = [32]
+    LEARNING_RATE_RANGE = [3e-5]
     EPOCHS_RANGE = [2, 3, 4]
     best_f1_hparams = None
     best_f1_score = -1
@@ -95,7 +108,7 @@ def main(
                 epochs,
                 verbose=True if i == 0 else False)
 
-            f1_score = result['val']['f1']
+            f1_score = result['val']['metrics']['f1']
             if f1_score > best_f1_score:
                 best_f1_score = f1_score
                 best_f1_hparams = (batch_size, learning_rate, epochs)
@@ -103,7 +116,7 @@ def main(
                     model.state_dict(),
                     f'{path_output_dir}/best_f1/model_state.pt')
 
-            prec = result['val']['precision']
+            prec = result['val']['metrics']['precision']
             if prec > best_prec_score:
                 # print(f'New best precision score: {prec}')
                 best_prec_score = prec

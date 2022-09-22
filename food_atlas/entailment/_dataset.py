@@ -74,6 +74,8 @@ class FoodAtlasNLIDataset(Dataset):
             self.labels = torch.LongTensor(
                 [label_mapper[label] for label in labels]
             )
+        else:
+            self.labels = None
 
         self.max_tokens = 0
         self.inputs = []
@@ -103,7 +105,10 @@ class FoodAtlasNLIDataset(Dataset):
         return len(self.inputs)
 
     def __getitem__(self, idx):
-        return self.inputs[idx], self.labels[idx]
+        if self.labels is not None:
+            return self.inputs[idx], self.labels[idx]
+        else:
+            return self.inputs[idx], None
 
 
 def collate_fn_padding(batch):
@@ -129,14 +134,84 @@ def collate_fn_padding(batch):
     token_type_ids_batch = pad_sequence(
         token_type_ids_batch, batch_first=True, padding_value=1)
 
-    return (input_ids_batch, attention_mask_batch, token_type_ids_batch), \
-        torch.stack(labels, dim=0)
+    if labels[0] is None:
+        return (input_ids_batch, attention_mask_batch, token_type_ids_batch), \
+            None
+    else:
+        return (input_ids_batch, attention_mask_batch, token_type_ids_batch), \
+            torch.stack(labels, dim=0)
 
 
-def get_food_atlas_data_loaders(
-        path_data_train: str,
+# def get_food_atlas_data_loaders(
+#         path_data_train: str,
+#         tokenizer: PreTrainedTokenizerBase,
+#         path_data_test: str = None,
+#         max_seq_len: int = 512,
+#         batch_size: int = 1,
+#         shuffle: bool = True,
+#         num_workers: int = 0,
+#         collate_fn: callable = collate_fn_padding,
+#         verbose: bool = True):
+#     """Get data loader for food atlas dataset.
+
+#     Args:
+#         path_data_train: path to the training data
+#         tokenizer: tokenizer
+#         path_data_test: path to the testing data
+#         max_seq_len: maximum sequence length
+#         batch_size: batch size
+#         shuffle: whether to shuffle the data
+#         num_workers: number of workers
+#         collate_fn: collate function
+#         verbose: whether to print out the information
+
+#     Returns:
+#         data loaders for training and testing
+
+#     """
+#     data_loaders = []
+#     for path, name in zip(
+#             [path_data_train, path_data_test], ['train', 'test']):
+#         if path is not None:
+#             data = pd.read_csv(path, sep='\t')
+#             data = data[['premise', 'hypothesis_string', 'answer']]
+#             data = data.rename(
+#                 {'hypothesis_string': 'hypothesis'}, axis=1
+#             )
+#             data = data[~(data['answer'] == 'Skip')]
+
+#             if verbose:
+#                 print(f"==={name} set info start===")
+#                 print(data['answer'].value_counts())
+#                 print(f"===={name} set info end====")
+
+#             dataset = FoodAtlasNLIDataset(
+#                 premises=data['premise'].tolist(),
+#                 hypotheses=data['hypothesis'].tolist(),
+#                 labels=data['answer'].tolist(),
+#                 tokenizer=tokenizer,
+#                 max_seq_len=max_seq_len
+#             )
+#             data_loader = DataLoader(
+#                 dataset=dataset,
+#                 batch_size=batch_size,
+#                 shuffle=shuffle,
+#                 num_workers=num_workers,
+#                 collate_fn=collate_fn
+#             )
+#         else:
+#             data_loader = None
+#         data_loaders += [data_loader]
+
+#     data_loader_train, data_loader_test = data_loaders
+
+#     return data_loader_train, data_loader_test
+
+
+def get_food_atlas_data_loader(
+        path_data: str,
         tokenizer: PreTrainedTokenizerBase,
-        path_data_test: str = None,
+        train: bool = True,
         max_seq_len: int = 512,
         batch_size: int = 1,
         shuffle: bool = True,
@@ -146,9 +221,10 @@ def get_food_atlas_data_loaders(
     """Get data loader for food atlas dataset.
 
     Args:
-        path_data_train: path to the training data
+        path_data: path to the training data
         tokenizer: tokenizer
-        path_data_test: path to the testing data
+        train: whether the dataset is used to training. if false, the dataset
+            will not contain labels
         max_seq_len: maximum sequence length
         batch_size: batch size
         shuffle: whether to shuffle the data
@@ -160,40 +236,34 @@ def get_food_atlas_data_loaders(
         data loaders for training and testing
 
     """
-    data_loaders = []
-    for path, name in zip(
-            [path_data_train, path_data_test], ['train', 'test']):
-        if path is not None:
-            data = pd.read_csv(path, sep='\t')
-            data = data[['premise', 'hypothesis_string', 'answer']]
-            data = data.rename(
-                {'hypothesis_string': 'hypothesis'}, axis=1
-            )
-            data = data[~(data['answer'] == 'Skip')]
+    data = pd.read_csv(path_data, sep='\t')
+    if train:
+        data = data[['premise', 'hypothesis_string', 'answer']]
+        data = data[~(data['answer'] == 'Skip')]
+    else:
+        data = data[['premise', 'hypothesis_string']]
 
-            if verbose:
-                print(f"==={name} set info start===")
-                print(data['answer'].value_counts())
-                print(f"===={name} set info end====")
+    if verbose:
+        print()
+        print(f'Number of samples: {data.shape[0]}')
+        print()
+        if train:
+            print(data['answer'].value_counts())
+            print()
 
-            dataset = FoodAtlasNLIDataset(
-                premises=data['premise'].tolist(),
-                hypotheses=data['hypothesis'].tolist(),
-                labels=data['answer'].tolist(),
-                tokenizer=tokenizer,
-                max_seq_len=max_seq_len
-            )
-            data_loader = DataLoader(
-                dataset=dataset,
-                batch_size=batch_size,
-                shuffle=shuffle,
-                num_workers=num_workers,
-                collate_fn=collate_fn
-            )
-        else:
-            data_loader = None
-        data_loaders += [data_loader]
+    dataset = FoodAtlasNLIDataset(
+        premises=data['premise'].tolist(),
+        hypotheses=data['hypothesis_string'].tolist(),
+        labels=data['answer'].tolist() if train else None,
+        tokenizer=tokenizer,
+        max_seq_len=max_seq_len
+    )
+    data_loader = DataLoader(
+        dataset=dataset,
+        batch_size=batch_size,
+        shuffle=shuffle,
+        num_workers=num_workers,
+        collate_fn=collate_fn
+    )
 
-    data_loader_train, data_loader_test = data_loaders
-
-    return data_loader_train, data_loader_test
+    return data_loader

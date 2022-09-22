@@ -4,7 +4,8 @@ import torch
 from tqdm import tqdm
 # import wandb
 
-from . import get_all_metrics, evaluate
+from . import evaluate
+from .utils import get_all_metrics
 
 # def evaluate_nli_model(
 #         model,
