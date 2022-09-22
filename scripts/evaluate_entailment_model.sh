@@ -2,11 +2,10 @@
 
 cd ..
 
-python -m food_atlas.entailment.run_model \
-    outputs/data_generation/train_1.tsv \
+python -m food_atlas.entailment.evaluate \
     outputs/data_generation/test.tsv \
-    outputs/round_1/entailment_model \
     biobert \
+    outputs/round_1/entailment_model \
     --metric prec \
     --random-seed 42
 
