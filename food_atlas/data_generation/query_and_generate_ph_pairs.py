@@ -6,7 +6,6 @@ from pathlib import Path
 import re
 import requests
 import time
-from tqdm import tqdm
 from typing import List, Optional
 import sys
 

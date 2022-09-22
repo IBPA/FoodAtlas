@@ -8,8 +8,8 @@ sys.path.append('..')
 
 import pandas as pd  # noqa: E402
 
-from common_utils.foodatlas_types import FoodAtlasEntity, FoodAtlasRelation  # noqa: E402
-from common_utils.utils import read_kg, read_annotated, generate_kg  # noqa: E402
+from common_utils.utils import read_annotated  # noqa: E402
+from common_utils.knowledge_graph import KnowledgeGraph
 
 
 POST_ANNOTATION_FILEPATH = "../../outputs/data_generation/post_annotation_*.tsv"
@@ -111,35 +111,20 @@ def parse_argument() -> argparse.Namespace:
     return args
 
 
-def export_to_kg(args):
-    if args.round == 1:
-        new_kg_folder = os.path.join(args.kg_output_dir, str(args.round))
-        Path(new_kg_folder).mkdir(parents=True, exist_ok=True)
-        fa_ent = FoodAtlasEntity(os.path.join(new_kg_folder, ENTITIES_FILENAME))
-        fa_rel = FoodAtlasRelation(os.path.join(new_kg_folder, RELATIONS_FILENAME))
-
-        # val and test need to be cleaned up
-        df_val = read_annotated(args.val_post_annotation_filepath)
-        df_test = read_annotated(args.test_post_annotation_filepath)
-
-        df_val.to_csv(args.val_filepath, sep='\t', index=False)
-        df_test.to_csv(args.test_filepath, sep='\t', index=False)
-    else:
-        old_kg_folder = os.path.join(args.kg_output_dir, str(args.round-1))
-        df_kg_old = read_kg(os.path.join(old_kg_folder, KG_FILENAME))
-        fa_ent = FoodAtlasEntity(os.path.join(old_kg_folder, ENTITIES_FILENAME))
-        fa_rel = FoodAtlasRelation(os.path.join(old_kg_folder, RELATIONS_FILENAME))
-
-        # new_kg_folder = os.path.join(args.kg_output_dir, str(args.round))
-        # Path(new_kg_folder).mkdir(parents=True, exist_ok=False)
-
-    post_annotation_filepath = args.post_annotation_filepath.replace('*', str(args.round))
-    df_annotated = read_annotated(post_annotation_filepath)
-
+def export_to_kg(df_annotated, args):
     # generate KG
     print("Generating KG...")
 
     if args.round == 1:
+        new_kg_folder = os.path.join(args.kg_output_dir, str(args.round))
+        Path(new_kg_folder).mkdir(parents=True, exist_ok=True)
+
+        # val and test need to be cleaned up
+        df_val = read_annotated(args.val_post_annotation_filepath)
+        df_test = read_annotated(args.test_post_annotation_filepath)
+        df_val.to_csv(args.val_filepath, sep='\t', index=False)
+        df_test.to_csv(args.test_filepath, sep='\t', index=False)
+
         df_val["round"] = "val"
         df_test["round"] = "test"
 
@@ -149,28 +134,29 @@ def export_to_kg(args):
         df_for_kg = pd.concat([df_val, df_test, df_annotated]).reset_index(drop=True)
     else:
         df_for_kg = df_annotated
+        raise NotImplementedError()
 
     df_pos = df_for_kg[df_for_kg["answer"] == "Entails"]
     df_pos.reset_index(inplace=True, drop=True)
 
-    # df_pos = df_pos.head(100)
+    df_pos = df_pos.head(100)
 
-    df_kg_new = generate_kg(df_pos, fa_ent, fa_rel)
+    fa_kg = KnowledgeGraph(
+        kg_filepath=os.path.join(new_kg_folder, KG_FILENAME),
+        entities_filepath=os.path.join(new_kg_folder, ENTITIES_FILENAME),
+        relations_filepath=os.path.join(new_kg_folder, RELATIONS_FILENAME),
+    )
+    fa_kg.add_ph_pairs(df_pos)
 
     if args.round == 1:
-        df_kg_new.to_csv(os.path.join(new_kg_folder, KG_FILENAME), sep='\t', index=False)
-        fa_ent.save()
-        fa_rel.save()
+        fa_kg.save()
     else:
-        df_kg_new = pd.concat([df_kg_old, df_kg_new])
-        df_kg_new.to_csv(os.path.join(new_kg_folder, KG_FILENAME), sep='\t', index=False)
-        fa_ent.save(os.path.join(new_kg_folder, ENTITIES_FILENAME))
-        fa_rel.save(os.path.join(new_kg_folder, RELATIONS_FILENAME))
+        raise NotImplementedError()
 
-    return df_annotated, fa_ent
+    return fa_kg
 
 
-def generate_training(df_annotated, fa_ent, args):
+def generate_training(df_annotated, fa_kg, args):
     df_train = df_annotated.copy()[
         ["head", "relation", "tail", "premise", "hypothesis_string", "hypothesis_id", "answer"]
     ]
@@ -178,8 +164,8 @@ def generate_training(df_annotated, fa_ent, args):
     if args.skip_augment:
         df_train["augmentation"] = "original"
     else:
-        df_species = fa_ent.get_entities_by_type(type_="species")
-        df_chemical = fa_ent.get_entities_by_type(type_="chemical")
+        df_species = fa_kg.get_entities_by_type(type_="species")
+        df_chemical = fa_kg.get_entities_by_type(type_="chemical")
 
         augmented = []
         for idx, row in df_train.iterrows():
@@ -284,14 +270,19 @@ def generate_training(df_annotated, fa_ent, args):
 def main():
     args = parse_argument()
 
+    post_annotation_filepath = args.post_annotation_filepath.replace('*', str(args.round))
+    df_annotated = read_annotated(post_annotation_filepath)
+
     if args.random_state:
         random.seed(args.random_state)
 
     print("Exporting post annotation data to KG...")
-    df_annotated, fa_ent = export_to_kg(args)
+    fa_kg = export_to_kg(df_annotated, args)
 
-    # print("Generating training data...")
-    # generate_training(df_annotated, fa_ent, args)
+    sys.exit()
+
+    print("Generating training data...")
+    generate_training(df_annotated, fa_kg, args)
 
 
 if __name__ == '__main__':
