@@ -35,5 +35,3 @@ Output files
 
 6. Generate round 2 pre annotation.
 python generate_pre_annotation.py --round=2
-
-

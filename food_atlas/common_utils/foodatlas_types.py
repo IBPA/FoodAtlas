@@ -136,6 +136,12 @@ class FoodAtlasEntity():
     def get_all_entities(self) -> pd.DataFrame:
         return self.df_entities
 
+    def get_entity_by_id(self, foodatlas_id: int) -> pd.Series:
+        raise NotImplementedError()
+
+    def get_entity_by_name(self, name: str) -> pd.Series:
+        raise NotImplementedError()
+
     def get_entities_by_type(self, type_: str) -> pd.DataFrame:
         return self.df_entities[self.df_entities["type"] == type_]
 

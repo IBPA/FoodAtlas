@@ -8,8 +8,8 @@ sys.path.append('..')
 
 import pandas as pd  # noqa: E402
 
-from common_utils.foodatlas_types import CandidateEntity, CandidateRelation  # noqa: E402
 from common_utils.foodatlas_types import FoodAtlasEntity, FoodAtlasRelation  # noqa: E402
+from common_utils.utils import read_kg, read_annotated, generate_kg  # noqa: E402
 
 
 POST_ANNOTATION_FILEPATH = "../../outputs/data_generation/post_annotation_*.tsv"
@@ -111,28 +111,6 @@ def parse_argument() -> argparse.Namespace:
     return args
 
 
-def _read_annotated(filename):
-    df = pd.read_csv(filename, sep='\t', keep_default_na=False)
-    df["head"] = df["head"].apply(lambda x: eval(x, globals()))
-    df["relation"] = df["relation"].apply(lambda x: eval(x, globals()))
-    df["tail"] = df["tail"].apply(lambda x: eval(x, globals()))
-
-    if "" in set(df["answer"].tolist()):
-        raise ValueError("Make sure the 'answer' column does not contain empty response!")
-
-    answer_agrees = df.groupby('id')['answer'].apply(lambda x: len(set(x)) == 1)
-    agreement_ids = answer_agrees[answer_agrees].index.tolist()
-
-    df = df[df["id"].apply(lambda x: x in agreement_ids)]
-    df.drop_duplicates("id", inplace=True, ignore_index=True)
-    df.drop(
-        ["id", "annotator", "annotation_id", "created_at", "updated_at", "lead_time"],
-        inplace=True,
-        axis=1)
-
-    return df
-
-
 def export_to_kg(args):
     if args.round == 1:
         new_kg_folder = os.path.join(args.kg_output_dir, str(args.round))
@@ -141,15 +119,14 @@ def export_to_kg(args):
         fa_rel = FoodAtlasRelation(os.path.join(new_kg_folder, RELATIONS_FILENAME))
 
         # val and test need to be cleaned up
-        df_val = _read_annotated(args.val_post_annotation_filepath)
-        df_test = _read_annotated(args.test_post_annotation_filepath)
+        df_val = read_annotated(args.val_post_annotation_filepath)
+        df_test = read_annotated(args.test_post_annotation_filepath)
 
         df_val.to_csv(args.val_filepath, sep='\t', index=False)
         df_test.to_csv(args.test_filepath, sep='\t', index=False)
     else:
         old_kg_folder = os.path.join(args.kg_output_dir, str(args.round-1))
-        df_kg_old = pd.read_csv(
-            os.path.join(old_kg_folder, KG_FILENAME), sep='\t', keep_default_na=False)
+        df_kg_old = read_kg(os.path.join(old_kg_folder, KG_FILENAME))
         fa_ent = FoodAtlasEntity(os.path.join(old_kg_folder, ENTITIES_FILENAME))
         fa_rel = FoodAtlasRelation(os.path.join(old_kg_folder, RELATIONS_FILENAME))
 
@@ -157,7 +134,7 @@ def export_to_kg(args):
         # Path(new_kg_folder).mkdir(parents=True, exist_ok=False)
 
     post_annotation_filepath = args.post_annotation_filepath.replace('*', str(args.round))
-    df_annotated = _read_annotated(post_annotation_filepath)
+    df_annotated = read_annotated(post_annotation_filepath)
 
     # generate KG
     print("Generating KG...")
@@ -176,85 +153,9 @@ def export_to_kg(args):
     df_pos = df_for_kg[df_for_kg["answer"] == "Entails"]
     df_pos.reset_index(inplace=True, drop=True)
 
-    data = []
-    for idx, row in df_pos.iterrows():
-        head = row.at["head"]
-        tail = row.at["tail"]
-        hypothesis_id = row.at["hypothesis_id"]
+    # df_pos = df_pos.head(100)
 
-        # head
-        if head.type == "species_with_part":
-            other_db_ids = dict([hypothesis_id.split('-')[0].split(':')])
-        else:
-            other_db_ids = head.other_db_ids
-
-        head_ent = fa_ent.add(
-            type_=head.type,
-            name=head.name,
-            synonyms=head.synonyms,
-            other_db_ids=other_db_ids,
-        )
-
-        # relation
-        relation = fa_rel.add(
-            name=row["relation"].name,
-            translation=row["relation"].translation,
-        )
-
-        # tail
-        if tail.type == "species_with_part":
-            other_db_ids = dict([hypothesis_id.split('-')[0].split(':')])
-        else:
-            other_db_ids = tail.other_db_ids
-
-        tail_ent = fa_ent.add(
-            type_=tail.type,
-            name=tail.name,
-            synonyms=tail.synonyms,
-            other_db_ids=other_db_ids,
-        )
-
-        newrow = pd.Series({
-            "head": head_ent.foodatlas_id,
-            "relation": relation.foodatlas_id,
-            "tail": tail_ent.foodatlas_id,
-            "pmid": row["pmid"],
-            "pmcid": row["pmcid"],
-            "section": row["section"],
-            "premise": row["premise"],
-            "round": row["round"],
-        })
-
-        data.append(newrow)
-
-        # has part
-        if head.type == "species_with_part":
-            tail_ent = head_ent
-            head_ent = fa_ent.add(
-                type_="species",
-                name=head.name.split(" - ")[0],
-                other_db_ids=dict([hypothesis_id.split('-')[0].split(':')]),
-            )
-
-            relation = fa_rel.add(
-                name="hasPart",
-                translation="has part",
-            )
-
-            newrow = pd.Series({
-                "head": head_ent.foodatlas_id,
-                "relation": relation.foodatlas_id,
-                "tail": tail_ent.foodatlas_id,
-                "pmid": row["pmid"],
-                "pmcid": row["pmcid"],
-                "section": row["section"],
-                "premise": row["premise"],
-                "round": row["round"],
-            })
-
-            data.append(newrow)
-
-    df_kg_new = pd.DataFrame(data).reset_index(drop=True)
+    df_kg_new = generate_kg(df_pos, fa_ent, fa_rel)
 
     if args.round == 1:
         df_kg_new.to_csv(os.path.join(new_kg_folder, KG_FILENAME), sep='\t', index=False)
@@ -389,8 +290,8 @@ def main():
     print("Exporting post annotation data to KG...")
     df_annotated, fa_ent = export_to_kg(args)
 
-    print("Generating training data...")
-    generate_training(df_annotated, fa_ent, args)
+    # print("Generating training data...")
+    # generate_training(df_annotated, fa_ent, args)
 
 
 if __name__ == '__main__':
