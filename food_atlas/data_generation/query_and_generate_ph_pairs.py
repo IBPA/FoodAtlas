@@ -14,8 +14,8 @@ sys.path.append('..')
 import pandas as pd  # noqa: E402
 from pandarallel import pandarallel  # noqa: E402
 
-from common_utils.foodatlas_types import CandidateEntity, CandidateRelation  # noqa: E402
-from common_utils.foodatlas_types import merge_candidate_entities  # noqa: E402
+from common_utils.knowledge_graph import CandidateEntity, CandidateRelation  # noqa: E402
+from common_utils.knowledge_graph import KnowledgeGraph  # noqa: E402
 
 
 FOOD_NAMES_FILEPATH = "../../data/FooDB/foodb_foods.txt"
@@ -175,7 +175,7 @@ def query_litsense(
                 r["section"] = doc["section"]
                 r["premise"] = doc["text"]
                 chemicals = []
-                species = []
+                organisms = []
 
                 for ent in doc["annotations"]:
                     ent_split_results = ent.split("|")
@@ -202,7 +202,7 @@ def query_litsense(
                         continue
 
                     if category == "species" and not ent_id.isdigit():
-                        print(f"Skipping species with non-numerica ID: {ent_id}.")
+                        print(f"Skipping species with non-numerical ID: {ent_id}.")
                         continue
 
                     if category == "species" and int(ent_id) not in ncbi_taxonomy_ids:
@@ -223,22 +223,22 @@ def query_litsense(
                         synonyms = list(set(synonyms))
 
                         candidate_ent = CandidateEntity(
-                            type="species",
+                            type="organism",
                             name=match["name"],
                             synonyms=synonyms,
                             other_db_ids={"NCBI_taxonomy": ent_id}
                         )
-                        species.append(candidate_ent)
+                        organisms.append(candidate_ent)
 
-                if len(chemicals) == 0 or len(species) == 0:
+                if len(chemicals) == 0 or len(organisms) == 0:
                     continue
 
                 # clean up the entities
-                chemicals = merge_candidate_entities(chemicals, using="MESH")
-                species = merge_candidate_entities(species, using="NCBI_taxonomy")
+                chemicals = KnowledgeGraph.merge_candidate_entities(chemicals, using="MESH")
+                organisms = KnowledgeGraph.merge_candidate_entities(organisms, using="NCBI_taxonomy")
 
                 r["chemicals"] = str(chemicals)
-                r["species"] = str(species)
+                r["organisms"] = str(organisms)
                 r["food_parts"] = str(get_food_parts(doc["text"], df_food_parts))
                 data_to_extend.append(r)
 
@@ -266,11 +266,9 @@ def generate_ph_pairs(
     df: pd.DataFrame,
     ph_pairs_filepath: str,
 ):
-    def _read_foodatlasent(x):
-        return eval(x, globals())
-    df["chemicals"] = df["chemicals"].apply(_read_foodatlasent)
-    df["species"] = df["species"].apply(_read_foodatlasent)
-    df["food_parts"] = df["food_parts"].apply(_read_foodatlasent)
+    df["chemicals"] = df["chemicals"].apply(lambda x: eval(x, globals()))
+    df["organisms"] = df["organisms"].apply(lambda x: eval(x, globals()))
+    df["food_parts"] = df["food_parts"].apply(lambda x: eval(x, globals()))
 
     contains = CandidateRelation(
         name='contains',
@@ -283,20 +281,20 @@ def generate_ph_pairs(
 
         cleaned_premise = " " + re.sub('[^A-Za-z0-9 ]+', ' ', row["premise"].lower()) + ""
 
-        for s, c in product(row["species"], row["chemicals"]):
-            newrow = row.copy().drop(["search_term", "chemicals", "species", "food_parts"])
+        for s, c in product(row["organisms"], row["chemicals"]):
+            newrow = row.copy().drop(["search_term", "chemicals", "organisms", "food_parts"])
             newrow["head"] = s
             newrow["relation"] = contains
             newrow["tail"] = c
 
-            species = None
+            organisms = None
             if s.name.lower() not in row["premise"].lower() or \
                f" {s.name.lower()} " not in cleaned_premise:
                 for x in s.synonyms:
                     if x.lower() in row["premise"].lower():
-                        species = x
+                        organisms = x
             else:
-                species = s.name
+                organisms = s.name
 
             chemicals = None
             if c.name.lower() not in row["premise"].lower():
@@ -306,11 +304,11 @@ def generate_ph_pairs(
             else:
                 chemicals = c.name
 
-            if species is None or chemicals is None:
+            if organisms is None or chemicals is None:
                 failed.append(row)
                 continue
 
-            newrow["hypothesis_string"] = f"{species} contains {chemicals}"
+            newrow["hypothesis_string"] = f"{organisms} contains {chemicals}"
 
             ncbi_taxonomy = s.other_db_ids["NCBI_taxonomy"]
             mesh = c.other_db_ids["MESH"]
@@ -318,28 +316,29 @@ def generate_ph_pairs(
             newrows.append(newrow)
 
         if row["food_parts"]:
-            for s, p, c in product(row["species"], row["food_parts"], row["chemicals"]):
+            for s, p, c in product(row["organisms"], row["food_parts"], row["chemicals"]):
                 # contains
-                newrow = row.copy().drop(["search_term", "chemicals", "species", "food_parts"])
+                newrow = row.copy().drop(["search_term", "chemicals", "organisms", "food_parts"])
 
-                species_with_part = CandidateEntity(
-                    type="species_with_part",
+                organism_with_part = CandidateEntity(
+                    type="organism_with_part",
                     name=f"{s.name} - {p.name}",
                     synonyms=[f"{x} - {p.name}" for x in s.synonyms],
+                    other_db_ids=s.other_db_ids,
                 )
 
-                newrow["head"] = species_with_part
+                newrow["head"] = organism_with_part
                 newrow["relation"] = contains
                 newrow["tail"] = c
 
-                species = None
+                organisms = None
                 if s.name.lower() not in row["premise"].lower() or \
                    f" {s.name.lower()} " not in cleaned_premise:
                     for x in s.synonyms:
                         if x.lower() in row["premise"].lower():
-                            species = x
+                            organisms = x
                 else:
-                    species = s.name
+                    organisms = s.name
 
                 parts = None
                 if p.name.lower() not in row["premise"].lower():
@@ -357,11 +356,11 @@ def generate_ph_pairs(
                 else:
                     chemicals = c.name
 
-                if species is None or parts is None or chemicals is None:
+                if organisms is None or parts is None or chemicals is None:
                     failed.append(row)
                     continue
 
-                newrow["hypothesis_string"] = f"{species} - {parts} contains {chemicals}"
+                newrow["hypothesis_string"] = f"{organisms} - {parts} contains {chemicals}"
 
                 ncbi_taxonomy = s.other_db_ids["NCBI_taxonomy"]
                 mesh = c.other_db_ids["MESH"]
@@ -381,7 +380,7 @@ def generate_ph_pairs(
     for x in skipped:
         print(f"Premise: {x['premise']}")
         print(f"Chemicals: {x['chemicals']}")
-        print(f"Species: {x['species']}")
+        print(f"Organisms: {x['organisms']}")
         print(f"Food parts: {x['food_parts']}")
 
     df_ph_pairs = pd.concat(results).reset_index(drop=True)

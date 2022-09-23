@@ -9,7 +9,7 @@ sys.path.append('..')
 import pandas as pd  # noqa: E402
 
 from common_utils.utils import read_annotated  # noqa: E402
-from common_utils.knowledge_graph import KnowledgeGraph
+from common_utils.knowledge_graph import KnowledgeGraph  # noqa: E402
 
 
 POST_ANNOTATION_FILEPATH = "../../outputs/data_generation/post_annotation_*.tsv"
@@ -139,7 +139,7 @@ def export_to_kg(df_annotated, args):
     df_pos = df_for_kg[df_for_kg["answer"] == "Entails"]
     df_pos.reset_index(inplace=True, drop=True)
 
-    df_pos = df_pos.head(100)
+    df_pos = df_pos.head(50)
 
     fa_kg = KnowledgeGraph(
         kg_filepath=os.path.join(new_kg_folder, KG_FILENAME),
@@ -279,10 +279,8 @@ def main():
     print("Exporting post annotation data to KG...")
     fa_kg = export_to_kg(df_annotated, args)
 
-    sys.exit()
-
-    print("Generating training data...")
-    generate_training(df_annotated, fa_kg, args)
+    # print("Generating training data...")
+    # generate_training(df_annotated, fa_kg, args)
 
 
 if __name__ == '__main__':

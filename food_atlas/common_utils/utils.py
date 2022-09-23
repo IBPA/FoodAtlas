@@ -2,9 +2,7 @@ import sys
 import pandas as pd
 
 sys.path.append('./')
-from .knowledge_graph import KnowledgeGraph  # noqa: E402
-CandidateEntity = KnowledgeGraph.CandidateEntity
-CandidateRelation = KnowledgeGraph.CandidateRelation
+from .knowledge_graph import CandidateEntity, CandidateRelation  # noqa: E402
 
 
 def read_tsv(filepath) -> pd.DataFrame:
