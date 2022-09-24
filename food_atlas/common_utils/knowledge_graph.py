@@ -1,13 +1,11 @@
 from ast import literal_eval
 from collections import namedtuple, Counter
 from pathlib import Path
-from time import time
 from typing import Dict, List, Any
 import sys
 
 from tqdm import tqdm
 import pandas as pd
-from pandarallel import pandarallel
 pd.options.mode.chained_assignment = None
 
 
@@ -36,8 +34,13 @@ _ENTITY_DEFAULTS = [
 ]
 
 _ENTITY_TYPES = [
+    # chemicl entity types
     "chemical",
+    # organism entity types
     "organism",
+    "organism:genus",
+    "organism:species",
+    # organism with part entity types
     "organism_with_part",
 ]
 
@@ -127,9 +130,9 @@ class KnowledgeGraph():
     ):
         # add the entities first for speed
         triples = df_input["head"].tolist() + df_input["tail"].tolist()
-        chemicals = [x for x in triples if x.type == "chemical"]
-        organisms = [x for x in triples if x.type == "organism"]
-        organisms_with_part = [x for x in triples if x.type == "organism_with_part"]
+        chemicals = [x for x in triples if x.type.startswith("chemical")]
+        organisms = [x for x in triples if x.type.startswith("organism")]
+        organisms_with_part = [x for x in triples if x.type.startswith("organism_with_part")]
         assert len(triples) == (len(chemicals) + len(organisms) + len(organisms_with_part))
 
         print(f"Number of chemicals before merging: {len(chemicals)}")
@@ -151,20 +154,16 @@ class KnowledgeGraph():
         print(f"Number of organisms_with_part after merging: {len(organisms_with_part)}")
 
         def _get_key(x):
-            if x.type == "chemical":
+            if x.type.startswith("chemical"):
                 return x.other_db_ids["MESH"]
-            elif x.type in ["organism", "organism_with_part"]:
+            elif x.type.split(":")[0] in ["organism", "organism_with_part"]:
                 return x.other_db_ids["NCBI_taxonomy"]
             else:
                 raise NotImplementedError()
 
         print("Adding entities...")
 
-        entity_lookup = {
-            "chemical": {},
-            "organism": {},
-            "organism_with_part": {},
-        }
+        entity_lookup = {x: {} for x in _ENTITY_TYPES}
         for x in tqdm(triples):
             e = self._add_entity(
                 type_=x.type,
@@ -481,3 +480,52 @@ class KnowledgeGraph():
         else:
             print(f"Saving relations to original filepath: {self.relations_filepath}")
             self.df_relations.to_csv(self.relations_filepath, sep='\t', index=False)
+
+
+def main():
+    # assume you have a taxonomy.
+    # (strawberry genus A, hasChild, strawberry species A)
+
+    # you first create named tuple as follows
+    head = CandidateEntity(
+        type="organism:genus",
+        name="strawberry genus A",
+        synonyms=["Strawberry Genus A", "Straeberry G. A"],
+        other_db_ids={"NCBI_taxonomy": "1234"},
+    )
+
+    relation = CandidateRelation(
+        name="hasChild",
+        translation="has child",
+    )
+
+    tail = CandidateEntity(
+        type="organism:species",
+        name="strawberry species A",
+        synonyms=[],  # can be empty
+        other_db_ids={"NCBI_taxonomy": "4321"},
+    )
+
+    # you then populate the dataframe using this info
+    df = pd.DataFrame({"head": [head], "relation": [relation], "tail": [tail]})
+
+    # i'll change so that you wouldn't have to enter these
+    # for now, the code will fail if you don't enter these info
+    # if you need more custom metadata for ontology, let me know
+    df["pmid"] = '1234'
+    df["pmcid"] = '1234'
+    df["section"] = 'abc'
+    df["premise"] = 'def'
+
+    fa_kg = KnowledgeGraph(
+        kg_filepath="kg.txt",
+        entities_filepath="entities.txt",
+        relations_filepath="relations.txt",
+    )
+
+    fa_kg.add_ph_pairs(df)
+    fa_kg.save()
+
+
+if __name__ == '__main__':
+    main()
