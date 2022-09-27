@@ -233,7 +233,7 @@ def main():
         df_to_predict = df_predicted_orig[df_predicted_orig["premise"].apply(
             lambda x: x not in selected_premises)].copy()
 
-    df_to_annotate["round"] = args.round
+    df_to_annotate["source"] = f"annotation:round_{args.round}"
     print(f"Saving pre_annotation data to {pre_annotation_filepath}")
     df_to_annotate.to_csv(pre_annotation_filepath, sep='\t', index=False)
 

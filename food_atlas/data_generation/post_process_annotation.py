@@ -21,6 +21,7 @@ TRAIN_FILEPATH = "../../outputs/data_generation/train.tsv"
 VAL_FILEPATH = "../../outputs/data_generation/val.tsv"
 TEST_FILEPATH = "../../outputs/data_generation/test.tsv"
 KG_FILENAME = "kg.txt"
+EVIDENCE_FILENAME = "evidence.txt"
 ENTITIES_FILENAME = "entities.txt"
 RELATIONS_FILENAME = "relations.txt"
 NUM_AUGMENT = 10
@@ -95,9 +96,9 @@ def parse_argument() -> argparse.Namespace:
     )
 
     parser.add_argument(
-        "--skip_augment",
+        "--do_augmentation",
         action="store_true",
-        help="Set if skipping augmentation.",
+        help="Set if performing augmentation.",
     )
 
     parser.add_argument(
@@ -125,8 +126,8 @@ def export_to_kg(df_annotated, args):
         df_val.to_csv(args.val_filepath, sep='\t', index=False)
         df_test.to_csv(args.test_filepath, sep='\t', index=False)
 
-        df_val["round"] = "val"
-        df_test["round"] = "test"
+        df_val["source"] = "annotation:val"
+        df_test["source"] = "annotation:test"
 
         df_val = df_val[df_annotated.columns]
         df_test = df_test[df_annotated.columns]
@@ -139,10 +140,9 @@ def export_to_kg(df_annotated, args):
     df_pos = df_for_kg[df_for_kg["answer"] == "Entails"]
     df_pos.reset_index(inplace=True, drop=True)
 
-    df_pos = df_pos.head(50)
-
     fa_kg = KnowledgeGraph(
         kg_filepath=os.path.join(new_kg_folder, KG_FILENAME),
+        evidence_filepath=os.path.join(new_kg_folder, EVIDENCE_FILENAME),
         entities_filepath=os.path.join(new_kg_folder, ENTITIES_FILENAME),
         relations_filepath=os.path.join(new_kg_folder, RELATIONS_FILENAME),
     )
@@ -161,7 +161,7 @@ def generate_training(df_annotated, fa_kg, args):
         ["head", "relation", "tail", "premise", "hypothesis_string", "hypothesis_id", "answer"]
     ]
 
-    if args.skip_augment:
+    if not args.do_augmentation:
         df_train["augmentation"] = "original"
     else:
         df_species = fa_kg.get_entities_by_type(type_="species")
@@ -279,8 +279,8 @@ def main():
     print("Exporting post annotation data to KG...")
     fa_kg = export_to_kg(df_annotated, args)
 
-    # print("Generating training data...")
-    # generate_training(df_annotated, fa_kg, args)
+    print("Generating training data...")
+    generate_training(df_annotated, fa_kg, args)
 
 
 if __name__ == '__main__':

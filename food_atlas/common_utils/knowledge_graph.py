@@ -1,5 +1,5 @@
 from ast import literal_eval
-from collections import namedtuple, Counter
+from collections import namedtuple, Counter, OrderedDict
 from pathlib import Path
 from typing import Dict, List, Any
 import sys
@@ -13,8 +13,20 @@ _KG_COLUMNS = [
     "head",
     "relation",
     "tail",
-    "evidence",
-    "num_evidence",
+]
+
+_EVIDENCE_COLUMNS = [
+    "head",
+    "relation",
+    "tail",
+    "triple",
+    "origin",
+    "pmid",
+    "pmcid",
+    "section",
+    "premise",
+    "source",
+    "prob",
 ]
 
 _ENTITY_COLUMNS = [
@@ -38,10 +50,96 @@ _ENTITY_TYPES = [
     "chemical",
     # organism entity types
     "organism",
-    "organism:genus",
+    "organism:subgenus",
+    "organism:subkingdom",
+    "organism:subphylum",
+    "organism:forma",
+    "organism:tribe",
+    "organism:parvorder",
+    "organism:varietas",
+    "organism:subspecies",
+    "organism:subclass",
+    "organism:forma specialis",
+    "organism:superclass",
     "organism:species",
+    "organism:infraorder",
+    "organism:superorder",
+    "organism:infraclass",
+    "organism:superfamily",
+    "organism:morph",
+    "organism:genotype",
+    "organism:serogroup",
+    "organism:subtribe",
+    "organism:serotype",
+    "organism:genus",
+    "organism:kingdom",
+    "organism:species subgroup",
+    "organism:no rank",
+    "organism:strain",
+    "organism:class",
+    "organism:section",
+    "organism:clade",
+    "organism:superkingdom",
+    "organism:family",
+    "organism:species group",
+    "organism:subsection",
+    "organism:suborder",
+    "organism:order",
+    "organism:isolate",
+    "organism:biotype",
+    "organism:pathogroup",
+    "organism:subfamily",
+    "organism:superphylum",
+    "organism:phylum",
+    "organism:series",
+    "organism:cohort",
+    "organism:subcohort",
     # organism with part entity types
     "organism_with_part",
+    "organism_with_part:subgenus",
+    "organism_with_part:subkingdom",
+    "organism_with_part:subphylum",
+    "organism_with_part:forma",
+    "organism_with_part:tribe",
+    "organism_with_part:parvorder",
+    "organism_with_part:varietas",
+    "organism_with_part:subspecies",
+    "organism_with_part:subclass",
+    "organism_with_part:forma specialis",
+    "organism_with_part:superclass",
+    "organism_with_part:species",
+    "organism_with_part:infraorder",
+    "organism_with_part:superorder",
+    "organism_with_part:infraclass",
+    "organism_with_part:superfamily",
+    "organism_with_part:morph",
+    "organism_with_part:genotype",
+    "organism_with_part:serogroup",
+    "organism_with_part:subtribe",
+    "organism_with_part:serotype",
+    "organism_with_part:genus",
+    "organism_with_part:kingdom",
+    "organism_with_part:species subgroup",
+    "organism_with_part:no rank",
+    "organism_with_part:strain",
+    "organism_with_part:class",
+    "organism_with_part:section",
+    "organism_with_part:clade",
+    "organism_with_part:superkingdom",
+    "organism_with_part:family",
+    "organism_with_part:species group",
+    "organism_with_part:subsection",
+    "organism_with_part:suborder",
+    "organism_with_part:order",
+    "organism_with_part:isolate",
+    "organism_with_part:biotype",
+    "organism_with_part:pathogroup",
+    "organism_with_part:subfamily",
+    "organism_with_part:superphylum",
+    "organism_with_part:phylum",
+    "organism_with_part:series",
+    "organism_with_part:cohort",
+    "organism_with_part:subcohort",
 ]
 
 _ENTITY_OTHER_DBS = [
@@ -84,12 +182,16 @@ class KnowledgeGraph():
     def __init__(
             self,
             kg_filepath: str,
+            evidence_filepath: str,
             entities_filepath: str,
             relations_filepath: str,
     ):
         # load the graph
         self.kg_filepath = kg_filepath
         self.df_kg = self._read_kg()
+
+        self.evidence_filepath = evidence_filepath
+        self.df_evidence = self._read_evidence()
 
         # load the entities
         self.entities_filepath = entities_filepath
@@ -112,28 +214,44 @@ class KnowledgeGraph():
         # if entities file exists
         print(f"Loading KG file from {self.kg_filepath}...")
         df_kg = pd.read_csv(self.kg_filepath, sep='\t', keep_default_na=False)
-        df_kg["evidence"] = df_kg["evidence"].apply(literal_eval)
         assert set(df_kg.columns.tolist()) == set(_KG_COLUMNS)
         df_kg = df_kg[_KG_COLUMNS]
 
         return df_kg
 
-    def save_kg(
-            self,
-            kg_filepath: str = None,
-    ):
-        raise NotImplementedError()
+    def _read_evidence(self) -> pd.DataFrame:
+        # if no evidence file exists
+        if not Path(self.evidence_filepath).is_file():
+            print("Evidence file does not exist.")
+            df_evidence = pd.DataFrame(columns=_EVIDENCE_COLUMNS)
+            return df_evidence
+
+        # if entities file exists
+        print(f"Loading evidence file from {self.evidence_filepath}...")
+        df_evidence = pd.read_csv(self.evidence_filepath, sep='\t', keep_default_na=False)
+        assert set(df_evidence.columns.tolist()) == set(_EVIDENCE_COLUMNS)
+        df_evidence = df_evidence[_EVIDENCE_COLUMNS]
+
+        return df_evidence
+
+    def get_kg(self) -> pd.DataFrame:
+        return self.df_kg.copy()
+
+    def get_evidence(self) -> pd.DataFrame:
+        return self.df_evidence.copy()
 
     def add_ph_pairs(
             self,
             df_input: pd.DataFrame,
     ):
         # add the entities first for speed
-        triples = df_input["head"].tolist() + df_input["tail"].tolist()
-        chemicals = [x for x in triples if x.type.startswith("chemical")]
-        organisms = [x for x in triples if x.type.startswith("organism")]
-        organisms_with_part = [x for x in triples if x.type.startswith("organism_with_part")]
-        assert len(triples) == (len(chemicals) + len(organisms) + len(organisms_with_part))
+        entities = df_input["head"].tolist() + df_input["tail"].tolist()
+        chemicals = [x for x in entities if x.type.startswith("chemical")]
+        organisms = [x for x in entities
+                     if x.type.startswith("organism") and
+                     not x.type.startswith("organism_with_part")]
+        organisms_with_part = [x for x in entities if x.type.startswith("organism_with_part")]
+        assert len(entities) == (len(chemicals) + len(organisms) + len(organisms_with_part))
 
         print(f"Number of chemicals before merging: {len(chemicals)}")
         print(f"Number of organisms before merging: {len(organisms)}")
@@ -148,23 +266,15 @@ class KnowledgeGraph():
         print("Merging organisms_with_part...")
         organisms_with_part = KnowledgeGraph.merge_candidate_entities(
             organisms_with_part, using="NCBI_taxonomy")
+        entities = chemicals + organisms + organisms_with_part
 
         print(f"Number of chemicals after merging: {len(chemicals)}")
         print(f"Number of organisms after merging: {len(organisms)}")
         print(f"Number of organisms_with_part after merging: {len(organisms_with_part)}")
 
-        def _get_key(x):
-            if x.type.startswith("chemical"):
-                return x.other_db_ids["MESH"]
-            elif x.type.split(":")[0] in ["organism", "organism_with_part"]:
-                return x.other_db_ids["NCBI_taxonomy"]
-            else:
-                raise NotImplementedError()
-
         print("Adding entities...")
-
         entity_lookup = {x: {} for x in _ENTITY_TYPES}
-        for x in tqdm(triples):
+        for x in tqdm(entities):
             e = self._add_entity(
                 type_=x.type,
                 name=x.name,
@@ -172,12 +282,149 @@ class KnowledgeGraph():
                 other_db_ids=x.other_db_ids,
             )
 
-            key = _get_key(x)
+            key = KnowledgeGraph._get_other_db_id(x)
             if key not in entity_lookup[x.type]:
                 entity_lookup[x.type][key] = e
 
+        print("Adding triples...")
         data = []
-        for idx, row in tqdm(df_input.iterrows(), total=df_input.shape[0]):
+        evidence = []
+        for _, row in tqdm(df_input.iterrows(), total=df_input.shape[0]):
+            head = row["head"]
+            tail = row["tail"]
+
+            relation = self._add_relation(
+                name=row["relation"].name,
+                translation=row["relation"].translation,
+            )
+
+            head_foodatlas_id = \
+                entity_lookup[head.type][KnowledgeGraph._get_other_db_id(head)].foodatlas_id
+            tail_foodatlas_id = \
+                entity_lookup[tail.type][KnowledgeGraph._get_other_db_id(tail)].foodatlas_id
+
+            triple = pd.Series({
+                "head": head_foodatlas_id,
+                "relation": relation.foodatlas_id,
+                "tail": tail_foodatlas_id,
+            })
+            data.append(triple)
+
+            if row["source"].startswith("annotation"):
+                origin = "annotation"
+            else:
+                origin = "prediction"
+
+            e = pd.Series({
+                "head": head_foodatlas_id,
+                "relation": relation.foodatlas_id,
+                "tail": tail_foodatlas_id,
+                "triple": f"({head_foodatlas_id},{relation.foodatlas_id},{tail_foodatlas_id})",
+                "origin": origin,
+                "pmid": row["pmid"],
+                "pmcid": row["pmcid"],
+                "section": row["section"],
+                "premise": row["premise"],
+                "source": row["source"],
+                "prob": row["prob"] if row["source"].startswith("prediction") else None,
+            })
+            evidence.append(e)
+
+            # has part
+            if head.type == "organism_with_part":
+                relation = self._add_relation(
+                    name="hasPart",
+                    translation="has part",
+                )
+
+                head_foodatlas_id = \
+                    entity_lookup["organism"][KnowledgeGraph._get_other_db_id(head)].foodatlas_id
+                tail_foodatlas_id = \
+                    entity_lookup[head.type][KnowledgeGraph._get_other_db_id(head)].foodatlas_id
+
+                triple = pd.Series({
+                    "head": head_foodatlas_id,
+                    "relation": relation.foodatlas_id,
+                    "tail": tail_foodatlas_id,
+                })
+                data.append(triple)
+
+                e = pd.Series({
+                    "head": head_foodatlas_id,
+                    "relation": relation.foodatlas_id,
+                    "tail": tail_foodatlas_id,
+                    "triple": f"({head_foodatlas_id},{relation.foodatlas_id},{tail_foodatlas_id})",
+                    "origin": origin,
+                    "pmid": row["pmid"],
+                    "pmcid": row["pmcid"],
+                    "section": row["section"],
+                    "premise": row["premise"],
+                    "source": row["source"],
+                    "prob": row["prob"] if row["source"].startswith("prediction") else None,
+                })
+                evidence.append(e)
+
+        self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data, columns=_KG_COLUMNS)])
+        self.df_kg.drop_duplicates(inplace=True, ignore_index=True)
+
+        self.df_evidence = pd.concat(
+            [self.df_evidence, pd.DataFrame(evidence, columns=_EVIDENCE_COLUMNS)])
+        self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
+
+        return self.df_kg, self.df_evidence
+
+    @staticmethod
+    def _get_other_db_id(x):
+        if x.type.startswith("chemical"):
+            return x.other_db_ids["MESH"]
+        elif x.type.split(":")[0] in ["organism", "organism_with_part"]:
+            return x.other_db_ids["NCBI_taxonomy"]
+        else:
+            raise NotImplementedError()
+
+    def add_taxonomy(
+            self,
+            df_input: pd.DataFrame,
+            origin: str,
+    ):
+        assert origin in ["NCBI_taxonomy", "ClassyFire"]
+
+        # add the entities first for speed
+        entities = df_input["head"].tolist() + df_input["tail"].tolist()
+        chemicals = [x for x in entities if x.type.startswith("chemical")]
+        organisms = [x for x in entities if x.type.startswith("organism")]
+        assert len(entities) == (len(chemicals) + len(organisms))
+
+        print(f"Number of chemicals before merging: {len(chemicals)}")
+        print(f"Number of organisms before merging: {len(organisms)}")
+
+        print("Merging chemicals...")
+        chemicals = KnowledgeGraph.merge_candidate_entities(chemicals, using="MESH")
+        print("Merging organisms...")
+        organisms = KnowledgeGraph.merge_candidate_entities(organisms, using="NCBI_taxonomy")
+        entities = chemicals + organisms
+
+        print(f"Number of chemicals after merging: {len(chemicals)}")
+        print(f"Number of organisms after merging: {len(organisms)}")
+
+        print("Adding entities...")
+        entity_lookup = {x: {} for x in _ENTITY_TYPES}
+        for x in tqdm(entities):
+            e = self._add_entity(
+                type_=x.type,
+                name=x.name,
+                synonyms=x.synonyms,
+                other_db_ids=x.other_db_ids,
+            )
+
+            key = KnowledgeGraph._get_other_db_id(x)
+            if key not in entity_lookup[x.type]:
+                entity_lookup[x.type][key] = e
+
+        print("Adding triples...")
+        data = []
+        evidence = []
+        for _, row in tqdm(df_input.iterrows(), total=df_input.shape[0]):
             head = row["head"]
             tail = row["tail"]
 
@@ -187,53 +434,41 @@ class KnowledgeGraph():
                 translation=row["relation"].translation,
             )
 
-            newrow = pd.Series({
-                "head": entity_lookup[head.type][_get_key(head)].foodatlas_id,
+            head_foodatlas_id = \
+                entity_lookup[head.type][KnowledgeGraph._get_other_db_id(head)].foodatlas_id
+            tail_foodatlas_id = \
+                entity_lookup[tail.type][KnowledgeGraph._get_other_db_id(tail)].foodatlas_id
+
+            triple = pd.Series({
+                "head": head_foodatlas_id,
                 "relation": relation.foodatlas_id,
-                "tail": entity_lookup[tail.type][_get_key(tail)].foodatlas_id,
-                "evidence": [{
-                    "pmid": row["pmid"],
-                    "pmcid": row["pmcid"],
-                    "section": row["section"],
-                    "premise": row["premise"],
-                    # "round": row["round"],
-                }],
+                "tail": tail_foodatlas_id,
             })
+            data.append(triple)
 
-            data.append(newrow)
+            e = pd.Series({
+                "head": head_foodatlas_id,
+                "relation": relation.foodatlas_id,
+                "tail": tail_foodatlas_id,
+                "triple": f"({head_foodatlas_id},{relation.foodatlas_id},{tail_foodatlas_id})",
+                "origin": origin,
+                "pmid": None,
+                "pmcid": None,
+                "section": None,
+                "premise": None,
+                "source": None,
+                "prob": None,
+            })
+            evidence.append(e)
 
-            # has part
-            if head.type == "organism_with_part":
-                relation = self._add_relation(
-                    name="hasPart",
-                    translation="has part",
-                )
+        self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data, columns=_KG_COLUMNS)])
+        self.df_kg.drop_duplicates(inplace=True, ignore_index=True)
 
-                newrow = pd.Series({
-                    "head": entity_lookup["organism"][_get_key(head)].foodatlas_id,
-                    "relation": relation.foodatlas_id,
-                    "tail": entity_lookup[head.type][_get_key(head)].foodatlas_id,
-                    "evidence": [{
-                        "pmid": row["pmid"],
-                        "pmcid": row["pmcid"],
-                        "section": row["section"],
-                        "premise": row["premise"],
-                        # "round": row["round"],
-                    }],
-                })
+        self.df_evidence = pd.concat(
+            [self.df_evidence, pd.DataFrame(evidence, columns=_EVIDENCE_COLUMNS)])
+        self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
 
-                data.append(newrow)
-
-        self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data)])
-        self.df_kg = self.df_kg.groupby(["head", "relation", "tail"])["evidence"].\
-            agg(sum).reset_index()
-
-        def _merge_evidence(x):
-            return [dict(t) for t in {tuple(d.items()) for d in x}]
-        self.df_kg["evidence"] = self.df_kg["evidence"].apply(_merge_evidence)
-        self.df_kg["num_evidence"] = self.df_kg["evidence"].apply(len)
-
-        return self.df_kg
+        return self.df_kg, self.df_evidence
 
     ############
     # ENTITIES #
@@ -252,6 +487,7 @@ class KnowledgeGraph():
         df_entities = pd.read_csv(
             self.entities_filepath, sep="\t", converters=_ENTITY_CONVERTERS)
         df_entities["foodatlas_id"] = df_entities["foodatlas_id"].astype(int)
+        df_entities.index = df_entities["foodatlas_id"].tolist()
 
         foodatlas_ids = df_entities["foodatlas_id"].tolist()
         avail_entity_id = 0 if len(foodatlas_ids) == 0 else max(foodatlas_ids) + 1
@@ -272,11 +508,6 @@ class KnowledgeGraph():
             synonyms: List[str] = [],
             other_db_ids: Dict[str, Any] = {},
     ) -> pd.Series:
-        # lower case
-        type_ = type_.lower()
-        name = name.lower()
-        synonyms = [x.lower() for x in synonyms]
-
         # check integrity
         assert type_ in _ENTITY_TYPES
         assert set(other_db_ids.keys()).issubset(_ENTITY_OTHER_DBS)
@@ -298,17 +529,14 @@ class KnowledgeGraph():
                 raise ValueError("Cannot have more than two matching rows!")
 
             entity = df_duplicates.iloc[0]
-            name_and_synonyms = [entity.name] + entity.synonyms
-            input_name_and_synonyms = [name] + synonyms
+            all_names = set([entity["name"]] + entity["synonyms"] + [name] + synonyms)
+            if entity["name"] in all_names:
+                all_names.remove(entity["name"])
+            if entity["name"].lower() in all_names:
+                all_names.remove(entity["name"].lower())
 
-            new_synonyms = entity.synonyms
-            for x in input_name_and_synonyms:
-                if x in name_and_synonyms:
-                    continue
-                new_synonyms.append(x)
-
-            entity.at["synonyms"] = new_synonyms
-            entity.at["other_db_ids"] = {**other_db_ids, **entity.other_db_ids}
+            entity.at["synonyms"] = KnowledgeGraph._merge_synonyms(all_names)
+            entity.at["other_db_ids"] = {**other_db_ids, **entity["other_db_ids"]}
 
             self.df_entities.update(entity)
             return entity
@@ -318,7 +546,7 @@ class KnowledgeGraph():
             "foodatlas_id": self.avail_entity_id,
             "type": type_,
             "name": name,
-            "synonyms": [x for x in synonyms],
+            "synonyms": KnowledgeGraph._merge_synonyms(synonyms),
             "other_db_ids": other_db_ids,
         }
         entity = pd.Series(new_data, name=name)
@@ -326,6 +554,63 @@ class KnowledgeGraph():
         self.avail_entity_id += 1
 
         return entity
+
+    @staticmethod
+    def _merge_synonyms(synonyms):
+        all_synonyms = set(synonyms)
+        seen = OrderedDict()
+        for word in all_synonyms:
+            lo = word.lower()
+            seen[lo] = min(word, seen.get(lo, word))
+        return list(seen.values())
+
+    def _update_entity(
+            self,
+            foodatlas_id: int,
+            type_: str = None,
+            name: str = None,
+            synonyms: List[str] = [],
+            other_db_ids: Dict[str, Any] = {},
+    ) -> pd.Series:
+        if type_:
+            self.df_entities.at[foodatlas_id, "type"] = type_
+
+            if type_.startswith("organism_with_part"):
+                part_name = self.df_entities.at[foodatlas_id, "name"].split(" - ")[-1]
+        if name:
+            all_names = self.df_entities.at[foodatlas_id, "synonyms"].copy()
+            all_names += [self.df_entities.at[foodatlas_id, "name"]]
+
+            if type_.startswith("organism_with_part"):
+                self.df_entities.at[foodatlas_id, "name"] = f"{name} - {part_name}"
+                self.df_entities.at[foodatlas_id, "synonyms"] = \
+                    KnowledgeGraph._merge_synonyms(all_names)
+            else:
+                self.df_entities.at[foodatlas_id, "name"] = name
+                self.df_entities.at[foodatlas_id, "synonyms"] = \
+                    KnowledgeGraph._merge_synonyms(all_names)
+
+        if synonyms:
+            all_names = self.df_entities.at[foodatlas_id, "synonyms"].copy()
+            if type_.startswith("organism_with_part"):
+                all_names += [f"{x} - {part_name}" for x in synonyms]
+            else:
+                all_names += synonyms
+            all_names = set(all_names)
+
+            if self.df_entities.at[foodatlas_id, "name"] in all_names:
+                all_names.remove(self.df_entities.at[foodatlas_id, "name"])
+
+            if self.df_entities.at[foodatlas_id, "name"].lower() in all_names:
+                all_names.remove(self.df_entities.at[foodatlas_id, "name"].lower())
+
+            self.df_entities.at[foodatlas_id, "synonyms"] = \
+                KnowledgeGraph._merge_synonyms(all_names)
+
+        if other_db_ids:
+            raise NotImplementedError
+
+        return self.df_entities.loc[foodatlas_id]
 
     @staticmethod
     def merge_candidate_entities(
@@ -386,13 +671,24 @@ class KnowledgeGraph():
         return self.df_entities
 
     def get_entity_by_id(self, foodatlas_id: int) -> pd.Series:
-        raise NotImplementedError()
+        entity = self.df_entities[self.df_entities["foodatlas_id"] == foodatlas_id]
+        assert entity.shape[0] == 1
+        return entity.iloc[0]
 
     def get_entity_by_name(self, name: str) -> pd.Series:
         raise NotImplementedError()
 
-    def get_entities_by_type(self, type_: str) -> pd.DataFrame:
-        return self.df_entities[self.df_entities["type"] == type_]
+    def get_entities_by_type(
+            self,
+            type_: str = None,
+            startswith: str = None,
+    ) -> pd.DataFrame:
+        if type_:
+            return self.df_entities[self.df_entities["type"] == type_]
+        if startswith:
+            return self.df_entities[self.df_entities["type"].startswith(startswith)]
+
+        raise RuntimeError()
 
     def print_all_entities(self) -> None:
         print(self.df_entities)
@@ -416,6 +712,7 @@ class KnowledgeGraph():
         print(f"Loading relations file from {self.relations_filepath}...")
         df_relations = pd.read_csv(self.relations_filepath, sep="\t")
         df_relations["foodatlas_id"] = df_relations["foodatlas_id"].astype(int)
+        df_relations.index = df_relations["foodatlas_id"].tolist()
 
         foodatlas_ids = df_relations["foodatlas_id"].tolist()
         avail_relation_id = 0 if len(foodatlas_ids) == 0 else max(foodatlas_ids) + 1
@@ -429,7 +726,7 @@ class KnowledgeGraph():
     ) -> pd.Series:
         # check for duplicates
         for idx, row in self.df_relations.iterrows():
-            if row.name == name:
+            if row["name"] == name:
                 assert translation == row.translation
                 return row
 
@@ -457,6 +754,7 @@ class KnowledgeGraph():
     def save(
             self,
             kg_filepath: str = None,
+            evidence_filepath: str = None,
             entities_filepath: str = None,
             relations_filepath: str = None,
     ) -> None:
@@ -464,8 +762,15 @@ class KnowledgeGraph():
             print(f"Saving kg to a new filepath: {kg_filepath}")
             self.df_kg.to_csv(kg_filepath, sep='\t', index=False)
         else:
-            print(f"Saving entities to original filepath: {self.kg_filepath}")
+            print(f"Saving kg to original filepath: {self.kg_filepath}")
             self.df_kg.to_csv(self.kg_filepath, sep='\t', index=False)
+
+        if evidence_filepath:
+            print(f"Saving evidence to a new filepath: {evidence_filepath}")
+            self.df_evidence.to_csv(evidence_filepath, sep='\t', index=False)
+        else:
+            print(f"Saving evidence to original filepath: {self.evidence_filepath}")
+            self.df_evidence.to_csv(self.evidence_filepath, sep='\t', index=False)
 
         if entities_filepath:
             print(f"Saving entities to a new filepath: {entities_filepath}")

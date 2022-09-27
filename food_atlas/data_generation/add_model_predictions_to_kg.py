@@ -1,12 +1,8 @@
 import argparse
 import os
-from pathlib import Path
-import random
 import sys
 
 sys.path.append('..')
-
-import pandas as pd  # noqa: E402
 
 from common_utils.utils import read_tsv  # noqa: E402
 from common_utils.knowledge_graph import KnowledgeGraph  # noqa: E402
@@ -16,6 +12,7 @@ PREDICTED_FILEPATH = "../../outputs/data_generation/predicted_{}.tsv"
 THRESHOLD = 0.5
 KG_OUTPUT_DIR = "../../outputs/kg"
 KG_FILENAME = "kg.txt"
+EVIDENCE_FILENAME = "evidence.txt"
 ENTITIES_FILENAME = "entities.txt"
 RELATIONS_FILENAME = "relations.txt"
 
@@ -47,31 +44,23 @@ def main():
     # read predicted
     predicted_filepath = PREDICTED_FILEPATH.format(args.round)
     df_pred = read_tsv(predicted_filepath)
+    df_pred["source"] = "prediction:round_1"
     print(f"Predicted shape: {df_pred.shape}")
-    # df_pred = df_pred.head(500)
+
+    df_pred_pos = df_pred[df_pred["prob"] > args.threshold]
+    print(f"Predicted positives shape: {df_pred_pos.shape}")
 
     # add predictions
     output_dir = os.path.join(KG_OUTPUT_DIR, str(args.round))
     fa_kg = KnowledgeGraph(
         kg_filepath=os.path.join(output_dir, KG_FILENAME),
+        evidence_filepath=os.path.join(output_dir, EVIDENCE_FILENAME),
         entities_filepath=os.path.join(output_dir, ENTITIES_FILENAME),
         relations_filepath=os.path.join(output_dir, RELATIONS_FILENAME),
     )
+    fa_kg.add_ph_pairs(df_pred_pos)
 
-    print(fa_kg.num_entities())
-
-    from time import time
-    start = time()
-
-    fa_kg.add_ph_pairs(df_pred)
-
-    end = time()
-    print(end-start)
-
-    # fa_kg.save()
-
-    print(fa_kg.num_entities())
-    print(fa_kg.avail_entity_id)
+    fa_kg.save()
 
 
 if __name__ == '__main__':
