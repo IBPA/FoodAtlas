@@ -1,5 +1,9 @@
 from ast import literal_eval
 from collections import namedtuple, Counter, OrderedDict
+<<<<<<< HEAD
+=======
+import os
+>>>>>>> dev_local
 from pathlib import Path
 from typing import Dict, List, Any
 import sys
@@ -48,6 +52,8 @@ _ENTITY_DEFAULTS = [
 _ENTITY_TYPES = [
     # chemicl entity types
     "chemical",
+    "chemical:superclass",
+    "chemical:class",
     # organism entity types
     "organism",
     "organism:subgenus",
@@ -146,6 +152,7 @@ _ENTITY_OTHER_DBS = [
     "NCBI_taxonomy",
     "FooDB",
     "MESH",
+    "ClassyFire",
 ]
 
 _ENTITY_CONVERTERS = {
@@ -309,12 +316,21 @@ class KnowledgeGraph():
                 "tail": tail_foodatlas_id,
             })
             data.append(triple)
+<<<<<<< HEAD
 
             if row["source"].startswith("annotation"):
                 origin = "annotation"
             else:
                 origin = "prediction"
 
+=======
+
+            if row["source"].startswith("annotation"):
+                origin = "annotation"
+            else:
+                origin = "prediction"
+
+>>>>>>> dev_local
             e = pd.Series({
                 "head": head_foodatlas_id,
                 "relation": relation.foodatlas_id,
@@ -344,6 +360,7 @@ class KnowledgeGraph():
 
                 triple = pd.Series({
                     "head": head_foodatlas_id,
+<<<<<<< HEAD
                     "relation": relation.foodatlas_id,
                     "tail": tail_foodatlas_id,
                 })
@@ -468,6 +485,132 @@ class KnowledgeGraph():
             [self.df_evidence, pd.DataFrame(evidence, columns=_EVIDENCE_COLUMNS)])
         self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
 
+=======
+                    "relation": relation.foodatlas_id,
+                    "tail": tail_foodatlas_id,
+                })
+                data.append(triple)
+
+                e = pd.Series({
+                    "head": head_foodatlas_id,
+                    "relation": relation.foodatlas_id,
+                    "tail": tail_foodatlas_id,
+                    "triple": f"({head_foodatlas_id},{relation.foodatlas_id},{tail_foodatlas_id})",
+                    "origin": origin,
+                    "pmid": row["pmid"],
+                    "pmcid": row["pmcid"],
+                    "section": row["section"],
+                    "premise": row["premise"],
+                    "source": row["source"],
+                    "prob": row["prob"] if row["source"].startswith("prediction") else None,
+                })
+                evidence.append(e)
+
+        self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data, columns=_KG_COLUMNS)])
+        self.df_kg.drop_duplicates(inplace=True, ignore_index=True)
+
+        self.df_evidence = pd.concat(
+            [self.df_evidence, pd.DataFrame(evidence, columns=_EVIDENCE_COLUMNS)])
+        self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
+
+        return self.df_kg, self.df_evidence
+
+    @staticmethod
+    def _get_other_db_id(x):
+        if x.type.startswith("chemical"):
+            return x.other_db_ids["MESH"]
+        elif x.type.split(":")[0] in ["organism", "organism_with_part"]:
+            return x.other_db_ids["NCBI_taxonomy"]
+        else:
+            raise NotImplementedError()
+
+    def add_taxonomy(
+            self,
+            df_input: pd.DataFrame,
+            origin: str,
+    ):
+        assert origin in ["NCBI_taxonomy", "ClassyFire"]
+
+        # add the entities first for speed
+        entities = df_input["head"].tolist() + df_input["tail"].tolist()
+        chemicals = [x for x in entities if x.type.startswith("chemical")]
+        organisms = [x for x in entities if x.type.startswith("organism")]
+        assert len(entities) == (len(chemicals) + len(organisms))
+
+        print(f"Number of chemicals before merging: {len(chemicals)}")
+        print(f"Number of organisms before merging: {len(organisms)}")
+
+        print("Merging chemicals...")
+        chemicals = KnowledgeGraph.merge_candidate_entities(chemicals, using="MESH")
+        print("Merging organisms...")
+        organisms = KnowledgeGraph.merge_candidate_entities(organisms, using="NCBI_taxonomy")
+        entities = chemicals + organisms
+
+        print(f"Number of chemicals after merging: {len(chemicals)}")
+        print(f"Number of organisms after merging: {len(organisms)}")
+
+        print("Adding entities...")
+        entity_lookup = {x: {} for x in _ENTITY_TYPES}
+        for x in tqdm(entities):
+            e = self._add_entity(
+                type_=x.type,
+                name=x.name,
+                synonyms=x.synonyms,
+                other_db_ids=x.other_db_ids,
+            )
+
+            key = KnowledgeGraph._get_other_db_id(x)
+            if key not in entity_lookup[x.type]:
+                entity_lookup[x.type][key] = e
+
+        print("Adding triples...")
+        data = []
+        evidence = []
+        for _, row in tqdm(df_input.iterrows(), total=df_input.shape[0]):
+            head = row["head"]
+            tail = row["tail"]
+
+            # relation
+            relation = self._add_relation(
+                name=row["relation"].name,
+                translation=row["relation"].translation,
+            )
+
+            head_foodatlas_id = \
+                entity_lookup[head.type][KnowledgeGraph._get_other_db_id(head)].foodatlas_id
+            tail_foodatlas_id = \
+                entity_lookup[tail.type][KnowledgeGraph._get_other_db_id(tail)].foodatlas_id
+
+            triple = pd.Series({
+                "head": head_foodatlas_id,
+                "relation": relation.foodatlas_id,
+                "tail": tail_foodatlas_id,
+            })
+            data.append(triple)
+
+            e = pd.Series({
+                "head": head_foodatlas_id,
+                "relation": relation.foodatlas_id,
+                "tail": tail_foodatlas_id,
+                "triple": f"({head_foodatlas_id},{relation.foodatlas_id},{tail_foodatlas_id})",
+                "origin": origin,
+                "pmid": None,
+                "pmcid": None,
+                "section": None,
+                "premise": None,
+                "source": None,
+                "prob": None,
+            })
+            evidence.append(e)
+
+        self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data, columns=_KG_COLUMNS)])
+        self.df_kg.drop_duplicates(inplace=True, ignore_index=True)
+
+        self.df_evidence = pd.concat(
+            [self.df_evidence, pd.DataFrame(evidence, columns=_EVIDENCE_COLUMNS)])
+        self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
+
+>>>>>>> dev_local
         return self.df_kg, self.df_evidence
 
     ############
@@ -788,48 +931,107 @@ class KnowledgeGraph():
 
 
 def main():
-    # assume you have a taxonomy.
-    # (strawberry genus A, hasChild, strawberry species A)
+    # assume you have an ontology.
+    #        A                superclass
+    #        |
+    #     -------
+    #     |     |
+    #     B     C             class
+    # (chemical B, isA, chemical A)
+    # (chemical C, isA, chemical A)
 
-    # you first create named tuple as follows
+    df = pd.DataFrame(
+        [["chemical B", "isA", "chemical A"],
+         ["chemical C", "isA", "chemical A"]],
+        columns=["head", "relation", "tail"],
+    )
+
+    # and let's assume the metadata of nodes A, B, and C are as follows
+    # A
+    # type: chemical:superclass
+    # name: chemical A
+    # synonyms: [chem. A]
+    # classyfire DB id: 123
+    # Mesh ID: 567
+
+    # B
+    # type: chemical:class
+    # name: chemical B
+    # synonyms: [chem. B]
+    # classyfire DB id: 723
+    # Mesh ID: 427
+
+    # C
+    # type: chemical:class
+    # name: chemical C
+    # synonyms: []
+    # classyfire DB id: 894
+    # Mesh ID: 532
+
+    # then we need to convert the head, relation, tail to
+    # candidate types as follows.
+    # you should probably do this in a for loop
+
+    data = []
+
+    # B isA A
     head = CandidateEntity(
-        type="organism:genus",
-        name="strawberry genus A",
-        synonyms=["Strawberry Genus A", "Straeberry G. A"],
-        other_db_ids={"NCBI_taxonomy": "1234"},
+        type="chemical:class",
+        name="chemical B",
+        synonyms=["chem. B"],
+        other_db_ids={"ClassyFire": "723", "MESH": "427"},
     )
 
     relation = CandidateRelation(
-        name="hasChild",
-        translation="has child",
+        name="isA",
+        translation="is a",
     )
 
     tail = CandidateEntity(
-        type="organism:species",
-        name="strawberry species A",
-        synonyms=[],  # can be empty
-        other_db_ids={"NCBI_taxonomy": "4321"},
+        type="chemical:superclass",
+        name="chemical A",
+        synonyms=["chem. A"],
+        other_db_ids={"ClassyFire": "123", "MESH": "567"},
     )
+    data.append([head, relation, tail])
+
+    # C isA A
+    head = CandidateEntity(
+        type="chemical:class",
+        name="chemical C",
+        synonyms=[],
+        other_db_ids={"ClassyFire": "894", "MESH": "532"},
+    )
+
+    relation = CandidateRelation(
+        name="isA",
+        translation="is a",
+    )
+
+    tail = CandidateEntity(
+        type="chemical:superclass",
+        name="chemical A",
+        synonyms=["chem. A"],
+        other_db_ids={"ClassyFire": "123", "MESH": "567"},
+    )
+    data.append([head, relation, tail])
 
     # you then populate the dataframe using this info
-    df = pd.DataFrame({"head": [head], "relation": [relation], "tail": [tail]})
+    df = pd.DataFrame(data, columns=["head", "relation", "tail"])
+    print(df)
 
-    # i'll change so that you wouldn't have to enter these
-    # for now, the code will fail if you don't enter these info
-    # if you need more custom metadata for ontology, let me know
-    df["pmid"] = '1234'
-    df["pmcid"] = '1234'
-    df["section"] = 'abc'
-    df["premise"] = 'def'
-
+    # change this temporary directory to something you want !!!!!!!!
+    temporary_dir = "/home/jasonyoun/Jason/Scratch/temp"
     fa_kg = KnowledgeGraph(
-        kg_filepath="kg.txt",
-        entities_filepath="entities.txt",
-        relations_filepath="relations.txt",
+        kg_filepath=os.path.join(temporary_dir, "kg.txt"),
+        evidence_filepath=os.path.join(temporary_dir, "evidence.txt"),
+        entities_filepath=os.path.join(temporary_dir, "entities.txt"),
+        relations_filepath=os.path.join(temporary_dir, "relations.txt"),
     )
-
-    fa_kg.add_ph_pairs(df)
+    fa_kg.add_taxonomy(df, origin="ClassyFire")
     fa_kg.save()
+
+    # check the files to understand the output format
 
 
 if __name__ == '__main__':
