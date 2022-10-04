@@ -176,7 +176,8 @@ def main(
 
     # Save the summary of the results.
     result_summarized = summarize_grid_search_result(grid_search_result)
-    result_summarized.to_csv(f'{path_output_dir}/grid_search_result.csv')
+    result_summarized.to_csv(
+        f'{path_output_dir}/grid_search_result_summary.csv')
 
 
 if __name__ == '__main__':
