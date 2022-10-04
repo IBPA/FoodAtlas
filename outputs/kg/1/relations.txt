@@ -1,4 +1,3 @@
 foodatlas_id	name	translation
 0	contains	contains
 1	hasPart	has part
-2	hasChild	has child
