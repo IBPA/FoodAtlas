@@ -18,6 +18,5 @@ CUDA_VISIBLE_DEVICES=0, python -m food_atlas.entailment.run_unlabeled_data_predi
     outputs/data_generation/to_predict_1.tsv \
     biobert \
     outputs/entailment_model/1 \
-    --path-output-data-to-predict tests/to_predict_1_predicted_2.tsv \
 
 cd scripts
