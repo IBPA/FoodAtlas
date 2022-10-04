@@ -10,11 +10,13 @@ Todo:
 """
 import warnings
 
+import numpy as np
 import torch
 from transformers import (
     AutoModelForSequenceClassification,
     AutoTokenizer,
-    logging)
+    logging,
+)
 from tqdm import tqdm
 
 from .utils import get_all_metrics
@@ -22,152 +24,163 @@ from .utils import get_all_metrics
 logging.set_verbosity_error()
 
 
-def load_model(path_or_name):
-    """
-    """
-    if path_or_name == 'biobert':
-        model = AutoModelForSequenceClassification.from_pretrained(
-            'dmis-lab/biobert-v1.1', num_labels=2)
-        tokenizer = AutoTokenizer.from_pretrained('dmis-lab/biobert-v1.1')
-        tokenizer._pad_token_type_id = 1
-    else:
-        raise NotImplementedError(
-            f"Model {path_or_name} not implemented."
-        )
+class FoodAtlasEntailmentModel:
 
-    return model, tokenizer
+    def __init__(
+            self,
+            path_or_name,
+            path_model_state=None,
+            device='cuda',
+            # verbose=True
+            ):
+        self.path_or_name = path_or_name
+        self.path_model_state = path_model_state
+        self.device = device
 
+        self.model, self.tokenizer = self._load_model()
 
-def train(
-        model,
-        data_loader_train,
-        data_loader_val=None,
-        epochs=1,
-        lr=1e-3,
-        # verbose_step_size=20,
-        device='cuda'):
-    """
-    """
-    model.to(device)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=lr)
+    def _load_model(self):
+        """Load model from path or name.
 
-    result = {}
-    for epoch in range(epochs):
-        model.train()
+        Returns:
+            model (
+                transformers.modeling_auto.AutoModelForSequenceClassification
+                ): The model.
+            tokenizer (transformers.tokenization_auto.AutoTokenizer): The
+                tokenizer.
+
+        """
+        if self.path_or_name == 'biobert':
+            model = AutoModelForSequenceClassification.from_pretrained(
+                'dmis-lab/biobert-v1.1', num_labels=2)
+            tokenizer = AutoTokenizer.from_pretrained('dmis-lab/biobert-v1.1')
+            tokenizer._pad_token_type_id = 1
+        else:
+            raise NotImplementedError(
+                f"Model {self.path_or_name} not implemented."
+            )
+
+        if self.path_model_state is not None:
+            model.load_state_dict(torch.load(self.path_model_state))
+
+        return model, tokenizer
+
+    def save_model(self, path_model_state):
+        """Save the model state.
+
+        Args:
+            path_model_state (str): Path to the model state.
+
+        """
+        torch.save(self.model.state_dict(), path_model_state)
+
+    def train(
+            self,
+            data_loader_train: torch.utils.data.DataLoader,
+            epochs: int = 1,
+            lr: float = 1e-3) -> dict:
+        """Train the model.
+
+        Args:
+            data_loader_train (torch.utils.data.DataLoader): The data loader.
+            epochs (int): The number of epochs.
+            lr (float): The learning rate.
+
+        Returns:
+            train_stats (dict): The training statistics.
+
+        """
+        self.model.to(self.device)
+        optimizer = torch.optim.AdamW(self.model.parameters(), lr=lr)
+
+        train_stats = {}
+        for epoch in range(epochs):
+            self.model.train()
+            n_samples = 0
+            loss_total = 0.0
+
+            pbar = tqdm((data_loader_train), position=0, leave=True)
+            for (input_ids, attention_mask, token_type_ids), y in pbar:
+                input_ids = input_ids.to(self.device)
+                attention_mask = attention_mask.to(self.device)
+                token_type_ids = token_type_ids.to(self.device)
+                y = y.to(self.device)
+
+                optimizer.zero_grad()
+                loss, output = self.model(
+                    input_ids=input_ids,
+                    attention_mask=attention_mask,
+                    token_type_ids=token_type_ids,
+                    labels=y
+                ).values()
+                loss.backward()
+                optimizer.step()
+
+                n_samples += len(y)
+                loss_total += loss.detach().cpu().numpy()
+                y_true = y.detach().cpu().numpy()
+                y_pred = output.argmax(dim=1).detach().cpu().numpy()
+
+                with warnings.catch_warnings():
+                    warnings.simplefilter('ignore')
+                    metrics = get_all_metrics(y_true, y_pred)
+
+                torch.cuda.empty_cache()
+
+            train_stats[f'train_iter_{epoch}'] = {
+                'metrics': metrics,
+                'loss': loss_total / n_samples,
+            }
+
+        return train_stats
+
+    def evaluate(
+            self,
+            data_loader: torch.utils.data.DataLoader
+            ) -> tuple[np.ndarray, np.ndarray, np.ndarray, float]:
+        """Evaluate the model.
+
+        Args:
+            data_loader (torch.utils.data.DataLoader): The data loader.
+
+        Returns:
+            y_true (np.ndarray): The true labels.
+            y_pred (np.ndarray): The predicted labels.
+            y_score (np.ndarray): The predicted scores.
+            loss (float): The average loss.
+
+        """
+        self.model.eval()
+        self.model.to(self.device)
+
+        y_true = []
+        y_pred = []
+        y_score = []
         n_samples = 0
         loss_total = 0.0
-        # tn_total = 0
-        # fp_total = 0
-        # fn_total = 0
-        # tp_total = 0
+        for (input_ids, attention_mask, token_type_ids), y in data_loader:
+            input_ids = input_ids.to(self.device)
+            attention_mask = attention_mask.to(self.device)
+            token_type_ids = token_type_ids.to(self.device)
+            y = y.to(self.device)
 
-        pbar = tqdm((data_loader_train), position=0, leave=True)
-        for i_step, ((input_ids, attention_mask, token_type_ids), y) \
-                in enumerate(pbar):
-            input_ids = input_ids.to(device)
-            attention_mask = attention_mask.to(device)
-            token_type_ids = token_type_ids.to(device)
-            y = y.to(device)
-
-            optimizer.zero_grad()
-            loss, output = model(
-                input_ids=input_ids,
-                attention_mask=attention_mask,
-                token_type_ids=token_type_ids,
-                labels=y
-            ).values()
-            loss.backward()
-            optimizer.step()
+            with torch.no_grad():
+                loss, output = self.model(
+                    input_ids=input_ids,
+                    attention_mask=attention_mask,
+                    token_type_ids=token_type_ids,
+                    labels=y
+                ).values()
 
             n_samples += len(y)
             loss_total += loss.detach().cpu().numpy()
-            y_true = y.detach().cpu().numpy()
-            y_pred = output.argmax(dim=1).detach().cpu().numpy()
-            y_score = output.softmax(
-                dim=1)[:, 1].detach().cpu().numpy().tolist()
+            y_true += y.detach().cpu().numpy().tolist()
+            y_pred += output.argmax(dim=1).detach().cpu().numpy().tolist()
+            y_score += output.softmax(dim=1)[
+                :, 1].detach().cpu().numpy().tolist()
+        loss = loss_total / n_samples
 
-            with warnings.catch_warnings():
-                warnings.simplefilter('ignore')
-                metrics = get_all_metrics(y_true, y_pred, y_score)
+        return y_true, y_pred, y_score, loss
 
-            # # Evaluate for each verbose step size.
-            # tn_total += metrics['tn']
-            # fp_total += metrics['fp']
-            # fn_total += metrics['fn']
-            # tp_total += metrics['tp']
-            # if i_step % verbose_step_size == 0 and i_step > 0:
-            #     wandb.log(
-            #         {
-            #             'train_prec': tp_total / (tp_total + fp_total),
-            #             'train_recall': tp_total / (tp_total + fn_total),
-            #             'train_f1': 2 * tp_total /
-            #             (2 * tp_total + fp_total + fn_total),
-            #             'train_accuracy': (tp_total + tn_total) /
-            #             (tp_total + tn_total + fp_total + fn_total),
-            #             'training_loss': round(loss_total / n_samples, 3),
-            #         },
-            #     )
-
-        # result_epoch_train = {
-        #     'tn': tn_total,
-        #     'fp': fp_total,
-        #     'fn': fn_total,
-        #     'tp': tp_total,
-        #     'loss': loss_total / n_samples
-        # }
-        result[f'train_iter_{epoch}'] = {
-            'metrics': metrics,
-            'loss': loss_total / n_samples,
-        }
-
-    if data_loader_val is not None:
-        y_true, y_pred, y_score, loss = evaluate(
-            model, data_loader_val, device)
-
-        with warnings.catch_warnings():
-            warnings.simplefilter('ignore')
-            metrics = get_all_metrics(y_true, y_pred, y_score)
-
-        result['val'] = {
-            'metrics': metrics,
-            'loss': loss,
-        }
-
-    return result
-
-
-def evaluate(
-        model,
-        data_loader,
-        device='cuda'):
-    """
-    """
-    model.eval()
-    model.to(device)
-
-    y_true = []
-    y_pred = []
-    y_score = []
-    n_samples = 0
-    loss_total = 0.0
-    for (input_ids, attention_mask, token_type_ids), y in data_loader:
-        input_ids = input_ids.to(device)
-        attention_mask = attention_mask.to(device)
-        token_type_ids = token_type_ids.to(device)
-        y = y.to(device)
-
-        with torch.no_grad():
-            loss, output = model(
-                input_ids=input_ids,
-                attention_mask=attention_mask,
-                token_type_ids=token_type_ids,
-                labels=y
-            ).values()
-
-        n_samples += len(y)
-        loss_total += loss.detach().cpu().numpy()
-        y_true += y.detach().cpu().numpy().tolist()
-        y_pred += output.argmax(dim=1).detach().cpu().numpy().tolist()
-        y_score += output.softmax(dim=1)[:, 1].detach().cpu().numpy().tolist()
-
-    return y_true, y_pred, y_score, loss_total / n_samples
+    def predict(self):
+        pass
