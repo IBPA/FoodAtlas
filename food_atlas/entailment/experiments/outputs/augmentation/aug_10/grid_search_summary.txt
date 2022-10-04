@@ -1,0 +1,2 @@
+Best F1 score: 0.8312387791741472 with hparams: (32, 3e-05, 3)
+Best precision score: 0.8730650154798761 with hparams: (32, 5e-05, 2)
