@@ -182,5 +182,38 @@ class FoodAtlasEntailmentModel:
 
         return y_true, y_pred, y_score, loss
 
-    def predict(self):
-        pass
+    def predict(
+            self,
+            data_loader: torch.utils.data.DataLoader
+            ) -> list[float]:
+        """Predict the inputs.
+
+        Args:
+            data_loader (torch.utils.data.DataLoader): The data loader without
+                labels.
+
+        Returns:
+            y_score (list[float]): The predicted scores.
+
+        """
+        self.model.eval()
+        self.model.to(self.device)
+
+        y_score = []
+        pbar = tqdm((data_loader), position=0, leave=True)
+        for (input_ids, attention_mask, token_type_ids), _ in pbar:
+            input_ids = input_ids.to(self.device)
+            attention_mask = attention_mask.to(self.device)
+            token_type_ids = token_type_ids.to(self.device)
+
+            with torch.no_grad():
+                output = self.model(
+                    input_ids=input_ids,
+                    attention_mask=attention_mask,
+                    token_type_ids=token_type_ids,
+                ).logits
+
+            y_score += output.softmax(dim=1)[
+                :, 1].detach().cpu().numpy().tolist()
+
+        return y_score
