@@ -1,14 +1,12 @@
 from ast import literal_eval
 from collections import namedtuple, Counter, OrderedDict
-<<<<<<< HEAD
-=======
 import os
->>>>>>> dev_local
 from pathlib import Path
 from typing import Dict, List, Any
 import sys
 
 from tqdm import tqdm
+import numpy as np
 import pandas as pd
 pd.options.mode.chained_assignment = None
 
@@ -24,7 +22,6 @@ _EVIDENCE_COLUMNS = [
     "relation",
     "tail",
     "triple",
-    "origin",
     "pmid",
     "pmcid",
     "section",
@@ -237,6 +234,7 @@ class KnowledgeGraph():
         print(f"Loading evidence file from {self.evidence_filepath}...")
         df_evidence = pd.read_csv(self.evidence_filepath, sep='\t', keep_default_na=False)
         assert set(df_evidence.columns.tolist()) == set(_EVIDENCE_COLUMNS)
+        df_evidence["prob"] = df_evidence["prob"].apply(lambda x: float(x) if x != '' else None)
         df_evidence = df_evidence[_EVIDENCE_COLUMNS]
 
         return df_evidence
@@ -316,33 +314,18 @@ class KnowledgeGraph():
                 "tail": tail_foodatlas_id,
             })
             data.append(triple)
-<<<<<<< HEAD
 
-            if row["source"].startswith("annotation"):
-                origin = "annotation"
-            else:
-                origin = "prediction"
-
-=======
-
-            if row["source"].startswith("annotation"):
-                origin = "annotation"
-            else:
-                origin = "prediction"
-
->>>>>>> dev_local
             e = pd.Series({
                 "head": head_foodatlas_id,
                 "relation": relation.foodatlas_id,
                 "tail": tail_foodatlas_id,
                 "triple": f"({head_foodatlas_id},{relation.foodatlas_id},{tail_foodatlas_id})",
-                "origin": origin,
                 "pmid": row["pmid"],
                 "pmcid": row["pmcid"],
                 "section": row["section"],
                 "premise": row["premise"],
                 "source": row["source"],
-                "prob": row["prob"] if row["source"].startswith("prediction") else None,
+                "prob": float(row["prob"]) if row["source"].startswith("prediction") else None,
             })
             evidence.append(e)
 
@@ -360,7 +343,6 @@ class KnowledgeGraph():
 
                 triple = pd.Series({
                     "head": head_foodatlas_id,
-<<<<<<< HEAD
                     "relation": relation.foodatlas_id,
                     "tail": tail_foodatlas_id,
                 })
@@ -371,13 +353,12 @@ class KnowledgeGraph():
                     "relation": relation.foodatlas_id,
                     "tail": tail_foodatlas_id,
                     "triple": f"({head_foodatlas_id},{relation.foodatlas_id},{tail_foodatlas_id})",
-                    "origin": origin,
                     "pmid": row["pmid"],
                     "pmcid": row["pmcid"],
                     "section": row["section"],
                     "premise": row["premise"],
                     "source": row["source"],
-                    "prob": row["prob"] if row["source"].startswith("prediction") else None,
+                    "prob": float(row["prob"]) if row["source"].startswith("prediction") else None,
                 })
                 evidence.append(e)
 
@@ -386,6 +367,18 @@ class KnowledgeGraph():
 
         self.df_evidence = pd.concat(
             [self.df_evidence, pd.DataFrame(evidence, columns=_EVIDENCE_COLUMNS)])
+
+        def _merge_prob(probs):
+            probs = [x for x in list(probs) if x is not None]
+            if len(probs) == 0:
+                return None
+            else:
+                return np.mean(probs)
+        evidence_columns_without_prob = [x for x in _EVIDENCE_COLUMNS if x != "prob"]
+        self.df_evidence = self.df_evidence \
+            .groupby(evidence_columns_without_prob)["prob"] \
+            .agg(lambda probs: _merge_prob(probs)).reset_index()
+
         self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
 
         return self.df_kg, self.df_evidence
@@ -468,12 +461,11 @@ class KnowledgeGraph():
                 "relation": relation.foodatlas_id,
                 "tail": tail_foodatlas_id,
                 "triple": f"({head_foodatlas_id},{relation.foodatlas_id},{tail_foodatlas_id})",
-                "origin": origin,
                 "pmid": None,
                 "pmcid": None,
                 "section": None,
                 "premise": None,
-                "source": None,
+                "source": origin,
                 "prob": None,
             })
             evidence.append(e)
@@ -485,132 +477,6 @@ class KnowledgeGraph():
             [self.df_evidence, pd.DataFrame(evidence, columns=_EVIDENCE_COLUMNS)])
         self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
 
-=======
-                    "relation": relation.foodatlas_id,
-                    "tail": tail_foodatlas_id,
-                })
-                data.append(triple)
-
-                e = pd.Series({
-                    "head": head_foodatlas_id,
-                    "relation": relation.foodatlas_id,
-                    "tail": tail_foodatlas_id,
-                    "triple": f"({head_foodatlas_id},{relation.foodatlas_id},{tail_foodatlas_id})",
-                    "origin": origin,
-                    "pmid": row["pmid"],
-                    "pmcid": row["pmcid"],
-                    "section": row["section"],
-                    "premise": row["premise"],
-                    "source": row["source"],
-                    "prob": row["prob"] if row["source"].startswith("prediction") else None,
-                })
-                evidence.append(e)
-
-        self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data, columns=_KG_COLUMNS)])
-        self.df_kg.drop_duplicates(inplace=True, ignore_index=True)
-
-        self.df_evidence = pd.concat(
-            [self.df_evidence, pd.DataFrame(evidence, columns=_EVIDENCE_COLUMNS)])
-        self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
-
-        return self.df_kg, self.df_evidence
-
-    @staticmethod
-    def _get_other_db_id(x):
-        if x.type.startswith("chemical"):
-            return x.other_db_ids["MESH"]
-        elif x.type.split(":")[0] in ["organism", "organism_with_part"]:
-            return x.other_db_ids["NCBI_taxonomy"]
-        else:
-            raise NotImplementedError()
-
-    def add_taxonomy(
-            self,
-            df_input: pd.DataFrame,
-            origin: str,
-    ):
-        assert origin in ["NCBI_taxonomy", "ClassyFire"]
-
-        # add the entities first for speed
-        entities = df_input["head"].tolist() + df_input["tail"].tolist()
-        chemicals = [x for x in entities if x.type.startswith("chemical")]
-        organisms = [x for x in entities if x.type.startswith("organism")]
-        assert len(entities) == (len(chemicals) + len(organisms))
-
-        print(f"Number of chemicals before merging: {len(chemicals)}")
-        print(f"Number of organisms before merging: {len(organisms)}")
-
-        print("Merging chemicals...")
-        chemicals = KnowledgeGraph.merge_candidate_entities(chemicals, using="MESH")
-        print("Merging organisms...")
-        organisms = KnowledgeGraph.merge_candidate_entities(organisms, using="NCBI_taxonomy")
-        entities = chemicals + organisms
-
-        print(f"Number of chemicals after merging: {len(chemicals)}")
-        print(f"Number of organisms after merging: {len(organisms)}")
-
-        print("Adding entities...")
-        entity_lookup = {x: {} for x in _ENTITY_TYPES}
-        for x in tqdm(entities):
-            e = self._add_entity(
-                type_=x.type,
-                name=x.name,
-                synonyms=x.synonyms,
-                other_db_ids=x.other_db_ids,
-            )
-
-            key = KnowledgeGraph._get_other_db_id(x)
-            if key not in entity_lookup[x.type]:
-                entity_lookup[x.type][key] = e
-
-        print("Adding triples...")
-        data = []
-        evidence = []
-        for _, row in tqdm(df_input.iterrows(), total=df_input.shape[0]):
-            head = row["head"]
-            tail = row["tail"]
-
-            # relation
-            relation = self._add_relation(
-                name=row["relation"].name,
-                translation=row["relation"].translation,
-            )
-
-            head_foodatlas_id = \
-                entity_lookup[head.type][KnowledgeGraph._get_other_db_id(head)].foodatlas_id
-            tail_foodatlas_id = \
-                entity_lookup[tail.type][KnowledgeGraph._get_other_db_id(tail)].foodatlas_id
-
-            triple = pd.Series({
-                "head": head_foodatlas_id,
-                "relation": relation.foodatlas_id,
-                "tail": tail_foodatlas_id,
-            })
-            data.append(triple)
-
-            e = pd.Series({
-                "head": head_foodatlas_id,
-                "relation": relation.foodatlas_id,
-                "tail": tail_foodatlas_id,
-                "triple": f"({head_foodatlas_id},{relation.foodatlas_id},{tail_foodatlas_id})",
-                "origin": origin,
-                "pmid": None,
-                "pmcid": None,
-                "section": None,
-                "premise": None,
-                "source": None,
-                "prob": None,
-            })
-            evidence.append(e)
-
-        self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data, columns=_KG_COLUMNS)])
-        self.df_kg.drop_duplicates(inplace=True, ignore_index=True)
-
-        self.df_evidence = pd.concat(
-            [self.df_evidence, pd.DataFrame(evidence, columns=_EVIDENCE_COLUMNS)])
-        self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
-
->>>>>>> dev_local
         return self.df_kg, self.df_evidence
 
     ############
@@ -887,6 +753,11 @@ class KnowledgeGraph():
 
     def get_all_relations(self) -> pd.DataFrame:
         return self.df_relations
+
+    def get_relation_by_id(self, foodatlas_id: int) -> pd.Series:
+        relation = self.df_relations[self.df_relations["foodatlas_id"] == foodatlas_id]
+        assert relation.shape[0] == 1
+        return relation.iloc[0]
 
     def print_all_relations(self) -> None:
         print(self.df_relations)
