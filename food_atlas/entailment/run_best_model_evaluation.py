@@ -1,13 +1,10 @@
 import os
-import time
 import pickle
 import traceback
 
 import pandas as pd
-from sklearn.metrics import precision_score
 import click
 import torch
-from tqdm import tqdm
 
 from . import (
     FoodAtlasEntailmentModel,
@@ -153,42 +150,6 @@ def main(
 
     if failed:
         print(f"Failed: {failed}")
-
-    # data_loader_test = get_food_atlas_data_loader(
-    #     path_data_test,
-    #     tokenizer=tokenizer,
-    #     train=False,
-    #     batch_size=16,  # Does not matter for evaluation.
-    #     shuffle=False)
-
-    # y_score = []
-    # y_pred = []
-    # y_true = []
-    # for (input_ids, attention_mask, token_type_ids), labels \
-    #         in tqdm(data_loader_test):
-    #     input_ids = input_ids.to(DEVICE)
-    #     attention_mask = attention_mask.to(DEVICE)
-    #     token_type_ids = token_type_ids.to(DEVICE)
-
-    #     with torch.no_grad():
-    #         output = model(
-    #             input_ids=input_ids,
-    #             attention_mask=attention_mask,
-    #             token_type_ids=token_type_ids,
-    #         ).logits
-    #     y_score += output.softmax(
-    #         dim=1)[:, 1].detach().cpu().numpy().tolist()
-    #     # y_pred += output.argmax(dim=1).detach().cpu().numpy().tolist()
-    #     # y_true += labels.detach().cpu().numpy().tolist()
-
-    # # print(rs)
-    # # print(precision_score(y_true, y_pred))
-
-    # data_pred = pd.read_csv(path_data_test, sep='\t')
-    # # data_pred = data_pred[data_pred['answer'] != 'Skip']
-    # data_pred['prob'] = y_score
-    # data_pred.to_csv(
-    #     path_output, sep='\t', index=False)
 
 
 if __name__ == '__main__':
