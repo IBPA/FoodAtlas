@@ -10,17 +10,17 @@ Output files
 python generate_pre_annotation.py --round=1
 
 Output files
-- ../../outputs/data_generation/pre_annotation_1.tsv
+- ../../outputs/data_generation/1/pre_annotation_1.tsv
 - ../../outputs/data_generation/val_pre_annotation.tsv
 - ../../outputs/data_generation/test_pre_annotation.tsv
-- ../../outputs/data_generation/to_predict_1.tsv
+- ../../outputs/data_generation/1/to_predict_1.tsv
 
 
 3. Annotate pre_annotation files. When finished, save the file names as below.
 
-pre_annotation_1.tsv -> post_annotation_1.tsv
-val_pre_annotation.tsv -> val_post_annotation.tsv
-test_pre_annotation.tsv -> test_post_annotation.tsv
+../../outputs/data_generation/1/pre_annotation_1.tsv -> ../../outputs/data_generation/1/post_annotation_1.tsv
+../../outputs/data_generation/val_pre_annotation.tsv -> ../../outputs/data_generation/val_post_annotation.tsv
+../../outputs/data_generation/test_pre_annotation.tsv -> ../../outputs/data_generation/test_post_annotation.tsv
 
 
 4. Post process the annotation.
@@ -39,7 +39,7 @@ Output files
 5. Train the entailment model.
 
 Output files
-- ../../outputs/data_generation/predicted_1.tsv
+- ../../outputs/data_generation/1/predicted_1.tsv
 
 
 6. Add the entailment model predictions to the KG.
@@ -62,5 +62,5 @@ Modified files
 - ../../outputs/kg/1/relations.txt
 
 
-X. Generate round 2 pre annotation.
+8. Generate round 2 pre annotation.
 python generate_pre_annotation.py --round=2

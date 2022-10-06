@@ -17,7 +17,7 @@ RANDOM_STATE = 530
 KG_OUTPUT_DIR = "../../outputs/kg"
 VAL_POST_ANNOTATION_FILEPATH = "../../outputs/data_generation/val_post_annotation.tsv"
 TEST_POST_ANNOTATION_FILEPATH = "../../outputs/data_generation/test_post_annotation.tsv"
-TRAIN_FILEPATH = "../../outputs/data_generation/train.tsv"
+TRAIN_FILEPATH = "../../outputs/data_generation/*/train_*.tsv"
 VAL_FILEPATH = "../../outputs/data_generation/val.tsv"
 TEST_FILEPATH = "../../outputs/data_generation/test.tsv"
 KG_FILENAME = "kg.txt"
@@ -261,7 +261,7 @@ def generate_training(df_annotated, fa_kg, args):
 
     df_train = df_train[["premise", "hypothesis_string", "hypothesis_id", "answer", "augmentation"]]
     df_train.to_csv(
-        args.train_filepath.replace('.tsv', f'_{args.round}.tsv'),
+        args.train_filepath.replace('*', args.round),
         sep='\t',
         index=False
     )

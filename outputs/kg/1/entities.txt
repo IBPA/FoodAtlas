@@ -139,92 +139,92 @@ foodatlas_id	type	name	synonyms	other_db_ids
 137	chemical	asparagusic acid	[]	{'MESH': 'C010035'}
 138	chemical	diallyl mono-sulfide	[]	{'MESH': 'C038491'}
 139	chemical	diallyl tetra-sulfide	[]	{'MESH': 'C431585'}
-140	chemical	polyphenol	[]	{'MESH': 'D059808'}
-141	chemical	Furanocoumarins	[]	{'MESH': 'D011564'}
+140	chemical	polyphenols	[]	{'MESH': 'D059808'}
+141	chemical	furanocoumarins	[]	{'MESH': 'D011564'}
 142	chemical	fucoxanthin	[]	{'MESH': 'C025164'}
-143	chemical	vitamins	[]	{'MESH': 'C059630'}
-144	chemical	n-6 fatty acids	[]	{'MESH': 'D015525'}
-145	chemical	flavone glycosides	[]	{'MESH': 'C043562'}
+143	chemical	vitamin A	[]	{'MESH': 'C059630'}
+144	chemical	n-3 fatty acids	[]	{'MESH': 'D015525'}
+145	chemical	flavones	[]	{'MESH': 'C043562'}
 146	chemical	bilobalide	[]	{'MESH': 'D046935'}
-147	chemical	terpenoids	[]	{'MESH': 'D013729'}
+147	chemical	terpenes	[]	{'MESH': 'D013729'}
 148	chemical	ginkgolide A	[]	{'MESH': 'C477042'}
 149	chemical	flavonols	[]	{'MESH': 'D044948'}
 150	chemical	bioflavonoids	[]	{'MESH': 'D005419'}
 151	chemical	chlorophyll	[]	{'MESH': 'D002734'}
 152	chemical	alpha-tocopherol	[]	{'MESH': 'D024502'}
 153	chemical	carbon	[]	{'MESH': 'D002244'}
-154	chemical	Phenolic	[]	{'MESH': 'C017616'}
+154	chemical	phenolic	[]	{'MESH': 'C017616'}
 155	chemical	carbohydrate	[]	{'MESH': 'D002241'}
 156	chemical	alkaloids	[]	{'MESH': 'D000470'}
 157	chemical	potassium	[]	{'MESH': 'D011188'}
-158	chemical	essential oils	[]	{'MESH': 'D009822'}
+158	chemical	essential oil	[]	{'MESH': 'D009822'}
 159	chemical	eugenol	[]	{'MESH': 'D005054'}
 160	chemical	Quercetin	[]	{'MESH': 'D011794'}
 161	chemical	saponins	[]	{'MESH': 'D012503'}
 162	chemical	beta-amyrin	[]	{'MESH': 'C036380'}
-163	chemical	triterpene acids	[]	{'MESH': 'D014315'}
+163	chemical	triterpene saponins	[]	{'MESH': 'D014315'}
 164	chemical	Indole-3-carbinol	[]	{'MESH': 'C016517'}
 165	chemical	luteolin	[]	{'MESH': 'D047311'}
-166	chemical	ascorbic acids	[]	{'MESH': 'D001205'}
+166	chemical	Vitamin C	[]	{'MESH': 'D001205'}
 167	chemical	Geraniin	[]	{'MESH': 'C024603'}
 168	chemical	cyanide	[]	{'MESH': 'D003486'}
 169	chemical	hydrogen cyanide	[]	{'MESH': 'D006856'}
-170	chemical	procyanidins	[]	{'MESH': 'D044945'}
+170	chemical	proanthocyanidins	[]	{'MESH': 'D044945'}
 171	chemical	Polysaccharide	[]	{'MESH': 'D011134'}
 172	chemical	ginsenosides	[]	{'MESH': 'D036145'}
 173	chemical	polyacetylenes	[]	{'MESH': 'D053279'}
 174	chemical	ellagic acid	[]	{'MESH': 'D004610'}
 175	chemical	Shogaols	[]	{'MESH': 'C040115'}
-176	chemical	Gingerols	[]	{'MESH': 'C007845'}
+176	chemical	gingerol	[]	{'MESH': 'C007845'}
 177	chemical	D-galactose	[]	{'MESH': 'D005690'}
 178	chemical	cysteine	[]	{'MESH': 'D003545'}
 179	chemical	proline	[]	{'MESH': 'C489032'}
-180	chemical	Cu	[]	{'MESH': 'D003300'}
+180	chemical	copper	[]	{'MESH': 'D003300'}
 181	chemical	Fe	[]	{'MESH': 'D007501'}
-182	chemical	catechin	[]	{'MESH': 'D002392'}
-183	chemical	anthocyanins	[]	{'MESH': 'D000872'}
+182	chemical	catechins	[]	{'MESH': 'D002392'}
+183	chemical	Anthocyanin	[]	{'MESH': 'D000872'}
 184	chemical	gallic acid	[]	{'MESH': 'D005707'}
 185	chemical	glucosides	[]	{'MESH': 'D005960'}
 186	chemical	starch	[]	{'MESH': 'D013213'}
 187	chemical	KYNA	[]	{'MESH': 'C548511'}
 188	chemical	oil	[]	{'MESH': 'D009821'}
-189	chemical	caffeic	[]	{'MESH': 'D002109'}
+189	chemical	caffeic and nicotinic acids	[]	{'MESH': 'D002109'}
 190	chemical	alpha-pinene	[]	{'MESH': 'C005451'}
 191	chemical	cineol	[]	{'MESH': 'C010087'}
 192	chemical	camphor	[]	{'MESH': 'D002164'}
 193	chemical	carnosic acid	[]	{'MESH': 'C018381'}
 194	chemical	carnosol	[]	{'MESH': 'C068623'}
-195	chemical	Rosmarinic acid	[]	{'MESH': 'C041376'}
+195	chemical	rosmarinic acids	[]	{'MESH': 'C041376'}
 196	chemical	diallyl tri-sulfide	[]	{'MESH': 'C042577'}
 197	chemical	lignan	[]	{'MESH': 'D017705'}
 198	chemical	nitrogen	[]	{'MESH': 'D009584'}
 199	chemical	phytate	[]	{'MESH': 'D010833'}
 200	chemical	salicylic acid	[]	{'MESH': 'D020156'}
 201	chemical	folate	[]	{'MESH': 'D005492'}
-202	chemical	phosphorus	[]	{'MESH': 'D010758'}
+202	chemical	phosphorous	[]	{'MESH': 'D010758'}
 203	chemical	sugar	[]	{'MESH': 'D000073893'}
 204	chemical	cinnamaldehyde	[]	{'MESH': 'C012843'}
-205	chemical	unsaturated fatty acids	[]	{'MESH': 'D005231'}
-206	chemical	esters	[]	{'MESH': 'D004952'}
+205	chemical	unsaturated fatty acid	[]	{'MESH': 'D005231'}
+206	chemical	ester	[]	{'MESH': 'D004952'}
 207	chemical	organic acids	[]	{'MESH': 'D013463'}
 208	chemical	citric acid	[]	{'MESH': 'D019343'}
 209	chemical	tartaric acids	[]	{'MESH': 'C029768'}
 210	chemical	chlorogenic	[]	{'MESH': 'D002726'}
 211	chemical	lipids	[]	{'MESH': 'D008055'}
-212	chemical	tannins	[]	{'MESH': 'D047348'}
+212	chemical	tannin	[]	{'MESH': 'D047348'}
 213	chemical	glucose	[]	{'MESH': 'D005947'}
 214	chemical	diglucoside	[]	{'MESH': 'C114438'}
 215	chemical	monoglucoside	[]	{'MESH': 'C460320'}
-216	chemical	carotenoids	[]	{'MESH': 'D002338'}
+216	chemical	carotene	[]	{'MESH': 'D002338'}
 217	chemical	procyanidins	[]	{'MESH': 'C017674'}
 218	chemical	benzaldehyde	[]	{'MESH': 'C032175'}
 219	chemical	kaempferol-3-rutinoside	[]	{'MESH': 'C492687'}
-220	chemical	quercetin-3-O-glucoside	[]	{'MESH': 'C016527'}
-221	chemical	stilbene	[]	{'MESH': 'D013267'}
+220	chemical	quercetin-3-glucoside	[]	{'MESH': 'C016527'}
+221	chemical	stilbenes	[]	{'MESH': 'D013267'}
 222	chemical	estragole	[]	{'MESH': 'C007633'}
 223	chemical	phenols	[]	{'MESH': 'D010636'}
 224	chemical	lotaustralin	[]	{'MESH': 'C001556'}
-225	chemical	linamarin	[]	{'MESH': 'C005091'}
+225	chemical	glucosides linamarin	[]	{'MESH': 'C005091'}
 226	chemical	Nickel	[]	{'MESH': 'D009532'}
 227	chemical	piceatannol	[]	{'MESH': 'C041525'}
 228	chemical	thymol	[]	{'MESH': 'D013943'}
@@ -235,21 +235,21 @@ foodatlas_id	type	name	synonyms	other_db_ids
 233	chemical	carvacrol	[]	{'MESH': 'C073316'}
 234	chemical	squalene	[]	{'MESH': 'D013185'}
 235	chemical	saturated fatty acids	[]	{'MESH': 'D005227'}
-236	chemical	hydrosols	[]	{'MESH': 'D024505'}
-237	chemical	kaempferol glucuronide	[]	{'MESH': 'D044949'}
+236	chemical	tocopherols	[]	{'MESH': 'D024505'}
+237	chemical	kaempferol	[]	{'MESH': 'D044949'}
 238	chemical	caffeoyl tartaric acid	[]	{'MESH': 'C474564'}
 239	chemical	quercetin glucuronide	[]	{'MESH': 'C443401'}
 240	chemical	Zn	[]	{'MESH': 'D015032'}
 241	chemical	4-hydroxybenzylglucosinolate	[]	{'MESH': 'C097342'}
 242	chemical	allyl isothiocyanate	[]	{'MESH': 'C004471'}
-243	chemical	sinigrin	[]	{'MESH': 'C010330'}
-244	chemical	glucosinolate	[]	{'MESH': 'D005961'}
+243	chemical	glucosinolate sinigrin	[]	{'MESH': 'C010330'}
+244	chemical	glucosinolates	[]	{'MESH': 'D005961'}
 245	chemical	polyphenolic	[]	{'MESH': 'C476595'}
 246	chemical	tetraoxygenated diprenylated xanthone	[]	{'MESH': 'D044004'}
-247	chemical	coumarin	[]	{'MESH': 'C030123'}
+247	chemical	coumarins	[]	{'MESH': 'C030123'}
 248	chemical	stilbenoids	[]	{'MESH': 'C576143'}
-249	chemical	monoterpenoid	[]	{'MESH': 'D039821'}
-250	chemical	caryophyllene	[]	{'MESH': 'C024714'}
+249	chemical	monoterpene hydrocarbons	[]	{'MESH': 'D039821'}
+250	chemical	beta-caryophyllene	[]	{'MESH': 'C024714'}
 251	chemical	myristicin	[]	{'MESH': 'C005246'}
 252	chemical	(E)-beta-ocimene	[]	{'MESH': 'C443996'}
 253	chemical	mangiferin	[]	{'MESH': 'C013592'}
@@ -258,10 +258,10 @@ foodatlas_id	type	name	synonyms	other_db_ids
 256	chemical	alpha-carotene	[]	{'MESH': 'C041635'}
 257	chemical	beta-cryptoxanthin	[]	{'MESH': 'D000072743'}
 258	chemical	protocatechuic acid	[]	{'MESH': 'C009091'}
-259	chemical	Curcumin	[]	{'MESH': 'D003474'}
+259	chemical	curcumin	[]	{'MESH': 'D003474'}
 260	chemical	chicoric acid	[]	{'MESH': 'C100435'}
 261	chemical	Nonylphenol	[]	{'MESH': 'C025256'}
-262	chemical	sesquiterpenoid	[]	{'MESH': 'D012717'}
+262	chemical	sesquiterpene hydrocarbons	[]	{'MESH': 'D012717'}
 263	chemical	menthol	[]	{'MESH': 'D008610'}
 264	chemical	tannins	[]	{'MESH': 'D013634'}
 265	chemical	cis-1,4-isoprene	[]	{'MESH': 'C455100'}
@@ -275,13 +275,13 @@ foodatlas_id	type	name	synonyms	other_db_ids
 273	chemical	methionine	[]	{'MESH': 'D008715'}
 274	chemical	nitrite	[]	{'MESH': 'D009573'}
 275	chemical	selenium	[]	{'MESH': 'D012643'}
-276	chemical	oxalate	[]	{'MESH': 'D010070'}
+276	chemical	oxalates	[]	{'MESH': 'D010070'}
 277	chemical	C15-norisoprenoids	[]	{'MESH': 'D045792'}
-278	chemical	lignin	[]	{'MESH': 'D008031'}
+278	chemical	Lignin	[]	{'MESH': 'D008031'}
 279	chemical	cis-/trans-bullatacinone	[]	{'MESH': 'C061021'}
 280	chemical	bullatacin	[]	{'MESH': 'C061022'}
 281	chemical	lysine	[]	{'MESH': 'C114808'}
-282	chemical	transferulic acid	[]	{'MESH': 'D000596'}
+282	chemical	S-amino acids	[]	{'MESH': 'D000596'}
 283	chemical	nitrates	[]	{'MESH': 'D009566'}
 284	chemical	trachelogenin glycoside	[]	{'MESH': 'C560586'}
 285	chemical	tracheloside	[]	{'MESH': 'C079169'}
@@ -291,7 +291,7 @@ foodatlas_id	type	name	synonyms	other_db_ids
 289	chemical	squamocin	[]	{'MESH': 'C059660'}
 290	chemical	cis-/trans-murisolinone	[]	{'MESH': 'C027149'}
 291	chemical	cis-/trans-isomurisolenin	[]	{'MESH': 'C112079'}
-292	chemical	Cyclic sulfur	[]	{'MESH': 'D013455'}
+292	chemical	Sulfur	[]	{'MESH': 'D013455'}
 293	chemical	diallyl-thiosulfinate	[]	{'MESH': 'C082083'}
 294	chemical	allicin	[]	{'MESH': 'C006452'}
 295	chemical	2-Propene-1-sulfinothioic acid S-2-propenyl ester	[]	{'MESH': 'C119267'}
@@ -303,15 +303,15 @@ foodatlas_id	type	name	synonyms	other_db_ids
 301	chemical	xylomannan	[]	{'MESH': 'C570461'}
 302	chemical	Pb	[]	{'MESH': 'D007854'}
 303	chemical	testosterone	[]	{'MESH': 'D013739'}
-304	chemical	DHA	[]	{'MESH': 'D004281'}
+304	chemical	docosahexaenoic acid	[]	{'MESH': 'D004281'}
 305	chemical	EPA	[]	{'MESH': 'D015118'}
 306	chemical	ferulic acid	[]	{'MESH': 'C004999'}
 307	chemical	leucine	[]	{'MESH': 'C038361'}
-308	chemical	carrageenans	[]	{'MESH': 'D002351'}
+308	chemical	carrageenan	[]	{'MESH': 'D002351'}
 309	chemical	isorhamnetin	[]	{'MESH': 'C047368'}
 310	chemical	nicotinamide	[]	{'MESH': 'D009536'}
 311	chemical	fumaric	[]	{'MESH': 'C032005'}
-312	chemical	sterols	[]	{'MESH': 'D013261'}
+312	chemical	sterol glucosides	[]	{'MESH': 'D013261'}
 313	chemical	betulinic acid	[]	{'MESH': 'C002070'}
 314	chemical	fructose	[]	{'MESH': 'D005632'}
 315	chemical	sorbitol	[]	{'MESH': 'D013012'}
@@ -320,11 +320,11 @@ foodatlas_id	type	name	synonyms	other_db_ids
 318	chemical	hesperidin	[]	{'MESH': 'D006569'}
 319	chemical	naringin	[]	{'MESH': 'C005274'}
 320	chemical	eriocitrin	[]	{'MESH': 'C114706'}
-321	chemical	quercetin-3-rutinoside	[]	{'MESH': 'D012431'}
+321	chemical	rutin	[]	{'MESH': 'D012431'}
 322	chemical	flavan-3-ols	[]	{'MESH': 'C404987'}
 323	chemical	Gamma-tocopherol	[]	{'MESH': 'D024504'}
 324	chemical	calcium	[]	{'MESH': 'D002118'}
-325	chemical	linoleic acid	[]	{'MESH': 'D019787'}
+325	chemical	9,12-octadecadienoic acid	[]	{'MESH': 'D019787'}
 326	chemical	limonene	[]	{'MESH': 'C008281'}
 327	chemical	trans-anethole	[]	{'MESH': 'C006578'}
 328	chemical	methoxycinnamic acid	[]	{'MESH': 'C063318'}
@@ -334,9 +334,9 @@ foodatlas_id	type	name	synonyms	other_db_ids
 332	chemical	glycosides	[]	{'MESH': 'D006027'}
 333	chemical	punicic acid	[]	{'MESH': 'C519714'}
 334	chemical	p-anisic acid	[]	{'MESH': 'C004520'}
-335	chemical	vanillic acids	[]	{'MESH': 'D014641'}
+335	chemical	vanillic acid	[]	{'MESH': 'D014641'}
 336	chemical	xanthotoxin	[]	{'MESH': 'D008730'}
-337	chemical	apigenin	[]	{'MESH': 'D047310'}
+337	chemical	Apigenin	[]	{'MESH': 'D047310'}
 338	chemical	phthalide	[]	{'MESH': 'C082022'}
 339	chemical	bergapten	[]	{'MESH': 'C022909'}
 340	chemical	psoralen	[]	{'MESH': 'C515719'}
@@ -357,7 +357,7 @@ foodatlas_id	type	name	synonyms	other_db_ids
 355	chemical	Carvone	[]	{'MESH': 'C006923'}
 356	chemical	halogen	[]	{'MESH': 'D006219'}
 357	chemical	2-dodecyl-6-methoxycyclohexa-2,5-diene-1,4-dione	[]	{'MESH': 'C581182'}
-358	chemical	Isothiocyanates	[]	{'MESH': 'D017879'}
+358	chemical	isothiocyanates	[]	{'MESH': 'D017879'}
 359	chemical	spermine	[]	{'MESH': 'D013096'}
 360	chemical	Anacardic acid	[]	{'MESH': 'D048729'}
 361	chemical	6-pentadecylsalicylic acid	[]	{'MESH': 'C088115'}
@@ -367,7 +367,7 @@ foodatlas_id	type	name	synonyms	other_db_ids
 365	chemical	5-HTP	[]	{'MESH': 'D006916'}
 366	chemical	mercury	[]	{'MESH': 'D008628'}
 367	chemical	Caryophyllene oxide	[]	{'MESH': 'C515179'}
-368	chemical	Oleic acid	[]	{'MESH': 'D019301'}
+368	chemical	oleic acid	[]	{'MESH': 'D019301'}
 369	chemical	ergothioneine	[]	{'MESH': 'D004880'}
 370	chemical	galactomannans	[]	{'MESH': 'C012990'}
 371	chemical	benzoic acid	[]	{'MESH': 'D019817'}
@@ -381,12 +381,12 @@ foodatlas_id	type	name	synonyms	other_db_ids
 379	chemical	lycopene	[]	{'MESH': 'D000077276'}
 380	chemical	dipeptide	[]	{'MESH': 'D004151'}
 381	chemical	citral	[]	{'MESH': 'C007076'}
-382	chemical	malvidins	[]	{'MESH': 'C065861'}
+382	chemical	malvidin	[]	{'MESH': 'C065861'}
 383	chemical	tocotrienols	[]	{'MESH': 'D024508'}
 384	chemical	nicotine	[]	{'MESH': 'D009538'}
 385	chemical	Kaempferol	[]	{'MESH': 'C006552'}
-386	chemical	pelargonidins	[]	{'MESH': 'C066957'}
-387	chemical	delphinidins	[]	{'MESH': 'C017185'}
+386	chemical	pelargonidin	[]	{'MESH': 'C066957'}
+387	chemical	delphinidin	[]	{'MESH': 'C017185'}
 388	chemical	flavonol	[]	{'MESH': 'C041477'}
 389	chemical	cycloartane triterpenes	[]	{'MESH': 'C085352'}
 390	chemical	octacosanol	[]	{'MESH': 'C044309'}
@@ -414,7 +414,7 @@ foodatlas_id	type	name	synonyms	other_db_ids
 412	organism	Red king crab	['Paralithodes camtschaticus']	{'NCBI_taxonomy': '6741'}
 413	organism	Coalfish pollock	['Pollachius virens', 'saithe']	{'NCBI_taxonomy': '8060'}
 414	organism	Rocket salad (ssp.)	['arugula', 'Eruca vesicaria ssp. sativa']	{'NCBI_taxonomy': '29727'}
-415	organism	Broad bean	['Vicia faba', 'broad beans']	{'NCBI_taxonomy': '3906'}
+415	organism	Broad bean	['broad beans', 'Vicia faba']	{'NCBI_taxonomy': '3906'}
 416	organism	Lingonberry	['Vaccinium vitis-idaea']	{'NCBI_taxonomy': '180772'}
 417	organism	Sesame	['Sesamum orientale']	{'NCBI_taxonomy': '4182'}
 418	organism	Black elderberry	['Sambucus nigra']	{'NCBI_taxonomy': '4202'}
@@ -422,15 +422,15 @@ foodatlas_id	type	name	synonyms	other_db_ids
 420	organism	Turbot	['Scophthalmus maximus']	{'NCBI_taxonomy': '52904'}
 421	organism	Albacore tuna	['Thunnus alalunga', 'albacore']	{'NCBI_taxonomy': '8235'}
 422	organism	Pot marjoram	['Origanum onites']	{'NCBI_taxonomy': '452416'}
-423	organism	Black mulberry	['Morus nigra L', 'Morus nigra']	{'NCBI_taxonomy': '85232'}
+423	organism	Black mulberry	['Morus nigra', 'Morus nigra L']	{'NCBI_taxonomy': '85232'}
 424	organism	Garden cress	['Lepidium sativum', 'Lepidium sativum L']	{'NCBI_taxonomy': '33125'}
 425	organism	Quince	['Cydonia oblonga']	{'NCBI_taxonomy': '36610'}
-426	organism	Endive	['Cichorium endivia subsp', 'Cichorium endivia']	{'NCBI_taxonomy': '114280'}
+426	organism	Endive	['Cichorium endivia', 'Cichorium endivia subsp']	{'NCBI_taxonomy': '114280'}
 427	organism	Lettuce	['Lactuca sativa']	{'NCBI_taxonomy': '4236'}
-428	organism	Sea-buckthornberry	['H. rhamnoides L', 'Hippophae rhamnoides', 'Hippophae rhamnoides, L', 'H. rhamnoides']	{'NCBI_taxonomy': '193516'}
+428	organism	Sea-buckthornberry	['H. rhamnoides', 'H. rhamnoides L', 'Hippophae rhamnoides', 'Hippophae rhamnoides, L']	{'NCBI_taxonomy': '193516'}
 429	organism	Wax gourd	['Benincasa hispida']	{'NCBI_taxonomy': '102211'}
-430	organism	Pummelo	['Citrus maxima', 'C. grandis']	{'NCBI_taxonomy': '37334'}
-431	organism	Muskmelon	['Oriental melon', 'Cucumis melo']	{'NCBI_taxonomy': '3656'}
+430	organism	Pummelo	['C. grandis', 'Citrus maxima']	{'NCBI_taxonomy': '37334'}
+431	organism	Muskmelon	['Cucumis melo', 'Oriental melon']	{'NCBI_taxonomy': '3656'}
 432	organism	Angelica	['Angelica keiskei']	{'NCBI_taxonomy': '357850'}
 433	organism	Nanking cherry	['Prunus Tomentosa Thunb', 'Prunus tomentosa']	{'NCBI_taxonomy': '105667'}
 434	organism	Yellow pond-lily	['Nuphar lutea']	{'NCBI_taxonomy': '77113'}
@@ -442,7 +442,7 @@ foodatlas_id	type	name	synonyms	other_db_ids
 440	organism	Horse	['Equus caballus']	{'NCBI_taxonomy': '9796'}
 441	organism	Bearded seal	['bearded seals', 'Erignathus barbatus']	{'NCBI_taxonomy': '39304'}
 442	organism	Chia	['Salvia hispanica']	{'NCBI_taxonomy': '49212'}
-443	organism	Garden rhubarb	['Rheum rhabarbarum', 'rhubarb']	{'NCBI_taxonomy': '3621'}
+443	organism	Garden rhubarb	['rhubarb', 'Rheum rhabarbarum']	{'NCBI_taxonomy': '3621'}
 444	organism	Scarlet bean	['Phaseolus coccineus']	{'NCBI_taxonomy': '3886'}
 445	organism	Coconut	['Cocos nucifera']	{'NCBI_taxonomy': '13894'}
 446	organism	Chayote	['Sechium edule']	{'NCBI_taxonomy': '184140'}
@@ -454,16 +454,16 @@ foodatlas_id	type	name	synonyms	other_db_ids
 452	organism	Rapini	['Brassica ruvo']	{'NCBI_taxonomy': '1204434'}
 453	organism	Anise	['Pimpinella anisum']	{'NCBI_taxonomy': '271192'}
 454	organism	Saskatoon berry	['Amelanchier alnifolia']	{'NCBI_taxonomy': '32219'}
-455	organism	Common carp	['carp', 'Cyprinus carpio']	{'NCBI_taxonomy': '7962'}
+455	organism	Common carp	['Cyprinus carpio', 'carp']	{'NCBI_taxonomy': '7962'}
 456	organism	Wasabi	['Wasabia japonica']	{'NCBI_taxonomy': '75806'}
 457	organism	Walleye	['Sander vitreus']	{'NCBI_taxonomy': '283036'}
 458	organism	Channel catfish	['Ictalurus punctatus']	{'NCBI_taxonomy': '7998'}
 459	organism	Pumpkinseed sunfish	['Lepomis gibbosus']	{'NCBI_taxonomy': '270329'}
 460	organism	Wild leek	['Allium ampeloprasum', 'A. ampeloprasum L. var']	{'NCBI_taxonomy': '4681'}
-461	organism	Sesbania flower	['Sesbania bispinosa', 'sesbania']	{'NCBI_taxonomy': '485725'}
+461	organism	Sesbania flower	['sesbania', 'Sesbania bispinosa']	{'NCBI_taxonomy': '485725'}
 462	organism	Mamey sapote	['Pouteria sapota']	{'NCBI_taxonomy': '233744'}
 463	organism	Rainbow smelt	['Osmerus mordax']	{'NCBI_taxonomy': '8014'}
-464	organism	Malabar spinach	['Basella alba L', 'Basella alba']	{'NCBI_taxonomy': '3589'}
+464	organism	Malabar spinach	['Basella alba', 'Basella alba L']	{'NCBI_taxonomy': '3589'}
 465	organism	King mackerel	['Scomberomorus cavalla']	{'NCBI_taxonomy': '13679'}
 466	organism	Eastern oyster	['Crassostrea virginica']	{'NCBI_taxonomy': '6565'}
 467	organism	Butternut squash	['Cucurbita moschata']	{'NCBI_taxonomy': '3662'}
@@ -478,103 +478,103 @@ foodatlas_id	type	name	synonyms	other_db_ids
 476	organism	Mugwort	['Artemisia vulgaris']	{'NCBI_taxonomy': '4220'}
 477	organism	Cumin	['cuminum', 'Cuminum cyminum']	{'NCBI_taxonomy': '52462'}
 478	organism	Sacred lotus	['Nelumbo nucifera Gaertn', 'Nelumbo', 'Nelumbo nucifera']	{'NCBI_taxonomy': '4432'}
-479	organism	Grapefruit/Pummelo hybrid	['Citrus paradisi', 'Citrus paradisi X Citrus maxima', 'grapefruit']	{'NCBI_taxonomy': '37656'}
+479	organism	Grapefruit/Pummelo hybrid	['grapefruit', 'Citrus paradisi X Citrus maxima', 'Citrus paradisi']	{'NCBI_taxonomy': '37656'}
 480	organism	Kombu	['Laminaria japonica', 'Saccharina japonica']	{'NCBI_taxonomy': '88149'}
 481	organism	Horseradish tree	['Moringa oleifera', 'M. oleifera']	{'NCBI_taxonomy': '3735'}
-482	organism	Ginkgo nuts	['Ginkgo biloba', 'Ginkgo biloba L', 'ginkgo', 'Gingko biloba']	{'NCBI_taxonomy': '3311'}
-483	organism	Garland chrysanthemum	['chrysanthemum', 'Chrysanthemum coronarium', 'Glebionis coronaria']	{'NCBI_taxonomy': '99038'}
+482	organism	Ginkgo nuts	['ginkgo', 'Ginkgo biloba', 'Ginkgo biloba L', 'Gingko biloba']	{'NCBI_taxonomy': '3311'}
+483	organism	Garland chrysanthemum	['Glebionis coronaria', 'chrysanthemum', 'Chrysanthemum coronarium']	{'NCBI_taxonomy': '99038'}
 484	organism	Spinach	['Spinacia oleracea']	{'NCBI_taxonomy': '3562'}
-485	organism	Cassava	['Manihot esculenta, Crantz', 'Manihot esculenta Crantz', 'Manihot esculenta']	{'NCBI_taxonomy': '3983'}
+485	organism	Cassava	['Manihot esculenta Crantz', 'Manihot esculenta', 'Manihot esculenta, Crantz']	{'NCBI_taxonomy': '3983'}
 486	organism	Durian	['Durio zibethinus']	{'NCBI_taxonomy': '66656'}
-487	organism	Jackfruit	['Artocarpus heterophyllus', 'Jackfruits']	{'NCBI_taxonomy': '3489'}
-488	organism	Banana	['bananas', 'Musa acuminata']	{'NCBI_taxonomy': '4641'}
+487	organism	Jackfruit	['Jackfruits', 'Artocarpus heterophyllus']	{'NCBI_taxonomy': '3489'}
+488	organism	Banana	['Musa acuminata', 'bananas']	{'NCBI_taxonomy': '4641'}
 489	organism	Blue mussel	['Mytilus edulis']	{'NCBI_taxonomy': '6550'}
-490	organism	Allspice	['Jamaica Pepper', 'P. dioica', 'Pimenta dioica']	{'NCBI_taxonomy': '375272'}
-491	organism	Cloves	['Syzygium aromaticum', 'clove']	{'NCBI_taxonomy': '219868'}
-492	organism	Peppermint	['Mentha piperita', 'officinalis', 'Mentha X piperita']	{'NCBI_taxonomy': '34256'}
-493	organism	Turmeric	['curcuma', 'Curcuma longa', 'Curcuma longa L']	{'NCBI_taxonomy': '136217'}
+490	organism	Allspice	['Pimenta dioica', 'P. dioica', 'Jamaica Pepper']	{'NCBI_taxonomy': '375272'}
+491	organism	Cloves	['clove', 'Syzygium aromaticum']	{'NCBI_taxonomy': '219868'}
+492	organism	Peppermint	['Mentha X piperita', 'Mentha piperita', 'officinalis']	{'NCBI_taxonomy': '34256'}
+493	organism	Turmeric	['Curcuma longa', 'curcuma', 'Curcuma longa L']	{'NCBI_taxonomy': '136217'}
 494	organism	Alfalfa	['Medicago sativa']	{'NCBI_taxonomy': '3879'}
 495	organism	Winter squash	['Cucurbita maxima']	{'NCBI_taxonomy': '3661'}
 496	organism	Common cabbage	['Cabbage', 'Brassica oleracea']	{'NCBI_taxonomy': '3712'}
-497	organism	Napa cabbage	['Chinese cabbage', 'Brassica rapa var. pekinensis']	{'NCBI_taxonomy': '51351'}
-498	organism	Pak choy	['bok choy', 'Brassica rapa var. chinensis']	{'NCBI_taxonomy': '93385'}
+497	organism	Napa cabbage	['Brassica rapa var. pekinensis', 'Chinese cabbage']	{'NCBI_taxonomy': '51351'}
+498	organism	Pak choy	['Brassica rapa var. chinensis', 'bok choy']	{'NCBI_taxonomy': '93385'}
 499	organism	Turnip	['Brassica rapa var. rapa', 'turnips']	{'NCBI_taxonomy': '51350'}
 500	organism	Soy bean	['Glycine max', 'soybeans', 'soybean']	{'NCBI_taxonomy': '3847'}
-501	organism	Wild carrot	['carrots', 'Daucus carota', 'carrot', 'Daucus carota L']	{'NCBI_taxonomy': '4039'}
+501	organism	Wild carrot	['carrot', 'Daucus carota', 'carrots', 'Daucus carota L']	{'NCBI_taxonomy': '4039'}
 502	organism	Parsley	['Petroselinum crispum']	{'NCBI_taxonomy': '4043'}
 503	organism	Celery stalks	['Celery', 'Apium graveolens var. dulce']	{'NCBI_taxonomy': '117781'}
 504	organism	Strawberry	['Fragaria X ananassa']	{'NCBI_taxonomy': '3747'}
-505	organism	Pineapple	['pineapples', 'Ananas comosus', 'Ananas comosus (L.)']	{'NCBI_taxonomy': '4615'}
+505	organism	Pineapple	['Ananas comosus', 'Ananas comosus (L.)', 'pineapples']	{'NCBI_taxonomy': '4615'}
 506	organism	Rambutan	['Nephelium lappaceum L', 'Nephelium lappaceum']	{'NCBI_taxonomy': '151071'}
-507	organism	Longan	['Dimocarpus longan', 'Dimocarpus longan Lour']	{'NCBI_taxonomy': '128017'}
-508	organism	Ginseng	['Panax ginseng', 'Panax']	{'NCBI_taxonomy': '4054'}
-509	organism	Red raspberry	['Rubus idaeus', 'Rubus idaeus L']	{'NCBI_taxonomy': '32247'}
-510	organism	Gram bean	['Vigna mungo', 'Vigna mungo L. Hepper', 'Black gram']	{'NCBI_taxonomy': '3915'}
-511	organism	Adzuki bean	['Vigna angularis', 'azuki bean', 'adzuki beans']	{'NCBI_taxonomy': '3914'}
-512	organism	American cranberry	['V. macrocarpon', 'Vaccinium', 'Vaccinium macrocarpon']	{'NCBI_taxonomy': '13750'}
+507	organism	Longan	['Dimocarpus longan Lour', 'Dimocarpus longan']	{'NCBI_taxonomy': '128017'}
+508	organism	Ginseng	['Panax', 'Panax ginseng']	{'NCBI_taxonomy': '4054'}
+509	organism	Red raspberry	['Rubus idaeus L', 'Rubus idaeus']	{'NCBI_taxonomy': '32247'}
+510	organism	Gram bean	['Black gram', 'Vigna mungo', 'Vigna mungo L. Hepper']	{'NCBI_taxonomy': '3915'}
+511	organism	Adzuki bean	['azuki bean', 'Vigna angularis', 'adzuki beans']	{'NCBI_taxonomy': '3914'}
+512	organism	American cranberry	['Vaccinium', 'V. macrocarpon', 'Vaccinium macrocarpon']	{'NCBI_taxonomy': '13750'}
 513	organism	Ginger	['Zingiber officinale']	{'NCBI_taxonomy': '94328'}
 514	organism	Common grape	['Vitis vinifera']	{'NCBI_taxonomy': '29760'}
 515	organism	Cowpea	['Vigna unguiculata']	{'NCBI_taxonomy': '3917'}
-516	organism	Bog bilberry	['bog blueberry', 'Vaccinium uliginosum', 'V. uliginosum']	{'NCBI_taxonomy': '190548'}
+516	organism	Bog bilberry	['Vaccinium uliginosum', 'bog blueberry', 'V. uliginosum']	{'NCBI_taxonomy': '190548'}
 517	organism	Lowbush blueberry	['lowbush', 'Vaccinium', 'Vaccinium angustifolium']	{'NCBI_taxonomy': '472369'}
-518	organism	Bilberry	['Vaccinium myrtillus L', 'Vaccinium myrtillus', 'V. myrtillus']	{'NCBI_taxonomy': '180763'}
-519	organism	Highbush blueberry	['highbush', 'Vaccinium corymbosum']	{'NCBI_taxonomy': '69266'}
-520	organism	Cocoa bean	['Cocoa', 'chocolate', 'Theobroma cacao']	{'NCBI_taxonomy': '3641'}
+518	organism	Bilberry	['V. myrtillus', 'Vaccinium myrtillus', 'Vaccinium myrtillus L']	{'NCBI_taxonomy': '180763'}
+519	organism	Highbush blueberry	['Vaccinium corymbosum', 'highbush']	{'NCBI_taxonomy': '69266'}
+520	organism	Cocoa bean	['Cocoa', 'Theobroma cacao', 'chocolate']	{'NCBI_taxonomy': '3641'}
 521	organism	Dandelion	['Taraxacum officinale']	{'NCBI_taxonomy': '50225'}
 522	organism	Potato	['Potatoes', 'Solanum tuberosum']	{'NCBI_taxonomy': '4113'}
-523	organism	Garden tomato	['Solanum lycopersicum', 'L. esculentum', 'tomato']	{'NCBI_taxonomy': '4081'}
+523	organism	Garden tomato	['Solanum lycopersicum', 'tomato', 'L. esculentum']	{'NCBI_taxonomy': '4081'}
 524	organism	Common wheat	['Wheat', 'Triticum aestivum']	{'NCBI_taxonomy': '4565'}
-525	organism	Nutmeg	['M. fragrans', 'Myristica fragrans']	{'NCBI_taxonomy': '51089'}
+525	organism	Nutmeg	['Myristica fragrans', 'M. fragrans']	{'NCBI_taxonomy': '51089'}
 526	organism	Winter savory	['Satureja montana']	{'NCBI_taxonomy': '49988'}
 527	organism	Common sage	['S. officinalis', 'Salvia officinalis']	{'NCBI_taxonomy': '38868'}
-528	organism	Black raspberry	['Rubus occidentalis', 'R. occidentalis']	{'NCBI_taxonomy': '75079'}
+528	organism	Black raspberry	['R. occidentalis', 'Rubus occidentalis']	{'NCBI_taxonomy': '75079'}
 529	organism	Rosemary	['Rosmarinus Officinalis']	{'NCBI_taxonomy': '39367'}
 530	organism	Blackcurrant	['Ribes nigrum', 'R. nigrum']	{'NCBI_taxonomy': '78511'}
 531	organism	Radish	['Raphanus sativus']	{'NCBI_taxonomy': '3726'}
-532	organism	Pear	['Pears', 'Pyrus communis', 'Pyrus communis L']	{'NCBI_taxonomy': '23211'}
-533	organism	Garlic	['Allium sativum L', 'Allium sativum', 'Allium sativum L. var']	{'NCBI_taxonomy': '4682'}
+532	organism	Pear	['Pyrus communis L', 'Pears', 'Pyrus communis']	{'NCBI_taxonomy': '23211'}
+533	organism	Garlic	['Allium sativum L', 'Allium sativum L. var', 'Allium sativum']	{'NCBI_taxonomy': '4682'}
 534	organism	Ucuhuba	['Virola surinamensis']	{'NCBI_taxonomy': '224910'}
-535	organism	Oil-seed Camellia	['Camellia oleifera', 'Camellia']	{'NCBI_taxonomy': '385388'}
+535	organism	Oil-seed Camellia	['Camellia', 'Camellia oleifera']	{'NCBI_taxonomy': '385388'}
 536	organism	Rice	['red rice', 'Oryza sativa']	{'NCBI_taxonomy': '4530'}
 537	organism	Sunflower	['Helianthus annuus']	{'NCBI_taxonomy': '4232'}
 538	organism	Lentils	['Lentil', 'Lens culinaris']	{'NCBI_taxonomy': '3864'}
-539	organism	Garden onion	['Onions', 'onion', 'Allium cepa']	{'NCBI_taxonomy': '4679'}
-540	organism	Common mushroom	['mushrooms', 'Agaricus bisporus']	{'NCBI_taxonomy': '5341'}
+539	organism	Garden onion	['onion', 'Allium cepa', 'Onions']	{'NCBI_taxonomy': '4679'}
+540	organism	Common mushroom	['Agaricus bisporus', 'mushrooms']	{'NCBI_taxonomy': '5341'}
 541	organism	Sago palm	['Metroxylon sagu']	{'NCBI_taxonomy': '93297'}
-542	organism	Ceylon cinnamon	['Cinnamon', 'Cinnamomum verum', 'Cinnamomum zeylanicum']	{'NCBI_taxonomy': '128608'}
+542	organism	Ceylon cinnamon	['Cinnamomum verum', 'Cinnamon', 'Cinnamomum zeylanicum']	{'NCBI_taxonomy': '128608'}
 543	organism	Epazote	['American wormseed', 'Dysphania ambrosioides']	{'NCBI_taxonomy': '330163'}
 544	organism	Wakame	['Undaria pinnatifida']	{'NCBI_taxonomy': '74381'}
 545	organism	Chicken	['Chick', 'Gallus gallus']	{'NCBI_taxonomy': '9031'}
 546	organism	Flaxseed	['Linum usitatissimum', 'flax']	{'NCBI_taxonomy': '4006'}
 547	organism	Safflower	['Carthamus tinctorius']	{'NCBI_taxonomy': '4222'}
 548	organism	Roselle	['Hibiscus sabdariffa', 'Hibiscus', 'Hibiscus sabdariffa L']	{'NCBI_taxonomy': '183260'}
-549	organism	European plum	['Plum', 'Plums', 'P. domestica', 'Prunus domestica']	{'NCBI_taxonomy': '3758'}
+549	organism	European plum	['Plum', 'Prunus domestica', 'Plums', 'P. domestica']	{'NCBI_taxonomy': '3758'}
 550	organism	Pomegranate	['Punica granatum']	{'NCBI_taxonomy': '22663'}
 551	organism	Almond	['Prunus dulcis', 'Prunus amygdalus', 'Almonds']	{'NCBI_taxonomy': '3755'}
-552	organism	Sweet cherry	['Prunus avium', 'P. avium']	{'NCBI_taxonomy': '42229'}
+552	organism	Sweet cherry	['P. avium', 'Prunus avium']	{'NCBI_taxonomy': '42229'}
 553	organism	Peach	['Prunus persica', 'P. persica']	{'NCBI_taxonomy': '3760'}
 554	organism	Pistachio	['Pistacia vera', 'pistachios']	{'NCBI_taxonomy': '55513'}
 555	organism	Peanut	['peanuts', 'Arachis hypogaea']	{'NCBI_taxonomy': '3818'}
 556	organism	Fennel	['Foeniculum vulgare']	{'NCBI_taxonomy': '48038'}
-557	organism	Black chokeberry	['Photinia melanocarpa', 'Aronia melanocarpa']	{'NCBI_taxonomy': '661339'}
+557	organism	Black chokeberry	['Aronia melanocarpa', 'Photinia melanocarpa']	{'NCBI_taxonomy': '661339'}
 558	organism	Date	['Phoenix dactylifera', 'Phoenix dactylifera L']	{'NCBI_taxonomy': '42345'}
 559	organism	Lima bean	['Phaseolus lunatus']	{'NCBI_taxonomy': '3884'}
 560	organism	Passion fruit	['Passiflora edulis']	{'NCBI_taxonomy': '78168'}
 561	organism	Millet	['Panicum miliaceum']	{'NCBI_taxonomy': '4540'}
 562	organism	Common oregano	['Oregano', 'Origanum vulgare']	{'NCBI_taxonomy': '39352'}
-563	organism	Avocado	['avocados', 'Persea americana', 'P. americana']	{'NCBI_taxonomy': '3435'}
-564	organism	Parsnip	['Pastinaca sativa', 'parsnips']	{'NCBI_taxonomy': '4041'}
+563	organism	Avocado	['avocados', 'P. americana', 'Persea americana']	{'NCBI_taxonomy': '3435'}
+564	organism	Parsnip	['parsnips', 'Pastinaca sativa']	{'NCBI_taxonomy': '4041'}
 565	organism	Quinoa	['Chenopodium quinoa']	{'NCBI_taxonomy': '63459'}
-566	organism	Olive	['Olea europaea L', 'Olea europaea']	{'NCBI_taxonomy': '4146'}
+566	organism	Olive	['Olea europaea', 'Olea europaea L']	{'NCBI_taxonomy': '4146'}
 567	organism	Evening primrose	['Oenothera biennis']	{'NCBI_taxonomy': '3942'}
 568	organism	Pacific oyster	['Crassostrea gigas']	{'NCBI_taxonomy': '29159'}
 569	organism	Okra	['Abelmoschus esculentus', 'Abelmoschus esculentus L.Moench']	{'NCBI_taxonomy': '455045'}
-570	organism	White mustard	['Sinapis alba', 'yellow mustard']	{'NCBI_taxonomy': '3728'}
+570	organism	White mustard	['yellow mustard', 'Sinapis alba']	{'NCBI_taxonomy': '3728'}
 571	organism	Chinese mustard	['brown mustards', 'Brassica juncea']	{'NCBI_taxonomy': '3707'}
-572	organism	Purple mangosteen	['Mangosteen', 'Garcinia mangostana', 'Garcinia mangostana L']	{'NCBI_taxonomy': '58228'}
-573	organism	Mammee apple	['M. americana', 'Mammea americana']	{'NCBI_taxonomy': '198777'}
-574	organism	Bitter gourd	['Momordica charantia', 'bitter gourds']	{'NCBI_taxonomy': '3673'}
-575	organism	Spearmint	['Mentha spicata', 'M. spicata']	{'NCBI_taxonomy': '29719'}
+572	organism	Purple mangosteen	['Mangosteen', 'Garcinia mangostana L', 'Garcinia mangostana']	{'NCBI_taxonomy': '58228'}
+573	organism	Mammee apple	['Mammea americana', 'M. americana']	{'NCBI_taxonomy': '198777'}
+574	organism	Bitter gourd	['bitter gourds', 'Momordica charantia']	{'NCBI_taxonomy': '3673'}
+575	organism	Spearmint	['M. spicata', 'Mentha spicata']	{'NCBI_taxonomy': '29719'}
 576	organism	Corn	['maize', 'Zea mays']	{'NCBI_taxonomy': '4577'}
 577	organism	German camomile	['Matricaria recutita', 'German chamomile']	{'NCBI_taxonomy': '127986'}
 578	organism	Mango	['Mangifera indica', 'Mangifera indica L', 'M. indica']	{'NCBI_taxonomy': '29780'}
@@ -585,7 +585,7 @@ foodatlas_id	type	name	synonyms	other_db_ids
 583	organism	White lupine	['Lupinus albus', 'Lupinus albus L']	{'NCBI_taxonomy': '3870'}
 584	organism	Sweet basil	['Ocimum basilicum', 'basil']	{'NCBI_taxonomy': '39350'}
 585	organism	Chicory	['Cichorium Intybus']	{'NCBI_taxonomy': '13427'}
-586	organism	Cornmint	['wild mint', 'M. arvensis', 'Mentha arvensis']	{'NCBI_taxonomy': '292239'}
+586	organism	Cornmint	['Mentha arvensis', 'M. arvensis', 'wild mint']	{'NCBI_taxonomy': '292239'}
 587	organism	Lemon balm	['Melissa officinalis', 'Melissa officinalis L']	{'NCBI_taxonomy': '39338'}
 588	organism	Sweet marjoram	['Origanum majorana']	{'NCBI_taxonomy': '268884'}
 589	organism	Sweet potato	['Ipomoea batatas']	{'NCBI_taxonomy': '4120'}
@@ -593,18 +593,18 @@ foodatlas_id	type	name	synonyms	other_db_ids
 591	organism	Saffron	['Crocus sativus', 'saffron (Crocus']	{'NCBI_taxonomy': '82528'}
 592	organism	Arabica coffee	['Coffea arabica']	{'NCBI_taxonomy': '13443'}
 593	organism	Sweet orange	['Citrus sinensis', 'C. sinensis']	{'NCBI_taxonomy': '2711'}
-594	organism	Pigeon pea	['Cajanus cajan (L.)', 'Cajanus cajan', 'Pigeon peas']	{'NCBI_taxonomy': '3821'}
+594	organism	Pigeon pea	['Cajanus cajan (L.)', 'Pigeon peas', 'Cajanus cajan']	{'NCBI_taxonomy': '3821'}
 595	organism	Brazil nut	['Brazil nuts', 'Bertholletia excelsa']	{'NCBI_taxonomy': '3645'}
 596	organism	Star fruit	['Averrhoa carambola']	{'NCBI_taxonomy': '28974'}
-597	organism	Asparagus	['Asparagus officinalis L', 'Asparagus officinalis']	{'NCBI_taxonomy': '4686'}
-598	organism	Swede	['rape', 'oilseed rape', 'B. napus', 'Brassica napus']	{'NCBI_taxonomy': '3708'}
+597	organism	Asparagus	['Asparagus officinalis', 'Asparagus officinalis L']	{'NCBI_taxonomy': '4686'}
+598	organism	Swede	['oilseed rape', 'Brassica napus', 'B. napus', 'rape']	{'NCBI_taxonomy': '3708'}
 599	organism	Cucumber	['Cucumis sativus']	{'NCBI_taxonomy': '3659'}
 600	organism	Burdock	['Arctium Lappa L', 'Arctium lappa', 'A. lappa']	{'NCBI_taxonomy': '4217'}
 601	organism	Custard apple	['Annona reticulata']	{'NCBI_taxonomy': '301862'}
-602	organism	Sugar apple	['Annona squamosa', 'custard apple']	{'NCBI_taxonomy': '301693'}
+602	organism	Sugar apple	['custard apple', 'Annona squamosa']	{'NCBI_taxonomy': '301693'}
 603	organism	Chives	['Allium schoenoprasum']	{'NCBI_taxonomy': '74900'}
-604	organism	Common buckwheat	['Fagopyrum esculentum', 'Fagopyrum esculentum Moench', 'buckwheat', 'F. esculentum']	{'NCBI_taxonomy': '3617'}
-605	organism	Common pea	['Pisum sativum', 'peas', 'Pisum sativum L']	{'NCBI_taxonomy': '3888'}
+604	organism	Common buckwheat	['F. esculentum', 'Fagopyrum esculentum', 'buckwheat', 'Fagopyrum esculentum Moench']	{'NCBI_taxonomy': '3617'}
+605	organism	Common pea	['peas', 'Pisum sativum', 'Pisum sativum L']	{'NCBI_taxonomy': '3888'}
 606	organism	Oyster mushroom	['Pleurotus ostreatus']	{'NCBI_taxonomy': '5322'}
 607	organism	Enokitake	['Flammulina velutipes']	{'NCBI_taxonomy': '38945'}
 608	organism	Persian lime	['Citrus latifolia']	{'NCBI_taxonomy': '200541'}
@@ -614,16 +614,16 @@ foodatlas_id	type	name	synonyms	other_db_ids
 612	organism	Spotted seal	['Phoca largha', 'spotted seals']	{'NCBI_taxonomy': '39090'}
 613	organism	Irish moss	['Chondrus crispus', 'Carrageen']	{'NCBI_taxonomy': '2769'}
 614	organism	Muscadine grape	['muscadine', 'Vitis rotundifolia']	{'NCBI_taxonomy': '103349'}
-615	organism	Common thyme	['T. vulgaris', 'Thymus vulgaris', 'Thymus vulgaris L', 'thyme']	{'NCBI_taxonomy': '49992'}
+615	organism	Common thyme	['Thymus vulgaris L', 'thyme', 'T. vulgaris', 'Thymus vulgaris']	{'NCBI_taxonomy': '49992'}
 616	organism	Sour cherry	['Prunus cerasus']	{'NCBI_taxonomy': '140311'}
-617	organism	Lemon	['Citrus limon', 'lemons']	{'NCBI_taxonomy': '2708'}
+617	organism	Lemon	['lemons', 'Citrus limon']	{'NCBI_taxonomy': '2708'}
 618	organism	Tartary buckwheat	['F. tataricum', 'Fagopyrum tataricum']	{'NCBI_taxonomy': '62330'}
 619	organism	Loquat	['Eriobotrya japonica']	{'NCBI_taxonomy': '32224'}
 620	organism	Carob	['Ceratonia siliqua', 'Ceratonia siliqua L']	{'NCBI_taxonomy': '20340'}
 621	organism	Japanese persimmon	['Diospyros', 'Diospyros kaki Thunb', 'Diospyros kaki']	{'NCBI_taxonomy': '35925'}
 622	organism	Cardoon	['Cynara cardunculus']	{'NCBI_taxonomy': '4265'}
 623	organism	Chinese cinnamon	['Cinnamomum aromaticum']	{'NCBI_taxonomy': '119260'}
-624	organism	Hard wheat	['Durum wheat', 'Triticum durum']	{'NCBI_taxonomy': '4567'}
+624	organism	Hard wheat	['Triticum durum', 'Durum wheat']	{'NCBI_taxonomy': '4567'}
 625	organism	Chickpea	['Cicer arietinum']	{'NCBI_taxonomy': '3827'}
 626	organism	Welsh onion	['Allium fistulosum']	{'NCBI_taxonomy': '35875'}
 627	organism	Common verbena	['Verbena officinalis']	{'NCBI_taxonomy': '79772'}
@@ -631,21 +631,21 @@ foodatlas_id	type	name	synonyms	other_db_ids
 629	organism	Caraway	['Carum carvi L', 'Carum carvi']	{'NCBI_taxonomy': '48032'}
 630	organism	Coriander	['cilantro', 'Coriandrum sativum']	{'NCBI_taxonomy': '4047'}
 631	organism	Tea	['Camellia sinensis', 'Black tea']	{'NCBI_taxonomy': '4442'}
-632	organism	Chinese cabbage	['Brassica', 'Brassica rapa', 'B. rapa']	{'NCBI_taxonomy': '3711'}
+632	organism	Chinese cabbage	['Brassica rapa', 'Brassica', 'B. rapa']	{'NCBI_taxonomy': '3711'}
 633	organism	Pepper	['Capsicum annuum']	{'NCBI_taxonomy': '4072'}
 634	organism	Capers	['Capparis spinosa']	{'NCBI_taxonomy': '65558'}
-635	organism	Oat	['oats', 'Avena sativa']	{'NCBI_taxonomy': '4498'}
+635	organism	Oat	['Avena sativa', 'oats']	{'NCBI_taxonomy': '4498'}
 636	organism	Horseradish	['Armoracia rusticana']	{'NCBI_taxonomy': '3704'}
-637	organism	Wild celery	['Apium graveolens', 'Apium graveolens L']	{'NCBI_taxonomy': '4045'}
+637	organism	Wild celery	['Apium graveolens L', 'Apium graveolens']	{'NCBI_taxonomy': '4045'}
 638	organism	Dill	['Anethum graveolens']	{'NCBI_taxonomy': '40922'}
-639	organism	Cashew nut	['cashew', 'Anacardium occidentale']	{'NCBI_taxonomy': '171929'}
+639	organism	Cashew nut	['Anacardium occidentale', 'cashew']	{'NCBI_taxonomy': '171929'}
 640	organism	Chinese bayberry	['Myrica rubra']	{'NCBI_taxonomy': '262757'}
-641	organism	Chanterelle	['chanterelles', 'Cantharellus cibarius']	{'NCBI_taxonomy': '36066'}
+641	organism	Chanterelle	['Cantharellus cibarius', 'chanterelles']	{'NCBI_taxonomy': '36066'}
 642	organism	Yellowtail amberjack	['Seriola lalandi']	{'NCBI_taxonomy': '302047'}
 643	organism	Guava	['Psidium guajava']	{'NCBI_taxonomy': '120290'}
 644	organism	Jerusalem artichoke	['Helianthus tuberosus']	{'NCBI_taxonomy': '4233'}
-645	organism	Pecan nut	['pecan', 'Carya illinoinensis']	{'NCBI_taxonomy': '32201'}
-646	organism	Bowhead whale	['bowhead whales', 'bowhead', 'Balaena mysticetus']	{'NCBI_taxonomy': '27602'}
+645	organism	Pecan nut	['Carya illinoinensis', 'pecan']	{'NCBI_taxonomy': '32201'}
+646	organism	Bowhead whale	['bowhead whales', 'Balaena mysticetus', 'bowhead']	{'NCBI_taxonomy': '27602'}
 647	organism	Sorghum	['Sorghum bicolor']	{'NCBI_taxonomy': '4558'}
 648	organism	Eggplant	['eggplants', 'S. melongena', 'Solanum melongena']	{'NCBI_taxonomy': '4111'}
 649	organism	Gooseberry	['Ribes uva-crispa']	{'NCBI_taxonomy': '135518'}
@@ -655,9 +655,9 @@ foodatlas_id	type	name	synonyms	other_db_ids
 653	organism	Orange mint	['Mentha aquatica']	{'NCBI_taxonomy': '190902'}
 654	organism	Watermelon	['Citrullus lanatus']	{'NCBI_taxonomy': '3654'}
 655	organism	Fig	['Ficus carica', 'F. carica']	{'NCBI_taxonomy': '3494'}
-656	organism_with_part	Sacred lotus - leaf	['Nelumbo nucifera - leaf', 'Nelumbo nucifera Gaertn - leaf']	{'NCBI_taxonomy': '4432'}
+656	organism_with_part	Sacred lotus - leaf	['Nelumbo nucifera Gaertn - leaf', 'Nelumbo nucifera - leaf']	{'NCBI_taxonomy': '4432'}
 657	organism_with_part	Spinach - leaf	['Spinacia oleracea - leaf']	{'NCBI_taxonomy': '3562'}
-658	organism_with_part	Garland chrysanthemum - leaf	['Glebionis coronaria - leaf', 'Chrysanthemum coronarium - leaf']	{'NCBI_taxonomy': '99038'}
+658	organism_with_part	Garland chrysanthemum - leaf	['Chrysanthemum coronarium - leaf', 'Glebionis coronaria - leaf']	{'NCBI_taxonomy': '99038'}
 659	organism_with_part	Soursop - fruit	['Annona muricata L - fruit', 'Annona muricata - fruit']	{'NCBI_taxonomy': '13337'}
 660	organism_with_part	Alfalfa - leaf	['Medicago sativa - leaf']	{'NCBI_taxonomy': '3879'}
 661	organism_with_part	Common grape - fruit	['Vitis vinifera - fruit']	{'NCBI_taxonomy': '29760'}
@@ -668,7 +668,7 @@ foodatlas_id	type	name	synonyms	other_db_ids
 666	organism_with_part	Sunflower - seed	['Helianthus annuus - seed']	{'NCBI_taxonomy': '4232'}
 667	organism_with_part	Pomegranate - fruit	['Punica granatum - fruit']	{'NCBI_taxonomy': '22663'}
 668	organism_with_part	Garden tomato - fruit	['L. esculentum - fruit', 'Solanum lycopersicum - fruit']	{'NCBI_taxonomy': '4081'}
-669	organism_with_part	Black mulberry - fruit	['Morus nigra - fruit', 'Morus nigra L - fruit']	{'NCBI_taxonomy': '85232'}
+669	organism_with_part	Black mulberry - fruit	['Morus nigra L - fruit', 'Morus nigra - fruit']	{'NCBI_taxonomy': '85232'}
 670	organism_with_part	Corn - leaf	['Zea mays - leaf']	{'NCBI_taxonomy': '4577'}
 671	organism_with_part	Pummelo - leaf	['C. grandis - leaf', 'Citrus maxima - leaf']	{'NCBI_taxonomy': '37334'}
 672	organism_with_part	Peanut - fruit	['Arachis hypogaea - fruit']	{'NCBI_taxonomy': '3818'}
@@ -680,7 +680,7 @@ foodatlas_id	type	name	synonyms	other_db_ids
 678	organism_with_part	Common walnut - leaf	['Juglans regia - leaf']	{'NCBI_taxonomy': '51240'}
 679	organism_with_part	Hard wheat - endosperm	['Triticum durum - endosperm', 'durum wheat - endosperm']	{'NCBI_taxonomy': '4567'}
 680	organism_with_part	Common verbena - leaf	['Verbena officinalis - leaf']	{'NCBI_taxonomy': '79772'}
-681	organism_with_part	Sweet basil - leaf	['Ocimum basilicum - leaf', 'basil - leaf']	{'NCBI_taxonomy': '39350'}
+681	organism_with_part	Sweet basil - leaf	['basil - leaf', 'Ocimum basilicum - leaf']	{'NCBI_taxonomy': '39350'}
 682	organism_with_part	Capers - hypocotyl	['Capparis spinosa - hypocotyl']	{'NCBI_taxonomy': '65558'}
 683	organism_with_part	Chanterelle - mycelium	['Cantharellus cibarius - mycelium']	{'NCBI_taxonomy': '36066'}
 684	organism_with_part	Carob - fruit	['Ceratonia siliqua L - fruit', 'Ceratonia siliqua - fruit']	{'NCBI_taxonomy': '20340'}
@@ -692,74 +692,74 @@ foodatlas_id	type	name	synonyms	other_db_ids
 690	organism_with_part	Loquat - leaf	['Eriobotrya japonica - leaf']	{'NCBI_taxonomy': '32224'}
 691	organism_with_part	Coriander - leaf	['Coriandrum sativum - leaf']	{'NCBI_taxonomy': '4047'}
 692	organism_with_part	Lemon - fruit	['Citrus limon - fruit', 'lemons - fruit']	{'NCBI_taxonomy': '2708'}
-693	organism_with_part	Grapefruit/Pummelo hybrid - fruit	['grapefruit - fruit', 'Citrus paradisi X Citrus maxima - fruit']	{'NCBI_taxonomy': '37656'}
+693	organism_with_part	Grapefruit/Pummelo hybrid - fruit	['Citrus paradisi X Citrus maxima - fruit', 'grapefruit - fruit']	{'NCBI_taxonomy': '37656'}
 694	organism_with_part	Wild celery - seed	['Apium graveolens - seed']	{'NCBI_taxonomy': '4045'}
 695	organism_with_part	Mugwort - shoot	['Artemisia vulgaris - shoot']	{'NCBI_taxonomy': '4220'}
-696	organism_with_part	Durian - flesh	['Durio zibethinus - fruit', 'Durio zibethinus - flesh']	{'NCBI_taxonomy': '66656'}
+696	organism_with_part	Durian - flesh	['Durio zibethinus - flesh', 'Durio zibethinus - fruit']	{'NCBI_taxonomy': '66656'}
 697	organism_with_part	Winter squash - seed	['Cucurbita maxima - seed']	{'NCBI_taxonomy': '3661'}
-698	organism_with_part	Rambutan - fruit	['Nephelium lappaceum L - fruit', 'Nephelium lappaceum - fruit']	{'NCBI_taxonomy': '151071'}
-699	organism_with_part	Macadamia nut (M. tetraphylla) - tissue	['Macadamia - leaf', 'Macadamia tetraphylla - tissue', 'Macadamia tetraphylla - leaf', 'M. tetraphylla - tissue', 'M. tetraphylla - leaf', 'Macadamia - tissue']	{'NCBI_taxonomy': '512563'}
+698	organism_with_part	Rambutan - fruit	['Nephelium lappaceum - fruit', 'Nephelium lappaceum L - fruit']	{'NCBI_taxonomy': '151071'}
+699	organism_with_part	Macadamia nut (M. tetraphylla) - tissue	['Macadamia - leaf', 'Macadamia - tissue', 'Macadamia tetraphylla - leaf', 'Macadamia tetraphylla - tissue', 'M. tetraphylla - tissue', 'M. tetraphylla - leaf']	{'NCBI_taxonomy': '512563'}
 700	organism_with_part	Longan - tissue	['Dimocarpus longan - tissue']	{'NCBI_taxonomy': '128017'}
-701	organism_with_part	Ginger - root	['Zingiber officinale - root', 'Zingiber officinale - rhizome']	{'NCBI_taxonomy': '94328'}
-702	organism_with_part	Gram bean - cotyledon	['Vigna mungo - seed', 'Vigna mungo L. Hepper - seed', 'Vigna mungo - cotyledon', 'Black gram - seed']	{'NCBI_taxonomy': '3915'}
-703	organism_with_part	Soy bean - root	['soybean - root', 'soybean - nodule', 'Glycine max - root', 'Glycine max - nodule']	{'NCBI_taxonomy': '3847'}
+701	organism_with_part	Ginger - rhizome	['Zingiber officinale - rhizome', 'Zingiber officinale - root']	{'NCBI_taxonomy': '94328'}
+702	organism_with_part	Gram bean - seed	['Vigna mungo - seed', 'Vigna mungo - cotyledon', 'Vigna mungo L. Hepper - seed', 'Black gram - seed']	{'NCBI_taxonomy': '3915'}
+703	organism_with_part	Soy bean - nodule	['Glycine max - root', 'soybean - nodule', 'soybean - root', 'Glycine max - nodule']	{'NCBI_taxonomy': '3847'}
 704	organism_with_part	Cowpea - nodule	['Vigna unguiculata - root', 'Vigna unguiculata - nodule']	{'NCBI_taxonomy': '3917'}
 705	organism_with_part	Highbush blueberry - fruit	['Vaccinium corymbosum - fruit']	{'NCBI_taxonomy': '69266'}
-706	organism_with_part	Lowbush blueberry - stem	['Vaccinium angustifolium - fruit', 'Vaccinium angustifolium - leaf', 'Vaccinium angustifolium - root', 'Vaccinium angustifolium - stem']	{'NCBI_taxonomy': '472369'}
+706	organism_with_part	Lowbush blueberry - root	['Vaccinium angustifolium - stem', 'Vaccinium angustifolium - leaf', 'Vaccinium angustifolium - fruit', 'Vaccinium angustifolium - root']	{'NCBI_taxonomy': '472369'}
 707	organism_with_part	Potato - leaf	['Solanum tuberosum - leaf']	{'NCBI_taxonomy': '4113'}
-708	organism_with_part	Garlic - bulb	['Allium sativum L - leaf', 'Allium sativum - leaf', 'Allium sativum - bulb', 'Allium sativum L. var - bulb', 'Allium sativum - tissue', 'Allium sativum L - bulb']	{'NCBI_taxonomy': '4682'}
+708	organism_with_part	Garlic - bulb	['Allium sativum L - bulb', 'Allium sativum - tissue', 'Allium sativum L. var - bulb', 'Allium sativum - leaf', 'Allium sativum L - leaf', 'Allium sativum - bulb']	{'NCBI_taxonomy': '4682'}
 709	organism_with_part	Rice - bran	['Oryza sativa - bran']	{'NCBI_taxonomy': '4530'}
 710	organism_with_part	Ceylon cinnamon - bark	['cinnamon - bark', 'Cinnamomum verum - bark', 'Cinnamomum zeylanicum - bark']	{'NCBI_taxonomy': '128608'}
 711	organism_with_part	Flaxseed - seed	['Linum usitatissimum - tissue', 'flax - seed', 'Linum usitatissimum - seed']	{'NCBI_taxonomy': '4006'}
 712	organism_with_part	Roselle - calyx	['Hibiscus sabdariffa - calyx']	{'NCBI_taxonomy': '183260'}
 713	organism_with_part	European plum - seed	['Prunus domestica - seed', 'Plum - seed']	{'NCBI_taxonomy': '3758'}
-714	organism_with_part	Sweet cherry - juice	['Prunus avium - leaf', 'Prunus avium - juice', 'Prunus avium - fruit']	{'NCBI_taxonomy': '42229'}
-715	organism_with_part	Passion fruit - fruit	['Passiflora edulis - seed', 'Passiflora edulis - leaf', 'Passiflora edulis - fruit', 'Passiflora edulis - stem']	{'NCBI_taxonomy': '78168'}
-716	organism_with_part	Quinoa - pericarp	['Chenopodium quinoa - grain', 'Chenopodium quinoa - pericarp']	{'NCBI_taxonomy': '63459'}
+714	organism_with_part	Sweet cherry - juice	['Prunus avium - fruit', 'Prunus avium - juice', 'Prunus avium - leaf']	{'NCBI_taxonomy': '42229'}
+715	organism_with_part	Passion fruit - leaf	['Passiflora edulis - seed', 'Passiflora edulis - leaf', 'Passiflora edulis - stem', 'Passiflora edulis - fruit']	{'NCBI_taxonomy': '78168'}
+716	organism_with_part	Quinoa - grain	['Chenopodium quinoa - grain', 'Chenopodium quinoa - pericarp']	{'NCBI_taxonomy': '63459'}
 717	organism_with_part	Olive - fruit	['Olea europaea - fruit', 'Olea europaea L - fruit']	{'NCBI_taxonomy': '4146'}
 718	organism_with_part	Okra - pod	['Abelmoschus esculentus - pod']	{'NCBI_taxonomy': '455045'}
 719	organism_with_part	White mustard - seed	['Sinapis alba - seed', 'yellow mustard - seed']	{'NCBI_taxonomy': '3728'}
 720	organism_with_part	Chinese mustard - seed	['brown mustards - seed', 'Brassica juncea - seed']	{'NCBI_taxonomy': '3707'}
-721	organism_with_part	Purple mangosteen - fruit	['Mangosteen - pericarp', 'Garcinia mangostana - pericarp', 'Mangosteen - fruit', 'Garcinia mangostana L - fruit', 'Garcinia mangostana - fruit', 'Garcinia mangostana L - pericarp']	{'NCBI_taxonomy': '58228'}
-722	organism_with_part	Nutmeg - wood	['M. fragrans - seed', 'Myristica fragrans - wood', 'Myristica fragrans - seed']	{'NCBI_taxonomy': '51089'}
-723	organism_with_part	White lupine - fruit	['Lupinus albus L - seed', 'Lupinus albus - fruit', 'Lupinus albus - seed', 'Lupinus albus L - fruit']	{'NCBI_taxonomy': '3870'}
-724	organism_with_part	German camomile - flower	['Matricaria recutita - flower', 'German chamomile - flower']	{'NCBI_taxonomy': '127986'}
-725	organism_with_part	Mango - stem	['Mangifera indica - fruit', 'M. indica - stem', 'Mangifera indica - stem']	{'NCBI_taxonomy': '29780'}
+721	organism_with_part	Purple mangosteen - pericarp	['Garcinia mangostana - fruit', 'Mangosteen - pericarp', 'Mangosteen - fruit', 'Garcinia mangostana - pericarp', 'Garcinia mangostana L - fruit', 'Garcinia mangostana L - pericarp']	{'NCBI_taxonomy': '58228'}
+722	organism_with_part	Nutmeg - wood	['Myristica fragrans - seed', 'M. fragrans - seed', 'Myristica fragrans - wood']	{'NCBI_taxonomy': '51089'}
+723	organism_with_part	White lupine - seed	['Lupinus albus - fruit', 'Lupinus albus L - seed', 'Lupinus albus L - fruit', 'Lupinus albus - seed']	{'NCBI_taxonomy': '3870'}
+724	organism_with_part	German camomile - flower	['German chamomile - flower', 'Matricaria recutita - flower']	{'NCBI_taxonomy': '127986'}
+725	organism_with_part	Mango - stem	['Mangifera indica - fruit', 'Mangifera indica - stem', 'M. indica - stem']	{'NCBI_taxonomy': '29780'}
 726	organism_with_part	Papaya - fruit	['Carica papaya - seed', 'Carica papaya - fruit']	{'NCBI_taxonomy': '3649'}
 727	organism_with_part	Turmeric - rhizome	['Curcuma longa - rhizome']	{'NCBI_taxonomy': '136217'}
-728	organism_with_part	Endive - stalk	['Cichorium endivia subsp - stalk', 'Cichorium endivia subsp - root', 'Cichorium endivia - root', 'Cichorium endivia - stalk']	{'NCBI_taxonomy': '114280'}
+728	organism_with_part	Endive - root	['Cichorium endivia - stalk', 'Cichorium endivia - root', 'Cichorium endivia subsp - root', 'Cichorium endivia subsp - stalk']	{'NCBI_taxonomy': '114280'}
 729	organism_with_part	Evening primrose - leaf	['Oenothera biennis - leaf']	{'NCBI_taxonomy': '3942'}
-730	organism_with_part	Lentils - seed	['Lens culinaris - seed', 'Lentil - seed']	{'NCBI_taxonomy': '3864'}
-731	organism_with_part	Apricot - fruit	['Prunus armeniaca - fruit', 'apricots - fruit']	{'NCBI_taxonomy': '36596'}
-732	organism_with_part	Star fruit - root	['Averrhoa carambola - root', 'Averrhoa carambola - juice', 'Averrhoa carambola - fruit']	{'NCBI_taxonomy': '28974'}
-733	organism_with_part	Custard apple - bark	['Annona reticulata - seed', 'Annona reticulata - bark']	{'NCBI_taxonomy': '301862'}
-734	organism_with_part	Swede - grain	['Brassica napus - seed', 'oilseed rape - grain', 'oilseed rape - seed', 'Brassica napus - grain']	{'NCBI_taxonomy': '3708'}
-735	organism_with_part	Burdock - root	['Arctium lappa - fruit', 'Arctium lappa L - root', 'A. lappa - root', 'Arctium lappa - root']	{'NCBI_taxonomy': '4217'}
-736	organism_with_part	Sugar apple - bark	['custard apple - leaf', 'Annona squamosa - leaf', 'Annona squamosa - bark']	{'NCBI_taxonomy': '301693'}
+730	organism_with_part	Lentils - seed	['Lentil - seed', 'Lens culinaris - seed']	{'NCBI_taxonomy': '3864'}
+731	organism_with_part	Apricot - fruit	['apricots - fruit', 'Prunus armeniaca - fruit']	{'NCBI_taxonomy': '36596'}
+732	organism_with_part	Star fruit - fruit	['Averrhoa carambola - juice', 'Averrhoa carambola - root', 'Averrhoa carambola - fruit']	{'NCBI_taxonomy': '28974'}
+733	organism_with_part	Custard apple - bark	['Annona reticulata - bark', 'Annona reticulata - seed']	{'NCBI_taxonomy': '301862'}
+734	organism_with_part	Swede - grain	['oilseed rape - grain', 'oilseed rape - seed', 'Brassica napus - seed', 'Brassica napus - grain']	{'NCBI_taxonomy': '3708'}
+735	organism_with_part	Burdock - fruit	['Arctium lappa - fruit', 'Arctium lappa - root', 'Arctium lappa L - root', 'A. lappa - root']	{'NCBI_taxonomy': '4217'}
+736	organism_with_part	Sugar apple - leaf	['Annona squamosa - leaf', 'Annona squamosa - bark', 'custard apple - leaf']	{'NCBI_taxonomy': '301693'}
 737	organism_with_part	Chives - tissue	['Allium schoenoprasum - tissue']	{'NCBI_taxonomy': '74900'}
 738	organism_with_part	Oil-seed Camellia - seed	['Camellia - seed', 'Camellia oleifera - seed']	{'NCBI_taxonomy': '385388'}
-739	organism_with_part	Mammee apple - flesh	['Mammea americana - stem', 'M. americana - leaf', 'M. americana - flesh', 'Mammea americana - leaf', 'M. americana - stem', 'Mammea americana - seed', 'M. americana - fruit', 'Mammea americana - skin', 'Mammea americana - flesh', 'Mammea americana - root', 'M. americana - skin', 'M. americana - root', 'Mammea americana - fruit', 'M. americana - seed']	{'NCBI_taxonomy': '198777'}
+739	organism_with_part	Mammee apple - leaf	['Mammea americana - fruit', 'Mammea americana - root', 'M. americana - skin', 'Mammea americana - stem', 'Mammea americana - leaf', 'Mammea americana - flesh', 'Mammea americana - seed', 'Mammea americana - skin', 'M. americana - root', 'M. americana - fruit', 'M. americana - flesh', 'M. americana - seed', 'M. americana - leaf', 'M. americana - stem']	{'NCBI_taxonomy': '198777'}
 740	organism_with_part	Spotted seal - tissue	['Phoca largha - tissue']	{'NCBI_taxonomy': '39090'}
-741	organism_with_part	Horseradish tree - flower	['Moringa oleifera - flower', 'M. oleifera - flower', 'Moringa oleifera - leaf']	{'NCBI_taxonomy': '3735'}
+741	organism_with_part	Horseradish tree - leaf	['Moringa oleifera - leaf', 'M. oleifera - flower', 'Moringa oleifera - flower']	{'NCBI_taxonomy': '3735'}
 742	organism_with_part	Adzuki bean - seed	['Vigna angularis - seed', 'azuki bean - seed']	{'NCBI_taxonomy': '3914'}
-743	organism_with_part	Common sage - leaf	['Salvia officinalis - leaf', 'S. officinalis - leaf']	{'NCBI_taxonomy': '38868'}
-744	organism_with_part	Peach - flower	['Prunus persica - flower', 'Prunus persica - juice']	{'NCBI_taxonomy': '3760'}
-745	organism_with_part	Common pea - leaf	['Pisum sativum - leaf', 'Pisum sativum L - leaf']	{'NCBI_taxonomy': '3888'}
-746	organism_with_part	Common buckwheat - seedling	['buckwheat - hull', 'Fagopyrum esculentum - seedling', 'Fagopyrum esculentum - hull', 'Fagopyrum esculentum - inflorescence', 'F. esculentum - inflorescence', 'buckwheat - inflorescence', 'Fagopyrum esculentum - seed', 'buckwheat - seedling', 'Fagopyrum esculentum Moench - hull']	{'NCBI_taxonomy': '3617'}
+743	organism_with_part	Common sage - leaf	['S. officinalis - leaf', 'Salvia officinalis - leaf']	{'NCBI_taxonomy': '38868'}
+744	organism_with_part	Peach - juice	['Prunus persica - juice', 'Prunus persica - flower']	{'NCBI_taxonomy': '3760'}
+745	organism_with_part	Common pea - leaf	['Pisum sativum L - leaf', 'Pisum sativum - leaf']	{'NCBI_taxonomy': '3888'}
+746	organism_with_part	Common buckwheat - seedling	['Fagopyrum esculentum - seed', 'Fagopyrum esculentum - inflorescence', 'Fagopyrum esculentum Moench - hull', 'buckwheat - hull', 'buckwheat - inflorescence', 'F. esculentum - inflorescence', 'Fagopyrum esculentum - seedling', 'buckwheat - seedling', 'Fagopyrum esculentum - hull']	{'NCBI_taxonomy': '3617'}
 747	organism_with_part	Black crowberry - fruit	['Empetrum nigrum - fruit']	{'NCBI_taxonomy': '191066'}
-748	organism_with_part	Tartary buckwheat - inflorescence	['F. tataricum - inflorescence', 'Fagopyrum tataricum - inflorescence']	{'NCBI_taxonomy': '62330'}
-749	organism_with_part	Japanese persimmon - fruit	['Diospyros - root', 'Diospyros - stem', 'Diospyros kaki - fruit', 'Diospyros kaki - stem', 'Diospyros kaki Thunb - fruit', 'Diospyros kaki - calyx', 'Diospyros kaki - root']	{'NCBI_taxonomy': '35925'}
-750	organism_with_part	Wild carrot - root	['carrot - root', 'carrots - root', 'Daucus carota - root', 'Daucus carota - seed']	{'NCBI_taxonomy': '4039'}
-751	organism_with_part	Chicory - root	['Cichorium intybus - leaf', 'Cichorium intybus - root']	{'NCBI_taxonomy': '13427'}
-752	organism_with_part	Celery stalks - petiole	['Apium graveolens var. dulce - seed', 'Apium graveolens var. dulce - petiole', 'celery - seed', 'Celery - leaf', 'celery - petiole', 'Apium graveolens var. dulce - leaf']	{'NCBI_taxonomy': '117781'}
-753	organism_with_part	Bog bilberry - juice	['Vaccinium uliginosum - fruit', 'V. uliginosum - fruit', 'Vaccinium uliginosum - leaf', 'V. uliginosum - juice', 'Vaccinium uliginosum - juice']	{'NCBI_taxonomy': '190548'}
-754	organism_with_part	Bilberry - juice	['Vaccinium myrtillus - fruit', 'Vaccinium myrtillus - juice', 'V. myrtillus - fruit', 'V. myrtillus - juice']	{'NCBI_taxonomy': '180763'}
-755	organism_with_part	Muscadine grape - seed	['muscadine - skin', 'Vitis rotundifolia - seed', 'Vitis rotundifolia - skin']	{'NCBI_taxonomy': '103349'}
+748	organism_with_part	Tartary buckwheat - inflorescence	['Fagopyrum tataricum - inflorescence', 'F. tataricum - inflorescence']	{'NCBI_taxonomy': '62330'}
+749	organism_with_part	Japanese persimmon - root	['Diospyros kaki - root', 'Diospyros kaki Thunb - fruit', 'Diospyros kaki - fruit', 'Diospyros kaki - stem', 'Diospyros - root', 'Diospyros kaki - calyx', 'Diospyros - stem']	{'NCBI_taxonomy': '35925'}
+750	organism_with_part	Wild carrot - root	['carrots - root', 'Daucus carota - seed', 'Daucus carota - root', 'carrot - root']	{'NCBI_taxonomy': '4039'}
+751	organism_with_part	Chicory - leaf	['Cichorium intybus - root', 'Cichorium intybus - leaf']	{'NCBI_taxonomy': '13427'}
+752	organism_with_part	Celery stalks - leaf	['Apium graveolens var. dulce - leaf', 'Apium graveolens var. dulce - seed', 'Apium graveolens var. dulce - petiole', 'celery - petiole', 'Celery - leaf', 'celery - seed']	{'NCBI_taxonomy': '117781'}
+753	organism_with_part	Bog bilberry - juice	['V. uliginosum - juice', 'Vaccinium uliginosum - juice', 'V. uliginosum - fruit', 'Vaccinium uliginosum - fruit', 'Vaccinium uliginosum - leaf']	{'NCBI_taxonomy': '190548'}
+754	organism_with_part	Bilberry - fruit	['V. myrtillus - fruit', 'Vaccinium myrtillus - juice', 'V. myrtillus - juice', 'Vaccinium myrtillus - fruit']	{'NCBI_taxonomy': '180763'}
+755	organism_with_part	Muscadine grape - seed	['Vitis rotundifolia - seed', 'muscadine - skin', 'Vitis rotundifolia - skin']	{'NCBI_taxonomy': '103349'}
 756	organism_with_part	Fenugreek - seed	['Trigonella foenum-graecum - seed']	{'NCBI_taxonomy': '78534'}
 757	organism_with_part	Pigeon pea - leaf	['Cajanus cajan (L.) - leaf', 'Cajanus cajan - leaf']	{'NCBI_taxonomy': '3821'}
 758	organism_with_part	Chinese bayberry - bark	['Myrica rubra - bark']	{'NCBI_taxonomy': '262757'}
-759	organism_with_part	Wild leek - bulb	['A. ampeloprasum L. var - leaf', 'Allium ampeloprasum - leaf', 'A. ampeloprasum L. var - bulb', 'Allium ampeloprasum - bulb']	{'NCBI_taxonomy': '4681'}
-760	organism_with_part	Malabar spinach - juice	['Basella alba L - juice', 'Basella alba - juice', 'Basella alba - fruit', 'Basella alba L - fruit']	{'NCBI_taxonomy': '3589'}
-761	organism_with_part	Ginkgo nuts - leaf	['ginkgo - leaf', 'Ginkgo biloba - leaf', 'Ginkgo biloba L - leaf']	{'NCBI_taxonomy': '3311'}
+759	organism_with_part	Wild leek - bulb	['A. ampeloprasum L. var - leaf', 'Allium ampeloprasum - bulb', 'A. ampeloprasum L. var - bulb', 'Allium ampeloprasum - leaf']	{'NCBI_taxonomy': '4681'}
+760	organism_with_part	Malabar spinach - juice	['Basella alba L - juice', 'Basella alba - fruit', 'Basella alba L - fruit', 'Basella alba - juice']	{'NCBI_taxonomy': '3589'}
+761	organism_with_part	Ginkgo nuts - leaf	['ginkgo - leaf', 'Ginkgo biloba L - leaf', 'Ginkgo biloba - leaf']	{'NCBI_taxonomy': '3311'}
 762	organism_with_part	Tea - leaf	['Camellia sinensis - leaf']	{'NCBI_taxonomy': '4442'}
 763	organism_with_part	Watermelon - seed	['Citrullus lanatus - seed']	{'NCBI_taxonomy': '3654'}
