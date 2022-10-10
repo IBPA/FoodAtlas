@@ -1,5 +1,6 @@
 from ast import literal_eval
 from collections import namedtuple, Counter, OrderedDict
+from copy import deepcopy
 import os
 from pathlib import Path
 from typing import Dict, List, Any
@@ -245,6 +246,44 @@ class KnowledgeGraph():
     def get_evidence(self) -> pd.DataFrame:
         return self.df_evidence.copy()
 
+    def _build_entity_lookup(self, new_entities):
+        print("Adding entities...")
+        entity_lookup = {x: {} for x in _ENTITY_TYPES}
+        for x in tqdm(new_entities):
+            e = self._add_entity(
+                type_=x.type,
+                name=x.name,
+                synonyms=x.synonyms,
+                other_db_ids=x.other_db_ids,
+            )
+
+            key = KnowledgeGraph._get_other_db_id(x)
+            if key not in entity_lookup[x.type]:
+                entity_lookup[x.type][key] = e
+
+        for _, row in tqdm(self.df_entities.iterrows(), total=self.df_entities.shape[0]):
+            key = KnowledgeGraph._get_other_db_id(row)
+            if key not in entity_lookup[row["type"]]:
+                entity_lookup[row["type"]][key] = row
+
+        return entity_lookup
+
+    @staticmethod
+    def _get_derivative_organisms(organisms_with_part):
+        # extract organism from organism_with_part
+        derivative_organisms = []
+        for owp in organisms_with_part:
+            organism = deepcopy(owp)
+            organism = organism._replace(
+                type="organism",
+                name=owp.name.split(' - ')[0],
+                synonyms=[x.split(' - ')[0] for x in owp.synonyms],
+            )
+
+            derivative_organisms.append(organism)
+
+        return derivative_organisms
+
     def add_ph_pairs(
             self,
             df_input: pd.DataFrame,
@@ -257,6 +296,7 @@ class KnowledgeGraph():
                      not x.type.startswith("organism_with_part")]
         organisms_with_part = [x for x in entities if x.type.startswith("organism_with_part")]
         assert len(entities) == (len(chemicals) + len(organisms) + len(organisms_with_part))
+        organisms += KnowledgeGraph._get_derivative_organisms(organisms_with_part)
 
         print(f"Number of chemicals before merging: {len(chemicals)}")
         print(f"Number of organisms before merging: {len(organisms)}")
@@ -277,19 +317,7 @@ class KnowledgeGraph():
         print(f"Number of organisms after merging: {len(organisms)}")
         print(f"Number of organisms_with_part after merging: {len(organisms_with_part)}")
 
-        print("Adding entities...")
-        entity_lookup = {x: {} for x in _ENTITY_TYPES}
-        for x in tqdm(entities):
-            e = self._add_entity(
-                type_=x.type,
-                name=x.name,
-                synonyms=x.synonyms,
-                other_db_ids=x.other_db_ids,
-            )
-
-            key = KnowledgeGraph._get_other_db_id(x)
-            if key not in entity_lookup[x.type]:
-                entity_lookup[x.type][key] = e
+        entity_lookup = self._build_entity_lookup(entities)
 
         print("Adding triples...")
         data = []
@@ -385,12 +413,20 @@ class KnowledgeGraph():
 
     @staticmethod
     def _get_other_db_id(x):
-        if x.type.startswith("chemical"):
-            return x.other_db_ids["MESH"]
-        elif x.type.split(":")[0] in ["organism", "organism_with_part"]:
-            return x.other_db_ids["NCBI_taxonomy"]
-        else:
-            raise NotImplementedError()
+        if type(x) == CandidateEntity:
+            if x.type.startswith("chemical"):
+                return x.other_db_ids["MESH"]
+            elif x.type.split(":")[0] in ["organism", "organism_with_part"]:
+                return x.other_db_ids["NCBI_taxonomy"]
+            else:
+                raise NotImplementedError()
+        elif type(x) == pd.Series:
+            if x["type"].startswith("chemical"):
+                return x["other_db_ids"]["MESH"]
+            elif x["type"].split(":")[0] in ["organism", "organism_with_part"]:
+                return x["other_db_ids"]["NCBI_taxonomy"]
+            else:
+                raise NotImplementedError()
 
     def add_taxonomy(
             self,
@@ -417,19 +453,7 @@ class KnowledgeGraph():
         print(f"Number of chemicals after merging: {len(chemicals)}")
         print(f"Number of organisms after merging: {len(organisms)}")
 
-        print("Adding entities...")
-        entity_lookup = {x: {} for x in _ENTITY_TYPES}
-        for x in tqdm(entities):
-            e = self._add_entity(
-                type_=x.type,
-                name=x.name,
-                synonyms=x.synonyms,
-                other_db_ids=x.other_db_ids,
-            )
-
-            key = KnowledgeGraph._get_other_db_id(x)
-            if key not in entity_lookup[x.type]:
-                entity_lookup[x.type][key] = e
+        entity_lookup = self._build_entity_lookup(entities)
 
         print("Adding triples...")
         data = []
@@ -773,6 +797,7 @@ class KnowledgeGraph():
             relations_filepath: str = None,
     ) -> None:
         if kg_filepath:
+            Path(kg_filepath).parent.mkdir(parents=True, exist_ok=True)
             print(f"Saving kg to a new filepath: {kg_filepath}")
             self.df_kg.to_csv(kg_filepath, sep='\t', index=False)
         else:
@@ -780,6 +805,7 @@ class KnowledgeGraph():
             self.df_kg.to_csv(self.kg_filepath, sep='\t', index=False)
 
         if evidence_filepath:
+            Path(evidence_filepath).parent.mkdir(parents=True, exist_ok=True)
             print(f"Saving evidence to a new filepath: {evidence_filepath}")
             self.df_evidence.to_csv(evidence_filepath, sep='\t', index=False)
         else:
@@ -787,6 +813,7 @@ class KnowledgeGraph():
             self.df_evidence.to_csv(self.evidence_filepath, sep='\t', index=False)
 
         if entities_filepath:
+            Path(entities_filepath).parent.mkdir(parents=True, exist_ok=True)
             print(f"Saving entities to a new filepath: {entities_filepath}")
             self.df_entities.to_csv(entities_filepath, sep='\t', index=False)
         else:
@@ -794,6 +821,7 @@ class KnowledgeGraph():
             self.df_entities.to_csv(self.entities_filepath, sep='\t', index=False)
 
         if relations_filepath:
+            Path(relations_filepath).parent.mkdir(parents=True, exist_ok=True)
             print(f"Saving relations to a new filepath: {relations_filepath}")
             self.df_relations.to_csv(relations_filepath, sep='\t', index=False)
         else:

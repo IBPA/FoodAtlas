@@ -117,9 +117,6 @@ def export_to_kg(df_annotated, args):
     print("Generating KG...")
 
     if args.round == 1:
-        new_kg_folder = os.path.join(args.kg_output_dir, str(args.round))
-        Path(new_kg_folder).mkdir(parents=True, exist_ok=True)
-
         # val and test need to be cleaned up
         df_val = read_annotated(args.val_post_annotation_filepath)
         df_test = read_annotated(args.test_post_annotation_filepath)
@@ -133,25 +130,48 @@ def export_to_kg(df_annotated, args):
         df_test = df_test[df_annotated.columns]
 
         df_for_kg = pd.concat([df_val, df_test, df_annotated]).reset_index(drop=True)
+
+        new_kg_folder = os.path.join(args.kg_output_dir, str(args.round))
+        Path(new_kg_folder).mkdir(parents=True, exist_ok=True)
+
+        kg_filepath = os.path.join(new_kg_folder, KG_FILENAME)
+        evidence_filepath = os.path.join(new_kg_folder, EVIDENCE_FILENAME)
+        entities_filepath = os.path.join(new_kg_folder, ENTITIES_FILENAME)
+        relations_filepath = os.path.join(new_kg_folder, RELATIONS_FILENAME)
     else:
-        df_for_kg = df_annotated
-        raise NotImplementedError()
+        df_for_kg = df_annotated.copy()
+
+        new_kg_folder = os.path.join(args.kg_output_dir, str(args.round))
+        Path(new_kg_folder).mkdir(parents=True, exist_ok=True)
+
+        prev_kg_folder = os.path.join(args.kg_output_dir, str(args.round-1))
+        Path(prev_kg_folder).is_dir()
+
+        kg_filepath = os.path.join(prev_kg_folder, KG_FILENAME)
+        evidence_filepath = os.path.join(prev_kg_folder, EVIDENCE_FILENAME)
+        entities_filepath = os.path.join(prev_kg_folder, ENTITIES_FILENAME)
+        relations_filepath = os.path.join(prev_kg_folder, RELATIONS_FILENAME)
 
     df_pos = df_for_kg[df_for_kg["answer"] == "Entails"]
     df_pos.reset_index(inplace=True, drop=True)
 
     fa_kg = KnowledgeGraph(
-        kg_filepath=os.path.join(new_kg_folder, KG_FILENAME),
-        evidence_filepath=os.path.join(new_kg_folder, EVIDENCE_FILENAME),
-        entities_filepath=os.path.join(new_kg_folder, ENTITIES_FILENAME),
-        relations_filepath=os.path.join(new_kg_folder, RELATIONS_FILENAME),
+        kg_filepath=kg_filepath,
+        evidence_filepath=evidence_filepath,
+        entities_filepath=entities_filepath,
+        relations_filepath=relations_filepath,
     )
     fa_kg.add_ph_pairs(df_pos)
 
     if args.round == 1:
         fa_kg.save()
     else:
-        raise NotImplementedError()
+        fa_kg.save(
+            kg_filepath=os.path.join(new_kg_folder, KG_FILENAME),
+            evidence_filepath=os.path.join(new_kg_folder, EVIDENCE_FILENAME),
+            entities_filepath=os.path.join(new_kg_folder, ENTITIES_FILENAME),
+            relations_filepath=os.path.join(new_kg_folder, RELATIONS_FILENAME),
+        )
 
     return fa_kg
 
@@ -261,7 +281,7 @@ def generate_training(df_annotated, fa_kg, args):
 
     df_train = df_train[["premise", "hypothesis_string", "hypothesis_id", "answer", "augmentation"]]
     df_train.to_csv(
-        args.train_filepath.replace('*', args.round),
+        args.train_filepath.replace('*', str(args.round)),
         sep='\t',
         index=False
     )

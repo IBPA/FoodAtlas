@@ -64,3 +64,23 @@ Modified files
 
 8. Generate round 2 pre annotation.
 python generate_pre_annotation.py --round=2
+
+
+9. Annotate pre_annotation file. When finished, save the file names as below.
+
+../../outputs/data_generation/2/random_sample_each_bin/pre_annotation_2.tsv -> ../../outputs/data_generation/2/random_sample_each_bin/post_annotation_2.tsv
+
+10. Post process the annotation.
+python post_process_annotation.py \
+    --round=2 \
+    --post_annotation_filepath=../../outputs/data_generation/2/random_sample_each_bin/post_annotation_2.tsv \
+    --train_filepath=../../outputs/data_generation/*/random_sample_each_bin/train_*.tsv
+
+Output files
+- ../../outputs/data_generation/train_2.tsv
+- ../../outputs/kg/2/kg.txt
+- ../../outputs/kg/2/evidence.txt
+- ../../outputs/kg/2/entities.txt
+- ../../outputs/kg/2/relations.txt
+
+
