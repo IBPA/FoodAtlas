@@ -60,34 +60,80 @@ def train_tuning_wrapper(
     return train_stats, eval_stats
 
 
+def summarize_best_model_results(path_output_dir, seeds):
+    """Summarize the best model results.
+    """
+    results_rows = []
+    for i in seeds:
+        with open(f"{path_output_dir}/seed_{i}/result.pkl", 'rb') as f:
+            result = pickle.load(f)
+
+        # Validation metrics.
+        result_row = {'dataset': 'val', 'seed': i}
+        for k, v in result['eval_stats']['metrics'].items():
+            result_row[k] = v
+        results_rows += [result_row]
+
+        # Test metrics.
+        result_row = {'dataset': 'test', 'seed': i}
+        for k, v in result['test_stats']['metrics'].items():
+            result_row[k] = v
+        results_rows += [result_row]
+
+    results = pd.DataFrame(results_rows)
+
+    # Get the mean of each dataset.
+    results_mean = results.groupby('dataset').mean().reset_index()
+    results_mean.index = \
+        [f"mean_{d}" for d in results_mean['dataset'].tolist()]
+
+    # Get the best of validation set.
+    result_max = results.loc[
+        results[results['dataset'] == 'val']['precision'].idxmax()
+    ].to_frame().T
+    result_max.index = ['best_val']
+
+    results = pd.concat([
+        result_max,
+        results_mean,
+        results.sort_values('dataset')
+        ],
+        axis=0)
+
+    return results
+
+
 @click.command()
 @click.argument('path-data-train', type=click.Path(exists=True))
 @click.argument('path-data-val', type=click.Path(exists=True))
 @click.argument('path-data-test', type=click.Path(exists=True))
 @click.argument('path-or-name-nli-model', type=str)
+@click.argument('path-grid-search-result-summary', type=str)
 @click.argument('path-output-dir', type=str)
+@click.option(
+    '--seeds', type=str, default='1,2,3,4,5',
+    callback=lambda ctx, param, value: [int(x) for x in value.split(',')])
 def main(
         path_data_train,
         path_data_val,
         path_data_test,
         path_or_name_nli_model,
-        path_output_dir):
-    # Define the number of runs.
-    RANDOM_SEED_RANGE = [1, 2, 3, 4, 5]
-
+        path_grid_search_result_summary,
+        path_output_dir,
+        seeds):
     # Load the hyperparameters of the best model.
     batch_size, lr, epochs = pd.read_csv(
-        f"{path_output_dir}/grid_search_result_summary.csv"
+        path_grid_search_result_summary
     ).iloc[0][['batch_size', 'lr', 'epochs']]
     batch_size = int(batch_size)
     epochs = int(epochs)
-    print(
-        f"Best hyperparameters: batch_size={batch_size}, lr={lr}, "
-        f"epochs={epochs}"
-    )
+    # print(
+    #     f"Best hyperparameters: batch_size={batch_size}, lr={lr}, "
+    #     f"epochs={epochs}"
+    # )
 
     failed = []
-    for seed in RANDOM_SEED_RANGE:
+    for seed in seeds:
         torch.manual_seed(seed)
         os.makedirs(f"{path_output_dir}/seed_{seed}", exist_ok=True)
 
@@ -150,6 +196,9 @@ def main(
 
     if failed:
         print(f"Failed: {failed}")
+
+    results = summarize_best_model_results(path_output_dir, seeds)
+    results.to_csv(f"{path_output_dir}/eval_results.csv")
 
 
 if __name__ == '__main__':

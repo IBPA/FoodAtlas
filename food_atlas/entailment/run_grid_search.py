@@ -105,35 +105,42 @@ def summarize_grid_search_result(
 @click.argument('path-data-val', type=click.Path(exists=True))
 @click.argument('path-or-name-nli-model', type=str)
 @click.argument('path-output-dir', type=str)
+@click.option('--path-model-state', type=str, default=None)
+@click.option(
+    '--batch-sizes', type=str, default='16,32',
+    callback=lambda ctx, param, value: [int(x) for x in value.split(',')])
+@click.option(
+    '--learning-rates', type=str, default='2e-5,3e-5,5e-5',
+    callback=lambda ctx, param, value: [float(x) for x in value.split(',')])
+@click.option(
+    '--nums-epochs', type=str, default='2,3,4',
+    callback=lambda ctx, param, value: [int(x) for x in value.split(',')])
+@click.option(
+    '--seeds', type=str, default='1,2,3,4,5',
+    callback=lambda ctx, param, value: [int(x) for x in value.split(',')])
 def main(
         path_data_train,
         path_data_val,
         path_or_name_nli_model,
-        path_output_dir):
+        path_output_dir,
+        path_model_state,
+        batch_sizes,
+        learning_rates,
+        nums_epochs,
+        seeds):
     os.makedirs(f"{path_output_dir}", exist_ok=True)
-
-    # Define grid search parameters suggested by the BERT paper.
-    BATCH_SIZE_RANGE = [16, 32]
-    LEARNING_RATE_RANGE = [2e-5, 3e-5, 5e-5]
-    EPOCHS_RANGE = [2, 3, 4]
-    RANDOM_SEED_RANGE = [1, 2, 3, 4, 5]
-    # BATCH_SIZE_RANGE = [16]
-    # LEARNING_RATE_RANGE = [2e-5, 3e-5]
-    # EPOCHS_RANGE = [2]
-    # RANDOM_SEED_RANGE = [1, 2]
 
     # Train with the grid search, optimizing the precision score.
     grid_search_result = {}
     failed = []  # Catch the failed runs.
     for i, (batch_size, learning_rate, epochs, random_seed) in enumerate(
-            product(
-                BATCH_SIZE_RANGE, LEARNING_RATE_RANGE, EPOCHS_RANGE,
-                RANDOM_SEED_RANGE)):
+            product(batch_sizes, learning_rates, nums_epochs, seeds)):
         torch.manual_seed(random_seed)
 
         # Load a pre-trained model.
         model = FoodAtlasEntailmentModel(
-            path_or_name=path_or_name_nli_model
+            path_or_name=path_or_name_nli_model,
+            path_model_state=path_model_state,
         )
 
         try:
