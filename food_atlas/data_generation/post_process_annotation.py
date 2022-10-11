@@ -12,12 +12,9 @@ from common_utils.utils import read_annotated  # noqa: E402
 from common_utils.knowledge_graph import KnowledgeGraph  # noqa: E402
 
 
-POST_ANNOTATION_FILEPATH = "../../outputs/data_generation/post_annotation_*.tsv"
 RANDOM_STATE = 530
-KG_OUTPUT_DIR = "../../outputs/kg"
 VAL_POST_ANNOTATION_FILEPATH = "../../outputs/data_generation/val_post_annotation.tsv"
 TEST_POST_ANNOTATION_FILEPATH = "../../outputs/data_generation/test_post_annotation.tsv"
-TRAIN_FILEPATH = "../../outputs/data_generation/*/train_*.tsv"
 VAL_FILEPATH = "../../outputs/data_generation/val.tsv"
 TEST_FILEPATH = "../../outputs/data_generation/test.tsv"
 KG_FILENAME = "kg.txt"
@@ -40,8 +37,8 @@ def parse_argument() -> argparse.Namespace:
     parser.add_argument(
         "--post_annotation_filepath",
         type=str,
-        default=POST_ANNOTATION_FILEPATH,
-        help=f"Annotation filepath. (Default: {POST_ANNOTATION_FILEPATH})",
+        required=True,
+        help="Annotation filepath.",
     )
 
     parser.add_argument(
@@ -53,11 +50,14 @@ def parse_argument() -> argparse.Namespace:
     parser.add_argument(
         "--kg_output_dir",
         type=str,
-        default=KG_OUTPUT_DIR,
-        help="Directory to load/save the knowledge graph. "
-             "By default, it uses last round to load "
-             "and saves updates results to new folder."
-             f"(Default: {KG_OUTPUT_DIR})",
+        required=True,
+        help="Directory to load/save the knowledge graph.",
+    )
+
+    parser.add_argument(
+        "--prev_kg_output_dir",
+        type=str,
+        help="Directory to load the previous knowledge graph (required for round >= 2).",
     )
 
     parser.add_argument(
@@ -77,8 +77,8 @@ def parse_argument() -> argparse.Namespace:
     parser.add_argument(
         "--train_filepath",
         type=str,
-        default=TRAIN_FILEPATH,
-        help=f"Train filepath. (Default: {TRAIN_FILEPATH})",
+        required=True,
+        help="Train filepath.",
     )
 
     parser.add_argument(
@@ -131,26 +131,20 @@ def export_to_kg(df_annotated, args):
 
         df_for_kg = pd.concat([df_val, df_test, df_annotated]).reset_index(drop=True)
 
-        new_kg_folder = os.path.join(args.kg_output_dir, str(args.round))
-        Path(new_kg_folder).mkdir(parents=True, exist_ok=True)
-
-        kg_filepath = os.path.join(new_kg_folder, KG_FILENAME)
-        evidence_filepath = os.path.join(new_kg_folder, EVIDENCE_FILENAME)
-        entities_filepath = os.path.join(new_kg_folder, ENTITIES_FILENAME)
-        relations_filepath = os.path.join(new_kg_folder, RELATIONS_FILENAME)
+        Path(args.kg_output_dir).mkdir(parents=True, exist_ok=True)
+        kg_filepath = os.path.join(args.kg_output_dir, KG_FILENAME)
+        evidence_filepath = os.path.join(args.kg_output_dir, EVIDENCE_FILENAME)
+        entities_filepath = os.path.join(args.kg_output_dir, ENTITIES_FILENAME)
+        relations_filepath = os.path.join(args.kg_output_dir, RELATIONS_FILENAME)
     else:
         df_for_kg = df_annotated.copy()
 
-        new_kg_folder = os.path.join(args.kg_output_dir, str(args.round))
-        Path(new_kg_folder).mkdir(parents=True, exist_ok=True)
-
-        prev_kg_folder = os.path.join(args.kg_output_dir, str(args.round-1))
-        Path(prev_kg_folder).is_dir()
-
-        kg_filepath = os.path.join(prev_kg_folder, KG_FILENAME)
-        evidence_filepath = os.path.join(prev_kg_folder, EVIDENCE_FILENAME)
-        entities_filepath = os.path.join(prev_kg_folder, ENTITIES_FILENAME)
-        relations_filepath = os.path.join(prev_kg_folder, RELATIONS_FILENAME)
+        Path(args.kg_output_dir).mkdir(parents=True, exist_ok=True)
+        Path(args.prev_kg_output_dir).is_dir()
+        kg_filepath = os.path.join(args.prev_kg_output_dir, KG_FILENAME)
+        evidence_filepath = os.path.join(args.prev_kg_output_dir, EVIDENCE_FILENAME)
+        entities_filepath = os.path.join(args.prev_kg_output_dir, ENTITIES_FILENAME)
+        relations_filepath = os.path.join(args.prev_kg_output_dir, RELATIONS_FILENAME)
 
     df_pos = df_for_kg[df_for_kg["answer"] == "Entails"]
     df_pos.reset_index(inplace=True, drop=True)
@@ -167,10 +161,10 @@ def export_to_kg(df_annotated, args):
         fa_kg.save()
     else:
         fa_kg.save(
-            kg_filepath=os.path.join(new_kg_folder, KG_FILENAME),
-            evidence_filepath=os.path.join(new_kg_folder, EVIDENCE_FILENAME),
-            entities_filepath=os.path.join(new_kg_folder, ENTITIES_FILENAME),
-            relations_filepath=os.path.join(new_kg_folder, RELATIONS_FILENAME),
+            kg_filepath=os.path.join(args.kg_output_dir, KG_FILENAME),
+            evidence_filepath=os.path.join(args.kg_output_dir, EVIDENCE_FILENAME),
+            entities_filepath=os.path.join(args.kg_output_dir, ENTITIES_FILENAME),
+            relations_filepath=os.path.join(args.kg_output_dir, RELATIONS_FILENAME),
         )
 
     return fa_kg
@@ -280,18 +274,17 @@ def generate_training(df_annotated, fa_kg, args):
         df_train = pd.DataFrame(augmented)
 
     df_train = df_train[["premise", "hypothesis_string", "hypothesis_id", "answer", "augmentation"]]
-    df_train.to_csv(
-        args.train_filepath.replace('*', str(args.round)),
-        sep='\t',
-        index=False
-    )
+    Path(args.train_filepath).parent.mkdir(parents=True, exist_ok=True)
+    df_train.to_csv(args.train_filepath, sep='\t', index=False)
 
 
 def main():
     args = parse_argument()
 
-    post_annotation_filepath = args.post_annotation_filepath.replace('*', str(args.round))
-    df_annotated = read_annotated(post_annotation_filepath)
+    if args.round >= 2 and args.prev_kg_output_dir is None:
+        raise ValueError(f"--prev_kg_output_dir argument must be specified for round {args.round}")
+
+    df_annotated = read_annotated(args.post_annotation_filepath)
 
     if args.random_state:
         random.seed(args.random_state)
