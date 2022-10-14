@@ -14,10 +14,12 @@
 
 cd ..
 
-CUDA_VISIBLE_DEVICES=0, python -m food_atlas.entailment.run_grid_search \
-    outputs/data_generation/train_1.tsv \
-    outputs/data_generation/val.tsv \
-    biobert \
-    outputs/entailment_model/1 \
+ROUND=3
+
+python -m food_atlas.entailment.run_train_data_merge \
+    outputs/data_generation \
+    /data/lfz/projects/FoodAtlas/outputs/entailment_model/$ROUND \
+    $ROUND \
+    random_sample_each_bin \
 
 cd scripts
