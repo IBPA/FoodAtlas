@@ -113,7 +113,27 @@ python generate_pre_annotation.py \
 
 
 
+11. Annotate pre_annotation file. When finished, save the file names as below.
 
+../../outputs/data_generation/3/random_sample_each_bin/pre_annotation_3.tsv -> ../../outputs/data_generation/3/random_sample_each_bin/post_annotation_3.tsv
+
+
+
+12. Post process the annotation.
+
+python post_process_annotation.py \
+    --round=3 \
+    --post_annotation_filepath=../../outputs/data_generation/3/random_sample_each_bin/post_annotation_3.tsv \
+    --train_filepath=../../outputs/data_generation/3/random_sample_each_bin/train_3.tsv \
+    --kg_output_dir=../../outputs/kg/3/random_sample_each_bin \
+    --prev_kg_output_dir=../../outputs/kg/2/random_sample_each_bin
+
+Output files
+- ../../outputs/data_generation/3/random_sample_each_bin/train_3.tsv
+- ../../outputs/kg/3/random_sample_each_bin/kg.txt
+- ../../outputs/kg/3/random_sample_each_bin/evidence.txt
+- ../../outputs/kg/3/random_sample_each_bin/entities.txt
+- ../../outputs/kg/3/random_sample_each_bin/relations.txt
 
 
 
