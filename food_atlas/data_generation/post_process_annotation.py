@@ -292,6 +292,8 @@ def main():
     print("Exporting post annotation data to KG...")
     fa_kg = export_to_kg(df_annotated, args)
 
+    sys.exit()
+
     print("Generating training data...")
     generate_training(df_annotated, fa_kg, args)
 
