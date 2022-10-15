@@ -4,9 +4,9 @@ import pandas as pd
 from scipy.stats import ttest_ind
 
 train_files = [
-    "../../outputs/data_generation/1/train_1.tsv",
-    # "../../outputs/data_generation/2/random_sample_each_bin/train_2.tsv",
-    # "../../outputs/data_generation/3/random_sample_each_bin/train_3.tsv",
+    "/home/jasonyoun/Jason/Scratch/outputs/data_generation/1/train_1.tsv",
+    # "/home/jasonyoun/Jason/Scratch/outputs/data_generation/2/random_sample_each_bin/train_2.tsv",
+    # "/home/jasonyoun/Jason/Scratch/outputs/data_generation/3/random_sample_each_bin/train_3.tsv",
 ]
 
 data = []
