@@ -162,6 +162,11 @@ def main():
         df_val = df_ph_pairs[df_ph_pairs["premise"].apply(lambda x: x in val_premises)]
         df_test = df_ph_pairs[df_ph_pairs["premise"].apply(lambda x: x in test_premises)]
 
+        val_test_hypotheses = list(set(
+            df_val["hypothesis_string"].tolist() + df_test["hypothesis_string"].tolist()))
+        df_remaining = df_remaining[df_remaining["hypothesis_string"].apply(
+            lambda x: x not in val_test_hypotheses)]
+
         print(f"df_ph_pairs shape: {df_ph_pairs.shape}")
         print(f"df_val shape: {df_val.shape}")
         print(f"df_test shape: {df_test.shape}")

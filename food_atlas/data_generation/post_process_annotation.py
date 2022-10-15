@@ -289,13 +289,11 @@ def main():
     if args.random_state:
         random.seed(args.random_state)
 
-    print("Exporting post annotation data to KG...")
-    fa_kg = export_to_kg(df_annotated, args)
-
-    sys.exit()
+    # print("Exporting post annotation data to KG...")
+    # fa_kg = export_to_kg(df_annotated, args)
 
     print("Generating training data...")
-    generate_training(df_annotated, fa_kg, args)
+    generate_training(df_annotated, None, args)
 
 
 if __name__ == '__main__':
