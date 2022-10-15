@@ -246,7 +246,7 @@ class KnowledgeGraph():
     def get_evidence(self) -> pd.DataFrame:
         return self.df_evidence.copy()
 
-    def _build_entity_lookup(self, new_entities):
+    def _and_entity_and_build_lookup(self, new_entities):
         print("Adding entities...")
         entity_lookup = {x: {} for x in _ENTITY_TYPES}
         for x in tqdm(new_entities):
@@ -304,20 +304,22 @@ class KnowledgeGraph():
 
         print("Merging chemicals...")
         chemicals = KnowledgeGraph.merge_candidate_entities(
-            chemicals, using="MESH")
+            chemicals, candidates_type="chemical")
         print("Merging organisms...")
         organisms = KnowledgeGraph.merge_candidate_entities(
-            organisms, using="NCBI_taxonomy")
+            organisms, candidates_type="organism")
         print("Merging organisms_with_part...")
         organisms_with_part = KnowledgeGraph.merge_candidate_entities(
-            organisms_with_part, using="NCBI_taxonomy")
+            organisms_with_part, candidates_type="organism_with_part")
         entities = chemicals + organisms + organisms_with_part
+
+        # sys.exit()
 
         print(f"Number of chemicals after merging: {len(chemicals)}")
         print(f"Number of organisms after merging: {len(organisms)}")
         print(f"Number of organisms_with_part after merging: {len(organisms_with_part)}")
 
-        entity_lookup = self._build_entity_lookup(entities)
+        entity_lookup = self._and_entity_and_build_lookup(entities)
 
         print("Adding triples...")
         data = []
@@ -445,15 +447,15 @@ class KnowledgeGraph():
         print(f"Number of organisms before merging: {len(organisms)}")
 
         print("Merging chemicals...")
-        chemicals = KnowledgeGraph.merge_candidate_entities(chemicals, using="MESH")
+        chemicals = KnowledgeGraph.merge_candidate_entities(chemicals, candidates_type="chemical")
         print("Merging organisms...")
-        organisms = KnowledgeGraph.merge_candidate_entities(organisms, using="NCBI_taxonomy")
+        organisms = KnowledgeGraph.merge_candidate_entities(organisms, candidates_type="organism")
         entities = chemicals + organisms
 
         print(f"Number of chemicals after merging: {len(chemicals)}")
         print(f"Number of organisms after merging: {len(organisms)}")
 
-        entity_lookup = self._build_entity_lookup(entities)
+        entity_lookup = self._and_entity_and_build_lookup(entities)
 
         print("Adding triples...")
         data = []
@@ -554,6 +556,15 @@ class KnowledgeGraph():
 
         df_duplicates = self.df_entities[dup_idx]
 
+        if "NCBI_taxonomy" in other_db_ids and other_db_ids["NCBI_taxonomy"] == '3755':
+            print(type_)
+            print(name)
+            print(synonyms)
+            print(other_db_ids)
+            print(df_duplicates)
+            print()
+            print()
+
         # duplicates exist!
         if df_duplicates.shape[0] > 0:
             if df_duplicates.shape[0] >= 2:
@@ -648,9 +659,16 @@ class KnowledgeGraph():
     @staticmethod
     def merge_candidate_entities(
         candidate_entities: List[CandidateEntity],
-        using: str,
+        candidates_type: str,
     ) -> List[CandidateEntity]:
-        if using in ["NCBI_taxonomy", "MESH"]:
+        if candidates_type.split(':')[0] in ["chemical", "organism"]:
+            if candidates_type.split(':')[0] == "organism":
+                using = "NCBI_taxonomy"
+            elif candidates_type.split(':')[0] == "chemical":
+                using = "MESH"
+            else:
+                raise ValueError()
+
             duplicate_ids = [e.other_db_ids[using]
                              for e in candidate_entities if e.other_db_ids[using]]
             duplicate_ids = [x for x, count in Counter(duplicate_ids).items() if count > 1]
@@ -697,6 +715,21 @@ class KnowledgeGraph():
                     candidate_entities.append(merged)
 
             return candidate_entities
+        elif candidates_type.split(':')[0] == "organism_with_part":
+            using = "NCBI_taxonomy"
+            unique_ids = {}
+            for e in candidate_entities:
+                key = e.other_db_ids[using] + e.name.split(' - ')[-1]
+                if key in unique_ids:
+                    unique_ids[key].append(e)
+                else:
+                    unique_ids[key] = [e]
+
+            duplicate_ids = [k for k, v in unique_ids.items() if len(v) > 1]
+            print(duplicate_ids)
+
+            sys.exit()
+
         else:
             raise NotImplementedError()
 
