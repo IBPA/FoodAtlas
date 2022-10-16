@@ -13,8 +13,8 @@ from sklearn.calibration import (
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-from .. import load_model, get_food_atlas_data_loader, evaluate
-from ..utils import get_all_metrics
+from ... import load_model, get_food_atlas_data_loader, evaluate
+from ...utils import get_all_metrics
 
 
 if __name__ == '__main__':
