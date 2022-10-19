@@ -111,6 +111,10 @@ python generate_pre_annotation.py \
     --predicted_filepath=../../outputs/data_generation/2/random_sample_each_bin/predicted_2.tsv \
     --sampling_strategy=random_sample_each_bin
 
+Output files
+- ../../outputs/data_generation/3/random_sample_each_bin/pre_annotation_3.tsv
+- ../../outputs/data_generation/3/random_sample_each_bin/to_predict_3.tsv
+
 
 
 11. Annotate pre_annotation file. When finished, save the file names as below.

@@ -1,7 +1,7 @@
 import pandas as pd
 
 df_post_annotation = pd.read_csv(
-    "../../outputs/data_generation/2/random_sample_each_bin/post_annotation_2.tsv",
+    "../../outputs/data_generation/3/random_sample_each_bin/post_annotation_3.tsv",
     sep='\t',
     keep_default_na=False,
 )
@@ -21,14 +21,14 @@ pre_annotation_columns = [
 df_pre_annotation = df_post_annotation[pre_annotation_columns].copy()
 df_pre_annotation.drop_duplicates(inplace=True)
 df_pre_annotation.to_csv(
-    "../../outputs/data_generation/2/random_sample_each_bin/pre_annotation_2.tsv",
+    "../../outputs/data_generation/3/random_sample_each_bin/pre_annotation_3.tsv",
     sep='\t',
     index=False
 )
 
 #
 df_predicted = pd.read_csv(
-    "../../outputs/data_generation/1/predicted_1.tsv",  # change this later!!!
+    "../../outputs/data_generation/2/random_sample_each_bin/predicted_2.tsv",  # change this later!!!
     sep='\t',
     keep_default_na=False,
 )
@@ -68,7 +68,7 @@ next_to_predict_columns = [
 ]
 df_next_to_predict = df_next_to_predict[next_to_predict_columns]
 df_next_to_predict.to_csv(
-    "../../outputs/data_generation/2/random_sample_each_bin/to_predict_2.tsv",
+    "../../outputs/data_generation/3/random_sample_each_bin/to_predict_3.tsv",
     sep='\t',
     index=False,
 )

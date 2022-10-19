@@ -34,7 +34,7 @@ print("df_prev_post_annotation.columns:\n", df_prev_post_annotation.columns)
 print()
 
 df_predicted = pd.read_csv(
-    "../../outputs/data_generation/1/predicted_1.tsv",  # change this later!!!
+    "../../outputs/data_generation/2/random_sample_each_bin/predicted_2.tsv",  # change
     sep='\t',
     keep_default_na=False,
 )
@@ -140,9 +140,10 @@ for key, val in to_annotate_num_dict.items():
 
 df_to_annotate = pd.concat(new_data_list)
 df_to_annotate.drop("prob", axis=1, inplace=True)
-df_to_annotate["source"] = "annotation:round_2"
+df_to_annotate["source"] = "annotation:round_3"  # change
+
 df_to_annotate.to_csv(
-    "/home/jasonyoun/Jason/Scratch/temp/new_r2_to_annotate.tsv",
+    "/home/jasonyoun/Jason/Scratch/temp/new_r3_to_annotate.tsv",  # change
     sep='\t',
     index=False,
 )
