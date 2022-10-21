@@ -313,8 +313,6 @@ class KnowledgeGraph():
             organisms_with_part, candidates_type="organism_with_part")
         entities = chemicals + organisms + organisms_with_part
 
-        # sys.exit()
-
         print(f"Number of chemicals after merging: {len(chemicals)}")
         print(f"Number of organisms after merging: {len(organisms)}")
         print(f"Number of organisms_with_part after merging: {len(organisms_with_part)}")
@@ -367,7 +365,7 @@ class KnowledgeGraph():
                 )
 
                 head_foodatlas_id = \
-                    entity_lookup["organism"][KnowledgeGraph._get_other_db_id(head)].foodatlas_id
+                    entity_lookup["organism"][KnowledgeGraph._get_other_db_id(head).split('-')[0]].foodatlas_id
                 tail_foodatlas_id = \
                     entity_lookup[head.type][KnowledgeGraph._get_other_db_id(head)].foodatlas_id
 
@@ -418,15 +416,21 @@ class KnowledgeGraph():
         if type(x) == CandidateEntity:
             if x.type.startswith("chemical"):
                 return x.other_db_ids["MESH"]
-            elif x.type.split(":")[0] in ["organism", "organism_with_part"]:
+            elif x.type.split(":")[0] == "organism":
                 return x.other_db_ids["NCBI_taxonomy"]
+            elif x.type.split(":")[0] == "organism_with_part":
+                part_name = x.name.split(' - ')[-1]
+                return x.other_db_ids["NCBI_taxonomy"] + f"-{part_name}"
             else:
                 raise NotImplementedError()
         elif type(x) == pd.Series:
             if x["type"].startswith("chemical"):
                 return x["other_db_ids"]["MESH"]
-            elif x["type"].split(":")[0] in ["organism", "organism_with_part"]:
+            elif x["type"].split(":")[0] == "organism":
                 return x["other_db_ids"]["NCBI_taxonomy"]
+            elif x["type"].split(":")[0] == "organism_with_part":
+                part_name = x["name"].split(' - ')[-1]
+                return x["other_db_ids"]["NCBI_taxonomy"] + f"-{part_name}"
             else:
                 raise NotImplementedError()
 
@@ -547,23 +551,19 @@ class KnowledgeGraph():
         assert type_ in _ENTITY_TYPES
         assert set(other_db_ids.keys()).issubset(_ENTITY_OTHER_DBS)
 
+        if type_.startswith("chemical"):
+            unique_id = other_db_ids["MESH"]
+        elif type_.split(":")[0] == "organism":
+            unique_id = other_db_ids["NCBI_taxonomy"]
+        elif type_.split(":")[0] == "organism_with_part":
+            part_name = name.split(' - ')[-1]
+            unique_id = other_db_ids["NCBI_taxonomy"] + f"-{part_name}"
+
         # check for duplicates
         def _check_duplicate(row):
-            x = row["other_db_ids"]
-            shared = {k: x[k] for k in x if k in other_db_ids and x[k] == other_db_ids[k]}
-            return True if len(shared) >= 1 and row.type == type_ else False
+            return True if unique_id == KnowledgeGraph._get_other_db_id(row) else False
         dup_idx = self.df_entities.apply(_check_duplicate, axis=1)
-
         df_duplicates = self.df_entities[dup_idx]
-
-        if "NCBI_taxonomy" in other_db_ids and other_db_ids["NCBI_taxonomy"] == '3755':
-            print(type_)
-            print(name)
-            print(synonyms)
-            print(other_db_ids)
-            print(df_duplicates)
-            print()
-            print()
 
         # duplicates exist!
         if df_duplicates.shape[0] > 0:
@@ -661,6 +661,44 @@ class KnowledgeGraph():
         candidate_entities: List[CandidateEntity],
         candidates_type: str,
     ) -> List[CandidateEntity]:
+
+        def _merge_duplicates(duplicates):
+            type_ = []
+            name = []
+            synonyms = []
+            other_db_ids = {}
+            for d in duplicates:
+                if d.foodatlas_id is not None:
+                    raise ValueError("Candidate entities cannot have foodatlas ID!")
+                type_.append(d.type)
+                name.append(d.name)
+                synonyms.extend(d.synonyms)
+                other_db_ids = {**other_db_ids, **d.other_db_ids}
+
+            type_ = list(set(type_))
+            name = list(set(name))
+            synonyms = list(set(synonyms))
+
+            assert len(type_) == 1
+
+            if type_ == "NCBI_taxonomy":
+                assert len(name) == 1
+            elif type_ == "MESH":
+                if len(name) > 1:
+                    synonyms = list(set(synonyms + name[1:]))
+                    name = name[0]
+
+            merged = CandidateEntity(
+                type=type_[0],
+                name=name[0],
+                synonyms=synonyms,
+                other_db_ids=other_db_ids,
+            )
+
+            for d in duplicates:
+                candidate_entities.remove(d)
+            candidate_entities.append(merged)
+
         if candidates_type.split(':')[0] in ["chemical", "organism"]:
             if candidates_type.split(':')[0] == "organism":
                 using = "NCBI_taxonomy"
@@ -677,42 +715,7 @@ class KnowledgeGraph():
                 for duplicate_id in tqdm(duplicate_ids):
                     duplicates = [e for e in candidate_entities
                                   if e.other_db_ids[using] == duplicate_id]
-
-                    type_ = []
-                    name = []
-                    synonyms = []
-                    other_db_ids = {}
-                    for d in duplicates:
-                        if d.foodatlas_id is not None:
-                            raise ValueError("Candidate entities cannot have foodatlas ID!")
-                        type_.append(d.type)
-                        name.append(d.name)
-                        synonyms.extend(d.synonyms)
-                        other_db_ids = {**other_db_ids, **d.other_db_ids}
-
-                    type_ = list(set(type_))
-                    name = list(set(name))
-                    synonyms = list(set(synonyms))
-
-                    assert len(type_) == 1
-
-                    if type_ == "NCBI_taxonomy":
-                        assert len(name) == 1
-                    elif type_ == "MESH":
-                        if len(name) > 1:
-                            synonyms = list(set(synonyms + name[1:]))
-                            name = name[0]
-
-                    merged = CandidateEntity(
-                        type=type_[0],
-                        name=name[0],
-                        synonyms=synonyms,
-                        other_db_ids=other_db_ids,
-                    )
-
-                    for d in duplicates:
-                        candidate_entities.remove(d)
-                    candidate_entities.append(merged)
+                    _merge_duplicates(duplicates)
 
             return candidate_entities
         elif candidates_type.split(':')[0] == "organism_with_part":
@@ -726,10 +729,13 @@ class KnowledgeGraph():
                     unique_ids[key] = [e]
 
             duplicate_ids = [k for k, v in unique_ids.items() if len(v) > 1]
-            print(duplicate_ids)
 
-            sys.exit()
+            for k, v in unique_ids.items():
+                if len(v) < 2:
+                    continue
+                _merge_duplicates(v)
 
+            return candidate_entities
         else:
             raise NotImplementedError()
 

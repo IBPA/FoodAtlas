@@ -36,7 +36,8 @@ r1_result = _bin(df_r1)
 print()
 print("R2 - predicted (random)")
 df_r2 = pd.read_csv(
-    "../../outputs/data_generation/2/random_sample_each_bin/predicted_2.tsv",
+    "/home/jasonyoun/Jason/Scratch/outputs/data_generation/2/random_sample_each_bin/predicted_2.tsv",
+    # "../../outputs/data_generation/2/random_sample_each_bin/predicted_2.tsv",
     sep='\t',
     keep_default_na=False,
 )
