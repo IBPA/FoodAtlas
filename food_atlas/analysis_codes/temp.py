@@ -135,6 +135,7 @@ pre_annotation_columns = [
     "source",
 ]
 
+df_post_annotation["source"] = "annotation:train"
 df_post_annotation.to_csv(
     fa_dir + "outputs/data_generation/train_pool_post_annotation.tsv",
     sep='\t',
