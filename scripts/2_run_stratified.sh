@@ -10,14 +10,12 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:1
 #SBATCH --mem=32
-#SBATCH --time=48:00:00
+#SBATCH --time=10-00:00:00
 
-cd ..
-
-CUDA_VISIBLE_DEVICES=0, python -m food_atlas.entailment.run_grid_search \
-    outputs/data_generation/1/train_1.tsv \
-    outputs/data_generation/val.tsv \
-    biobert \
-    /data/lfz/projects/FoodAtlas/outputs/entailment_model/1/grid_search \
-
-cd scripts
+for run in {3..100}
+do
+    for round in {1..10}
+    do
+        ./run_round.sh stratified $run $round
+    done
+done

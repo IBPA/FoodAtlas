@@ -10,16 +10,12 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:1
 #SBATCH --mem=32
-#SBATCH --time=48:00:00
+#SBATCH --time=10-00:00:00
 
-cd ..
-
-ROUND=3
-
-python -m food_atlas.entailment.run_train_data_merge \
-    outputs/data_generation \
-    /data/lfz/projects/FoodAtlas/outputs/entailment_model/$ROUND \
-    $ROUND \
-    random_sample_each_bin \
-
-cd scripts
+for run in {3..100}
+do
+    for round in {1..10}
+    do
+        ./run_round.sh uncertain $run $round
+    done
+done
