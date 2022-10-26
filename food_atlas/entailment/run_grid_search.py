@@ -12,7 +12,6 @@ from . import (
     get_food_atlas_data_loader,
 )
 from .utils import get_all_metrics
-torch.cuda.empty_cache()
 
 
 def train_tuning_wrapper(
