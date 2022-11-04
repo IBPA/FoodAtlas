@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=pre_all
+#SBATCH --job-name=pre_new
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=fzli@ucdavis.edu
 #SBATCH --output=/home/lfz/git/FoodAtlas/logs/%j.out
@@ -15,7 +15,7 @@
 cd ~/git/FoodAtlas
 
 CUDA=3
-ROUND=2
+ROUND=3
 AL=random_sample_each_bin
 PATH_OUTPUT=/data/lfz/projects/FoodAtlas/outputs/entailment_model/$ROUND/pre_new
 
@@ -26,14 +26,14 @@ PATH_OUTPUT=/data/lfz/projects/FoodAtlas/outputs/entailment_model/$ROUND/pre_new
 #     $AL \
 
 CUDA_VISIBLE_DEVICES=${CUDA}, python -m food_atlas.entailment.run_grid_search \
-    outputs/data_generation/2/random_sample_each_bin/train_2.tsv \
+    outputs/data_generation/${ROUND}/random_sample_each_bin/train_${ROUND}.tsv \
     outputs/data_generation/val.tsv \
     biobert \
     ${PATH_OUTPUT}/grid_search \
     --path-model-state /data/lfz/projects/FoodAtlas/outputs/entailment_model/1/eval_best_model/seed_5/model_state.pt \
 
 CUDA_VISIBLE_DEVICES=${CUDA}, python -m food_atlas.entailment.run_best_model_evaluation \
-    outputs/data_generation/2/random_sample_each_bin/train_2.tsv \
+    outputs/data_generation/${ROUND}/random_sample_each_bin/train_${ROUND}.tsv \
     outputs/data_generation/val.tsv \
     outputs/data_generation/test.tsv \
     biobert \

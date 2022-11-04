@@ -15,7 +15,7 @@
 cd ~/git/FoodAtlas
 
 CUDA=3
-ROUND=2
+ROUND=3
 AL=random_sample_each_bin
 PATH_OUTPUT=/data/lfz/projects/FoodAtlas/outputs/entailment_model/$ROUND/pre_all
 
