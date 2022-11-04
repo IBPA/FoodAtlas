@@ -1,4 +1,3 @@
-pycodestyle
 -i https://download.pytorch.org/whl/cu113
 torch
 -i https://download.pytorch.org/whl/cu113
