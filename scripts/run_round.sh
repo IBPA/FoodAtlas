@@ -80,4 +80,10 @@ python -m food_atlas.entailment.run_unlabeled_data_prediction \
     $PATH_OUTPUT/eval_best_model \
     --path-output-data-to-predict outputs/data_generation/$AL/run_${RUN}/round_${ROUND}/predicted.tsv \
 
+python -m food_atlas.entailment.run_unlabeled_data_prediction \
+    $PATH_TEST \
+    biobert \
+    $PATH_OUTPUT/eval_best_model \
+    --path-output-data-to-predict outputs/data_generation/$AL/run_${RUN}/round_${ROUND}/test_probs.tsv \
+
 cd scripts

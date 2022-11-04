@@ -12,7 +12,7 @@
 #SBATCH --mem=32
 #SBATCH --time=10-00:00:00
 
-for run in {3..100}
+for run in {1..100}
 do
     for round in {1..10}
     do
