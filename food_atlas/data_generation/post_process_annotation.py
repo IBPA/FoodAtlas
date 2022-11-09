@@ -78,6 +78,7 @@ def main():
 
     df_train = read_annotated(args.train_post_annotation_filepath)
     df_train = df_train[df_train["answer"] != "Skip"]
+    print("Train shape: ", df_train.shape)
     print("Train distribution: ", Counter(df_train["answer"].tolist()))
     Path(args.train_filepath).parent.mkdir(parents=True, exist_ok=True)
     print(f"Saving training to: {args.train_filepath}")
@@ -85,6 +86,7 @@ def main():
 
     df_val = read_annotated(args.val_post_annotation_filepath)
     df_val = df_val[df_val["answer"] != "Skip"]
+    print("Val shape: ", df_val.shape)
     print("Val distribution: ", Counter(df_val["answer"].tolist()))
     Path(args.val_filepath).parent.mkdir(parents=True, exist_ok=True)
     print(f"Saving validation to: {args.val_filepath}")
@@ -92,10 +94,17 @@ def main():
 
     df_test = read_annotated(args.test_post_annotation_filepath)
     df_test = df_test[df_test["answer"] != "Skip"]
+    print("Test shape: ", df_test.shape)
     print("Test distribution: ", Counter(df_test["answer"].tolist()))
     Path(args.test_filepath).parent.mkdir(parents=True, exist_ok=True)
     print(f"Saving test to: {args.test_filepath}")
     df_test.to_csv(args.test_filepath, sep='\t', index=False)
+
+    all_size = df_train.shape[0] + df_val.shape[0] + df_test.shape[0]
+    train_ratio = df_train.shape[0]/all_size
+    val_ratio = df_val.shape[0]/all_size
+    test_ratio = df_test.shape[0]/all_size
+    print(f"train:val:test = {train_ratio:.2f}:{val_ratio:.2f}:{test_ratio:.2f}")
 
 
 if __name__ == '__main__':

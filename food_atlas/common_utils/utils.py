@@ -15,19 +15,26 @@ def read_tsv(filepath) -> pd.DataFrame:
 
 
 def read_annotated(filepath) -> pd.DataFrame:
-    df = read_tsv(filepath)
+    df = pd.read_csv(filepath, sep='\t', keep_default_na=False)
 
     if "" in set(df["answer"].tolist()):
         raise ValueError("Make sure the 'answer' column does not contain empty response!")
 
-    answer_agrees = df.groupby('id')['answer'].apply(lambda x: len(set(x)) == 1)
-    agreement_ids = answer_agrees[answer_agrees].index.tolist()
+    by = [
+        "head",
+        "relation",
+        "tail",
+        "pmid",
+        "pmcid",
+        "premise",
+        "section",
+        "hypothesis_id",
+        "hypothesis_string",
+        "source",
+    ]
+    df_grouped = df.groupby(by)["answer"].apply(list)
+    df_grouped = df_grouped.reset_index()
+    df_grouped = df_grouped[df_grouped["answer"].apply(lambda x: len(set(x)) == 1)]
+    df_grouped["answer"] = df_grouped["answer"].apply(lambda x: x[0])
 
-    df = df[df["id"].apply(lambda x: x in agreement_ids)]
-    df.drop_duplicates("id", inplace=True, ignore_index=True)
-    df.drop(
-        ["id", "annotator", "annotation_id", "created_at", "updated_at", "lead_time"],
-        inplace=True,
-        axis=1)
-
-    return df
+    return df_grouped
