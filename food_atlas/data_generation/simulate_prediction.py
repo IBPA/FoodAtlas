@@ -1,6 +1,8 @@
 import argparse
-import pandas as pd
 import random
+
+import numpy as np
+import pandas as pd
 
 
 INPUT_FILEPATH = "../../outputs/data_generation/{}/run_{}/round_{}/to_predict.tsv"
@@ -46,12 +48,17 @@ def main():
 
     if args.random_state:
         random.seed(args.random_state)
+        np.random.seed(args.random_state)
 
     input_filepath = INPUT_FILEPATH.format(args.sampling_strategy, args.run, args.round)
     output_filepath = OUTPUT_FILEPATH.format(args.sampling_strategy, args.run, args.round)
 
     df = pd.read_csv(input_filepath, sep='\t', keep_default_na=False)
-    df["prob"] = [random.uniform(0, 1) for _ in range(df.shape[0])]
+    prob = [np.random.normal(loc=0.05, scale=0.2) for _ in range(df.shape[0])] + \
+           [np.random.normal(loc=0.95, scale=0.2) for _ in range(df.shape[0])]
+    prob = [np.clip(x, 0, 1) for x in prob]
+    random.shuffle(prob)
+    df["prob"] = prob[:df.shape[0]]
     df.to_csv(output_filepath, sep='\t', index=False)
 
 

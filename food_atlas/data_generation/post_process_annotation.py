@@ -78,7 +78,10 @@ def main():
 
     df_train = read_annotated(args.train_post_annotation_filepath)
     df_train = df_train[df_train["answer"] != "Skip"]
-    print("Train shape: ", df_train.shape)
+    df_train = df_train.sample(frac=1)
+    print("Train shape before dropping duplicates by hypothesis_string: ", df_train.shape)
+    df_train.drop_duplicates("hypothesis_string", inplace=True)
+    print("Train shape after dropping duplicates by hypothesis_string: ", df_train.shape)
     print("Train distribution: ", Counter(df_train["answer"].tolist()))
     Path(args.train_filepath).parent.mkdir(parents=True, exist_ok=True)
     print(f"Saving training to: {args.train_filepath}")
@@ -86,7 +89,10 @@ def main():
 
     df_val = read_annotated(args.val_post_annotation_filepath)
     df_val = df_val[df_val["answer"] != "Skip"]
-    print("Val shape: ", df_val.shape)
+    df_val = df_val.sample(frac=1)
+    print("Val shape before dropping duplicates by hypothesis_string: ", df_val.shape)
+    df_val.drop_duplicates("hypothesis_string", inplace=True)
+    print("Val shape after dropping duplicates by hypothesis_string: ", df_val.shape)
     print("Val distribution: ", Counter(df_val["answer"].tolist()))
     Path(args.val_filepath).parent.mkdir(parents=True, exist_ok=True)
     print(f"Saving validation to: {args.val_filepath}")
@@ -94,7 +100,10 @@ def main():
 
     df_test = read_annotated(args.test_post_annotation_filepath)
     df_test = df_test[df_test["answer"] != "Skip"]
-    print("Test shape: ", df_test.shape)
+    df_test = df_test.sample(frac=1)
+    print("Test shape before dropping duplicates by hypothesis_string: ", df_test.shape)
+    df_test.drop_duplicates("hypothesis_string", inplace=True)
+    print("Test shape after dropping duplicates by hypothesis_string: ", df_test.shape)
     print("Test distribution: ", Counter(df_test["answer"].tolist()))
     Path(args.test_filepath).parent.mkdir(parents=True, exist_ok=True)
     print(f"Saving test to: {args.test_filepath}")

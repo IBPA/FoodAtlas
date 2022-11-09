@@ -14,7 +14,14 @@ TRAIN_POOL_FILEPATH = "../../outputs/data_generation/train_pool.tsv"
 TRAIN_FILEPATH_FS = "../../outputs/data_generation/{}/run_{}/round_{}/train.tsv"
 TO_PREDICT_FILEPATH_FS = "../../outputs/data_generation/{}/run_{}/round_{}/to_predict.tsv"
 PREDICTED_FILEPATH_FS = "../../outputs/data_generation/{}/run_{}/round_{}/predicted.tsv"
+STRATIFIED_LOG_FILEPATH_FS = "../../outputs/data_generation/{}/run_{}/round_{}/stratified_log.txt"
 STRATIFIED_NUM_BINS = 10
+SAMPLING_STRATEGIES = [
+    "certain_pos",
+    "uncertain",
+    "stratified",
+    "random",
+]
 
 
 def parse_argument() -> argparse.Namespace:
@@ -72,7 +79,10 @@ def _drop_duplicates():
 def main():
     args = parse_argument()
 
-    print(f"*****{args.sampling_strategy}|run_{args.run}|round_{args.round} START *****")
+    if args.sampling_strategy not in SAMPLING_STRATEGIES:
+        raise ValueError(f"Invalid sampling startegy: {args.sampling_strategy}")
+
+    print(f"***** {args.sampling_strategy}|run_{args.run}|round_{args.round} START *****")
 
     if args.random_state:
         random.seed(args.random_state)
@@ -114,7 +124,7 @@ def main():
         prev_train_filepath = TRAIN_FILEPATH_FS.format(
             args.sampling_strategy, args.run, args.round-1)
         df_train = pd.read_csv(prev_train_filepath, sep='\t', keep_default_na=False)
-        print(f"Previous training data size: {df_train.shape[0]}")
+        print(f"Previous training data '{prev_train_filepath}' size: {df_train.shape[0]}")
 
         if args.sampling_strategy == "certain_pos":
             df_train_new = df_predicted[:num_train_per_round].copy()
@@ -129,30 +139,59 @@ def main():
             df_train_new.drop("uncertainty", axis=1, inplace=True)
             df_to_predict.drop("uncertainty", axis=1, inplace=True)
         elif args.sampling_strategy == "stratified":
-            num_each_bin = math.ceil(df_predicted.shape[0]/STRATIFIED_NUM_BINS)
-            num_random_samples = math.ceil(num_train_per_round/STRATIFIED_NUM_BINS)
-            print(f"Number of samples in each bin: {num_each_bin}")
-            print(f"Number of samples to randomly sample from each bin: {num_random_samples}")
+            stratified_log_filepath = STRATIFIED_LOG_FILEPATH_FS.format(
+                args.sampling_strategy, args.run, args.round)
+            Path(stratified_log_filepath).parent.mkdir(parents=True, exist_ok=True)
+            Path(stratified_log_filepath).unlink(missing_ok=True)
 
-            train_new_list = []
-            to_predict_list = []
-            for x in range(STRATIFIED_NUM_BINS):
-                df_subset = df_predicted.iloc[:num_each_bin].copy()
-                df_predicted = df_predicted.iloc[num_each_bin:].copy()
-                df_subset = df_subset.sample(frac=1, random_state=args.random_state)
+            for num_linspace in range(11, 1, -1):
+                print(f"Number of prob bins testing: {num_linspace-1}")
 
-                if x == (STRATIFIED_NUM_BINS - 1):
-                    num_random_samples = \
-                        num_train_per_round - (STRATIFIED_NUM_BINS - 1) * num_random_samples
-                    print(f"Last bin size: {num_random_samples}")
+                num_train_per_bin = math.floor(num_train_per_round / (num_linspace-1))
+                num_train_final_bin = num_train_per_round - num_train_per_bin*(num_linspace-2)
+                print(f"num_train_per_bin: {num_train_per_bin}")
 
-                train_new_list.append(df_subset[:num_random_samples].copy())
-                to_predict_list.append(df_subset[num_random_samples:].copy())
+                df_predicted_copy = df_predicted.copy()
+                df_predicted_copy["prob_bin"] = pd.cut(
+                    df_predicted_copy["prob"],
+                    bins=np.linspace(0, 1, num_linspace),
+                    include_lowest=True,
+                )
+                df_grouped_size = df_predicted_copy.groupby("prob_bin").size()
+                print("Predicted grouped by prob bin:\n", df_grouped_size)
 
-            df_train_new = pd.concat(train_new_list)
-            df_to_predict = pd.concat(to_predict_list)
-        else:
-            raise ValueError()
+                with open(stratified_log_filepath, 'a') as _f:
+                    _f.write(f"num_bins: {num_linspace-1}\n")
+                    _f.write(f"num_train_per_bin: {num_train_per_bin}\n")
+                    _f.write(f"num_train_final_bin: {num_train_final_bin}\n")
+                    _f.write("Predicted grouped by prob bin:\n")
+                    _f.write(str(df_grouped_size)+'\n\n')
+
+                if num_train_final_bin > min(df_grouped_size.tolist()):
+                    print("Not enough training data per bin. Reducing the prob bin...")
+                    continue
+                else:
+                    print("Enough training data")
+
+                train_new_data = []
+                to_predict_data = []
+                cur_bin = 1
+                df_grouped = df_predicted_copy.groupby("prob_bin")
+                for group, df_subset in df_grouped:
+                    df_subset = df_subset.sample(frac=1, random_state=args.random_state)
+                    n = num_train_per_bin if cur_bin < (num_linspace-1) else num_train_final_bin
+                    train_new_data.append(df_subset[:n])
+                    to_predict_data.append(df_subset[n:])
+                    cur_bin += 1
+
+                df_train_new = pd.concat(train_new_data).drop("prob_bin", axis=1)
+                df_to_predict = pd.concat(to_predict_data).drop("prob_bin", axis=1)
+                break
+
+        elif args.sampling_strategy == "random":
+            df_predicted_shuffled = df_predicted.sample(frac=1)
+            df_train_new = df_predicted_shuffled[:num_train_per_round].copy()
+            df_to_predict = df_predicted_shuffled[num_train_per_round:].copy()
 
         train_new_filepath = train_filepath.replace('.tsv', '_new.tsv')
         print(f"Saving training data new to this round to '{train_new_filepath}'")
@@ -168,7 +207,7 @@ def main():
         print(f"Saving to_predict data to '{to_predict_filepath}'")
         df_to_predict.to_csv(to_predict_filepath, sep='\t', index=False)
 
-    print(f"*****{args.sampling_strategy}|run_{args.run}|round_{args.round} END *****")
+    print(f"***** {args.sampling_strategy}|run_{args.run}|round_{args.round} END *****")
 
 
 if __name__ == '__main__':
