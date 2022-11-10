@@ -189,7 +189,7 @@ def main():
                 break
 
         elif args.sampling_strategy == "random":
-            df_predicted_shuffled = df_predicted.sample(frac=1)
+            df_predicted_shuffled = df_predicted.sample(frac=1, random_state=args.random_state)
             df_train_new = df_predicted_shuffled[:num_train_per_round].copy()
             df_to_predict = df_predicted_shuffled[num_train_per_round:].copy()
 

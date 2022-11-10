@@ -41,18 +41,35 @@ Output files
 
 
 
-
-
-
-
-
-
-
-
 5. Train the entailment model.
 
-Save the output file as
-- ../../outputs/data_generation/1/predicted_1.tsv
+
+
+
+
+
+X. Annotations to KG.
+python generate_kg.py \
+    --input_filepath=../../outputs/data_generation/train_pool.tsv \
+    --output_dir=../../outputs/kg/annotations_only \
+    --mode=annotated
+
+python generate_kg.py \
+    --input_filepath=../../outputs/data_generation/val.tsv \
+    --output_dir=../../outputs/kg/annotations_only \
+    --mode=annotated
+
+python generate_kg.py \
+    --input_filepath=../../outputs/data_generation/test.tsv \
+    --output_dir=../../outputs/kg/annotations_only \
+    --mode=annotated
+
+Modified files
+- ../../outputs/kg/annotations_only/kg.txt
+- ../../outputs/kg/annotations_only/evidence.txt
+- ../../outputs/kg/annotations_only/entities.txt
+- ../../outputs/kg/annotations_only/relations.txt
+
 
 
 
@@ -65,6 +82,7 @@ Modified files
 - ../../outputs/kg/1/evidence.txt
 - ../../outputs/kg/1/entities.txt
 - ../../outputs/kg/1/relations.txt
+
 
 
 7. (Optional) Add NCBI taxonomy to the KG.
