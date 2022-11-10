@@ -246,7 +246,7 @@ class KnowledgeGraph():
     def get_evidence(self) -> pd.DataFrame:
         return self.df_evidence.copy()
 
-    def _and_entity_and_build_lookup(self, new_entities):
+    def _add_entity_and_build_lookup(self, new_entities):
         print("Adding entities...")
         entity_lookup = {x: {} for x in _ENTITY_TYPES}
         for x in tqdm(new_entities):
@@ -317,7 +317,7 @@ class KnowledgeGraph():
         print(f"Number of organisms after merging: {len(organisms)}")
         print(f"Number of organisms_with_part after merging: {len(organisms_with_part)}")
 
-        entity_lookup = self._and_entity_and_build_lookup(entities)
+        entity_lookup = self._add_entity_and_build_lookup(entities)
 
         print("Adding triples...")
         data = []
@@ -439,7 +439,7 @@ class KnowledgeGraph():
             df_input: pd.DataFrame,
             origin: str,
     ):
-        assert origin in ["NCBI_taxonomy", "ClassyFire"]
+        assert origin in ["NCBI_taxonomy", "MESH"]
 
         # add the entities first for speed
         entities = df_input["head"].tolist() + df_input["tail"].tolist()
@@ -459,7 +459,7 @@ class KnowledgeGraph():
         print(f"Number of chemicals after merging: {len(chemicals)}")
         print(f"Number of organisms after merging: {len(organisms)}")
 
-        entity_lookup = self._and_entity_and_build_lookup(entities)
+        entity_lookup = self._add_entity_and_build_lookup(entities)
 
         print("Adding triples...")
         data = []
@@ -582,7 +582,12 @@ class KnowledgeGraph():
             entity.at["synonyms"] = KnowledgeGraph._merge_synonyms(all_names)
             entity.at["other_db_ids"] = {**other_db_ids, **entity["other_db_ids"]}
 
-            self.df_entities.update(entity)
+            foodatlas_id = entity["foodatlas_id"]
+            self.df_entities.at[foodatlas_id, "synonyms"] = \
+                KnowledgeGraph._merge_synonyms(all_names)
+            self.df_entities.at[foodatlas_id, "other_db_ids"] = \
+                {**other_db_ids, **entity["other_db_ids"]}
+
             return entity
 
         # no duplicates
@@ -611,7 +616,7 @@ class KnowledgeGraph():
     def _update_entity(
             self,
             foodatlas_id: int,
-            type_: str = None,
+            type_: str,
             name: str = None,
             synonyms: List[str] = [],
             other_db_ids: Dict[str, Any] = {},
@@ -624,6 +629,13 @@ class KnowledgeGraph():
         if name:
             all_names = self.df_entities.at[foodatlas_id, "synonyms"].copy()
             all_names += [self.df_entities.at[foodatlas_id, "name"]]
+            all_names += [name]
+            all_names = list(set(all_names))
+
+            if name in all_names:
+                all_names.remove(name)
+            if name.lower() in all_names:
+                all_names.remove(name.lower())
 
             if type_.startswith("organism_with_part"):
                 self.df_entities.at[foodatlas_id, "name"] = f"{name} - {part_name}"

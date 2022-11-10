@@ -49,6 +49,7 @@ Output files
 
 
 X. Annotations to KG.
+
 python generate_kg.py \
     --input_filepath=../../outputs/data_generation/train_pool.tsv \
     --output_dir=../../outputs/kg/annotations_only \
@@ -69,6 +70,22 @@ Modified files
 - ../../outputs/kg/annotations_only/evidence.txt
 - ../../outputs/kg/annotations_only/entities.txt
 - ../../outputs/kg/annotations_only/relations.txt
+
+
+
+X. MESH KG enrichment
+
+python merge_mesh.py \
+    --input_kg_dir=../../outputs/kg/annotations_only \
+    --output_kg_dir=../../outputs/kg/annotations_mesh
+
+Modified files
+- ../../outputs/kg/annotations_only/kg.txt
+- ../../outputs/kg/annotations_only/evidence.txt
+- ../../outputs/kg/annotations_only/entities.txt
+- ../../outputs/kg/annotations_only/relations.txt
+
+
 
 
 
@@ -93,4 +110,5 @@ Modified files
 - ../../outputs/kg/1/evidence.txt
 - ../../outputs/kg/1/entities.txt
 - ../../outputs/kg/1/relations.txt
+
 

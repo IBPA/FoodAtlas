@@ -1,4 +1,6 @@
 import sys
+import pickle
+
 import pandas as pd
 
 sys.path.append('./')
@@ -38,3 +40,31 @@ def read_annotated(filepath) -> pd.DataFrame:
     df_grouped["answer"] = df_grouped["answer"].apply(lambda x: x[0])
 
     return df_grouped
+
+
+def save_pkl(obj, save_to):
+    """
+    Pickle the object.
+
+    Inputs:
+        obj: (object) Object to pickle.
+        save_to: (str) Filepath to pickle the object to.
+    """
+    with open(save_to, 'wb') as fid:
+        pickle.dump(obj, fid)
+
+
+def load_pkl(load_from):
+    """
+    Load the pickled object.
+
+    Inputs:
+        save_to: (str) Filepath to pickle the object to.
+
+    Returns:
+        (object) Loaded object.
+    """
+    with open(load_from, 'rb') as fid:
+        obj = pickle.load(fid)
+
+    return obj
