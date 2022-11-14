@@ -87,23 +87,25 @@ Modified files
 
 
 
+X. (Optional) Add NCBI taxonomy to the KG.
+python merge_ncbi_taxonomy.py \
+    --input_kg_dir=../../outputs/kg/annotations_mesh \
+    --output_kg_dir=../../outputs/kg/annotations_mesh_ncbi
+
+Modified files
+- ../../outputs/kg/annotations_mesh_ncbi/kg.txt
+- ../../outputs/kg/annotations_mesh_ncbi/evidence.txt
+- ../../outputs/kg/annotations_mesh_ncbi/entities.txt
+- ../../outputs/kg/annotations_mesh_ncbi/relations.txt
+
+
+
 
 
 
 
 6. (Optional) Add the entailment model predictions to the KG.
 python add_model_predictions_to_kg.py --round=1
-
-Modified files
-- ../../outputs/kg/1/kg.txt
-- ../../outputs/kg/1/evidence.txt
-- ../../outputs/kg/1/entities.txt
-- ../../outputs/kg/1/relations.txt
-
-
-
-7. (Optional) Add NCBI taxonomy to the KG.
-python merge_ncbi_taxonomy.py --round=1
 
 Modified files
 - ../../outputs/kg/1/kg.txt

@@ -1,4 +1,5 @@
 import argparse
+import os
 import sys
 
 sys.path.append('..')
@@ -12,20 +13,26 @@ from common_utils.knowledge_graph import KnowledgeGraph, CandidateEntity, Candid
 NODES_FILEPATH = "../../data/NCBI_Taxonomy/nodes.dmp"
 NAMES_FILEPATH = "../../data/NCBI_Taxonomy/names.dmp"
 TAXLINEAGE_FILEPATH = "../../data/NCBI_Taxonomy/taxidlineage.dmp"
-KG_FILEPATH = "../../outputs/kg/{}/kg.txt"
-EVIDENCE_FILEPATH = "../../outputs/kg/{}/evidence.txt"
-ENTITIES_FILEPATH = "../../outputs/kg/{}/entities.txt"
-RELATIONS_FILEPATH = "../../outputs/kg/{}/relations.txt"
+KG_FILENAME = "kg.txt"
+EVIDENCE_FILENAME = "evidence.txt"
+ENTITIES_FILENAME = "entities.txt"
+RELATIONS_FILENAME = "relations.txt"
 
 
 def parse_argument() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate the first version of annotation.")
 
     parser.add_argument(
-        "--round",
-        type=int,
+        "--input_kg_dir",
+        type=str,
         required=True,
-        help="What KG round are we merging.",
+        help="KG directory to merge the MESH to.",
+    )
+
+    parser.add_argument(
+        "--output_kg_dir",
+        type=str,
+        help="KG directory to merge the MESH to.",
     )
 
     args = parser.parse_args()
@@ -75,17 +82,17 @@ def main():
 
     # read KG
     fa_kg = KnowledgeGraph(
-        kg_filepath=KG_FILEPATH.format(args.round),
-        evidence_filepath=EVIDENCE_FILEPATH.format(args.round),
-        entities_filepath=ENTITIES_FILEPATH.format(args.round),
-        relations_filepath=RELATIONS_FILEPATH.format(args.round),
+        kg_filepath=os.path.join(args.input_kg_dir, KG_FILENAME),
+        evidence_filepath=os.path.join(args.input_kg_dir, EVIDENCE_FILENAME),
+        entities_filepath=os.path.join(args.input_kg_dir, ENTITIES_FILENAME),
+        relations_filepath=os.path.join(args.input_kg_dir, RELATIONS_FILENAME),
     )
 
     df_organisms = fa_kg.get_entities_by_type(type_="organism")
-    print(f"Number of organisms in KG {args.round}: {df_organisms.shape[0]}")
+    print(f"Number of organisms in KG: {df_organisms.shape[0]}")
 
     df_organisms_with_part = fa_kg.get_entities_by_type(type_="organism_with_part")
-    print(f"Number of organisms_with_part in KG {args.round}: {df_organisms_with_part.shape[0]}")
+    print(f"Number of organisms_with_part in KG: {df_organisms_with_part.shape[0]}")
 
     kg_tax_ids = [x["NCBI_taxonomy"] for x in df_organisms["other_db_ids"].tolist()]
     prev_len = len(kg_tax_ids)
@@ -197,7 +204,15 @@ def main():
     df_candiate_triples = pd.DataFrame(data, columns=["head", "relation", "tail"])
     fa_kg.add_taxonomy(df_candiate_triples, origin="NCBI_taxonomy")
 
-    fa_kg.save()
+    if args.output_kg_dir:
+        fa_kg.save(
+            kg_filepath=os.path.join(args.output_kg_dir, KG_FILENAME),
+            evidence_filepath=os.path.join(args.output_kg_dir, EVIDENCE_FILENAME),
+            entities_filepath=os.path.join(args.output_kg_dir, ENTITIES_FILENAME),
+            relations_filepath=os.path.join(args.output_kg_dir, RELATIONS_FILENAME),
+        )
+    else:
+        fa_kg.save()
 
 
 if __name__ == '__main__':
