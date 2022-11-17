@@ -35,6 +35,7 @@ def parse_argument() -> argparse.Namespace:
     parser.add_argument(
         "--output_kg_dir",
         type=str,
+        required=True,
         help="KG directory to merge the MESH to.",
     )
 
@@ -210,7 +211,7 @@ def main():
     # update existing entities
     mesh_ids_to_add = [x for pairs in head_tail_pairs for x in pairs]
     mesh_ids_to_update = list(set(mesh_ids).intersection(mesh_ids_to_add))
-    print("Updaing existing entities...")
+    print("Updating existing entities...")
     for mesh_id in tqdm(mesh_ids_to_update):
         df_match = df_chemicals[df_chemicals["other_db_ids"].apply(lambda x: x["MESH"] == mesh_id)]
         assert df_match.shape[0] == 1
@@ -221,7 +222,7 @@ def main():
             name = desc_mesh_id_name_lookup[mesh_id]
 
         fa_kg._update_entity(
-            foodatlas_id=int(df_match.iloc[0]["foodatlas_id"]),
+            foodatlas_id=df_match.iloc[0]["foodatlas_id"],
             type_="chemical",
             name=name,
             synonyms=[],
@@ -260,17 +261,14 @@ def main():
 
         triples.append([head_ent, relation, tail_ent])
     df_candiate_triples = pd.DataFrame(triples, columns=["head", "relation", "tail"])
-    fa_kg.add_taxonomy(df_candiate_triples, origin="MESH")
+    fa_kg.add_triples(df_candiate_triples, origin="MESH")
 
-    if args.output_kg_dir:
-        fa_kg.save(
-            kg_filepath=os.path.join(args.output_kg_dir, KG_FILENAME),
-            evidence_filepath=os.path.join(args.output_kg_dir, EVIDENCE_FILENAME),
-            entities_filepath=os.path.join(args.output_kg_dir, ENTITIES_FILENAME),
-            relations_filepath=os.path.join(args.output_kg_dir, RELATIONS_FILENAME),
-        )
-    else:
-        fa_kg.save()
+    fa_kg.save(
+        kg_filepath=os.path.join(args.output_kg_dir, KG_FILENAME),
+        evidence_filepath=os.path.join(args.output_kg_dir, EVIDENCE_FILENAME),
+        entities_filepath=os.path.join(args.output_kg_dir, ENTITIES_FILENAME),
+        relations_filepath=os.path.join(args.output_kg_dir, RELATIONS_FILENAME),
+    )
 
 
 if __name__ == '__main__':

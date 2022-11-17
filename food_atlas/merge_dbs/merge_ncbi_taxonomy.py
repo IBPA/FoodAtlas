@@ -32,6 +32,7 @@ def parse_argument() -> argparse.Namespace:
     parser.add_argument(
         "--output_kg_dir",
         type=str,
+        required=True,
         help="KG directory to merge the MESH to.",
     )
 
@@ -135,7 +136,7 @@ def main():
             raise RuntimeError()
 
         fa_kg._update_entity(
-            foodatlas_id=int(row["foodatlas_id"]),
+            foodatlas_id=row["foodatlas_id"],
             type_=type_,
             name=names_dict["scientific name"][0],
             synonyms=[x for k, v in names_dict.items() if k != "scientific name" for x in v],
@@ -202,17 +203,14 @@ def main():
         data.append(
             [candidate_entity_dict[head_tax_id], relation, candidate_entity_dict[tail_tax_id]])
     df_candiate_triples = pd.DataFrame(data, columns=["head", "relation", "tail"])
-    fa_kg.add_taxonomy(df_candiate_triples, origin="NCBI_taxonomy")
+    fa_kg.add_triples(df_candiate_triples, origin="NCBI_taxonomy")
 
-    if args.output_kg_dir:
-        fa_kg.save(
-            kg_filepath=os.path.join(args.output_kg_dir, KG_FILENAME),
-            evidence_filepath=os.path.join(args.output_kg_dir, EVIDENCE_FILENAME),
-            entities_filepath=os.path.join(args.output_kg_dir, ENTITIES_FILENAME),
-            relations_filepath=os.path.join(args.output_kg_dir, RELATIONS_FILENAME),
-        )
-    else:
-        fa_kg.save()
+    fa_kg.save(
+        kg_filepath=os.path.join(args.output_kg_dir, KG_FILENAME),
+        evidence_filepath=os.path.join(args.output_kg_dir, EVIDENCE_FILENAME),
+        entities_filepath=os.path.join(args.output_kg_dir, ENTITIES_FILENAME),
+        relations_filepath=os.path.join(args.output_kg_dir, RELATIONS_FILENAME),
+    )
 
 
 if __name__ == '__main__':

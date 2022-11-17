@@ -23,6 +23,14 @@ EVIDENCE_FILENAME = "evidence.txt"
 ENTITIES_FILENAME = "entities.txt"
 RELATIONS_FILENAME = "relations.txt"
 
+DATABASES_TO_INCLUDE = [
+    'DTU',
+    'USDA',
+    'PHENOL EXPLORER',
+    'KNAPSACK',
+    'DUKE',
+]
+
 
 def parse_argument() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate the first version of annotation.")
@@ -41,6 +49,12 @@ def parse_argument() -> argparse.Namespace:
         help="KG directory to merge the MESH to.",
     )
 
+    parser.add_argument(
+        "--use_pkl",
+        action="store_true",
+        help="Set if using pickled data.",
+    )
+
     args = parser.parse_args()
     return args
 
@@ -49,18 +63,20 @@ def main():
     args = parse_argument()
 
     df_content = pd.read_csv(CONTENT_FILEPATH, low_memory=False, keep_default_na=False)
+    df_compound = df_content[df_content["source_type"] == "Compound"]
 
-    source_type = list(set(df_content["source_type"].tolist()))
-    print("source_type: ", source_type)
-
-    citation_type = list(set(df_content["citation_type"].tolist()))
+    citation_type = list(set(df_compound["citation_type"].tolist()))
     print("citation_type: ", citation_type)
 
-    #
-    df_content = df_content[df_content["citation_type"].apply(lambda x: x in ['EXPERIMENTAL'])]
+    df_compound = df_compound[df_compound["citation_type"] == "DATABASE"]
 
-    print(df_content)
-    df_content.to_csv('./temp.csv', sep='\t', index=False)
+    citation = list(set(df_compound["citation"].tolist()))
+    print("citation: ", citation)
+
+    #
+    # df_compound = df_compound[df_compound["citation_type"].apply(lambda x: x in ['EXPERIMENTAL'])]
+
+    df_compound.to_csv('./temp.csv', sep='\t', index=False)
 
 
 if __name__ == '__main__':

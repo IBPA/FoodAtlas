@@ -87,7 +87,7 @@ Modified files
 
 
 
-X. (Optional) Add NCBI taxonomy to the KG.
+X. Add NCBI taxonomy to the KG.
 python merge_ncbi_taxonomy.py \
     --input_kg_dir=../../outputs/kg/annotations_mesh \
     --output_kg_dir=../../outputs/kg/annotations_mesh_ncbi
@@ -100,8 +100,29 @@ Modified files
 
 
 
+X. Add CAS ID to the KG from CTD and PubChem.
+python merge_cas_id.py \
+    --input_kg_dir=../../outputs/kg/annotations_mesh_ncbi/ \
+    --output_kg_dir=../../outputs/kg/annotations_mesh_ncbi_pubchem
+
+Modified files
+- ../../outputs/kg/annotations_mesh_ncbi_pubchem/kg.txt
+- ../../outputs/kg/annotations_mesh_ncbi_pubchem/evidence.txt
+- ../../outputs/kg/annotations_mesh_ncbi_pubchem/entities.txt
+- ../../outputs/kg/annotations_mesh_ncbi_pubchem/relations.txt
 
 
+
+X. Merge FooDB.
+python merge_foodb.py \
+    --input_kg_dir=../../outputs/kg/annotations_mesh_ncbi_pubchem/ \
+    --output_kg_dir=../../outputs/kg/annotations_mesh_ncbi_pubchem_foodb
+
+Modified files
+- ../../outputs/kg/annotations_mesh_ncbi_pubchem_foodb/kg.txt
+- ../../outputs/kg/annotations_mesh_ncbi_pubchem_foodb/evidence.txt
+- ../../outputs/kg/annotations_mesh_ncbi_pubchem_foodb/entities.txt
+- ../../outputs/kg/annotations_mesh_ncbi_pubchem_foodb/relations.txt
 
 
 6. (Optional) Add the entailment model predictions to the KG.
