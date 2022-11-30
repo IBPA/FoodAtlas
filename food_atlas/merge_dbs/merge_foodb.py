@@ -62,21 +62,48 @@ def parse_argument() -> argparse.Namespace:
 def main():
     args = parse_argument()
 
+    # extract content
     df_content = pd.read_csv(CONTENT_FILEPATH, low_memory=False, keep_default_na=False)
+    print(f"Original Content.csv file shape: {df_content.shape[0]}")
     df_compound = df_content[df_content["source_type"] == "Compound"]
 
     citation_type = list(set(df_compound["citation_type"].tolist()))
-    print("citation_type: ", citation_type)
+    print("citation_types: ", citation_type)
 
-    df_compound = df_compound[df_compound["citation_type"] == "DATABASE"]
+    df_compound = df_compound[df_compound["export"] == 1]
+    df_compound = df_compound[df_compound["citation_type"] == "EXPERIMENTAL"]
+    print(f"Compounds shape: {df_content.shape[0]}")
 
-    citation = list(set(df_compound["citation"].tolist()))
-    print("citation: ", citation)
+    # extract pairs
+    pairs = list(zip(df_compound["food_id"].tolist(), df_compound["source_id"].tolist()))
+    pairs = list(set(pairs))
+    print(len(pairs))
 
-    #
-    # df_compound = df_compound[df_compound["citation_type"].apply(lambda x: x in ['EXPERIMENTAL'])]
+    sys.exit()
 
-    df_compound.to_csv('./temp.csv', sep='\t', index=False)
+
+    # food and compound mapping
+    df_food = pd.read_csv(FOOD_FILEPATH, keep_default_na=False)
+    df_food = df_food[df_food["ncbi_taxonomy_id"] != ""]
+    food_id_ncbi_map = dict(zip(df_food["id"].tolist(), df_food["ncbi_taxonomy_id"]))
+
+    df_compound = pd.read_csv(COMPOUND_FILEPATH, keep_default_na=False)
+    print(df_compound)
+
+
+
+
+    sys.exit()
+
+    df_compound_subset = df_compound[df_compound["moldb_inchikey"] != ""]
+    compound_id_inchi_map = dict(zip(
+        df_compound_subset["id"].tolist(), df_compound_subset["moldb_inchikey"]))
+
+    df_compound_subset = df_compound[df_compound["description"] != ""]
+    compound_id_cas_map = dict(zip(
+        df_compound_subset["id"].tolist(), df_compound_subset["description"]))
+
+    # merge foodbid
 
 
 if __name__ == '__main__':

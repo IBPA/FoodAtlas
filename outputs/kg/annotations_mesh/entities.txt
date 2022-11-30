@@ -1,389 +1,389 @@
 foodatlas_id	type	name	synonyms	other_db_ids
-e0	chemical	Phloretin	"[""phloretin 4'-O-methyl ether""]"	{'MESH': 'D010693'}
-e1	chemical	Phosphoadenosine Phosphosulfate	"[""phosphoadenosine 5' -phosphosulfate""]"	{'MESH': 'D010724'}
-e2	chemical	benzyl cyanide	['(2S)-beta-D-allopyranosyloxy-2-phenylacetonitrile']	{'MESH': 'C006725'}
-e3	chemical	beta-ocimene	['(E)-beta-ocimene']	{'MESH': 'C443996'}
+e0	chemical	Phloretin	"[""phloretin 4'-O-methyl ether""]"	{'MESH': 'D010693', 'CAS': ['60-82-2']}
+e1	chemical	Phosphoadenosine Phosphosulfate	"[""phosphoadenosine 5' -phosphosulfate""]"	{'MESH': 'D010724', 'CAS': ['482-67-7']}
+e2	chemical	benzyl cyanide	['(2S)-beta-D-allopyranosyloxy-2-phenylacetonitrile']	{'MESH': 'C006725', 'CAS': ['140-29-4']}
+e3	chemical	beta-ocimene	['(E)-beta-ocimene']	{'MESH': 'C443996', 'CAS': ['13877-91-3']}
 e4	chemical	1,7-bis(4-hydroxyphenyl)-1,6-heptadiene-3,5-dione	['1,7-bis[4-hydroxy 3-methoxy phenyl]-1,6-heptadiene-3,5-dione']	{'MESH': 'C545177'}
-e5	chemical	Eucalyptol	['1,8-cineole']	{'MESH': 'D000077591'}
-e6	chemical	dihydrochalcone	['2 dihydrochalcones']	{'MESH': 'C015812'}
+e5	chemical	Eucalyptol	['1,8-cineole']	{'MESH': 'D000077591', 'CAS': ['470-82-6']}
+e6	chemical	dihydrochalcone	['2 dihydrochalcones']	{'MESH': 'C015812', 'CAS': ['1083-30-3']}
 e7	chemical	2-dodecyl-6-methoxycyclohexa-2,5-diene-1,4-dione	['2-Dodecyl-6-Methoxycyclohexa-2,5-Diene-1,4-Dione']	{'MESH': 'C581182'}
 e8	chemical	2-propene-1-sulfinothioic acid S-1-propenyl ester	['2-Propene-1-sulfinothioic acid S-2-propenyl ester']	{'MESH': 'C119267'}
 e9	chemical	3-butenyl glucosinolate	[]	{'MESH': 'C552436'}
-e10	chemical	3-octanone	[]	{'MESH': 'C017582'}
-e11	chemical	4-hydroxyderricin	['4-Hydroxyderricin']	{'MESH': 'C068243'}
-e12	chemical	5-Hydroxytryptophan	['5-HTP']	{'MESH': 'D006916'}
-e13	chemical	plumbagin	['5-hydroxy-2-methyl-1,4-naphthoquinone']	{'MESH': 'C014758'}
+e10	chemical	3-octanone	[]	{'MESH': 'C017582', 'CAS': ['106-68-3']}
+e11	chemical	4-hydroxyderricin	['4-Hydroxyderricin']	{'MESH': 'C068243', 'CAS': ['55912-03-3']}
+e12	chemical	5-Hydroxytryptophan	['5-HTP']	{'MESH': 'D006916', 'CAS': ['56-69-9']}
+e13	chemical	plumbagin	['5-hydroxy-2-methyl-1,4-naphthoquinone']	{'MESH': 'C014758', 'CAS': ['481-42-5']}
 e14	chemical	6-OH-BDE-47	[]	{'MESH': 'C580599'}
-e15	chemical	anacardic acid	['6-pentadecylsalicylic acid']	{'MESH': 'C088115'}
-e16	chemical	arginyl-glycyl-aspartic acid	['Arg-Gly-Asp']	{'MESH': 'C047981'}
+e15	chemical	anacardic acid	['6-pentadecylsalicylic acid']	{'MESH': 'C088115', 'CAS': ['18654-18-7']}
+e16	chemical	arginyl-glycyl-aspartic acid	['Arg-Gly-Asp']	{'MESH': 'C047981', 'CAS': ['99896-85-2']}
 e17	chemical	cinnamon oil, leaf	['Cinnamomum verum leaf essential oil']	{'MESH': 'C510049'}
-e18	chemical	Codeine	[]	{'MESH': 'D003061'}
-e19	chemical	corosolic acid	['Corosolic acid']	{'MESH': 'C113861'}
-e20	chemical	cycloheterophyllin	['Cycloheterophyllin']	{'MESH': 'C107099'}
-e21	chemical	cysteinylcysteine	['Cys']	{'MESH': 'C046557'}
-e22	chemical	Docosahexaenoic Acids	['DHA', 'docosahexaenoic acid']	{'MESH': 'D004281'}
-e23	chemical	epigallocatechin gallate	['EGCG']	{'MESH': 'C045651'}
-e24	chemical	2,3-epoxypropyl acrylate	['EPA']	{'MESH': 'C062422'}
-e25	chemical	Eicosapentaenoic Acid	['EPA']	{'MESH': 'D015118'}
-e26	chemical	gamma-Aminobutyric Acid	['GABA']	{'MESH': 'D005680'}
-e27	chemical	Geraniin	[]	{'MESH': 'C024603'}
-e28	chemical	Glutamic Acid	['Glu']	{'MESH': 'D018698'}
-e29	chemical	decaglycine	['Gly']	{'MESH': 'C070361'}
-e30	chemical	grandisin	['Grandisin']	{'MESH': 'C074346'}
-e31	chemical	Hydrogen	['H2B']	{'MESH': 'D006859'}
+e18	chemical	Codeine	[]	{'MESH': 'D003061', 'CAS': ['76-57-3', '41444-62-6']}
+e19	chemical	corosolic acid	['Corosolic acid']	{'MESH': 'C113861', 'CAS': ['4547-24-4']}
+e20	chemical	cycloheterophyllin	['Cycloheterophyllin']	{'MESH': 'C107099', 'CAS': ['36545-53-6']}
+e21	chemical	cysteinylcysteine	['Cys']	{'MESH': 'C046557', 'CAS': ['18048-87-8']}
+e22	chemical	Docosahexaenoic Acids	['DHA', 'docosahexaenoic acid']	{'MESH': 'D004281', 'CAS': ['25167-62-8']}
+e23	chemical	epigallocatechin gallate	['EGCG']	{'MESH': 'C045651', 'CAS': ['989-51-5', '27044-00-4']}
+e24	chemical	2,3-epoxypropyl acrylate	['EPA']	{'MESH': 'C062422', 'CAS': ['106-90-1']}
+e25	chemical	Eicosapentaenoic Acid	['EPA']	{'MESH': 'D015118', 'CAS': ['1553-41-9']}
+e26	chemical	gamma-Aminobutyric Acid	['GABA']	{'MESH': 'D005680', 'CAS': ['56-12-2']}
+e27	chemical	Geraniin	[]	{'MESH': 'C024603', 'CAS': ['60976-49-0']}
+e28	chemical	Glutamic Acid	['Glu']	{'MESH': 'D018698', 'CAS': ['16690-92-9', '25677-11-6', '15767-75-6', '7558-63-6', '24595-14-0', '617-65-2', '54262-86-1', '19473-49-5', '55695-80-2', '138-15-8', '19238-49-4', '56-86-0']}
+e29	chemical	decaglycine	['Gly']	{'MESH': 'C070361', 'CAS': ['76960-32-2']}
+e30	chemical	grandisin	['Grandisin']	{'MESH': 'C074346', 'CAS': ['53250-50-3']}
+e31	chemical	Hydrogen	['H2B']	{'MESH': 'D006859', 'CAS': ['1333-74-0']}
 e32	chemical	IFNE protein, human	['IFN-epsilon']	{'MESH': 'C524005'}
-e33	chemical	isofuranodiene	['Isofuranodiene']	{'MESH': 'C017897'}
+e33	chemical	isofuranodiene	['Isofuranodiene']	{'MESH': 'C017897', 'CAS': ['57566-47-9']}
 e34	chemical	2-(2-N,N-dimethylaminoethylamine-1-carbonyl)-1H-quinolin-4-one hydrochloride	['KYNA']	{'MESH': 'C548511'}
-e35	chemical	argyrophilic acid	['Kaur-16-en-19-oic acid']	{'MESH': 'C014341'}
-e36	chemical	Arabinose	['L-arabinose']	{'MESH': 'D001089'}
+e35	chemical	argyrophilic acid	['Kaur-16-en-19-oic acid']	{'MESH': 'C014341', 'CAS': ['20316-84-1']}
+e36	chemical	Arabinose	['L-arabinose']	{'MESH': 'D001089', 'CAS': ['147-81-9']}
 e37	chemical	Levodopa	['L-dopa']	{'MESH': 'D007980'}
-e38	chemical	Proline	['L-proline']	{'MESH': 'D011392'}
+e38	chemical	Proline	['L-proline']	{'MESH': 'D011392', 'CAS': ['147-85-3']}
 e39	chemical	lappaol F	['Lappaol F']	{'MESH': 'C000591899'}
 e40	chemical	MAR 10	['MAR-10']	{'MESH': 'C093381'}
-e41	chemical	malic acid	['Malic acid']	{'MESH': 'C030298'}
+e41	chemical	malic acid	['Malic acid']	{'MESH': 'C030298', 'CAS': ['6915-15-7']}
 e42	chemical	muricatalicin	['Muricatalicin']	{'MESH': 'C442161'}
-e43	chemical	myricanol	['Myricanol']	{'MESH': 'C041794'}
+e43	chemical	myricanol	['Myricanol']	{'MESH': 'C041794', 'CAS': ['33606-81-4']}
 e44	chemical	N-caffeoyltyramine	[]	{'MESH': 'C481438'}
-e45	chemical	feruloyltyramine	['N-feruloyltyramine']	{'MESH': 'C074004'}
-e46	chemical	Nickel	[]	{'MESH': 'D009532'}
-e47	chemical	Oleic Acid	['Oleic acid']	{'MESH': 'D019301'}
-e48	chemical	Lead	['Pb']	{'MESH': 'D007854'}
-e49	chemical	Phlorhizin	['Phlorizin']	{'MESH': 'D010695'}
-e50	chemical	picrocrocin	['Picrocrocins']	{'MESH': 'C087962'}
-e51	chemical	Pyrogallol	[]	{'MESH': 'D011748'}
-e52	chemical	alliin	['S-allylcysteine sulfoxide']	{'MESH': 'C006453'}
-e53	chemical	S-allylcysteine	['S-allyl-cysteine']	{'MESH': 'C065299'}
+e45	chemical	feruloyltyramine	['N-feruloyltyramine']	{'MESH': 'C074004', 'CAS': ['65646-26-6']}
+e46	chemical	Nickel	[]	{'MESH': 'D009532', 'CAS': ['7440-02-0']}
+e47	chemical	Oleic Acid	['Oleic acid']	{'MESH': 'D019301', 'CAS': ['112-80-1']}
+e48	chemical	Lead	['Pb']	{'MESH': 'D007854', 'CAS': ['7439-92-1']}
+e49	chemical	Phlorhizin	['Phlorizin']	{'MESH': 'D010695', 'CAS': ['60-81-1']}
+e50	chemical	picrocrocin	['Picrocrocins']	{'MESH': 'C087962', 'CAS': ['138-55-6']}
+e51	chemical	Pyrogallol	[]	{'MESH': 'D011748', 'CAS': ['87-66-1']}
+e52	chemical	alliin	['S-allylcysteine sulfoxide']	{'MESH': 'C006453', 'CAS': ['17795-27-6']}
+e53	chemical	S-allylcysteine	['S-allyl-cysteine']	{'MESH': 'C065299', 'CAS': ['21593-77-1']}
 e54	chemical	S-propyl cysteine sulfoxide	['S-methyl cysteine sulphoxide']	{'MESH': 'C495663'}
-e55	chemical	S-methylcysteine	[]	{'MESH': 'C008425'}
-e56	chemical	shogaol	['Shogaols']	{'MESH': 'C040115'}
-e57	chemical	Silicon	['Si']	{'MESH': 'D012825'}
-e58	chemical	Strontium	['Sr']	{'MESH': 'D013324'}
+e55	chemical	S-methylcysteine	[]	{'MESH': 'C008425', 'CAS': ['7728-98-5']}
+e56	chemical	shogaol	['Shogaols']	{'MESH': 'C040115', 'CAS': ['555-66-8']}
+e57	chemical	Silicon	['Si']	{'MESH': 'D012825', 'CAS': ['7440-21-3']}
+e58	chemical	Strontium	['Sr']	{'MESH': 'D013324', 'CAS': ['7440-24-6']}
 e59	chemical	taraxinic acid glucopyranosyl ester	['TA-G']	{'MESH': 'C000608106'}
-e60	chemical	Trinitrotoluene	['TNT']	{'MESH': 'D014303'}
-e61	chemical	Zinc	['Zn']	{'MESH': 'D015032'}
-e62	chemical	Acetaldehyde	[]	{'MESH': 'D000079'}
-e63	chemical	acevaltrate	[]	{'MESH': 'C090810'}
-e64	chemical	Adenine	[]	{'MESH': 'D000225'}
-e65	chemical	ajoene	[]	{'MESH': 'C048980'}
-e66	chemical	Alanine	[]	{'MESH': 'D000409'}
+e60	chemical	Trinitrotoluene	['TNT']	{'MESH': 'D014303', 'CAS': ['118-96-7']}
+e61	chemical	Zinc	['Zn']	{'MESH': 'D015032', 'CAS': ['7440-66-6']}
+e62	chemical	Acetaldehyde	[]	{'MESH': 'D000079', 'CAS': ['75-07-0']}
+e63	chemical	acevaltrate	[]	{'MESH': 'C090810', 'CAS': ['23067-35-8', '25161-41-5', '28325-58-8', '31244-57-2']}
+e64	chemical	Adenine	[]	{'MESH': 'D000225', 'CAS': ['73-24-5']}
+e65	chemical	ajoene	[]	{'MESH': 'C048980', 'CAS': ['92285-01-3']}
+e66	chemical	Alanine	[]	{'MESH': 'D000409', 'CAS': ['6898-94-8', '56-41-7']}
 e67	chemical	Alcohols	[]	{'MESH': 'D000438'}
 e68	chemical	Aldehydes	['aldehyde']	{'MESH': 'D000447'}
 e69	chemical	Alkaloids	[]	{'MESH': 'D000470'}
-e70	chemical	Benzene	['alkyl benzene']	{'MESH': 'D001554'}
-e71	chemical	allicin	[]	{'MESH': 'C006452'}
-e72	chemical	alpha-carotene	[]	{'MESH': 'C041635'}
-e73	chemical	alpha-chaconine	[]	{'MESH': 'C011860'}
-e74	chemical	humulene	['alpha-humulene']	{'MESH': 'C042686'}
-e75	chemical	alpha-Linolenic Acid	['linolenic acid']	{'MESH': 'D017962'}
-e76	chemical	mangostin	['alpha-mangostin']	{'MESH': 'C021053'}
-e77	chemical	alpha-pinene	[]	{'MESH': 'C005451'}
+e70	chemical	Benzene	['alkyl benzene']	{'MESH': 'D001554', 'CAS': ['71-43-2']}
+e71	chemical	allicin	[]	{'MESH': 'C006452', 'CAS': ['539-86-6']}
+e72	chemical	alpha-carotene	[]	{'MESH': 'C041635', 'CAS': ['432-70-2']}
+e73	chemical	alpha-chaconine	[]	{'MESH': 'C011860', 'CAS': ['20562-03-2']}
+e74	chemical	humulene	['alpha-humulene']	{'MESH': 'C042686', 'CAS': ['6753-98-6']}
+e75	chemical	alpha-Linolenic Acid	['linolenic acid']	{'MESH': 'D017962', 'CAS': ['463-40-1', '1955-33-5']}
+e76	chemical	mangostin	['alpha-mangostin']	{'MESH': 'C021053', 'CAS': ['6147-11-1']}
+e77	chemical	alpha-pinene	[]	{'MESH': 'C005451', 'CAS': ['80-56-8']}
 e78	chemical	alpha-solanine	[]	{'MESH': 'C514919'}
-e79	chemical	alpha-Tocopherol	[]	{'MESH': 'D024502'}
+e79	chemical	alpha-Tocopherol	[]	{'MESH': 'D024502', 'CAS': ['17407-37-3', '59-02-9', '58-95-7']}
 e80	chemical	Amides	[]	{'MESH': 'D000577'}
 e81	chemical	Amines	[]	{'MESH': 'D000588'}
-e82	chemical	Amygdalin	[]	{'MESH': 'D000678'}
-e83	chemical	Amylose	[]	{'MESH': 'D000688'}
+e82	chemical	Amygdalin	[]	{'MESH': 'D000678', 'CAS': ['29883-15-6']}
+e83	chemical	Amylose	[]	{'MESH': 'D000688', 'CAS': ['9005-82-7']}
 e84	chemical	Anthraquinones	[]	{'MESH': 'D000880'}
 e85	chemical	Aporphines	[]	{'MESH': 'D001060'}
-e86	chemical	Arbutin	[]	{'MESH': 'D001104'}
-e87	chemical	Arginine Vasopressin	['arginine']	{'MESH': 'D001127'}
-e88	chemical	Arsenic	[]	{'MESH': 'D001151'}
+e86	chemical	Arbutin	[]	{'MESH': 'D001104', 'CAS': ['497-76-7']}
+e87	chemical	Arginine Vasopressin	['arginine']	{'MESH': 'D001127', 'CAS': ['113-79-1']}
+e88	chemical	Arsenic	[]	{'MESH': 'D001151', 'CAS': ['7440-38-2']}
 e89	chemical	arsenosugar	['arsenosugars']	{'MESH': 'C449161'}
-e90	chemical	asarone	[]	{'MESH': 'C012195'}
-e91	chemical	1,2-dithiolane-4-carboxylic acid	['asparagusic acid']	{'MESH': 'C010035'}
+e90	chemical	asarone	[]	{'MESH': 'C012195', 'CAS': ['2883-98-9', '5273-86-9', '494-40-6']}
+e91	chemical	1,2-dithiolane-4-carboxylic acid	['asparagusic acid']	{'MESH': 'C010035', 'CAS': ['2224-02-4']}
 e92	chemical	bakkenolide B	[]	{'MESH': 'C551157'}
-e93	chemical	benzaldehyde	[]	{'MESH': 'C032175'}
+e93	chemical	benzaldehyde	[]	{'MESH': 'C032175', 'CAS': ['100-52-7']}
 e94	chemical	Benzaldehydes	['benzaldehyde']	{'MESH': 'D001547'}
-e95	chemical	benzofuran	[]	{'MESH': 'C105430'}
+e95	chemical	benzofuran	[]	{'MESH': 'C105430', 'CAS': ['271-89-6']}
 e96	chemical	bergapten	[]	{'MESH': 'C022909'}
 e97	chemical	beta-amyrin	[]	{'MESH': 'C036380'}
-e98	chemical	beta Carotene	['beta-carotene']	{'MESH': 'D019207'}
-e99	chemical	caryophyllene	['beta-caryophyllene']	{'MESH': 'C024714'}
+e98	chemical	beta Carotene	['beta-carotene']	{'MESH': 'D019207', 'CAS': ['7235-40-7']}
+e99	chemical	caryophyllene	['beta-caryophyllene']	{'MESH': 'C024714', 'CAS': ['13877-93-5']}
 e100	chemical	Beta-Cryptoxanthin	[]	{'MESH': 'D000072743'}
-e101	chemical	beta-pinene	[]	{'MESH': 'C010789'}
+e101	chemical	beta-pinene	[]	{'MESH': 'C010789', 'CAS': ['127-91-3']}
 e102	chemical	gamma-sitosterol	['beta-sitosterol']	{'MESH': 'C025473'}
 e103	chemical	Bilobalides	['bilobalide']	{'MESH': 'D046935'}
-e104	chemical	bisdemethoxycurcumin	[]	{'MESH': 'C034786'}
-e105	chemical	Boron	[]	{'MESH': 'D001895'}
+e104	chemical	bisdemethoxycurcumin	[]	{'MESH': 'C034786', 'CAS': ['24939-16-0']}
+e105	chemical	Boron	[]	{'MESH': 'D001895', 'CAS': ['7440-42-8']}
 e106	chemical	Amino Acids, Branched-Chain	['branched chain amino acids']	{'MESH': 'D000597'}
-e107	chemical	brassicasterol	[]	{'MESH': 'C003532'}
-e108	chemical	brevetoxin	[]	{'MESH': 'C053342'}
-e109	chemical	bullatacin	[]	{'MESH': 'C061022'}
-e110	chemical	cafestol	[]	{'MESH': 'C053400'}
-e111	chemical	caffeic acid	[]	{'MESH': 'C040048'}
-e112	chemical	Caffeine	[]	{'MESH': 'D002110'}
+e107	chemical	brassicasterol	[]	{'MESH': 'C003532', 'CAS': ['474-67-9']}
+e108	chemical	brevetoxin	[]	{'MESH': 'C053342', 'CAS': ['98225-48-0']}
+e109	chemical	bullatacin	[]	{'MESH': 'C061022', 'CAS': ['102989-24-2']}
+e110	chemical	cafestol	[]	{'MESH': 'C053400', 'CAS': ['469-83-0']}
+e111	chemical	caffeic acid	[]	{'MESH': 'C040048', 'CAS': ['501-16-6', '331-39-5']}
+e112	chemical	Caffeine	[]	{'MESH': 'D002110', 'CAS': ['58-08-2']}
 e113	chemical	caffeoyl tartaric acid	[]	{'MESH': 'C474564'}
-e114	chemical	Calcium	[]	{'MESH': 'D002118'}
-e115	chemical	campesterol	[]	{'MESH': 'C021273'}
-e116	chemical	camphene	[]	{'MESH': 'C019286'}
-e117	chemical	Camphor	[]	{'MESH': 'D002164'}
+e114	chemical	Calcium	[]	{'MESH': 'D002118', 'CAS': ['7440-70-2']}
+e115	chemical	campesterol	[]	{'MESH': 'C021273', 'CAS': ['474-62-4']}
+e116	chemical	camphene	[]	{'MESH': 'C019286', 'CAS': ['79-92-5']}
+e117	chemical	Camphor	[]	{'MESH': 'D002164', 'CAS': ['76-22-2']}
 e118	chemical	Carbamates	[]	{'MESH': 'D002219'}
-e119	chemical	Carbon	[]	{'MESH': 'D002244'}
+e119	chemical	Carbon	[]	{'MESH': 'D002244', 'CAS': ['7440-44-0']}
 e120	chemical	carbonyl fluoride	['carbonyl']	{'MESH': 'C548957'}
-e121	chemical	salvin	['carnosic acid']	{'MESH': 'C018381'}
-e122	chemical	Carnosine	[]	{'MESH': 'D002336'}
-e123	chemical	carnosol	[]	{'MESH': 'C068623'}
-e124	chemical	carpaine	[]	{'MESH': 'C018479'}
-e125	chemical	carvacrol	[]	{'MESH': 'C073316'}
-e126	chemical	catechol	[]	{'MESH': 'C034221'}
+e121	chemical	salvin	['carnosic acid']	{'MESH': 'C018381', 'CAS': ['3650-09-7']}
+e122	chemical	Carnosine	[]	{'MESH': 'D002336', 'CAS': ['305-84-0']}
+e123	chemical	carnosol	[]	{'MESH': 'C068623', 'CAS': ['5957-80-2']}
+e124	chemical	carpaine	[]	{'MESH': 'C018479', 'CAS': ['3463-92-1']}
+e125	chemical	carvacrol	[]	{'MESH': 'C073316', 'CAS': ['499-75-2']}
+e126	chemical	catechol	[]	{'MESH': 'C034221', 'CAS': ['120-80-9']}
 e127	chemical	Cerebrosides	[]	{'MESH': 'D002554'}
-e128	chemical	chicoric acid	[]	{'MESH': 'C100435'}
-e129	chemical	Choline	[]	{'MESH': 'D002794'}
-e130	chemical	cichoriin	[]	{'MESH': 'C410941'}
-e131	chemical	cinnamaldehyde	[]	{'MESH': 'C012843'}
-e132	chemical	cinnamic acid	['cinnamic acid amides']	{'MESH': 'C029010'}
-e133	chemical	bullatacinone	['cis-/trans-bullatacinone']	{'MESH': 'C061021'}
+e128	chemical	chicoric acid	[]	{'MESH': 'C100435', 'CAS': ['70831-56-0']}
+e129	chemical	Choline	[]	{'MESH': 'D002794', 'CAS': ['62-49-7', '67-48-1']}
+e130	chemical	cichoriin	[]	{'MESH': 'C410941', 'CAS': ['531-58-8']}
+e131	chemical	cinnamaldehyde	[]	{'MESH': 'C012843', 'CAS': ['104-55-2']}
+e132	chemical	cinnamic acid	['cinnamic acid amides']	{'MESH': 'C029010', 'CAS': ['621-82-9', '140-10-3']}
+e133	chemical	bullatacinone	['cis-/trans-bullatacinone']	{'MESH': 'C061021', 'CAS': ['123012-00-0']}
 e134	chemical	isomurisolenin	['cis-/trans-isomurisolenin']	{'MESH': 'C112079'}
-e135	chemical	cis-parinaric acid methyl ester	['cis-/trans-murisolinone']	{'MESH': 'C027149'}
-e136	chemical	1,4-polyisoprene	['cis-1,4-isoprene']	{'MESH': 'C455100'}
+e135	chemical	cis-parinaric acid methyl ester	['cis-/trans-murisolinone']	{'MESH': 'C027149', 'CAS': ['26474-40-8']}
+e136	chemical	1,4-polyisoprene	['cis-1,4-isoprene']	{'MESH': 'C455100', 'CAS': ['9003-31-0']}
 e137	chemical	citrate	[]	{'MESH': 'C102006'}
-e138	chemical	Hydrocortisone	['cortisol']	{'MESH': 'D006854'}
+e138	chemical	Hydrocortisone	['cortisol']	{'MESH': 'D006854', 'CAS': ['50-23-7', '60103-17-5']}
 e139	chemical	crocetin	[]	{'MESH': 'C010561'}
-e140	chemical	crocin	[]	{'MESH': 'C029036'}
-e141	chemical	Cucurbitacins	[]	{'MESH': 'D054728'}
-e142	chemical	cuminaldehyde	[]	{'MESH': 'C007165'}
+e140	chemical	crocin	[]	{'MESH': 'C029036', 'CAS': ['42553-65-1']}
+e141	chemical	Cucurbitacins	[]	{'MESH': 'D054728', 'CAS': ['60137-06-6']}
+e142	chemical	cuminaldehyde	[]	{'MESH': 'C007165', 'CAS': ['122-03-2']}
 e143	chemical	Cyanides	['cyanide']	{'MESH': 'D003486'}
 e144	chemical	cyanidin 3-rutinoside	['cyanidin-3-rutinoside']	{'MESH': 'C428983'}
 e145	chemical	cyanogenic glycosides	['cyanogenic glycoside']	{'MESH': 'C007173'}
-e146	chemical	cycloartane	['cycloartane triterpenes']	{'MESH': 'C085352'}
+e146	chemical	cycloartane	['cycloartane triterpenes']	{'MESH': 'C085352', 'CAS': ['511-64-8']}
 e147	chemical	Cyclodecanes	['cyclodecane']	{'MESH': 'D043822'}
 e148	chemical	Peptides, Cyclic	['cyclopeptides']	{'MESH': 'D010456'}
 e149	chemical	nasunin	['delphinidine']	{'MESH': 'C118727'}
-e150	chemical	delta-tocopherol	[]	{'MESH': 'C479072'}
-e151	chemical	demethoxycurcumin	[]	{'MESH': 'C050229'}
+e150	chemical	delta-tocopherol	[]	{'MESH': 'C479072', 'CAS': ['119-13-1']}
+e151	chemical	demethoxycurcumin	[]	{'MESH': 'C050229', 'CAS': ['24939-17-1', '22608-11-3']}
 e152	chemical	deoxydihydroxanthoangelol H	[]	{'MESH': 'C508537'}
 e153	chemical	3,4-di-O-caffeoylquinic acid	['di-caffeoylquinic acids']	{'MESH': 'C478100'}
-e154	chemical	allyl sulfide	['diallyl mono-sulfide']	{'MESH': 'C038491'}
-e155	chemical	diallyl tetrasulfide	['diallyl tetra-sulfide']	{'MESH': 'C431585'}
-e156	chemical	diallyl trisulfide	['diallyl tri-sulfide']	{'MESH': 'C042577'}
-e157	chemical	diallyl G	['diallyl-thiosulfinate']	{'MESH': 'C082083'}
-e158	chemical	dibenzofuran	['dibenzofurans']	{'MESH': 'C023614'}
+e154	chemical	allyl sulfide	['diallyl mono-sulfide']	{'MESH': 'C038491', 'CAS': ['592-88-1']}
+e155	chemical	diallyl tetrasulfide	['diallyl tetra-sulfide']	{'MESH': 'C431585', 'CAS': ['2444-49-7']}
+e156	chemical	diallyl trisulfide	['diallyl tri-sulfide']	{'MESH': 'C042577', 'CAS': ['2050-87-5']}
+e157	chemical	diallyl G	['diallyl-thiosulfinate']	{'MESH': 'C082083', 'CAS': ['127808-81-5']}
+e158	chemical	dibenzofuran	['dibenzofurans']	{'MESH': 'C023614', 'CAS': ['132-64-9']}
 e159	chemical	diglucoside	[]	{'MESH': 'C114438'}
-e160	chemical	dihydrosterculic acid	['dihydrosterculic acids']	{'MESH': 'C029355'}
+e160	chemical	dihydrosterculic acid	['dihydrosterculic acids']	{'MESH': 'C029355', 'CAS': ['5711-28-4']}
 e161	chemical	Dimethylamines	['dimethylamine']	{'MESH': 'D004123'}
 e162	chemical	Dipeptides	['dipeptide']	{'MESH': 'D004151'}
-e163	chemical	n-propyl disulfide	['dipropyl disulfide']	{'MESH': 'C041288'}
+e163	chemical	n-propyl disulfide	['dipropyl disulfide']	{'MESH': 'C041288', 'CAS': ['629-19-6']}
 e164	chemical	di-n-propyl trisulfide	['dipropyl trisulfide']	{'MESH': 'C513796'}
 e165	chemical	trilactone	['diterpene trilactones']	{'MESH': 'C518782'}
 e166	chemical	Diterpenes	['diterpene']	{'MESH': 'D004224'}
-e167	chemical	Dopamine	[]	{'MESH': 'D004298'}
+e167	chemical	Dopamine	[]	{'MESH': 'D004298', 'CAS': ['62-31-7', '51-61-6']}
 e168	chemical	Eicosanoic Acids	['eicosanoic acid']	{'MESH': 'D004537'}
-e169	chemical	Ellagic Acid	[]	{'MESH': 'D004610'}
+e169	chemical	Ellagic Acid	[]	{'MESH': 'D004610', 'CAS': ['476-66-4']}
 e170	chemical	ellagitannin	[]	{'MESH': 'C013515'}
-e171	chemical	Emodin	[]	{'MESH': 'D004642'}
-e172	chemical	gallocatechol	['epigallocatechin', 'gallocatechin']	{'MESH': 'C057580'}
-e173	chemical	epsilon-viniferin	[]	{'MESH': 'C091891'}
+e171	chemical	Emodin	[]	{'MESH': 'D004642', 'CAS': ['518-82-1', '8024-48-4']}
+e172	chemical	gallocatechol	['epigallocatechin', 'gallocatechin']	{'MESH': 'C057580', 'CAS': ['1617-55-6']}
+e173	chemical	epsilon-viniferin	[]	{'MESH': 'C091891', 'CAS': ['62218-08-0']}
 e174	chemical	Ergot Alkaloids	[]	{'MESH': 'D004876'}
 e175	chemical	eriocitrin	[]	{'MESH': 'C114706'}
-e176	chemical	Erythromycin	[]	{'MESH': 'D004917'}
-e177	chemical	estragole	[]	{'MESH': 'C007633'}
+e176	chemical	Erythromycin	[]	{'MESH': 'D004917', 'CAS': ['114-07-8']}
+e177	chemical	estragole	[]	{'MESH': 'C007633', 'CAS': ['140-67-0']}
 e178	chemical	Benzoates	['ethyl benzoate']	{'MESH': 'D001565'}
-e179	chemical	ethyl butyrate	[]	{'MESH': 'C045572'}
+e179	chemical	ethyl butyrate	[]	{'MESH': 'C045572', 'CAS': ['105-54-4']}
 e180	chemical	2-ethylaniline	['ethylaniline']	{'MESH': 'C000595672'}
-e181	chemical	falcarindiol	[]	{'MESH': 'C034379'}
-e182	chemical	falcarinol	[]	{'MESH': 'C018541'}
+e181	chemical	falcarindiol	[]	{'MESH': 'C034379', 'CAS': ['55297-87-5']}
+e182	chemical	falcarinol	[]	{'MESH': 'C018541', 'CAS': ['21852-80-2']}
 e183	chemical	Dietary Fiber	['fiber']	{'MESH': 'D004043'}
-e184	chemical	flavan-3-ol	['flavan-3-ols']	{'MESH': 'C404987'}
+e184	chemical	flavan-3-ol	['flavan-3-ols']	{'MESH': 'C404987', 'CAS': ['1481-83-0']}
 e185	chemical	Flavanones	['C-methyl flavanones']	{'MESH': 'D044950'}
-e186	chemical	3-hydroxyflavone	['flavonol']	{'MESH': 'C041477'}
-e187	chemical	Formaldehyde	[]	{'MESH': 'D005557'}
+e186	chemical	3-hydroxyflavone	['flavonol']	{'MESH': 'C041477', 'CAS': ['577-85-5']}
+e187	chemical	Formaldehyde	[]	{'MESH': 'D005557', 'CAS': ['50-00-0']}
 e188	chemical	fructooligosaccharide	['fructo-oligosaccharides']	{'MESH': 'C116580'}
-e189	chemical	Fructose	[]	{'MESH': 'D005632'}
-e190	chemical	fucoidan	[]	{'MESH': 'C007789'}
-e191	chemical	fucoxanthin	[]	{'MESH': 'C025164'}
-e192	chemical	fumaric acid	['fumaric']	{'MESH': 'C032005'}
-e193	chemical	furaneol	[]	{'MESH': 'C058427'}
+e189	chemical	Fructose	[]	{'MESH': 'D005632', 'CAS': ['30237-26-4']}
+e190	chemical	fucoidan	[]	{'MESH': 'C007789', 'CAS': ['9072-19-9']}
+e191	chemical	fucoxanthin	[]	{'MESH': 'C025164', 'CAS': ['3351-86-8']}
+e192	chemical	fumaric acid	['fumaric']	{'MESH': 'C032005', 'CAS': ['110-17-8']}
+e193	chemical	furaneol	[]	{'MESH': 'C058427', 'CAS': ['3658-77-3']}
 e194	chemical	Furans	[]	{'MESH': 'D005663'}
-e195	chemical	Gallic Acid	[]	{'MESH': 'D005707'}
+e195	chemical	Gallic Acid	[]	{'MESH': 'D005707', 'CAS': ['149-91-7']}
 e196	chemical	gamma-mangostin	[]	{'MESH': 'C102777'}
-e197	chemical	gamma-oryzanol	['oryzanol']	{'MESH': 'C013172'}
+e197	chemical	gamma-oryzanol	['oryzanol']	{'MESH': 'C013172', 'CAS': ['11042-64-1', '12738-23-7']}
 e198	chemical	Gibberellins	[]	{'MESH': 'D005875'}
-e199	chemical	ginkgolic acid	[]	{'MESH': 'C112485'}
+e199	chemical	ginkgolic acid	[]	{'MESH': 'C112485', 'CAS': ['22910-60-7']}
 e200	chemical	ginkgolide A	['ginkgolides']	{'MESH': 'C477042'}
-e201	chemical	ginkgolide B	[]	{'MESH': 'C045856'}
-e202	chemical	ginkgolide C	[]	{'MESH': 'C058295'}
+e201	chemical	ginkgolide B	[]	{'MESH': 'C045856', 'CAS': ['99796-69-7']}
+e202	chemical	ginkgolide C	[]	{'MESH': 'C058295', 'CAS': ['15291-76-6']}
 e203	chemical	Ginkgolides	[]	{'MESH': 'D046934'}
 e204	chemical	Ginsenosides	[]	{'MESH': 'D036145'}
 e205	chemical	Glucans	[]	{'MESH': 'D005936'}
 e206	chemical	glucoraphanin	[]	{'MESH': 'C119494'}
-e207	chemical	Glucose	[]	{'MESH': 'D005947'}
-e208	chemical	glucotropeolin	['glucotropaeolin']	{'MESH': 'C060321'}
-e209	chemical	Glycerol	[]	{'MESH': 'D005990'}
-e210	chemical	Guanine	[]	{'MESH': 'D006147'}
+e207	chemical	Glucose	[]	{'MESH': 'D005947', 'CAS': ['50-99-7', '77938-63-7']}
+e208	chemical	glucotropeolin	['glucotropaeolin']	{'MESH': 'C060321', 'CAS': ['499-26-3']}
+e209	chemical	Glycerol	[]	{'MESH': 'D005990', 'CAS': ['56-81-5']}
+e210	chemical	Guanine	[]	{'MESH': 'D006147', 'CAS': ['73-40-5']}
 e211	chemical	Halogens	['halogen']	{'MESH': 'D006219'}
-e212	chemical	Heme	[]	{'MESH': 'D006418'}
-e213	chemical	hemicellulose	[]	{'MESH': 'C007916'}
-e214	chemical	Hemocyanins	[]	{'MESH': 'D006433'}
-e215	chemical	Hesperidin	[]	{'MESH': 'D006569'}
-e216	chemical	Histamine	[]	{'MESH': 'D006632'}
+e212	chemical	Heme	[]	{'MESH': 'D006418', 'CAS': ['14875-96-8']}
+e213	chemical	hemicellulose	[]	{'MESH': 'C007916', 'CAS': ['8024-50-8']}
+e214	chemical	Hemocyanins	[]	{'MESH': 'D006433', 'CAS': ['9013-72-3']}
+e215	chemical	Hesperidin	[]	{'MESH': 'D006569', 'CAS': ['520-26-3']}
+e216	chemical	Histamine	[]	{'MESH': 'D006632', 'CAS': ['51-45-6']}
 e217	chemical	Hydrocarbons	[]	{'MESH': 'D006838'}
-e218	chemical	Hydrogen Cyanide	[]	{'MESH': 'D006856'}
-e219	chemical	bradykinin, hydroxy-Pro(3)-	['hydroxyproline']	{'MESH': 'C021698'}
-e220	chemical	hydroxysafflor yellow A	['hydroxysafflor']	{'MESH': 'C085278'}
-e221	chemical	3,4-dihydroxyphenylethanol	['hydroxytyrosol']	{'MESH': 'C005975'}
+e218	chemical	Hydrogen Cyanide	[]	{'MESH': 'D006856', 'CAS': ['74-90-8']}
+e219	chemical	bradykinin, hydroxy-Pro(3)-	['hydroxyproline']	{'MESH': 'C021698', 'CAS': ['37642-65-2']}
+e220	chemical	hydroxysafflor yellow A	['hydroxysafflor']	{'MESH': 'C085278', 'CAS': ['146087-19-6']}
+e221	chemical	3,4-dihydroxyphenylethanol	['hydroxytyrosol']	{'MESH': 'C005975', 'CAS': ['10597-60-1']}
 e222	chemical	Indole Alkaloids	[]	{'MESH': 'D026121'}
-e223	chemical	indole	[]	{'MESH': 'C030374'}
-e224	chemical	indole-3-acetonitrile	[]	{'MESH': 'C016516'}
-e225	chemical	Inositol	[]	{'MESH': 'D007294'}
-e226	chemical	Iodine	[]	{'MESH': 'D007455'}
+e223	chemical	indole	[]	{'MESH': 'C030374', 'CAS': ['120-72-9']}
+e224	chemical	indole-3-acetonitrile	[]	{'MESH': 'C016516', 'CAS': ['771-51-7']}
+e225	chemical	Inositol	[]	{'MESH': 'D007294', 'CAS': ['6917-35-7']}
+e226	chemical	Iodine	[]	{'MESH': 'D007455', 'CAS': ['7553-56-2']}
 e227	chemical	Iridoid Glycosides	[]	{'MESH': 'D057889'}
 e228	chemical	Isoflavones	['isoflavone']	{'MESH': 'D007529'}
-e229	chemical	isopimpinellin	[]	{'MESH': 'C015304'}
-e230	chemical	isoprene	[]	{'MESH': 'C005059'}
-e231	chemical	3-methylquercetin	['Isorhamnetin']	{'MESH': 'C047368'}
-e232	chemical	isothiocyanic acid	['isothiocyanate']	{'MESH': 'C037152'}
-e233	chemical	isovitexin	[]	{'MESH': 'C049772'}
-e234	chemical	juglone	[]	{'MESH': 'C005134'}
-e235	chemical	kahweol	[]	{'MESH': 'C053401'}
-e236	chemical	camelliaside B	['kampferol']	{'MESH': 'C070688'}
+e229	chemical	isopimpinellin	[]	{'MESH': 'C015304', 'CAS': ['482-27-9']}
+e230	chemical	isoprene	[]	{'MESH': 'C005059', 'CAS': ['78-79-5']}
+e231	chemical	3-methylquercetin	['Isorhamnetin']	{'MESH': 'C047368', 'CAS': ['480-19-3']}
+e232	chemical	isothiocyanic acid	['isothiocyanate']	{'MESH': 'C037152', 'CAS': ['3129-90-6']}
+e233	chemical	isovitexin	[]	{'MESH': 'C049772', 'CAS': ['38953-85-4']}
+e234	chemical	juglone	[]	{'MESH': 'C005134', 'CAS': ['481-39-0']}
+e235	chemical	kahweol	[]	{'MESH': 'C053401', 'CAS': ['6894-43-5']}
+e236	chemical	camelliaside B	['kampferol']	{'MESH': 'C070688', 'CAS': ['131573-90-5']}
 e237	chemical	Ketones	['ketone']	{'MESH': 'D007659'}
-e238	chemical	Lactic Acid	[]	{'MESH': 'D019344'}
+e238	chemical	Lactic Acid	[]	{'MESH': 'D019344', 'CAS': ['50-21-5']}
 e239	chemical	Lactones	['lactones, acids']	{'MESH': 'D007783'}
 e240	chemical	lactucin	[]	{'MESH': 'C516715'}
 e241	chemical	lariciresinol	[]	{'MESH': 'C060282'}
-e242	chemical	Lidocaine	[]	{'MESH': 'D008012'}
-e243	chemical	lignoceric acid	['lignoceric acids']	{'MESH': 'C010210'}
+e242	chemical	Lidocaine	[]	{'MESH': 'D008012', 'CAS': ['73-78-9', '137-58-6']}
+e243	chemical	lignoceric acid	['lignoceric acids']	{'MESH': 'C010210', 'CAS': ['557-59-5', '18206-16-1']}
 e244	chemical	limonene	[]	{'MESH': 'C008281'}
-e245	chemical	linalool	[]	{'MESH': 'C018584'}
-e246	chemical	linamarin	['glucoside linamarin', 'glucosides linamarin']	{'MESH': 'C005091'}
+e245	chemical	linalool	[]	{'MESH': 'C018584', 'CAS': ['78-70-6']}
+e246	chemical	linamarin	['glucoside linamarin', 'glucosides linamarin']	{'MESH': 'C005091', 'CAS': ['554-35-8']}
 e247	chemical	lotaustralin	[]	{'MESH': 'C001556'}
-e248	chemical	Lovastatin	[]	{'MESH': 'D008148'}
-e249	chemical	Luteolin	[]	{'MESH': 'D047311'}
+e248	chemical	Lovastatin	[]	{'MESH': 'D008148', 'CAS': ['75330-75-5']}
+e249	chemical	Luteolin	[]	{'MESH': 'D047311', 'CAS': ['491-70-3']}
 e250	chemical	luteolin-7-O-glucoside	[]	{'MESH': 'C529813'}
 e251	chemical	tyrosyl-lysine	['lysine']	{'MESH': 'C114808'}
-e252	chemical	Ferrosoferric Oxide	['magnetite']	{'MESH': 'D052203'}
-e253	chemical	malvidin-3-glucoside	['malvidin 3-glucoside']	{'MESH': 'C458419'}
-e254	chemical	mangiferin	[]	{'MESH': 'C013592'}
-e255	chemical	Mannose	[]	{'MESH': 'D008358'}
-e256	chemical	matairesinol	[]	{'MESH': 'C068935'}
-e257	chemical	menthofuran	[]	{'MESH': 'C054487'}
-e258	chemical	Methionine	[]	{'MESH': 'D008715'}
-e259	chemical	4-methoxycinnamic acid	['methoxycinnamic acid']	{'MESH': 'C063318'}
-e260	chemical	methyleugenol	['methyl eugenol']	{'MESH': 'C005223'}
+e252	chemical	Ferrosoferric Oxide	['magnetite']	{'MESH': 'D052203', 'CAS': ['1309-38-2', '1317-61-9']}
+e253	chemical	malvidin-3-glucoside	['malvidin 3-glucoside']	{'MESH': 'C458419', 'CAS': ['7228-78-6']}
+e254	chemical	mangiferin	[]	{'MESH': 'C013592', 'CAS': ['4773-96-0']}
+e255	chemical	Mannose	[]	{'MESH': 'D008358', 'CAS': ['31103-86-3']}
+e256	chemical	matairesinol	[]	{'MESH': 'C068935', 'CAS': ['580-72-3']}
+e257	chemical	menthofuran	[]	{'MESH': 'C054487', 'CAS': ['494-90-6']}
+e258	chemical	Methionine	[]	{'MESH': 'D008715', 'CAS': ['7005-18-7', '63-68-3']}
+e259	chemical	4-methoxycinnamic acid	['methoxycinnamic acid']	{'MESH': 'C063318', 'CAS': ['5676-64-2', '830-09-1']}
+e260	chemical	methyleugenol	['methyl eugenol']	{'MESH': 'C005223', 'CAS': ['93-15-2']}
 e261	chemical	BRL 1364	['methylenedioxyphenyls']	{'MESH': 'C018178'}
-e262	chemical	methylmercury II	['methylmercury']	{'MESH': 'C030957'}
+e262	chemical	methylmercury II	['methylmercury']	{'MESH': 'C030957', 'CAS': ['22967-92-6']}
 e263	chemical	momordicine I	['momordicine']	{'MESH': 'C506900'}
 e264	chemical	momordicoside A	['momordicosides A']	{'MESH': 'C478919'}
 e265	chemical	monogalactosyldiacylglycerol	['monogalactosyldiacylglycerols']	{'MESH': 'C009909'}
 e266	chemical	tocopherol monoglucoside	['monoglucoside']	{'MESH': 'C460320'}
 e267	chemical	Monosaccharides	['monosaccharide']	{'MESH': 'D009005'}
 e268	chemical	Fatty Acids, Monounsaturated	['monounsaturated fatty acids']	{'MESH': 'D005229'}
-e269	chemical	Morphine	[]	{'MESH': 'D009020'}
-e270	chemical	myricetin	[]	{'MESH': 'C040015'}
-e271	chemical	myristicin	[]	{'MESH': 'C005246'}
+e269	chemical	Morphine	[]	{'MESH': 'D009020', 'CAS': ['57-27-2']}
+e270	chemical	myricetin	[]	{'MESH': 'C040015', 'CAS': ['529-44-2']}
+e271	chemical	myristicin	[]	{'MESH': 'C005246', 'CAS': ['607-91-0']}
 e272	chemical	Naphthoquinones	['naphthoquinone']	{'MESH': 'D009285'}
-e273	chemical	naringenin	[]	{'MESH': 'C005273'}
-e274	chemical	naringin	[]	{'MESH': 'C005274'}
-e275	chemical	neferine	[]	{'MESH': 'C057222'}
+e273	chemical	naringenin	[]	{'MESH': 'C005273', 'CAS': ['480-41-1']}
+e274	chemical	naringin	[]	{'MESH': 'C005274', 'CAS': ['10236-47-2']}
+e275	chemical	neferine	[]	{'MESH': 'C057222', 'CAS': ['2292-16-2']}
 e276	chemical	neomangiferin	[]	{'MESH': 'C442164'}
-e277	chemical	Niacin	[]	{'MESH': 'D009525'}
-e278	chemical	Niacinamide	['nicotinamide']	{'MESH': 'D009536'}
-e279	chemical	Nicotine	[]	{'MESH': 'D009538'}
+e277	chemical	Niacin	[]	{'MESH': 'D009525', 'CAS': ['59-67-6']}
+e278	chemical	Niacinamide	['nicotinamide']	{'MESH': 'D009536', 'CAS': ['98-92-0']}
+e279	chemical	Nicotine	[]	{'MESH': 'D009538', 'CAS': ['54-11-5']}
 e280	chemical	Nicotinic Acids	['nicotinic acid']	{'MESH': 'D009539'}
 e281	chemical	Nitrates	['Nitrate']	{'MESH': 'D009566'}
 e282	chemical	Nitrites	['nitrite']	{'MESH': 'D009573'}
-e283	chemical	Nitrogen	[]	{'MESH': 'D009584'}
-e284	chemical	nobiletin	[]	{'MESH': 'C008661'}
-e285	chemical	1-octacosanol	['octacosanol']	{'MESH': 'C044309'}
+e283	chemical	Nitrogen	[]	{'MESH': 'D009584', 'CAS': ['7727-37-9']}
+e284	chemical	nobiletin	[]	{'MESH': 'C008661', 'CAS': ['478-01-3']}
+e285	chemical	1-octacosanol	['octacosanol']	{'MESH': 'C044309', 'CAS': ['557-61-9']}
 e286	chemical	Oligosaccharides	[]	{'MESH': 'D009844'}
 e287	chemical	Fatty Acids, Omega-6	['omega-6 fatty acids']	{'MESH': 'D043371'}
 e288	chemical	Sulfuric Acid Esters	['organic acids', 'organic acid']	{'MESH': 'D013463'}
-e289	chemical	orientin	[]	{'MESH': 'C065886'}
-e290	chemical	Oxalic Acid	[]	{'MESH': 'D019815'}
-e291	chemical	4-anisic acid	['p-anisic acid']	{'MESH': 'C004520'}
-e292	chemical	2-coumaroylquinic acid	['p-coumaroylquinic']	{'MESH': 'C007140'}
-e293	chemical	4-cymene	['p-cymene']	{'MESH': 'C007210'}
-e294	chemical	Palmitic Acid	[]	{'MESH': 'D019308'}
-e295	chemical	peonidin	['peonidins']	{'MESH': 'C473205'}
+e289	chemical	orientin	[]	{'MESH': 'C065886', 'CAS': ['28608-75-5']}
+e290	chemical	Oxalic Acid	[]	{'MESH': 'D019815', 'CAS': ['127-95-7', '547-66-0', '5972-72-5', '14258-49-2', '10043-22-8', '553-91-3', '144-62-7', '15248-76-7', '1113-38-8']}
+e291	chemical	4-anisic acid	['p-anisic acid']	{'MESH': 'C004520', 'CAS': ['100-09-4']}
+e292	chemical	2-coumaroylquinic acid	['p-coumaroylquinic']	{'MESH': 'C007140', 'CAS': ['5746-55-4']}
+e293	chemical	4-cymene	['p-cymene']	{'MESH': 'C007210', 'CAS': ['99-87-6']}
+e294	chemical	Palmitic Acid	[]	{'MESH': 'D019308', 'CAS': ['57-10-3']}
+e295	chemical	peonidin	['peonidins']	{'MESH': 'C473205', 'CAS': ['134-01-0']}
 e296	chemical	Peptides	[]	{'MESH': 'D010455'}
-e297	chemical	petroselinic acid	[]	{'MESH': 'C008820'}
-e298	chemical	petunidin	['petunidins']	{'MESH': 'C473206'}
-e299	chemical	cardanol	['phenol cardanol']	{'MESH': 'C038590'}
-e300	chemical	Phenol	[]	{'MESH': 'D019800'}
+e297	chemical	petroselinic acid	[]	{'MESH': 'C008820', 'CAS': ['4712-34-9']}
+e298	chemical	petunidin	['petunidins']	{'MESH': 'C473206', 'CAS': ['1429-30-7']}
+e299	chemical	cardanol	['phenol cardanol']	{'MESH': 'C038590', 'CAS': ['37330-39-5']}
+e300	chemical	Phenol	[]	{'MESH': 'D019800', 'CAS': ['139-02-6', '108-95-2']}
 e301	chemical	phoenixoside A	[]	{'MESH': 'C571768'}
 e302	chemical	Phospholipids	['phospholipid']	{'MESH': 'D010743'}
 e303	chemical	Phosphorous Acids	['phosphorous']	{'MESH': 'D010757'}
-e304	chemical	Vitamin K 1	['phylloquinone']	{'MESH': 'D010837'}
-e305	chemical	Phytol	[]	{'MESH': 'D010836'}
-e306	chemical	3,3',4,5'-tetrahydroxystilbene	['piceatannol']	{'MESH': 'C041525'}
-e307	chemical	Bis-Q	['picrasidine Q']	{'MESH': 'C000295'}
-e308	chemical	pinocamphone	[]	{'MESH': 'C021317'}
+e304	chemical	Vitamin K 1	['phylloquinone']	{'MESH': 'D010837', 'CAS': ['84-80-0']}
+e305	chemical	Phytol	[]	{'MESH': 'D010836', 'CAS': ['150-86-7']}
+e306	chemical	3,3',4,5'-tetrahydroxystilbene	['piceatannol']	{'MESH': 'C041525', 'CAS': ['4339-71-3']}
+e307	chemical	Bis-Q	['picrasidine Q']	{'MESH': 'C000295', 'CAS': ['81931-05-7']}
+e308	chemical	pinocamphone	[]	{'MESH': 'C021317', 'CAS': ['547-60-4']}
 e309	chemical	piperitone	[]	{'MESH': 'C496656'}
-e310	chemical	plantamajoside	[]	{'MESH': 'C421173'}
+e310	chemical	plantamajoside	[]	{'MESH': 'C421173', 'CAS': ['104777-68-6']}
 e311	chemical	Polyacetylene Polymer	['polyacetylenes']	{'MESH': 'D000078789'}
-e312	chemical	Polyynes	['polyacetylenes']	{'MESH': 'D053279'}
+e312	chemical	Polyynes	['polyacetylenes']	{'MESH': 'D053279', 'CAS': ['25067-58-7']}
 e313	chemical	Polyamines	[]	{'MESH': 'D011073'}
-e314	chemical	Potassium	[]	{'MESH': 'D011188'}
-e315	chemical	procyanidin	['procyanidins', 'procyanidin A']	{'MESH': 'C017674'}
-e316	chemical	Progesterone	[]	{'MESH': 'D011374'}
-e317	chemical	Phenylpropanolamine	['prolamines']	{'MESH': 'D010665'}
+e314	chemical	Potassium	[]	{'MESH': 'D011188', 'CAS': ['7440-09-7']}
+e315	chemical	procyanidin	['procyanidin A', 'procyanidins']	{'MESH': 'C017674', 'CAS': ['4852-22-6']}
+e316	chemical	Progesterone	[]	{'MESH': 'D011374', 'CAS': ['57-83-0']}
+e317	chemical	Phenylpropanolamine	['prolamines']	{'MESH': 'D010665', 'CAS': ['14838-15-4']}
 e318	chemical	isoleucyl-prolyl-proline	['proline']	{'MESH': 'C489032'}
 e319	chemical	psoralen A	['psoralen']	{'MESH': 'C515719'}
-e320	chemical	pterostilbene	"[""3',5'-dimethoxy-4E-stilbenol""]"	{'MESH': 'C107773'}
+e320	chemical	pterostilbene	"[""3',5'-dimethoxy-4E-stilbenol""]"	{'MESH': 'C107773', 'CAS': ['537-42-8']}
 e321	chemical	1,2,4-tri-O-galloyl-3,6-hexahydroxydiphenoylglucose	['punicafolin']	{'MESH': 'C501662'}
 e322	chemical	punicic acid	[]	{'MESH': 'C519714'}
 e323	chemical	Purines	['purine']	{'MESH': 'D011687'}
 e324	chemical	quercetin 3-O-glucuronide	['quercetin glucuronide']	{'MESH': 'C443401'}
 e325	chemical	quercetin-3-O-rutinoside	[]	{'MESH': 'C404204'}
-e326	chemical	quercitrin	['quercetrin']	{'MESH': 'C012526'}
-e327	chemical	Quinic Acid	[]	{'MESH': 'D011801'}
+e326	chemical	quercitrin	['quercetrin']	{'MESH': 'C012526', 'CAS': ['522-12-3']}
+e327	chemical	Quinic Acid	[]	{'MESH': 'D011801', 'CAS': ['77-95-2']}
 e328	chemical	raphanusanin	['raphanusanins']	{'MESH': 'C414546'}
 e329	chemical	Resveratrol	[]	{'MESH': 'D000077185'}
 e330	chemical	rhamnogalacturonan I	['rhamnogalacturonan-I']	{'MESH': 'C042491'}
-e331	chemical	Rhamnose	[]	{'MESH': 'D012210'}
+e331	chemical	Rhamnose	[]	{'MESH': 'D012210', 'CAS': ['10485-94-6']}
 e332	chemical	rosmanol	[]	{'MESH': 'C465581'}
-e333	chemical	Rotenone	[]	{'MESH': 'D012402'}
+e333	chemical	Rotenone	[]	{'MESH': 'D012402', 'CAS': ['83-79-4']}
 e334	chemical	salcolin A	['salcolins']	{'MESH': 'C000590571'}
-e335	chemical	Salicylic Acid	[]	{'MESH': 'D020156'}
+e335	chemical	Salicylic Acid	[]	{'MESH': 'D020156', 'CAS': ['69-72-7']}
 e336	chemical	Sapogenins	[]	{'MESH': 'D012502'}
-e337	chemical	Scopoletin	[]	{'MESH': 'D012603'}
-e338	chemical	Selenious Acid	['selenite']	{'MESH': 'D020887'}
-e339	chemical	cholecystokinin C-terminal flanking peptide	['serine']	{'MESH': 'C047902'}
-e340	chemical	sesamin	[]	{'MESH': 'C054125'}
+e337	chemical	Scopoletin	[]	{'MESH': 'D012603', 'CAS': ['92-61-5']}
+e338	chemical	Selenious Acid	['selenite']	{'MESH': 'D020887', 'CAS': ['7783-00-8']}
+e339	chemical	cholecystokinin C-terminal flanking peptide	['serine']	{'MESH': 'C047902', 'CAS': ['101162-62-3']}
+e340	chemical	sesamin	[]	{'MESH': 'C054125', 'CAS': ['607-80-7']}
 e341	chemical	Sialic Acids	['sialic acid']	{'MESH': 'D012794'}
-e342	chemical	sinalbin	[]	{'MESH': 'C003313'}
-e343	chemical	sitoindoside II	[]	{'MESH': 'C093657'}
-e344	chemical	Sodium	[]	{'MESH': 'D012964'}
-e345	chemical	solasodine	['solasodine glycosides']	{'MESH': 'C012037'}
-e346	chemical	Spermine	[]	{'MESH': 'D013096'}
-e347	chemical	Squalene	[]	{'MESH': 'D013185'}
-e348	chemical	squamocin	[]	{'MESH': 'C059660'}
-e349	chemical	stearic acid	[]	{'MESH': 'C031183'}
+e342	chemical	sinalbin	[]	{'MESH': 'C003313', 'CAS': ['20196-67-2']}
+e343	chemical	sitoindoside II	[]	{'MESH': 'C093657', 'CAS': ['53657-29-7']}
+e344	chemical	Sodium	[]	{'MESH': 'D012964', 'CAS': ['7440-23-5']}
+e345	chemical	solasodine	['solasodine glycosides']	{'MESH': 'C012037', 'CAS': ['126-17-0']}
+e346	chemical	Spermine	[]	{'MESH': 'D013096', 'CAS': ['71-44-3']}
+e347	chemical	Squalene	[]	{'MESH': 'D013185', 'CAS': ['111-02-4']}
+e348	chemical	squamocin	[]	{'MESH': 'C059660', 'CAS': ['120298-30-8']}
+e349	chemical	stearic acid	[]	{'MESH': 'C031183', 'CAS': ['57-11-4']}
 e350	chemical	Estrogens, Non-Steroidal	['steroidal glycoalkaloids']	{'MESH': 'D004968'}
 e351	chemical	Steroids	['steroid']	{'MESH': 'D013256'}
-e352	chemical	Stigmasterol	[]	{'MESH': 'D013265'}
-e353	chemical	Sucrose	[]	{'MESH': 'D013395'}
+e352	chemical	Stigmasterol	[]	{'MESH': 'D013265', 'CAS': ['83-48-7']}
+e353	chemical	Sucrose	[]	{'MESH': 'D013395', 'CAS': ['57-50-1']}
 e354	chemical	Sugar Alcohols	['sugar alcohol']	{'MESH': 'D013402'}
-e355	chemical	Sulfapyridine	[]	{'MESH': 'D013427'}
-e356	chemical	A73025	['sulfated glycosaminoglycan']	{'MESH': 'C013786'}
-e357	chemical	Amino Acids, Sulfur	['sulfur amino-acids', 'sulfur amino acids']	{'MESH': 'D000603'}
-e358	chemical	syringic acid	[]	{'MESH': 'C001945'}
-e359	chemical	tartaric acid	['tartaric acids']	{'MESH': 'C029768'}
-e360	chemical	Taurine	[]	{'MESH': 'D013654'}
-e361	chemical	terpinolene	[]	{'MESH': 'C027009'}
-e362	chemical	Testosterone	[]	{'MESH': 'D013739'}
+e355	chemical	Sulfapyridine	[]	{'MESH': 'D013427', 'CAS': ['144-83-2']}
+e356	chemical	A73025	['sulfated glycosaminoglycan']	{'MESH': 'C013786', 'CAS': ['64082-61-7']}
+e357	chemical	Amino Acids, Sulfur	['sulfur amino acids', 'sulfur amino-acids']	{'MESH': 'D000603'}
+e358	chemical	syringic acid	[]	{'MESH': 'C001945', 'CAS': ['530-57-4']}
+e359	chemical	tartaric acid	['tartaric acids']	{'MESH': 'C029768', 'CAS': ['526-83-0']}
+e360	chemical	Taurine	[]	{'MESH': 'D013654', 'CAS': ['107-35-7', '22890-34-2']}
+e361	chemical	terpinolene	[]	{'MESH': 'C027009', 'CAS': ['65997-00-4', '586-62-9']}
+e362	chemical	Testosterone	[]	{'MESH': 'D013739', 'CAS': ['58-22-0']}
 e363	chemical	Tetralones	['tetralone']	{'MESH': 'D044024'}
-e364	chemical	theaflavin	['theaflavins']	{'MESH': 'C056068'}
-e365	chemical	thiocyanate	[]	{'MESH': 'C031760'}
+e364	chemical	theaflavin	['theaflavins']	{'MESH': 'C056068', 'CAS': ['4670-05-7']}
+e365	chemical	thiocyanate	[]	{'MESH': 'C031760', 'CAS': ['302-04-5', '34504-17-1']}
 e366	chemical	Thionins	[]	{'MESH': 'D054809'}
-e367	chemical	Thymol	[]	{'MESH': 'D013943'}
-e368	chemical	thymoquinone	[]	{'MESH': 'C003466'}
-e369	chemical	Thyroxine	[]	{'MESH': 'D013974'}
-e370	chemical	anethole	['(E)-anethole', 'trans-anethole']	{'MESH': 'C006578'}
-e371	chemical	trigonelline	[]	{'MESH': 'C009560'}
-e372	chemical	Triiodothyronine	[]	{'MESH': 'D014284'}
-e373	chemical	4-hydroxyphenylethanol	['tyrosol']	{'MESH': 'C011867'}
+e367	chemical	Thymol	[]	{'MESH': 'D013943', 'CAS': ['89-83-8']}
+e368	chemical	thymoquinone	[]	{'MESH': 'C003466', 'CAS': ['490-91-5']}
+e369	chemical	Thyroxine	[]	{'MESH': 'D013974', 'CAS': ['51-48-9', '7488-70-2']}
+e370	chemical	anethole	['(E)-anethole', 'trans-anethole']	{'MESH': 'C006578', 'CAS': ['104-46-1']}
+e371	chemical	trigonelline	[]	{'MESH': 'C009560', 'CAS': ['535-83-1']}
+e372	chemical	Triiodothyronine	[]	{'MESH': 'D014284', 'CAS': ['6893-02-3']}
+e373	chemical	4-hydroxyphenylethanol	['tyrosol']	{'MESH': 'C011867', 'CAS': ['501-94-0']}
 e374	chemical	Umbelliferones	['umbelliferone']	{'MESH': 'D014468'}
-e375	chemical	Urea	[]	{'MESH': 'D014508'}
-e376	chemical	vernolic acid	['vernolic acids']	{'MESH': 'C081136'}
-e377	chemical	Vitamin D	['vitamin D']	{'MESH': 'D014807'}
-e378	chemical	Ergocalciferols	['vitamin D2']	{'MESH': 'D004872'}
-e379	chemical	Vitamin E	['vitamin E']	{'MESH': 'D014810'}
-e380	chemical	vitexin	[]	{'MESH': 'C032731'}
-e381	chemical	Water	[]	{'MESH': 'D014867'}
-e382	chemical	xanthoangelol	[]	{'MESH': 'C068244'}
+e375	chemical	Urea	[]	{'MESH': 'D014508', 'CAS': ['57-13-6']}
+e376	chemical	vernolic acid	['vernolic acids']	{'MESH': 'C081136', 'CAS': ['503-07-1']}
+e377	chemical	Vitamin D	['vitamin D']	{'MESH': 'D014807', 'CAS': ['1406-16-2']}
+e378	chemical	Ergocalciferols	['vitamin D2']	{'MESH': 'D004872', 'CAS': ['50-14-6']}
+e379	chemical	Vitamin E	['vitamin E']	{'MESH': 'D014810', 'CAS': ['1406-18-4']}
+e380	chemical	vitexin	[]	{'MESH': 'C032731', 'CAS': ['521-33-5']}
+e381	chemical	Water	[]	{'MESH': 'D014867', 'CAS': ['7732-18-5']}
+e382	chemical	xanthoangelol	[]	{'MESH': 'C068244', 'CAS': ['62949-76-2']}
 e383	chemical	Xanthophylls	[]	{'MESH': 'D024341'}
-e384	chemical	Methoxsalen	['xanthotoxin']	{'MESH': 'D008730'}
+e384	chemical	Methoxsalen	['xanthotoxin']	{'MESH': 'D008730', 'CAS': ['298-81-7']}
 e385	chemical	Xylose	[]	{'MESH': 'D014994'}
 e386	chemical	Zeaxanthins	['zeaxanthin']	{'MESH': 'D065146'}
 e387	organism	Jew's ear	['Auricularia auricula-judae']	{'NCBI_taxonomy': '29892'}
@@ -391,41 +391,41 @@ e388	organism	Albacore tuna	['Thunnus alalunga', 'albacore']	{'NCBI_taxonomy': '
 e389	organism	American lobster	['Homarus americanus']	{'NCBI_taxonomy': '6706'}
 e390	organism	American pokeweed	['Phytolacca americana']	{'NCBI_taxonomy': '3527'}
 e391	organism	Anise	['Pimpinella anisum']	{'NCBI_taxonomy': '271192'}
-e392	organism	Atlantic herring	['Clupea harengus', 'Clupea harengus harengus']	{'NCBI_taxonomy': '7950'}
+e392	organism	Atlantic herring	['Clupea harengus harengus', 'Clupea harengus']	{'NCBI_taxonomy': '7950'}
 e393	organism	Atlantic mackerel	['Scomber scombrus']	{'NCBI_taxonomy': '13677'}
 e394	organism	Bearded seal	['Erignathus barbatus', 'bearded seals']	{'NCBI_taxonomy': '39304'}
 e395	organism	Bluefish	['Pomatomus saltatrix']	{'NCBI_taxonomy': '75034'}
-e396	organism	Balaena mysticetus	['Bowhead whale', 'bowhead', 'bowhead whales']	{'NCBI_taxonomy': '27602'}
+e396	organism	Bowhead whale	['Balaena mysticetus', 'bowhead whales', 'bowhead']	{'NCBI_taxonomy': '27602'}
 e397	organism	Buffalo	['Water buffalo', 'Bubalus bubalis']	{'NCBI_taxonomy': '89462'}
 e398	organism	Calabash	['bottle gourd', 'Lagenaria siceraria']	{'NCBI_taxonomy': '3668'}
 e399	organism	Caraway	['Carum carvi', 'Carum carvi L']	{'NCBI_taxonomy': '48032'}
 e400	organism	Cardamom	['Elettaria cardamomum']	{'NCBI_taxonomy': '105181'}
-e401	organism	Bos taurus	['Cattle (Beef, Veal)']	{'NCBI_taxonomy': '9913'}
-e402	organism	Chia	['Salvia hispanica', 'Salvia hispanica L']	{'NCBI_taxonomy': '49212'}
+e401	organism	Cattle (Beef, Veal)	['Bos taurus']	{'NCBI_taxonomy': '9913'}
+e402	organism	Chia	['Salvia hispanica L', 'Salvia hispanica']	{'NCBI_taxonomy': '49212'}
 e403	organism	Chinese water chestnut	['Eleocharis dulcis']	{'NCBI_taxonomy': '110284'}
 e404	organism	Cloud ear fungus	['Auricularia polytricha']	{'NCBI_taxonomy': '29893'}
 e405	organism	Coalfish pollock	['Pollachius virens', 'pollock', 'saithe']	{'NCBI_taxonomy': '8060'}
 e406	organism	Coconut	['Cocos nucifera']	{'NCBI_taxonomy': '13894'}
-e407	organism	Common bean	['Phaseolus vulgaris', 'kidney bean']	{'NCBI_taxonomy': '3885'}
+e407	organism	Common bean	['kidney bean', 'Phaseolus vulgaris']	{'NCBI_taxonomy': '3885'}
 e408	organism	Common dab	['Limanda limanda']	{'NCBI_taxonomy': '27771'}
 e409	organism	Common grape	['Vitis vinifera']	{'NCBI_taxonomy': '29760'}
 e410	organism	Cusk	['tusk', 'Brosme brosme']	{'NCBI_taxonomy': '81638'}
-e411	organism	F. carica	['Ficus carica', 'Fig']	{'NCBI_taxonomy': '3494'}
+e411	organism	Fig	['Ficus carica', 'F. carica']	{'NCBI_taxonomy': '3494'}
 e412	organism	Florida pompano	['Trachinotus carolinus']	{'NCBI_taxonomy': '173342'}
 e413	organism	Freshwater drum	['Aplodinotus grunniens']	{'NCBI_taxonomy': '225389'}
 e414	organism	Garden cress	['Lepidium sativum', 'Lepidium sativum L']	{'NCBI_taxonomy': '33125'}
 e415	organism	Gooseberry	['Ribes uva-crispa']	{'NCBI_taxonomy': '135518'}
 e416	organism	Guava	['Psidium guajava']	{'NCBI_taxonomy': '120290'}
 e417	organism	Haddock	['Melanogrammus aeglefinus']	{'NCBI_taxonomy': '8056'}
-e418	organism	Armoracia rusticana	['Horseradish']	{'NCBI_taxonomy': '3704'}
+e418	organism	Horseradish	['Armoracia rusticana']	{'NCBI_taxonomy': '3704'}
 e419	organism	Hyssop	['Hyssopus officinalis']	{'NCBI_taxonomy': '39324'}
 e420	organism	Jerusalem artichoke	['Helianthus tuberosus']	{'NCBI_taxonomy': '4233'}
-e421	organism	Corchorus olitorius	['Jute']	{'NCBI_taxonomy': '93759'}
+e421	organism	Jute	['Corchorus olitorius']	{'NCBI_taxonomy': '93759'}
 e422	organism	King mackerel	['Scomberomorus cavalla']	{'NCBI_taxonomy': '13679'}
 e423	organism	Lake trout	['Salvelinus namaycush']	{'NCBI_taxonomy': '8040'}
-e424	organism	Lemon thyme	['T. pulegioides', 'Thymus pulegioides']	{'NCBI_taxonomy': '751873'}
+e424	organism	Lemon thyme	['Thymus pulegioides', 'T. pulegioides']	{'NCBI_taxonomy': '751873'}
 e425	organism	Lettuce	['Lactuca sativa']	{'NCBI_taxonomy': '4236'}
-e426	organism	Eriobotrya japonica	['Loquat']	{'NCBI_taxonomy': '32224'}
+e426	organism	Loquat	['Eriobotrya japonica']	{'NCBI_taxonomy': '32224'}
 e427	organism	Northern bluefin tuna	['Thunnus thynnus', 'Atlantic bluefin tuna']	{'NCBI_taxonomy': '8237'}
 e428	organism	Northern pike	['Esox lucius']	{'NCBI_taxonomy': '8010'}
 e429	organism	Norway lobster	['Nephrops norvegicus']	{'NCBI_taxonomy': '6829'}
@@ -436,46 +436,46 @@ e433	organism	Pak choy	['Brassica rapa var. chinensis', 'bok choy']	{'NCBI_taxon
 e434	organism	Parsley	['Petroselinum crispum']	{'NCBI_taxonomy': '4043'}
 e435	organism	Parsnip	['Parsnips', 'Pastinaca sativa']	{'NCBI_taxonomy': '4041'}
 e436	organism	Pepper (Spice)	['Piper nigrum']	{'NCBI_taxonomy': '13216'}
-e437	organism	Capsicum annuum	['Pepper']	{'NCBI_taxonomy': '4072'}
-e438	organism	Citrus latifolia	['Persian lime']	{'NCBI_taxonomy': '200541'}
+e437	organism	Pepper	['Capsicum annuum']	{'NCBI_taxonomy': '4072'}
+e438	organism	Persian lime	['Citrus latifolia']	{'NCBI_taxonomy': '200541'}
 e439	organism	Pheasant	['Phasianus colchicus']	{'NCBI_taxonomy': '9054'}
 e440	organism	Pitanga	['Eugenia uniflora', 'Eugenia uniflora L']	{'NCBI_taxonomy': '119951'}
-e441	organism	Origanum onites	['Pot marjoram']	{'NCBI_taxonomy': '452416'}
+e441	organism	Pot marjoram	['Origanum onites']	{'NCBI_taxonomy': '452416'}
 e442	organism	Pumpkinseed sunfish	['Lepomis gibbosus']	{'NCBI_taxonomy': '270329'}
-e443	organism	Portulaca oleracea	['Portulaca oleracea L', 'Purslane']	{'NCBI_taxonomy': '46147'}
+e443	organism	Purslane	['Portulaca oleracea L', 'Portulaca oleracea']	{'NCBI_taxonomy': '46147'}
 e444	organism	Rainbow smelt	['Osmerus mordax']	{'NCBI_taxonomy': '8014'}
-e445	organism	Oncorhynchus mykiss	['Rainbow trout']	{'NCBI_taxonomy': '8022'}
+e445	organism	Rainbow trout	['Oncorhynchus mykiss']	{'NCBI_taxonomy': '8022'}
 e446	organism	Rapini	['Brassica ruvo']	{'NCBI_taxonomy': '1204434'}
 e447	organism	Red king crab	['Paralithodes camtschaticus']	{'NCBI_taxonomy': '6741'}
-e448	organism	Phoca hispida	['Pusa hispida', 'Ringed seal', 'ringed seals']	{'NCBI_taxonomy': '9718'}
+e448	organism	Ringed seal	['Pusa hispida', 'Phoca hispida', 'ringed seals']	{'NCBI_taxonomy': '9718'}
 e449	organism	Rocket salad (ssp.)	['arugula', 'Eruca vesicaria ssp. sativa']	{'NCBI_taxonomy': '29727'}
 e450	organism	Rosemary	['Rosmarinus Officinalis']	{'NCBI_taxonomy': '39367'}
 e451	organism	Rowal	['P. edule', 'Pangium edule']	{'NCBI_taxonomy': '112823'}
-e452	organism	Metroxylon sagu	['Sago palm']	{'NCBI_taxonomy': '93297'}
-e453	organism	Amelanchier alnifolia	['Saskatoon berry']	{'NCBI_taxonomy': '32219'}
+e452	organism	Sago palm	['Metroxylon sagu']	{'NCBI_taxonomy': '93297'}
+e453	organism	Saskatoon berry	['Amelanchier alnifolia']	{'NCBI_taxonomy': '32219'}
 e454	organism	Sesame	['Sesamum orientale']	{'NCBI_taxonomy': '4182'}
 e455	organism	Sesbania flower	['sesbania', 'Sesbania bispinosa']	{'NCBI_taxonomy': '485725'}
 e456	organism	Shea tree	['Vitellaria paradoxa']	{'NCBI_taxonomy': '292385'}
-e457	organism	Ovis aries	['Sheep (Mutton, Lamb)']	{'NCBI_taxonomy': '9940'}
+e457	organism	Sheep (Mutton, Lamb)	['Ovis aries']	{'NCBI_taxonomy': '9940'}
 e458	organism	Sorghum	['Sorghum bicolor']	{'NCBI_taxonomy': '4558'}
 e459	organism	Spelt	['Spelts', 'Triticum spelta']	{'NCBI_taxonomy': '58933'}
 e460	organism	Spot croaker	['Leiostomus xanthurus']	{'NCBI_taxonomy': '59837'}
-e461	organism	Phoca largha	['Spotted seal', 'spotted seals']	{'NCBI_taxonomy': '39090'}
+e461	organism	Spotted seal	['Phoca largha', 'spotted seals']	{'NCBI_taxonomy': '39090'}
 e462	organism	Steller sea lion	['Eumetopias jubatus', 'Steller sea lions']	{'NCBI_taxonomy': '34886'}
-e463	organism	Psidium cattleianum	['Strawberry guava']	{'NCBI_taxonomy': '375274'}
+e463	organism	Strawberry guava	['Psidium cattleianum']	{'NCBI_taxonomy': '375274'}
 e464	organism	Striped bass	['Morone saxatilis']	{'NCBI_taxonomy': '34816'}
 e465	organism	Swamp cabbage	['Ipomoea aquatica', 'ipomoea aquatica']	{'NCBI_taxonomy': '89636'}
-e466	organism	Origanum majorana	['Sweet marjoram']	{'NCBI_taxonomy': '268884'}
-e467	organism	Artemisia dracunculus	['Artemisia dracunculus L', 'Tarragon']	{'NCBI_taxonomy': '72341'}
+e466	organism	Sweet marjoram	['Origanum majorana']	{'NCBI_taxonomy': '268884'}
+e467	organism	Tarragon	['Artemisia dracunculus', 'Artemisia dracunculus L']	{'NCBI_taxonomy': '72341'}
 e468	organism	Turbot	['Scophthalmus maximus']	{'NCBI_taxonomy': '52904'}
 e469	organism	Wakame	['Undaria pinnatifida']	{'NCBI_taxonomy': '74381'}
-e470	organism	Sander vitreus	['Walleye']	{'NCBI_taxonomy': '283036'}
-e471	organism	Odobenus rosmarus	['Walrus']	{'NCBI_taxonomy': '9707'}
+e470	organism	Walleye	['Sander vitreus']	{'NCBI_taxonomy': '283036'}
+e471	organism	Walrus	['Odobenus rosmarus']	{'NCBI_taxonomy': '9707'}
 e472	organism	Wasabi	['Wasabia japonica']	{'NCBI_taxonomy': '75806'}
-e473	organism	Sinapis alba	['White mustard', 'yellow mustard']	{'NCBI_taxonomy': '3728'}
-e474	organism	A. ampeloprasum L. var	['Allium ampeloprasum', 'Wild leek', 'leek']	{'NCBI_taxonomy': '4681'}
-e475	organism	Psophocarpus tetragonolobus	['Winged bean']	{'NCBI_taxonomy': '3891'}
-e476	organism	Satureja montana	['Winter savory']	{'NCBI_taxonomy': '49988'}
+e473	organism	White mustard	['Sinapis alba', 'yellow mustard']	{'NCBI_taxonomy': '3728'}
+e474	organism	Wild leek	['A. ampeloprasum L. var', 'Allium ampeloprasum', 'leek']	{'NCBI_taxonomy': '4681'}
+e475	organism	Winged bean	['Psophocarpus tetragonolobus']	{'NCBI_taxonomy': '3891'}
+e476	organism	Winter savory	['Satureja montana']	{'NCBI_taxonomy': '49988'}
 e477	organism	Yellow pond-lily	['Nuphar lutea']	{'NCBI_taxonomy': '77113'}
 e478	organism	Yellowtail amberjack	['Seriola lalandi']	{'NCBI_taxonomy': '302047'}
 e479	organism_with_part	Acerola - fruit	['Malpighia emarginata - fruit']	{'NCBI_taxonomy': '151847'}
@@ -496,7 +496,7 @@ e493	organism_with_part	Barley - leaf	['Hordeum vulgare - leaf']	{'NCBI_taxonomy
 e494	organism_with_part	Beluga whale - skin	['Delphinapterus leucas - skin', 'beluga - skin']	{'NCBI_taxonomy': '9749'}
 e495	organism_with_part	Bilberry - fruit	['V. myrtillus - fruit', 'Vaccinium myrtillus - fruit']	{'NCBI_taxonomy': '180763'}
 e496	organism_with_part	Bitter gourd - seed	['Momordica charantia - seed']	{'NCBI_taxonomy': '3673'}
-e497	organism_with_part	Aronia melanocarpa - berry	['Black chokeberry - berry', 'Photinia melanocarpa - berry']	{'NCBI_taxonomy': '661339'}
+e497	organism_with_part	Black chokeberry - berry	['Photinia melanocarpa - berry', 'Aronia melanocarpa - berry']	{'NCBI_taxonomy': '661339'}
 e498	organism_with_part	Black chokeberry - fruit	['Photinia melanocarpa - fruit']	{'NCBI_taxonomy': '661339'}
 e499	organism_with_part	Black crowberry - fruit	['Empetrum nigrum - fruit']	{'NCBI_taxonomy': '191066'}
 e500	organism_with_part	Black elderberry - fruit	['Sambucus nigra - fruit']	{'NCBI_taxonomy': '4202'}
@@ -507,7 +507,7 @@ e504	organism_with_part	Brazil nut - embryo	['Bertholletia excelsa - embryo']	{'
 e505	organism_with_part	Breadfruit - seed	['Artocarpus altilis - seed']	{'NCBI_taxonomy': '194251'}
 e506	organism_with_part	Breadnut tree seed - seed	['Brosimum alicastrum - seed']	{'NCBI_taxonomy': '194253'}
 e507	organism_with_part	Broad bean - hull	['faba bean - hull', 'Vicia faba - hull', 'Vicia faba L - hull']	{'NCBI_taxonomy': '3906'}
-e508	organism_with_part	A. lappa - root	['Arctium lappa - root', 'Arctium lappa L - root', 'Burdock - root']	{'NCBI_taxonomy': '4217'}
+e508	organism_with_part	Burdock - root	['Arctium lappa - root', 'A. lappa - root', 'Arctium lappa L - root']	{'NCBI_taxonomy': '4217'}
 e509	organism_with_part	Burdock - seed	['Arctium lappa L - seed', 'Arctium lappa - seed']	{'NCBI_taxonomy': '4217'}
 e510	organism_with_part	Butternut squash - leaf	['Cucurbita moschata - leaf']	{'NCBI_taxonomy': '3662'}
 e511	organism_with_part	Carob - fruit	['Ceratonia siliqua L - fruit', 'Ceratonia siliqua - fruit']	{'NCBI_taxonomy': '20340'}
@@ -515,7 +515,7 @@ e512	organism_with_part	Carob - pod	['Ceratonia siliqua - pod']	{'NCBI_taxonomy'
 e513	organism_with_part	Carob - seed	['Ceratonia siliqua - seed']	{'NCBI_taxonomy': '20340'}
 e514	organism_with_part	Cashew nut - gum	['cashew - gum', 'Anacardium occidentale - gum']	{'NCBI_taxonomy': '171929'}
 e515	organism_with_part	Cashew nut - testa	['cashew - testa', 'Anacardium occidentale - testa']	{'NCBI_taxonomy': '171929'}
-e516	organism_with_part	Apium graveolens var. dulce - petiole	['Celery stalks - petiole', 'celery - petiole']	{'NCBI_taxonomy': '117781'}
+e516	organism_with_part	Celery stalks - petiole	['celery - petiole', 'Apium graveolens var. dulce - petiole']	{'NCBI_taxonomy': '117781'}
 e517	organism_with_part	Celery stalks - seed	['celery - seed', 'Apium graveolens var. dulce - seed']	{'NCBI_taxonomy': '117781'}
 e518	organism_with_part	Chanterelle - mycelium	['Cantharellus cibarius - mycelium']	{'NCBI_taxonomy': '36066'}
 e519	organism_with_part	Chayote - leaf	['Sechium edule - leaf', 'S. edule - leaf']	{'NCBI_taxonomy': '184140'}
@@ -588,24 +588,24 @@ e585	organism_with_part	Garden tomato - juice	['Solanum lycopersicum - juice', '
 e586	organism_with_part	Garden tomato - wax	['Solanum lycopersicum - wax', 'tomato - wax']	{'NCBI_taxonomy': '4081'}
 e587	organism_with_part	Garland chrysanthemum - leaf	['Chrysanthemum coronarium - leaf', 'Glebionis coronaria - leaf']	{'NCBI_taxonomy': '99038'}
 e588	organism_with_part	Garland chrysanthemum - shoot	['Chrysanthemum coronarium - shoot', 'Chrysanthemum coronarium L - shoot']	{'NCBI_taxonomy': '99038'}
-e589	organism_with_part	Allium sativum - bulb	['Allium sativum L - bulb', 'Allium sativum L. var - bulb', 'Garlic - bulb']	{'NCBI_taxonomy': '4682'}
+e589	organism_with_part	Garlic - bulb	['Allium sativum - bulb', 'Allium sativum L. var - bulb', 'Allium sativum L - bulb']	{'NCBI_taxonomy': '4682'}
 e590	organism_with_part	Garlic - tissue	['Allium sativum - tissue']	{'NCBI_taxonomy': '4682'}
-e591	organism_with_part	German camomile - flower	['German chamomile - flower', 'Matricaria recutita - flower']	{'NCBI_taxonomy': '127986'}
+e591	organism_with_part	German camomile - flower	['Matricaria recutita - flower', 'German chamomile - flower']	{'NCBI_taxonomy': '127986'}
 e592	organism_with_part	Giant butterbur - leaf	['Petasites japonicus - leaf']	{'NCBI_taxonomy': '186965'}
 e593	organism_with_part	Ginger - rhizome	['Zingiber officinale - rhizome']	{'NCBI_taxonomy': '94328'}
 e594	organism_with_part	Ginger - root	['Zingiber officinale - root']	{'NCBI_taxonomy': '94328'}
-e595	organism_with_part	Ginkgo biloba - leaf	['Ginkgo biloba L - leaf', 'Ginkgo nuts - leaf', 'ginkgo - leaf']	{'NCBI_taxonomy': '3311'}
+e595	organism_with_part	Ginkgo nuts - leaf	['Ginkgo biloba L - leaf', 'Ginkgo biloba - leaf', 'ginkgo - leaf']	{'NCBI_taxonomy': '3311'}
 e596	organism_with_part	Gram bean - cotyledon	['Vigna mungo - cotyledon']	{'NCBI_taxonomy': '3915'}
-e597	organism_with_part	Black gram - seed	['Gram bean - seed', 'Vigna mungo - seed', 'Vigna mungo L. Hepper - seed']	{'NCBI_taxonomy': '3915'}
+e597	organism_with_part	Gram bean - seed	['Black gram - seed', 'Vigna mungo L. Hepper - seed', 'Vigna mungo - seed']	{'NCBI_taxonomy': '3915'}
 e598	organism_with_part	Grapefruit/Pummelo hybrid - fruit	['Citrus paradisi X Citrus maxima - fruit', 'grapefruit - fruit']	{'NCBI_taxonomy': '37656'}
 e599	organism_with_part	Grass pea - root	['Lathyrus sativus L - root', 'Lathyrus sativus - root']	{'NCBI_taxonomy': '3860'}
 e600	organism_with_part	Hard wheat - endosperm	['Triticum durum - endosperm', 'durum wheat - endosperm']	{'NCBI_taxonomy': '4567'}
-e601	organism_with_part	Highbush blueberry - fruit	['Vaccinium corymbosum - fruit', 'highbush - fruit']	{'NCBI_taxonomy': '69266'}
+e601	organism_with_part	Highbush blueberry - fruit	['highbush - fruit', 'Vaccinium corymbosum - fruit']	{'NCBI_taxonomy': '69266'}
 e602	organism_with_part	Horseradish tree - flower	['M. oleifera - flower', 'Moringa oleifera - flower']	{'NCBI_taxonomy': '3735'}
 e603	organism_with_part	Horseradish tree - leaf	['Moringa oleifera - leaf']	{'NCBI_taxonomy': '3735'}
 e604	organism_with_part	Jackfruit - seed	['Artocarpus heterophyllus - seed']	{'NCBI_taxonomy': '3489'}
 e605	organism_with_part	Japanese persimmon - fruit	['Diospyros kaki Thunb - fruit', 'Diospyros kaki - fruit']	{'NCBI_taxonomy': '35925'}
-e606	organism_with_part	Diospyros kaki - leaf	['Japanese persimmon - leaf']	{'NCBI_taxonomy': '35925'}
+e606	organism_with_part	Japanese persimmon - leaf	['Diospyros kaki - leaf']	{'NCBI_taxonomy': '35925'}
 e607	organism_with_part	Japanese persimmon - root	['Diospyros kaki - root', 'Diospyros - root']	{'NCBI_taxonomy': '35925'}
 e608	organism_with_part	Japanese persimmon - stem	['Diospyros kaki - stem', 'Diospyros - stem']	{'NCBI_taxonomy': '35925'}
 e609	organism_with_part	Java plum - fruit	['Syzygium cumini - fruit']	{'NCBI_taxonomy': '260142'}
@@ -619,7 +619,7 @@ e616	organism_with_part	Lentils - grain	['Lens culinaris - grain', 'lentil - gra
 e617	organism_with_part	Lichee - seed	['Litchi chinensis - seed']	{'NCBI_taxonomy': '151069'}
 e618	organism_with_part	Lima bean - seed	['Phaseolus lunatus - seed']	{'NCBI_taxonomy': '3884'}
 e619	organism_with_part	Lingonberry - berry	['Vaccinium vitis-idaea - berry', 'Vaccinium - berry']	{'NCBI_taxonomy': '180772'}
-e620	organism_with_part	Dimocarpus longan - tissue	['Longan - tissue']	{'NCBI_taxonomy': '128017'}
+e620	organism_with_part	Longan - tissue	['Dimocarpus longan - tissue']	{'NCBI_taxonomy': '128017'}
 e621	organism_with_part	Lovage - leaf	['Levisticum officinale - leaf']	{'NCBI_taxonomy': '48042'}
 e622	organism_with_part	Lowbush blueberry - rhizome	['Vaccinium angustifolium - rhizome']	{'NCBI_taxonomy': '472369'}
 e623	organism_with_part	Macadamia nut (M. tetraphylla) - leaf	['M. tetraphylla - leaf', 'Macadamia tetraphylla - leaf', 'Macadamia - leaf']	{'NCBI_taxonomy': '512563'}
@@ -636,7 +636,7 @@ e633	organism_with_part	Mammee apple - seed	['Mammea americana - seed', 'M. amer
 e634	organism_with_part	Mammee apple - skin	['Mammea americana - skin', 'M. americana - skin']	{'NCBI_taxonomy': '198777'}
 e635	organism_with_part	Mammee apple - stem	['Mammea americana - stem', 'M. americana - stem']	{'NCBI_taxonomy': '198777'}
 e636	organism_with_part	Mango - fruit	['Mangifera indica - fruit']	{'NCBI_taxonomy': '29780'}
-e637	organism_with_part	M. indica - stem	['Mangifera indica - stem', 'Mango - stem']	{'NCBI_taxonomy': '29780'}
+e637	organism_with_part	Mango - stem	['M. indica - stem', 'Mangifera indica - stem']	{'NCBI_taxonomy': '29780'}
 e638	organism_with_part	Mountain yam - tuber	['D. pentaphylla - tuber', 'Dioscorea pentaphylla - tuber']	{'NCBI_taxonomy': '167592'}
 e639	organism_with_part	Mugwort - shoot	['Artemisia vulgaris - shoot']	{'NCBI_taxonomy': '4220'}
 e640	organism_with_part	Mulberry - leaf	['Morus - leaf']	{'NCBI_taxonomy': '3497'}
@@ -659,7 +659,7 @@ e656	organism_with_part	Papaya - seed	['Carica papaya - seed']	{'NCBI_taxonomy':
 e657	organism_with_part	Passion fruit - fruit	['Passiflora edulis - fruit']	{'NCBI_taxonomy': '78168'}
 e658	organism_with_part	Passion fruit - leaf	['Passiflora edulis - leaf']	{'NCBI_taxonomy': '78168'}
 e659	organism_with_part	Passion fruit - seed	['Passiflora edulis - seed']	{'NCBI_taxonomy': '78168'}
-e660	organism_with_part	Passiflora edulis - stem	['Passiflora edulis Sims - stem', 'Passion fruit - stem']	{'NCBI_taxonomy': '78168'}
+e660	organism_with_part	Passion fruit - stem	['Passiflora edulis Sims - stem', 'Passiflora edulis - stem']	{'NCBI_taxonomy': '78168'}
 e661	organism_with_part	Peach - flower	['Prunus persica - flower']	{'NCBI_taxonomy': '3760'}
 e662	organism_with_part	Peach - juice	['Prunus persica - juice']	{'NCBI_taxonomy': '3760'}
 e663	organism_with_part	Peanut - fruit	['Arachis hypogaea - fruit']	{'NCBI_taxonomy': '3818'}
@@ -676,19 +676,19 @@ e673	organism_with_part	Pomegranate - fruit	['Punica granatum - fruit']	{'NCBI_t
 e674	organism_with_part	Pomegranate - juice	['Punica granatum - juice']	{'NCBI_taxonomy': '22663'}
 e675	organism_with_part	Potato - leaf	['Solanum tuberosum - leaf']	{'NCBI_taxonomy': '4113'}
 e676	organism_with_part	Potato - root	['Solanum tuberosum - root', 'potatoes - root']	{'NCBI_taxonomy': '4113'}
-e677	organism_with_part	Garcinia mangostana - fruit	['Garcinia mangostana L - fruit', 'Mangosteen - fruit', 'Purple mangosteen - fruit']	{'NCBI_taxonomy': '58228'}
+e677	organism_with_part	Purple mangosteen - fruit	['Garcinia mangostana - fruit', 'Garcinia mangostana L - fruit', 'Mangosteen - fruit']	{'NCBI_taxonomy': '58228'}
 e678	organism_with_part	Quince - leaf	['Cydonia oblonga - leaf']	{'NCBI_taxonomy': '36610'}
 e679	organism_with_part	Quinoa - grain	['Chenopodium quinoa - grain']	{'NCBI_taxonomy': '63459'}
 e680	organism_with_part	Quinoa - pericarp	['Chenopodium quinoa - pericarp']	{'NCBI_taxonomy': '63459'}
 e681	organism_with_part	Radish - hypocotyl	['Raphanus sativus - hypocotyl', 'Raphanus sativus var - hypocotyl']	{'NCBI_taxonomy': '3726'}
 e682	organism_with_part	Red raspberry - seed	['Rubus idaeus - seed']	{'NCBI_taxonomy': '32247'}
 e683	organism_with_part	Rice - bran	['Oryza sativa - bran']	{'NCBI_taxonomy': '4530'}
-e684	organism_with_part	Hibiscus sabdariffa - calyx	['Roselle - calyx']	{'NCBI_taxonomy': '183260'}
+e684	organism_with_part	Roselle - calyx	['Hibiscus sabdariffa - calyx']	{'NCBI_taxonomy': '183260'}
 e685	organism_with_part	Roselle - seed	['Hibiscus sabdariffa - seed', 'H. sabdariffa - seed']	{'NCBI_taxonomy': '183260'}
 e686	organism_with_part	Saffron - flower	['Crocus sativus - flower']	{'NCBI_taxonomy': '82528'}
 e687	organism_with_part	Sapodilla - leaf	['Manilkara zapota - leaf']	{'NCBI_taxonomy': '3741'}
 e688	organism_with_part	Scarlet bean - leaf	['Phaseolus coccineus - leaf']	{'NCBI_taxonomy': '3886'}
-e689	organism_with_part	Hippophae rhamnoides - fruit	['Hippophae rhamnoides L - fruit', 'Sea-buckthornberry - fruit', 'sea buckthorn - fruit']	{'NCBI_taxonomy': '193516'}
+e689	organism_with_part	Sea-buckthornberry - fruit	['Hippophae rhamnoides L - fruit', 'sea buckthorn - fruit', 'Hippophae rhamnoides - fruit']	{'NCBI_taxonomy': '193516'}
 e690	organism_with_part	Sea-buckthornberry - leaf	['Hippophae rhamnoides L - leaf', 'sea buckthorn - leaf', 'Hippophae rhamnoides - leaf']	{'NCBI_taxonomy': '193516'}
 e691	organism_with_part	Shiitake - mycelium	['Lentinus edodes - mycelium']	{'NCBI_taxonomy': '5353'}
 e692	organism_with_part	Sockeye salmon - tissue	['Oncorhynchus nerka - tissue']	{'NCBI_taxonomy': '8023'}
@@ -697,15 +697,15 @@ e694	organism_with_part	Sour cherry - seed	['Prunus cerasus - seed']	{'NCBI_taxo
 e695	organism_with_part	Soy bean - nodule	['Glycine max - nodule', 'soybean - nodule']	{'NCBI_taxonomy': '3847'}
 e696	organism_with_part	Soy bean - root	['Glycine max - root', 'soybean - root']	{'NCBI_taxonomy': '3847'}
 e697	organism_with_part	Spinach - leaf	['Spinacia oleracea - leaf']	{'NCBI_taxonomy': '3562'}
-e698	organism_with_part	Averrhoa carambola - fruit	['Star fruit - fruit']	{'NCBI_taxonomy': '28974'}
+e698	organism_with_part	Star fruit - fruit	['Averrhoa carambola - fruit']	{'NCBI_taxonomy': '28974'}
 e699	organism_with_part	Strawberry - berry	['Fragaria X ananassa - berry']	{'NCBI_taxonomy': '3747'}
 e700	organism_with_part	Sugar apple - bark	['Annona squamosa - bark']	{'NCBI_taxonomy': '301693'}
-e701	organism_with_part	Annona squamosa - leaf	['Sugar apple - leaf', 'custard apple - leaf']	{'NCBI_taxonomy': '301693'}
-e702	organism_with_part	Annona squamosa - seed	['Sugar apple - seed', 'custard apple - seed']	{'NCBI_taxonomy': '301693'}
+e701	organism_with_part	Sugar apple - leaf	['custard apple - leaf', 'Annona squamosa - leaf']	{'NCBI_taxonomy': '301693'}
+e702	organism_with_part	Sugar apple - seed	['custard apple - seed', 'Annona squamosa - seed']	{'NCBI_taxonomy': '301693'}
 e703	organism_with_part	Sunflower - seed	['Helianthus annuus - seed']	{'NCBI_taxonomy': '4232'}
 e704	organism_with_part	Sweet cherry - fruit	['Prunus avium - fruit']	{'NCBI_taxonomy': '42229'}
 e705	organism_with_part	Sweet cherry - leaf	['Prunus avium - leaf']	{'NCBI_taxonomy': '42229'}
-e706	organism_with_part	Citrus sinensis - juice	['Sweet orange - juice']	{'NCBI_taxonomy': '2711'}
+e706	organism_with_part	Sweet orange - juice	['Citrus sinensis - juice']	{'NCBI_taxonomy': '2711'}
 e707	organism_with_part	Sweet potato - root	['Ipomoea batatas - root']	{'NCBI_taxonomy': '4120'}
 e708	organism_with_part	Swordfish - flesh	['Xiphias gladius - flesh']	{'NCBI_taxonomy': '8245'}
 e709	organism_with_part	Tamarind - fruit	['Tamarindus indica - fruit']	{'NCBI_taxonomy': '58860'}
@@ -714,7 +714,7 @@ e711	organism_with_part	Taro - leaf	['Colocasia esculenta - leaf', 'Colocasia - 
 e712	organism_with_part	Tartary buckwheat - inflorescence	['Fagopyrum tataricum - inflorescence', 'F. tataricum - inflorescence']	{'NCBI_taxonomy': '62330'}
 e713	organism_with_part	Tea - leaf	['Camellia sinensis - leaf']	{'NCBI_taxonomy': '4442'}
 e714	organism_with_part	Tea - stem	['Camellia sinensis - stem', 'C. sinensis - stem']	{'NCBI_taxonomy': '4442'}
-e715	organism_with_part	Curcuma longa - rhizome	['Turmeric - rhizome']	{'NCBI_taxonomy': '136217'}
+e715	organism_with_part	Turmeric - rhizome	['Curcuma longa - rhizome']	{'NCBI_taxonomy': '136217'}
 e716	organism_with_part	Turnip - root	['Brassica rapa var. rapa - root']	{'NCBI_taxonomy': '51350'}
 e717	organism_with_part	Ucuhuba - bark	['Virola surinamensis - bark']	{'NCBI_taxonomy': '224910'}
 e718	organism_with_part	Ucuhuba - seed	['Virola surinamensis - seed']	{'NCBI_taxonomy': '224910'}
@@ -742,404 +742,404 @@ e739	organism	Norway haddock	['Sebastes viviparus']	{'NCBI_taxonomy': '394708'}
 e740	organism	Pepper (C. chinense)	['C. chinense', 'Capsicum chinense']	{'NCBI_taxonomy': '80379'}
 e741	organism	Pepper (C. pubescens)	['C. pubescens', 'Capsicum pubescens']	{'NCBI_taxonomy': '113210'}
 e742	organism	Plains prickly pear	['Opuntia', 'Opuntia macrorhiza']	{'NCBI_taxonomy': '1041245'}
-e743	organism	Manilkara zapota	['Sapodilla']	{'NCBI_taxonomy': '3741'}
+e743	organism	Sapodilla	['Manilkara zapota']	{'NCBI_taxonomy': '3741'}
 e744	organism	Sockeye salmon	['Oncorhynchus nerka']	{'NCBI_taxonomy': '8023'}
-e745	organism	Ash gourd	['Benincasa hispida', 'Benincasa hispida (Thunb).cogn', 'Wax gourd']	{'NCBI_taxonomy': '102211'}
-e746	organism	Muscadine grape	['Vitis rotundifolia', 'muscadine']	{'NCBI_taxonomy': '103349'}
-e747	organism	Cerasus tomentosa	['Nanking cherry', 'Prunus Tomentosa Thunb', 'Prunus tomentosa']	{'NCBI_taxonomy': '105667'}
-e748	organism	Jicama	['Pachyrhizus erosus', 'yam bean']	{'NCBI_taxonomy': '109171'}
-e749	organism	Apium graveolens var. dulce	['Celery', 'Celery stalks']	{'NCBI_taxonomy': '117781'}
+e745	organism	Wax gourd	['Benincasa hispida', 'Benincasa hispida (Thunb).cogn', 'Ash gourd']	{'NCBI_taxonomy': '102211'}
+e746	organism	Muscadine grape	['muscadine', 'Vitis rotundifolia']	{'NCBI_taxonomy': '103349'}
+e747	organism	Nanking cherry	['Cerasus tomentosa', 'Prunus Tomentosa Thunb', 'Prunus tomentosa']	{'NCBI_taxonomy': '105667'}
+e748	organism	Jicama	['yam bean', 'Pachyrhizus erosus']	{'NCBI_taxonomy': '109171'}
+e749	organism	Celery stalks	['Celery', 'Apium graveolens var. dulce']	{'NCBI_taxonomy': '117781'}
 e750	organism	Chinese cinnamon	['Cinnamomum aromaticum', 'Cinnamomum cassia']	{'NCBI_taxonomy': '119260'}
 e751	organism	German camomile	['German chamomile', 'Matricaria recutita']	{'NCBI_taxonomy': '127986'}
-e752	organism	Dimocarpus longan	['Dimocarpus longan Lour', 'Longan']	{'NCBI_taxonomy': '128017'}
-e753	organism	Ceylon cinnamon	['Cinnamomum verum', 'Cinnamomum zeylanicum', 'Cinnamon']	{'NCBI_taxonomy': '128608'}
-e754	organism	Annona muricata	['Annona muricata L', 'Soursop']	{'NCBI_taxonomy': '13337'}
+e752	organism	Longan	['Dimocarpus longan', 'Dimocarpus longan Lour']	{'NCBI_taxonomy': '128017'}
+e753	organism	Ceylon cinnamon	['Cinnamomum zeylanicum', 'Cinnamon', 'Cinnamomum verum']	{'NCBI_taxonomy': '128608'}
+e754	organism	Soursop	['Annona muricata', 'Annona muricata L']	{'NCBI_taxonomy': '13337'}
 e755	organism	Borage	['Borago officinalis']	{'NCBI_taxonomy': '13363'}
 e756	organism	Chicory	['Cichorium Intybus']	{'NCBI_taxonomy': '13427'}
-e757	organism	Arabica coffee	['C. arabica', 'Coffea arabica']	{'NCBI_taxonomy': '13443'}
-e758	organism	Curcuma longa	['Curcuma longa L', 'Turmeric', 'curcuma']	{'NCBI_taxonomy': '136217'}
-e759	organism	American	['American cranberry', 'V. macrocarpon', 'Vaccinium', 'Vaccinium macrocarpon']	{'NCBI_taxonomy': '13750'}
-e760	organism	Prunus cerasus	['Sour cherry']	{'NCBI_taxonomy': '140311'}
+e757	organism	Arabica coffee	['Coffea arabica', 'C. arabica']	{'NCBI_taxonomy': '13443'}
+e758	organism	Turmeric	['Curcuma longa L', 'curcuma', 'Curcuma longa']	{'NCBI_taxonomy': '136217'}
+e759	organism	American cranberry	['Vaccinium macrocarpon', 'American', 'V. macrocarpon', 'Vaccinium']	{'NCBI_taxonomy': '13750'}
+e760	organism	Sour cherry	['Prunus cerasus']	{'NCBI_taxonomy': '140311'}
 e761	organism	Lichee	['Litchi chinensis', 'lychee']	{'NCBI_taxonomy': '151069'}
-e762	organism	Nephelium lappaceum	['Nephelium lappaceum L', 'Rambutan']	{'NCBI_taxonomy': '151071'}
+e762	organism	Rambutan	['Nephelium lappaceum L', 'Nephelium lappaceum']	{'NCBI_taxonomy': '151071'}
 e763	organism	Acerola	['Malpighia emarginata']	{'NCBI_taxonomy': '151847'}
 e764	organism	Mung bean	['Vigna radiata']	{'NCBI_taxonomy': '157791'}
-e765	organism	Beta vulgaris	['Common beet', 'beet', 'beets']	{'NCBI_taxonomy': '161934'}
-e766	organism	D. pentaphylla	['Dioscorea pentaphylla', 'Mountain yam']	{'NCBI_taxonomy': '167592'}
-e767	organism	Anacardium occidentale	['Cashew nut', 'cashew', 'cashews']	{'NCBI_taxonomy': '171929'}
-e768	organism	Bilberry	['V. myrtillus', 'Vaccinium myrtillus', 'Vaccinium myrtillus L']	{'NCBI_taxonomy': '180763'}
-e769	organism	Lingonberry	['Vaccinium', 'Vaccinium vitis-idaea']	{'NCBI_taxonomy': '180772'}
-e770	organism	H. sabdariffa	['Hibiscus', 'Hibiscus sabdariffa', 'Hibiscus sabdariffa L', 'Roselle']	{'NCBI_taxonomy': '183260'}
-e771	organism	Chayote	['S. edule', 'SEE', 'Sechium edule']	{'NCBI_taxonomy': '184140'}
-e772	organism	Bog bilberry	['Bog blueberry', 'V. uliginosum', 'Vaccinium uliginosum', 'Vaccinium uliginosum L']	{'NCBI_taxonomy': '190548'}
-e773	organism	M. aquatica	['Mentha aquatica', 'Orange mint', 'water mint']	{'NCBI_taxonomy': '190902'}
+e765	organism	Common beet	['beets', 'beet', 'Beta vulgaris']	{'NCBI_taxonomy': '161934'}
+e766	organism	Mountain yam	['D. pentaphylla', 'Dioscorea pentaphylla']	{'NCBI_taxonomy': '167592'}
+e767	organism	Cashew nut	['cashews', 'Anacardium occidentale', 'cashew']	{'NCBI_taxonomy': '171929'}
+e768	organism	Bilberry	['Vaccinium myrtillus', 'V. myrtillus', 'Vaccinium myrtillus L']	{'NCBI_taxonomy': '180763'}
+e769	organism	Lingonberry	['Vaccinium vitis-idaea', 'Vaccinium']	{'NCBI_taxonomy': '180772'}
+e770	organism	Roselle	['H. sabdariffa', 'Hibiscus', 'Hibiscus sabdariffa L', 'Hibiscus sabdariffa']	{'NCBI_taxonomy': '183260'}
+e771	organism	Chayote	['Sechium edule', 'SEE', 'S. edule']	{'NCBI_taxonomy': '184140'}
+e772	organism	Bog bilberry	['V. uliginosum', 'Vaccinium uliginosum L', 'Vaccinium uliginosum', 'Bog blueberry']	{'NCBI_taxonomy': '190548'}
+e773	organism	Orange mint	['M. aquatica', 'Mentha aquatica', 'water mint']	{'NCBI_taxonomy': '190902'}
 e774	organism	Black crowberry	['Empetrum nigrum', 'Empetrum nigrum L']	{'NCBI_taxonomy': '191066'}
-e775	organism	H. rhamnoides	['H. rhamnoides L', 'Hippophae rhamnoides', 'Hippophae rhamnoides L', 'Hippophae rhamnoides, L', 'Sea-buckthornberry', 'sea buckthorn']	{'NCBI_taxonomy': '193516'}
-e776	organism	Artocarpus altilis	['Breadfruit']	{'NCBI_taxonomy': '194251'}
+e775	organism	Sea-buckthornberry	['Hippophae rhamnoides L', 'sea buckthorn', 'H. rhamnoides L', 'H. rhamnoides', 'Hippophae rhamnoides, L', 'Hippophae rhamnoides']	{'NCBI_taxonomy': '193516'}
+e776	organism	Breadfruit	['Artocarpus altilis']	{'NCBI_taxonomy': '194251'}
 e777	organism	Breadnut tree seed	['Brosimum alicastrum']	{'NCBI_taxonomy': '194253'}
-e778	organism	M. americana	['Mammea americana', 'Mammee apple']	{'NCBI_taxonomy': '198777'}
+e778	organism	Mammee apple	['Mammea americana', 'M. americana']	{'NCBI_taxonomy': '198777'}
 e779	organism	Carob	['Ceratonia siliqua', 'Ceratonia siliqua L']	{'NCBI_taxonomy': '20340'}
-e780	organism	Castanea	['Castanea sativa', 'European chestnut']	{'NCBI_taxonomy': '21020'}
-e781	organism	Clove	['Cloves', 'Syzygium aromaticum']	{'NCBI_taxonomy': '219868'}
+e780	organism	European chestnut	['Castanea', 'Castanea sativa']	{'NCBI_taxonomy': '21020'}
+e781	organism	Cloves	['Syzygium aromaticum', 'Clove']	{'NCBI_taxonomy': '219868'}
 e782	organism	Ucuhuba	['Virola surinamensis']	{'NCBI_taxonomy': '224910'}
-e783	organism	Pomegranate	['Punica granatum', 'Punica granatum L']	{'NCBI_taxonomy': '22663'}
-e784	organism	P. communis	['Pear', 'Pears', 'Pyrus communis', 'Pyrus communis L']	{'NCBI_taxonomy': '23211'}
-e785	organism	Eugenia jambolana	['Java plum', 'Syzygium cumini']	{'NCBI_taxonomy': '260142'}
+e783	organism	Pomegranate	['Punica granatum L', 'Punica granatum']	{'NCBI_taxonomy': '22663'}
+e784	organism	Pear	['Pears', 'P. communis', 'Pyrus communis', 'Pyrus communis L']	{'NCBI_taxonomy': '23211'}
+e785	organism	Java plum	['Eugenia jambolana', 'Syzygium cumini']	{'NCBI_taxonomy': '260142'}
 e786	organism	Chinese bayberry	['Myrica rubra']	{'NCBI_taxonomy': '262757'}
-e787	organism	Citrus limon	['Lemon', 'lemons']	{'NCBI_taxonomy': '2708'}
-e788	organism	C. sinensis	['Citrus Sinensis', 'Sweet orange']	{'NCBI_taxonomy': '2711'}
-e789	organism	Carrageen	['Chondrus crispus', 'Irish moss']	{'NCBI_taxonomy': '2769'}
-e790	organism	Averrhoa carambola	['Averrhoa carambola L', 'Star fruit']	{'NCBI_taxonomy': '28974'}
-e791	organism	Cornmint	['M. arvensis', 'Mentha arvensis', 'wild mint']	{'NCBI_taxonomy': '292239'}
-e792	organism	M. spicata	['Mentha spicata', 'Spearmint']	{'NCBI_taxonomy': '29719'}
-e793	organism	M. indica	['Mangifera indica', 'Mangifera indica L', 'Mango']	{'NCBI_taxonomy': '29780'}
-e794	organism	Annona squamosa	['Sugar apple', 'custard apple']	{'NCBI_taxonomy': '301693'}
-e795	organism	Annona reticulata	['Annona reticulata L', 'Custard apple']	{'NCBI_taxonomy': '301862'}
-e796	organism	C. illinoinensis	['Carya illinoinensis', 'Pecan nut', 'pecan', 'pecans']	{'NCBI_taxonomy': '32201'}
-e797	organism	R. idaeus	['Red raspberry', 'Rubus idaeus', 'Rubus idaeus L']	{'NCBI_taxonomy': '32247'}
-e798	organism	American wormseed	['Chenopodium ambrosioides', 'Chenopodium ambrosioides L', 'Dysphania ambrosioides', 'Epazote']	{'NCBI_taxonomy': '330163'}
-e799	organism	Gingko biloba	['Ginkgo', 'Ginkgo biloba', 'Ginkgo biloba L', 'Ginkgo nuts']	{'NCBI_taxonomy': '3311'}
-e800	organism	M. piperita	['Mentha  piperita', 'Mentha X piperita', 'Mentha piperita', 'Peppermint', 'officinalis']	{'NCBI_taxonomy': '34256'}
-e801	organism	Avocado	['Avocados', 'P. americana', 'Persea americana']	{'NCBI_taxonomy': '3435'}
+e787	organism	Lemon	['lemons', 'Citrus limon']	{'NCBI_taxonomy': '2708'}
+e788	organism	Sweet orange	['Citrus Sinensis', 'C. sinensis']	{'NCBI_taxonomy': '2711'}
+e789	organism	Irish moss	['Carrageen', 'Chondrus crispus']	{'NCBI_taxonomy': '2769'}
+e790	organism	Star fruit	['Averrhoa carambola', 'Averrhoa carambola L']	{'NCBI_taxonomy': '28974'}
+e791	organism	Cornmint	['wild mint', 'Mentha arvensis', 'M. arvensis']	{'NCBI_taxonomy': '292239'}
+e792	organism	Spearmint	['Mentha spicata', 'M. spicata']	{'NCBI_taxonomy': '29719'}
+e793	organism	Mango	['Mangifera indica', 'M. indica', 'Mangifera indica L']	{'NCBI_taxonomy': '29780'}
+e794	organism	Sugar apple	['Annona squamosa', 'custard apple']	{'NCBI_taxonomy': '301693'}
+e795	organism	Custard apple	['Annona reticulata', 'Annona reticulata L']	{'NCBI_taxonomy': '301862'}
+e796	organism	Pecan nut	['pecans', 'pecan', 'Carya illinoinensis', 'C. illinoinensis']	{'NCBI_taxonomy': '32201'}
+e797	organism	Red raspberry	['Rubus idaeus', 'Rubus idaeus L', 'R. idaeus']	{'NCBI_taxonomy': '32247'}
+e798	organism	Epazote	['Chenopodium ambrosioides', 'American wormseed', 'Chenopodium ambrosioides L', 'Dysphania ambrosioides']	{'NCBI_taxonomy': '330163'}
+e799	organism	Ginkgo nuts	['Gingko biloba', 'Ginkgo', 'Ginkgo biloba', 'Ginkgo biloba L']	{'NCBI_taxonomy': '3311'}
+e800	organism	Peppermint	['Mentha  piperita', 'Mentha piperita', 'officinalis', 'Mentha X piperita', 'M. piperita']	{'NCBI_taxonomy': '34256'}
+e801	organism	Avocado	['Avocados', 'Persea americana', 'P. americana']	{'NCBI_taxonomy': '3435'}
 e802	organism	Opium poppy	['Papaver somniferum']	{'NCBI_taxonomy': '3469'}
-e803	organism	Artocarpus heterophyllus	['Jackfruit', 'Jackfruits']	{'NCBI_taxonomy': '3489'}
-e804	organism	Chenopodium album	['Lambsquarters', 'Pigweed']	{'NCBI_taxonomy': '3559'}
+e803	organism	Jackfruit	['Jackfruits', 'Artocarpus heterophyllus']	{'NCBI_taxonomy': '3489'}
+e804	organism	Lambsquarters	['Chenopodium album', 'Pigweed']	{'NCBI_taxonomy': '3559'}
 e805	organism	Spinach	['Spinacia oleracea']	{'NCBI_taxonomy': '3562'}
-e806	organism	A. keiskei	['AC', 'Angelica', 'Angelica Keiskei']	{'NCBI_taxonomy': '357850'}
-e807	organism	A. fistulosum	['Allium fistulosum', 'Welsh onion']	{'NCBI_taxonomy': '35875'}
-e808	organism	Basella alba	['Basella alba L', 'Malabar spinach']	{'NCBI_taxonomy': '3589'}
-e809	organism	Diospyros	['Diospyros kaki', 'Diospyros kaki Thunb', 'Japanese persimmon']	{'NCBI_taxonomy': '35925'}
+e806	organism	Angelica	['A. keiskei', 'AC', 'Angelica Keiskei']	{'NCBI_taxonomy': '357850'}
+e807	organism	Welsh onion	['Allium fistulosum', 'A. fistulosum']	{'NCBI_taxonomy': '35875'}
+e808	organism	Malabar spinach	['Basella alba L', 'Basella alba']	{'NCBI_taxonomy': '3589'}
+e809	organism	Japanese persimmon	['Diospyros kaki', 'Diospyros kaki Thunb', 'Diospyros']	{'NCBI_taxonomy': '35925'}
 e810	organism	Hyacinth bean	['Lablab purpureus', 'hyacinth beans']	{'NCBI_taxonomy': '35936'}
-e811	organism	Cantharellus cibarius	['Chanterelle', 'chanterelles']	{'NCBI_taxonomy': '36066'}
-e812	organism	Common buckwheat	['F. esculentum', 'Fagopyrum esculentum', 'Fagopyrum esculentum Moench', 'buckwheat', 'buckwheats']	{'NCBI_taxonomy': '3617'}
-e813	organism	Garden rhubarb	['Rheum rhabarbarum', 'Rhubarb']	{'NCBI_taxonomy': '3621'}
-e814	organism	Cocoa	['Cocoa bean', 'Theobroma cacao', 'chocolate']	{'NCBI_taxonomy': '3641'}
-e815	organism	Bertholletia excelsa	['Brazil nut', 'Brazil nuts']	{'NCBI_taxonomy': '3645'}
-e816	organism	C. papaya	['Carica papaya', 'Papaya']	{'NCBI_taxonomy': '3649'}
-e817	organism	Citrullus lanatus	['Watermelon']	{'NCBI_taxonomy': '3654'}
-e818	organism	Cucumis melo	['Muskmelon', 'Oriental melon']	{'NCBI_taxonomy': '3656'}
+e811	organism	Chanterelle	['Cantharellus cibarius', 'chanterelles']	{'NCBI_taxonomy': '36066'}
+e812	organism	Common buckwheat	['Fagopyrum esculentum', 'F. esculentum', 'buckwheat', 'Fagopyrum esculentum Moench', 'buckwheats']	{'NCBI_taxonomy': '3617'}
+e813	organism	Garden rhubarb	['Rhubarb', 'Rheum rhabarbarum']	{'NCBI_taxonomy': '3621'}
+e814	organism	Cocoa bean	['Theobroma cacao', 'Cocoa', 'chocolate']	{'NCBI_taxonomy': '3641'}
+e815	organism	Brazil nut	['Brazil nuts', 'Bertholletia excelsa']	{'NCBI_taxonomy': '3645'}
+e816	organism	Papaya	['C. papaya', 'Carica papaya']	{'NCBI_taxonomy': '3649'}
+e817	organism	Watermelon	['Citrullus lanatus']	{'NCBI_taxonomy': '3654'}
+e818	organism	Muskmelon	['Cucumis melo', 'Oriental melon']	{'NCBI_taxonomy': '3656'}
 e819	organism	Cucumber	['Cucumis sativus', 'cucumbers']	{'NCBI_taxonomy': '3659'}
 e820	organism	Apricot	['Apricots', 'Prunus armeniaca']	{'NCBI_taxonomy': '36596'}
-e821	organism	Cucurbita maxima	['Winter squash']	{'NCBI_taxonomy': '3661'}
-e822	organism	Cydonia oblonga	['Quince']	{'NCBI_taxonomy': '36610'}
+e821	organism	Winter squash	['Cucurbita maxima']	{'NCBI_taxonomy': '3661'}
+e822	organism	Quince	['Cydonia oblonga']	{'NCBI_taxonomy': '36610'}
 e823	organism	Butternut squash	['Cucurbita moschata']	{'NCBI_taxonomy': '3662'}
-e824	organism	Bitter gourd	['Momordica charantia', 'Momordica charantia L', 'bitter gourds']	{'NCBI_taxonomy': '3673'}
-e825	organism	B. juncea	['Brassica juncea', 'Chinese mustard', 'brown mustards']	{'NCBI_taxonomy': '3707'}
-e826	organism	B. napus	['Brassica', 'Brassica napus', 'Swede', 'oilseed', 'oilseed rape', 'rape']	{'NCBI_taxonomy': '3708'}
-e827	organism	Brassica	['Brassica rapa', 'Chinese cabbage']	{'NCBI_taxonomy': '3711'}
-e828	organism	B. oleracea	['Brassica oleracea', 'Brassica oleracea var', 'Cabbage', 'Common cabbage', 'brassica']	{'NCBI_taxonomy': '3712'}
+e824	organism	Bitter gourd	['Momordica charantia L', 'Momordica charantia', 'bitter gourds']	{'NCBI_taxonomy': '3673'}
+e825	organism	Chinese mustard	['B. juncea', 'Brassica juncea', 'brown mustards']	{'NCBI_taxonomy': '3707'}
+e826	organism	Swede	['rape', 'Brassica', 'oilseed', 'oilseed rape', 'B. napus', 'Brassica napus']	{'NCBI_taxonomy': '3708'}
+e827	organism	Chinese cabbage	['Brassica rapa', 'Brassica']	{'NCBI_taxonomy': '3711'}
+e828	organism	Common cabbage	['brassica', 'Cabbage', 'Brassica oleracea var', 'Brassica oleracea', 'B. oleracea']	{'NCBI_taxonomy': '3712'}
 e829	organism	Radish	['Raphanus sativus', 'Raphanus sativus var']	{'NCBI_taxonomy': '3726'}
 e830	organism	Horseradish tree	['M. oleifera', 'Moringa oleifera', 'Moringa pterygosperma', 'moringa']	{'NCBI_taxonomy': '3735'}
-e831	organism	F. x ananassa	['Fragaria X ananassa', 'Strawberry']	{'NCBI_taxonomy': '3747'}
-e832	organism	Allspice	['Jamaica Pepper', 'P. dioica', 'Pimenta dioica']	{'NCBI_taxonomy': '375272'}
-e833	organism	Almond	['Almonds', 'P. dulcis', 'Prunus amygdalus', 'Prunus dulcis', 'Sweet almond']	{'NCBI_taxonomy': '3755'}
-e834	organism	European plum	['P. domestica', 'Plum', 'Plums', 'Prunus domestica', 'Prunus domestica L']	{'NCBI_taxonomy': '3758'}
-e835	organism	P. persica	['Peach', 'Prunus persica']	{'NCBI_taxonomy': '3760'}
-e836	organism	Citrus paradisi	['Citrus paradisi X Citrus maxima', 'Grapefruit/Pummelo hybrid', 'grapefruit']	{'NCBI_taxonomy': '37656'}
-e837	organism	Arachis hypogaea	['Peanut', 'peanuts']	{'NCBI_taxonomy': '3818'}
-e838	organism	Cajanus cajan	['Cajanus cajan (L.)', 'Pigeon pea', 'Pigeon peas']	{'NCBI_taxonomy': '3821'}
-e839	organism	Chickpea	['Chickpeas', 'Cicer arietinum']	{'NCBI_taxonomy': '3827'}
-e840	organism	Glycine max	['Soy bean', 'soybean', 'soybeans']	{'NCBI_taxonomy': '3847'}
-e841	organism	C. oleifera	['Camellia', 'Camellia oleifera', 'Oil-seed Camellia']	{'NCBI_taxonomy': '385388'}
-e842	organism	Lens culinaris	['Lentil', 'Lentils']	{'NCBI_taxonomy': '3864'}
-e843	organism	Alfalfa	['Medicago sativa', 'lucerne']	{'NCBI_taxonomy': '3879'}
+e831	organism	Strawberry	['F. x ananassa', 'Fragaria X ananassa']	{'NCBI_taxonomy': '3747'}
+e832	organism	Allspice	['P. dioica', 'Jamaica Pepper', 'Pimenta dioica']	{'NCBI_taxonomy': '375272'}
+e833	organism	Almond	['Almonds', 'Prunus amygdalus', 'P. dulcis', 'Prunus dulcis', 'Sweet almond']	{'NCBI_taxonomy': '3755'}
+e834	organism	European plum	['Prunus domestica', 'Prunus domestica L', 'Plums', 'Plum', 'P. domestica']	{'NCBI_taxonomy': '3758'}
+e835	organism	Peach	['Prunus persica', 'P. persica']	{'NCBI_taxonomy': '3760'}
+e836	organism	Grapefruit/Pummelo hybrid	['grapefruit', 'Citrus paradisi', 'Citrus paradisi X Citrus maxima']	{'NCBI_taxonomy': '37656'}
+e837	organism	Peanut	['Arachis hypogaea', 'peanuts']	{'NCBI_taxonomy': '3818'}
+e838	organism	Pigeon pea	['Pigeon peas', 'Cajanus cajan (L.)', 'Cajanus cajan']	{'NCBI_taxonomy': '3821'}
+e839	organism	Chickpea	['Cicer arietinum', 'Chickpeas']	{'NCBI_taxonomy': '3827'}
+e840	organism	Soy bean	['soybean', 'Glycine max', 'soybeans']	{'NCBI_taxonomy': '3847'}
+e841	organism	Oil-seed Camellia	['Camellia oleifera', 'Camellia', 'C. oleifera']	{'NCBI_taxonomy': '385388'}
+e842	organism	Lentils	['Lens culinaris', 'Lentil']	{'NCBI_taxonomy': '3864'}
+e843	organism	Alfalfa	['lucerne', 'Medicago sativa']	{'NCBI_taxonomy': '3879'}
 e844	organism	Lima bean	['Phaseolus lunatus']	{'NCBI_taxonomy': '3884'}
-e845	organism	Phaseolus coccineus	['Scarlet bean']	{'NCBI_taxonomy': '3886'}
-e846	organism	Common sage	['S. officinalis', 'Salvia officinalis', 'Salvia officinalis L']	{'NCBI_taxonomy': '38868'}
-e847	organism	Common pea	['Pisum sativum', 'Pisum sativum L', 'peas']	{'NCBI_taxonomy': '3888'}
-e848	organism	Broad bean	['Vicia faba', 'Vicia faba L', 'broad beans', 'faba bean']	{'NCBI_taxonomy': '3906'}
-e849	organism	Adzuki bean	['Adzuki beans', 'Azuki bean', 'Vigna angularis']	{'NCBI_taxonomy': '3914'}
-e850	organism	Black gram	['Gram bean', 'Vigna mungo', 'Vigna mungo L. Hepper']	{'NCBI_taxonomy': '3915'}
+e845	organism	Scarlet bean	['Phaseolus coccineus']	{'NCBI_taxonomy': '3886'}
+e846	organism	Common sage	['Salvia officinalis', 'S. officinalis', 'Salvia officinalis L']	{'NCBI_taxonomy': '38868'}
+e847	organism	Common pea	['Pisum sativum', 'peas', 'Pisum sativum L']	{'NCBI_taxonomy': '3888'}
+e848	organism	Broad bean	['Vicia faba L', 'faba bean', 'Vicia faba', 'broad beans']	{'NCBI_taxonomy': '3906'}
+e849	organism	Adzuki bean	['Azuki bean', 'Adzuki beans', 'Vigna angularis']	{'NCBI_taxonomy': '3914'}
+e850	organism	Gram bean	['Vigna mungo', 'Vigna mungo L. Hepper', 'Black gram']	{'NCBI_taxonomy': '3915'}
 e851	organism	Cowpea	['Vigna unguiculata']	{'NCBI_taxonomy': '3917'}
 e852	organism	Lemon balm	['Melissa officinalis', 'Melissa officinalis L']	{'NCBI_taxonomy': '39338'}
-e853	organism	O. basilicum L	['Ocimum basilicum', 'Ocimum basilicum L', 'Sweet basil', 'basil']	{'NCBI_taxonomy': '39350'}
+e853	organism	Sweet basil	['Ocimum basilicum L', 'Ocimum basilicum', 'basil', 'O. basilicum L']	{'NCBI_taxonomy': '39350'}
 e854	organism	Common oregano	['Oregano', 'Origanum vulgare']	{'NCBI_taxonomy': '39352'}
 e855	organism	Evening primrose	['Oenothera biennis']	{'NCBI_taxonomy': '3942'}
 e856	organism	Cassava	['Manihot esculenta', 'Manihot esculenta Crantz']	{'NCBI_taxonomy': '3983'}
-e857	organism	Flax	['Flaxseed', 'L. usitatissimum', 'Linum usitatissimum']	{'NCBI_taxonomy': '4006'}
-e858	organism	Carrot	['Daucus carota', 'Wild carrot', 'carrots']	{'NCBI_taxonomy': '4039'}
-e859	organism	Apium graveolens	['Apium graveolens L', 'Wild celery']	{'NCBI_taxonomy': '4045'}
-e860	organism	C. sativum	['Coriander', 'Coriandrum sativum', 'cilantro']	{'NCBI_taxonomy': '4047'}
+e857	organism	Flaxseed	['Flax', 'Linum usitatissimum', 'L. usitatissimum']	{'NCBI_taxonomy': '4006'}
+e858	organism	Wild carrot	['Daucus carota', 'Carrot', 'carrots']	{'NCBI_taxonomy': '4039'}
+e859	organism	Wild celery	['Apium graveolens L', 'Apium graveolens']	{'NCBI_taxonomy': '4045'}
+e860	organism	Coriander	['cilantro', 'C. sativum', 'Coriandrum sativum']	{'NCBI_taxonomy': '4047'}
 e861	organism	Ginseng	['Panax', 'Panax ginseng']	{'NCBI_taxonomy': '4054'}
-e862	organism	Garden tomato	['L. esculentum', 'Lycopersicon esculentum', 'Solanum lycopersicum', 'tomato']	{'NCBI_taxonomy': '4081'}
-e863	organism	Anethum Graveolens	['Anethum graveolens L', 'Dill']	{'NCBI_taxonomy': '40922'}
-e864	organism	Brinjal	['Eggplant', 'S. melongena', 'Solanum melongena', 'Solanum melongena L', 'eggplants']	{'NCBI_taxonomy': '4111'}
-e865	organism	Potato	['Potatoes', 'Solanum tuberosum']	{'NCBI_taxonomy': '4113'}
-e866	organism	Ipomoea batatas	['Sweet potato']	{'NCBI_taxonomy': '4120'}
-e867	organism	Olea europaea	['Olea europaea L', 'Olive']	{'NCBI_taxonomy': '4146'}
+e862	organism	Garden tomato	['L. esculentum', 'Solanum lycopersicum', 'Lycopersicon esculentum', 'tomato']	{'NCBI_taxonomy': '4081'}
+e863	organism	Dill	['Anethum graveolens L', 'Anethum Graveolens']	{'NCBI_taxonomy': '40922'}
+e864	organism	Eggplant	['Solanum melongena L', 'eggplants', 'Brinjal', 'Solanum melongena', 'S. melongena']	{'NCBI_taxonomy': '4111'}
+e865	organism	Potato	['Solanum tuberosum', 'Potatoes']	{'NCBI_taxonomy': '4113'}
+e866	organism	Sweet potato	['Ipomoea batatas']	{'NCBI_taxonomy': '4120'}
+e867	organism	Olive	['Olea europaea L', 'Olea europaea']	{'NCBI_taxonomy': '4146'}
 e868	organism	Black elderberry	['Sambucus', 'Sambucus nigra']	{'NCBI_taxonomy': '4202'}
-e869	organism	A. lappa	['Arctium Lappa L', 'Arctium lappa', 'Burdock']	{'NCBI_taxonomy': '4217'}
-e870	organism	A. vulgaris	['Artemisia vulgaris', 'Mugwort']	{'NCBI_taxonomy': '4220'}
-e871	organism	Carthamus tinctorius	['Carthamus tinctorius L', 'Safflower']	{'NCBI_taxonomy': '4222'}
-e872	organism	P. avium	['Prunus avium', 'Sweet cherry', 'sweet-cherry']	{'NCBI_taxonomy': '42229'}
-e873	organism	Helianthus annuus	['Sunflower', 'common sunflower']	{'NCBI_taxonomy': '4232'}
-e874	organism	Date	['Phoenix dactylifera', 'Phoenix dactylifera L']	{'NCBI_taxonomy': '42345'}
-e875	organism	Cardoon	['Cynara cardunculus', 'Cynara cardunculus L']	{'NCBI_taxonomy': '4265'}
-e876	organism	Nelumbo	['Nelumbo nucifera', 'Nelumbo nucifera Gaertn', 'Sacred lotus']	{'NCBI_taxonomy': '4432'}
-e877	organism	Black tea	['C. sinensis', 'Camellia sinensis', 'Tea', 'camellia']	{'NCBI_taxonomy': '4442'}
-e878	organism	Colocasia	['Colocasia esculenta', 'Taro']	{'NCBI_taxonomy': '4460'}
-e879	organism	Avena sativa	['Oat', 'Oats']	{'NCBI_taxonomy': '4498'}
+e869	organism	Burdock	['A. lappa', 'Arctium lappa', 'Arctium Lappa L']	{'NCBI_taxonomy': '4217'}
+e870	organism	Mugwort	['A. vulgaris', 'Artemisia vulgaris']	{'NCBI_taxonomy': '4220'}
+e871	organism	Safflower	['Carthamus tinctorius', 'Carthamus tinctorius L']	{'NCBI_taxonomy': '4222'}
+e872	organism	Sweet cherry	['sweet-cherry', 'Prunus avium', 'P. avium']	{'NCBI_taxonomy': '42229'}
+e873	organism	Sunflower	['Helianthus annuus', 'common sunflower']	{'NCBI_taxonomy': '4232'}
+e874	organism	Date	['Phoenix dactylifera L', 'Phoenix dactylifera']	{'NCBI_taxonomy': '42345'}
+e875	organism	Cardoon	['Cynara cardunculus L', 'Cynara cardunculus']	{'NCBI_taxonomy': '4265'}
+e876	organism	Sacred lotus	['Nelumbo nucifera Gaertn', 'Nelumbo', 'Nelumbo nucifera']	{'NCBI_taxonomy': '4432'}
+e877	organism	Tea	['C. sinensis', 'camellia', 'Camellia sinensis', 'Black tea']	{'NCBI_taxonomy': '4442'}
+e878	organism	Taro	['Colocasia esculenta', 'Colocasia']	{'NCBI_taxonomy': '4460'}
+e879	organism	Oat	['Avena sativa', 'Oats']	{'NCBI_taxonomy': '4498'}
 e880	organism	Barley	['Hordeum vulgare']	{'NCBI_taxonomy': '4513'}
-e881	organism	Oryza sativa	['Rice', 'red rice']	{'NCBI_taxonomy': '4530'}
+e881	organism	Rice	['Oryza sativa', 'red rice']	{'NCBI_taxonomy': '4530'}
 e882	organism	Millet	['Panicum miliaceum', 'millets', 'proso millet']	{'NCBI_taxonomy': '4540'}
-e883	organism	Abelmoschus esculentus	['Abelmoschus esculentus L.Moench', 'Hibiscus esculentus', 'Okra']	{'NCBI_taxonomy': '455045'}
-e884	organism	Common wheat	['Triticum aestivum', 'Wheat']	{'NCBI_taxonomy': '4565'}
-e885	organism	Durum wheat	['Hard wheat', 'Triticum durum']	{'NCBI_taxonomy': '4567'}
+e883	organism	Okra	['Abelmoschus esculentus L.Moench', 'Abelmoschus esculentus', 'Hibiscus esculentus']	{'NCBI_taxonomy': '455045'}
+e884	organism	Common wheat	['Wheat', 'Triticum aestivum']	{'NCBI_taxonomy': '4565'}
+e885	organism	Hard wheat	['Durum wheat', 'Triticum durum']	{'NCBI_taxonomy': '4567'}
 e886	organism	Corn	['Zea mays', 'maize']	{'NCBI_taxonomy': '4577'}
-e887	organism	Ananas comosus	['Ananas comosus (L.)', 'Pineapple', 'pineapples']	{'NCBI_taxonomy': '4615'}
+e887	organism	Pineapple	['pineapples', 'Ananas comosus', 'Ananas comosus (L.)']	{'NCBI_taxonomy': '4615'}
 e888	organism	Banana	['Musa acuminata', 'bananas']	{'NCBI_taxonomy': '4641'}
-e889	organism	Allium cepa	['Garden onion', 'Onions', 'onion']	{'NCBI_taxonomy': '4679'}
-e890	organism	Allium sativum	['Allium sativum L', 'Allium sativum L. var', 'Garlic']	{'NCBI_taxonomy': '4682'}
+e889	organism	Garden onion	['Allium cepa', 'Onions', 'onion']	{'NCBI_taxonomy': '4679'}
+e890	organism	Garlic	['Allium sativum', 'Allium sativum L. var', 'Allium sativum L']	{'NCBI_taxonomy': '4682'}
 e891	organism	Asparagus	['Asparagus officinalis', 'Asparagus officinalis L']	{'NCBI_taxonomy': '4686'}
-e892	organism	Lowbush blueberry	['V. angustifolium', 'Vaccinium angustifolium', 'lowbush']	{'NCBI_taxonomy': '472369'}
+e892	organism	Lowbush blueberry	['lowbush', 'V. angustifolium', 'Vaccinium angustifolium']	{'NCBI_taxonomy': '472369'}
 e893	organism	Fennel	['Foeniculum vulgare']	{'NCBI_taxonomy': '48038'}
-e894	organism	Levisticum officinale	['Lovage']	{'NCBI_taxonomy': '48042'}
-e895	organism	Annona cherimola	['Cherimoya']	{'NCBI_taxonomy': '49314'}
-e896	organism	C. canephora	['Coffea canephora', 'Robusta', 'Robusta coffee']	{'NCBI_taxonomy': '49390'}
-e897	organism	Satureja hortensis	['Satureja hortensis L', 'Summer savory']	{'NCBI_taxonomy': '49987'}
-e898	organism	Common thyme	['T. vulgaris', 'Thyme', 'Thymus vulgaris', 'Thymus vulgaris L', 'Thymusvulgaris']	{'NCBI_taxonomy': '49992'}
+e894	organism	Lovage	['Levisticum officinale']	{'NCBI_taxonomy': '48042'}
+e895	organism	Cherimoya	['Annona cherimola']	{'NCBI_taxonomy': '49314'}
+e896	organism	Robusta coffee	['Robusta', 'Coffea canephora', 'C. canephora']	{'NCBI_taxonomy': '49390'}
+e897	organism	Summer savory	['Satureja hortensis', 'Satureja hortensis L']	{'NCBI_taxonomy': '49987'}
+e898	organism	Common thyme	['Thyme', 'Thymus vulgaris L', 'T. vulgaris', 'Thymusvulgaris', 'Thymus vulgaris']	{'NCBI_taxonomy': '49992'}
 e899	organism	Dandelion	['Dandelions', 'T. officinale', 'Taraxacum', 'Taraxacum officinale']	{'NCBI_taxonomy': '50225'}
-e900	organism	M. fragrans	['Myristica fragrans', 'Myristica fragrans Houtt', 'Nutmeg']	{'NCBI_taxonomy': '51089'}
+e900	organism	Nutmeg	['M. fragrans', 'Myristica fragrans Houtt', 'Myristica fragrans']	{'NCBI_taxonomy': '51089'}
 e901	organism	Common walnut	['Juglans regia']	{'NCBI_taxonomy': '51240'}
-e902	organism	M. tetraphylla	['Macadamia', 'Macadamia nut (M. tetraphylla)', 'Macadamia tetraphylla']	{'NCBI_taxonomy': '512563'}
-e903	organism	Brassica rapa var. rapa	['Turnip', 'turnips']	{'NCBI_taxonomy': '51350'}
-e904	organism	Brassica rapa var. pekinensis	['Chinese', 'Chinese cabbage', 'Napa cabbage']	{'NCBI_taxonomy': '51351'}
-e905	organism	European	['European cranberry', 'Vaccinium', 'Vaccinium oxycoccos']	{'NCBI_taxonomy': '516948'}
+e902	organism	Macadamia nut (M. tetraphylla)	['Macadamia', 'M. tetraphylla', 'Macadamia tetraphylla']	{'NCBI_taxonomy': '512563'}
+e903	organism	Turnip	['turnips', 'Brassica rapa var. rapa']	{'NCBI_taxonomy': '51350'}
+e904	organism	Napa cabbage	['Brassica rapa var. pekinensis', 'Chinese', 'Chinese cabbage']	{'NCBI_taxonomy': '51351'}
+e905	organism	European cranberry	['European', 'Vaccinium oxycoccos', 'Vaccinium']	{'NCBI_taxonomy': '516948'}
 e906	organism	Cumin	['Cuminum cyminum', 'Cuminum cyminum L', 'cuminum']	{'NCBI_taxonomy': '52462'}
-e907	organism	Oyster mushroom	['Pleurotus ostreatus', 'oyster mushrooms']	{'NCBI_taxonomy': '5322'}
-e908	organism	Agaricus bisporus	['Common mushroom', 'button mushrooms', 'mushrooms']	{'NCBI_taxonomy': '5341'}
-e909	organism	Lentinula edodes	['Lentinus edodes', 'Shiitake', 'shiitake mushroom', 'shiitake mushrooms']	{'NCBI_taxonomy': '5353'}
-e910	organism	Pistachio	['Pistachios', 'Pistacia vera']	{'NCBI_taxonomy': '55513'}
+e907	organism	Oyster mushroom	['oyster mushrooms', 'Pleurotus ostreatus']	{'NCBI_taxonomy': '5322'}
+e908	organism	Common mushroom	['Agaricus bisporus', 'button mushrooms', 'mushrooms']	{'NCBI_taxonomy': '5341'}
+e909	organism	Shiitake	['shiitake mushrooms', 'Lentinula edodes', 'shiitake mushroom', 'Lentinus edodes']	{'NCBI_taxonomy': '5353'}
+e910	organism	Pistachio	['Pistacia vera', 'Pistachios']	{'NCBI_taxonomy': '55513'}
 e911	organism	Cloudberry	['Rubus chamaemorus']	{'NCBI_taxonomy': '57936'}
-e912	organism	G. mangostana	['Garcinia mangostana', 'Garcinia mangostana L', 'Mangosteen', 'Purple mangosteen']	{'NCBI_taxonomy': '58228'}
+e912	organism	Purple mangosteen	['G. mangostana', 'Garcinia mangostana', 'Mangosteen', 'Garcinia mangostana L']	{'NCBI_taxonomy': '58228'}
 e913	organism	Tamarind	['Tamarindus indica', 'Tamarindus indica L']	{'NCBI_taxonomy': '58860'}
-e914	organism	F. tartaricum	['F. tataricum', 'Fagopyrum tataricum', 'Tartary buckwheat']	{'NCBI_taxonomy': '62330'}
-e915	organism	Chenopodium quinoa	['Quinoa']	{'NCBI_taxonomy': '63459'}
+e914	organism	Tartary buckwheat	['F. tataricum', 'Fagopyrum tataricum', 'F. tartaricum']	{'NCBI_taxonomy': '62330'}
+e915	organism	Quinoa	['Chenopodium quinoa']	{'NCBI_taxonomy': '63459'}
 e916	organism	Blue mussel	['Blue mussels', 'Mytilus edulis']	{'NCBI_taxonomy': '6550'}
-e917	organism	Capers	['Capparis', 'Capparis spinosa', 'caper']	{'NCBI_taxonomy': '65558'}
-e918	organism	Crassostrea virginica	['Eastern oyster']	{'NCBI_taxonomy': '6565'}
-e919	organism	Cymbopogon citratus	['Lemon grass']	{'NCBI_taxonomy': '66014'}
-e920	organism	Aronia Melanocarpa	['Black chokeberry', 'Photinia melanocarpa']	{'NCBI_taxonomy': '661339'}
+e917	organism	Capers	['Capparis spinosa', 'Capparis', 'caper']	{'NCBI_taxonomy': '65558'}
+e918	organism	Eastern oyster	['Crassostrea virginica']	{'NCBI_taxonomy': '6565'}
+e919	organism	Lemon grass	['Cymbopogon citratus']	{'NCBI_taxonomy': '66014'}
+e920	organism	Black chokeberry	['Aronia Melanocarpa', 'Photinia melanocarpa']	{'NCBI_taxonomy': '661339'}
 e921	organism	Durian	['Durio zibethinus']	{'NCBI_taxonomy': '66656'}
-e922	organism	Blue crab	['Callinectes sapidus', 'blue crabs']	{'NCBI_taxonomy': '6763'}
+e922	organism	Blue crab	['blue crabs', 'Callinectes sapidus']	{'NCBI_taxonomy': '6763'}
 e923	organism	Highbush blueberry	['Vaccinium corymbosum', 'highbush']	{'NCBI_taxonomy': '69266'}
-e924	organism	A. schoenoprasum	['Allium schoenoprasum', 'Chives', 'chive']	{'NCBI_taxonomy': '74900'}
+e924	organism	Chives	['Allium schoenoprasum', 'chive', 'A. schoenoprasum']	{'NCBI_taxonomy': '74900'}
 e925	organism	Black raspberry	['R. occidentalis', 'Rubus occidentalis']	{'NCBI_taxonomy': '75079'}
-e926	organism	Passiflora	['Passiflora edulis', 'Passiflora edulis Sims', 'Passion fruit']	{'NCBI_taxonomy': '78168'}
-e927	organism	Blackcurrant	['R. nigrum', 'Ribes nigrum']	{'NCBI_taxonomy': '78511'}
+e926	organism	Passion fruit	['Passiflora edulis Sims', 'Passiflora edulis', 'Passiflora']	{'NCBI_taxonomy': '78168'}
+e927	organism	Blackcurrant	['Ribes nigrum', 'R. nigrum']	{'NCBI_taxonomy': '78511'}
 e928	organism	Fenugreek	['Trigonella foenum-graecum', 'Trigonella foenum-graecum L']	{'NCBI_taxonomy': '78534'}
-e929	organism	Common carp	['Cyprinus carpio', 'carp', 'carps']	{'NCBI_taxonomy': '7962'}
-e930	organism	Common verbena	['Verbena', 'Verbena officinalis']	{'NCBI_taxonomy': '79772'}
+e929	organism	Common carp	['carp', 'carps', 'Cyprinus carpio']	{'NCBI_taxonomy': '7962'}
+e930	organism	Common verbena	['Verbena officinalis', 'Verbena']	{'NCBI_taxonomy': '79772'}
 e931	organism	Atlantic salmon	['Salmo salar']	{'NCBI_taxonomy': '8030'}
-e932	organism	Swordfish	['Xiphias gladius', 'Xiphias gladius Linnaeus 1758']	{'NCBI_taxonomy': '8245'}
-e933	organism	Crocus sativus	['Saffron', 'saffron (Crocus']	{'NCBI_taxonomy': '82528'}
-e934	organism	Black mulberry	['M. nigra', 'Morus nigra', 'Morus nigra L']	{'NCBI_taxonomy': '85232'}
-e935	organism	C. reticulata	['Citrus reticulata', 'Citrus reticulata Blanco', 'Mandarin orange (Clementine, Tangerine)', 'tangerines']	{'NCBI_taxonomy': '85571'}
+e932	organism	Swordfish	['Xiphias gladius Linnaeus 1758', 'Xiphias gladius']	{'NCBI_taxonomy': '8245'}
+e933	organism	Saffron	['Crocus sativus', 'saffron (Crocus']	{'NCBI_taxonomy': '82528'}
+e934	organism	Black mulberry	['M. nigra', 'Morus nigra L', 'Morus nigra']	{'NCBI_taxonomy': '85232'}
+e935	organism	Mandarin orange (Clementine, Tangerine)	['Citrus reticulata', 'Citrus reticulata Blanco', 'tangerines', 'C. reticulata']	{'NCBI_taxonomy': '85571'}
 e936	organism	Kombu	['Laminaria japonica', 'Saccharina japonica']	{'NCBI_taxonomy': '88149'}
-e937	organism	Chick	['Chicken', 'Gallus gallus']	{'NCBI_taxonomy': '9031'}
+e937	organism	Chicken	['Chick', 'Gallus gallus']	{'NCBI_taxonomy': '9031'}
 e938	organism	Ginger	['Zingiber officinale']	{'NCBI_taxonomy': '94328'}
-e939	organism	Chrysanthemum coronarium	['Chrysanthemum coronarium L', 'Garland chrysanthemum', 'Glebionis coronaria', 'chrysanthemum']	{'NCBI_taxonomy': '99038'}
-e940	organism_with_part	Muscadine grape - skin	['Vitis rotundifolia - skin', 'muscadine - skin']	{'NCBI_taxonomy': '103349'}
-e941	organism_with_part	Apium graveolens var. dulce - leaf	['Celery - leaf', 'Celery stalks - leaf']	{'NCBI_taxonomy': '117781'}
-e942	organism_with_part	Ceylon cinnamon - bark	['Cinnamomum verum - bark', 'Cinnamomum zeylanicum - bark', 'cinnamon - bark']	{'NCBI_taxonomy': '128608'}
-e943	organism_with_part	Nephelium lappaceum - fruit	['Nephelium lappaceum L - fruit', 'Rambutan - fruit']	{'NCBI_taxonomy': '151071'}
-e944	organism_with_part	Bilberry - juice	['V. myrtillus - juice', 'Vaccinium myrtillus - juice']	{'NCBI_taxonomy': '180763'}
-e945	organism_with_part	Bog bilberry - juice	['V. uliginosum - juice', 'Vaccinium uliginosum - juice']	{'NCBI_taxonomy': '190548'}
+e939	organism	Garland chrysanthemum	['Glebionis coronaria', 'chrysanthemum', 'Chrysanthemum coronarium L', 'Chrysanthemum coronarium']	{'NCBI_taxonomy': '99038'}
+e940	organism_with_part	Muscadine grape - skin	['muscadine - skin', 'Vitis rotundifolia - skin']	{'NCBI_taxonomy': '103349'}
+e941	organism_with_part	Celery stalks - leaf	['Celery - leaf', 'Apium graveolens var. dulce - leaf']	{'NCBI_taxonomy': '117781'}
+e942	organism_with_part	Ceylon cinnamon - bark	['Cinnamomum zeylanicum - bark', 'cinnamon - bark', 'Cinnamomum verum - bark']	{'NCBI_taxonomy': '128608'}
+e943	organism_with_part	Rambutan - fruit	['Nephelium lappaceum L - fruit', 'Nephelium lappaceum - fruit']	{'NCBI_taxonomy': '151071'}
+e944	organism_with_part	Bilberry - juice	['Vaccinium myrtillus - juice', 'V. myrtillus - juice']	{'NCBI_taxonomy': '180763'}
+e945	organism_with_part	Bog bilberry - juice	['Vaccinium uliginosum - juice', 'V. uliginosum - juice']	{'NCBI_taxonomy': '190548'}
 e946	organism_with_part	Red raspberry - fruit	['Rubus idaeus - fruit', 'Rubus idaeus L - fruit']	{'NCBI_taxonomy': '32247'}
-e947	organism_with_part	Common buckwheat - seed	['Fagopyrum esculentum - seed', 'buckwheat - seed']	{'NCBI_taxonomy': '3617'}
-e948	organism_with_part	F. x ananassa - fruit	['Fragaria X ananassa - fruit', 'Strawberry - fruit']	{'NCBI_taxonomy': '3747'}
-e949	organism_with_part	Glycine max - seed	['Soy bean - seed', 'soybean - seed']	{'NCBI_taxonomy': '3847'}
-e950	organism_with_part	Camellia - seed	['Camellia oleifera - seed', 'Oil-seed Camellia - seed']	{'NCBI_taxonomy': '385388'}
-e951	organism_with_part	Lens culinaris - seed	['Lentil - seed', 'Lentils - seed']	{'NCBI_taxonomy': '3864'}
-e952	organism_with_part	Adzuki bean - seed	['Adzuki beans - seed', 'Azuki bean - seed', 'Vigna angularis - seed']	{'NCBI_taxonomy': '3914'}
-e953	organism_with_part	Flax - seed	['Flaxseed - seed', 'Linum usitatissimum - seed']	{'NCBI_taxonomy': '4006'}
-e954	organism_with_part	Nelumbo - leaf	['Nelumbo nucifera - leaf', 'Nelumbo nucifera Gaertn - leaf', 'Sacred lotus - leaf']	{'NCBI_taxonomy': '4432'}
-e955	organism_with_part	Corn - leaf	['Zea mays - leaf', 'maize - leaf']	{'NCBI_taxonomy': '4577'}
-e956	organism_with_part	M. fragrans - seed	['Myristica fragrans - seed', 'Nutmeg - seed']	{'NCBI_taxonomy': '51089'}
+e947	organism_with_part	Common buckwheat - seed	['buckwheat - seed', 'Fagopyrum esculentum - seed']	{'NCBI_taxonomy': '3617'}
+e948	organism_with_part	Strawberry - fruit	['Fragaria X ananassa - fruit', 'F. x ananassa - fruit']	{'NCBI_taxonomy': '3747'}
+e949	organism_with_part	Soy bean - seed	['soybean - seed', 'Glycine max - seed']	{'NCBI_taxonomy': '3847'}
+e950	organism_with_part	Oil-seed Camellia - seed	['Camellia - seed', 'Camellia oleifera - seed']	{'NCBI_taxonomy': '385388'}
+e951	organism_with_part	Lentils - seed	['Lens culinaris - seed', 'Lentil - seed']	{'NCBI_taxonomy': '3864'}
+e952	organism_with_part	Adzuki bean - seed	['Azuki bean - seed', 'Adzuki beans - seed', 'Vigna angularis - seed']	{'NCBI_taxonomy': '3914'}
+e953	organism_with_part	Flaxseed - seed	['Flax - seed', 'Linum usitatissimum - seed']	{'NCBI_taxonomy': '4006'}
+e954	organism_with_part	Sacred lotus - leaf	['Nelumbo nucifera - leaf', 'Nelumbo nucifera Gaertn - leaf', 'Nelumbo - leaf']	{'NCBI_taxonomy': '4432'}
+e955	organism_with_part	Corn - leaf	['maize - leaf', 'Zea mays - leaf']	{'NCBI_taxonomy': '4577'}
+e956	organism_with_part	Nutmeg - seed	['M. fragrans - seed', 'Myristica fragrans - seed']	{'NCBI_taxonomy': '51089'}
 e957	organism_with_part	European cranberry - berry	['Vaccinium - berry', 'Vaccinium oxycoccos - berry']	{'NCBI_taxonomy': '516948'}
-e958	organism_with_part	G. mangostana - pericarp	['Garcinia mangostana - pericarp', 'Garcinia mangostana L - pericarp', 'Mangosteen - pericarp', 'Purple mangosteen - pericarp']	{'NCBI_taxonomy': '58228'}
-e959	organism_with_part	Black mulberry - fruit	['M. nigra - fruit', 'Morus nigra - fruit', 'Morus nigra L - fruit']	{'NCBI_taxonomy': '85232'}
-e960	chemical	allyl isothiocyanate	['Allyl isothiocyanate']	{'MESH': 'C004471'}
-e961	chemical	ferulic acid	['Ferulic acid', 'ferulic acids']	{'MESH': 'C004999'}
-e962	chemical	ursolic acid	['ursolic acids', 'Ursolic acid']	{'MESH': 'C005466'}
-e963	chemical	kaempferol	['Kaempferol']	{'MESH': 'C006552'}
-e964	chemical	carvone	['Carvone', '2-methyl-5-(1-methylethenyl)-2-cyclohexene-1-one', '(-)-carvone']	{'MESH': 'C006923'}
-e965	chemical	chrysoeriol	['chrysoeriol 7-glucosides']	{'MESH': 'C007054'}
-e966	chemical	citral	['Citral']	{'MESH': 'C007076'}
-e967	chemical	gingerol	['Gingerols']	{'MESH': 'C007845'}
-e968	chemical	myricitrin	['Myricitrin']	{'MESH': 'C008577'}
-e969	chemical	protocatechuic acid	['protocatechuic acids']	{'MESH': 'C009091'}
+e958	organism_with_part	Purple mangosteen - pericarp	['G. mangostana - pericarp', 'Mangosteen - pericarp', 'Garcinia mangostana L - pericarp', 'Garcinia mangostana - pericarp']	{'NCBI_taxonomy': '58228'}
+e959	organism_with_part	Black mulberry - fruit	['Morus nigra - fruit', 'Morus nigra L - fruit', 'M. nigra - fruit']	{'NCBI_taxonomy': '85232'}
+e960	chemical	allyl isothiocyanate	['Allyl isothiocyanate']	{'MESH': 'C004471', 'CAS': ['57-06-7']}
+e961	chemical	ferulic acid	['Ferulic acid', 'ferulic acids']	{'MESH': 'C004999', 'CAS': ['537-98-4', '1135-24-6', '24276-84-4']}
+e962	chemical	ursolic acid	['Ursolic acid', 'ursolic acids']	{'MESH': 'C005466', 'CAS': ['77-52-1']}
+e963	chemical	kaempferol	['Kaempferol']	{'MESH': 'C006552', 'CAS': ['520-18-3']}
+e964	chemical	carvone	['(-)-carvone', 'Carvone', '2-methyl-5-(1-methylethenyl)-2-cyclohexene-1-one']	{'MESH': 'C006923', 'CAS': ['99-49-0']}
+e965	chemical	chrysoeriol	['chrysoeriol 7-glucosides']	{'MESH': 'C007054', 'CAS': ['491-71-4']}
+e966	chemical	citral	['Citral']	{'MESH': 'C007076', 'CAS': ['5392-40-5', '141-27-5', '106-26-3']}
+e967	chemical	gingerol	['Gingerols']	{'MESH': 'C007845', 'CAS': ['1391-73-7']}
+e968	chemical	myricitrin	['Myricitrin']	{'MESH': 'C008577', 'CAS': ['17912-87-7']}
+e969	chemical	protocatechuic acid	['protocatechuic acids']	{'MESH': 'C009091', 'CAS': ['99-50-3']}
 e970	chemical	1,8-cineole	['cineol']	{'MESH': 'C010087'}
-e971	chemical	sinigrin	['glucosinolate sinigrin']	{'MESH': 'C010330'}
+e971	chemical	sinigrin	['glucosinolate sinigrin']	{'MESH': 'C010330', 'CAS': ['534-69-0']}
 e972	chemical	xylosides	['xyloside']	{'MESH': 'C010807'}
-e973	chemical	galactomannan	['galactomannans']	{'MESH': 'C012990'}
+e973	chemical	galactomannan	['galactomannans']	{'MESH': 'C012990', 'CAS': ['11078-30-1']}
 e974	chemical	Lycopene	[]	{'MESH': 'C015329'}
-e975	chemical	indole-3-carbinol	['Indole-3-carbinol']	{'MESH': 'C016517'}
-e976	chemical	isoquercitrin	['quercetin-3-O-glucoside', 'quercetin-3-glucoside']	{'MESH': 'C016527'}
-e977	chemical	sulforaphane	['Sulforaphane']	{'MESH': 'C016766'}
-e978	chemical	cyanidin	['cyanidins', 'Cyanidin']	{'MESH': 'C017154'}
-e979	chemical	delphinidin	['delphinidins']	{'MESH': 'C017185'}
-e980	chemical	phenolic acid	['phenolic acids', 'Phenolic', 'phenolics']	{'MESH': 'C017616'}
-e981	chemical	gamma-terpinene	['p-mentha-1,3-diene', 'alpha-terpinene']	{'MESH': 'C018669'}
-e982	chemical	diallyl disulfide	['DADS']	{'MESH': 'C028009'}
-e983	chemical	coumarin	['Coumarin', 'isoprenylated coumarins', 'coumarins']	{'MESH': 'C030123'}
-e984	chemical	rosmarinic acid	['RA', 'rosmarinic acids', 'Rosmarinic Acid']	{'MESH': 'C041376'}
-e985	chemical	flavone	['flavones', 'polymethoxylated flavones', 'C-dideoxyhexosyl flavones', 'flavone glycosides']	{'MESH': 'C043562'}
+e975	chemical	indole-3-carbinol	['Indole-3-carbinol']	{'MESH': 'C016517', 'CAS': ['700-06-1']}
+e976	chemical	isoquercitrin	['quercetin-3-glucoside', 'quercetin-3-O-glucoside']	{'MESH': 'C016527', 'CAS': ['21637-25-2']}
+e977	chemical	sulforaphane	['Sulforaphane']	{'MESH': 'C016766', 'CAS': ['4478-93-7']}
+e978	chemical	cyanidin	['Cyanidin', 'cyanidins']	{'MESH': 'C017154', 'CAS': ['13306-05-3', '528-58-5']}
+e979	chemical	delphinidin	['delphinidins']	{'MESH': 'C017185', 'CAS': ['528-53-0', '13270-61-6']}
+e980	chemical	phenolic acid	['Phenolic', 'phenolics', 'phenolic acids']	{'MESH': 'C017616', 'CAS': ['29656-58-4']}
+e981	chemical	gamma-terpinene	['alpha-terpinene', 'p-mentha-1,3-diene']	{'MESH': 'C018669', 'CAS': ['99-85-4', '8013-00-1', '99-86-5']}
+e982	chemical	diallyl disulfide	['DADS']	{'MESH': 'C028009', 'CAS': ['2179-57-9']}
+e983	chemical	coumarin	['isoprenylated coumarins', 'Coumarin', 'coumarins']	{'MESH': 'C030123', 'CAS': ['91-64-5']}
+e984	chemical	rosmarinic acid	['Rosmarinic Acid', 'rosmarinic acids', 'RA']	{'MESH': 'C041376', 'CAS': ['537-15-5']}
+e985	chemical	flavone	['flavones', 'C-dideoxyhexosyl flavones', 'polymethoxylated flavones', 'flavone glycosides']	{'MESH': 'C043562', 'CAS': ['525-82-6']}
 e986	chemical	Resveratrol	[]	{'MESH': 'C059514'}
-e987	chemical	vitamin A, vitamin E, vitamin K3 drug combination	['Vitamin A', 'vitamin c', 'vitamins', 'vitamins A', 'vitamin']	{'MESH': 'C059630'}
-e988	chemical	malvidin	['malvidins']	{'MESH': 'C065861'}
-e989	chemical	pelargonidin	['pelargonidins']	{'MESH': 'C066957'}
-e990	chemical	phthalide	['phthalides']	{'MESH': 'C082022'}
-e991	chemical	caffeoylquinic acid	['dicaffeoylquinic acid', 'caffeoylquinic acids', '4,5-dicaffeoylquinic acids']	{'MESH': 'C472707'}
+e987	chemical	vitamin A, vitamin E, vitamin K3 drug combination	['vitamins', 'vitamin c', 'vitamin', 'vitamins A', 'Vitamin A']	{'MESH': 'C059630', 'CAS': ['135669-41-9']}
+e988	chemical	malvidin	['malvidins']	{'MESH': 'C065861', 'CAS': ['10463-84-0', '643-84-5']}
+e989	chemical	pelargonidin	['pelargonidins']	{'MESH': 'C066957', 'CAS': ['134-04-3', '7690-51-9']}
+e990	chemical	phthalide	['phthalides']	{'MESH': 'C082022', 'CAS': ['87-41-2']}
+e991	chemical	caffeoylquinic acid	['dicaffeoylquinic acid', '4,5-dicaffeoylquinic acids', 'caffeoylquinic acids']	{'MESH': 'C472707'}
 e992	chemical	GI 5269	['polyphenolic', 'polyphenolics']	{'MESH': 'C476595'}
 e993	chemical	kaempferol-3-O-rutinoside	['kaempferol-3-rutinoside']	{'MESH': 'C492687'}
-e994	chemical	caryophyllene oxide	['beta-caryophyllene oxide', 'Caryophyllene oxide']	{'MESH': 'C515179'}
+e994	chemical	caryophyllene oxide	['Caryophyllene oxide', 'beta-caryophyllene oxide']	{'MESH': 'C515179'}
 e995	chemical	3,4-dihydroxyphenacyl caffeate phenylpropanoid ester	['phenylpropanoids', 'phenylpropanoid']	{'MESH': 'C520402'}
-e996	chemical	triterpenoid TP-222	['tetracyclic triterpenoid', 'triterpenoid', 'Triterpenoids']	{'MESH': 'C520592'}
+e996	chemical	triterpenoid TP-222	['triterpenoid', 'Triterpenoids', 'tetracyclic triterpenoid']	{'MESH': 'C520592'}
 e997	chemical	cyanidin 3-galactoside	['cyanidin 3-O-galactoside']	{'MESH': 'C546035'}
 e998	chemical	Sugars	['sugar']	{'MESH': 'D000073893'}
 e999	chemical	Limonene	['D-limonene']	{'MESH': 'D000077222'}
 e1000	chemical	Alkanes	['n-alkanes']	{'MESH': 'D000473'}
-e1001	chemical	Aluminum	['Al']	{'MESH': 'D000535'}
-e1002	chemical	Amino Acids	['tannic acid', 'transferulic acid', 'S-amino acids']	{'MESH': 'D000596'}
-e1003	chemical	Anthocyanins	['anthocyanidins', 'Anthocyanin', 'anthocyanidin']	{'MESH': 'D000872'}
-e1004	chemical	Ascorbic Acid	['ascorbate', 'Vitamin C', 'ascorbic acids']	{'MESH': 'D001205'}
-e1005	chemical	Cadmium	['Cd']	{'MESH': 'D002104'}
-e1006	chemical	Caffeic Acids	['caffeic', 'caffeic acid', 'caffeic and nicotinic acids']	{'MESH': 'D002109'}
-e1007	chemical	Carbohydrates	['carbohydrate', 'sugars', 'sugar']	{'MESH': 'D002241'}
-e1008	chemical	Carotenoids	['carotene', 'carotenoid']	{'MESH': 'D002338'}
-e1009	chemical	Carrageenan	['carrageenans']	{'MESH': 'D002351'}
-e1010	chemical	Catechin	['epicatechin', 'catechins', '(-)-epicatechin']	{'MESH': 'D002392'}
-e1011	chemical	Chlorogenic Acid	['chlorogenic', 'chlorogenic acids']	{'MESH': 'D002726'}
-e1012	chemical	Chlorophyll	['chlorophylls']	{'MESH': 'D002734'}
-e1013	chemical	Copper	['Cu']	{'MESH': 'D003300'}
+e1001	chemical	Aluminum	['Al']	{'MESH': 'D000535', 'CAS': ['7429-90-5']}
+e1002	chemical	Amino Acids	['transferulic acid', 'tannic acid', 'S-amino acids']	{'MESH': 'D000596'}
+e1003	chemical	Anthocyanins	['Anthocyanin', 'anthocyanidin', 'anthocyanidins']	{'MESH': 'D000872'}
+e1004	chemical	Ascorbic Acid	['ascorbic acids', 'Vitamin C', 'ascorbate']	{'MESH': 'D001205', 'CAS': ['134-03-2', '50-81-7']}
+e1005	chemical	Cadmium	['Cd']	{'MESH': 'D002104', 'CAS': ['7440-43-9']}
+e1006	chemical	Caffeic Acids	['caffeic and nicotinic acids', 'caffeic acid', 'caffeic']	{'MESH': 'D002109'}
+e1007	chemical	Carbohydrates	['sugar', 'sugars', 'carbohydrate']	{'MESH': 'D002241'}
+e1008	chemical	Carotenoids	['carotenoid', 'carotene']	{'MESH': 'D002338', 'CAS': ['36-88-4']}
+e1009	chemical	Carrageenan	['carrageenans']	{'MESH': 'D002351', 'CAS': ['9000-07-1']}
+e1010	chemical	Catechin	['epicatechin', '(-)-epicatechin', 'catechins']	{'MESH': 'D002392', 'CAS': ['490-46-0', '16198-00-8', '154-23-4', '321-01-7']}
+e1011	chemical	Chlorogenic Acid	['chlorogenic acids', 'chlorogenic']	{'MESH': 'D002726', 'CAS': ['327-97-9']}
+e1012	chemical	Chlorophyll	['chlorophylls']	{'MESH': 'D002734', 'CAS': ['1406-65-1']}
+e1013	chemical	Copper	['Cu']	{'MESH': 'D003300', 'CAS': ['7440-50-8']}
 e1014	chemical	Coumaric Acids	['hydroxycinnamic acids', 'Hydroxycinnamic acid']	{'MESH': 'D003373'}
 e1015	chemical	Coumarins	[]	{'MESH': 'D003374'}
-e1016	chemical	Curcumin	['diferuloylmethane']	{'MESH': 'D003474'}
-e1017	chemical	Cysteine	['cysteines']	{'MESH': 'D003545'}
+e1016	chemical	Curcumin	['diferuloylmethane']	{'MESH': 'D003474', 'CAS': ['458-37-7']}
+e1017	chemical	Cysteine	['cysteines']	{'MESH': 'D003545', 'CAS': ['4371-52-2', '52-90-4', '7048-04-6']}
 e1018	chemical	Esters	['oleoside 11-methyl ester', 'ester']	{'MESH': 'D004952'}
-e1019	chemical	Eugenol	[]	{'MESH': 'D005054'}
-e1020	chemical	Fatty Acids	['saturated fatty acids', 'fatty acid', 'aliphatic glucosinolates']	{'MESH': 'D005227'}
-e1021	chemical	Fatty Acids, Unsaturated	['unsaturated hydroxy fatty acid', 'unsaturated fatty acid', 'polyunsaturated fat acids', 'unsaturated fatty acids', 'C18-polyunsaturated fatty acid', 'polyunsaturated fatty acids']	{'MESH': 'D005231'}
-e1022	chemical	Flavonoids	['bioflavonoids', 'flavonoid']	{'MESH': 'D005419'}
-e1023	chemical	Folic Acid	['folate']	{'MESH': 'D005492'}
-e1024	chemical	Glucosides	['cyandin 3-O-glucoside', 'glucoside']	{'MESH': 'D005960'}
+e1019	chemical	Eugenol	[]	{'MESH': 'D005054', 'CAS': ['97-53-0']}
+e1020	chemical	Fatty Acids	['fatty acid', 'saturated fatty acids', 'aliphatic glucosinolates']	{'MESH': 'D005227'}
+e1021	chemical	Fatty Acids, Unsaturated	['unsaturated fatty acids', 'unsaturated hydroxy fatty acid', 'C18-polyunsaturated fatty acid', 'polyunsaturated fat acids', 'unsaturated fatty acid', 'polyunsaturated fatty acids']	{'MESH': 'D005231'}
+e1022	chemical	Flavonoids	['flavonoid', 'bioflavonoids']	{'MESH': 'D005419'}
+e1023	chemical	Folic Acid	['folate']	{'MESH': 'D005492', 'CAS': ['6484-89-5', '59-30-3']}
+e1024	chemical	Glucosides	['glucoside', 'cyandin 3-O-glucoside']	{'MESH': 'D005960'}
 e1025	chemical	Glucosinolates	['glucosinolate']	{'MESH': 'D005961'}
 e1026	chemical	Glycosides	['solanidane glycosides', 'glycoside']	{'MESH': 'D006027'}
-e1027	chemical	Histidine	['l-histidine']	{'MESH': 'D006639'}
-e1028	chemical	Iron	['Fe']	{'MESH': 'D007501'}
-e1029	chemical	Lignin	[]	{'MESH': 'D008031'}
-e1030	chemical	Linoleic Acids	['linoleic', 'linoleic acid']	{'MESH': 'D008041'}
+e1027	chemical	Histidine	['l-histidine']	{'MESH': 'D006639', 'CAS': ['7006-35-1', '71-00-1']}
+e1028	chemical	Iron	['Fe']	{'MESH': 'D007501', 'CAS': ['7439-89-6']}
+e1029	chemical	Lignin	[]	{'MESH': 'D008031', 'CAS': ['9005-53-2']}
+e1030	chemical	Linoleic Acids	['linoleic acid', 'linoleic']	{'MESH': 'D008041'}
 e1031	chemical	Lipids	['lipid']	{'MESH': 'D008055'}
-e1032	chemical	Magnesium	['Mg']	{'MESH': 'D008274'}
-e1033	chemical	Manganese	[]	{'MESH': 'D008345'}
-e1034	chemical	Mannitol	[]	{'MESH': 'D008353'}
-e1035	chemical	Menthol	[]	{'MESH': 'D008610'}
-e1036	chemical	Mercury	['methyl-mercury', 'Hg', 'methyl mercury']	{'MESH': 'D008628'}
+e1032	chemical	Magnesium	['Mg']	{'MESH': 'D008274', 'CAS': ['7439-95-4']}
+e1033	chemical	Manganese	[]	{'MESH': 'D008345', 'CAS': ['7439-96-5']}
+e1034	chemical	Mannitol	[]	{'MESH': 'D008353', 'CAS': ['87-78-5', '69-65-8']}
+e1035	chemical	Menthol	[]	{'MESH': 'D008610', 'CAS': ['1490-04-6']}
+e1036	chemical	Mercury	['methyl-mercury', 'Hg', 'methyl mercury']	{'MESH': 'D008628', 'CAS': ['7439-97-6']}
 e1037	chemical	Oils	['oil']	{'MESH': 'D009821'}
 e1038	chemical	Oils, Volatile	['Essential Oils', 'Essential Oil']	{'MESH': 'D009822'}
-e1039	chemical	Oleanolic Acid	['oleanolic']	{'MESH': 'D009828'}
+e1039	chemical	Oleanolic Acid	['oleanolic']	{'MESH': 'D009828', 'CAS': ['508-02-1']}
 e1040	chemical	Oleic Acids	['oleic acid', 'oleic']	{'MESH': 'D009829'}
 e1041	chemical	Oxalates	['oxalate']	{'MESH': 'D010070'}
 e1042	chemical	Phenols	['phenol']	{'MESH': 'D010636'}
-e1043	chemical	Phosphorus	['phosphorous']	{'MESH': 'D010758'}
-e1044	chemical	Phytic Acid	['inositol hexaphosphoric acid', 'phytate']	{'MESH': 'D010833'}
+e1043	chemical	Phosphorus	['phosphorous']	{'MESH': 'D010758', 'CAS': ['7723-14-0']}
+e1044	chemical	Phytic Acid	['inositol hexaphosphoric acid', 'phytate']	{'MESH': 'D010833', 'CAS': ['83-86-3']}
 e1045	chemical	Phytosterols	['phytosterol']	{'MESH': 'D010840'}
 e1046	chemical	Polychlorinated Biphenyls	['polychlorinated naphthalenes']	{'MESH': 'D011078'}
 e1047	chemical	Polysaccharides	['Polysaccharide']	{'MESH': 'D011134'}
 e1048	chemical	Furocoumarins	['Furanocoumarins']	{'MESH': 'D011564'}
-e1049	chemical	Quercetin	['quercetin glycosides']	{'MESH': 'D011794'}
-e1050	chemical	Rutin	['quercetin-3-rutinoside']	{'MESH': 'D012431'}
+e1049	chemical	Quercetin	['quercetin glycosides']	{'MESH': 'D011794', 'CAS': ['117-39-5']}
+e1050	chemical	Rutin	['quercetin-3-rutinoside']	{'MESH': 'D012431', 'CAS': ['153-18-4']}
 e1051	chemical	Saponins	['saponin']	{'MESH': 'D012503'}
-e1052	chemical	Selenium	['Se']	{'MESH': 'D012643'}
-e1053	chemical	Serotonin	[]	{'MESH': 'D012701'}
-e1054	chemical	Sesquiterpenes	['sesquiterpene hydrocarbons', 'sesquiterpene', 'sesquiterpene lactone', 'sesquiterpenoid']	{'MESH': 'D012717'}
-e1055	chemical	Starch	['starches']	{'MESH': 'D013213'}
-e1056	chemical	Sterols	['sterol', 'sterol glucosides']	{'MESH': 'D013261'}
+e1052	chemical	Selenium	['Se']	{'MESH': 'D012643', 'CAS': ['7782-49-2']}
+e1053	chemical	Serotonin	[]	{'MESH': 'D012701', 'CAS': ['50-67-9']}
+e1054	chemical	Sesquiterpenes	['sesquiterpenoid', 'sesquiterpene hydrocarbons', 'sesquiterpene lactone', 'sesquiterpene']	{'MESH': 'D012717'}
+e1055	chemical	Starch	['starches']	{'MESH': 'D013213', 'CAS': ['9005-25-8']}
+e1056	chemical	Sterols	['sterol glucosides', 'sterol']	{'MESH': 'D013261'}
 e1057	chemical	Stilbenes	['stilbene']	{'MESH': 'D013267'}
 e1058	chemical	Sulfoxides	['sulfoxide']	{'MESH': 'D013454'}
-e1059	chemical	Sulfur	['sulphur', 'sulfane sulfur', 'Cyclic sulfur']	{'MESH': 'D013455'}
+e1059	chemical	Sulfur	['sulfane sulfur', 'sulphur', 'Cyclic sulfur']	{'MESH': 'D013455', 'CAS': ['7704-34-9']}
 e1060	chemical	Tannins	['tannin']	{'MESH': 'D013634'}
-e1061	chemical	Terpenes	['terpenoids', 'terpene']	{'MESH': 'D013729'}
-e1062	chemical	Thebaine	[]	{'MESH': 'D013797'}
-e1063	chemical	Triglycerides	['triacylglycerol', 'triacylglycerols']	{'MESH': 'D014280'}
-e1064	chemical	Triterpenes	['triterpene avenacins', 'triterpenoids', 'triterpene', 'triterpene acids', 'triterpene saponins']	{'MESH': 'D014315'}
-e1065	chemical	Vanillic Acid	['vanillic acids']	{'MESH': 'D014641'}
-e1066	chemical	Vitamin A	['retinol']	{'MESH': 'D014801'}
-e1067	chemical	Lutein	[]	{'MESH': 'D014975'}
-e1068	chemical	Fatty Acids, Omega-3	['n-3 fatty acids', 'omega-3 fatty acids', 'omega-3 PUFA', 'omega-3 PUFAs', 'PUFA', '(n-3) fatty acids', 'n-6 fatty acids']	{'MESH': 'D015525'}
+e1061	chemical	Terpenes	['terpene', 'terpenoids']	{'MESH': 'D013729'}
+e1062	chemical	Thebaine	[]	{'MESH': 'D013797', 'CAS': ['115-37-7']}
+e1063	chemical	Triglycerides	['triacylglycerols', 'triacylglycerol']	{'MESH': 'D014280'}
+e1064	chemical	Triterpenes	['triterpene saponins', 'triterpene avenacins', 'triterpene acids', 'triterpenoids', 'triterpene']	{'MESH': 'D014315'}
+e1065	chemical	Vanillic Acid	['vanillic acids']	{'MESH': 'D014641', 'CAS': ['121-34-6']}
+e1066	chemical	Vitamin A	['vitamin A', 'retinol']	{'MESH': 'D014801', 'CAS': ['68-26-8', '11103-57-4']}
+e1067	chemical	Lutein	[]	{'MESH': 'D014975', 'CAS': ['127-40-2']}
+e1068	chemical	Fatty Acids, Omega-3	['omega-3 PUFAs', 'omega-3 fatty acids', 'omega-3 PUFA', 'n-6 fatty acids', 'n-3 fatty acids', '(n-3) fatty acids', 'PUFA']	{'MESH': 'D015525'}
 e1069	chemical	Lignans	['neolignans', 'lignan']	{'MESH': 'D017705'}
-e1070	chemical	Isothiocyanates	['glucose isothiocyanates', 'isothiocyanate']	{'MESH': 'D017879'}
-e1071	chemical	Citric Acid	['citric']	{'MESH': 'D019343'}
-e1072	chemical	Linoleic Acid	['9,12-octadecadienoic acid']	{'MESH': 'D019787'}
-e1073	chemical	Benzoic Acid	['Benzoic acid']	{'MESH': 'D019817'}
+e1070	chemical	Isothiocyanates	['isothiocyanate', 'glucose isothiocyanates']	{'MESH': 'D017879'}
+e1071	chemical	Citric Acid	['citric']	{'MESH': 'D019343', 'CAS': ['77-92-9']}
+e1072	chemical	Linoleic Acid	['9,12-octadecadienoic acid']	{'MESH': 'D019787', 'CAS': ['2197-37-7']}
+e1073	chemical	Benzoic Acid	['Benzoic acid']	{'MESH': 'D019817', 'CAS': ['65-85-0', '582-25-2']}
 e1074	chemical	gamma-Tocopherol	['Gamma-tocopherol']	{'MESH': 'D024504'}
-e1075	chemical	Tocopherols	['hydrosols', 'tocopherol']	{'MESH': 'D024505'}
+e1075	chemical	Tocopherols	['hydrosols', 'tocopherol']	{'MESH': 'D024505', 'CAS': ['1406-66-2']}
 e1076	chemical	Tocotrienols	['tocotrienol']	{'MESH': 'D024508'}
-e1077	chemical	Diarylheptanoids	['diarylheptanoid', 'curcuminoids']	{'MESH': 'D036381'}
-e1078	chemical	Monoterpenes	['Monoterpene', 'monoterpene alcohol', 'Monocyclic monoterpene menthol', 'monoterpene ketone', 'monoterpenoid', 'monoterpene hydrocarbons']	{'MESH': 'D039821'}
+e1077	chemical	Diarylheptanoids	['curcuminoids', 'diarylheptanoid']	{'MESH': 'D036381'}
+e1078	chemical	Monoterpenes	['monoterpene alcohol', 'monoterpene hydrocarbons', 'Monocyclic monoterpene menthol', 'Monoterpene', 'monoterpenoid', 'monoterpene ketone']	{'MESH': 'D039821'}
 e1079	chemical	Xanthones	['tetraoxygenated diprenylated xanthone']	{'MESH': 'D044004'}
-e1080	chemical	Proanthocyanidins	['procyanidins', 'condensed tannins', 'proanthocyanidin']	{'MESH': 'D044945'}
+e1080	chemical	Proanthocyanidins	['proanthocyanidin', 'procyanidins', 'condensed tannins']	{'MESH': 'D044945'}
 e1081	chemical	Flavonols	['flavonol glycosides']	{'MESH': 'D044948'}
-e1082	chemical	Kaempferols	['kaempferol 3-glucuronide', 'kaempferol glucuronide', 'kaempferol']	{'MESH': 'D044949'}
+e1082	chemical	Kaempferols	['kaempferol glucuronide', 'kaempferol', 'kaempferol 3-glucuronide']	{'MESH': 'D044949'}
 e1083	chemical	beta-Glucans	['beta-glucan']	{'MESH': 'D047071'}
 e1084	chemical	Chalcones	['chalcone']	{'MESH': 'D047188'}
 e1085	chemical	Flavones	[]	{'MESH': 'D047309'}
-e1086	chemical	Apigenin	[]	{'MESH': 'D047310'}
-e1087	chemical	Hydrolyzable Tannins	['ellagitannins', 'tannins', 'Gallotannin', 'tannin']	{'MESH': 'D047348'}
+e1086	chemical	Apigenin	[]	{'MESH': 'D047310', 'CAS': ['520-36-5']}
+e1087	chemical	Hydrolyzable Tannins	['ellagitannins', 'tannin', 'Gallotannin', 'tannins']	{'MESH': 'D047348'}
 e1088	chemical	Anacardic Acids	['Anacardic acid']	{'MESH': 'D048729'}
 e1089	chemical	Betacyanins	['betacyanin']	{'MESH': 'D050859'}
-e1090	chemical	Acetogenins	['gamma-lactone acetogenin', 'acetogenin']	{'MESH': 'D054378'}
-e1091	chemical	Polyphenols	['Polyphenol', 'prenyl-substituted polyphenols']	{'MESH': 'D059808'}
+e1090	chemical	Acetogenins	['acetogenin', 'gamma-lactone acetogenin']	{'MESH': 'D054378'}
+e1091	chemical	Polyphenols	['prenyl-substituted polyphenols', 'Polyphenol']	{'MESH': 'D059808'}
 e1092	chemical	quercetin-3-O-alpha-L-rhamnopyranoside	"[""quercetin 3-O-(3''-O-2'''-methyl-2'''-hydroxylethyl)-alpha-L-rhamnopyranoside""]"	{'MESH': 'C509385'}
 e1093	chemical	4-hydroxybenzylglucosinolate	[]	{'MESH': 'C097342'}
-e1094	chemical	Acetylcholine	['ACh']	{'MESH': 'D000109'}
-e1095	chemical	Noscapine	['Alkaloid Noscapine']	{'MESH': 'D009665'}
+e1094	chemical	Acetylcholine	['ACh']	{'MESH': 'D000109', 'CAS': ['51-84-3', '60-31-1', '66-23-9']}
+e1095	chemical	Noscapine	['Alkaloid Noscapine']	{'MESH': 'D009665', 'CAS': ['128-62-1']}
 e1096	chemical	Norisoprenoids	['C15-norisoprenoids']	{'MESH': 'D045792'}
-e1097	chemical	Galactose	['D-galactose']	{'MESH': 'D005690'}
+e1097	chemical	Galactose	['D-galactose']	{'MESH': 'D005690', 'CAS': ['26566-61-0']}
 e1098	chemical	docosahexaenoylascorbic acid	['DHA']	{'MESH': 'C111716'}
 e1099	chemical	N-benzoylphenylalaninyl-N-benzoylphenylalaninate	['N-benzoylphenylalanyl-N-benzoylphenylalaninate']	{'MESH': 'C586320'}
-e1100	chemical	Pyridoxal	['PL']	{'MESH': 'D011730'}
-e1101	chemical	umbelliprenin	['Umbelliprenin']	{'MESH': 'C003744'}
-e1102	chemical	undecaprenol	['Undecaprenol']	{'MESH': 'C017788'}
-e1103	chemical	MK 316	['alpha-copaene']	{'MESH': 'C002934'}
-e1104	chemical	annonacin	[]	{'MESH': 'C053442'}
-e1105	chemical	ascaridole	[]	{'MESH': 'C043372'}
-e1106	chemical	Aspartic Acid	[]	{'MESH': 'D001224'}
-e1107	chemical	Cryptoxanthins	['beta-Cryptoxanthin-epoxides']	{'MESH': 'D065366'}
-e1108	chemical	cyfluthrin	['beta-cyfluthrin']	{'MESH': 'C052570'}
-e1109	chemical	isoborneol	['borneol']	{'MESH': 'C022871'}
-e1110	chemical	Cobalt	[]	{'MESH': 'D003035'}
+e1100	chemical	Pyridoxal	['PL']	{'MESH': 'D011730', 'CAS': ['66-72-8']}
+e1101	chemical	umbelliprenin	['Umbelliprenin']	{'MESH': 'C003744', 'CAS': ['532-16-1']}
+e1102	chemical	undecaprenol	['Undecaprenol']	{'MESH': 'C017788', 'CAS': ['15575-14-1']}
+e1103	chemical	MK 316	['alpha-copaene']	{'MESH': 'C002934', 'CAS': ['57129-44-9']}
+e1104	chemical	annonacin	[]	{'MESH': 'C053442', 'CAS': ['111035-65-5']}
+e1105	chemical	ascaridole	[]	{'MESH': 'C043372', 'CAS': ['512-85-6']}
+e1106	chemical	Aspartic Acid	[]	{'MESH': 'D001224', 'CAS': ['17090-93-6', '56-84-8', '2001-89-0', '14007-45-5', '72231-13-1', '2068-80-6', '21059-46-1', '5598-53-8']}
+e1107	chemical	Cryptoxanthins	['beta-Cryptoxanthin-epoxides']	{'MESH': 'D065366', 'CAS': ['472-70-8']}
+e1108	chemical	cyfluthrin	['beta-cyfluthrin']	{'MESH': 'C052570', 'CAS': ['68359-37-5']}
+e1109	chemical	isoborneol	['borneol']	{'MESH': 'C022871', 'CAS': ['10385-78-1']}
+e1110	chemical	Cobalt	[]	{'MESH': 'D003035', 'CAS': ['7440-48-4']}
 e1111	chemical	cyclo-dopa	[]	{'MESH': 'C494225'}
 e1112	chemical	Deoxyribonucleotides	[]	{'MESH': 'D003854'}
 e1113	chemical	dimethoxycurcumin	['dimethoxy-curcumin']	{'MESH': 'C521105'}
 e1114	chemical	ent-7beta,11alpha,14-trihydroxy-18-aldehyde-11beta-20-epoxy-kaur-16-en15-one	['diterpenoid ginkgolide']	{'MESH': 'C503616'}
-e1115	chemical	epicatechin gallate	[]	{'MESH': 'C062669'}
-e1116	chemical	Ergothioneine	[]	{'MESH': 'D004880'}
-e1117	chemical	Esculin	[]	{'MESH': 'D004929'}
+e1115	chemical	epicatechin gallate	[]	{'MESH': 'C062669', 'CAS': ['863-03-6']}
+e1116	chemical	Ergothioneine	[]	{'MESH': 'D004880', 'CAS': ['497-30-3']}
+e1117	chemical	Esculin	[]	{'MESH': 'D004929', 'CAS': ['531-75-9']}
 e1118	chemical	Amino Acids, Essential	['essential amino acids']	{'MESH': 'D000601'}
-e1119	chemical	faradiol	[]	{'MESH': 'C100535'}
-e1120	chemical	Genistein	[]	{'MESH': 'D019833'}
-e1121	chemical	genistin	[]	{'MESH': 'C040641'}
-e1122	chemical	Glutathione	[]	{'MESH': 'D005978'}
+e1119	chemical	faradiol	[]	{'MESH': 'C100535', 'CAS': ['20554-95-4', '42719-35-7']}
+e1120	chemical	Genistein	[]	{'MESH': 'D019833', 'CAS': ['446-72-0']}
+e1121	chemical	genistin	[]	{'MESH': 'C040641', 'CAS': ['529-59-9']}
+e1122	chemical	Glutathione	[]	{'MESH': 'D005978', 'CAS': ['70-18-8']}
 e1123	chemical	Iridoids	[]	{'MESH': 'D039823'}
-e1124	chemical	menthone	[]	{'MESH': 'C019466'}
+e1124	chemical	menthone	[]	{'MESH': 'C019466', 'CAS': ['89-80-5']}
 e1125	chemical	5'-O-caffeoylquinic acid	['neochlorogenic acid']	{'MESH': 'C473200'}
-e1126	chemical	octyl acetate	[]	{'MESH': 'C059676'}
-e1127	chemical	p-coumaric acid	[]	{'MESH': 'C495469'}
+e1126	chemical	octyl acetate	[]	{'MESH': 'C059676', 'CAS': ['112-14-1']}
+e1127	chemical	p-coumaric acid	[]	{'MESH': 'C495469', 'CAS': ['501-98-4', '61013-25-0', '7400-08-0', '4501-31-9']}
 e1128	chemical	pectenotoxin-2-seco acid	['pectenotoxin-2 seco acid']	{'MESH': 'C420916'}
-e1129	chemical	perillyl alcohol	[]	{'MESH': 'C032208'}
-e1130	chemical	persin	[]	{'MESH': 'C098164'}
+e1129	chemical	perillyl alcohol	[]	{'MESH': 'C032208', 'CAS': ['536-59-4', '18457-55-1']}
+e1130	chemical	persin	[]	{'MESH': 'C098164', 'CAS': ['60640-59-7']}
 e1131	chemical	Phosphatidylcholines	['phosphatidylcholine']	{'MESH': 'D010713'}
-e1132	chemical	proanthocyanidin A2	['proanthocyanidin A-2']	{'MESH': 'C473740'}
-e1133	chemical	procyanidin B	[]	{'MESH': 'C479578'}
-e1134	chemical	safranal	[]	{'MESH': 'C087963'}
-e1135	chemical	Sorbitol	[]	{'MESH': 'D013012'}
+e1132	chemical	proanthocyanidin A2	['proanthocyanidin A-2']	{'MESH': 'C473740', 'CAS': ['41743-41-3']}
+e1133	chemical	procyanidin B	[]	{'MESH': 'C479578', 'CAS': ['15514-06-4']}
+e1134	chemical	safranal	[]	{'MESH': 'C087963', 'CAS': ['116-26-7']}
+e1135	chemical	Sorbitol	[]	{'MESH': 'D013012', 'CAS': ['50-70-4']}
 e1136	chemical	trachelogenin	['trachelogenin glycoside']	{'MESH': 'C560586'}
-e1137	chemical	tracheloside	[]	{'MESH': 'C079169'}
-e1138	chemical	triethanolamine	[]	{'MESH': 'C009546'}
-e1139	chemical	violaxanthin	['9-cis-violaxanthin']	{'MESH': 'C005613'}
-e1140	chemical	Vitamin K	['vitamin K1', 'vitamin K']	{'MESH': 'D014812'}
+e1137	chemical	tracheloside	[]	{'MESH': 'C079169', 'CAS': ['33464-71-0']}
+e1138	chemical	triethanolamine	[]	{'MESH': 'C009546', 'CAS': ['7376-31-0', '637-39-8', '10017-56-8', '14806-72-5', '102-71-6']}
+e1139	chemical	violaxanthin	['9-cis-violaxanthin']	{'MESH': 'C005613', 'CAS': ['126-29-4']}
+e1140	chemical	Vitamin K	['vitamin K', 'vitamin K1']	{'MESH': 'D014812', 'CAS': ['12001-79-5']}
 e1141	organism	Channel catfish	['Ictalurus punctatus']	{'NCBI_taxonomy': '7998'}
 e1142	organism	Chum salmon	['Oncorhynchus keta']	{'NCBI_taxonomy': '8018'}
 e1143	organism	Corn salad	['Valerianella locusta']	{'NCBI_taxonomy': '59166'}
@@ -1159,7 +1159,7 @@ e1156	organism_with_part	Celery stalks - stalk	['celery - stalk', 'Apium graveol
 e1157	organism_with_part	Common buckwheat - hull	['Fagopyrum esculentum Moench - hull', 'Fagopyrum esculentum - hull', 'buckwheat - hull']	{'NCBI_taxonomy': '3617'}
 e1158	organism_with_part	Coriander - stem	['C. sativum - stem', 'Coriandrum sativum - stem']	{'NCBI_taxonomy': '4047'}
 e1159	organism_with_part	Dandelion - leaf	['Taraxacum officinale - leaf']	{'NCBI_taxonomy': '50225'}
-e1160	organism_with_part	F. carica - fruit	['Ficus carica - fruit', 'Fig - fruit']	{'NCBI_taxonomy': '3494'}
+e1160	organism_with_part	Fig - fruit	['F. carica - fruit', 'Ficus carica - fruit']	{'NCBI_taxonomy': '3494'}
 e1161	organism_with_part	Garlic - leaf	['Allium sativum L - leaf', 'Allium sativum - leaf']	{'NCBI_taxonomy': '4682'}
 e1162	organism_with_part	Guava - leaf	['Psidium guajava - leaf']	{'NCBI_taxonomy': '120290'}
 e1163	organism_with_part	Java plum - berry	['Syzygium cumini - berry', 'Eugenia jambolana - berry']	{'NCBI_taxonomy': '260142'}
@@ -1184,60 +1184,60 @@ e1181	organism_with_part	Tea - seed	['Camellia sinensis - seed', 'camellia - see
 e1182	organism_with_part	Wild leek - bulb	['Allium ampeloprasum - bulb', 'A. ampeloprasum L. var - bulb']	{'NCBI_taxonomy': '4681'}
 e1183	organism_with_part	Wild leek - leaf	['Allium ampeloprasum - leaf', 'A. ampeloprasum L. var - leaf']	{'NCBI_taxonomy': '4681'}
 e1184	organism	Sweet bay	['Laurus nobilis']	{'NCBI_taxonomy': '85223'}
-e1185	organism_with_part	Annona muricata - fruit	['Annona muricata L - fruit', 'Soursop - fruit']	{'NCBI_taxonomy': '13337'}
-e1186	organism_with_part	Sinapis alba - seed	['White mustard - seed', 'yellow mustard - seed']	{'NCBI_taxonomy': '3728'}
+e1185	organism_with_part	Soursop - fruit	['Annona muricata L - fruit', 'Annona muricata - fruit']	{'NCBI_taxonomy': '13337'}
+e1186	organism_with_part	White mustard - seed	['yellow mustard - seed', 'Sinapis alba - seed']	{'NCBI_taxonomy': '3728'}
 e1187	chemical	2',4'-dihydroxy-4-methoxydihydrochalcone	[]	{'MESH': 'C514624'}
 e1188	chemical	3,7,4'-trihydroxyflavone	"[""3',4',7-trihydroxyflavone""]"	{'MESH': 'C483500'}
-e1189	chemical	neoxanthin	"[""9'-cis-neoxanthin""]"	{'MESH': 'C011947'}
+e1189	chemical	neoxanthin	"[""9'-cis-neoxanthin""]"	{'MESH': 'C011947', 'CAS': ['14660-91-4']}
 e1190	chemical	palmitone	['16-hentriacontanone']	{'MESH': 'C423862'}
-e1191	chemical	2,3-dimethylmaleic anhydride	[]	{'MESH': 'C007474'}
+e1191	chemical	2,3-dimethylmaleic anhydride	[]	{'MESH': 'C007474', 'CAS': ['766-39-2']}
 e1192	chemical	4-hydroxyisoleucine	['4-Hydroxyisoleucine']	{'MESH': 'C104672'}
 e1193	chemical	6-(Methylsulfinyl)hexyl isothiocyanate	[]	{'MESH': 'C505386'}
-e1194	chemical	tert-butyloxycarbonyl-tryptophyl-leucyl-asparagine	['Asparagine']	{'MESH': 'C050801'}
+e1194	chemical	tert-butyloxycarbonyl-tryptophyl-leucyl-asparagine	['Asparagine']	{'MESH': 'C050801', 'CAS': ['94236-41-6']}
 e1195	chemical	N-methylcoculaurine	[]	{'MESH': 'C496817'}
-e1196	chemical	nonylphenol	['Nonylphenol']	{'MESH': 'C025256'}
-e1197	chemical	Serine	['Ser']	{'MESH': 'D012694'}
+e1196	chemical	nonylphenol	['Nonylphenol']	{'MESH': 'C025256', 'CAS': ['25154-52-3']}
+e1197	chemical	Serine	['Ser']	{'MESH': 'D012694', 'CAS': ['56-45-1']}
 e1198	chemical	(trifluoromethyl)phenyldiazirinylfenpyroximate	['TDF']	{'MESH': 'C472745'}
 e1199	chemical	Aflatoxins	['aflatoxin']	{'MESH': 'D000348'}
-e1200	chemical	alpha-terpineol	['alpha terpineol']	{'MESH': 'C016775'}
+e1200	chemical	alpha-terpineol	['alpha terpineol']	{'MESH': 'C016775', 'CAS': ['98-55-5']}
 e1201	chemical	Benzoxazines	['aromatic benzoxazinoids']	{'MESH': 'D048588'}
-e1202	chemical	benzothiazole	['benzothiazoles']	{'MESH': 'C005465'}
+e1202	chemical	benzothiazole	['benzothiazoles']	{'MESH': 'C005465', 'CAS': ['95-16-9']}
 e1203	chemical	beta-bisabolene	[]	{'MESH': 'C531191'}
-e1204	chemical	betulinic acid	[]	{'MESH': 'C002070'}
-e1205	chemical	capsanthin	[]	{'MESH': 'C006889'}
-e1206	chemical	chamazulene	[]	{'MESH': 'C013872'}
+e1204	chemical	betulinic acid	[]	{'MESH': 'C002070', 'CAS': ['472-15-1']}
+e1205	chemical	capsanthin	[]	{'MESH': 'C006889', 'CAS': ['465-42-9']}
+e1206	chemical	chamazulene	[]	{'MESH': 'C013872', 'CAS': ['529-05-5']}
 e1207	chemical	chlorantranilipole	['chlorantraniliprole']	{'MESH': 'C517733'}
-e1208	chemical	lyoniside	['daucosterol']	{'MESH': 'C011015'}
-e1209	chemical	ethyl gallate	[]	{'MESH': 'C048734'}
+e1208	chemical	lyoniside	['daucosterol']	{'MESH': 'C011015', 'CAS': ['474-58-8']}
+e1209	chemical	ethyl gallate	[]	{'MESH': 'C048734', 'CAS': ['831-61-8']}
 e1210	chemical	fagopyrin	[]	{'MESH': 'C496890'}
 e1211	chemical	Fatty Alcohols	[]	{'MESH': 'D005233'}
-e1212	chemical	4,5-amino-3,5-dichloro-6-fluoro-2-pyridinyloxyacetic acid	['fluroxypyr']	{'MESH': 'C416382'}
-e1213	chemical	foetidin	[]	{'MESH': 'C015222'}
-e1214	chemical	Fucose	[]	{'MESH': 'D005643'}
-e1215	chemical	furfuryl alcohol	[]	{'MESH': 'C012986'}
-e1216	chemical	Glucuronic Acid	['glucuronic acids']	{'MESH': 'D020723'}
+e1212	chemical	4,5-amino-3,5-dichloro-6-fluoro-2-pyridinyloxyacetic acid	['fluroxypyr']	{'MESH': 'C416382', 'CAS': ['69377-81-7']}
+e1213	chemical	foetidin	[]	{'MESH': 'C015222', 'CAS': ['69431-51-2']}
+e1214	chemical	Fucose	[]	{'MESH': 'D005643', 'CAS': ['3713-31-3']}
+e1215	chemical	furfuryl alcohol	[]	{'MESH': 'C012986', 'CAS': ['98-00-0']}
+e1216	chemical	Glucuronic Acid	['glucuronic acids']	{'MESH': 'D020723', 'CAS': ['576-37-4']}
 e1217	chemical	28-O-beta-D-glucopyranosyl-2alpha,3alpha,19-trihydoxy-18,19-secours-11,13(18)-dien-28-oic acid	['kakisaponin C']	{'MESH': 'C540963'}
-e1218	chemical	lauric acid	[]	{'MESH': 'C030358'}
-e1219	chemical	Lentinan	[]	{'MESH': 'D007912'}
-e1220	chemical	leucylleucine	['leucine']	{'MESH': 'C038361'}
+e1218	chemical	lauric acid	[]	{'MESH': 'C030358', 'CAS': ['2437-23-2', '629-25-4', '10124-65-9', '4696-56-4', '143-07-7']}
+e1219	chemical	Lentinan	[]	{'MESH': 'D007912', 'CAS': ['37339-90-5']}
+e1220	chemical	leucylleucine	['leucine']	{'MESH': 'C038361', 'CAS': ['2883-36-5']}
 e1221	chemical	luteolin 7-diglucuronide	['luteolin-7-diglucuronide']	{'MESH': 'C096572'}
-e1222	chemical	Lycopene	[]	{'MESH': 'D000077276'}
+e1222	chemical	Lycopene	[]	{'MESH': 'D000077276', 'CAS': ['502-65-8']}
 e1223	chemical	Malates	['malate']	{'MESH': 'D008293'}
 e1224	chemical	neoglucobrassicin	[]	{'MESH': 'C555404'}
-e1225	chemical	Yohimbine	['palisade']	{'MESH': 'D015016'}
-e1226	chemical	4-Aminobenzoic Acid	['para-aminobenzoic acid']	{'MESH': 'D010129'}
+e1225	chemical	Yohimbine	['palisade']	{'MESH': 'D015016', 'CAS': ['146-48-5']}
+e1226	chemical	4-Aminobenzoic Acid	['para-aminobenzoic acid']	{'MESH': 'D010129', 'CAS': ['150-13-0']}
 e1227	chemical	petaslignolide A	[]	{'MESH': 'C506356'}
 e1228	chemical	phytoprostane D1	['phytoprostanes']	{'MESH': 'C473305'}
 e1229	chemical	prodelphinidin B-2 3'-O-gallate	['prodelphinidins']	{'MESH': 'C472180'}
-e1230	chemical	Putrescine	[]	{'MESH': 'D011700'}
-e1231	chemical	sakuranetin	[]	{'MESH': 'C099724'}
+e1230	chemical	Putrescine	[]	{'MESH': 'D011700', 'CAS': ['110-60-1']}
+e1231	chemical	sakuranetin	[]	{'MESH': 'C099724', 'CAS': ['2957-21-3']}
 e1232	chemical	Sphingolipids	[]	{'MESH': 'D013107'}
 e1233	chemical	G6 stilbenoid tyrosine kinase inhibitor	['stilbenoids']	{'MESH': 'C576143'}
 e1234	chemical	Sulfates	['sulfate']	{'MESH': 'D013431'}
 e1235	chemical	Sulfides	['sulfide']	{'MESH': 'D013440'}
-e1236	chemical	Vitamin B 6	['vitamin B']	{'MESH': 'D025101'}
+e1236	chemical	Vitamin B 6	['vitamin B']	{'MESH': 'D025101', 'CAS': ['8059-24-3']}
 e1237	chemical	xylomannan	[]	{'MESH': 'C570461'}
-e1238	chemical	zingerone	[]	{'MESH': 'C013738'}
+e1238	chemical	zingerone	[]	{'MESH': 'C013738', 'CAS': ['122-48-5']}
 e1239	organism	Celeriac	['Apium graveolens var. rapaceum']	{'NCBI_taxonomy': '278110'}
 e1240	organism	European anchovy	['Engraulis encrasicolus']	{'NCBI_taxonomy': '184585'}
 e1241	organism	Horse	['Equus caballus']	{'NCBI_taxonomy': '9796'}
@@ -1289,12 +1289,12 @@ e1286	organism_with_part	Wild carrot - root	['carrots - root', 'Daucus carota - 
 e1287	organism	Ostrich fern	['Matteuccia struthiopteris']	{'NCBI_taxonomy': '3277'}
 e1288	organism	Small-leaf linden	['Tilia cordata']	{'NCBI_taxonomy': '172266'}
 e1289	organism	Star anise	['Illicium verum']	{'NCBI_taxonomy': '124778'}
-e1290	organism	Cichorium endivia	['Cichorium endivia subsp', 'Endive']	{'NCBI_taxonomy': '114280'}
-e1291	organism	C. grandis	['Citrus maxima', 'Pummelo']	{'NCBI_taxonomy': '37334'}
-e1292	organism	Lupinus albus	['Lupinus albus L', 'White lupine']	{'NCBI_taxonomy': '3870'}
+e1290	organism	Endive	['Cichorium endivia', 'Cichorium endivia subsp']	{'NCBI_taxonomy': '114280'}
+e1291	organism	Pummelo	['Citrus maxima', 'C. grandis']	{'NCBI_taxonomy': '37334'}
+e1292	organism	White lupine	['Lupinus albus L', 'Lupinus albus']	{'NCBI_taxonomy': '3870'}
 e1293	chemical	11-Hydroxycorticosteroids	[]	{'MESH': 'D015062'}
 e1294	chemical	17-Hydroxycorticosteroids	[]	{'MESH': 'D015065'}
-e1295	chemical	4-Butyrolactone	[]	{'MESH': 'D015107'}
+e1295	chemical	4-Butyrolactone	[]	{'MESH': 'D015107', 'CAS': ['96-48-0']}
 e1296	chemical	Abietanes	[]	{'MESH': 'D045784'}
 e1297	chemical	Acetanilides	[]	{'MESH': 'D000083'}
 e1298	chemical	Acetates	[]	{'MESH': 'D000085'}
@@ -1305,7 +1305,7 @@ e1302	chemical	Acids, Aldehydic	[]	{'MESH': 'D000145'}
 e1303	chemical	Acids, Carbocyclic	[]	{'MESH': 'D000146'}
 e1304	chemical	Acids, Heterocyclic	[]	{'MESH': 'D000147'}
 e1305	chemical	Acids, Noncarboxylic	[]	{'MESH': 'D000148'}
-e1306	chemical	Acrolein	[]	{'MESH': 'D000171'}
+e1306	chemical	Acrolein	[]	{'MESH': 'D000171', 'CAS': ['107-02-8']}
 e1307	chemical	Acrylates	[]	{'MESH': 'D000179'}
 e1308	chemical	Acyclic Monoterpenes	[]	{'MESH': 'D000080462'}
 e1309	chemical	Adenine Nucleotides	[]	{'MESH': 'D000227'}
@@ -1354,7 +1354,7 @@ e1351	chemical	Benzothiazoles	[]	{'MESH': 'D052160'}
 e1352	chemical	Benzyl Compounds	[]	{'MESH': 'D001593'}
 e1353	chemical	Benzylidene Compounds	[]	{'MESH': 'D001597'}
 e1354	chemical	Benzylisoquinolines	[]	{'MESH': 'D044182'}
-e1355	chemical	Betalains	[]	{'MESH': 'D050858'}
+e1355	chemical	Betalains	[]	{'MESH': 'D050858', 'CAS': ['37279-84-8']}
 e1356	chemical	Bicyclic Monoterpenes	[]	{'MESH': 'D000081008'}
 e1357	chemical	Biflavonoids	[]	{'MESH': 'D044946'}
 e1358	chemical	Biogenic Amines	[]	{'MESH': 'D001679'}
@@ -1366,7 +1366,7 @@ e1363	chemical	Biomedical and Dental Materials	[]	{'MESH': 'D001697'}
 e1364	chemical	Biopolymers	[]	{'MESH': 'D001704'}
 e1365	chemical	Biphenyl Compounds	[]	{'MESH': 'D001713'}
 e1366	chemical	Blood Coagulation Factors	[]	{'MESH': 'D001779'}
-e1367	chemical	Bradykinin	[]	{'MESH': 'D001920'}
+e1367	chemical	Bradykinin	[]	{'MESH': 'D001920', 'CAS': ['14109-47-8', '634-56-0', '58-82-2']}
 e1368	chemical	Bridged Bicyclo Compounds	[]	{'MESH': 'D001643'}
 e1369	chemical	Bridged-Ring Compounds	[]	{'MESH': 'D001952'}
 e1370	chemical	Butadienes	[]	{'MESH': 'D002070'}
@@ -1375,17 +1375,17 @@ e1372	chemical	Camphanes	[]	{'MESH': 'D001892'}
 e1373	chemical	Carboxylic Acids	[]	{'MESH': 'D002264'}
 e1374	chemical	Catecholamines	[]	{'MESH': 'D002395'}
 e1375	chemical	Catechols	[]	{'MESH': 'D002396'}
-e1376	chemical	Cellulose	[]	{'MESH': 'D002482'}
+e1376	chemical	Cellulose	[]	{'MESH': 'D002482', 'CAS': ['9004-34-6']}
 e1377	chemical	Ceramides	[]	{'MESH': 'D002518'}
 e1378	chemical	Chalcogens	[]	{'MESH': 'D018011'}
-e1379	chemical	Chalcone	[]	{'MESH': 'D002599'}
+e1379	chemical	Chalcone	[]	{'MESH': 'D002599', 'CAS': ['94-41-7']}
 e1380	chemical	Chemical Actions and Uses	[]	{'MESH': 'D020164'}
-e1381	chemical	Cholecystokinin	[]	{'MESH': 'D002766'}
+e1381	chemical	Cholecystokinin	[]	{'MESH': 'D002766', 'CAS': ['9011-97-6']}
 e1382	chemical	Cholestadienes	[]	{'MESH': 'D002774'}
 e1383	chemical	Cholestadienols	[]	{'MESH': 'D002775'}
 e1384	chemical	Cholestanes	[]	{'MESH': 'D002776'}
 e1385	chemical	Cholestenes	[]	{'MESH': 'D002782'}
-e1386	chemical	Cholesterol	[]	{'MESH': 'D002784'}
+e1386	chemical	Cholesterol	[]	{'MESH': 'D002784', 'CAS': ['57-88-5']}
 e1387	chemical	Chromans	[]	{'MESH': 'D002839'}
 e1388	chemical	Chromones	[]	{'MESH': 'D002867'}
 e1389	chemical	Cinnamates	[]	{'MESH': 'D002934'}
@@ -1412,8 +1412,8 @@ e1409	chemical	Diet, Food, and Nutrition	[]	{'MESH': 'D000066888'}
 e1410	chemical	Dietary Carbohydrates	[]	{'MESH': 'D004040'}
 e1411	chemical	Dietary Fats	[]	{'MESH': 'D004041'}
 e1412	chemical	Dietary Fats, Unsaturated	[]	{'MESH': 'D004042'}
-e1413	chemical	Dihydroxyphenylalanine	[]	{'MESH': 'D004295'}
-e1414	chemical	Diosgenin	[]	{'MESH': 'D004144'}
+e1413	chemical	Dihydroxyphenylalanine	[]	{'MESH': 'D004295', 'CAS': ['63-84-3']}
+e1414	chemical	Diosgenin	[]	{'MESH': 'D004144', 'CAS': ['512-04-9']}
 e1415	chemical	Dioxins and Dioxin-like Compounds	[]	{'MESH': 'D000072316'}
 e1416	chemical	Dioxolanes	[]	{'MESH': 'D004148'}
 e1417	chemical	Dioxoles	[]	{'MESH': 'D004149'}
@@ -1428,7 +1428,7 @@ e1425	chemical	Electrolytes	[]	{'MESH': 'D004573'}
 e1426	chemical	Elements	[]	{'MESH': 'D004602'}
 e1427	chemical	Epoxy Compounds	[]	{'MESH': 'D004852'}
 e1428	chemical	Estrogens	[]	{'MESH': 'D004967'}
-e1429	chemical	Ethanol	[]	{'MESH': 'D000431'}
+e1429	chemical	Ethanol	[]	{'MESH': 'D000431', 'CAS': ['64-17-5']}
 e1430	chemical	Ethanolamines	[]	{'MESH': 'D004983'}
 e1431	chemical	Ethers	[]	{'MESH': 'D004987'}
 e1432	chemical	Ethers, Cyclic	[]	{'MESH': 'D004988'}
@@ -1461,7 +1461,7 @@ e1458	chemical	Glycosaminoglycans	[]	{'MESH': 'D006025'}
 e1459	chemical	Glycosphingolipids	[]	{'MESH': 'D006028'}
 e1460	chemical	Gonadal Hormones	[]	{'MESH': 'D042341'}
 e1461	chemical	Gonadal Steroid Hormones	[]	{'MESH': 'D012739'}
-e1462	chemical	Guaiacol	[]	{'MESH': 'D006139'}
+e1462	chemical	Guaiacol	[]	{'MESH': 'D006139', 'CAS': ['90-05-1']}
 e1463	chemical	Hemiterpenes	[]	{'MESH': 'D045782'}
 e1464	chemical	Heptanes	[]	{'MESH': 'D006536'}
 e1465	chemical	Heterocyclic Compounds	[]	{'MESH': 'D006571'}
@@ -1482,14 +1482,14 @@ e1479	chemical	Hydrocarbons, Brominated	[]	{'MESH': 'D006842'}
 e1480	chemical	Hydrocarbons, Chlorinated	[]	{'MESH': 'D006843'}
 e1481	chemical	Hydrocarbons, Cyclic	[]	{'MESH': 'D006844'}
 e1482	chemical	Hydrocarbons, Halogenated	[]	{'MESH': 'D006846'}
-e1483	chemical	Hydrogen Sulfide	[]	{'MESH': 'D006862'}
+e1483	chemical	Hydrogen Sulfide	[]	{'MESH': 'D006862', 'CAS': ['7783-06-4']}
 e1484	chemical	Hydroxides	[]	{'MESH': 'D006878'}
 e1485	chemical	Hydroxy Acids	[]	{'MESH': 'D006880'}
 e1486	chemical	Hydroxybenzoate Ethers	[]	{'MESH': 'D062425'}
 e1487	chemical	Hydroxybenzoates	[]	{'MESH': 'D062385'}
 e1488	chemical	Hydroxycorticosteroids	[]	{'MESH': 'D006889'}
 e1489	chemical	Hydroxylamines	[]	{'MESH': 'D006898'}
-e1490	chemical	Hydroxypropiophenone	[]	{'MESH': 'D006910'}
+e1490	chemical	Hydroxypropiophenone	[]	{'MESH': 'D006910', 'CAS': ['1321-48-8']}
 e1491	chemical	Hydroxyquinolines	[]	{'MESH': 'D006912'}
 e1492	chemical	Hypoxanthines	[]	{'MESH': 'D007042'}
 e1493	chemical	Imidazoles	[]	{'MESH': 'D007093'}
@@ -1501,15 +1501,15 @@ e1498	chemical	Inflammation Mediators	[]	{'MESH': 'D018836'}
 e1499	chemical	Inorganic Chemicals	[]	{'MESH': 'D007287'}
 e1500	chemical	Inositol Phosphates	[]	{'MESH': 'D007295'}
 e1501	chemical	Intercellular Signaling Peptides and Proteins	[]	{'MESH': 'D036341'}
-e1502	chemical	Interferons	[]	{'MESH': 'D007372'}
+e1502	chemical	Interferons	[]	{'MESH': 'D007372', 'CAS': ['9008-11-1']}
 e1503	chemical	Ions	[]	{'MESH': 'D007477'}
 e1504	chemical	Iron Compounds	[]	{'MESH': 'D058085'}
 e1505	chemical	Isocyanates	[]	{'MESH': 'D017953'}
-e1506	chemical	Isoleucine	[]	{'MESH': 'D007532'}
+e1506	chemical	Isoleucine	[]	{'MESH': 'D007532', 'CAS': ['7004-09-3', '73-32-5']}
 e1507	chemical	Isoquinolines	[]	{'MESH': 'D007546'}
 e1508	chemical	Ketoses	[]	{'MESH': 'D007661'}
 e1509	chemical	Kinins	[]	{'MESH': 'D007705'}
-e1510	chemical	Kynurenic Acid	[]	{'MESH': 'D007736'}
+e1510	chemical	Kynurenic Acid	[]	{'MESH': 'D007736', 'CAS': ['492-27-3']}
 e1511	chemical	Lactates	[]	{'MESH': 'D007773'}
 e1512	chemical	Latex	[]	{'MESH': 'D007840'}
 e1513	chemical	Lauric Acids	[]	{'MESH': 'D007850'}
@@ -1544,10 +1544,10 @@ e1541	chemical	Nerve Tissue Proteins	[]	{'MESH': 'D009419'}
 e1542	chemical	Neuraminic Acids	[]	{'MESH': 'D009438'}
 e1543	chemical	Neuropeptides	[]	{'MESH': 'D009479'}
 e1544	chemical	Neutral Glycosphingolipids	[]	{'MESH': 'D020383'}
-e1545	chemical	Nitric Acid	[]	{'MESH': 'D017942'}
+e1545	chemical	Nitric Acid	[]	{'MESH': 'D017942', 'CAS': ['7697-37-2']}
 e1546	chemical	Nitriles	[]	{'MESH': 'D009570'}
 e1547	chemical	Nitrogen Compounds	[]	{'MESH': 'D017672'}
-e1548	chemical	Nitrous Acid	[]	{'MESH': 'D009608'}
+e1548	chemical	Nitrous Acid	[]	{'MESH': 'D009608', 'CAS': ['7782-77-6']}
 e1549	chemical	Norbornanes	[]	{'MESH': 'D009636'}
 e1550	chemical	Nucleic Acids, Nucleotides, and Nucleosides	[]	{'MESH': 'D009706'}
 e1551	chemical	Nucleotides	[]	{'MESH': 'D009711'}
@@ -1563,7 +1563,7 @@ e1560	chemical	Oximes	[]	{'MESH': 'D010091'}
 e1561	chemical	Oxocins	[]	{'MESH': 'D035964'}
 e1562	chemical	Oxygen Compounds	[]	{'MESH': 'D017601'}
 e1563	chemical	Palmitic Acids	[]	{'MESH': 'D010169'}
-e1564	chemical	Pectins	[]	{'MESH': 'D010368'}
+e1564	chemical	Pectins	[]	{'MESH': 'D010368', 'CAS': ['9000-69-5']}
 e1565	chemical	Pentacyclic Triterpenes	[]	{'MESH': 'D053978'}
 e1566	chemical	Pentoses	[]	{'MESH': 'D010429'}
 e1567	chemical	Peptide Fragments	[]	{'MESH': 'D010446'}
@@ -1573,10 +1573,10 @@ e1570	chemical	Pharmaceutical Preparations	[]	{'MESH': 'D004364'}
 e1571	chemical	Pharmacologic Actions	[]	{'MESH': 'D020228'}
 e1572	chemical	Phenanthrenes	[]	{'MESH': 'D010616'}
 e1573	chemical	Phenyl Ethers	[]	{'MESH': 'D010647'}
-e1574	chemical	Phenylalanine	[]	{'MESH': 'D010649'}
-e1575	chemical	Phenylethyl Alcohol	[]	{'MESH': 'D010626'}
+e1574	chemical	Phenylalanine	[]	{'MESH': 'D010649', 'CAS': ['3617-44-5', '63-91-2']}
+e1575	chemical	Phenylethyl Alcohol	[]	{'MESH': 'D010626', 'CAS': ['60-12-8']}
 e1576	chemical	Phenylpropionates	[]	{'MESH': 'D010666'}
-e1577	chemical	Phloroglucinol	[]	{'MESH': 'D010696'}
+e1577	chemical	Phloroglucinol	[]	{'MESH': 'D010696', 'CAS': ['108-73-6']}
 e1578	chemical	Phorbols	[]	{'MESH': 'D010704'}
 e1579	chemical	Phosphatidic Acids	[]	{'MESH': 'D010712'}
 e1580	chemical	Phosphorus Acids	[]	{'MESH': 'D017976'}
@@ -1625,15 +1625,15 @@ e1622	chemical	Quinones	[]	{'MESH': 'D011809'}
 e1623	chemical	Reactive Oxygen Species	[]	{'MESH': 'D017382'}
 e1624	chemical	Retinoids	[]	{'MESH': 'D012176'}
 e1625	chemical	Ribonucleotides	[]	{'MESH': 'D012265'}
-e1626	chemical	Rubber	[]	{'MESH': 'D012408'}
+e1626	chemical	Rubber	[]	{'MESH': 'D012408', 'CAS': ['9006-04-6']}
 e1627	chemical	Salicylates	[]	{'MESH': 'D012459'}
 e1628	chemical	Secologanin Tryptamine Alkaloids	[]	{'MESH': 'D046948'}
 e1629	chemical	Secosteroids	[]	{'MESH': 'D012632'}
 e1630	chemical	Selenium Compounds	[]	{'MESH': 'D018036'}
 e1631	chemical	Sitosterols	[]	{'MESH': 'D012855'}
 e1632	chemical	Solanaceous Alkaloids	[]	{'MESH': 'D012991'}
-e1633	chemical	Solanine	[]	{'MESH': 'D012992'}
-e1634	chemical	Spermidine	[]	{'MESH': 'D013095'}
+e1633	chemical	Solanine	[]	{'MESH': 'D012992', 'CAS': ['20562-02-1']}
+e1634	chemical	Spermidine	[]	{'MESH': 'D013095', 'CAS': ['124-20-9']}
 e1635	chemical	Spirostans	[]	{'MESH': 'D013150'}
 e1636	chemical	Stearic Acids	[]	{'MESH': 'D013229'}
 e1637	chemical	Stilbestrols	[]	{'MESH': 'D000081225'}
@@ -1663,18 +1663,18 @@ e1660	chemical	Thiones	[]	{'MESH': 'D013871'}
 e1661	chemical	Thiophenes	[]	{'MESH': 'D013876'}
 e1662	chemical	Thyroid Hormones	[]	{'MESH': 'D013963'}
 e1663	chemical	Thyronines	[]	{'MESH': 'D013970'}
-e1664	chemical	Toluene	[]	{'MESH': 'D014050'}
+e1664	chemical	Toluene	[]	{'MESH': 'D014050', 'CAS': ['108-88-3']}
 e1665	chemical	Toxins, Biological	[]	{'MESH': 'D014118'}
 e1666	chemical	Transition Elements	[]	{'MESH': 'D028561'}
 e1667	chemical	Tricarboxylic Acids	[]	{'MESH': 'D014233'}
 e1668	chemical	Trimethyl Ammonium Compounds	[]	{'MESH': 'D050337'}
 e1669	chemical	Triose Sugar Alcohols	[]	{'MESH': 'D000073999'}
 e1670	chemical	Tryptamines	[]	{'MESH': 'D014363'}
-e1671	chemical	Tryptophan	[]	{'MESH': 'D014364'}
-e1672	chemical	Tyramine	[]	{'MESH': 'D014439'}
-e1673	chemical	Tyrosine	[]	{'MESH': 'D014443'}
+e1671	chemical	Tryptophan	[]	{'MESH': 'D014364', 'CAS': ['73-22-3', '6912-86-3']}
+e1672	chemical	Tyramine	[]	{'MESH': 'D014439', 'CAS': ['51-67-2']}
+e1673	chemical	Tyrosine	[]	{'MESH': 'D014443', 'CAS': ['55520-40-6', '60-18-4']}
 e1674	chemical	Uronic Acids	[]	{'MESH': 'D014574'}
-e1675	chemical	Vasopressins	[]	{'MESH': 'D014667'}
+e1675	chemical	Vasopressins	[]	{'MESH': 'D014667', 'CAS': ['11000-17-2']}
 e1676	chemical	Xanthenes	[]	{'MESH': 'D014966'}
 e1677	chemical	Xanthines	[]	{'MESH': 'D014970'}
 e1678	chemical	Xanthurenates	[]	{'MESH': 'D014977'}

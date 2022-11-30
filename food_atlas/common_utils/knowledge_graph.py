@@ -1,5 +1,5 @@
 from ast import literal_eval
-from collections import namedtuple, Counter, OrderedDict
+from collections import namedtuple, OrderedDict
 from copy import deepcopy
 import os
 from pathlib import Path
@@ -7,7 +7,6 @@ from typing import Dict, List, Any
 import sys
 
 from tqdm import tqdm
-import numpy as np
 import pandas as pd
 pd.options.mode.chained_assignment = None
 
@@ -688,13 +687,13 @@ class KnowledgeGraph():
     def get_entity_by_id(self, foodatlas_id: str) -> pd.Series:
         entity = self.df_entities[self.df_entities["foodatlas_id"] == foodatlas_id]
         assert entity.shape[0] == 1
-        return entity.iloc[0]
+        return entity.iloc[0].copy()
 
     def get_entity_by_other_db_id(self, db_name: str, db_id: str) -> pd.Series:
         entity = self.df_entities[self.df_entities["other_db_ids"].apply(lambda x: db_name in x)]
         entity = entity[entity["other_db_ids"].apply(lambda x: x[db_name] == db_id)]
         assert entity.shape[0] == 1
-        return entity.iloc[0]
+        return entity.iloc[0].copy()
 
     def get_entity_by_name(self, name: str) -> pd.Series:
         raise NotImplementedError()
@@ -705,9 +704,9 @@ class KnowledgeGraph():
             startswith: str = None,
     ) -> pd.DataFrame:
         if type_:
-            return self.df_entities[self.df_entities["type"] == type_]
+            return self.df_entities[self.df_entities["type"] == type_].copy()
         if startswith:
-            return self.df_entities[self.df_entities["type"].startswith(startswith)]
+            return self.df_entities[self.df_entities["type"].startswith(startswith)].copy()
 
         raise RuntimeError()
 

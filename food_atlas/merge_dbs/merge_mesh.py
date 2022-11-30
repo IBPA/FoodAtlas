@@ -49,6 +49,19 @@ def parse_argument() -> argparse.Namespace:
     return args
 
 
+def _get_cas_ids_from_registry_numbers(registry_numbers):
+    cas_allowed_chars = '0123456789-'
+    cas_ids = list(set(registry_numbers))
+    if '0' in cas_ids:
+        cas_ids.remove('0')
+
+    cas_ids = [x.split(" (")[0] for x in cas_ids]
+    cas_ids = [x for x in cas_ids if x.count('-') == 2]
+    cas_ids = [x for x in cas_ids if set(x).issubset(cas_allowed_chars)]
+    cas_ids = list(set(cas_ids))
+    return cas_ids
+
+
 def main():
     args = parse_argument()
 
@@ -68,21 +81,21 @@ def main():
     print(f"Number of unique MESH ids: {len(mesh_ids)}")
 
     # parse descriptors
-    desc_mesh_id_element_lookup_filepath = os.path.join(
-        MESH_DATA_DIR, 'desc_mesh_id_element_lookup.pkl')
     desc_mesh_id_tree_number_lookup_filepath = os.path.join(
         MESH_DATA_DIR, 'desc_mesh_id_tree_number_lookup.pkl')
     desc_mesh_id_name_lookup_filepath = os.path.join(
         MESH_DATA_DIR, 'desc_mesh_id_name_lookup.pkl')
+    desc_mesh_id_cas_lookup_filepath = os.path.join(
+        MESH_DATA_DIR, 'desc_mesh_id_cas_lookup.pkl')
     desc_tree_number_mesh_id_lookup_filepath = os.path.join(
         MESH_DATA_DIR, 'desc_tree_number_mesh_id_lookup.pkl')
     desc_tree_number_name_lookup_filepath = os.path.join(
         MESH_DATA_DIR, 'desc_tree_number_name_lookup.pkl')
 
     if args.use_pkl:
-        desc_mesh_id_element_lookup = load_pkl(desc_mesh_id_element_lookup_filepath)
         desc_mesh_id_tree_number_lookup = load_pkl(desc_mesh_id_tree_number_lookup_filepath)
         desc_mesh_id_name_lookup = load_pkl(desc_mesh_id_name_lookup_filepath)
+        desc_mesh_id_cas_lookup = load_pkl(desc_mesh_id_cas_lookup_filepath)
         desc_tree_number_mesh_id_lookup = load_pkl(desc_tree_number_mesh_id_lookup_filepath)
         desc_tree_number_name_lookup = load_pkl(desc_tree_number_name_lookup_filepath)
     else:
@@ -94,15 +107,13 @@ def main():
         desc_parent_map = {c: p for p in desc_root.iter() for c in p}
 
         print("Generating descriptor lookups...")
-        desc_mesh_id_element_lookup = {}
         desc_mesh_id_tree_number_lookup = {}
         desc_mesh_id_name_lookup = {}
+        desc_mesh_id_cas_lookup = {}
         for x in desc_root.iter("DescriptorUI"):
             parent = desc_parent_map[x]
             if parent.tag != "DescriptorRecord":
                 continue
-
-            desc_mesh_id_element_lookup[x.text] = x
 
             for y in parent.iter("String"):
                 if desc_parent_map[desc_parent_map[y]].tag != "DescriptorRecord":
@@ -114,6 +125,28 @@ def main():
                 assert desc_parent_map[y].tag == "TreeNumberList"
                 desc_mesh_id_tree_number_lookup[x.text].append(y.text)
 
+            cas_ids_preferred = []
+            cas_ids_narrower = []
+            for y in parent.iter("RegistryNumber"):
+                assert desc_parent_map[y].tag == "Concept"
+                if desc_parent_map[y].get("PreferredConceptYN") == 'Y':
+                    cas_ids_preferred.append(y.text)
+                else:
+                    cas_ids_narrower.append(y.text)
+
+            for y in parent.iter("RelatedRegistryNumber"):
+                assert desc_parent_map[y].tag == "RelatedRegistryNumberList"
+                if desc_parent_map[desc_parent_map[y]].get("PreferredConceptYN") == 'Y':
+                    cas_ids_preferred.append(y.text)
+                else:
+                    cas_ids_narrower.append(y.text)
+
+            cas_ids_preferred = _get_cas_ids_from_registry_numbers(cas_ids_preferred)
+            cas_ids_narrower = _get_cas_ids_from_registry_numbers(cas_ids_narrower)
+            cas_ids = [i for i in cas_ids_preferred if i not in cas_ids_narrower]
+            if len(cas_ids) > 0:
+                desc_mesh_id_cas_lookup[x.text] = cas_ids[:]
+
         desc_tree_number_mesh_id_lookup = {}
         for k, v in desc_mesh_id_tree_number_lookup.items():
             for x in v:
@@ -123,9 +156,9 @@ def main():
         for k, v in desc_tree_number_mesh_id_lookup.items():
             desc_tree_number_name_lookup[k] = desc_mesh_id_name_lookup[v]
 
-        save_pkl(desc_mesh_id_element_lookup, desc_mesh_id_element_lookup_filepath)
         save_pkl(desc_mesh_id_tree_number_lookup, desc_mesh_id_tree_number_lookup_filepath)
         save_pkl(desc_mesh_id_name_lookup, desc_mesh_id_name_lookup_filepath)
+        save_pkl(desc_mesh_id_cas_lookup, desc_mesh_id_cas_lookup_filepath)
         save_pkl(desc_tree_number_mesh_id_lookup, desc_tree_number_mesh_id_lookup_filepath)
         save_pkl(desc_tree_number_name_lookup, desc_tree_number_name_lookup_filepath)
 
@@ -136,11 +169,14 @@ def main():
         MESH_DATA_DIR, 'supp_mesh_id_heading_mesh_id_lookup.pkl')
     supp_mesh_id_name_lookup_filepath = os.path.join(
         MESH_DATA_DIR, 'supp_mesh_id_name_lookup.pkl')
+    supp_mesh_id_cas_lookup_filepath = os.path.join(
+        MESH_DATA_DIR, 'supp_mesh_id_cas_lookup.pkl')
 
     if args.use_pkl:
         supp_mesh_id_element_lookup = load_pkl(supp_mesh_id_element_lookup_filepath)
         supp_mesh_id_heading_mesh_id_lookup = load_pkl(supp_mesh_id_heading_mesh_id_lookup_filepath)
         supp_mesh_id_name_lookup = load_pkl(supp_mesh_id_name_lookup_filepath)
+        supp_mesh_id_cas_lookup = load_pkl(supp_mesh_id_cas_lookup_filepath)
     else:
         print("Loading supplementary XML...")
         supp = ET.parse(SUPP_FILEPATH)
@@ -153,6 +189,7 @@ def main():
         supp_mesh_id_element_lookup = {}
         supp_mesh_id_heading_mesh_id_lookup = {}
         supp_mesh_id_name_lookup = {}
+        supp_mesh_id_cas_lookup = {}
         for x in supp_root.iter("SupplementalRecordUI"):
             parent = supp_parent_map[x]
             if parent.tag != "SupplementalRecord":
@@ -171,9 +208,32 @@ def main():
                     continue
                 supp_mesh_id_heading_mesh_id_lookup[x.text].append(y.text.lstrip('*'))
 
+            cas_ids_preferred = []
+            cas_ids_narrower = []
+            for y in parent.iter("RegistryNumber"):
+                assert supp_parent_map[y].tag == "Concept"
+                if supp_parent_map[y].get("PreferredConceptYN") == 'Y':
+                    cas_ids_preferred.append(y.text)
+                else:
+                    cas_ids_narrower.append(y.text)
+
+            for y in parent.iter("RelatedRegistryNumber"):
+                assert supp_parent_map[y].tag == "RelatedRegistryNumberList"
+                if supp_parent_map[supp_parent_map[y]].get("PreferredConceptYN") == 'Y':
+                    cas_ids_preferred.append(y.text)
+                else:
+                    cas_ids_narrower.append(y.text)
+
+            cas_ids_preferred = _get_cas_ids_from_registry_numbers(cas_ids_preferred)
+            cas_ids_narrower = _get_cas_ids_from_registry_numbers(cas_ids_narrower)
+            cas_ids = [i for i in cas_ids_preferred if i not in cas_ids_narrower]
+            if len(cas_ids) > 0:
+                supp_mesh_id_cas_lookup[x.text] = cas_ids[:]
+
         save_pkl(supp_mesh_id_element_lookup, supp_mesh_id_element_lookup_filepath)
         save_pkl(supp_mesh_id_heading_mesh_id_lookup, supp_mesh_id_heading_mesh_id_lookup_filepath)
         save_pkl(supp_mesh_id_name_lookup, supp_mesh_id_name_lookup_filepath)
+        save_pkl(supp_mesh_id_cas_lookup, supp_mesh_id_cas_lookup_filepath)
 
     #
     print("Processing MESH IDs")
@@ -262,6 +322,36 @@ def main():
         triples.append([head_ent, relation, tail_ent])
     df_candiate_triples = pd.DataFrame(triples, columns=["head", "relation", "tail"])
     fa_kg.add_triples(df_candiate_triples, origin="MESH")
+
+    # enter CAS ids
+    cas_ids = list(desc_mesh_id_cas_lookup.values()) + list(supp_mesh_id_cas_lookup.values())
+    assert len(set.intersection(*map(set, cas_ids))) == 0
+
+    df_chemicals = fa_kg.get_entities_by_type(type_="chemical")
+    print(f"Number of chemicals in KG: {df_chemicals.shape[0]}")
+
+    mesh_ids = [x["MESH"] for x in df_chemicals["other_db_ids"].tolist()]
+    mesh_ids = list(set(mesh_ids))
+    print(f"Number of unique MESH ids: {len(mesh_ids)}")
+
+    for mesh_id in tqdm(mesh_ids):
+        entity = fa_kg.get_entity_by_other_db_id("MESH", mesh_id)
+        other_db_ids = entity["other_db_ids"]
+        assert "CAS" not in other_db_ids
+
+        if mesh_id.startswith("C"):
+            if mesh_id not in supp_mesh_id_cas_lookup:
+                continue
+            other_db_ids = {**other_db_ids, **{"CAS": supp_mesh_id_cas_lookup[mesh_id]}}
+        elif mesh_id.startswith("D"):
+            if mesh_id not in desc_mesh_id_cas_lookup:
+                continue
+            other_db_ids = {**other_db_ids, **{"CAS": desc_mesh_id_cas_lookup[mesh_id]}}
+
+        fa_kg._update_entity(
+            foodatlas_id=entity["foodatlas_id"],
+            other_db_ids=other_db_ids,
+        )
 
     fa_kg.save(
         kg_filepath=os.path.join(args.output_kg_dir, KG_FILENAME),

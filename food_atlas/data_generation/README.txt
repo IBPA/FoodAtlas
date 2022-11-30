@@ -52,38 +52,27 @@ X. Annotations to KG.
 
 python generate_kg.py \
     --input_filepath=../../outputs/data_generation/train_pool.tsv \
-    --output_dir=../../outputs/kg/annotations_only \
+    --output_dir=../../outputs/kg/annotations \
     --mode=annotated
 
 python generate_kg.py \
     --input_filepath=../../outputs/data_generation/val.tsv \
-    --output_dir=../../outputs/kg/annotations_only \
+    --output_dir=../../outputs/kg/annotations \
     --mode=annotated
 
 python generate_kg.py \
     --input_filepath=../../outputs/data_generation/test.tsv \
-    --output_dir=../../outputs/kg/annotations_only \
+    --output_dir=../../outputs/kg/annotations \
     --mode=annotated
-
-Modified files
-- ../../outputs/kg/annotations_only/kg.txt
-- ../../outputs/kg/annotations_only/evidence.txt
-- ../../outputs/kg/annotations_only/entities.txt
-- ../../outputs/kg/annotations_only/relations.txt
 
 
 
 X. MESH KG enrichment
 
 python merge_mesh.py \
-    --input_kg_dir=../../outputs/kg/annotations_only \
-    --output_kg_dir=../../outputs/kg/annotations_mesh
-
-Modified files
-- ../../outputs/kg/annotations_only/kg.txt
-- ../../outputs/kg/annotations_only/evidence.txt
-- ../../outputs/kg/annotations_only/entities.txt
-- ../../outputs/kg/annotations_only/relations.txt
+    --input_kg_dir=../../outputs/kg/annotations \
+    --output_kg_dir=../../outputs/kg/annotations_mesh \
+    --use_pkl
 
 
 
@@ -92,46 +81,22 @@ python merge_ncbi_taxonomy.py \
     --input_kg_dir=../../outputs/kg/annotations_mesh \
     --output_kg_dir=../../outputs/kg/annotations_mesh_ncbi
 
-Modified files
-- ../../outputs/kg/annotations_mesh_ncbi/kg.txt
-- ../../outputs/kg/annotations_mesh_ncbi/evidence.txt
-- ../../outputs/kg/annotations_mesh_ncbi/entities.txt
-- ../../outputs/kg/annotations_mesh_ncbi/relations.txt
 
 
-
-X. Add CAS ID to the KG from CTD and PubChem.
-python merge_cas_id.py \
+X. Add InChI and InChIKey to the KG using CAS.
+python merge_inchi.py \
     --input_kg_dir=../../outputs/kg/annotations_mesh_ncbi/ \
-    --output_kg_dir=../../outputs/kg/annotations_mesh_ncbi_pubchem
-
-Modified files
-- ../../outputs/kg/annotations_mesh_ncbi_pubchem/kg.txt
-- ../../outputs/kg/annotations_mesh_ncbi_pubchem/evidence.txt
-- ../../outputs/kg/annotations_mesh_ncbi_pubchem/entities.txt
-- ../../outputs/kg/annotations_mesh_ncbi_pubchem/relations.txt
+    --output_kg_dir=../../outputs/kg/annotations_mesh_ncbi_inchi
 
 
 
 X. Merge FooDB.
 python merge_foodb.py \
-    --input_kg_dir=../../outputs/kg/annotations_mesh_ncbi_pubchem/ \
-    --output_kg_dir=../../outputs/kg/annotations_mesh_ncbi_pubchem_foodb
-
-Modified files
-- ../../outputs/kg/annotations_mesh_ncbi_pubchem_foodb/kg.txt
-- ../../outputs/kg/annotations_mesh_ncbi_pubchem_foodb/evidence.txt
-- ../../outputs/kg/annotations_mesh_ncbi_pubchem_foodb/entities.txt
-- ../../outputs/kg/annotations_mesh_ncbi_pubchem_foodb/relations.txt
+    --input_kg_dir=../../outputs/kg/annotations_mesh_ncbi_inchi/ \
+    --output_kg_dir=../../outputs/kg/annotations_mesh_ncbi_inchi_foodb
 
 
 6. (Optional) Add the entailment model predictions to the KG.
 python add_model_predictions_to_kg.py --round=1
-
-Modified files
-- ../../outputs/kg/1/kg.txt
-- ../../outputs/kg/1/evidence.txt
-- ../../outputs/kg/1/entities.txt
-- ../../outputs/kg/1/relations.txt
 
 
