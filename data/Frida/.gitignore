@@ -1,0 +1,5 @@
+*
+!.gitignore
+!download.sh
+!foods_manually_validated.csv
+!foods_to_validate.csv
