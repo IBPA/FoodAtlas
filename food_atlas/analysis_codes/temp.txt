@@ -1,0 +1,631 @@
+0	1	2	3	4	5	6	7	8	9	10
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Phloroglucinol	Phloretin			
+Organic Chemicals	Ketones	Propiophenones	Hydroxypropiophenone	Phloretin						
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Phloretin				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Purines	Purine Nucleotides	Adenine Nucleotides	Phosphoadenosine Phosphosulfate				
+Nucleic Acids, Nucleotides, and Nucleosides	Nucleotides	Purine Nucleotides	Adenine Nucleotides	Phosphoadenosine Phosphosulfate						
+Nucleic Acids, Nucleotides, and Nucleosides	Nucleotides	Ribonucleotides	Adenine Nucleotides	Phosphoadenosine Phosphosulfate						
+Organic Chemicals	Alcohols	Fatty Alcohols	Hexanols	Cyclohexanols	Eucalyptol					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexanols	Eucalyptol			
+Organic Chemicals	Hydrocarbons	Terpenes	Monoterpenes	Eucalyptol						
+Lipids	Fatty Alcohols	Hexanols	Cyclohexanols	Eucalyptol						
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Cyclic	Amino Acids, Aromatic	Tryptophan	5-Hydroxytryptophan					
+Heterocyclic Compounds	Alkaloids	Opiate Alkaloids	Morphinans	Morphine Derivatives	Codeine					
+Heterocyclic Compounds	Heterocyclic Compounds, Bridged-Ring	Morphinans	Morphine Derivatives	Codeine						
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 4 or More Rings	Morphinans	Morphine Derivatives	Codeine					
+Polycyclic Compounds	Polycyclic Aromatic Hydrocarbons	Phenanthrenes	Morphinans	Morphine Derivatives	Codeine					
+Lipids	Fats	Dietary Fats	Dietary Fats, Unsaturated	Fatty Acids, Omega-3	Docosahexaenoic Acids					
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Omega-3	Docosahexaenoic Acids						
+Lipids	Oils	Fish Oils	Fatty Acids, Omega-3	Docosahexaenoic Acids						
+Lipids	Fats	Dietary Fats	Dietary Fats, Unsaturated	Fatty Acids, Omega-3	Eicosapentaenoic Acid					
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Eicosanoids	Eicosapentaenoic Acid						
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Omega-3	Eicosapentaenoic Acid						
+Lipids	Oils	Fish Oils	Fatty Acids, Omega-3	Eicosapentaenoic Acid						
+Organic Chemicals	Carboxylic Acids	Acids, Acyclic	Butyrates	Aminobutyrates	gamma-Aminobutyric Acid					
+Amino Acids, Peptides, and Proteins	Amino Acids	Aminobutyrates	gamma-Aminobutyric Acid							
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Acidic	Glutamates	Glutamic Acid						
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Dicarboxylic	Glutamates	Glutamic Acid						
+Amino Acids, Peptides, and Proteins	Amino Acids	Excitatory Amino Acids	Glutamic Acid							
+Inorganic Chemicals	Elements	Hydrogen								
+Inorganic Chemicals	Gases	Hydrogen								
+Carbohydrates	Sugars	Monosaccharides	Pentoses	Arabinose						
+Organic Chemicals	Amines	Catecholamines	Dihydroxyphenylalanine	Levodopa						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Catechols	Catecholamines	Dihydroxyphenylalanine	Levodopa	
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Cyclic	Amino Acids, Aromatic	Phenylalanine	Dihydroxyphenylalanine	Levodopa				
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Cyclic	Amino Acids, Aromatic	Tyrosine	Dihydroxyphenylalanine	Levodopa				
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Cyclic	Imino Acids	Proline						
+Inorganic Chemicals	Elements	Metals, Heavy	Nickel							
+Inorganic Chemicals	Elements	Transition Elements	Nickel							
+Inorganic Chemicals	Metals	Metals, Heavy	Nickel							
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Monounsaturated	Oleic Acids	Oleic Acid					
+Inorganic Chemicals	Elements	Metals, Heavy	Lead							
+Inorganic Chemicals	Metals	Metals, Heavy	Lead							
+Carbohydrates	Glycosides	Phlorhizin								
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Pyrogallol				
+Inorganic Chemicals	Elements	Metalloids	Silicon							
+Inorganic Chemicals	Elements	Metals, Alkaline Earth	Strontium							
+Inorganic Chemicals	Elements	Metals, Heavy	Strontium							
+Inorganic Chemicals	Metals	Metals, Alkaline Earth	Strontium							
+Inorganic Chemicals	Metals	Metals, Heavy	Strontium							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Toluene	Trinitrotoluene				
+Inorganic Chemicals	Elements	Metals, Heavy	Zinc							
+Inorganic Chemicals	Elements	Transition Elements	Zinc							
+Inorganic Chemicals	Metals	Metals, Heavy	Zinc							
+Organic Chemicals	Aldehydes	Acetaldehyde								
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Purines	Adenine						
+Amino Acids, Peptides, and Proteins	Amino Acids	Alanine								
+Organic Chemicals	Alcohols									
+Organic Chemicals	Aldehydes									
+Heterocyclic Compounds	Alkaloids									
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Benzene					
+Lipids	Fats	Dietary Fats	Dietary Fats, Unsaturated	Fatty Acids, Omega-3	alpha-Linolenic Acid					
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Essential	Linolenic Acids	alpha-Linolenic Acid					
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Omega-3	alpha-Linolenic Acid						
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Vitamin E	Tocopherols	alpha-Tocopherol				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Vitamin E	Tocopherols	alpha-Tocopherol				
+Organic Chemicals	Amides									
+Organic Chemicals	Amines									
+Organic Chemicals	Nitriles	Amygdalin								
+Carbohydrates	Glycosides	Glucosides	Amygdalin							
+Carbohydrates	Dietary Carbohydrates	Starch	Amylose							
+Carbohydrates	Polysaccharides	Glucans	Starch	Amylose						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Polycyclic Aromatic Hydrocarbons	Anthracenes	Anthraquinones				
+Organic Chemicals	Quinones	Anthraquinones								
+Polycyclic Compounds	Polycyclic Aromatic Hydrocarbons	Anthracenes	Anthraquinones							
+Heterocyclic Compounds	Alkaloids	Benzylisoquinolines	Aporphines							
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Isoquinolines	Benzylisoquinolines	Aporphines					
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 4 or More Rings	Aporphines							
+Carbohydrates	Glycosides	Glucosides	Arbutin							
+Hormones, Hormone Substitutes, and Hormone Antagonists	Hormones	Peptide Hormones	Pituitary Hormones	Pituitary Hormones, Posterior	Vasopressins	Arginine Vasopressin				
+Amino Acids, Peptides, and Proteins	Peptides	Neuropeptides	Vasopressins	Arginine Vasopressin						
+Amino Acids, Peptides, and Proteins	Peptides	Oligopeptides	Vasopressins	Arginine Vasopressin						
+Amino Acids, Peptides, and Proteins	Peptides	Peptide Hormones	Pituitary Hormones	Pituitary Hormones, Posterior	Vasopressins	Arginine Vasopressin				
+Amino Acids, Peptides, and Proteins	Proteins	Nerve Tissue Proteins	Neuropeptides	Vasopressins	Arginine Vasopressin					
+Inorganic Chemicals	Elements	Metalloids	Arsenic							
+Organic Chemicals	Aldehydes	Benzaldehydes								
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Polyenes	Carotenoids	beta Carotene				
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexenes	Carotenoids	beta Carotene		
+Organic Chemicals	Hydrocarbons	Terpenes	Carotenoids	beta Carotene						
+Biological Factors	Pigments, Biological	Carotenoids	beta Carotene							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Polyenes	Carotenoids	Xanthophylls	Cryptoxanthins	Beta-Cryptoxanthin		
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexenes	Carotenoids	Xanthophylls	Cryptoxanthins	Beta-Cryptoxanthin
+Organic Chemicals	Hydrocarbons	Terpenes	Carotenoids	Xanthophylls	Cryptoxanthins	Beta-Cryptoxanthin				
+Biological Factors	Pigments, Biological	Carotenoids	Xanthophylls	Cryptoxanthins	Beta-Cryptoxanthin					
+Organic Chemicals	Hydrocarbons	Terpenes	Diterpenes	Ginkgolides	Bilobalides					
+Inorganic Chemicals	Elements	Metalloids	Boron							
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Branched-Chain								
+Heterocyclic Compounds	Alkaloids	Xanthines	Caffeine							
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Purines	Purinones	Xanthines	Caffeine				
+Inorganic Chemicals	Elements	Metals, Alkaline Earth	Calcium							
+Inorganic Chemicals	Metals	Metals, Alkaline Earth	Calcium							
+Biological Factors	Blood Coagulation Factors	Calcium								
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Bridged-Ring Compounds	Bridged Bicyclo Compounds	Bicyclic Monoterpenes	Camphanes	Camphor			
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Bridged-Ring Compounds	Bridged Bicyclo Compounds	Norbornanes	Camphanes	Camphor			
+Organic Chemicals	Hydrocarbons	Terpenes	Monoterpenes	Bicyclic Monoterpenes	Camphanes	Camphor				
+Organic Chemicals	Ketones	Camphor								
+Polycyclic Compounds	Bridged-Ring Compounds	Bridged Bicyclo Compounds	Norbornanes	Camphanes	Camphor					
+Organic Chemicals	Carboxylic Acids	Acids, Acyclic	Carbamates							
+Inorganic Chemicals	Elements	Carbon								
+Amino Acids, Peptides, and Proteins	Peptides	Neuropeptides	Carnosine							
+Amino Acids, Peptides, and Proteins	Peptides	Oligopeptides	Dipeptides	Carnosine						
+Amino Acids, Peptides, and Proteins	Proteins	Nerve Tissue Proteins	Neuropeptides	Carnosine						
+Organic Chemicals	Amides	Ceramides	Cerebrosides							
+Carbohydrates	Glycoconjugates	Glycolipids	Glycosphingolipids	Neutral Glycosphingolipids	Ceramides	Cerebrosides				
+Lipids	Glycolipids	Glycosphingolipids	Neutral Glycosphingolipids	Ceramides	Cerebrosides					
+Lipids	Membrane Lipids	Sphingolipids	Glycosphingolipids	Neutral Glycosphingolipids	Ceramides	Cerebrosides				
+Organic Chemicals	Alcohols	Amino Alcohols	Ethanolamines	Choline						
+Organic Chemicals	Amines	Amino Alcohols	Ethanolamines	Choline						
+Organic Chemicals	Amines	Quaternary Ammonium Compounds	Trimethyl Ammonium Compounds	Choline						
+Organic Chemicals	Onium Compounds	Quaternary Ammonium Compounds	Choline							
+Polycyclic Compounds	Fused-Ring Compounds	Steroids	Pregnanes	Pregnenes	Pregnenediones	Hydrocortisone				
+Hormones, Hormone Substitutes, and Hormone Antagonists	Hormones	Adrenal Cortex Hormones	Hydroxycorticosteroids	11-Hydroxycorticosteroids	Hydrocortisone					
+Hormones, Hormone Substitutes, and Hormone Antagonists	Hormones	Adrenal Cortex Hormones	Hydroxycorticosteroids	17-Hydroxycorticosteroids	Hydrocortisone					
+Organic Chemicals	Hydrocarbons	Terpenes	Triterpenes	Cucurbitacins						
+Inorganic Chemicals	Electrolytes	Ions	Anions	Cyanides						
+Inorganic Chemicals	Nitrogen Compounds	Hydrogen Cyanide	Cyanides							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclodecanes					
+Polycyclic Compounds	Macrocyclic Compounds	Peptides, Cyclic								
+Amino Acids, Peptides, and Proteins	Peptides	Peptides, Cyclic								
+Organic Chemicals	Amines	Methylamines	Dimethylamines							
+Amino Acids, Peptides, and Proteins	Peptides	Oligopeptides	Dipeptides							
+Organic Chemicals	Hydrocarbons	Terpenes	Diterpenes							
+Organic Chemicals	Amines	Biogenic Amines	Biogenic Monoamines	Dopamine						
+Organic Chemicals	Amines	Catecholamines	Dopamine							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Catechols	Catecholamines	Dopamine		
+Lipids	Fatty Acids	Eicosanoic Acids								
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Ellagic Acid						
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Ellagic Acid						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Polycyclic Aromatic Hydrocarbons	Anthracenes	Anthraquinones	Emodin			
+Organic Chemicals	Quinones	Anthraquinones	Emodin							
+Polycyclic Compounds	Polycyclic Aromatic Hydrocarbons	Anthracenes	Anthraquinones	Emodin						
+Heterocyclic Compounds	Alkaloids	Ergot Alkaloids								
+Organic Chemicals	Lactones	Polyketides	Macrolides	Erythromycin						
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Benzoates							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Benzoates					
+Carbohydrates	Dietary Carbohydrates	Dietary Fiber								
+Physiological Phenomena	Diet, Food, and Nutrition	Food	Dietary Fiber							
+Food and Beverages	Food	Dietary Fiber								
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Flavanones				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Flavanones				
+Organic Chemicals	Aldehydes	Formaldehyde								
+Carbohydrates	Sugars	Monosaccharides	Hexoses	Fructose						
+Carbohydrates	Sugars	Monosaccharides	Ketoses	Fructose						
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Furans								
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Benzoates	Hydroxybenzoates	Gallic Acid					
+Organic Chemicals	Carboxylic Acids	Hydroxy Acids	Hydroxybenzoates	Gallic Acid						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Benzoates	Hydroxybenzoates	Gallic Acid			
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Hydroxybenzoates	Gallic Acid			
+Organic Chemicals	Hydrocarbons	Terpenes	Diterpenes	Diterpenes, Kaurane	Gibberellins					
+Organic Chemicals	Hydrocarbons	Terpenes	Diterpenes	Ginkgolides						
+Organic Chemicals	Hydrocarbons	Terpenes	Triterpenes	Ginsenosides						
+Carbohydrates	Glycosides	Saponins	Ginsenosides							
+Macromolecular Substances	Polymers	Biopolymers	Glucans							
+Carbohydrates	Polysaccharides	Glucans								
+Carbohydrates	Sugars	Monosaccharides	Hexoses	Glucose						
+Organic Chemicals	Alcohols	Sugar Alcohols	Triose Sugar Alcohols	Glycerol						
+Carbohydrates	Sugar Alcohols	Triose Sugar Alcohols	Glycerol							
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Purines	Purinones	Hypoxanthines	Guanine				
+Inorganic Chemicals	Elements	Halogens								
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Azoles	Pyrroles	Tetrapyrroles	Porphyrins	Metalloporphyrins	Heme			
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 4 or More Rings	Tetrapyrroles	Porphyrins	Metalloporphyrins	Heme				
+Polycyclic Compounds	Macrocyclic Compounds	Tetrapyrroles	Porphyrins	Metalloporphyrins	Heme					
+Biological Factors	Pigments, Biological	Porphyrins	Metalloporphyrins	Heme						
+Amino Acids, Peptides, and Proteins	Proteins	Arthropod Proteins	Hemocyanins							
+Amino Acids, Peptides, and Proteins	Proteins	Metalloproteins	Hemocyanins							
+Biological Factors	Pigments, Biological	Hemocyanins								
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Flavanones	Hesperidin			
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Flavanones	Hesperidin			
+Carbohydrates	Glycosides	Hesperidin								
+Organic Chemicals	Amines	Biogenic Amines	Biogenic Monoamines	Histamine						
+Organic Chemicals	Amines	Ethylamines	Histamine							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Azoles	Imidazoles	Histamine						
+Biological Factors	Inflammation Mediators	Autacoids	Histamine							
+Organic Chemicals	Hydrocarbons									
+Inorganic Chemicals	Acids	Acids, Noncarboxylic	Hydrogen Cyanide							
+Inorganic Chemicals	Nitrogen Compounds	Hydrogen Cyanide								
+Heterocyclic Compounds	Alkaloids	Indole Alkaloids								
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Indoles	Indole Alkaloids						
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Indolizines	Indolizidines	Indole Alkaloids					
+Organic Chemicals	Alcohols	Sugar Alcohols	Inositol							
+Carbohydrates	Sugar Alcohols	Inositol								
+Inorganic Chemicals	Elements	Halogens	Iodine							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclopentanes	Cyclopentane Monoterpenes	Iridoids	Iridoid Glycosides		
+Organic Chemicals	Hydrocarbons	Terpenes	Monoterpenes	Cyclopentane Monoterpenes	Iridoids	Iridoid Glycosides				
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Iridoids	Iridoid Glycosides						
+Carbohydrates	Glycosides	Iridoid Glycosides								
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Isoflavones				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Isoflavones				
+Organic Chemicals	Ketones									
+Organic Chemicals	Carboxylic Acids	Hydroxy Acids	Lactates	Lactic Acid						
+Organic Chemicals	Lactones									
+Organic Chemicals	Amides	Anilides	Acetanilides	Lidocaine						
+Organic Chemicals	Amines	Aniline Compounds	Anilides	Acetanilides	Lidocaine					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Polycyclic Aromatic Hydrocarbons	Naphthalenes	Lovastatin				
+Polycyclic Compounds	Polycyclic Aromatic Hydrocarbons	Naphthalenes	Lovastatin							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Flavones	Luteolin			
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Flavones	Luteolin			
+Inorganic Chemicals	Iron Compounds	Ferric Compounds	Ferrosoferric Oxide							
+Inorganic Chemicals	Iron Compounds	Ferrous Compounds	Ferrosoferric Oxide							
+Inorganic Chemicals	Minerals	Ferrosoferric Oxide								
+Carbohydrates	Sugars	Monosaccharides	Hexoses	Mannose						
+Organic Chemicals	Sulfur Compounds	Amino Acids, Sulfur	Methionine							
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Essential	Methionine							
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Neutral	Methionine							
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Sulfur	Methionine							
+Carbohydrates	Sugars	Monosaccharides								
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Monounsaturated							
+Heterocyclic Compounds	Alkaloids	Opiate Alkaloids	Morphinans	Morphine Derivatives	Morphine					
+Heterocyclic Compounds	Heterocyclic Compounds, Bridged-Ring	Morphinans	Morphine Derivatives	Morphine						
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 4 or More Rings	Morphinans	Morphine Derivatives	Morphine					
+Polycyclic Compounds	Polycyclic Aromatic Hydrocarbons	Phenanthrenes	Morphinans	Morphine Derivatives	Morphine					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Polycyclic Aromatic Hydrocarbons	Naphthalenes	Naphthoquinones				
+Organic Chemicals	Quinones	Naphthoquinones								
+Polycyclic Compounds	Polycyclic Aromatic Hydrocarbons	Naphthalenes	Naphthoquinones							
+Heterocyclic Compounds	Acids, Heterocyclic	Nicotinic Acids	Niacin							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyridines	Nicotinic Acids	Niacin						
+Heterocyclic Compounds	Acids, Heterocyclic	Nicotinic Acids	Niacinamide							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyridines	Nicotinic Acids	Niacinamide						
+Heterocyclic Compounds	Alkaloids	Solanaceous Alkaloids	Nicotine							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyridines	Nicotine							
+Heterocyclic Compounds	Acids, Heterocyclic	Nicotinic Acids								
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyridines	Nicotinic Acids							
+Inorganic Chemicals	Electrolytes	Ions	Anions	Nitrates						
+Inorganic Chemicals	Nitrogen Compounds	Nitric Acid	Nitrates							
+Organic Chemicals	Nitrates									
+Inorganic Chemicals	Electrolytes	Ions	Anions	Nitrites						
+Inorganic Chemicals	Nitrogen Compounds	Nitrous Acid	Nitrites							
+Organic Chemicals	Nitrites									
+Inorganic Chemicals	Elements	Nitrogen								
+Inorganic Chemicals	Gases	Nitrogen								
+Carbohydrates	Polysaccharides	Oligosaccharides								
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Omega-6							
+Organic Chemicals	Sulfur Compounds	Sulfur Acids	Sulfuric Acids	Sulfuric Acid Esters						
+Organic Chemicals	Carboxylic Acids	Acids, Acyclic	Dicarboxylic Acids	Oxalates	Oxalic Acid					
+Lipids	Fatty Acids	Palmitic Acids	Palmitic Acid							
+Amino Acids, Peptides, and Proteins	Peptides									
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Phenol				
+Lipids	Membrane Lipids	Phospholipids								
+Inorganic Chemicals	Acids	Acids, Noncarboxylic	Phosphorus Acids	Phosphorous Acids						
+Inorganic Chemicals	Phosphorus Compounds	Phosphorus Acids	Phosphorous Acids							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Polycyclic Aromatic Hydrocarbons	Naphthalenes	Naphthoquinones	Vitamin K	Vitamin K 1		
+Organic Chemicals	Hydrocarbons	Terpenes	Diterpenes	Phytol	Vitamin K	Vitamin K 1				
+Organic Chemicals	Quinones	Naphthoquinones	Vitamin K 1							
+Polycyclic Compounds	Polycyclic Aromatic Hydrocarbons	Naphthalenes	Naphthoquinones	Vitamin K	Vitamin K 1					
+Organic Chemicals	Hydrocarbons	Terpenes	Diterpenes	Phytol						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Polyenes	Polyacetylene Polymer					
+Macromolecular Substances	Polymers	Polyacetylene Polymer								
+Biomedical and Dental Materials	Polymers	Polyacetylene Polymer								
+Technology, Industry, and Agriculture	Manufactured Materials	Biomedical and Dental Materials	Polymers	Polyacetylene Polymer						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkynes	Polyynes						
+Organic Chemicals	Amines	Polyamines								
+Inorganic Chemicals	Elements	Metals, Alkali	Potassium							
+Inorganic Chemicals	Elements	Metals, Light	Potassium							
+Inorganic Chemicals	Metals	Metals, Alkali	Potassium							
+Inorganic Chemicals	Metals	Metals, Light	Potassium							
+Polycyclic Compounds	Fused-Ring Compounds	Steroids	Pregnanes	Pregnenes	Pregnenediones	Progesterone				
+Hormones, Hormone Substitutes, and Hormone Antagonists	Hormones	Gonadal Hormones	Corpus Luteum Hormones	Progesterone						
+Hormones, Hormone Substitutes, and Hormone Antagonists	Hormones	Gonadal Hormones	Gonadal Steroid Hormones	Progesterone Congeners	Progesterone					
+Organic Chemicals	Alcohols	Amino Alcohols	Propanolamines	Phenylpropanolamine						
+Organic Chemicals	Alcohols	Propanols	Propanolamines	Phenylpropanolamine						
+Organic Chemicals	Amines	Amino Alcohols	Propanolamines	Phenylpropanolamine						
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Purines							
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Cyclohexanecarboxylic Acids	Quinic Acid						
+Organic Chemicals	Carboxylic Acids	Hydroxy Acids	Quinic Acid							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Benzylidene Compounds	Stilbenes	Stilbestrols	Resveratrol		
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Polyphenols	Resveratrol			
+Carbohydrates	Deoxy Sugars	Rhamnose								
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Isoflavones	Rotenone			
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Isoflavones	Rotenone			
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 4 or More Rings	Rotenone							
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Benzoates	Hydroxybenzoates	Salicylates	Salicylic Acid				
+Organic Chemicals	Carboxylic Acids	Hydroxy Acids	Hydroxybenzoates	Salicylates	Salicylic Acid					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Benzoates	Hydroxybenzoates	Salicylates	Salicylic Acid		
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Hydroxybenzoates	Salicylates	Salicylic Acid		
+Organic Chemicals	Hydrocarbons	Terpenes	Triterpenes	Sapogenins						
+Polycyclic Compounds	Fused-Ring Compounds	Steroids	Sapogenins							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Coumarins	Umbelliferones	Scopoletin				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Coumarins	Umbelliferones	Scopoletin				
+Inorganic Chemicals	Selenium Compounds	Selenious Acid								
+Organic Chemicals	Carboxylic Acids	Acids, Acyclic	Sugar Acids	Neuraminic Acids	Sialic Acids					
+Organic Chemicals	Carboxylic Acids	Hydroxy Acids	Sugar Acids	Neuraminic Acids	Sialic Acids					
+Carbohydrates	Amino Sugars	Neuraminic Acids	Sialic Acids							
+Carbohydrates	Sugar Acids	Neuraminic Acids	Sialic Acids							
+Inorganic Chemicals	Elements	Metals, Alkali	Sodium							
+Inorganic Chemicals	Elements	Metals, Light	Sodium							
+Inorganic Chemicals	Metals	Metals, Alkali	Sodium							
+Inorganic Chemicals	Metals	Metals, Light	Sodium							
+Organic Chemicals	Amines	Biogenic Amines	Biogenic Polyamines	Putrescine	Spermidine	Spermine				
+Organic Chemicals	Amines	Polyamines	Spermine							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Polyenes	Squalene					
+Organic Chemicals	Hydrocarbons	Terpenes	Triterpenes	Squalene						
+Chemical Actions and Uses	Pharmacologic Actions	Physiological Effects of Drugs	Hormones, Hormone Substitutes, and Hormone Antagonists	Hormones	Estrogens	Estrogens, Non-Steroidal				
+Polycyclic Compounds	Fused-Ring Compounds	Steroids								
+Polycyclic Compounds	Fused-Ring Compounds	Steroids	Cholestanes	Cholestenes	Cholestadienes	Cholestadienols	Stigmasterol			
+Polycyclic Compounds	Fused-Ring Compounds	Steroids	Cholestanes	Sterols	Phytosterols	Stigmasterol				
+Lipids	Membrane Lipids	Sterols	Phytosterols	Stigmasterol						
+Biological Factors	Phytochemicals	Phytosterols	Stigmasterol							
+Carbohydrates	Polysaccharides	Oligosaccharides	Disaccharides	Sucrose						
+Carbohydrates	Sugars	Disaccharides	Sucrose							
+Organic Chemicals	Alcohols	Sugar Alcohols								
+Carbohydrates	Sugar Alcohols									
+Organic Chemicals	Amides	Sulfonamides	Sulfanilamides	Sulfapyridine						
+Organic Chemicals	Amines	Aniline Compounds	Sulfanilamides	Sulfapyridine						
+Organic Chemicals	Sulfur Compounds	Sulfones	Sulfonamides	Sulfanilamides	Sulfapyridine					
+Organic Chemicals	Sulfur Compounds	Amino Acids, Sulfur								
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Sulfur								
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkanes	Alkanesulfonic Acids	Taurine					
+Organic Chemicals	Sulfur Compounds	Sulfur Acids	Sulfonic Acids	Alkanesulfonic Acids	Taurine					
+Polycyclic Compounds	Fused-Ring Compounds	Steroids	Androstanes	Androstenes	Androstenols	Testosterone				
+Hormones, Hormone Substitutes, and Hormone Antagonists	Hormones	Gonadal Hormones	Gonadal Steroid Hormones	Testosterone Congeners	Testosterone					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Polycyclic Aromatic Hydrocarbons	Naphthalenes	Tetrahydronaphthalenes	Tetralones			
+Polycyclic Compounds	Polycyclic Aromatic Hydrocarbons	Naphthalenes	Tetrahydronaphthalenes	Tetralones						
+Amino Acids, Peptides, and Proteins	Peptides	Antimicrobial Cationic Peptides	Thionins							
+Amino Acids, Peptides, and Proteins	Peptides	Antimicrobial Peptides	Antimicrobial Cationic Peptides	Thionins						
+Amino Acids, Peptides, and Proteins	Proteins	Membrane Proteins	Pore Forming Cytotoxic Proteins	Antimicrobial Cationic Peptides	Thionins					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Thymol				
+Organic Chemicals	Hydrocarbons	Terpenes	Monoterpenes	Thymol						
+Hormones, Hormone Substitutes, and Hormone Antagonists	Hormones	Thyroid Hormones	Thyroxine							
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Cyclic	Amino Acids, Aromatic	Thyroxine						
+Hormones, Hormone Substitutes, and Hormone Antagonists	Hormones	Thyroid Hormones	Thyronines	Triiodothyronine						
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Cyclic	Amino Acids, Aromatic	Thyroxine	Thyronines	Triiodothyronine				
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Coumarins	Umbelliferones					
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Coumarins	Umbelliferones					
+Organic Chemicals	Amides	Urea								
+Polycyclic Compounds	Fused-Ring Compounds	Steroids	Secosteroids	Vitamin D						
+Polycyclic Compounds	Fused-Ring Compounds	Steroids	Cholestanes	Cholestenes	Ergocalciferols					
+Polycyclic Compounds	Fused-Ring Compounds	Steroids	Cholestanes	Sterols	Ergocalciferols					
+Polycyclic Compounds	Fused-Ring Compounds	Steroids	Secosteroids	Vitamin D	Ergocalciferols					
+Lipids	Membrane Lipids	Sterols	Ergocalciferols							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Vitamin E						
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Vitamin E						
+Inorganic Chemicals	Alkalies	Hydroxides	Water							
+Inorganic Chemicals	Electrolytes	Ions	Anions	Hydroxides	Water					
+Inorganic Chemicals	Oxygen Compounds	Oxides	Water							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Polyenes	Carotenoids	Xanthophylls				
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexenes	Carotenoids	Xanthophylls		
+Organic Chemicals	Hydrocarbons	Terpenes	Carotenoids	Xanthophylls						
+Biological Factors	Pigments, Biological	Carotenoids	Xanthophylls							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Coumarins	Furocoumarins	Methoxsalen				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Coumarins	Furocoumarins	Methoxsalen				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 3-Ring	Furocoumarins	Methoxsalen						
+Carbohydrates	Sugars	Monosaccharides	Pentoses	Xylose						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Polyenes	Carotenoids	Xanthophylls	Zeaxanthins			
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexenes	Carotenoids	Xanthophylls	Zeaxanthins	
+Organic Chemicals	Hydrocarbons	Terpenes	Carotenoids	Xanthophylls	Zeaxanthins					
+Biological Factors	Pigments, Biological	Carotenoids	Xanthophylls	Zeaxanthins						
+Carbohydrates	Sugars									
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexane Monoterpenes	Limonene			
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexenes	Limonene			
+Organic Chemicals	Hydrocarbons	Terpenes	Monoterpenes	Cyclohexane Monoterpenes	Limonene					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkanes							
+Inorganic Chemicals	Elements	Metals, Light	Aluminum							
+Inorganic Chemicals	Metals	Metals, Light	Aluminum							
+Amino Acids, Peptides, and Proteins	Amino Acids									
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Anthocyanins				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Anthocyanins				
+Carbohydrates	Glycosides	Anthocyanins								
+Biological Factors	Pigments, Biological	Anthocyanins								
+Organic Chemicals	Carboxylic Acids	Acids, Acyclic	Sugar Acids	Ascorbic Acid						
+Organic Chemicals	Carboxylic Acids	Hydroxy Acids	Sugar Acids	Ascorbic Acid						
+Carbohydrates	Sugar Acids	Ascorbic Acid								
+Inorganic Chemicals	Elements	Metals, Heavy	Cadmium							
+Inorganic Chemicals	Elements	Transition Elements	Cadmium							
+Inorganic Chemicals	Metals	Metals, Heavy	Cadmium							
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Cinnamates	Caffeic Acids						
+Carbohydrates										
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Polyenes	Carotenoids					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexenes	Carotenoids			
+Organic Chemicals	Hydrocarbons	Terpenes	Carotenoids							
+Biological Factors	Pigments, Biological	Carotenoids								
+Carbohydrates	Polysaccharides	Carrageenan								
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromans	Catechin					
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Catechin				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromans	Catechin					
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Catechin				
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Cinnamates	Chlorogenic Acid						
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Cyclohexanecarboxylic Acids	Chlorogenic Acid						
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Azoles	Pyrroles	Tetrapyrroles	Chlorophyll					
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 4 or More Rings	Tetrapyrroles	Chlorophyll						
+Polycyclic Compounds	Macrocyclic Compounds	Tetrapyrroles	Chlorophyll							
+Inorganic Chemicals	Elements	Metals, Heavy	Copper							
+Inorganic Chemicals	Elements	Transition Elements	Copper							
+Inorganic Chemicals	Metals	Metals, Heavy	Copper							
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Cinnamates	Coumaric Acids						
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Coumarins						
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Coumarins						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkanes	Heptanes	Diarylheptanoids	Curcumin				
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Catechols	Curcumin			
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Diarylheptanoids	Curcumin					
+Organic Chemicals	Sulfur Compounds	Amino Acids, Sulfur	Cysteine							
+Organic Chemicals	Sulfur Compounds	Sulfhydryl Compounds	Cysteine							
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Neutral	Cysteine							
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Sulfur	Cysteine							
+Organic Chemicals	Carboxylic Acids	Esters								
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Cinnamates	Caffeic Acids	Eugenol					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Allyl Compounds	Allylbenzene Derivatives	Eugenol				
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Allylbenzene Derivatives	Eugenol				
+Lipids	Fatty Acids									
+Lipids	Fatty Acids	Fatty Acids, Unsaturated								
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids					
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids					
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Pteridines	Pterins	Folic Acid					
+Carbohydrates	Glycosides	Glucosides								
+Organic Chemicals	Sulfur Compounds	Thioglycosides	Thioglucosides	Glucosinolates						
+Carbohydrates	Glycosides	Glucosides	Thioglucosides	Glucosinolates						
+Carbohydrates	Glycosides	Thioglycosides	Thioglucosides	Glucosinolates						
+Carbohydrates	Glycosides									
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Cyclic	Histidine							
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Essential	Histidine							
+Inorganic Chemicals	Elements	Metals, Heavy	Iron							
+Inorganic Chemicals	Elements	Transition Elements	Iron							
+Inorganic Chemicals	Metals	Metals, Heavy	Iron							
+Macromolecular Substances	Polymers	Biopolymers	Glucans	Cellulose	Lignin					
+Macromolecular Substances	Polymers	Biopolymers	Lignin							
+Complex Mixtures	Lignin									
+Biomedical and Dental Materials	Polymers	Biopolymers	Lignin							
+Technology, Industry, and Agriculture	Manufactured Materials	Biomedical and Dental Materials	Polymers	Biopolymers	Lignin					
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Essential	Linoleic Acids						
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Omega-6	Linoleic Acids						
+Lipids										
+Inorganic Chemicals	Elements	Metals, Alkaline Earth	Magnesium							
+Inorganic Chemicals	Elements	Metals, Light	Magnesium							
+Inorganic Chemicals	Metals	Metals, Light	Magnesium							
+Inorganic Chemicals	Elements	Metals, Heavy	Manganese							
+Inorganic Chemicals	Elements	Transition Elements	Manganese							
+Inorganic Chemicals	Metals	Metals, Heavy	Manganese							
+Organic Chemicals	Alcohols	Sugar Alcohols	Mannitol							
+Carbohydrates	Sugar Alcohols	Mannitol								
+Organic Chemicals	Alcohols	Fatty Alcohols	Hexanols	Cyclohexanols	Menthol					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexane Monoterpenes	Menthol			
+Organic Chemicals	Hydrocarbons	Terpenes	Monoterpenes	Cyclohexane Monoterpenes	Menthol					
+Lipids	Fatty Alcohols	Hexanols	Cyclohexanols	Menthol						
+Inorganic Chemicals	Elements	Metals, Heavy	Mercury							
+Inorganic Chemicals	Elements	Transition Elements	Mercury							
+Inorganic Chemicals	Metals	Metals, Heavy	Mercury							
+Lipids	Oils									
+Lipids	Oils	Oils, Volatile								
+Organic Chemicals	Hydrocarbons	Terpenes	Triterpenes	Pentacyclic Triterpenes	Oleanolic Acid					
+Organic Chemicals	Hydrocarbons	Terpenes	Triterpenes	Sapogenins	Oleanolic Acid					
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Monounsaturated	Oleic Acids						
+Organic Chemicals	Carboxylic Acids	Acids, Acyclic	Dicarboxylic Acids	Oxalates						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols					
+Inorganic Chemicals	Elements	Phosphorus								
+Organic Chemicals	Alcohols	Sugar Alcohols	Inositol	Inositol Phosphates	Phytic Acid					
+Carbohydrates	Sugar Alcohols	Inositol	Inositol Phosphates	Phytic Acid						
+Carbohydrates	Sugar Phosphates	Inositol Phosphates	Phytic Acid							
+Polycyclic Compounds	Fused-Ring Compounds	Steroids	Cholestanes	Sterols	Phytosterols					
+Lipids	Membrane Lipids	Sterols	Phytosterols							
+Biological Factors	Phytochemicals	Phytosterols								
+Organic Chemicals	Dioxins and Dioxin-like Compounds	Polychlorinated Biphenyls								
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Biphenyl Compounds	Polychlorinated Biphenyls				
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Halogenated	Hydrocarbons, Chlorinated	Polychlorinated Biphenyls						
+Carbohydrates	Polysaccharides									
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Coumarins	Furocoumarins					
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Coumarins	Furocoumarins					
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 3-Ring	Furocoumarins							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Flavonols	Quercetin			
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Flavonols	Quercetin			
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Flavonols	Rutin			
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Flavonols	Rutin			
+Carbohydrates	Glycosides	Saponins								
+Inorganic Chemicals	Elements	Chalcogens	Selenium							
+Inorganic Chemicals	Minerals	Selenium								
+Organic Chemicals	Amines	Biogenic Amines	Biogenic Monoamines	Tryptamines	Serotonin					
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Indoles	Tryptamines	Serotonin					
+Biological Factors	Inflammation Mediators	Autacoids	Serotonin							
+Organic Chemicals	Hydrocarbons	Terpenes	Sesquiterpenes							
+Macromolecular Substances	Polymers	Biopolymers	Glucans	Starch						
+Carbohydrates	Dietary Carbohydrates	Starch								
+Carbohydrates	Polysaccharides	Glucans	Starch							
+Polycyclic Compounds	Fused-Ring Compounds	Steroids	Cholestanes	Sterols						
+Lipids	Membrane Lipids	Sterols								
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Benzylidene Compounds	Stilbenes				
+Organic Chemicals	Sulfur Compounds	Sulfoxides								
+Inorganic Chemicals	Elements	Chalcogens	Sulfur							
+Macromolecular Substances	Polymers	Biopolymers	Tannins							
+Organic Chemicals	Hydrocarbons	Terpenes								
+Heterocyclic Compounds	Alkaloids	Opiate Alkaloids	Morphinans	Morphine Derivatives	Thebaine					
+Heterocyclic Compounds	Heterocyclic Compounds, Bridged-Ring	Morphinans	Morphine Derivatives	Thebaine						
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 4 or More Rings	Morphinans	Morphine Derivatives	Thebaine					
+Polycyclic Compounds	Polycyclic Aromatic Hydrocarbons	Phenanthrenes	Morphinans	Morphine Derivatives	Thebaine					
+Lipids	Glycerides	Triglycerides								
+Organic Chemicals	Hydrocarbons	Terpenes	Triterpenes							
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Benzoates	Hydroxybenzoates	Hydroxybenzoate Ethers	Vanillic Acid				
+Organic Chemicals	Carboxylic Acids	Hydroxy Acids	Hydroxybenzoates	Hydroxybenzoate Ethers	Vanillic Acid					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Benzoates	Hydroxybenzoates	Hydroxybenzoate Ethers	Vanillic Acid		
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Phenyl Ethers	Hydroxybenzoate Ethers	Vanillic Acid		
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Polyenes	Carotenoids	Retinoids	Vitamin A			
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexenes	Carotenoids	Retinoids	Vitamin A	
+Organic Chemicals	Hydrocarbons	Terpenes	Carotenoids	Retinoids	Vitamin A					
+Organic Chemicals	Hydrocarbons	Terpenes	Diterpenes	Vitamin A						
+Biological Factors	Pigments, Biological	Carotenoids	Retinoids	Vitamin A						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Polyenes	Carotenoids	Xanthophylls	Lutein			
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexenes	Carotenoids	Xanthophylls	Lutein	
+Organic Chemicals	Hydrocarbons	Terpenes	Carotenoids	Xanthophylls	Lutein					
+Biological Factors	Pigments, Biological	Carotenoids	Xanthophylls	Lutein						
+Lipids	Fats	Dietary Fats	Dietary Fats, Unsaturated	Fatty Acids, Omega-3						
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Omega-3							
+Lipids	Oils	Fish Oils	Fatty Acids, Omega-3							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Benzyl Compounds	Lignans				
+Organic Chemicals	Isocyanates	Isothiocyanates								
+Organic Chemicals	Sulfur Compounds	Isothiocyanates								
+Organic Chemicals	Carboxylic Acids	Acids, Acyclic	Tricarboxylic Acids	Citrates	Citric Acid					
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Essential	Linoleic Acids	Linoleic Acid					
+Lipids	Fatty Acids	Fatty Acids, Unsaturated	Fatty Acids, Omega-6	Linoleic Acids	Linoleic Acid					
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Benzoates	Benzoic Acid						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Benzoates	Benzoic Acid				
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Vitamin E	Tocopherols	gamma-Tocopherol				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Vitamin E	Tocopherols	gamma-Tocopherol				
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Vitamin E	Tocopherols					
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Vitamin E	Tocopherols					
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Vitamin E	Tocotrienols					
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Vitamin E	Tocotrienols					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkanes	Heptanes	Diarylheptanoids					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Diarylheptanoids						
+Organic Chemicals	Hydrocarbons	Terpenes	Monoterpenes							
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 3-Ring	Xanthenes	Xanthones						
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Proanthocyanidins				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Proanthocyanidins				
+Macromolecular Substances	Polymers	Biopolymers	Tannins	Proanthocyanidins						
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Flavonols				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Flavonols				
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Flavonols	Kaempferols			
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Flavonols	Kaempferols			
+Carbohydrates	Polysaccharides	Glucans	beta-Glucans							
+Organic Chemicals	Ketones	Propiophenones	Chalcones							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Chalcones				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Chalcones				
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Flavones				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Flavones				
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Flavones	Apigenin			
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Flavones	Apigenin			
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Benzoates	Hydroxybenzoates	Gallic Acid	Hydrolyzable Tannins				
+Organic Chemicals	Carboxylic Acids	Hydroxy Acids	Hydroxybenzoates	Gallic Acid	Hydrolyzable Tannins					
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Benzoates	Hydroxybenzoates	Gallic Acid	Hydrolyzable Tannins		
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Hydroxybenzoates	Gallic Acid	Hydrolyzable Tannins		
+Macromolecular Substances	Polymers	Biopolymers	Tannins	Hydrolyzable Tannins						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Hydroxybenzoates	Salicylates	Anacardic Acids		
+Organic Chemicals	Amines	Quaternary Ammonium Compounds	Betalains	Betacyanins						
+Organic Chemicals	Onium Compounds	Quaternary Ammonium Compounds	Betalains	Betacyanins						
+Heterocyclic Compounds	Alkaloids	Betalains	Betacyanins							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Piperidines	Betalains	Betacyanins						
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Cyclic	Amino Acids, Aromatic	Tyrosine	Betalains	Betacyanins				
+Organic Chemicals	Alcohols	Fatty Alcohols	Acetogenins							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkanes	Acetogenins						
+Organic Chemicals	Lactones	Polyketides	Acetogenins							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Furans	Acetogenins							
+Polycyclic Compounds	Macrocyclic Compounds	Polyketides	Acetogenins							
+Lipids	Fatty Alcohols	Acetogenins								
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Phenols	Polyphenols				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Flavones	Polyphenols			
+Organic Chemicals	Amines	Biogenic Amines	Acetylcholine							
+Heterocyclic Compounds	Alkaloids	Opiate Alkaloids	Noscapine							
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Isoquinolines	Noscapine						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Polyenes	Carotenoids	Norisoprenoids				
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexenes	Carotenoids	Norisoprenoids		
+Organic Chemicals	Hydrocarbons	Terpenes	Carotenoids	Norisoprenoids						
+Carbohydrates	Sugars	Monosaccharides	Hexoses	Galactose						
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyridines	Picolines	Vitamin B 6	Pyridoxal					
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Acidic	Aspartic Acid							
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Dicarboxylic	Aspartic Acid							
+Amino Acids, Peptides, and Proteins	Amino Acids	Excitatory Amino Acids	Aspartic Acid							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Polyenes	Carotenoids	Xanthophylls	Cryptoxanthins			
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexenes	Carotenoids	Xanthophylls	Cryptoxanthins	
+Organic Chemicals	Hydrocarbons	Terpenes	Carotenoids	Xanthophylls	Cryptoxanthins					
+Biological Factors	Pigments, Biological	Carotenoids	Xanthophylls	Cryptoxanthins						
+Inorganic Chemicals	Elements	Metals, Heavy	Cobalt							
+Inorganic Chemicals	Elements	Transition Elements	Cobalt							
+Inorganic Chemicals	Metals	Metals, Heavy	Cobalt							
+Nucleic Acids, Nucleotides, and Nucleosides	Nucleotides	Deoxyribonucleotides								
+Organic Chemicals	Sulfur Compounds	Sulfhydryl Compounds	Ergothioneine							
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Cyclic	Histidine	Ergothioneine						
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Coumarins	Esculin					
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Coumarins	Esculin					
+Carbohydrates	Glycosides	Glucosides	Esculin							
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Essential								
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Chromones	Flavonoids	Isoflavones	Genistein			
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Chromones	Flavonoids	Isoflavones	Genistein			
+Amino Acids, Peptides, and Proteins	Peptides	Oligopeptides	Glutathione							
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclopentanes	Cyclopentane Monoterpenes	Iridoids			
+Organic Chemicals	Hydrocarbons	Terpenes	Monoterpenes	Cyclopentane Monoterpenes	Iridoids					
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Iridoids							
+Lipids	Membrane Lipids	Phospholipids	Glycerophosphates	Phosphatidic Acids	Glycerophospholipids	Phosphatidylcholines				
+Organic Chemicals	Alcohols	Sugar Alcohols	Sorbitol							
+Carbohydrates	Sugar Alcohols	Sorbitol								
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Polycyclic Aromatic Hydrocarbons	Naphthalenes	Naphthoquinones	Vitamin K			
+Organic Chemicals	Hydrocarbons	Terpenes	Diterpenes	Phytol	Vitamin K					
+Polycyclic Compounds	Polycyclic Aromatic Hydrocarbons	Naphthalenes	Naphthoquinones	Vitamin K						
+Amino Acids, Peptides, and Proteins	Amino Acids	Amino Acids, Neutral	Serine							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyrans	Benzopyrans	Aflatoxins						
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzopyrans	Aflatoxins						
+Biological Factors	Toxins, Biological	Mycotoxins	Aflatoxins							
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Oxazines	Benzoxazines							
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Benzoxazines							
+Organic Chemicals	Alcohols	Fatty Alcohols								
+Lipids	Fatty Alcohols									
+Carbohydrates	Deoxy Sugars	Fucose								
+Organic Chemicals	Carboxylic Acids	Acids, Acyclic	Sugar Acids	Uronic Acids	Glucuronates	Glucuronic Acid				
+Organic Chemicals	Carboxylic Acids	Acids, Aldehydic	Uronic Acids	Glucuronates	Glucuronic Acid					
+Organic Chemicals	Carboxylic Acids	Hydroxy Acids	Sugar Acids	Uronic Acids	Glucuronates	Glucuronic Acid				
+Carbohydrates	Sugar Acids	Uronic Acids	Glucuronates	Glucuronic Acid						
+Carbohydrates	Polysaccharides	Glucans	beta-Glucans	Lentinan						
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Acyclic	Alkenes	Polyenes	Carotenoids	Lycopene				
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Alicyclic	Cycloparaffins	Cyclohexanes	Cyclohexenes	Carotenoids	Lycopene		
+Organic Chemicals	Hydrocarbons	Terpenes	Carotenoids	Lycopene						
+Biological Factors	Pigments, Biological	Carotenoids	Lycopene							
+Organic Chemicals	Carboxylic Acids	Acids, Acyclic	Dicarboxylic Acids	Malates						
+Organic Chemicals	Carboxylic Acids	Hydroxy Acids	Malates							
+Heterocyclic Compounds	Alkaloids	Indole Alkaloids	Secologanin Tryptamine Alkaloids	Yohimbine						
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Indoles	Indole Alkaloids	Secologanin Tryptamine Alkaloids	Yohimbine				
+Heterocyclic Compounds	Heterocyclic Compounds, Fused-Ring	Heterocyclic Compounds, 2-Ring	Indolizines	Indolizidines	Indole Alkaloids	Secologanin Tryptamine Alkaloids	Yohimbine			
+Organic Chemicals	Carboxylic Acids	Acids, Carbocyclic	Benzoates	Aminobenzoates	para-Aminobenzoates	4-Aminobenzoic Acid				
+Organic Chemicals	Hydrocarbons	Hydrocarbons, Cyclic	Hydrocarbons, Aromatic	Benzene Derivatives	Benzoates	Aminobenzoates	para-Aminobenzoates	4-Aminobenzoic Acid		
+Organic Chemicals	Amines	Biogenic Amines	Biogenic Polyamines	Putrescine						
+Organic Chemicals	Amines	Polyamines	Diamines	Putrescine						
+Lipids	Membrane Lipids	Sphingolipids								
+Inorganic Chemicals	Electrolytes	Ions	Anions	Sulfates						
+Inorganic Chemicals	Sulfur Compounds	Sulfur Acids	Sulfuric Acids	Sulfates						
+Inorganic Chemicals	Electrolytes	Ions	Anions	Sulfides						
+Inorganic Chemicals	Sulfur Compounds	Hydrogen Sulfide	Sulfides							
+Organic Chemicals	Sulfur Compounds	Sulfides								
+Heterocyclic Compounds	Heterocyclic Compounds, 1-Ring	Pyridines	Picolines	Vitamin B 6						

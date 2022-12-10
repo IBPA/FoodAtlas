@@ -2,6 +2,7 @@ _OLD_FILES/
 
 .tags
 .tags_sorted_by_file
+.vscode
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

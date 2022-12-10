@@ -1,0 +1,2463 @@
+foodatlas_id	degree_centrality	name	type
+e1022	0.047541649735879724	Flavonoids	chemical
+e1091	0.031288094270621694	Polyphenols	chemical
+e980	0.030881755383990246	phenolic acid	chemical
+e1003	0.024380333197887037	Anthocyanins	chemical
+e1007	0.017066233238520925	Carbohydrates	chemical
+e1049	0.015440877691995123	Quercetin	chemical
+e1038	0.01381552214546932	Oils, Volatile	chemical
+e1004	0.013409183258837871	Ascorbic Acid	chemical
+e1020	0.01300284437220642	Fatty Acids	chemical
+e890	0.012190166598943519	Allium sativum	organism
+e833	0.011783827712312067	Prunus dulcis	organism
+e1047	0.010971149939049166	Polysaccharides	chemical
+e828	0.010971149939049166	Brassica oleracea	organism
+e749	0.010564811052417716	Apium graveolens Dulce Group	organism
+e831	0.010564811052417716	Fragaria x ananassa	organism
+e1028	0.010564811052417716	Iron	chemical
+e1061	0.010564811052417716	Terpenes	chemical
+e858	0.010564811052417716	Daucus carota	organism
+e1008	0.010564811052417716	Carotenoids	chemical
+e1010	0.010158472165786265	Catechin	chemical
+e1078	0.010158472165786265	Monoterpenes	chemical
+e1021	0.009752133279154815	Fatty Acids, Unsaturated	chemical
+e987	0.009752133279154815	vitamin A, vitamin E, vitamin K3 drug combination	chemical
+e1064	0.009752133279154815	Triterpenes	chemical
+e1051	0.009345794392523364	Saponins	chemical
+e1024	0.009345794392523364	Glucosides	chemical
+e840	0.009345794392523364	Glycine max	organism
+e799	0.008939455505891914	Ginkgo biloba	organism
+e1042	0.008939455505891914	Phenols	chemical
+e872	0.008939455505891914	Prunus avium	organism
+e770	0.008533116619260463	Hibiscus sabdariffa	organism
+e1087	0.008533116619260463	Hydrolyzable Tannins	chemical
+e1002	0.008533116619260463	Amino Acids	chemical
+e756	0.008533116619260463	Cichorium intybus	organism
+e910	0.008533116619260463	Pistacia vera	organism
+e1555	0.008533116619260463	Organic Chemicals	chemical
+e812	0.008126777732629013	Fagopyrum esculentum	organism
+e781	0.008126777732629013	Syzygium aromaticum	organism
+e1026	0.008126777732629013	Glycosides	chemical
+e881	0.008126777732629013	Oryza sativa	organism
+e1013	0.008126777732629013	Copper	chemical
+e194	0.0077204388459975615	Furans	chemical
+e1068	0.0077204388459975615	Fatty Acids, Omega-3	chemical
+e1081	0.0077204388459975615	Flavonols	chemical
+e1055	0.0077204388459975615	Starch	chemical
+e283	0.0077204388459975615	Nitrogen	chemical
+e928	0.0077204388459975615	Trigonella foenum-graecum	organism
+e867	0.0077204388459975615	Olea europaea	organism
+e1025	0.0077204388459975615	Glucosinolates	chemical
+e837	0.007314099959366111	Arachis hypogaea	organism
+e1082	0.007314099959366111	Kaempferols	chemical
+e801	0.007314099959366111	Persea americana	organism
+e830	0.007314099959366111	Moringa oleifera	organism
+e1036	0.007314099959366111	Mercury	chemical
+e1011	0.007314099959366111	Chlorogenic Acid	chemical
+e816	0.007314099959366111	Carica papaya	organism
+e1080	0.007314099959366111	Proanthocyanidins	chemical
+e846	0.00690776107273466	Salvia officinalis	organism
+e1006	0.00690776107273466	Caffeic Acids	chemical
+e98	0.00690776107273466	beta Carotene	chemical
+e877	0.00690776107273466	Camellia sinensis	organism
+e983	0.00650142218610321	coumarin	chemical
+e834	0.00650142218610321	Prunus domestica	organism
+e865	0.00650142218610321	Solanum tuberosum	organism
+e753	0.00650142218610321	Cinnamomum verum	organism
+e998	0.00650142218610321	Sugars	chemical
+e69	0.00650142218610321	Alkaloids	chemical
+e450	0.00650142218610321	Salvia rosmarinus	organism
+e1499	0.00650142218610321	Inorganic Chemicals	chemical
+e1059	0.00650142218610321	Sulfur	chemical
+e826	0.00650142218610321	Brassica napus	organism
+e1031	0.006095083299471759	Lipids	chemical
+e772	0.006095083299471759	Vaccinium uliginosum	organism
+e195	0.006095083299471759	Gallic Acid	chemical
+e892	0.006095083299471759	Vaccinium angustifolium	organism
+e805	0.006095083299471759	Spinacia oleracea	organism
+e314	0.006095083299471759	Potassium	chemical
+e914	0.006095083299471759	Fagopyrum tataricum	organism
+e853	0.006095083299471759	Ocimum basilicum	organism
+e1054	0.006095083299471759	Sesquiterpenes	chemical
+e239	0.005688744412840309	Lactones	chemical
+e903	0.005688744412840309	Brassica rapa subsp. rapa	organism
+e888	0.005688744412840309	Musa acuminata	organism
+e900	0.005688744412840309	Myristica fragrans	organism
+e1648	0.005688744412840309	Sulfur Compounds	chemical
+e793	0.005688744412840309	Mangifera indica	organism
+e1057	0.005688744412840309	Stilbenes	chemical
+e578	0.005688744412840309	Trigonella foenum-graecum - seed	organism_with_part
+e899	0.005688744412840309	Taraxacum officinale	organism
+e1075	0.005688744412840309	Tocopherols	chemical
+e854	0.005688744412840309	Origanum vulgare	organism
+e61	0.005688744412840309	Zinc	chemical
+e863	0.005688744412840309	Anethum graveolens	organism
+e752	0.005282405526208858	Dimocarpus longan	organism
+e926	0.005282405526208858	Passiflora edulis	organism
+e1056	0.005282405526208858	Sterols	chemical
+e783	0.005282405526208858	Punica granatum	organism
+e434	0.005282405526208858	Petroselinum crispum	organism
+e1086	0.005282405526208858	Apigenin	chemical
+e860	0.005282405526208858	Coriandrum sativum	organism
+e820	0.005282405526208858	Prunus armeniaca	organism
+e898	0.005282405526208858	Thymus vulgaris	organism
+e1045	0.005282405526208858	Phytosterols	chemical
+e768	0.005282405526208858	Vaccinium myrtillus	organism
+e984	0.005282405526208858	rosmarinic acid	chemical
+e476	0.005282405526208858	Satureja montana	organism
+e924	0.005282405526208858	Allium schoenoprasum	organism
+e788	0.005282405526208858	Citrus sinensis	organism
+e1069	0.005282405526208858	Lignans	chemical
+e1037	0.005282405526208858	Oils	chemical
+e786	0.005282405526208858	Morella rubra	organism
+e1426	0.005282405526208858	Elements	chemical
+e1017	0.005282405526208858	Cysteine	chemical
+e787	0.005282405526208858	Citrus limon	organism
+e443	0.004876066639577408	Portulaca oleracea	organism
+e296	0.004876066639577408	Peptides	chemical
+e883	0.004876066639577408	Abelmoschus esculentus	organism
+e746	0.004876066639577408	Vitis rotundifolia	organism
+e1040	0.004876066639577408	Oleic Acids	chemical
+e166	0.004876066639577408	Diterpenes	chemical
+e920	0.004876066639577408	Aronia melanocarpa	organism
+e836	0.004876066639577408	Citrus x paradisi	organism
+e1530	0.004876066639577408	Metals, Heavy	chemical
+e1070	0.004876066639577408	Isothiocyanates	chemical
+e1060	0.004876066639577408	Tannins	chemical
+e912	0.004876066639577408	Garcinia mangostana	organism
+e795	0.004876066639577408	Annona reticulata	organism
+e758	0.004876066639577408	Curcuma longa	organism
+e843	0.004876066639577408	Medicago sativa	organism
+e938	0.004876066639577408	Zingiber officinale	organism
+e915	0.004876066639577408	Chenopodium quinoa	organism
+e1023	0.004876066639577408	Folic Acid	chemical
+e907	0.004876066639577408	Pleurotus ostreatus	organism
+e114	0.004876066639577408	Calcium	chemical
+e784	0.004876066639577408	Pyrus communis	organism
+e869	0.004876066639577408	Arctium lappa	organism
+e839	0.004469727752945957	Cicer arietinum	organism
+e249	0.004469727752945957	Luteolin	chemical
+e862	0.004469727752945957	Solanum lycopersicum	organism
+e1466	0.004469727752945957	Heterocyclic Compounds, 1-Ring	chemical
+e189	0.004469727752945957	Fructose	chemical
+e1019	0.004469727752945957	Eugenol	chemical
+e889	0.004469727752945957	Allium cepa	organism
+e856	0.004469727752945957	Manihot esculenta	organism
+e800	0.004469727752945957	Mentha x piperita	organism
+e809	0.004469727752945957	Diospyros kaki	organism
+e842	0.004469727752945957	Lens culinaris	organism
+e1467	0.004469727752945957	Heterocyclic Compounds, 2-Ring	chemical
+e797	0.004469727752945957	Rubus idaeus	organism
+e887	0.004469727752945957	Ananas comosus	organism
+e824	0.004469727752945957	Momordica charantia	organism
+e524	0.004469727752945957	Cichorium intybus - leaf	organism_with_part
+e81	0.004469727752945957	Amines	chemical
+e803	0.004469727752945957	Artocarpus heterophyllus	organism
+e923	0.004469727752945957	Vaccinium corymbosum	organism
+e847	0.004469727752945957	Pisum sativum	organism
+e1135	0.004469727752945957	Sorbitol	chemical
+e1077	0.004469727752945957	Diarylheptanoids	chemical
+e1552	0.004469727752945957	Oligopeptides	chemical
+e817	0.004469727752945957	Citrullus lanatus	organism
+e281	0.004469727752945957	Nitrates	chemical
+e169	0.0040633888663145065	Ellagic Acid	chemical
+e1052	0.0040633888663145065	Selenium	chemical
+e1395	0.0040633888663145065	Cyclohexane Monoterpenes	chemical
+e129	0.0040633888663145065	Choline	chemical
+e933	0.0040633888663145065	Crocus sativus	organism
+e1211	0.0040633888663145065	Fatty Alcohols	chemical
+e832	0.0040633888663145065	Pimenta dioica	organism
+e941	0.0040633888663145065	Apium graveolens Dulce Group - leaf	organism_with_part
+e351	0.0040633888663145065	Steroids	chemical
+e683	0.0040633888663145065	Oryza sativa - bran	organism_with_part
+e864	0.0040633888663145065	Solanum melongena	organism
+e873	0.0040633888663145065	Helianthus annuus	organism
+e72	0.0040633888663145065	alpha-carotene	chemical
+e1032	0.0040633888663145065	Magnesium	chemical
+e844	0.0040633888663145065	Phaseolus lunatus	organism
+e871	0.0040633888663145065	Carthamus tinctorius	organism
+e207	0.0040633888663145065	Glucose	chemical
+e819	0.0040633888663145065	Cucumis sativus	organism
+e886	0.0040633888663145065	Zea mays	organism
+e68	0.0040633888663145065	Aldehydes	chemical
+e821	0.0040633888663145065	Cucurbita maxima	organism
+e1347	0.0040633888663145065	Benzene Derivatives	chemical
+e383	0.0036570499796830555	Xanthophylls	chemical
+e917	0.0036570499796830555	Capparis spinosa	organism
+e884	0.0036570499796830555	Triticum aestivum	organism
+e757	0.0036570499796830555	Coffea arabica	organism
+e852	0.0036570499796830555	Melissa officinalis	organism
+e272	0.0036570499796830555	Naphthoquinones	chemical
+e1014	0.0036570499796830555	Coumaric Acids	chemical
+e411	0.0036570499796830555	Ficus carica	organism
+e1336	0.0036570499796830555	Anions	chemical
+e963	0.0036570499796830555	kaempferol	chemical
+e1487	0.0036570499796830555	Hydroxybenzoates	chemical
+e1050	0.0036570499796830555	Rutin	chemical
+e1048	0.0036570499796830555	Furocoumarins	chemical
+e778	0.0036570499796830555	Mammea americana	organism
+e1018	0.0036570499796830555	Esters	chemical
+e245	0.0036570499796830555	linalool	chemical
+e759	0.0036570499796830555	Vaccinium macrocarpon	organism
+e893	0.0036570499796830555	Fennel	organism
+e904	0.0036570499796830555	Brassica rapa subsp. pekinensis	organism
+e771	0.0036570499796830555	Sicyos edulis	organism
+e876	0.0036570499796830555	Nelumbo nucifera	organism
+e282	0.0036570499796830555	Nitrites	chemical
+e353	0.0036570499796830555	Sucrose	chemical
+e1085	0.0036570499796830555	Flavones	chemical
+e1666	0.0036570499796830555	Transition Elements	chemical
+e1349	0.0036570499796830555	Benzopyrans	chemical
+e829	0.0036570499796830555	Raphanus sativus	organism
+e1012	0.0036570499796830555	Chlorophyll	chemical
+e1067	0.0036570499796830555	Lutein	chemical
+e835	0.003250711093051605	Prunus persica	organism
+e767	0.003250711093051605	Anacardium occidentale	organism
+e1043	0.003250711093051605	Phosphorus	chemical
+e1090	0.003250711093051605	Acetogenins	chemical
+e1041	0.003250711093051605	Oxalates	chemical
+e1015	0.003250711093051605	Coumarins	chemical
+e419	0.003250711093051605	Hyssopus officinalis	organism
+e79	0.003250711093051605	alpha-Tocopherol	chemical
+e841	0.003250711093051605	Camellia oleifera	organism
+e1235	0.003250711093051605	Sulfides	chemical
+e1757	0.003250711093051605	apioid superclade	organism
+e806	0.003250711093051605	Angelica keiskei	organism
+e815	0.003250711093051605	Bertholletia excelsa	organism
+e2097	0.003250711093051605	Prunus	organism
+e409	0.003250711093051605	Vitis vinifera	organism
+e827	0.003250711093051605	Brassica rapa	organism
+e67	0.003250711093051605	Alcohols	chemical
+e2440	0.003250711093051605	Phaseoleae	organism
+e849	0.003250711093051605	Vigna angularis	organism
+e952	0.003250711093051605	Vigna angularis - seed	organism_with_part
+e1962	0.003250711093051605	Citrus	organism
+e825	0.003250711093051605	Brassica juncea	organism
+e357	0.003250711093051605	Amino Acids, Sulfur	chemical
+e1071	0.003250711093051605	Citric Acid	chemical
+e178	0.003250711093051605	Benzoates	chemical
+e857	0.003250711093051605	Linum usitatissimum	organism
+e1030	0.003250711093051605	Linoleic Acids	chemical
+e185	0.003250711093051605	Flavanones	chemical
+e2139	0.003250711093051605	Vaccinium	organism
+e474	0.003250711093051605	Allium ampeloprasum	organism
+e775	0.003250711093051605	Hippophae rhamnoides	organism
+e1044	0.003250711093051605	Phytic Acid	chemical
+e1079	0.003250711093051605	Xanthones	chemical
+e861	0.003250711093051605	Panax ginseng	organism
+e119	0.003250711093051605	Carbon	chemical
+e1065	0.003250711093051605	Vanillic Acid	chemical
+e985	0.003250711093051605	flavone	chemical
+e1301	0.003250711093051605	Acids, Acyclic	chemical
+e2212	0.003250711093051605	Malpighiales	organism
+e790	0.003250711093051605	Averrhoa carambola	organism
+e461	0.003250711093051605	Phoca largha	organism
+e779	0.003250711093051605	Ceratonia siliqua	organism
+e162	0.003250711093051605	Dipeptides	chemical
+e958	0.003250711093051605	Garcinia mangostana - pericarp	organism_with_part
+e227	0.003250711093051605	Iridoid Glycosides	chemical
+e927	0.003250711093051605	Ribes nigrum	organism
+e1375	0.003250711093051605	Catechols	chemical
+e546	0.003250711093051605	Salvia officinalis - leaf	organism_with_part
+e992	0.003250711093051605	GI 5269	chemical
+e908	0.0028443722064201544	Agaricus bisporus	organism
+e796	0.0028443722064201544	Carya illinoinensis	organism
+e855	0.0028443722064201544	Oenothera biennis	organism
+e1911	0.0028443722064201544	Allium	organism
+e217	0.0028443722064201544	Hydrocarbons	chemical
+e859	0.0028443722064201544	Apium graveolens	organism
+e327	0.0028443722064201544	Quinic Acid	chemical
+e901	0.0028443722064201544	Juglans regia	organism
+e851	0.0028443722064201544	Vigna unguiculata	organism
+e931	0.0028443722064201544	Salmo salar	organism
+e1364	0.0028443722064201544	Biopolymers	chemical
+e1027	0.0028443722064201544	Histidine	chemical
+e715	0.0028443722064201544	Curcuma longa - rhizome	organism_with_part
+e838	0.0028443722064201544	Cajanus cajan	organism
+e315	0.0028443722064201544	procyanidin	chemical
+e1084	0.0028443722064201544	Chalcones	chemical
+e919	0.0028443722064201544	Cymbopogon citratus	organism
+e82	0.0028443722064201544	Amygdalin	chemical
+e354	0.0028443722064201544	Sugar Alcohols	chemical
+e100	0.0028443722064201544	Beta-Cryptoxanthin	chemical
+e1029	0.0028443722064201544	Lignin	chemical
+e247	0.0028443722064201544	lotaustralin	chemical
+e258	0.0028443722064201544	Methionine	chemical
+e71	0.0028443722064201544	allicin	chemical
+e882	0.0028443722064201544	Panicum miliaceum	organism
+e1474	0.0028443722064201544	Hormones	chemical
+e97	0.0028443722064201544	beta-amyrin	chemical
+e794	0.0028443722064201544	Annona squamosa	organism
+e814	0.0028443722064201544	Theobroma cacao	organism
+e216	0.0028443722064201544	Histamine	chemical
+e1639	0.0028443722064201544	Sugar Acids	chemical
+e1764	0.0028443722064201544	fabids	organism
+e2197	0.0028443722064201544	Ericales	organism
+e344	0.0028443722064201544	Sodium	chemical
+e426	0.0028443722064201544	Loquat	organism
+e541	0.0028443722064201544	Fagopyrum esculentum - inflorescence	organism_with_part
+e379	0.0028443722064201544	Vitamin E	chemical
+e205	0.0028443722064201544	Glucans	chemical
+e961	0.0028443722064201544	ferulic acid	chemical
+e921	0.0028443722064201544	Durio zibethinus	organism
+e1389	0.0028443722064201544	Cinnamates	chemical
+e602	0.0028443722064201544	Moringa oleifera - flower	organism_with_part
+e117	0.0028443722064201544	Camphor	chemical
+e184	0.0028443722064201544	flavan-3-ol	chemical
+e1318	0.0028443722064201544	Allylbenzene Derivatives	chemical
+e1066	0.0028443722064201544	Vitamin A	chemical
+e866	0.0028443722064201544	Ipomoea batatas	organism
+e991	0.0028443722064201544	caffeoylquinic acid	chemical
+e906	0.0028443722064201544	Cuminum cyminum	organism
+e1495	0.0028443722064201544	Indoles	chemical
+e367	0.0028443722064201544	Thymol	chemical
+e47	0.0028443722064201544	Oleic Acid	chemical
+e145	0.0028443722064201544	cyanogenic glycosides	chemical
+e46	0.0028443722064201544	Nickel	chemical
+e558	0.0028443722064201544	Annona reticulata - seed	organism_with_part
+e125	0.0028443722064201544	carvacrol	chemical
+e774	0.0028443722064201544	Empetrum nigrum	organism
+e1000	0.0028443722064201544	Alkanes	chemical
+e1620	0.0028443722064201544	Quaternary Ammonium Compounds	chemical
+e268	0.0028443722064201544	Fatty Acids, Monounsaturated	chemical
+e773	0.0028443722064201544	Mentha aquatica	organism
+e712	0.0028443722064201544	Fagopyrum tataricum - inflorescence	organism_with_part
+e2431	0.0028443722064201544	Mentheae	organism
+e297	0.002438033319788704	petroselinic acid	chemical
+e850	0.002438033319788704	Vigna mungo	organism
+e684	0.002438033319788704	Hibiscus sabdariffa - calyx	organism_with_part
+e940	0.002438033319788704	Vitis rotundifolia - skin	organism_with_part
+e1609	0.002438033319788704	Proteins	chemical
+e22	0.002438033319788704	Docosahexaenoic Acids	chemical
+e953	0.002438033319788704	Linum usitatissimum - seed	organism_with_part
+e75	0.002438033319788704	alpha-Linolenic Acid	chemical
+e1546	0.002438033319788704	Nitriles	chemical
+e916	0.002438033319788704	Mytilus edulis	organism
+e1361	0.002438033319788704	Biological Factors	chemical
+e1039	0.002438033319788704	Oleanolic Acid	chemical
+e1348	0.002438033319788704	Benzofurans	chemical
+e966	0.002438033319788704	citral	chemical
+e1408	0.002438033319788704	Dicarboxylic Acids	chemical
+e416	0.002438033319788704	Psidium guajava	organism
+e312	0.002438033319788704	Polyynes	chemical
+e225	0.002438033319788704	Inositol	chemical
+e811	0.002438033319788704	Cantharellus cibarius	organism
+e1594	0.002438033319788704	Polycyclic Aromatic Hydrocarbons	chemical
+e1286	0.002438033319788704	Daucus carota - root	organism_with_part
+e1063	0.002438033319788704	Triglycerides	chemical
+e143	0.002438033319788704	Cyanides	chemical
+e870	0.002438033319788704	Artemisia vulgaris	organism
+e942	0.002438033319788704	Cinnamomum verum - bark	organism_with_part
+e1849	0.002438033319788704	Malvaceae	organism
+e1005	0.002438033319788704	Cadmium	chemical
+e246	0.002438033319788704	linamarin	chemical
+e802	0.002438033319788704	Papaver somniferum	organism
+e1419	0.002438033319788704	Disulfides	chemical
+e80	0.002438033319788704	Amides	chemical
+e347	0.002438033319788704	Squalene	chemical
+e1221	0.002438033319788704	luteolin 7-diglucuronide	chemical
+e458	0.002438033319788704	Sorghum bicolor	organism
+e1140	0.002438033319788704	Vitamin K	chemical
+e218	0.002438033319788704	Hydrogen Cyanide	chemical
+e1531	0.002438033319788704	Metals, Light	chemical
+e813	0.002438033319788704	Rheum rhabarbarum	organism
+e1317	0.002438033319788704	Allyl Compounds	chemical
+e471	0.002438033319788704	Odobenus rosmarus	organism
+e913	0.002438033319788704	Tamarindus indica	organism
+e405	0.002438033319788704	Pollachius virens	organism
+e418	0.002438033319788704	Armoracia rusticana	organism
+e1123	0.002438033319788704	Iridoids	chemical
+e937	0.002438033319788704	Gallus gallus	organism
+e386	0.002438033319788704	Zeaxanthins	chemical
+e1599	0.002438033319788704	Polymers	chemical
+e335	0.002438033319788704	Salicylic Acid	chemical
+e762	0.002438033319788704	Nephelium lappaceum	organism
+e750	0.002438033319788704	Cinnamomum aromaticum	organism
+e237	0.002438033319788704	Ketones	chemical
+e1721	0.002438033319788704	Mesangiospermae	organism
+e399	0.002438033319788704	Carum carvi	organism
+e1356	0.002438033319788704	Bicyclic Monoterpenes	chemical
+e974	0.002438033319788704	Lycopene	chemical
+e975	0.002438033319788704	indole-3-carbinol	chemical
+e280	0.002438033319788704	Nicotinic Acids	chemical
+e880	0.002438033319788704	Hordeum vulgare	organism
+e909	0.002438033319788704	Lentinula edodes	organism
+e432	0.002438033319788704	Crassostrea gigas	organism
+e1033	0.002438033319788704	Manganese	chemical
+e1485	0.002438033319788704	Hydroxy Acids	chemical
+e996	0.002438033319788704	triterpenoid TP-222	chemical
+e785	0.002438033319788704	Syzygium cumini	organism
+e1633	0.002438033319788704	Solanine	chemical
+e473	0.002438033319788704	Sinapis alba	organism
+e1399	0.002438033319788704	Cyclohexenes	chemical
+e1622	0.002438033319788704	Quinones	chemical
+e203	0.002438033319788704	Ginkgolides	chemical
+e452	0.002438033319788704	Metroxylon sagu	organism
+e995	0.002438033319788704	3,4-dihydroxyphenacyl caffeate phenylpropanoid ester	chemical
+e1373	0.002438033319788704	Carboxylic Acids	chemical
+e2429	0.002438033319788704	Maleae	organism
+e286	0.002438033319788704	Oligosaccharides	chemical
+e251	0.002438033319788704	tyrosyl-lysine	chemical
+e719	0.002438033319788704	Citrullus lanatus - seed	organism_with_part
+e267	0.002438033319788704	Monosaccharides	chemical
+e885	0.002438033319788704	Triticum turgidum subsp. durum	organism
+e323	0.002438033319788704	Purines	chemical
+e591	0.002438033319788704	Matricaria chamomilla var. recutita - flower	organism_with_part
+e573	0.002438033319788704	Oenothera biennis - leaf	organism_with_part
+e652	0.002438033319788704	Olea europaea - fruit	organism_with_part
+e754	0.002438033319788704	Annona muricata	organism
+e751	0.002438033319788704	Matricaria chamomilla var. recutita	organism
+e792	0.002438033319788704	Mentha spicata	organism
+e2189	0.002438033319788704	Caryophyllales	organism
+e1631	0.002438033319788704	Sitosterols	chemical
+e291	0.0020316944331572532	4-anisic acid	chemical
+e620	0.0020316944331572532	Dimocarpus longan - tissue	organism_with_part
+e997	0.0020316944331572532	cyanidin 3-galactoside	chemical
+e1547	0.0020316944331572532	Nitrogen Compounds	chemical
+e1359	0.0020316944331572532	Biogenic Monoamines	chemical
+e1073	0.0020316944331572532	Benzoic Acid	chemical
+e445	0.0020316944331572532	Oncorhynchus mykiss	organism
+e8	0.0020316944331572532	2-propene-1-sulfinothioic acid S-1-propenyl ester	chemical
+e270	0.0020316944331572532	myricetin	chemical
+e902	0.0020316944331572532	Macadamia tetraphylla	organism
+e2066	0.0020316944331572532	Origanum	organism
+e823	0.0020316944331572532	Cucurbita moschata	organism
+e1074	0.0020316944331572532	gamma-Tocopherol	chemical
+e1053	0.0020316944331572532	Serotonin	chemical
+e226	0.0020316944331572532	Iodine	chemical
+e1355	0.0020316944331572532	Betalains	chemical
+e962	0.0020316944331572532	ursolic acid	chemical
+e138	0.0020316944331572532	Hydrocortisone	chemical
+e1473	0.0020316944331572532	Hexoses	chemical
+e911	0.0020316944331572532	Rubus chamaemorus	organism
+e1768	0.0020316944331572532	malvids	organism
+e804	0.0020316944331572532	Chenopodium album	organism
+e254	0.0020316944331572532	mangiferin	chemical
+e1543	0.0020316944331572532	Neuropeptides	chemical
+e1116	0.0020316944331572532	Ergothioneine	chemical
+e1804	0.0020316944331572532	Brassicaceae	organism
+e2422	0.0020316944331572532	Fabeae	organism
+e1292	0.0020316944331572532	Lupinus albus	organism
+e964	0.0020316944331572532	carvone	chemical
+e2399	0.0020316944331572532	Benincaseae	organism
+e603	0.0020316944331572532	Moringa oleifera - leaf	organism_with_part
+e1501	0.0020316944331572532	Intercellular Signaling Peptides and Proteins	chemical
+e177	0.0020316944331572532	estragole	chemical
+e1372	0.0020316944331572532	Camphanes	chemical
+e2046	0.0020316944331572532	Mentha	organism
+e2185	0.0020316944331572532	Brassicales	organism
+e1767	0.0020316944331572532	lamiids	organism
+e336	0.0020316944331572532	Sapogenins	chemical
+e1400	0.0020316944331572532	Cycloparaffins	chemical
+e24	0.0020316944331572532	2,3-epoxypropyl acrylate	chemical
+e704	0.0020316944331572532	Prunus avium - fruit	organism_with_part
+e400	0.0020316944331572532	Elettaria cardamomum	organism
+e651	0.0020316944331572532	Abelmoschus esculentus - pod	organism_with_part
+e999	0.0020316944331572532	Limonene	chemical
+e2208	0.0020316944331572532	Lamiales	organism
+e967	0.0020316944331572532	gingerol	chemical
+e1403	0.0020316944331572532	Cymenes	chemical
+e1465	0.0020316944331572532	Heterocyclic Compounds	chemical
+e1385	0.0020316944331572532	Cholestenes	chemical
+e1734	0.0020316944331572532	Pentapetalae	organism
+e1595	0.0020316944331572532	Polycyclic Compounds	chemical
+e1337	0.0020316944331572532	Anisoles	chemical
+e939	0.0020316944331572532	Glebionis coronaria	organism
+e761	0.0020316944331572532	Litchi chinensis	organism
+e590	0.0020316944331572532	Allium sativum - tissue	organism_with_part
+e1655	0.0020316944331572532	Tetrapyrroles	chemical
+e329	0.0020316944331572532	Resveratrol	chemical
+e438	0.0020316944331572532	Citrus x latifolia	organism
+e259	0.0020316944331572532	4-methoxycinnamic acid	chemical
+e1917	0.0020316944331572532	Annona	organism
+e1118	0.0020316944331572532	Amino Acids, Essential	chemical
+e879	0.0020316944331572532	Avena sativa	organism
+e2224	0.0020316944331572532	Poales	organism
+e905	0.0020316944331572532	Vaccinium oxycoccos	organism
+e1320	0.0020316944331572532	Amino Acids, Aromatic	chemical
+e798	0.0020316944331572532	Dysphania ambrosioides	organism
+e157	0.0020316944331572532	diallyl G	chemical
+e2382	0.0020316944331572532	Eukaryota	organism
+e538	0.0020316944331572532	Allium schoenoprasum - tissue	organism_with_part
+e1413	0.0020316944331572532	Dihydroxyphenylalanine	chemical
+e1597	0.0020316944331572532	Polyenes	chemical
+e222	0.0020316944331572532	Indole Alkaloids	chemical
+e407	0.0020316944331572532	Phaseolus vulgaris	organism
+e1937	0.0020316944331572532	Brassica	organism
+e1586	0.0020316944331572532	Pigments, Biological	chemical
+e231	0.0020316944331572532	3-methylquercetin	chemical
+e228	0.0020316944331572532	Isoflavones	chemical
+e377	0.0020316944331572532	Vitamin D	chemical
+e420	0.0020316944331572532	Helianthus tuberosus	organism
+e1058	0.0020316944331572532	Sulfoxides	chemical
+e935	0.0020316944331572532	Citrus reticulata	organism
+e214	0.0020316944331572532	Hemocyanins	chemical
+e1303	0.0020316944331572532	Acids, Carbocyclic	chemical
+e878	0.0020316944331572532	Colocasia esculenta	organism
+e1617	0.0020316944331572532	Pyridines	chemical
+e1089	0.0020316944331572532	Betacyanins	chemical
+e57	0.0020316944331572532	Silicon	chemical
+e956	0.0020316944331572532	Myristica fragrans - seed	organism_with_part
+e1345	0.0020316944331572532	Azoles	chemical
+e437	0.0020316944331572532	Capsicum annuum	organism
+e969	0.0020316944331572532	protocatechuic acid	chemical
+e99	0.0020316944331572532	caryophyllene	chemical
+e1295	0.0020316944331572532	4-Butyrolactone	chemical
+e1469	0.0020316944331572532	Heterocyclic Compounds, 4 or More Rings	chemical
+e2143	0.0020316944331572532	Vigna	organism
+e1016	0.0020316944331572532	Curcumin	chemical
+e300	0.0020316944331572532	Phenol	chemical
+e530	0.0020316944331572532	Morella rubra - leaf	organism_with_part
+e1851	0.0020316944331572532	Moraceae	organism
+e973	0.0020316944331572532	galactomannan	chemical
+e466	0.0020316944331572532	Origanum majorana	organism
+e978	0.0020316944331572532	cyanidin	chemical
+e1647	0.0020316944331572532	Sulfur Acids	chemical
+e1035	0.0020316944331572532	Menthol	chemical
+e1529	0.0020316944331572532	Metals, Alkaline Earth	chemical
+e525	0.0020316944331572532	Cichorium intybus - root	organism_with_part
+e951	0.0020316944331572532	Lens culinaris - seed	organism_with_part
+e730	0.0020316944331572532	Flammulina velutipes	organism
+e764	0.0020316944331572532	Vigna radiata	organism
+e1046	0.0020316944331572532	Polychlorinated Biphenyls	chemical
+e1296	0.0020316944331572532	Abietanes	chemical
+e2401	0.0020316944331572532	Brassiceae	organism
+e747	0.0020316944331572532	Prunus tomentosa	organism
+e1153	0.0020316944331572532	Vaccinium uliginosum - leaf	organism_with_part
+e595	0.0020316944331572532	Ginkgo biloba - leaf	organism_with_part
+e1198	0.0020316944331572532	(trifluoromethyl)phenyldiazirinylfenpyroximate	chemical
+e891	0.0020316944331572532	Asparagus officinalis	organism
+e875	0.0020316944331572532	Cynara cardunculus	organism
+e1537	0.0020316944331572532	Morphinans	chemical
+e994	0.0020316944331572532	caryophyllene oxide	chemical
+e454	0.0020316944331572532	Sesamum indicum	organism
+e1573	0.0020316944331572532	Phenyl Ethers	chemical
+e1527	0.0020316944331572532	Metals	chemical
+e782	0.0020316944331572532	Virola surinamensis	organism
+e989	0.0020316944331572532	pelargonidin	chemical
+e1820	0.0020316944331572532	Cucurbitaceae	organism
+e1512	0.0020316944331572532	Latex	chemical
+e894	0.0020316944331572532	Levisticum officinale	organism
+e1457	0.0016253555465258025	Glycolipids	chemical
+e580	0.0016253555465258025	Linum usitatissimum - tissue	organism_with_part
+e206	0.0016253555465258025	glucoraphanin	chemical
+e34	0.0016253555465258025	2-(2-N,N-dimethylaminoethylamine-1-carbonyl)-1H-quinolin-4-one hydrochloride	chemical
+e74	0.0016253555465258025	humulene	chemical
+e371	0.0016253555465258025	trigonelline	chemical
+e1097	0.0016253555465258025	Galactose	chemical
+e1137	0.0016253555465258025	tracheloside	chemical
+e113	0.0016253555465258025	caffeoyl tartaric acid	chemical
+e1133	0.0016253555465258025	procyanidin B	chemical
+e789	0.0016253555465258025	Chondrus crispus	organism
+e2126	0.0016253555465258025	Syzygium	organism
+e1632	0.0016253555465258025	Solanaceous Alkaloids	chemical
+e318	0.0016253555465258025	isoleucyl-prolyl-proline	chemical
+e1650	0.0016253555465258025	Tartrates	chemical
+e1876	0.0016253555465258025	Phocidae	organism
+e487	0.0016253555465258025	Prunus armeniaca - fruit	organism_with_part
+e845	0.0016253555465258025	Phaseolus coccineus	organism
+e1688	0.0016253555465258025	BOP clade	organism
+e2230	0.0016253555465258025	Sapindales	organism
+e1305	0.0016253555465258025	Acids, Noncarboxylic	chemical
+e2180	0.0016253555465258025	Asparagales	organism
+e1476	0.0016253555465258025	Hydrocarbons, Acyclic	chemical
+e1906	0.0016253555465258025	Zingiberaceae	organism
+e2396	0.0016253555465258025	Apieae	organism
+e2310	0.0016253555465258025	Salmoninae	organism
+e252	0.0016253555465258025	Ferrosoferric Oxide	chemical
+e808	0.0016253555465258025	Basella alba	organism
+e776	0.0016253555465258025	Artocarpus altilis	organism
+e1507	0.0016253555465258025	Isoquinolines	chemical
+e1524	0.0016253555465258025	Metalloids	chemical
+e1481	0.0016253555465258025	Hydrocarbons, Cyclic	chemical
+e1681	0.0016253555465258025	50 kb inversion clade	organism
+e1675	0.0016253555465258025	Vasopressins	chemical
+e490	0.0016253555465258025	Persea americana - fruit	organism_with_part
+e359	0.0016253555465258025	tartaric acid	chemical
+e1540	0.0016253555465258025	Naphthalenes	chemical
+e947	0.0016253555465258025	Fagopyrum esculentum - seed	organism_with_part
+e2064	0.0016253555465258025	Oncorhynchus	organism
+e1478	0.0016253555465258025	Hydrocarbons, Aromatic	chemical
+e896	0.0016253555465258025	Coffea canephora	organism
+e478	0.0016253555465258025	Seriola lalandi	organism
+e1842	0.0016253555465258025	Lauraceae	organism
+e59	0.0016253555465258025	taraxinic acid glucopyranosyl ester	chemical
+e183	0.0016253555465258025	Dietary Fiber	chemical
+e25	0.0016253555465258025	Eicosapentaenoic Acid	chemical
+e348	0.0016253555465258025	squamocin	chemical
+e313	0.0016253555465258025	Polyamines	chemical
+e2278	0.0016253555465258025	Chenopodioideae	organism
+e960	0.0016253555465258025	allyl isothiocyanate	chemical
+e240	0.0016253555465258025	lactucin	chemical
+e424	0.0016253555465258025	Thymus pulegioides	organism
+e1367	0.0016253555465258025	Bradykinin	chemical
+e1791	0.0016253555465258025	Anacardiaceae	organism
+e306	0.0016253555465258025	3,3',4,5'-tetrahydroxystilbene	chemical
+e1344	0.0016253555465258025	Autacoids	chemical
+e2081	0.0016253555465258025	Phaseolus	organism
+e2267	0.0016253555465258025	Asteroideae	organism
+e1325	0.0016253555465258025	Amino Alcohols	chemical
+e65	0.0016253555465258025	ajoene	chemical
+e358	0.0016253555465258025	syringic acid	chemical
+e131	0.0016253555465258025	cinnamaldehyde	chemical
+e2409	0.0016253555465258025	Cichorieae	organism
+e2406	0.0016253555465258025	Cardueae	organism
+e807	0.0016253555465258025	Allium fistulosum	organism
+e27	0.0016253555465258025	Geraniin	chemical
+e1515	0.0016253555465258025	Macrocyclic Compounds	chemical
+e1321	0.0016253555465258025	Amino Acids, Cyclic	chemical
+e2325	0.0016253555465258025	Cactineae	organism
+e1777	0.0016253555465258025	Magnoliopsida	organism
+e1559	0.0016253555465258025	Oxides	chemical
+e1462	0.0016253555465258025	Guaiacol	chemical
+e363	0.0016253555465258025	Tetralones	chemical
+e1719	0.0016253555465258025	Magnoliidae	organism
+e1001	0.0016253555465258025	Aluminum	chemical
+e90	0.0016253555465258025	asarone	chemical
+e710	0.0016253555465258025	Tamarindus indica - seed	organism_with_part
+e105	0.0016253555465258025	Boron	chemical
+e1892	0.0016253555465258025	Sapindaceae	organism
+e352	0.0016253555465258025	Stigmasterol	chemical
+e1693	0.0016253555465258025	Carangaria	organism
+e986	0.0016253555465258025	Resveratrol	chemical
+e1528	0.0016253555465258025	Metals, Alkali	chemical
+e378	0.0016253555465258025	Ergocalciferols	chemical
+e1072	0.0016253555465258025	Linoleic Acid	chemical
+e58	0.0016253555465258025	Strontium	chemical
+e271	0.0016253555465258025	myristicin	chemical
+e1357	0.0016253555465258025	Biflavonoids	chemical
+e1522	0.0016253555465258025	Membrane Lipids	chemical
+e1735	0.0016253555465258025	Percomorphaceae	organism
+e316	0.0016253555465258025	Progesterone	chemical
+e2131	0.0016253555465258025	Thunnus	organism
+e2312	0.0016253555465258025	Scombrinae	organism
+e1770	0.0016253555465258025	rosids	organism
+e930	0.0016253555465258025	Verbena officinalis	organism
+e1516	0.0016253555465258025	Macrolides	chemical
+e50	0.0016253555465258025	picrocrocin	chemical
+e2110	0.0016253555465258025	Salvia	organism
+e943	0.0016253555465258025	Nephelium lappaceum - fruit	organism_with_part
+e1796	0.0016253555465258025	Arecaceae	organism
+e1335	0.0016253555465258025	Aniline Compounds	chemical
+e302	0.0016253555465258025	Phospholipids	chemical
+e1705	0.0016253555465258025	Eupercaria	organism
+e1083	0.0016253555465258025	beta-Glucans	chemical
+e1760	0.0016253555465258025	commelinids	organism
+e745	0.0016253555465258025	Benincasa hispida	organism
+e1196	0.0016253555465258025	nonylphenol	chemical
+e711	0.0016253555465258025	Colocasia esculenta - leaf	organism_with_part
+e1290	0.0016253555465258025	Cichorium endivia	organism
+e289	0.0016253555465258025	orientin	chemical
+e1314	0.0016253555465258025	Alkenes	chemical
+e777	0.0016253555465258025	Brosimum alicastrum	organism
+e1551	0.0016253555465258025	Nucleotides	chemical
+e0	0.0016253555465258025	Phloretin	chemical
+e370	0.0016253555465258025	anethole	chemical
+e1758	0.0016253555465258025	asterids	organism
+e94	0.0016253555465258025	Benzaldehydes	chemical
+e944	0.0016253555465258025	Vaccinium myrtillus - juice	organism_with_part
+e369	0.0016253555465258025	Thyroxine	chemical
+e2175	0.0016253555465258025	Agaricales	organism
+e1106	0.0016253555465258025	Aspartic Acid	chemical
+e266	0.0016253555465258025	tocopherol monoglucoside	chemical
+e1538	0.0016253555465258025	Morphine Derivatives	chemical
+e1716	0.0016253555465258025	IRL clade	organism
+e1486	0.0016253555465258025	Hydroxybenzoate Ethers	chemical
+e457	0.0016253555465258025	Ovis aries	organism
+e848	0.0016253555465258025	Vicia faba	organism
+e326	0.0016253555465258025	quercitrin	chemical
+e1798	0.0016253555465258025	Asteraceae	organism
+e134	0.0016253555465258025	isomurisolenin	chemical
+e1034	0.0016253555465258025	Mannitol	chemical
+e950	0.0016253555465258025	Camellia oleifera - seed	organism_with_part
+e48	0.0016253555465258025	Lead	chemical
+e976	0.0016253555465258025	isoquercitrin	chemical
+e1379	0.0016253555465258025	Chalcone	chemical
+e988	0.0016253555465258025	malvidin	chemical
+e2391	0.0016253555465258025	Andropogoneae	organism
+e1298	0.0016253555465258025	Acetates	chemical
+e1371	0.0016253555465258025	Butyrates	chemical
+e467	0.0016253555465258025	Artemisia dracunculus	organism
+e1759	0.0016253555465258025	campanulids	organism
+e175	0.0016253555465258025	eriocitrin	chemical
+e1354	0.0016253555465258025	Benzylisoquinolines	chemical
+e499	0.0016253555465258025	Empetrum nigrum - fruit	organism_with_part
+e1323	0.0016253555465258025	Amino Acids, Neutral	chemical
+e868	0.0016253555465258025	Sambucus nigra	organism
+e1230	0.0016253555465258025	Putrescine	chemical
+e2136	0.0016253555465258025	Triticum	organism
+e673	0.0016253555465258025	Punica granatum - fruit	organism_with_part
+e2387	0.0016253555465258025	Laurasiatheria	organism
+e136	0.0016253555465258025	1,4-polyisoprene	chemical
+e818	0.0016253555465258025	Cucumis melo	organism
+e1569	0.0016253555465258025	Peroxides	chemical
+e705	0.0016253555465258025	Prunus avium - leaf	organism_with_part
+e88	0.0016253555465258025	Arsenic	chemical
+e763	0.0016253555465258025	Malpighia emarginata	organism
+e1627	0.0016253555465258025	Salicylates	chemical
+e2146	0.0016253555465258025	Vitis	organism
+e2214	0.0016253555465258025	Myrtales	organism
+e723	0.0016253555465258025	Cucurbita maxima - seed	organism_with_part
+e200	0.0016253555465258025	ginkgolide A	chemical
+e513	0.0016253555465258025	Ceratonia siliqua - seed	organism_with_part
+e2168	0.0016253555465258025	Pimenta group	organism
+e1831	0.0016253555465258025	Fabaceae	organism
+e2200	0.0016253555465258025	Fagales	organism
+e660	0.0016253555465258025	Passiflora edulis - stem	organism_with_part
+e1223	0.0016253555465258025	Malates	chemical
+e2255	0.0016253555465258025	Petrosaviidae	organism
+e1431	0.0016253555465258025	Ethers	chemical
+e1564	0.0016253555465258025	Pectins	chemical
+e1947	0.0016253555465258025	Capsicum	organism
+e658	0.0016253555465258025	Passiflora edulis - leaf	organism_with_part
+e128	0.0016253555465258025	chicoric acid	chemical
+e1596	0.0016253555465258025	Polycyclic Sesquiterpenes	chemical
+e288	0.0016253555465258025	Sulfuric Acid Esters	chemical
+e1374	0.0016253555465258025	Catecholamines	chemical
+e1397	0.0016253555465258025	Cyclohexanes	chemical
+e979	0.0016253555465258025	delphinidin	chemical
+e932	0.0016253555465258025	Xiphias gladius	organism
+e982	0.0016253555465258025	diallyl disulfide	chemical
+e1471	0.0016253555465258025	Heterocyclic Compounds, Fused-Ring	chemical
+e606	0.0016253555465258025	Diospyros kaki - leaf	organism_with_part
+e84	0.0016253555465258025	Anthraquinones	chemical
+e2106	0.0016253555465258025	Rubus	organism
+e211	0.0016253555465258025	Halogens	chemical
+e1308	0.0016253555465258025	Acyclic Monoterpenes	chemical
+e977	0.0016253555465258025	sulforaphane	chemical
+e1220	0.0016253555465258025	leucylleucine	chemical
+e918	0.0016253555465258025	Crassostrea virginica	organism
+e1384	0.0016253555465258025	Cholestanes	chemical
+e475	0.0016253555465258025	Psophocarpus tetragonolobus	organism
+e76	0.0016253555465258025	mangostin	chemical
+e713	0.0016253555465258025	Camellia sinensis - leaf	organism_with_part
+e874	0.0016253555465258025	Phoenix dactylifera	organism
+e948	0.0016253555465258025	Fragaria x ananassa - fruit	organism_with_part
+e374	0.0016253555465258025	Umbelliferones	chemical
+e1444	0.0016253555465258025	Free Radicals	chemical
+e1088	0.0016253555465258025	Anacardic Acids	chemical
+e1398	0.0016253555465258025	Cyclohexanols	chemical
+e3	0.0016253555465258025	beta-ocimene	chemical
+e274	0.0016253555465258025	naringin	chemical
+e1833	0.0016253555465258025	Gadidae	organism
+e1401	0.0016253555465258025	Cyclopentane Monoterpenes	chemical
+e2333	0.0016253555465258025	Pleocyemata	organism
+e1430	0.0016253555465258025	Ethanolamines	chemical
+e655	0.0016253555465258025	Carica papaya - fruit	organism_with_part
+e215	0.0016253555465258025	Hesperidin	chemical
+e971	0.0016253555465258025	sinigrin	chemical
+e362	0.0016253555465258025	Testosterone	chemical
+e2228	0.0016253555465258025	Rosales	organism
+e760	0.0016253555465258025	Prunus cerasus	organism
+e2326	0.0016253555465258025	Caniformia	organism
+e279	0.0016253555465258025	Nicotine	chemical
+e111	0.0016253555465258025	caffeic acid	chemical
+e993	0.0016253555465258025	kaempferol-3-O-rutinoside	chemical
+e934	0.0016253555465258025	Morus nigra	organism
+e929	0.0016253555465258025	Cyprinus carpio	organism
+e290	0.0016253555465258025	Oxalic Acid	chemical
+e93	0.0016253555465258025	benzaldehyde	chemical
+e186	0.0016253555465258025	3-hydroxyflavone	chemical
+e497	0.0016253555465258025	Aronia melanocarpa - berry	organism_with_part
+e2123	0.0016253555465258025	Solanum	organism
+e132	0.0016253555465258025	cinnamic acid	chemical
+e56	0.0016253555465258025	shogaol	chemical
+e1782	0.0016253555465258025	Euteleosteomorpha	organism
+e346	0.0016253555465258025	Spermine	chemical
+e435	0.0016253555465258025	Pastinaca sativa	organism
+e1254	0.0016253555465258025	Brassica juncea - seed	organism_with_part
+e748	0.0016253555465258025	Pachyrhizus erosus	organism
+e545	0.0016253555465258025	Pisum sativum - leaf	organism_with_part
+e765	0.0016253555465258025	Beta vulgaris	organism
+e1598	0.0016253555465258025	Polyketides	chemical
+e1339	0.0016253555465258025	Antimicrobial Cationic Peptides	chemical
+e381	0.0016253555465258025	Water	chemical
+e1358	0.0016253555465258025	Biogenic Amines	chemical
+e1396	0.001219016659894352	Cyclohexanecarboxylic Acids	chemical
+e406	0.001219016659894352	Cocos nucifera	organism
+e2346	0.001219016659894352	Artemisiinae	organism
+e221	0.001219016659894352	3,4-dihydroxyphenylethanol	chemical
+e689	0.001219016659894352	Hippophae rhamnoides - fruit	organism_with_part
+e1893	0.001219016659894352	Sapotaceae	organism
+e2007	0.001219016659894352	Helianthus	organism
+e2457	0.001219016659894352	Trifolieae	organism
+e1642	0.001219016659894352	Sulfhydryl Compounds	chemical
+e780	0.001219016659894352	Castanea sativa	organism
+e433	0.001219016659894352	Brassica rapa subsp. chinensis	organism
+e1377	0.001219016659894352	Ceramides	chemical
+e1410	0.001219016659894352	Dietary Carbohydrates	chemical
+e1509	0.001219016659894352	Kinins	chemical
+e607	0.001219016659894352	Diospyros kaki - root	organism_with_part
+e1460	0.001219016659894352	Gonadal Hormones	chemical
+e112	0.001219016659894352	Caffeine	chemical
+e2196	0.001219016659894352	Dipsacales	organism
+e572	0.001219016659894352	Prunus domestica - seed	organism_with_part
+e220	0.001219016659894352	hydroxysafflor yellow A	chemical
+e230	0.001219016659894352	isoprene	chemical
+e638	0.001219016659894352	Dioscorea pentaphylla - tuber	organism_with_part
+e305	0.001219016659894352	Phytol	chemical
+e389	0.001219016659894352	Homarus americanus	organism
+e453	0.001219016659894352	Amelanchier alnifolia	organism
+e1971	0.001219016659894352	Cucumis	organism
+e2334	0.001219016659894352	Pleuronectoidei	organism
+e598	0.001219016659894352	Citrus x paradisi - fruit	organism_with_part
+e1405	0.001219016659894352	Deoxy Sugars	chemical
+e7	0.001219016659894352	2-dodecyl-6-methoxycyclohexa-2,5-diene-1,4-dione	chemical
+e1362	0.001219016659894352	Biological Products	chemical
+e236	0.001219016659894352	camelliaside B	chemical
+e2305	0.001219016659894352	Phasianinae	organism
+e1960	0.001219016659894352	Cinnamomum	organism
+e2113	0.001219016659894352	Satureja	organism
+e1365	0.001219016659894352	Biphenyl Compounds	chemical
+e324	0.001219016659894352	quercetin 3-O-glucuronide	chemical
+e1727	0.001219016659894352	Otophysi	organism
+e2259	0.001219016659894352	Ostariophysi	organism
+e1677	0.001219016659894352	Xanthines	chemical
+e557	0.001219016659894352	Annona reticulata - bark	organism_with_part
+e1227	0.001219016659894352	petaslignolide A	chemical
+e170	0.001219016659894352	ellagitannin	chemical
+e1506	0.001219016659894352	Isoleucine	chemical
+e2163	0.001219016659894352	Clupeocephala	organism
+e1660	0.001219016659894352	Thiones	chemical
+e1291	0.001219016659894352	Citrus maxima	organism
+e1341	0.001219016659894352	Arsenates	chemical
+e1213	0.001219016659894352	foetidin	chemical
+e1236	0.001219016659894352	Vitamin B 6	chemical
+e737	0.001219016659894352	Morus	organism
+e1233	0.001219016659894352	G6 stilbenoid tyrosine kinase inhibitor	chemical
+e1188	0.001219016659894352	3,7,4'-trihydroxyflavone	chemical
+e1402	0.001219016659894352	Cyclopentanes	chemical
+e1201	0.001219016659894352	Benzoxazines	chemical
+e1725	0.001219016659894352	Opisthokonta	organism
+e1237	0.001219016659894352	xylomannan	chemical
+e1514	0.001219016659894352	Linolenic Acids	chemical
+e1510	0.001219016659894352	Kynurenic Acid	chemical
+e1593	0.001219016659894352	Polybrominated Biphenyls	chemical
+e1848	0.001219016659894352	Malpighiaceae	organism
+e1234	0.001219016659894352	Sulfates	chemical
+e2294	0.001219016659894352	Malvoideae	organism
+e1246	0.001219016659894352	Capsicum annuum var. annuum	organism
+e1199	0.001219016659894352	Aflatoxins	chemical
+e2166	0.001219016659894352	Heterotremata	organism
+e1222	0.001219016659894352	Lycopene	chemical
+e1860	0.001219016659894352	Nephropidae	organism
+e1212	0.001219016659894352	4,5-amino-3,5-dichloro-6-fluoro-2-pyridinyloxyacetic acid	chemical
+e1108	0.001219016659894352	cyfluthrin	chemical
+e1746	0.001219016659894352	Spermatophyta	organism
+e1277	0.001219016659894352	Phoca largha - tissue	organism_with_part
+e1451	0.001219016659894352	Glucuronates	chemical
+e45	0.001219016659894352	feruloyltyramine	chemical
+e1232	0.001219016659894352	Sphingolipids	chemical
+e1386	0.001219016659894352	Cholesterol	chemical
+e1421	0.001219016659894352	Diynes	chemical
+e1346	0.001219016659894352	Azulenes	chemical
+e1772	0.001219016659894352	Agaricomycetes	organism
+e2160	0.001219016659894352	Agaricomycetes incertae sedis	organism
+e1661	0.001219016659894352	Thiophenes	chemical
+e1518	0.001219016659894352	Maleic Anhydrides	chemical
+e1643	0.001219016659894352	Sulfinic Acids	chemical
+e1575	0.001219016659894352	Phenylethyl Alcohol	chemical
+e1351	0.001219016659894352	Benzothiazoles	chemical
+e1463	0.001219016659894352	Hemiterpenes	chemical
+e1657	0.001219016659894352	Thiocyanates	chemical
+e1383	0.001219016659894352	Cholestadienols	chemical
+e1331	0.001219016659894352	Androstenes	chemical
+e1565	0.001219016659894352	Pentacyclic Triterpenes	chemical
+e1441	0.001219016659894352	Flavonolignans	chemical
+e1190	0.001219016659894352	palmitone	chemical
+e1536	0.001219016659894352	Monocyclic Sesquiterpenes	chemical
+e2394	0.001219016659894352	Anthemideae	organism
+e1381	0.001219016659894352	Cholecystokinin	chemical
+e1224	0.001219016659894352	neoglucobrassicin	chemical
+e1561	0.001219016659894352	Oxocins	chemical
+e1417	0.001219016659894352	Dioxoles	chemical
+e1228	0.001219016659894352	phytoprostane D1	chemical
+e1427	0.001219016659894352	Epoxy Compounds	chemical
+e1672	0.001219016659894352	Tyramine	chemical
+e1204	0.001219016659894352	betulinic acid	chemical
+e1134	0.001219016659894352	safranal	chemical
+e1117	0.001219016659894352	Esculin	chemical
+e1739	0.001219016659894352	Pteriomorphia	organism
+e1128	0.001219016659894352	pectenotoxin-2-seco acid	chemical
+e1839	0.001219016659894352	Juglandaceae	organism
+e1322	0.001219016659894352	Amino Acids, Dicarboxylic	chemical
+e1125	0.001219016659894352	5'-O-caffeoylquinic acid	chemical
+e1098	0.001219016659894352	docosahexaenoylascorbic acid	chemical
+e1110	0.001219016659894352	Cobalt	chemical
+e1328	0.001219016659894352	Aminobutyrates	chemical
+e1895	0.001219016659894352	Sciaenidae	organism
+e1143	0.001219016659894352	Valerianella locusta	organism
+e392	0.001219016659894352	Clupea harengus	organism
+e1532	0.001219016659894352	Methyl Ethers	chemical
+e1972	0.001219016659894352	Cucurbita	organism
+e1566	0.001219016659894352	Pentoses	chemical
+e1927	0.001219016659894352	Auricularia	organism
+e154	0.001219016659894352	allyl sulfide	chemical
+e1434	0.001219016659894352	Excitatory Amino Acids	chemical
+e181	0.001219016659894352	falcarindiol	chemical
+e2209	0.001219016659894352	Laminariales	organism
+e1952	0.001219016659894352	Castanea	organism
+e1319	0.001219016659894352	Amino Acids, Acidic	chemical
+e463	0.001219016659894352	Psidium cattleyanum	organism
+e234	0.001219016659894352	juglone	chemical
+e1614	0.001219016659894352	Pyrans	chemical
+e1369	0.001219016659894352	Bridged-Ring Compounds	chemical
+e89	0.001219016659894352	arsenosugar	chemical
+e1783	0.001219016659894352	Otomorpha	organism
+e2165	0.001219016659894352	Eupercaria incertae sedis	organism
+e459	0.001219016659894352	Triticum spelta	organism
+e1324	0.001219016659894352	Amino Acids, Peptides, and Proteins	chemical
+e1107	0.001219016659894352	Cryptoxanthins	chemical
+e2130	0.001219016659894352	Theobroma	organism
+e1925	0.001219016659894352	Artocarpus	organism
+e2302	0.001219016659894352	Panicoideae	organism
+e2331	0.001219016659894352	Marasmiineae	organism
+e1368	0.001219016659894352	Bridged Bicyclo Compounds	chemical
+e1092	0.001219016659894352	quercetin-3-O-alpha-L-rhamnopyranoside	chemical
+e1105	0.001219016659894352	ascaridole	chemical
+e1334	0.001219016659894352	Anilides	chemical
+e1136	0.001219016659894352	trachelogenin	chemical
+e1093	0.001219016659894352	4-hydroxybenzylglucosinolate	chemical
+e1186	0.001219016659894352	Sinapis alba - seed	organism_with_part
+e1437	0.001219016659894352	Fatty Acids, Volatile	chemical
+e1176	0.001219016659894352	Brassica napus - seed	organism_with_part
+e1096	0.001219016659894352	Norisoprenoids	chemical
+e1160	0.001219016659894352	Ficus carica - fruit	organism_with_part
+e1095	0.001219016659894352	Noscapine	chemical
+e1139	0.001219016659894352	violaxanthin	chemical
+e1103	0.001219016659894352	MK 316	chemical
+e1882	0.001219016659894352	Poaceae	organism
+e1304	0.001219016659894352	Acids, Heterocyclic	chemical
+e1154	0.001219016659894352	Arctium lappa - fruit	organism_with_part
+e1309	0.001219016659894352	Adenine Nucleotides	chemical
+e1612	0.001219016659894352	Purine Nucleotides	chemical
+e1429	0.001219016659894352	Ethanol	chemical
+e1113	0.001219016659894352	dimethoxycurcumin	chemical
+e1965	0.001219016659894352	Coffea	organism
+e1104	0.001219016659894352	annonacin	chemical
+e1185	0.001219016659894352	Annona muricata - fruit	organism_with_part
+e173	0.001219016659894352	epsilon-viniferin	chemical
+e2355	0.001219016659894352	Daucinae	organism
+e2232	0.001219016659894352	Scombriformes	organism
+e44	0.001219016659894352	N-caffeoyltyramine	chemical
+e412	0.001219016659894352	Trachinotus carolinus	organism
+e1606	0.001219016659894352	Propanolamines	chemical
+e2179	0.001219016659894352	Artiodactyla	organism
+e1969	0.001219016659894352	Crassostrea	organism
+e2306	0.001219016659894352	Polygonoideae	organism
+e108	0.001219016659894352	brevetoxin	chemical
+e897	0.001219016659894352	Satureja hortensis	organism
+e1580	0.001219016659894352	Phosphorus Acids	chemical
+e317	0.001219016659894352	Phenylpropanolamine	chemical
+e698	0.001219016659894352	Averrhoa carambola - fruit	organism_with_part
+e2433	0.001219016659894352	Myrteae	organism
+e2155	0.001219016659894352	Cetacea	organism
+e368	0.001219016659894352	thymoquinone	chemical
+e15	0.001219016659894352	anacardic acid	chemical
+e949	0.001219016659894352	Glycine max - seed	organism_with_part
+e104	0.001219016659894352	bisdemethoxycurcumin	chemical
+e123	0.001219016659894352	carnosol	chemical
+e2016	0.001219016659894352	Ipomoea	organism
+e2330	0.001219016659894352	Gadoidei	organism
+e2272	0.001219016659894352	Bovinae	organism
+e1568	0.001219016659894352	Peptide Hormones	chemical
+e197	0.001219016659894352	gamma-oryzanol	chemical
+e2314	0.001219016659894352	Solanoideae	organism
+e85	0.001219016659894352	Aporphines	chemical
+e957	0.001219016659894352	Vaccinium oxycoccos - berry	organism_with_part
+e107	0.001219016659894352	brassicasterol	chemical
+e325	0.001219016659894352	quercetin-3-O-rutinoside	chemical
+e401	0.001219016659894352	Bos taurus	organism
+e601	0.001219016659894352	Vaccinium corymbosum - fruit	organism_with_part
+e87	0.001219016659894352	Arginine Vasopressin	chemical
+e970	0.001219016659894352	1,8-cineole	chemical
+e965	0.001219016659894352	chrysoeriol	chemical
+e1626	0.001219016659894352	Rubber	chemical
+e2220	0.001219016659894352	Perciformes	organism
+e695	0.001219016659894352	Glycine max - nodule	organism_with_part
+e709	0.001219016659894352	Tamarindus indica - fruit	organism_with_part
+e38	0.001219016659894352	Proline	chemical
+e959	0.001219016659894352	Morus nigra - fruit	organism_with_part
+e1665	0.001219016659894352	Toxins, Biological	chemical
+e990	0.001219016659894352	phthalide	chemical
+e255	0.001219016659894352	Mannose	chemical
+e2234	0.001219016659894352	Solanales	organism
+e1601	0.001219016659894352	Porphyrins	chemical
+e791	0.001219016659894352	Mentha arvensis	organism
+e441	0.001219016659894352	Origanum onites	organism
+e1535	0.001219016659894352	Minerals	chemical
+e109	0.001219016659894352	bullatacin	chemical
+e1924	0.001219016659894352	Artemisia	organism
+e1572	0.001219016659894352	Phenanthrenes	chemical
+e1737	0.001219016659894352	Protacanthopterygii	organism
+e1554	0.001219016659894352	Opiate Alkaloids	chemical
+e402	0.001219016659894352	Salvia hispanica	organism
+e1542	0.001219016659894352	Neuraminic Acids	chemical
+e101	0.001219016659894352	beta-pinene	chemical
+e1702	0.001219016659894352	Euacanthomorphacea	organism
+e2261	0.001219016659894352	Amygdaloideae	organism
+e30	0.001219016659894352	grandisin	chemical
+e696	0.001219016659894352	Glycine max - root	organism_with_part
+e1888	0.001219016659894352	Rosaceae	organism
+e552	0.001219016659894352	Vigna unguiculata - root	organism_with_part
+e810	0.001219016659894352	Lablab purpureus	organism
+e155	0.001219016659894352	diallyl tetrasulfide	chemical
+e707	0.001219016659894352	Ipomoea batatas - root	organism_with_part
+e2297	0.001219016659894352	Nepetoideae	organism
+e192	0.001219016659894352	fumaric acid	chemical
+e472	0.001219016659894352	Eutrema japonicum	organism
+e343	0.001219016659894352	sitoindoside II	chemical
+e469	0.001219016659894352	Undaria pinnatifida	organism
+e529	0.001219016659894352	Morella rubra - fruit	organism_with_part
+e285	0.001219016659894352	1-octacosanol	chemical
+e19	0.001219016659894352	corosolic acid	chemical
+e415	0.001219016659894352	Ribes uva-crispa	organism
+e130	0.001219016659894352	cichoriin	chemical
+e1663	0.001219016659894352	Thyronines	chemical
+e232	0.001219016659894352	isothiocyanic acid	chemical
+e310	0.001219016659894352	plantamajoside	chemical
+e703	0.001219016659894352	Helianthus annuus - seed	organism_with_part
+e106	0.001219016659894352	Amino Acids, Branched-Chain	chemical
+e229	0.001219016659894352	isopimpinellin	chemical
+e393	0.001219016659894352	Scomber scombrus	organism
+e2458	0.001219016659894352	Triticeae	organism
+e2171	0.001219016659894352	Salvia incertae sedis	organism
+e1722	0.001219016659894352	NPAAA clade	organism
+e364	0.001219016659894352	theaflavin	chemical
+e191	0.001219016659894352	fucoxanthin	chemical
+e1717	0.001219016659894352	Liliopsida	organism
+e39	0.001219016659894352	lappaol F	chemical
+e269	0.001219016659894352	Morphine	chemical
+e126	0.001219016659894352	catechol	chemical
+e1327	0.001219016659894352	Aminobenzoates	chemical
+e4	0.001219016659894352	1,7-bis(4-hydroxyphenyl)-1,6-heptadiene-3,5-dione	chemical
+e146	0.001219016659894352	cycloartane	chemical
+e135	0.001219016659894352	cis-parinaric acid methyl ester	chemical
+e559	0.001219016659894352	Taraxacum officinale - root	organism_with_part
+e895	0.001219016659894352	Annona cherimola	organism
+e706	0.001219016659894352	Citrus sinensis - juice	organism_with_part
+e822	0.001219016659894352	Cydonia oblonga	organism
+e2307	0.001219016659894352	Pooideae	organism
+e1662	0.001219016659894352	Thyroid Hormones	chemical
+e643	0.001219016659894352	Vitis rotundifolia - seed	organism_with_part
+e287	0.001219016659894352	Fatty Acids, Omega-6	chemical
+e946	0.001219016659894352	Rubus idaeus - fruit	organism_with_part
+e1684	0.001219016659894352	Amniota	organism
+e122	0.001219016659894352	Carnosine	chemical
+e1856	0.001219016659894352	Myristicaceae	organism
+e2132	0.001219016659894352	Thymus	organism
+e1378	0.001219016659894352	Chalcogens	chemical
+e1670	0.001219016659894352	Tryptamines	chemical
+e1461	0.001219016659894352	Gonadal Steroid Hormones	chemical
+e320	0.001219016659894352	pterostilbene	chemical
+e594	0.001219016659894352	Zingiber officinale - root	organism_with_part
+e276	0.001219016659894352	neomangiferin	chemical
+e1641	0.001219016659894352	Sulfanilamides	chemical
+e388	0.001219016659894352	Thunnus alalunga	organism
+e121	0.001219016659894352	salvin	chemical
+e677	0.001219016659894352	Garcinia mangostana - fruit	organism_with_part
+e1644	0.001219016659894352	Sulfonamides	chemical
+e396	0.001219016659894352	Balaena mysticetus	organism
+e755	0.001219016659894352	Borago officinalis	organism
+e1649	0.001219016659894352	Sulfuric Acids	chemical
+e298	0.001219016659894352	petunidin	chemical
+e597	0.001219016659894352	Vigna mungo - seed	organism_with_part
+e1803	0.001219016659894352	Bovidae	organism
+e384	0.001219016659894352	Methoxsalen	chemical
+e968	0.001219016659894352	myricitrin	chemical
+e103	0.001219016659894352	Bilobalides	chemical
+e1313	0.001219016659894352	Alkanesulfonic Acids	chemical
+e422	0.001219016659894352	Scomberomorus cavalla	organism
+e295	0.001219016659894352	peonidin	chemical
+e1659	0.001219016659894352	Thioglycosides	chemical
+e593	0.001219016659894352	Zingiber officinale - rhizome	organism_with_part
+e293	0.001219016659894352	4-cymene	chemical
+e148	0.001219016659894352	Peptides, Cyclic	chemical
+e277	0.001219016659894352	Niacin	chemical
+e398	0.001219016659894352	Lagenaria siceraria	organism
+e2309	0.001219016659894352	Rosoideae	organism
+e2263	0.001219016659894352	Apioideae	organism
+e224	0.001219016659894352	indole-3-acetonitrile	chemical
+e2328	0.001219016659894352	Clupeoidei	organism
+e35	0.001219016659894352	argyrophilic acid	chemical
+e1828	0.001219016659894352	Ericaceae	organism
+e12	0.001219016659894352	5-Hydroxytryptophan	chemical
+e193	0.001219016659894352	furaneol	chemical
+e43	0.001219016659894352	myricanol	chemical
+e319	0.001219016659894352	psoralen A	chemical
+e1708	0.001219016659894352	Euteleostomi	organism
+e954	0.001219016659894352	Nelumbo nucifera - leaf	organism_with_part
+e1449	0.001219016659894352	Gases	chemical
+e743	0.001219016659894352	Manilkara zapota	organism
+e1658	0.001219016659894352	Thioglucosides	chemical
+e133	0.001219016659894352	bullatacinone	chemical
+e2098	0.001219016659894352	Psidium	organism
+e1674	0.001219016659894352	Uronic Acids	chemical
+e1452	0.001219016659894352	Glutamates	chemical
+e311	0.001219016659894352	Polyacetylene Polymer	chemical
+e167	0.001219016659894352	Dopamine	chemical
+e322	0.001219016659894352	punicic acid	chemical
+e1706	0.001219016659894352	Euphyllophyta	organism
+e589	0.001219016659894352	Allium sativum - bulb	organism_with_part
+e202	0.001219016659894352	ginkgolide C	chemical
+e304	0.001219016659894352	Vitamin K 1	chemical
+e2323	0.001219016659894352	Apiineae	organism
+e1459	0.001219016659894352	Glycosphingolipids	chemical
+e512	0.001219016659894352	Ceratonia siliqua - pod	organism_with_part
+e1812	0.001219016659894352	Carangidae	organism
+e1504	0.001219016659894352	Iron Compounds	chemical
+e182	0.001219016659894352	falcarinol	chemical
+e256	0.001219016659894352	matairesinol	chemical
+e1673	0.001219016659894352	Tyrosine	chemical
+e1443	0.001219016659894352	Food	chemical
+e1682	0.001219016659894352	Acanthomorphata	organism
+e522	0.001219016659894352	Sicyos edulis - stem	organism_with_part
+e328	0.001219016659894352	raphanusanin	chemical
+e253	0.001219016659894352	malvidin-3-glucoside	chemical
+e333	0.001219016659894352	Rotenone	chemical
+e661	0.001219016659894352	Prunus persica - flower	organism_with_part
+e340	0.001219016659894352	sesamin	chemical
+e972	0.001219016659894352	xylosides	chemical
+e955	0.001219016659894352	Zea mays - leaf	organism_with_part
+e1956	0.001219016659894352	Chenopodium	organism
+e1997	0.001219016659894352	Fagopyrum	organism
+e1418	0.001219016659894352	Disaccharides	chemical
+e2105	0.001219016659894352	Ribes	organism
+e26	0.001219016659894352	gamma-Aminobutyric Acid	chemical
+e115	0.001219016659894352	campesterol	chemical
+e766	0.001219016659894352	Dioscorea pentaphylla	organism
+e945	0.001219016659894352	Vaccinium uliginosum - juice	organism_with_part
+e5	0.001219016659894352	Eucalyptol	chemical
+e1432	0.001219016659894352	Ethers, Cyclic	chemical
+e1691	0.001219016659894352	Bilateria	organism
+e403	0.001219016659894352	Eleocharis dulcis	organism
+e156	0.001219016659894352	diallyl trisulfide	chemical
+e212	0.001219016659894352	Heme	chemical
+e2237	0.001219016659894352	Zingiberales	organism
+e516	0.001219016659894352	Apium graveolens Dulce Group - petiole	organism_with_part
+e2366	0.001219016659894352	Salviinae	organism
+e1436	0.001219016659894352	Fatty Acids, Essential	chemical
+e28	0.001219016659894352	Glutamic Acid	chemical
+e77	0.001219016659894352	alpha-pinene	chemical
+e373	0.001219016659894352	4-hydroxyphenylethanol	chemical
+e339	0.001219016659894352	cholecystokinin C-terminal flanking peptide	chemical
+e769	0.001219016659894352	Vaccinium vitis-idaea	organism
+e1062	0.001219016659894352	Thebaine	chemical
+e2298	0.001219016659894352	Onagroideae	organism
+e337	0.001219016659894352	Scopoletin	chemical
+e23	0.001219016659894352	epigallocatechin gallate	chemical
+e637	0.001219016659894352	Mangifera indica - stem	organism_with_part
+e376	0.001219016659894352	vernolic acid	chemical
+e2211	0.001219016659894352	Magnoliales	organism
+e1613	0.001219016659894352	Purinones	chemical
+e142	0.001219016659894352	cuminaldehyde	chemical
+e526	0.001219016659894352	Morella rubra - bark	organism_with_part
+e201	0.001219016659894352	ginkgolide B	chemical
+e1603	0.001219016659894352	Pregnenediones	chemical
+e662	0.001219016659894352	Prunus persica - juice	organism_with_part
+e1500	0.001219016659894352	Inositol Phosphates	chemical
+e303	0.001219016659894352	Phosphorous Acids	chemical
+e1959	0.001219016659894352	Cichorium	organism
+e31	0.001219016659894352	Hydrogen	chemical
+e1715	0.001219016659894352	Hologalegina	organism
+e1484	0.001219016659894352	Hydroxides	chemical
+e542	0.001219016659894352	Fagopyrum esculentum - seedling	organism_with_part
+e1488	0.001219016659894352	Hydroxycorticosteroids	chemical
+e1944	0.001219016659894352	Camellia	organism
+e204	0.001219016659894352	Ginsenosides	chemical
+e1608	0.001219016659894352	Propiophenones	chemical
+e669	0.001219016659894352	Cajanus cajan - leaf	organism_with_part
+e675	0.001219016659894352	Solanum tuberosum - leaf	organism_with_part
+e733	0.001219016659894352	Petasites japonicus	organism
+e278	0.001219016659894352	Niacinamide	chemical
+e551	0.001219016659894352	Vigna unguiculata - nodule	organism_with_part
+e2311	0.001219016659894352	Sapotoideae	organism
+e2295	0.001219016659894352	Myrtoideae	organism
+e380	0.001219016659894352	vitexin	chemical
+e1468	0.001219016659894352	Heterocyclic Compounds, 3-Ring	chemical
+e2226	0.001219016659894352	Proteales	organism
+e1076	0.001219016659894352	Tocotrienols	chemical
+e623	0.001219016659894352	Macadamia tetraphylla - leaf	organism_with_part
+e922	0.001219016659894352	Callinectes sapidus	organism
+e508	0.001219016659894352	Arctium lappa - root	organism_with_part
+e172	0.001219016659894352	gallocatechol	chemical
+e2455	0.001219016659894352	Thunnini	organism
+e936	0.001219016659894352	Saccharina japonica	organism
+e1816	0.001219016659894352	Chenopodiaceae	organism
+e925	0.001219016659894352	Rubus occidentalis	organism
+e608	0.001219016659894352	Diospyros kaki - stem	organism_with_part
+e1482	0.001219016659894352	Hydrocarbons, Halogenated	chemical
+e241	0.001219016659894352	lariciresinol	chemical
+e29	0.001219016659894352	decaglycine	chemical
+e1738	0.001219016659894352	Protostomia	organism
+e147	0.001219016659894352	Cyclodecanes	chemical
+e2459	0.0008126777732629012	Vaccinieae	organism
+e1834	0.0008126777732629012	Gigartinaceae	organism
+e2079	0.0008126777732629012	Petasites	organism
+e2014	0.0008126777732629012	Ictalurus	organism
+e1948	0.0008126777732629012	Carica	organism
+e1700	0.0008126777732629012	Ecdysozoa	organism
+e1874	0.0008126777732629012	Percidae	organism
+e2090	0.0008126777732629012	Pistacia	organism
+e2423	0.0008126777732629012	Fagopyreae	organism
+e2280	0.0008126777732629012	Cichorioideae	organism
+e1950	0.0008126777732629012	Carum	organism
+e2369	0.0008126777732629012	Tripsacinae	organism
+e1884	0.0008126777732629012	Pomatomidae	organism
+e2453	0.0008126777732629012	Solaneae	organism
+e2004	0.0008126777732629012	Ginkgo	organism
+e1957	0.0008126777732629012	Chondrus	organism
+e1744	0.0008126777732629012	Sauropsida	organism
+e2027	0.0008126777732629012	Lepidium	organism
+e1835	0.0008126777732629012	Ginkgoaceae	organism
+e2147	0.0008126777732629012	Xiphias	organism
+e2154	0.0008126777732629012	Brachyura	organism
+e2293	0.0008126777732629012	Luciopercinae	organism
+e2181	0.0008126777732629012	Asterales	organism
+e2370	0.0008126777732629012	Triticinae	organism
+e1808	0.0008126777732629012	Cancridae	organism
+e2056	0.0008126777732629012	Nelumbo	organism
+e2316	0.0008126777732629012	Vaccinioideae	organism
+e2047	0.0008126777732629012	Metacarcinus	organism
+e1905	0.0008126777732629012	Xiphiidae	organism
+e1696	0.0008126777732629012	Ctenosquamata	organism
+e1747	0.0008126777732629012	Spiralia	organism
+e1736	0.0008126777732629012	Poeae Chloroplast Group 1 (Aveneae type)	organism
+e2349	0.0008126777732629012	Aveninae	organism
+e1859	0.0008126777732629012	Nelumbonaceae	organism
+e1690	0.0008126777732629012	Berycimorphaceae	organism
+e1707	0.0008126777732629012	Eurypterygia	organism
+e1769	0.0008126777732629012	robinioid clade	organism
+e1922	0.0008126777732629012	Armoracia	organism
+e2449	0.0008126777732629012	Selineae	organism
+e2060	0.0008126777732629012	Ocimum	organism
+e1949	0.0008126777732629012	Carthamus	organism
+e2041	0.0008126777732629012	Matricaria	organism
+e2352	0.0008126777732629012	Centaureinae	organism
+e2248	0.0008126777732629012	Matricaria chamomilla	organism
+e2364	0.0008126777732629012	Oryzinae	organism
+e2067	0.0008126777732629012	Oryza	organism
+e1805	0.0008126777732629012	Bromeliaceae	organism
+e2111	0.0008126777732629012	Sambucus	organism
+e1996	0.0008126777732629012	Eutrema	organism
+e2421	0.0008126777732629012	Eutremeae	organism
+e2363	0.0008126777732629012	Ociminae	organism
+e2456	0.0008126777732629012	Tordylieae	organism
+e2222	0.0008126777732629012	Piperales	organism
+e1907	0.0008126777732629012	Abelmoschus	organism
+e1889	0.0008126777732629012	Rubiaceae	organism
+e2203	0.0008126777732629012	Gentianales	organism
+e2447	0.0008126777732629012	Scomberomorini	organism
+e2137	0.0008126777732629012	Typha	organism
+e1898	0.0008126777732629012	Sebastidae	organism
+e2156	0.0008126777732629012	Pecora	organism
+e2336	0.0008126777732629012	Ruminantia	organism
+e2149	0.0008126777732629012	Zingiber	organism
+e2313	0.0008126777732629012	Sebastinae	organism
+e1981	0.0008126777732629012	Dimocarpus	organism
+e2135	0.0008126777732629012	Trigonella	organism
+e2028	0.0008126777732629012	Lepomis	organism
+e2069	0.0008126777732629012	Ovis	organism
+e2000	0.0008126777732629012	Fragaria	organism
+e1732	0.0008126777732629012	Paracanthopterygii	organism
+e2048	0.0008126777732629012	Metroxylon	organism
+e2361	0.0008126777732629012	Metroxylinae	organism
+e2051	0.0008126777732629012	Moringa	organism
+e2318	0.0008126777732629012	Salvia subgen. Calosphace	organism
+e2320	0.0008126777732629012	Solanum subgen. Lycopersicon	organism
+e2057	0.0008126777732629012	Nephelium	organism
+e2410	0.0008126777732629012	Cocoseae	organism
+e2348	0.0008126777732629012	Attaleinae	organism
+e2335	0.0008126777732629012	Pleurotineae	organism
+e2078	0.0008126777732629012	Persea	organism
+e2188	0.0008126777732629012	Carnivora	organism
+e2118	0.0008126777732629012	Seriola	organism
+e2052	0.0008126777732629012	Morone	organism
+e2032	0.0008126777732629012	Litchi	organism
+e1762	0.0008126777732629012	dalbergioids sensu lato	organism
+e1868	0.0008126777732629012	Ostreidae	organism
+e2379	0.0008126777732629012	Ostreoidea	organism
+e2235	0.0008126777732629012	Trachichthyiformes	organism
+e2087	0.0008126777732629012	Pimenta	organism
+e2416	0.0008126777732629012	Dalbergieae	organism
+e2384	0.0008126777732629012	Cypriniphysae	organism
+e2070	0.0008126777732629012	Pachyrhizus	organism
+e2193	0.0008126777732629012	Cypriniformes	organism
+e1930	0.0008126777732629012	Balaena	organism
+e1919	0.0008126777732629012	Aplodinotus	organism
+e1916	0.0008126777732629012	Angelica	organism
+e2360	0.0008126777732629012	Menthinae	organism
+e2229	0.0008126777732629012	Salmoniformes	organism
+e1992	0.0008126777732629012	Eruca	organism
+e2324	0.0008126777732629012	Aspleniineae	organism
+e2225	0.0008126777732629012	Polypodiales	organism
+e2140	0.0008126777732629012	Valerianella	organism
+e2191	0.0008126777732629012	Clupeiformes	organism
+e2258	0.0008126777732629012	Clupei	organism
+e2164	0.0008126777732629012	Eubrachyura	organism
+e2013	0.0008126777732629012	Hyssopus	organism
+e2109	0.0008126777732629012	Salvelinus	organism
+e2357	0.0008126777732629012	Hordeinae	organism
+e2321	0.0008126777732629012	Dikarya	organism
+e2245	0.0008126777732629012	Streptophyta	organism
+e2241	0.0008126777732629012	Basidiomycota	organism
+e2443	0.0008126777732629012	Poeae	organism
+e2169	0.0008126777732629012	Poodae	organism
+e2176	0.0008126777732629012	Alismatales	organism
+e1902	0.0008126777732629012	Typhaceae	organism
+e1687	0.0008126777732629012	Archosauria	organism
+e1824	0.0008126777732629012	Ebenaceae	organism
+e2094	0.0008126777732629012	Pomatomus	organism
+e1698	0.0008126777732629012	Dinosauria	organism
+e2158	0.0008126777732629012	Metazoa	organism
+e1704	0.0008126777732629012	Eumetazoa	organism
+e1891	0.0008126777732629012	Salmonidae	organism
+e2343	0.0008126777732629012	Streptophytina	organism
+e2451	0.0008126777732629012	Sesbanieae	organism
+e1966	0.0008126777732629012	Colocasia	organism
+e1701	0.0008126777732629012	Embryophyta	organism
+e2216	0.0008126777732629012	Nymphaeales	organism
+e2427	0.0008126777732629012	Ipomoeeae	organism
+e1840	0.0008126777732629012	Lamiaceae	organism
+e2445	0.0008126777732629012	Rumiceae	organism
+e2227	0.0008126777732629012	Ranunculales	organism
+e2239	0.0008126777732629012	Odontoceti	organism
+e2120	0.0008126777732629012	Sesbania	organism
+e2407	0.0008126777732629012	Careae	organism
+e2020	0.0008126777732629012	Lactuca	organism
+e1866	0.0008126777732629012	Onocleaceae	organism
+e1749	0.0008126777732629012	Stramenopiles	organism
+e2144	0.0008126777732629012	Virola	organism
+e1724	0.0008126777732629012	Ochrophyta	organism
+e1894	0.0008126777732629012	Schisandraceae	organism
+e1940	0.0008126777732629012	Bubalus	organism
+e1883	0.0008126777732629012	Polygonaceae	organism
+e2405	0.0008126777732629012	Cardamineae	organism
+e2011	0.0008126777732629012	Hoplostethus	organism
+e1901	0.0008126777732629012	Trachichthyidae	organism
+e2015	0.0008126777732629012	Illicium	organism
+e2281	0.0008126777732629012	Clupeinae	organism
+e1817	0.0008126777732629012	Clupeidae	organism
+e1800	0.0008126777732629012	Balaenidae	organism
+e1945	0.0008126777732629012	Cantharellus	organism
+e613	0.0008126777732629012	Citrus limon - fruit	organism_with_part
+e2218	0.0008126777732629012	Ostreida	organism
+e1847	0.0008126777732629012	Lythraceae	organism
+e1877	0.0008126777732629012	Physalacriaceae	organism
+e2071	0.0008126777732629012	Panax	organism
+e1795	0.0008126777732629012	Araliaceae	organism
+e1845	0.0008126777732629012	Lithodidae	organism
+e1827	0.0008126777732629012	Equidae	organism
+e1733	0.0008126777732629012	Pelagiaria	organism
+e2077	0.0008126777732629012	Pastinaca	organism
+e1793	0.0008126777732629012	Apiaceae	organism
+e1878	0.0008126777732629012	Phytolaccaceae	organism
+e2100	0.0008126777732629012	Punica	organism
+e1794	0.0008126777732629012	Araceae	organism
+e1973	0.0008126777732629012	Cuminum	organism
+e2393	0.0008126777732629012	Anserineae	organism
+e2080	0.0008126777732629012	Petroselinum	organism
+e2019	0.0008126777732629012	Lablab	organism
+e2256	0.0008126777732629012	Polypodiidae	organism
+e2058	0.0008126777732629012	Nephrops	organism
+e1931	0.0008126777732629012	Basella	organism
+e1801	0.0008126777732629012	Basellaceae	organism
+e1979	0.0008126777732629012	Daucus	organism
+e2223	0.0008126777732629012	Pleuronectiformes	organism
+e2012	0.0008126777732629012	Hordeum	organism
+e2381	0.0008126777732629012	Portunoidea	organism
+e1871	0.0008126777732629012	Papaveraceae	organism
+e2342	0.0008126777732629012	Crustacea	organism
+e1750	0.0008126777732629012	Teleostomi	organism
+e2103	0.0008126777732629012	Raphanus	organism
+e2213	0.0008126777732629012	Malvales	organism
+e2199	0.0008126777732629012	Fabales	organism
+e2068	0.0008126777732629012	Osmerus	organism
+e2085	0.0008126777732629012	Phyllostachys	organism
+e2441	0.0008126777732629012	Phoeniceae	organism
+e2372	0.0008126777732629012	Actinopterygii	organism
+e1938	0.0008126777732629012	Brosimum	organism
+e2148	0.0008126777732629012	Zea	organism
+e2236	0.0008126777732629012	Vitales	organism
+e2269	0.0008126777732629012	Bambusoideae	organism
+e1863	0.0008126777732629012	Oleaceae	organism
+e2279	0.0008126777732629012	Chrysophylloideae	organism
+e2368	0.0008126777732629012	Tordyliinae	organism
+e2413	0.0008126777732629012	Coriandreae	organism
+e1932	0.0008126777732629012	Benincasa	organism
+e1955	0.0008126777732629012	Chanos	organism
+e1830	0.0008126777732629012	Euphorbiaceae	organism
+e2432	0.0008126777732629012	Momordiceae	organism
+e1909	0.0008126777732629012	Actinidia	organism
+e1785	0.0008126777732629012	Actinidiaceae	organism
+e2142	0.0008126777732629012	Vicia	organism
+e2274	0.0008126777732629012	Byttnerioideae	organism
+e1826	0.0008126777732629012	Engraulidae	organism
+e1985	0.0008126777732629012	Dysphania	organism
+e2353	0.0008126777732629012	Cichoriinae	organism
+e2417	0.0008126777732629012	Dysphanieae	organism
+e2086	0.0008126777732629012	Phytolacca	organism
+e2127	0.0008126777732629012	Tamarindus	organism
+e2277	0.0008126777732629012	Carduoideae	organism
+e1989	0.0008126777732629012	Engraulis	organism
+e2288	0.0008126777732629012	Engraulinae	organism
+e2380	0.0008126777732629012	Paguroidea	organism
+e2400	0.0008126777732629012	Boragineae	organism
+e2271	0.0008126777732629012	Boraginoideae	organism
+e2040	0.0008126777732629012	Manilkara	organism
+e1799	0.0008126777732629012	Auriculariaceae	organism
+e2408	0.0008126777732629012	Cicereae	organism
+e1775	0.0008126777732629012	Florideophyceae	organism
+e1810	0.0008126777732629012	Capparaceae	organism
+e2161	0.0008126777732629012	Andropogonodae	organism
+e1903	0.0008126777732629012	Verbenaceae	organism
+e2300	0.0008126777732629012	Oryzoideae	organism
+e1781	0.0008126777732629012	Polypodiopsida	organism
+e1921	0.0008126777732629012	Arctium	organism
+e2037	0.0008126777732629012	Mammea	organism
+e1963	0.0008126777732629012	Clupea	organism
+e2289	0.0008126777732629012	Ericoideae	organism
+e1792	0.0008126777732629012	Annonaceae	organism
+e2009	0.0008126777732629012	Hippophae	organism
+e2065	0.0008126777732629012	Opuntia	organism
+e2157	0.0008126777732629012	Fungi	organism
+e1728	0.0008126777732629012	PACMAD clade	organism
+e1829	0.0008126777732629012	Esocidae	organism
+e2264	0.0008126777732629012	Arecoideae	organism
+e2285	0.0008126777732629012	Cyperoideae	organism
+e2389	0.0008126777732629012	Amherstieae	organism
+e2262	0.0008126777732629012	Annonoideae	organism
+e1841	0.0008126777732629012	Laminariaceae	organism
+e1951	0.0008126777732629012	Carya	organism
+e1900	0.0008126777732629012	Theaceae	organism
+e2365	0.0008126777732629012	Panicinae	organism
+e2439	0.0008126777732629012	Paniceae	organism
+e1723	0.0008126777732629012	Neoteleostei	organism
+e2151	0.0008126777732629012	Teleostei	organism
+e2322	0.0008126777732629012	Agaricineae	organism
+e2003	0.0008126777732629012	Garcinia	organism
+e2424	0.0008126777732629012	Garcinieae	organism
+e1718	0.0008126777732629012	Lophotrochozoa	organism
+e2319	0.0008126777732629012	Salvia subgen. Rosmarinus	organism
+e1946	0.0008126777732629012	Capparis	organism
+e1740	0.0008126777732629012	Pterocarpus clade	organism
+e1935	0.0008126777732629012	Borago	organism
+e2018	0.0008126777732629012	Katsuwonus	organism
+e1729	0.0008126777732629012	PX clade	organism
+e1780	0.0008126777732629012	Phaeophyceae	organism
+e1784	0.0008126777732629012	Achariaceae	organism
+e1797	0.0008126777732629012	Asparagaceae	organism
+e1854	0.0008126777732629012	Musaceae	organism
+e1886	0.0008126777732629012	Portunidae	organism
+e2340	0.0008126777732629012	Agaricomycotina	organism
+e2304	0.0008126777732629012	Papilionoideae	organism
+e2162	0.0008126777732629012	Arundinarodae	organism
+e1822	0.0008126777732629012	Cyprinidae	organism
+e1788	0.0008126777732629012	Aizoaceae	organism
+e1913	0.0008126777732629012	Anacardium	organism
+e2438	0.0008126777732629012	Pangieae	organism
+e2392	0.0008126777732629012	Annoneae	organism
+e1814	0.0008126777732629012	Centrarchidae	organism
+e2329	0.0008126777732629012	Cyprinoidei	organism
+e2093	0.0008126777732629012	Pollachius	organism
+e1790	0.0008126777732629012	Amaryllidaceae	organism
+e2083	0.0008126777732629012	Phoca	organism
+e2072	0.0008126777732629012	Pangium	organism
+e1741	0.0008126777732629012	Sar	organism
+e2292	0.0008126777732629012	Ixoroideae	organism
+e2273	0.0008126777732629012	Bromelioideae	organism
+e2403	0.0008126777732629012	Calophylleae	organism
+e2096	0.0008126777732629012	Pouteria	organism
+e1765	0.0008126777732629012	genistoids sensu lato	organism
+e2303	0.0008126777732629012	Papaveroideae	organism
+e2195	0.0008126777732629012	Dioscoreales	organism
+e2201	0.0008126777732629012	Gadiformes	organism
+e2075	0.0008126777732629012	Paralithodes	organism
+e2378	0.0008126777732629012	Nephropoidea	organism
+e2153	0.0008126777732629012	Astacidea	organism
+e2033	0.0008126777732629012	Lupinus	organism
+e1943	0.0008126777732629012	Callinectes	organism
+e1779	0.0008126777732629012	Mammalia	organism
+e2404	0.0008126777732629012	Capsiceae	organism
+e2035	0.0008126777732629012	Malpighia	organism
+e1920	0.0008126777732629012	Arachis	organism
+e2053	0.0008126777732629012	Musa	organism
+e1852	0.0008126777732629012	Moringaceae	organism
+e1881	0.0008126777732629012	Pleurotaceae	organism
+e2398	0.0008126777732629012	Atripliceae	organism
+e2198	0.0008126777732629012	Esociformes	organism
+e1958	0.0008126777732629012	Cicer	organism
+e2332	0.0008126777732629012	Percoidei	organism
+e2308	0.0008126777732629012	Portuninae	organism
+e1697	0.0008126777732629012	Deuterostomia	organism
+e2286	0.0008126777732629012	Cyprininae	organism
+e2402	0.0008126777732629012	Calameae	organism
+e2049	0.0008126777732629012	Momordica	organism
+e2102	0.0008126777732629012	Pyrus	organism
+e2207	0.0008126777732629012	Istiophoriformes	organism
+e2073	0.0008126777732629012	Panicum	organism
+e1766	0.0008126777732629012	indigoferoid/millettioid clade	organism
+e1713	0.0008126777732629012	Gunneridae	organism
+e1763	0.0008126777732629012	eudicotyledons	organism
+e2350	0.0008126777732629012	Boragininae	organism
+e1872	0.0008126777732629012	Passifloraceae	organism
+e1964	0.0008126777732629012	Cocos	organism
+e1976	0.0008126777732629012	Cymbopogon	organism
+e2296	0.0008126777732629012	Mytilinae	organism
+e1858	0.0008126777732629012	Mytilidae	organism
+e1685	0.0008126777732629012	Anotophysi	organism
+e1914	0.0008126777732629012	Ananas	organism
+e2282	0.0008126777732629012	Coryphoideae	organism
+e2099	0.0008126777732629012	Psophocarpus	organism
+e1825	0.0008126777732629012	Elaeagnaceae	organism
+e2242	0.0008126777732629012	Chordata	organism
+e2119	0.0008126777732629012	Sesamum	organism
+e1873	0.0008126777732629012	Pedaliaceae	organism
+e2205	0.0008126777732629012	Ginkgoales	organism
+e2253	0.0008126777732629012	Ginkgoidae	organism
+e1975	0.0008126777732629012	Cydonia	organism
+e1954	0.0008126777732629012	Chamaenerion	organism
+e2420	0.0008126777732629012	Epilobieae	organism
+e2062	0.0008126777732629012	Oenothera	organism
+e2042	0.0008126777732629012	Matteuccia	organism
+e1838	0.0008126777732629012	Iridaceae	organism
+e2460	0.0008126777732629012	Verbeneae	organism
+e2141	0.0008126777732629012	Verbena	organism
+e1875	0.0008126777732629012	Phasianidae	organism
+e2202	0.0008126777732629012	Galliformes	organism
+e2134	0.0008126777732629012	Trachinotus	organism
+e1899	0.0008126777732629012	Solanaceae	organism
+e1751	0.0008126777732629012	Tetrapoda	organism
+e1699	0.0008126777732629012	Dipnotetrapodomorpha	organism
+e2145	0.0008126777732629012	Vitellaria	organism
+e1982	0.0008126777732629012	Dioscorea	organism
+e1823	0.0008126777732629012	Dioscoreaceae	organism
+e2187	0.0008126777732629012	Carangiformes	organism
+e1819	0.0008126777732629012	Convolvulaceae	organism
+e1990	0.0008126777732629012	Equus	organism
+e2386	0.0008126777732629012	Galloanserae	organism
+e2377	0.0008126777732629012	Mytiloidea	organism
+e2122	0.0008126777732629012	Sinapis	organism
+e2411	0.0008126777732629012	Coffeeae	organism
+e2425	0.0008126777732629012	Genisteae	organism
+e1761	0.0008126777732629012	core genistoids	organism
+e1953	0.0008126777732629012	Ceratonia	organism
+e1694	0.0008126777732629012	Ceratonia clade	organism
+e1929	0.0008126777732629012	Averrhoa	organism
+e2373	0.0008126777732629012	Multicrustacea	organism
+e2219	0.0008126777732629012	Oxalidales	organism
+e2290	0.0008126777732629012	Grewioideae	organism
+e2044	0.0008126777732629012	Melanogrammus	organism
+e1776	0.0008126777732629012	Ginkgoopsida	organism
+e1683	0.0008126777732629012	Acrogymnospermae	organism
+e2454	0.0008126777732629012	Syzygieae	organism
+e2055	0.0008126777732629012	Mytilus	organism
+e2159	0.0008126777732629012	Viridiplantae	organism
+e2091	0.0008126777732629012	Pisum	organism
+e2177	0.0008126777732629012	Apiales	organism
+e2167	0.0008126777732629012	Panicodae	organism
+e2125	0.0008126777732629012	Spinacia	organism
+e1787	0.0008126777732629012	Agaricaceae	organism
+e1993	0.0008126777732629012	Esox	organism
+e1986	0.0008126777732629012	Eleocharis	organism
+e2251	0.0008126777732629012	Autobranchia	organism
+e2010	0.0008126777732629012	Homarus	organism
+e1802	0.0008126777732629012	Boraginaceae	organism
+e2184	0.0008126777732629012	Boraginales	organism
+e1978	0.0008126777732629012	Cyprinus	organism
+e2054	0.0008126777732629012	Myristica	organism
+e2244	0.0008126777732629012	Rhodophyta	organism
+e1813	0.0008126777732629012	Caricaceae	organism
+e2338	0.0008126777732629012	Siluroidei	organism
+e2233	0.0008126777732629012	Siluriformes	organism
+e2215	0.0008126777732629012	Mytilida	organism
+e2243	0.0008126777732629012	Mollusca	organism
+e2446	0.0008126777732629012	Scandiceae	organism
+e1743	0.0008126777732629012	Saurischia	organism
+e1752	0.0008126777732629012	Theria	organism
+e2092	0.0008126777732629012	Pleurotus	organism
+e1977	0.0008126777732629012	Cynara	organism
+e2345	0.0008126777732629012	Arctiinae	organism
+e2008	0.0008126777732629012	Hibiscus	organism
+e1843	0.0008126777732629012	Lecythidaceae	organism
+e1818	0.0008126777732629012	Clusiaceae	organism
+e2317	0.0008126777732629012	Glycine subgen. Soja	organism
+e1836	0.0008126777732629012	Grossulariaceae	organism
+e2231	0.0008126777732629012	Saxifragales	organism
+e2152	0.0008126777732629012	Anomura	organism
+e1774	0.0008126777732629012	Bivalvia	organism
+e2101	0.0008126777732629012	Pusa	organism
+e1918	0.0008126777732629012	Apium	organism
+e2076	0.0008126777732629012	Passiflora	organism
+e2059	0.0008126777732629012	Nuphar	organism
+e1861	0.0008126777732629012	Nymphaeaceae	organism
+e1821	0.0008126777732629012	Cyperaceae	organism
+e2061	0.0008126777732629012	Odobenus	organism
+e1862	0.0008126777732629012	Odobenidae	organism
+e2339	0.0008126777732629012	Whippomorpha	organism
+e2367	0.0008126777732629012	Sorghinae	organism
+e1941	0.0008126777732629012	Byrsonima	organism
+e2268	0.0008126777732629012	Aurantioideae	organism
+e2442	0.0008126777732629012	Pimpinelleae	organism
+e2024	0.0008126777732629012	Leiostomus	organism
+e2112	0.0008126777732629012	Sander	organism
+e2291	0.0008126777732629012	Helicteroideae	organism
+e1786	0.0008126777732629012	Adoxaceae	organism
+e2337	0.0008126777732629012	Scorpaenoidei	organism
+e1692	0.0008126777732629012	Boreoeutheria	organism
+e1709	0.0008126777732629012	Eutheria	organism
+e2124	0.0008126777732629012	Sorghum	organism
+e2238	0.0008126777732629012	Mysticeti	organism
+e2430	0.0008126777732629012	Manihoteae	organism
+e2284	0.0008126777732629012	Crotonoideae	organism
+e2359	0.0008126777732629012	Matricariinae	organism
+e1936	0.0008126777732629012	Bos	organism
+e2376	0.0008126777732629012	Centrarchoidei	organism
+e2190	0.0008126777732629012	Centrarchiformes	organism
+e2437	0.0008126777732629012	Oryzeae	organism
+e1890	0.0008126777732629012	Rutaceae	organism
+e2276	0.0008126777732629012	Caprinae	organism
+e1857	0.0008126777732629012	Myrtaceae	organism
+e2150	0.0008126777732629012	Neognathae	organism
+e1773	0.0008126777732629012	Aves	organism
+e2434	0.0008126777732629012	Ocimeae	organism
+e2395	0.0008126777732629012	Apeibeae	organism
+e1867	0.0008126777732629012	Osmeridae	organism
+e2301	0.0008126777732629012	Osmerinae	organism
+e2287	0.0008126777732629012	Detarioideae	organism
+e2030	0.0008126777732629012	Limanda	organism
+e1967	0.0008126777732629012	Corchorus	organism
+e2419	0.0008126777732629012	Empetreae	organism
+e1689	0.0008126777732629012	Bertiereae - Coffeeae clade	organism
+e1711	0.0008126777732629012	Gardenieae complex	organism
+e1710	0.0008126777732629012	Gadariae	organism
+e1756	0.0008126777732629012	Zeiogadaria	organism
+e2217	0.0008126777732629012	Osmeriformes	organism
+e1748	0.0008126777732629012	Stomiati	organism
+e2240	0.0008126777732629012	Arthropoda	organism
+e1730	0.0008126777732629012	Panarthropoda	organism
+e1807	0.0008126777732629012	Calophyllaceae	organism
+e2128	0.0008126777732629012	Taraxacum	organism
+e2354	0.0008126777732629012	Crepidinae	organism
+e2006	0.0008126777732629012	Glycine	organism
+e1726	0.0008126777732629012	Osteoglossocephalai	organism
+e2117	0.0008126777732629012	Sebastes	organism
+e1910	0.0008126777732629012	Agaricus	organism
+e1961	0.0008126777732629012	Citrullus	organism
+e2129	0.0008126777732629012	Tetragonia	organism
+e2461	0.0008126777732629012	Viteae	organism
+e2084	0.0008126777732629012	Phoenix	organism
+e1789	0.0008126777732629012	Alariaceae	organism
+e2138	0.0008126777732629012	Undaria	organism
+e2045	0.0008126777732629012	Melissa	organism
+e1928	0.0008126777732629012	Avena	organism
+e2107	0.0008126777732629012	Saccharina	organism
+e2414	0.0008126777732629012	Croceae	organism
+e2283	0.0008126777732629012	Crocoideae	organism
+e2254	0.0008126777732629012	Neopterygii	organism
+e1771	0.0008126777732629012	Actinopteri	organism
+e2204	0.0008126777732629012	Gigartinales	organism
+e2257	0.0008126777732629012	Rhodymeniophycidae	organism
+e2246	0.0008126777732629012	Daucus sect. Daucus	organism
+e2082	0.0008126777732629012	Phasianus	organism
+e2183	0.0008126777732629012	Austrobaileyales	organism
+e1811	0.0008126777732629012	Caprifoliaceae	organism
+e2426	0.0008126777732629012	Heliantheae	organism
+e2221	0.0008126777732629012	Perissodactyla	organism
+e1837	0.0008126777732629012	Ictaluridae	organism
+e2210	0.0008126777732629012	Laurales	organism
+e2450	0.0008126777732629012	Senecioneae	organism
+e2356	0.0008126777732629012	Fragariinae	organism
+e1970	0.0008126777732629012	Crocus	organism
+e2026	0.0008126777732629012	Lentinula	organism
+e1864	0.0008126777732629012	Omphalotaceae	organism
+e1991	0.0008126777732629012	Erignathus	organism
+e1695	0.0008126777732629012	Coelurosauria	organism
+e1915	0.0008126777732629012	Anethum	organism
+e1846	0.0008126777732629012	Lotidae	organism
+e1939	0.0008126777732629012	Brosme	organism
+e2375	0.0008126777732629012	Cancroidea	organism
+e2088	0.0008126777732629012	Pimpinella	organism
+e2418	0.0008126777732629012	Eleocharideae	organism
+e2038	0.0008126777732629012	Mangifera	organism
+e2351	0.0008126777732629012	Carduinae	organism
+e2031	0.0008126777732629012	Linum	organism
+e2206	0.0008126777732629012	Gonorynchiformes	organism
+e1853	0.0008126777732629012	Moronidae	organism
+e1995	0.0008126777732629012	Eumetopias	organism
+e1869	0.0008126777732629012	Otariidae	organism
+e2186	0.0008126777732629012	Cantharellales	organism
+e1742	0.0008126777732629012	Sauria	organism
+e2390	0.0008126777732629012	Amygdaleae	organism
+e2249	0.0008126777732629012	Triticum turgidum	organism
+e1974	0.0008126777732629012	Curcuma	organism
+e2275	0.0008126777732629012	Calamoideae	organism
+e1983	0.0008126777732629012	Diospyros	organism
+e2247	0.0008126777732629012	Eruca vesicaria	organism
+e2095	0.0008126777732629012	Portulaca	organism
+e1885	0.0008126777732629012	Portulacaceae	organism
+e2133	0.0008126777732629012	Tilia	organism
+e2315	0.0008126777732629012	Tilioideae	organism
+e1753	0.0008126777732629012	Theropoda	organism
+e1809	0.0008126777732629012	Cantharellaceae	organism
+e2074	0.0008126777732629012	Papaver	organism
+e2415	0.0008126777732629012	Cucurbiteae	organism
+e1923	0.0008126777732629012	Aronia	organism
+e2039	0.0008126777732629012	Manihot	organism
+e1933	0.0008126777732629012	Bertholletia	organism
+e2036	0.0008126777732629012	Malus	organism
+e1926	0.0008126777732629012	Asparagus	organism
+e2266	0.0008126777732629012	Asparagoideae	organism
+e2250	0.0008126777732629012	Agaricomycetidae	organism
+e2299	0.0008126777732629012	Opuntioideae	organism
+e1806	0.0008126777732629012	Cactaceae	organism
+e1998	0.0008126777732629012	Ficus	organism
+e1714	0.0008126777732629012	Heliantheae alliance	organism
+e1686	0.0008126777732629012	Archelosauria	organism
+e2034	0.0008126777732629012	Macadamia	organism
+e2104	0.0008126777732629012	Rheum	organism
+e1904	0.0008126777732629012	Vitaceae	organism
+e1712	0.0008126777732629012	Gnathostomata	organism
+e1987	0.0008126777732629012	Elettaria	organism
+e1815	0.0008126777732629012	Chanidae	organism
+e2327	0.0008126777732629012	Chanoidei	organism
+e1968	0.0008126777732629012	Coriandrum	organism
+e2063	0.0008126777732629012	Olea	organism
+e2435	0.0008126777732629012	Oleeae	organism
+e2023	0.0008126777732629012	Laurus	organism
+e2050	0.0008126777732629012	Morella	organism
+e1880	0.0008126777732629012	Pleuronectidae	organism
+e2182	0.0008126777732629012	Auriculariales	organism
+e2194	0.0008126777732629012	Decapoda	organism
+e2121	0.0008126777732629012	Sicyos	organism
+e2452	0.0008126777732629012	Sicyoeae	organism
+e1865	0.0008126777732629012	Onagraceae	organism
+e1754	0.0008126777732629012	Tracheophyta	organism
+e2108	0.0008126777732629012	Salmo	organism
+e1934	0.0008126777732629012	Beta	organism
+e2270	0.0008126777732629012	Betoideae	organism
+e2358	0.0008126777732629012	Lactucinae	organism
+e2371	0.0008126777732629012	Tussilagininae	organism
+e2005	0.0008126777732629012	Glebionis	organism
+e1731	0.0008126777732629012	Pancrustacea	organism
+e1720	0.0008126777732629012	Mandibulata	organism
+e1942	0.0008126777732629012	Cajanus	organism
+e2025	0.0008126777732629012	Lens	organism
+e1887	0.0008126777732629012	Proteaceae	organism
+e1912	0.0008126777732629012	Amelanchier	organism
+e2192	0.0008126777732629012	Cucurbitales	organism
+e2347	0.0008126777732629012	Arundinariinae	organism
+e2397	0.0008126777732629012	Arundinarieae	organism
+e2001	0.0008126777732629012	Gadus	organism
+e1870	0.0008126777732629012	Oxalidaceae	organism
+e1195	0.0008126777732629012	N-methylcoculaurine	chemical
+e1755	0.0008126777732629012	Vertebrata	organism
+e1129	0.0008126777732629012	perillyl alcohol	chemical
+e248	0.0008126777732629012	Lovastatin	chemical
+e567	0.0008126777732629012	Flammulina velutipes - fruit	organism_with_part
+e500	0.0008126777732629012	Sambucus nigra - fruit	organism_with_part
+e586	0.0008126777732629012	Solanum lycopersicum - wax	organism_with_part
+e78	0.0008126777732629012	alpha-solanine	chemical
+e686	0.0008126777732629012	Crocus sativus - flower	organism_with_part
+e161	0.0008126777732629012	Dimethylamines	chemical
+e140	0.0008126777732629012	crocin	chemical
+e356	0.0008126777732629012	A73025	chemical
+e427	0.0008126777732629012	Thunnus thynnus	organism
+e697	0.0008126777732629012	Spinacia oleracea - leaf	organism_with_part
+e585	0.0008126777732629012	Solanum lycopersicum - juice	organism_with_part
+e448	0.0008126777732629012	Pusa hispida	organism
+e635	0.0008126777732629012	Mammea americana - stem	organism_with_part
+e518	0.0008126777732629012	Cantharellus cibarius - mycelium	organism_with_part
+e659	0.0008126777732629012	Passiflora edulis - seed	organism_with_part
+e36	0.0008126777732629012	Arabinose	chemical
+e20	0.0008126777732629012	cycloheterophyllin	chemical
+e540	0.0008126777732629012	Syzygium aromaticum - seed	organism_with_part
+e102	0.0008126777732629012	gamma-sitosterol	chemical
+e242	0.0008126777732629012	Lidocaine	chemical
+e610	0.0008126777732629012	Actinidia chinensis - root	organism_with_part
+e640	0.0008126777732629012	Morus - leaf	organism_with_part
+e549	0.0008126777732629012	Coriandrum sativum - leaf	organism_with_part
+e702	0.0008126777732629012	Annona squamosa - seed	organism_with_part
+e665	0.0008126777732629012	Pyrus communis - leaf	organism_with_part
+e421	0.0008126777732629012	Corchorus olitorius	organism
+e219	0.0008126777732629012	bradykinin, hydroxy-Pro(3)-	chemical
+e120	0.0008126777732629012	carbonyl fluoride	chemical
+e642	0.0008126777732629012	Vigna radiata - seedling	organism_with_part
+e577	0.0008126777732629012	Trigonella foenum-graecum - root	organism_with_part
+e349	0.0008126777732629012	stearic acid	chemical
+e735	0.0008126777732629012	Actinidia chinensis	organism
+e64	0.0008126777732629012	Adenine	chemical
+e615	0.0008126777732629012	Cymbopogon citratus - leaf	organism_with_part
+e555	0.0008126777732629012	Cuminum cyminum - seed	organism_with_part
+e332	0.0008126777732629012	rosmanol	chemical
+e6	0.0008126777732629012	dihydrochalcone	chemical
+e523	0.0008126777732629012	Annona cherimola - leaf	organism_with_part
+e423	0.0008126777732629012	Salvelinus namaycush	organism
+e634	0.0008126777732629012	Mammea americana - skin	organism_with_part
+e636	0.0008126777732629012	Mangifera indica - fruit	organism_with_part
+e141	0.0008126777732629012	Cucurbitacins	chemical
+e13	0.0008126777732629012	plumbagin	chemical
+e605	0.0008126777732629012	Diospyros kaki - fruit	organism_with_part
+e307	0.0008126777732629012	Bis-Q	chemical
+e62	0.0008126777732629012	Acetaldehyde	chemical
+e66	0.0008126777732629012	Alanine	chemical
+e632	0.0008126777732629012	Mammea americana - root	organism_with_part
+e685	0.0008126777732629012	Hibiscus sabdariffa - seed	organism_with_part
+e629	0.0008126777732629012	Mammea americana - flesh	organism_with_part
+e619	0.0008126777732629012	Vaccinium vitis-idaea - berry	organism_with_part
+e676	0.0008126777732629012	Solanum tuberosum - root	organism_with_part
+e650	0.0008126777732629012	Abelmoschus esculentus - leaf	organism_with_part
+e382	0.0008126777732629012	xanthoangelol	chemical
+e617	0.0008126777732629012	Litchi chinensis - seed	organism_with_part
+e73	0.0008126777732629012	alpha-chaconine	chemical
+e484	0.0008126777732629012	Prunus dulcis - seed	organism_with_part
+e144	0.0008126777732629012	cyanidin 3-rutinoside	chemical
+e63	0.0008126777732629012	acevaltrate	chemical
+e527	0.0008126777732629012	Morella rubra - berry	organism_with_part
+e208	0.0008126777732629012	glucotropeolin	chemical
+e55	0.0008126777732629012	S-methylcysteine	chemical
+e176	0.0008126777732629012	Erythromycin	chemical
+e54	0.0008126777732629012	S-propyl cysteine sulfoxide	chemical
+e699	0.0008126777732629012	Fragaria x ananassa - berry	organism_with_part
+e21	0.0008126777732629012	cysteinylcysteine	chemical
+e261	0.0008126777732629012	BRL 1364	chemical
+e436	0.0008126777732629012	Piper nigrum	organism
+e16	0.0008126777732629012	arginyl-glycyl-aspartic acid	chemical
+e40	0.0008126777732629012	MAR 10	chemical
+e171	0.0008126777732629012	Emodin	chemical
+e447	0.0008126777732629012	Paralithodes camtschaticus	organism
+e570	0.0008126777732629012	Vaccinium oxycoccos - fruit	organism_with_part
+e257	0.0008126777732629012	menthofuran	chemical
+e566	0.0008126777732629012	Solanum melongena - flesh	organism_with_part
+e596	0.0008126777732629012	Vigna mungo - cotyledon	organism_with_part
+e627	0.0008126777732629012	Basella alba - fruit	organism_with_part
+e160	0.0008126777732629012	dihydrosterculic acid	chemical
+e732	0.0008126777732629012	Chamaenerion angustifolium	organism
+e579	0.0008126777732629012	Chamaenerion angustifolium - leaf	organism_with_part
+e456	0.0008126777732629012	Vitellaria paradoxa	organism
+e725	0.0008126777732629012	Phyllostachys edulis	organism
+e491	0.0008126777732629012	Phyllostachys edulis - leaf	organism_with_part
+e616	0.0008126777732629012	Lens culinaris - grain	organism_with_part
+e666	0.0008126777732629012	Pyrus communis - wax	organism_with_part
+e345	0.0008126777732629012	solasodine	chemical
+e716	0.0008126777732629012	Brassica rapa subsp. rapa - root	organism_with_part
+e83	0.0008126777732629012	Amylose	chemical
+e556	0.0008126777732629012	Theobroma grandiflorum - fruit	organism_with_part
+e744	0.0008126777732629012	Oncorhynchus nerka	organism
+e692	0.0008126777732629012	Oncorhynchus nerka - tissue	organism_with_part
+e284	0.0008126777732629012	nobiletin	chemical
+e495	0.0008126777732629012	Vaccinium myrtillus - fruit	organism_with_part
+e547	0.0008126777732629012	Juglans regia - husk	organism_with_part
+e488	0.0008126777732629012	Coffea arabica - fruit	organism_with_part
+e110	0.0008126777732629012	cafestol	chemical
+e688	0.0008126777732629012	Phaseolus coccineus - leaf	organism_with_part
+e265	0.0008126777732629012	monogalactosyldiacylglycerol	chemical
+e440	0.0008126777732629012	Eugenia uniflora	organism
+e174	0.0008126777732629012	Ergot Alkaloids	chemical
+e644	0.0008126777732629012	Cucumis melo - seed	organism_with_part
+e575	0.0008126777732629012	Fennel - fruit	organism_with_part
+e492	0.0008126777732629012	Musa acuminata - stem	organism_with_part
+e734	0.0008126777732629012	Lathyrus sativus	organism
+e599	0.0008126777732629012	Lathyrus sativus - root	organism_with_part
+e299	0.0008126777732629012	cardanol	chemical
+e729	0.0008126777732629012	Theobroma grandiflorum	organism
+e2	0.0008126777732629012	benzyl cyanide	chemical
+e674	0.0008126777732629012	Punica granatum - juice	organism_with_part
+e485	0.0008126777732629012	Vaccinium macrocarpon - fruit	organism_with_part
+e2341	0.0008126777732629012	Craniata	organism
+e338	0.0008126777732629012	Selenious Acid	chemical
+e430	0.0008126777732629012	Hoplostethus atlanticus	organism
+e442	0.0008126777732629012	Lepomis gibbosus	organism
+e504	0.0008126777732629012	Bertholletia excelsa - embryo	organism_with_part
+e722	0.0008126777732629012	Cucurbita maxima - root	organism_with_part
+e721	0.0008126777732629012	Apium graveolens - seed	organism_with_part
+e165	0.0008126777732629012	trilactone	chemical
+e468	0.0008126777732629012	Scophthalmus maximus	organism
+e163	0.0008126777732629012	n-propyl disulfide	chemical
+e223	0.0008126777732629012	indole	chemical
+e543	0.0008126777732629012	Fagopyrum esculentum - sprout	organism_with_part
+e70	0.0008126777732629012	Benzene	chemical
+e536	0.0008126777732629012	Allium schoenoprasum - leaf	organism_with_part
+e502	0.0008126777732629012	Vaccinium uliginosum - fruit	organism_with_part
+e395	0.0008126777732629012	Pomatomus saltatrix	organism
+e568	0.0008126777732629012	Castanea sativa - leaf	organism_with_part
+e517	0.0008126777732629012	Apium graveolens Dulce Group - seed	organism_with_part
+e631	0.0008126777732629012	Mammea americana - leaf	organism_with_part
+e740	0.0008126777732629012	Capsicum chinense	organism
+e553	0.0008126777732629012	Cucumis sativus - exudate	organism_with_part
+e724	0.0008126777732629012	Malus pumila	organism
+e32	0.0008126777732629012	IFNE protein, human	chemical
+e569	0.0008126777732629012	Castanea sativa - wax	organism_with_part
+e498	0.0008126777732629012	Aronia melanocarpa - fruit	organism_with_part
+e633	0.0008126777732629012	Mammea americana - seed	organism_with_part
+e571	0.0008126777732629012	Prunus domestica - juice	organism_with_part
+e275	0.0008126777732629012	neferine	chemical
+e679	0.0008126777732629012	Chenopodium quinoa - grain	organism_with_part
+e653	0.0008126777732629012	Papaver somniferum - seed	organism_with_part
+e49	0.0008126777732629012	Phlorhizin	chemical
+e535	0.0008126777732629012	Brassica juncea - seedling	organism_with_part
+e486	0.0008126777732629012	Malus pumila - root	organism_with_part
+e600	0.0008126777732629012	Triticum turgidum subsp. durum - endosperm	organism_with_part
+e639	0.0008126777732629012	Artemisia vulgaris - shoot	organism_with_part
+e60	0.0008126777732629012	Trinitrotoluene	chemical
+e408	0.0008126777732629012	Limanda limanda	organism
+e190	0.0008126777732629012	fucoidan	chemical
+e149	0.0008126777732629012	nasunin	chemical
+e118	0.0008126777732629012	Carbamates	chemical
+e537	0.0008126777732629012	Allium schoenoprasum - root	organism_with_part
+e455	0.0008126777732629012	Sesbania bispinosa	organism
+e667	0.0008126777732629012	Capsicum chinense - wax	organism_with_part
+e548	0.0008126777732629012	Juglans regia - leaf	organism_with_part
+e641	0.0008126777732629012	Vigna radiata - seed	organism_with_part
+e14	0.0008126777732629012	6-OH-BDE-47	chemical
+e264	0.0008126777732629012	momordicoside A	chemical
+e496	0.0008126777732629012	Momordica charantia - seed	organism_with_part
+e505	0.0008126777732629012	Artocarpus altilis - seed	organism_with_part
+e308	0.0008126777732629012	pinocamphone	chemical
+e581	0.0008126777732629012	Allium cepa - bulb	organism_with_part
+e612	0.0008126777732629012	Citrus limon - flesh	organism_with_part
+e301	0.0008126777732629012	phoenixoside A	chemical
+e330	0.0008126777732629012	rhamnogalacturonan I	chemical
+e560	0.0008126777732629012	Phoenix dactylifera - seed	organism_with_part
+e150	0.0008126777732629012	delta-tocopherol	chemical
+e238	0.0008126777732629012	Lactic Acid	chemical
+e657	0.0008126777732629012	Passiflora edulis - fruit	organism_with_part
+e294	0.0008126777732629012	Palmitic Acid	chemical
+e562	0.0008126777732629012	Durio zibethinus - flesh	organism_with_part
+e375	0.0008126777732629012	Urea	chemical
+e213	0.0008126777732629012	hemicellulose	chemical
+e355	0.0008126777732629012	Sulfapyridine	chemical
+e397	0.0008126777732629012	Bubalus bubalis	organism
+e742	0.0008126777732629012	Opuntia macrorhiza	organism
+e728	0.0008126777732629012	Allium tuberosum	organism
+e390	0.0008126777732629012	Phytolacca americana	organism
+e446	0.0008126777732629012	Brassica rapa Broccoletto Group	organism
+e394	0.0008126777732629012	Erignathus barbatus	organism
+e714	0.0008126777732629012	Camellia sinensis - stem	organism_with_part
+e260	0.0008126777732629012	methyleugenol	chemical
+e428	0.0008126777732629012	Esox lucius	organism
+e479	0.0008126777732629012	Malpighia emarginata - fruit	organism_with_part
+e235	0.0008126777732629012	kahweol	chemical
+e534	0.0008126777732629012	Allium tuberosum - seed	organism_with_part
+e451	0.0008126777732629012	Pangium edule	organism
+e292	0.0008126777732629012	2-coumaroylquinic acid	chemical
+e168	0.0008126777732629012	Eicosanoic Acids	chemical
+e52	0.0008126777732629012	alliin	chemical
+e243	0.0008126777732629012	lignoceric acid	chemical
+e244	0.0008126777732629012	limonene	chemical
+e309	0.0008126777732629012	piperitone	chemical
+e341	0.0008126777732629012	Sialic Acids	chemical
+e583	0.0008126777732629012	Rheum rhabarbarum - leaf	organism_with_part
+e690	0.0008126777732629012	Hippophae rhamnoides - leaf	organism_with_part
+e210	0.0008126777732629012	Guanine	chemical
+e465	0.0008126777732629012	Ipomoea aquatica	organism
+e116	0.0008126777732629012	camphene	chemical
+e731	0.0008126777732629012	Acca sellowiana	organism
+e574	0.0008126777732629012	Acca sellowiana - fruit	organism_with_part
+e741	0.0008126777732629012	Capsicum pubescens	organism
+e668	0.0008126777732629012	Capsicum pubescens - fruit	organism_with_part
+e584	0.0008126777732629012	Rheum rhabarbarum - rhizome	organism_with_part
+e42	0.0008126777732629012	muricatalicin	chemical
+e609	0.0008126777732629012	Syzygium cumini - fruit	organism_with_part
+e86	0.0008126777732629012	Arbutin	chemical
+e693	0.0008126777732629012	Prunus cerasus - fruit	organism_with_part
+e645	0.0008126777732629012	Prunus tomentosa - tissue	organism_with_part
+e489	0.0008126777732629012	Salmo salar - skin	organism_with_part
+e164	0.0008126777732629012	di-n-propyl trisulfide	chemical
+e726	0.0008126777732629012	Delphinapterus leucas	organism
+e494	0.0008126777732629012	Delphinapterus leucas - skin	organism_with_part
+e9	0.0008126777732629012	3-butenyl glucosinolate	chemical
+e678	0.0008126777732629012	Cydonia oblonga - leaf	organism_with_part
+e179	0.0008126777732629012	ethyl butyrate	chemical
+e700	0.0008126777732629012	Annona squamosa - bark	organism_with_part
+e404	0.0008126777732629012	Auricularia polytricha	organism
+e425	0.0008126777732629012	Lactuca sativa	organism
+e1	0.0008126777732629012	Phosphoadenosine Phosphosulfate	chemical
+e739	0.0008126777732629012	Sebastes viviparus	organism
+e51	0.0008126777732629012	Pyrogallol	chemical
+e582	0.0008126777732629012	Allium cepa - juice	organism_with_part
+e361	0.0008126777732629012	terpinolene	chemical
+e564	0.0008126777732629012	Crassostrea virginica - tissue	organism_with_part
+e10	0.0008126777732629012	3-octanone	chemical
+e687	0.0008126777732629012	Manilkara zapota - leaf	organism_with_part
+e372	0.0008126777732629012	Triiodothyronine	chemical
+e180	0.0008126777732629012	2-ethylaniline	chemical
+e648	0.0008126777732629012	Sebastes viviparus - tissue	organism_with_part
+e462	0.0008126777732629012	Eumetopias jubatus	organism
+e656	0.0008126777732629012	Carica papaya - seed	organism_with_part
+e520	0.0008126777732629012	Sicyos edulis - root	organism_with_part
+e449	0.0008126777732629012	Eruca vesicaria subsp. sativa	organism
+e682	0.0008126777732629012	Rubus idaeus - seed	organism_with_part
+e153	0.0008126777732629012	3,4-di-O-caffeoylquinic acid	chemical
+e410	0.0008126777732629012	Brosme brosme	organism
+e618	0.0008126777732629012	Phaseolus lunatus - seed	organism_with_part
+e681	0.0008126777732629012	Raphanus sativus - hypocotyl	organism_with_part
+e413	0.0008126777732629012	Aplodinotus grunniens	organism
+e544	0.0008126777732629012	Brassica oleracea - leaf	organism_with_part
+e460	0.0008126777732629012	Leiostomus xanthurus	organism
+e691	0.0008126777732629012	Lentinula edodes - mycelium	organism_with_part
+e720	0.0008126777732629012	Daucus carota - seed	organism_with_part
+e563	0.0008126777732629012	Durio zibethinus - fruit	organism_with_part
+e91	0.0008126777732629012	1,2-dithiolane-4-carboxylic acid	chemical
+e515	0.0008126777732629012	Anacardium occidentale - testa	organism_with_part
+e96	0.0008126777732629012	bergapten	chemical
+e439	0.0008126777732629012	Phasianus colchicus	organism
+e509	0.0008126777732629012	Arctium lappa - seed	organism_with_part
+e342	0.0008126777732629012	sinalbin	chemical
+e727	0.0008126777732629012	Castanea mollissima	organism
+e233	0.0008126777732629012	isovitexin	chemical
+e533	0.0008126777732629012	Castanea mollissima - fruit	organism_with_part
+e387	0.0008126777732629012	Auricularia auricula-judae	organism
+e680	0.0008126777732629012	Chenopodium quinoa - pericarp	organism_with_part
+e532	0.0008126777732629012	Brassica rapa - seed	organism_with_part
+e506	0.0008126777732629012	Brosimum alicastrum - seed	organism_with_part
+e321	0.0008126777732629012	1,2,4-tri-O-galloyl-3,6-hexahydroxydiphenoylglucose	chemical
+e736	0.0008126777732629012	Syzygium jambos	organism
+e626	0.0008126777732629012	Syzygium jambos - leaf	organism_with_part
+e414	0.0008126777732629012	Lepidium sativum	organism
+e95	0.0008126777732629012	benzofuran	chemical
+e671	0.0008126777732629012	Opuntia macrorhiza - fruit	organism_with_part
+e187	0.0008126777732629012	Formaldehyde	chemical
+e17	0.0008126777732629012	cinnamon oil, leaf	chemical
+e385	0.0008126777732629012	Xylose	chemical
+e624	0.0008126777732629012	Macadamia tetraphylla - skin	organism_with_part
+e481	0.0008126777732629012	Pimenta dioica - berry	organism_with_part
+e587	0.0008126777732629012	Glebionis coronaria - leaf	organism_with_part
+e480	0.0008126777732629012	Medicago sativa - leaf	organism_with_part
+e33	0.0008126777732629012	isofuranodiene	chemical
+e588	0.0008126777732629012	Glebionis coronaria - shoot	organism_with_part
+e738	0.0008126777732629012	Typha angustifolia	organism
+e444	0.0008126777732629012	Osmerus mordax	organism
+e127	0.0008126777732629012	Cerebrosides	chemical
+e647	0.0008126777732629012	Typha angustifolia - pollen	organism_with_part
+e18	0.0008126777732629012	Codeine	chemical
+e151	0.0008126777732629012	demethoxycurcumin	chemical
+e477	0.0008126777732629012	Nuphar lutea	organism
+e37	0.0008126777732629012	Levodopa	chemical
+e365	0.0008126777732629012	thiocyanate	chemical
+e621	0.0008126777732629012	Levisticum officinale - leaf	organism_with_part
+e152	0.0008126777732629012	deoxydihydroxanthoangelol H	chemical
+e209	0.0008126777732629012	Glycerol	chemical
+e263	0.0008126777732629012	momordicine I	chemical
+e360	0.0008126777732629012	Taurine	chemical
+e628	0.0008126777732629012	Basella alba - juice	organism_with_part
+e158	0.0008126777732629012	dibenzofuran	chemical
+e92	0.0008126777732629012	bakkenolide B	chemical
+e592	0.0008126777732629012	Petasites japonicus - leaf	organism_with_part
+e649	0.0008126777732629012	Abelmoschus esculentus - fruit	organism_with_part
+e630	0.0008126777732629012	Mammea americana - fruit	organism_with_part
+e646	0.0008126777732629012	Brassica rapa subsp. pekinensis - leaf	organism_with_part
+e417	0.0008126777732629012	Melanogrammus aeglefinus	organism
+e611	0.0008126777732629012	Chenopodium album - seedling	organism_with_part
+e483	0.0008126777732629012	Prunus dulcis - bark	organism_with_part
+e464	0.0008126777732629012	Morone saxatilis	organism
+e53	0.0008126777732629012	S-allylcysteine	chemical
+e519	0.0008126777732629012	Sicyos edulis - leaf	organism_with_part
+e262	0.0008126777732629012	methylmercury II	chemical
+e654	0.0008126777732629012	Pleurotus ostreatus - mycelium	organism_with_part
+e622	0.0008126777732629012	Vaccinium angustifolium - rhizome	organism_with_part
+e521	0.0008126777732629012	Sicyos edulis - shoot	organism_with_part
+e501	0.0008126777732629012	Rubus occidentalis - fruit	organism_with_part
+e981	0.0008126777732629012	gamma-terpinene	chemical
+e614	0.0008126777732629012	Citrus limon - juice	organism_with_part
+e482	0.0008126777732629012	Pimenta dioica - leaf	organism_with_part
+e331	0.0008126777732629012	Rhamnose	chemical
+e199	0.0008126777732629012	ginkgolic acid	chemical
+e188	0.0008126777732629012	fructooligosaccharide	chemical
+e554	0.0008126777732629012	Cucumis sativus - root	organism_with_part
+e334	0.0008126777732629012	salcolin A	chemical
+e391	0.0008126777732629012	Pimpinella anisum	organism
+e694	0.0008126777732629012	Prunus cerasus - seed	organism_with_part
+e503	0.0008126777732629012	Borago officinalis - seed	organism_with_part
+e663	0.0008126777732629012	Arachis hypogaea - fruit	organism_with_part
+e514	0.0008126777732629012	Anacardium occidentale - gum	organism_with_part
+e701	0.0008126777732629012	Annona squamosa - leaf	organism_with_part
+e528	0.0008126777732629012	Morella rubra - branch	organism_with_part
+e561	0.0008126777732629012	Anethum graveolens - fruit	organism_with_part
+e510	0.0008126777732629012	Cucurbita moschata - leaf	organism_with_part
+e198	0.0008126777732629012	Gibberellins	chemical
+e576	0.0008126777732629012	Trigonella foenum-graecum - leaf	organism_with_part
+e550	0.0008126777732629012	Vigna unguiculata - leaf	organism_with_part
+e708	0.0008126777732629012	Xiphias gladius - flesh	organism_with_part
+e511	0.0008126777732629012	Ceratonia siliqua - fruit	organism_with_part
+e604	0.0008126777732629012	Artocarpus heterophyllus - seed	organism_with_part
+e718	0.0008126777732629012	Virola surinamensis - seed	organism_with_part
+e124	0.0008126777732629012	carpaine	chemical
+e565	0.0008126777732629012	Solanum melongena - exudate	organism_with_part
+e539	0.0008126777732629012	Rubus chamaemorus - seed	organism_with_part
+e41	0.0008126777732629012	malic acid	chemical
+e366	0.0008126777732629012	Thionins	chemical
+e493	0.0008126777732629012	Hordeum vulgare - leaf	organism_with_part
+e431	0.0008126777732629012	Gadus macrocephalus	organism
+e507	0.0008126777732629012	Vicia faba - hull	organism_with_part
+e670	0.0008126777732629012	Pistacia vera - hull	organism_with_part
+e717	0.0008126777732629012	Virola surinamensis - bark	organism_with_part
+e273	0.0008126777732629012	naringenin	chemical
+e11	0.0008126777732629012	4-hydroxyderricin	chemical
+e470	0.0008126777732629012	Sander vitreus	organism
+e664	0.0008126777732629012	Arachis hypogaea - grain	organism_with_part
+e350	0.0008126777732629012	Estrogens, Non-Steroidal	chemical
+e531	0.0008126777732629012	Morella rubra - tissue	organism_with_part
+e159	0.0008126777732629012	diglucoside	chemical
+e1009	0.0008126777732629012	Carrageenan	chemical
+e429	0.0008126777732629012	Nephrops norvegicus	organism
+e625	0.0008126777732629012	Macadamia tetraphylla - tissue	organism_with_part
+e1173	0.0008126777732629012	Fragaria x ananassa - juice	organism_with_part
+e672	0.0008126777732629012	Punica granatum - flower	organism_with_part
+e1115	0.0008126777732629012	epicatechin gallate	chemical
+e1454	0.0008126777732629012	Glycerophosphates	chemical
+e1493	0.0008126777732629012	Imidazoles	chemical
+e1470	0.0008126777732629012	Heterocyclic Compounds, Bridged-Ring	chemical
+e1464	0.0008126777732629012	Heptanes	chemical
+e1343	0.0008126777732629012	Arthropod Proteins	chemical
+e1526	0.0008126777732629012	Metalloproteins	chemical
+e1525	0.0008126777732629012	Metalloporphyrins	chemical
+e1492	0.0008126777732629012	Hypoxanthines	chemical
+e1456	0.0008126777732629012	Glycoconjugates	chemical
+e1453	0.0008126777732629012	Glycerides	chemical
+e1582	0.0008126777732629012	Physiological Effects of Drugs	chemical
+e1420	0.0008126777732629012	Diterpenes, Kaurane	chemical
+e1508	0.0008126777732629012	Ketoses	chemical
+e1611	0.0008126777732629012	Pterins	chemical
+e1440	0.0008126777732629012	Fish Oils	chemical
+e1439	0.0008126777732629012	Ferrous Compounds	chemical
+e1438	0.0008126777732629012	Ferric Compounds	chemical
+e1433	0.0008126777732629012	Ethylamines	chemical
+e1428	0.0008126777732629012	Estrogens	chemical
+e1475	0.0008126777732629012	Hormones, Hormone Substitutes, and Hormone Antagonists	chemical
+e1479	0.0008126777732629012	Hydrocarbons, Brominated	chemical
+e1574	0.0008126777732629012	Phenylalanine	chemical
+e1497	0.0008126777732629012	Indolizines	chemical
+e1545	0.0008126777732629012	Nitric Acid	chemical
+e1541	0.0008126777732629012	Nerve Tissue Proteins	chemical
+e1523	0.0008126777732629012	Membrane Proteins	chemical
+e1591	0.0008126777732629012	Plant Exudates	chemical
+e1511	0.0008126777732629012	Lactates	chemical
+e1678	0.0008126777732629012	Xanthurenates	chemical
+e1404	0.0008126777732629012	Cytokines	chemical
+e1640	0.0008126777732629012	Sugar Phosphates	chemical
+e1494	0.0008126777732629012	Imino Acids	chemical
+e1480	0.0008126777732629012	Hydrocarbons, Chlorinated	chemical
+e1671	0.0008126777732629012	Tryptophan	chemical
+e1621	0.0008126777732629012	Quinolines	chemical
+e1491	0.0008126777732629012	Hydroxyquinolines	chemical
+e1490	0.0008126777732629012	Hydroxypropiophenone	chemical
+e1489	0.0008126777732629012	Hydroxylamines	chemical
+e1483	0.0008126777732629012	Hydrogen Sulfide	chemical
+e1294	0.0008126777732629012	17-Hydroxycorticosteroids	chemical
+e1293	0.0008126777732629012	11-Hydroxycorticosteroids	chemical
+e1425	0.0008126777732629012	Electrolytes	chemical
+e1635	0.0008126777732629012	Spirostans	chemical
+e1310	0.0008126777732629012	Adrenal Cortex Hormones	chemical
+e1330	0.0008126777732629012	Androstanes	chemical
+e1391	0.0008126777732629012	Complex Mixtures	chemical
+e1353	0.0008126777732629012	Benzylidene Compounds	chemical
+e1352	0.0008126777732629012	Benzyl Compounds	chemical
+e1342	0.0008126777732629012	Arsenicals	chemical
+e1338	0.0008126777732629012	Anthracenes	chemical
+e1503	0.0008126777732629012	Ions	chemical
+e1333	0.0008126777732629012	Anhydrides	chemical
+e1332	0.0008126777732629012	Androstenols	chemical
+e1329	0.0008126777732629012	Ammonium Compounds	chemical
+e1520	0.0008126777732629012	Manufactured Materials	chemical
+e1553	0.0008126777732629012	Onium Compounds	chemical
+e1326	0.0008126777732629012	Amino Sugars	chemical
+e1316	0.0008126777732629012	Alkynes	chemical
+e1556	0.0008126777732629012	Organomercury Compounds	chemical
+e1315	0.0008126777732629012	Alkylmercury Compounds	chemical
+e1312	0.0008126777732629012	Alkalies	chemical
+e1177	0.0008126777732629012	Laurus nobilis - leaf	organism_with_part
+e1472	0.0008126777732629012	Hexanols	chemical
+e1363	0.0008126777732629012	Biomedical and Dental Materials	chemical
+e1366	0.0008126777732629012	Blood Coagulation Factors	chemical
+e1414	0.0008126777732629012	Diosgenin	chemical
+e1392	0.0008126777732629012	Corpus Luteum Hormones	chemical
+e1533	0.0008126777732629012	Methylamines	chemical
+e1412	0.0008126777732629012	Dietary Fats, Unsaturated	chemical
+e1435	0.0008126777732629012	Fats	chemical
+e1411	0.0008126777732629012	Dietary Fats	chemical
+e1407	0.0008126777732629012	Diamines	chemical
+e1477	0.0008126777732629012	Hydrocarbons, Alicyclic	chemical
+e1394	0.0008126777732629012	Cycloheptanes	chemical
+e1393	0.0008126777732629012	Cyanates	chemical
+e1667	0.0008126777732629012	Tricarboxylic Acids	chemical
+e1549	0.0008126777732629012	Norbornanes	chemical
+e1390	0.0008126777732629012	Citrates	chemical
+e1388	0.0008126777732629012	Chromones	chemical
+e1668	0.0008126777732629012	Trimethyl Ammonium Compounds	chemical
+e1382	0.0008126777732629012	Cholestadienes	chemical
+e1450	0.0008126777732629012	Gastrointestinal Hormones	chemical
+e1544	0.0008126777732629012	Neutral Glycosphingolipids	chemical
+e1376	0.0008126777732629012	Cellulose	chemical
+e1387	0.0008126777732629012	Chromans	chemical
+e1548	0.0008126777732629012	Nitrous Acid	chemical
+e1557	0.0008126777732629012	Organometallic Compounds	chemical
+e1558	0.0008126777732629012	Oxazines	chemical
+e1897	0.0008126777732629012	Scophthalmidae	organism
+e2344	0.0008126777732629012	Anthistiriinae	organism
+e2089	0.0008126777732629012	Piper	organism
+e1879	0.0008126777732629012	Piperaceae	organism
+e1988	0.0008126777732629012	Empetrum	organism
+e1855	0.0008126777732629012	Myricaceae	organism
+e2388	0.0008126777732629012	Allieae	organism
+e2260	0.0008126777732629012	Allioideae	organism
+e2116	0.0008126777732629012	Scophthalmus	organism
+e2114	0.0008126777732629012	Scomber	organism
+e1999	0.0008126777732629012	Flammulina	organism
+e2448	0.0008126777732629012	Scombrini	organism
+e1980	0.0008126777732629012	Delphinapterus	organism
+e1850	0.0008126777732629012	Monodontidae	organism
+e2043	0.0008126777732629012	Medicago	organism
+e1994	0.0008126777732629012	Eugenia	organism
+e1703	0.0008126777732629012	Eugenia group	organism
+e2172	0.0008126777732629012	Triticodae	organism
+e2029	0.0008126777732629012	Levisticum	organism
+e2428	0.0008126777732629012	Lepidieae	organism
+e2002	0.0008126777732629012	Gallus	organism
+e1562	0.0008126777732629012	Oxygen Compounds	chemical
+e2385	0.0008126777732629012	Eucarida	organism
+e2444	0.0008126777732629012	Potentilleae	organism
+e2170	0.0008126777732629012	Rosoideae incertae sedis	organism
+e2022	0.0008126777732629012	Lathyrus	organism
+e1844	0.0008126777732629012	Linaceae	organism
+e2374	0.0008126777732629012	Sarcopterygii	organism
+e2017	0.0008126777732629012	Juglans	organism
+e1984	0.0008126777732629012	Durio	organism
+e2362	0.0008126777732629012	Nepetinae	organism
+e2436	0.0008126777732629012	Onagreae	organism
+e2021	0.0008126777732629012	Lagenaria	organism
+e2115	0.0008126777732629012	Scomberomorus	organism
+e2174	0.0008126777732629012	rosids incertae sedis	organism
+e2178	0.0008126777732629012	Arecales	organism
+e1896	0.0008126777732629012	Scombridae	organism
+e1908	0.0008126777732629012	Acca	organism
+e1832	0.0008126777732629012	Fagaceae	organism
+e2252	0.0008126777732629012	Eumalacostraca	organism
+e1778	0.0008126777732629012	Malacostraca	organism
+e1745	0.0008126777732629012	Sinodielsia clade	organism
+e2412	0.0008126777732629012	Colocasieae	organism
+e2265	0.0008126777732629012	Aroideae	organism
+e1587	0.0008126777732629012	Piperidines	chemical
+e1610	0.0008126777732629012	Pteridines	chemical
+e1607	0.0008126777732629012	Propanols	chemical
+e1605	0.0008126777732629012	Progesterone Congeners	chemical
+e1604	0.0008126777732629012	Pregnenes	chemical
+e1602	0.0008126777732629012	Pregnanes	chemical
+e1592	0.0008126777732629012	Plant Preparations	chemical
+e1589	0.0008126777732629012	Pituitary Hormones, Posterior	chemical
+e1588	0.0008126777732629012	Pituitary Hormones	chemical
+e1585	0.0008126777732629012	Picolines	chemical
+e1496	0.0008126777732629012	Indolizidines	chemical
+e1584	0.0008126777732629012	Phytochemicals	chemical
+e1455	0.0008126777732629012	Glycerophospholipids	chemical
+e1579	0.0008126777732629012	Phosphatidic Acids	chemical
+e1577	0.0008126777732629012	Phloroglucinol	chemical
+e1623	0.0008126777732629012	Reactive Oxygen Species	chemical
+e1590	0.0008126777732629012	Plant Extracts	chemical
+e1563	0.0008126777732629012	Palmitic Acids	chemical
+e1680	0.0008126777732629012	para-Aminobenzoates	chemical
+e1360	0.0008126777732629012	Biogenic Polyamines	chemical
+e1618	0.0008126777732629012	Pyrroles	chemical
+e1624	0.0008126777732629012	Retinoids	chemical
+e1424	0.0008126777732629012	Elastomers	chemical
+e1600	0.0008126777732629012	Pore Forming Cytotoxic Proteins	chemical
+e1571	0.0008126777732629012	Pharmacologic Actions	chemical
+e1630	0.0008126777732629012	Selenium Compounds	chemical
+e1505	0.0008126777732629012	Isocyanates	chemical
+e1581	0.0008126777732629012	Phosphorus Compounds	chemical
+e1423	0.0008126777732629012	Eicosanoids	chemical
+e1628	0.0008126777732629012	Secologanin Tryptamine Alkaloids	chemical
+e1676	0.0008126777732629012	Xanthenes	chemical
+e1664	0.0008126777732629012	Toluene	chemical
+e1656	0.0008126777732629012	Thiazoles	chemical
+e1654	0.0008126777732629012	Tetrahydronaphthalenes	chemical
+e1652	0.0008126777732629012	Testosterone Congeners	chemical
+e1646	0.0008126777732629012	Sulfonic Acids	chemical
+e1645	0.0008126777732629012	Sulfones	chemical
+e1634	0.0008126777732629012	Spermidine	chemical
+e1498	0.0008126777732629012	Inflammation Mediators	chemical
+e1629	0.0008126777732629012	Secosteroids	chemical
+e1539	0.0008126777732629012	Mycotoxins	chemical
+e1311	0.0008126777732629012	Alkadienes	chemical
+e1625	0.0008126777732629012	Ribonucleotides	chemical
+e1261	0.0008126777732629012	Flammulina velutipes - mycelium	organism_with_part
+e1231	0.0008126777732629012	sakuranetin	chemical
+e1217	0.0008126777732629012	28-O-beta-D-glucopyranosyl-2alpha,3alpha,19-trihydoxy-18,19-secours-11,13(18)-dien-28-oic acid	chemical
+e1263	0.0008126777732629012	Solanum lycopersicum - fruit	organism_with_part
+e1268	0.0008126777732629012	Vaccinium angustifolium - stem	organism_with_part
+e1197	0.0008126777732629012	Serine	chemical
+e1206	0.0008126777732629012	chamazulene	chemical
+e1179	0.0008126777732629012	Citrus sinensis - fruit	organism_with_part
+e1162	0.0008126777732629012	Psidium guajava - leaf	organism_with_part
+e1148	0.0008126777732629012	Katsuwonus pelamis	organism
+e1152	0.0008126777732629012	Ribes nigrum - juice	organism_with_part
+e1127	0.0008126777732629012	p-coumaric acid	chemical
+e1171	0.0008126777732629012	Raphanus sativus - leaf	organism_with_part
+e1099	0.0008126777732629012	N-benzoylphenylalaninyl-N-benzoylphenylalaninate	chemical
+e1132	0.0008126777732629012	proanthocyanidin A2	chemical
+e1121	0.0008126777732629012	genistin	chemical
+e1183	0.0008126777732629012	Allium ampeloprasum - leaf	organism_with_part
+e1144	0.0008126777732629012	Metacarcinus magister	organism
+e1149	0.0008126777732629012	Angelica keiskei - juice	organism_with_part
+e1166	0.0008126777732629012	Mangifera indica - seed	organism_with_part
+e1240	0.0008126777732629012	Engraulis encrasicolus	organism
+e1210	0.0008126777732629012	fagopyrin	chemical
+e1279	0.0008126777732629012	Averrhoa carambola - juice	organism_with_part
+e1264	0.0008126777732629012	Diospyros kaki - calyx	organism_with_part
+e1256	0.0008126777732629012	Vitis vinifera - fruit	organism_with_part
+e1302	0.0008126777732629012	Acids, Aldehydic	chemical
+e1247	0.0008126777732629012	Salvia elegans	organism
+e1191	0.0008126777732629012	2,3-dimethylmaleic anhydride	chemical
+e1283	0.0008126777732629012	Colocasia esculenta - root	organism_with_part
+e1262	0.0008126777732629012	Fennel - root	organism_with_part
+e1218	0.0008126777732629012	lauric acid	chemical
+e1255	0.0008126777732629012	Cocos nucifera - seed	organism_with_part
+e1265	0.0008126777732629012	Vaccinium angustifolium - fruit	organism_with_part
+e1192	0.0008126777732629012	4-hydroxyisoleucine	chemical
+e1203	0.0008126777732629012	beta-bisabolene	chemical
+e1270	0.0008126777732629012	Olea europaea - juice	organism_with_part
+e1226	0.0008126777732629012	4-Aminobenzoic Acid	chemical
+e1272	0.0008126777732629012	Passiflora edulis - nectar	organism_with_part
+e1209	0.0008126777732629012	ethyl gallate	chemical
+e1281	0.0008126777732629012	Helianthus annuus - wax	organism_with_part
+e1266	0.0008126777732629012	Vaccinium angustifolium - leaf	organism_with_part
+e1248	0.0008126777732629012	Brassica napus var. napus	organism
+e1119	0.0008126777732629012	faradiol	chemical
+e1174	0.0008126777732629012	Psidium cattleyanum - leaf	organism_with_part
+e1163	0.0008126777732629012	Syzygium cumini - berry	organism_with_part
+e1155	0.0008126777732629012	Capparis spinosa - hypocotyl	organism_with_part
+e1111	0.0008126777732629012	cyclo-dopa	chemical
+e1124	0.0008126777732629012	menthone	chemical
+e1161	0.0008126777732629012	Allium sativum - leaf	organism_with_part
+e1112	0.0008126777732629012	Deoxyribonucleotides	chemical
+e1142	0.0008126777732629012	Oncorhynchus keta	organism
+e1101	0.0008126777732629012	umbelliprenin	chemical
+e1094	0.0008126777732629012	Acetylcholine	chemical
+e1130	0.0008126777732629012	persin	chemical
+e1146	0.0008126777732629012	Pouteria sapota	organism
+e1157	0.0008126777732629012	Fagopyrum esculentum - hull	organism_with_part
+e1164	0.0008126777732629012	Phaseolus lunatus - leaf	organism_with_part
+e1175	0.0008126777732629012	Brassica napus - grain	organism_with_part
+e1165	0.0008126777732629012	Loquat - leaf	organism_with_part
+e1138	0.0008126777732629012	triethanolamine	chemical
+e1126	0.0008126777732629012	octyl acetate	chemical
+e1141	0.0008126777732629012	Ictalurus punctatus	organism
+e1184	0.0008126777732629012	Laurus nobilis	organism
+e1102	0.0008126777732629012	undecaprenol	chemical
+e1180	0.0008126777732629012	Fagopyrum tataricum - seed	organism_with_part
+e1167	0.0008126777732629012	Mangifera indica - skin	organism_with_part
+e1120	0.0008126777732629012	Genistein	chemical
+e1181	0.0008126777732629012	Camellia sinensis - seed	organism_with_part
+e1114	0.0008126777732629012	ent-7beta,11alpha,14-trihydroxy-18-aldehyde-11beta-20-epoxy-kaur-16-en15-one	chemical
+e1156	0.0008126777732629012	Apium graveolens Dulce Group - stalk	organism_with_part
+e1170	0.0008126777732629012	Garcinia mangostana - exocarp	organism_with_part
+e1158	0.0008126777732629012	Coriandrum sativum - stem	organism_with_part
+e1100	0.0008126777732629012	Pyridoxal	chemical
+e1168	0.0008126777732629012	Brassica rapa subsp. pekinensis - flower	organism_with_part
+e1150	0.0008126777732629012	Persea americana - tissue	organism_with_part
+e1172	0.0008126777732629012	Hippophae rhamnoides - berry	organism_with_part
+e1131	0.0008126777732629012	Phosphatidylcholines	chemical
+e1178	0.0008126777732629012	Prunus avium - juice	organism_with_part
+e1122	0.0008126777732629012	Glutathione	chemical
+e1147	0.0008126777732629012	Chanos chanos	organism
+e1182	0.0008126777732629012	Allium ampeloprasum - bulb	organism_with_part
+e1109	0.0008126777732629012	isoborneol	chemical
+e1159	0.0008126777732629012	Taraxacum officinale - leaf	organism_with_part
+e1145	0.0008126777732629012	Vitis labrusca	organism
+e1169	0.0008126777732629012	Pyrus communis - juice	organism_with_part
+e1151	0.0008126777732629012	Hordeum vulgare - endosperm	organism_with_part
+e1244	0.0008126777732629012	Byrsonima crassifolia	organism
+e1245	0.0008126777732629012	Tetragonia tetragonoides	organism
+e2383	0.0008126777732629012	Characiphysae	organism
+e1448	0.0008126777732629012	Galactosides	chemical
+e1519	0.0008126777732629012	Mannans	chemical
+e1306	0.0008126777732629012	Acrolein	chemical
+e1447	0.0008126777732629012	Galactolipids	chemical
+e1299	0.0008126777732629012	Acetonitriles	chemical
+e1416	0.0008126777732629012	Dioxolanes	chemical
+e1370	0.0008126777732629012	Butadienes	chemical
+e1350	0.0008126777732629012	Benzoquinones	chemical
+e1252	0.0008126777732629012	Manihot esculenta - stem	organism_with_part
+e1215	0.0008126777732629012	furfuryl alcohol	chemical
+e1214	0.0008126777732629012	Fucose	chemical
+e1273	0.0008126777732629012	Citrus maxima - leaf	organism_with_part
+e1202	0.0008126777732629012	benzothiazole	chemical
+e1289	0.0008126777732629012	Illicium verum	organism
+e1205	0.0008126777732629012	capsanthin	chemical
+e1415	0.0008126777732629012	Dioxins and Dioxin-like Compounds	chemical
+e1278	0.0008126777732629012	Illicium verum - fruit	organism_with_part
+e1280	0.0008126777732629012	Averrhoa carambola - root	organism_with_part
+e1576	0.0008126777732629012	Phenylpropionates	chemical
+e1458	0.0008126777732629012	Glycosaminoglycans	chemical
+e1409	0.0008126777732629012	Diet, Food, and Nutrition	chemical
+e1307	0.0008126777732629012	Acrylates	chemical
+e1679	0.0008126777732629012	ortho-Aminobenzoates	chemical
+e1578	0.0008126777732629012	Phorbols	chemical
+e1653	0.0008126777732629012	Tetrahydroisoquinolines	chemical
+e1615	0.0008126777732629012	Pyrazoles	chemical
+e1619	0.0008126777732629012	Pyrrolidines	chemical
+e1560	0.0008126777732629012	Oximes	chemical
+e1638	0.0008126777732629012	Succinates	chemical
+e1422	0.0008126777732629012	Drug Combinations	chemical
+e1513	0.0008126777732629012	Lauric Acids	chemical
+e1521	0.0008126777732629012	Marine Toxins	chemical
+e1616	0.0008126777732629012	Pyrethrins	chemical
+e1567	0.0008126777732629012	Peptide Fragments	chemical
+e1406	0.0008126777732629012	Depsides	chemical
+e1445	0.0008126777732629012	Fumarates	chemical
+e1636	0.0008126777732629012	Stearic Acids	chemical
+e1534	0.0008126777732629012	Methylmercury Compounds	chemical
+e1287	0.0008126777732629012	Matteuccia struthiopteris	organism
+e1271	0.0008126777732629012	Matteuccia struthiopteris - rhizome	organism_with_part
+e1253	0.0008126777732629012	Cinnamomum verum - leaf	organism_with_part
+e1297	0.0008126777732629012	Acetanilides	chemical
+e1260	0.0008126777732629012	Cichorium endivia - stalk	organism_with_part
+e1285	0.0008126777732629012	Lupinus albus - seed	organism_with_part
+e1340	0.0008126777732629012	Antimicrobial Peptides	chemical
+e1225	0.0008126777732629012	Yohimbine	chemical
+e1274	0.0008126777732629012	Oryza sativa - grain	organism_with_part
+e1187	0.0008126777732629012	2',4'-dihydroxy-4-methoxydihydrochalcone	chemical
+e1207	0.0008126777732629012	chlorantranilipole	chemical
+e1219	0.0008126777732629012	Lentinan	chemical
+e1259	0.0008126777732629012	Cichorium endivia - root	organism_with_part
+e1249	0.0008126777732629012	Thunnus albacares	organism
+e1239	0.0008126777732629012	Apium graveolens Rapaceum Group	organism
+e1284	0.0008126777732629012	Lupinus albus - fruit	organism_with_part
+e1257	0.0008126777732629012	Verbena officinalis - leaf	organism_with_part
+e1251	0.0008126777732629012	Artocarpus altilis - leaf	organism_with_part
+e1200	0.0008126777732629012	alpha-terpineol	chemical
+e1300	0.0008126777732629012	Acids	chemical
+e1258	0.0008126777732629012	Cuminum cyminum - fruit	organism_with_part
+e1189	0.0008126777732629012	neoxanthin	chemical
+e1267	0.0008126777732629012	Vaccinium angustifolium - root	organism_with_part
+e1446	0.0008126777732629012	Fused-Ring Compounds	chemical
+e1242	0.0008126777732629012	Origanum x majoricum	organism
+e1238	0.0008126777732629012	zingerone	chemical
+e1243	0.0008126777732629012	Citrus aurantiifolia	organism
+e1669	0.0008126777732629012	Triose Sugar Alcohols	chemical
+e1637	0.0008126777732629012	Stilbestrols	chemical
+e1282	0.0008126777732629012	Ocimum basilicum - leaf	organism_with_part
+e1250	0.0008126777732629012	Malpighia emarginata - seed	organism_with_part
+e1229	0.0008126777732629012	prodelphinidin B-2 3'-O-gallate	chemical
+e1216	0.0008126777732629012	Glucuronic Acid	chemical
+e1208	0.0008126777732629012	lyoniside	chemical
+e1241	0.0008126777732629012	Equus caballus	organism
+e1194	0.0008126777732629012	tert-butyloxycarbonyl-tryptophyl-leucyl-asparagine	chemical
+e1288	0.0008126777732629012	Tilia cordata	organism
+e1275	0.0008126777732629012	Tilia cordata - leaf	organism_with_part
+e1276	0.0008126777732629012	Sorghum bicolor - seed	organism_with_part
+e1269	0.0008126777732629012	Myristica fragrans - wood	organism_with_part
+e1193	0.0008126777732629012	6-(Methylsulfinyl)hexyl isothiocyanate	chemical
+e1502	0.0008126777732629012	Interferons	chemical
+e1583	0.0004063388866314506	Physiological Phenomena	chemical
+e1651	0.0004063388866314506	Technology, Industry, and Agriculture	chemical
+e250	0.0004063388866314506	luteolin-7-O-glucoside	chemical
+e137	0.0004063388866314506	citrate	chemical
+e1570	0.0004063388866314506	Pharmaceutical Preparations	chemical
+e139	0.0004063388866314506	crocetin	chemical
+e196	0.0004063388866314506	gamma-mangostin	chemical
+e1442	0.0004063388866314506	Food and Beverages	chemical
+e1517	0.0004063388866314506	Macromolecular Substances	chemical
+e2173	0.0004063388866314506	cellular organisms	organism
+e1550	0.0004063388866314506	Nucleic Acids, Nucleotides, and Nucleosides	chemical
+e1380	0.0004063388866314506	Chemical Actions and Uses	chemical

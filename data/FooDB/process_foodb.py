@@ -17,6 +17,7 @@ def parse_argument() -> argparse.Namespace:
     parser.add_argument(
         "--food_filepath",
         type=str,
+        required=True,
         help="Food.csv filepath.",
     )
 
@@ -29,6 +30,7 @@ def parse_argument() -> argparse.Namespace:
     parser.add_argument(
         "--output_filepath",
         type=str,
+        required=True,
         help="Output food names filepath to be used for query.",
     )
 

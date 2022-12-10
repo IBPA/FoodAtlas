@@ -1,0 +1,620 @@
+name	name_scientific	ncbi_taxonomy_id
+Angelica	Angelica keiskei	357850
+Savoy cabbage	Brassica oleracea var. sabauda	1216010
+Kiwi	Actinidia chinensis	3625
+Allium	Allium	4678
+Garden onion	Allium cepa	4679
+Garlic	Allium sativum	4682
+Chives	Allium schoenoprasum	74900
+Lemon verbena	Aloysia triphylla	542672
+Cashew nut	Anacardium occidentale	171929
+Pineapple	Ananas comosus	4615
+Dill	Anethum graveolens	40922
+Custard apple	Annona reticulata	301862
+Wild celery	Apium graveolens	4045
+Peanut	Arachis hypogaea	3818
+Burdock	Arctium lappa	4217
+Horseradish	Armoracia rusticana	3704
+Tarragon	Artemisia dracunculus	72341
+Mugwort	Artemisia vulgaris	4220
+Asparagus	Asparagus officinalis	4686
+Oat	Avena sativa	4498
+Star fruit	Averrhoa carambola	28974
+Brazil nut	Bertholletia excelsa	3645
+Common beet	Beta vulgaris	161934
+Borage	Borago officinalis	13363
+Chinese mustard	Brassica juncea	3707
+Swede	Brassica napus	3708
+Rape	Brassica napus var. napus	138011
+Common cabbage	Brassica oleracea	3712
+Cauliflower	Brassica oleracea var. botrytis	3715
+Brussel sprouts	Brassica oleracea var. gemmifera	178616
+Kohlrabi	Brassica oleracea var. gongylodes	109379
+Broccoli	Brassica oleracea var. italica	36774
+Chinese cabbage	Brassica rapa	3711
+Turnip	Brassica rapa var. rapa	51350
+Pigeon pea	Cajanus cajan	3821
+Tea	Camellia sinensis	4442
+Capers	Capparis spinosa	65558
+Pepper	Capsicum annuum	4072
+Papaya	Carica papaya	3649
+Safflower	Carthamus tinctorius	4222
+Caraway	Carum carvi	48032
+Pecan nut	Carya illinoinensis	32201
+Chestnut	Castanea	21019
+Roman camomile	Chamaemelum nobile	99037
+Chickpea	Cicer arietinum	3827
+Endive	Cichorium endivia	114280
+Chicory	Cichorium intybus	13427
+Chinese cinnamon	Cinnamomum aromaticum	119260
+Ceylon cinnamon	Cinnamomum verum	128608
+Watermelon	Citrullus lanatus	3654
+Lime	Citrus aurantiifolia	159033
+Lemon	Citrus limon	2708
+Pummelo	Citrus maxima	37334
+Mandarin orange (Clementine, Tangerine)	Citrus reticulata	85571
+Sweet orange	Citrus sinensis	2711
+Coffee	Coffea	13442
+Arabica coffee	Coffea arabica	13443
+Robusta coffee	Coffea canephora	49390
+Coriander	Coriandrum sativum	4047
+Common hazelnut	Corylus avellana	13451
+Saffron	Crocus sativus	82528
+Muskmelon	Cucumis melo	3656
+Cucumber	Cucumis sativus	3659
+Cucurbita	Cucurbita	3660
+Cumin	Cuminum cyminum	52462
+Turmeric	Curcuma longa	136217
+Quince	Cydonia oblonga	36610
+Lemon grass	Cymbopogon citratus	66014
+Globe artichoke	Cynara scolymus	59895
+Wild carrot	Daucus carota	4039
+Japanese persimmon	Diospyros kaki	35925
+Cardamom	Elettaria cardamomum	105181
+Black crowberry	Empetrum nigrum	191066
+Loquat	Eriobotrya japonica	32224
+Rocket salad (ssp.)	Eruca vesicaria ssp. sativa	29727
+Wax apple	Eugenia javanica	119950
+Common buckwheat	Fagopyrum esculentum	3617
+Tartary buckwheat	Fagopyrum tataricum	62330
+Fig	Ficus carica	3494
+Fennel	Foeniculum vulgare	48038
+Strawberry	Fragaria X ananassa	3747
+Black huckleberry	Gaylussacia baccata	128893
+Soy bean	Glycine max	3847
+Sunflower	Helianthus annuus	4232
+Sea-buckthornberry	Hippophae rhamnoides	193516
+Barley	Hordeum vulgare	4513
+Hyssop	Hyssopus officinalis	39324
+Star anise	Illicium verum	124778
+Swamp cabbage	Ipomoea aquatica	89636
+Sweet potato	Ipomoea batatas	4120
+Black walnut	Juglans nigra	16719
+Common walnut	Juglans regia	51240
+Lettuce	Lactuca sativa	4236
+Grass pea	Lathyrus sativus	3860
+Sweet bay	Laurus nobilis	85223
+Lentils	Lens culinaris	3864
+Garden cress	Lepidium sativum	33125
+Lovage	Levisticum officinale	48042
+Flaxseed	Linum usitatissimum	4006
+Lichee	Litchi chinensis	151069
+Lupine	Lupinus	3869
+Apple	Malus pumila	283210
+Mango	Mangifera indica	29780
+German camomile	Matricaria recutita	127986
+Lemon balm	Melissa officinalis	39338
+Mentha	Mentha	21819
+Orange mint	Mentha aquatica	190902
+Cornmint	Mentha arvensis	292239
+Spearmint	Mentha spicata	29719
+Peppermint	Mentha X piperita	34256
+Medlar	Mespilus germanica	36616
+Bitter gourd	Momordica charantia	3673
+Mulberry	Morus	3497
+Black mulberry	Morus nigra	85232
+Nutmeg	Myristica fragrans	51089
+Sweet basil	Ocimum basilicum	39350
+Evening primrose	Oenothera biennis	3942
+Olive	Olea europaea	4146
+Sweet marjoram	Origanum majorana	268884
+Pot marjoram	Origanum onites	452416
+Common oregano	Origanum vulgare	39352
+Rice	Oryza sativa	4530
+Millet	Panicum miliaceum	4540
+Poppy	Papaver	3468
+Passion fruit	Passiflora edulis	78168
+Parsnip	Pastinaca sativa	4041
+Avocado	Persea americana	3435
+Parsley	Petroselinum crispum	4043
+Scarlet bean	Phaseolus coccineus	3886
+Lima bean	Phaseolus lunatus	3884
+Common bean	Phaseolus vulgaris	3885
+Date	Phoenix dactylifera	42345
+Black chokeberry	Photinia melanocarpa	661339
+Anise	Pimpinella anisum	271192
+Pine nut	Pinus	3337
+Pepper (Spice)	Piper nigrum	13216
+Pistachio	Pistacia vera	55513
+Common pea	Pisum sativum	3888
+Purslane	Portulaca oleracea	46147
+Prunus (Cherry, Plum)	Prunus	3754
+Apricot	Prunus armeniaca	36596
+Sweet cherry	Prunus avium	42229
+Sour cherry	Prunus cerasus	140311
+European plum	Prunus domestica	3758
+Almond	Prunus dulcis	3755
+Peach	Prunus persica	3760
+Guava	Psidium guajava	120290
+Pomegranate	Punica granatum	22663
+Pear	Pyrus communis	23211
+Radish	Raphanus sativus	3726
+Garden rhubarb	Rheum rhabarbarum	3621
+Blackcurrant	Ribes nigrum	78511
+Redcurrant	Ribes rubrum	175228
+Gooseberry	Ribes uva-crispa	135518
+Watercress	Rorippa nasturtium-aquaticum	135518
+Rosemary	Rosmarinus officinalis	39367
+Rubus (Blackberry, Raspberry)	Rubus	23216
+Cloudberry	Rubus chamaemorus	57936
+Red raspberry	Rubus idaeus	32247
+Black raspberry	Rubus occidentalis	75079
+Sorrel	Rumex acetosa	41241
+Common sage	Salvia officinalis	38868
+Black elderberry	Sambucus nigra	4202
+Summer savory	Satureja hortensis	49987
+Winter savory	Satureja montana	49988
+Rye	Secale cereale	4550
+Sesame	Sesamum orientale	4182
+Garden tomato	Solanum lycopersicum	4081
+Cherry tomato	Solanum lycopersicum var. cerasiforme	195583
+Garden tomato (var.)	Solanum lycopersicum var. lycopersicum	397755
+Eggplant	Solanum melongena	4111
+Potato	Solanum tuberosum	4113
+Rowanberry	Sorbus aucuparia	36599
+Sorghum	Sorghum bicolor	4558
+Spinach	Spinacia oleracea	3562
+Cloves	Syzygium aromaticum	219868
+Tamarind	Tamarindus indica	58860
+Dandelion	Taraxacum officinale	50225
+Cocoa bean	Theobroma cacao	3641
+Common thyme	Thymus vulgaris	49992
+Linden	Tilia	64580
+Small-leaf linden	Tilia cordata	172266
+Fenugreek	Trigonella foenum-graecum	78534
+Common wheat	Triticum aestivum	4565
+Vaccinium (Blueberry, Cranberry, Huckleberry)	Vaccinium	13749
+Lowbush blueberry	Vaccinium angustifolium	472369
+Sparkleberry	Vaccinium arboreum	229201
+Highbush blueberry	Vaccinium corymbosum	69266
+American cranberry	Vaccinium macrocarpon	13750
+Bilberry	Vaccinium myrtillus	180763
+Lingonberry	Vaccinium vitis-idaea	180772
+Vanilla	Vanilla	51238
+Common verbena	Verbena officinalis	79772
+Broad bean	Vicia faba	3906
+Adzuki bean	Vigna angularis	3914
+Gram bean	Vigna mungo	3915
+Mung bean	Vigna radiata	157791
+Climbing bean	Vigna umbellata	87088
+Cowpea	Vigna unguiculata	3917
+Muscadine grape	Vitis rotundifolia	103349
+Common grape	Vitis vinifera	29760
+Corn	Zea mays	4577
+Ginger	Zingiber officinale	94328
+Arctic blackberry	Rubus arcticus	70741
+Banana	Musa acuminata	4641
+Bayberry	Myrica	3509
+Elliott's blueberry	Vaccinium elliottii	283798
+Canada blueberry	Vaccinium myrtilloides	1503870
+Bog bilberry	Vaccinium uliginosum	190548
+Buffalo currant	Ribes aureum var. villosum	23283
+Celeriac	Apium graveolens var. rapaceum	278110
+Celery stalks	Apium graveolens var. dulce	117781
+Chinese chives	Allium tuberosum	4683
+European cranberry	Vaccinium oxycoccos	516948
+Deerberry	Vaccinium stamineum	176259
+Ginseng	Panax	4054
+Cascade huckleberry	Vaccinium deliciosum	190531
+Oval-leaf huckleberry	Vaccinium ovalifolium	190544
+Evergreen huckleberry	Vaccinium ovatum	84019
+Red huckleberry	Vaccinium parvifolium	180766
+Longan	Dimocarpus longan	128017
+Macadamia nut (M. tetraphylla)	Macadamia tetraphylla	512563
+Garden onion (var.)	Allium cepa var. cepa	4679
+Summer grape	Vitis aestivalis	3605
+Fox grape	Vitis labrusca	103355
+Nectarine	Prunus persica var. nucipersica	323851
+Peach (var.)	Prunus persica var. persica	323852
+Pepper (C. baccatum)	Capsicum baccatum var. baccatum	165788
+Pepper (C. chinense)	Capsicum chinense	80379
+Pepper (Capsicum)	Capsicum	4071
+Rambutan	Nephelium lappaceum	151071
+Red rice	Oryza rufipogon	4529
+Annual wild rice	Zizania aquatica	75727
+Swiss chard	Beta vulgaris ssp. cicla	1527200
+Lemon thyme	Thymus pulegioides	751873
+Tronchuda cabbage	Brassica oleracea var. costata	416546
+Japanese walnut	Juglans ailanthifolia	91209
+Welsh onion	Allium fistulosum	35875
+Hard wheat	Triticum durum	4567
+Shallot	Allium ascalonicum	1476995
+Rocket salad	Eruca vesicaria	180536
+Carrot	Daucus carota ssp. sativus	79200
+Black cabbage	Brassica oleracea var. viridis	3713
+Half-highbush blueberry	Vaccinium angustifolium X Vaccinium corymbosum	934696
+Celery leaves	Apium graveolens var. secalinum	941588
+Chicory leaves	Cichorium intybus var. foliosum	13427
+Komatsuna	Brassica rapa var. perviridis	344680
+Pak choy	Brassica rapa var. chinensis	93385
+Napa cabbage	Brassica rapa var. pekinensis	51351
+Chicory roots	Cichorium intybus var. sativum	13427
+Grapefruit/Pummelo hybrid	Citrus paradisi X Citrus maxima	37656
+Grapefruit	Citrus X paradisi	37656
+Kai-lan	Brassica oleracea var. alboglabra	3714
+Italian oregano	Origanum X majoricum	1384207
+Daikon radish	Raphanus sativus var. longipinnatus	41679
+Black radish	Raphanus sativus var. niger	41679
+Radish (var.)	Raphanus sativus var. sativus	240228
+Pineappple sage	Salvia elegans	888065
+Skunk currant	Ribes glandulosum	175226
+Abalone	Haliotis	6452
+Abiyuch	Crateva religiosa	202634
+Acerola	Malpighia emarginata	151847
+Acorn	Quercus	3511
+Winter squash	Cucurbita maxima	3661
+Agar	Eucheuma	31444
+Red king crab	Paralithodes camtschaticus	6741
+Alfalfa	Medicago sativa	3879
+Allspice	Pimenta dioica	375272
+Amaranth	Amaranthus	3564
+Arrowhead	Sagittaria latifolia	15008
+Arrowroot	Maranta arundinacea	210060
+Asian pear	Pyrus pyrifolia	3767
+Atlantic herring	Clupea harengus harengus	7950
+Atlantic mackerel	Scomber scombrus	13677
+Painted comber	Serranus scriba	349661
+Atlantic pollock	Pollachius pollachius	185739
+Atlantic wolffish	Anarhichas lupus	8204
+Bamboo shoots	Phyllostachys edulis	38705
+Striped bass	Morone saxatilis	34816
+Beech nut	Fagus	21024
+Beluga whale	Delphinapterus leucas	9749
+Bison	Bison bison	9901
+Alaska blackfish	Dallia pectoralis	75939
+Blue crab	Callinectes sapidus	6763
+Blue mussel	Mytilus edulis	6550
+Northern bluefin tuna	Thunnus thynnus	8237
+Bluefish	Pomatomus saltatrix	75034
+Wild boar	Sus scrofa	9823
+Bowhead whale	Balaena mysticetus	27602
+Breadfruit	Artocarpus altilis	194251
+Breadnut tree seed	Brosimum alicastrum	194253
+Rapini	Brassica ruvo	1204434
+Buffalo	Bubalus bubalis	89462
+Burbot	Lota lota	69944
+Giant butterbur	Petasites japonicus	186965
+American butterfish	Peprilus triacanthus	183653
+Butternut	Juglans cinerea	91214
+Butternut squash	Cucurbita moschata	3662
+Calabash	Lagenaria siceraria	3668
+Cardoon	Cynara cardunculus	4265
+Natal plum	Carissa macrocarpa	403101
+Carob	Ceratonia siliqua	20340
+Common carp	Cyprinus carpio	7962
+Cassava	Manihot esculenta	3983
+Channel catfish	Ictalurus punctatus	7998
+Chayote	Sechium edule	184140
+Cherimoya	Annona cherimola	49314
+Chervil	Anthriscus cerefolium	40888
+Chia	Salvia hispanica	49212
+Chicken	Gallus gallus	9031
+Chinese broccoli	Brassica alboglabra	3714
+Chinese chestnut	Castanea mollissima	60419
+Chinese water chestnut	Eleocharis dulcis	110284
+Garland chrysanthemum	Chrysanthemum coronarium	99038
+Cisco	Coregonus artedi	36181
+Nuttall cockle	Clinocardium nuttallii	410350
+Coconut	Cocos nucifera	13894
+Pacific cod	Gadus macrocephalus	80720
+Atlantic cod	Gadus morhua	8049
+Common octopus	Octopus vulgaris	6645
+Corn salad	Valerianella locusta	59166
+Cottonseed	Gossypium	3633
+Catjang pea	Vigna unguiculata ssp. cylindrica	3840
+Malus (Crab apple)	Malus	3749
+Squashberry	Viburnum edule	237934
+Atlantic croaker	Micropogonias undulatus	29154
+Cusk	Brosme brosme	81638
+Cuttlefish	Sepiidae	6608
+Mule deer	Odocoileus	9871
+Devilfish	Myoxocephalus	8095
+Dock	Rumex	3618
+Dolphin fish	Coryphaena hippurus	34814
+Freshwater drum	Aplodinotus grunniens	225389
+Mallard duck	Anas platyrhynchos	8839
+Dungeness crab	Cancer magister	29965
+Durian	Durio zibethinus	66656
+Eastern oyster	Crassostrea virginica	6565
+Freshwater eel	Anguilla	7935
+Elderberry	Sambucus	4201
+Elk	Cervus canadensis	1574408
+Emu	Dromaius novaehollandiae	8790
+Oregon yampah	Perideridia oregana	234866
+European anchovy	Engraulis encrasicolus	184585
+European chestnut	Castanea sativa	21020
+Turbot	Scophthalmus maximus	52904
+Fireweed	Chamerion angustifolium	13055
+Florida pompano	Trachinotus carolinus	173342
+Ginkgo nuts	Ginkgo biloba	3311
+Greylag goose	Anser anser	8843
+Grape	Vitis	3603
+Greenland halibut/turbot	Reinhardtius hippoglossoides	111784
+Groundcherry	Physalis	24663
+Grouper	Epinephelus	94231
+Guinea hen	Numida meleagris	8996
+Haddock	Melanogrammus aeglefinus	8056
+Hippoglossus (Common halibut)	Hippoglossus	8266
+Hazelnut	Corylus	13450
+Hickory nut	Carya	13402
+Horse	Equus caballus	9796
+Horseradish tree	Moringa oleifera	3735
+Alaska blueberry	Vaccinium alaskaense	190544
+Hyacinth bean	Lablab purpureus	35936
+Irish moss	Chondrus crispus	2769
+Pacific jack mackerel	Trachurus symmetricus	271940
+Jackfruit	Artocarpus heterophyllus	3489
+Japanese chestnut	Castanea crenata	103480
+Java plum	Syzygium cumini	260142
+Jerusalem artichoke	Helianthus tuberosus	4233
+Jujube	Ziziphus zizyphus	48393
+Jute	Corchorus olitorius	93759
+Kelp	Laminaria	33637
+King mackerel	Scomberomorus cavalla	13679
+Kumquat	Fortunella	2706
+Lambsquarters	Chenopodium album	3559
+Leather chiton	Katharina tunicata	34587
+Wild leek	Allium ampeloprasum	4681
+Common ling	Molva molva	163112
+Lingcod	Ophiodon elongatus	225387
+American lobster	Homarus americanus	6706
+Lotus	Nelumbo	4430
+Sacred lotus	Nelumbo nucifera	4432
+White lupine	Lupinus albus	3870
+Malabar spinach	Basella alba	3589
+Mammee apple	Mammea americana	198777
+Purple mangosteen	Garcinia mangostana	58228
+Alpine sweetvetch	Hedysarum alpinum	57576
+Milkfish	Chanos chanos	29144
+Monkfish	Lophius piscatorius	8074
+Moth bean	Vigna aconitifolia	3918
+Mountain yam	Dioscorea pentaphylla	167592
+Striped mullet	Mugil cephalus	48193
+White mustard	Sinapis alba	3728
+New Zealand spinach	Tetragonia tetragonioides	45318
+Nopal	Opuntia cochenillifera	338184
+Ocean pout	Zoarces americanus	8199
+North Pacific giant octopus	Enteroctopus dofleini	267067
+Ohelo berry	Vaccinium reticulatum	180767
+Okra	Abelmoschus esculentus	455045
+Tunicate	Tunicata	7712
+Ostrich	Struthio camelus	8801
+Spotted seal	Phoca largha	39090
+Pacific herring	Clupea pallasii	30724
+Pacific oyster	Crassostrea gigas	29159
+Pacific rockfish	Sebastes	34820
+Velvet duck	Melanitta fusca	371864
+Pepper (C. frutescens)	Capsicum annuum var. annuum	40321
+Common persimmon	Diospyros virginiana	13493
+Pheasant	Phasianus colchicus	9054
+Northern pike	Esox lucius	8010
+Pili nut	Canarium ovatum	43691
+Colorado pinyon	Pinus edulis	3340
+Pitanga	Eugenia uniflora	119951
+Plains prickly pear	Opuntia macrorhiza	1041245
+French plantain	Musa X paradisiaca	89151
+American pokeweed	Phytolacca americana	3527
+Opium poppy	Papaver somniferum	3469
+Prairie turnip	Pediomelum esculentum	458363
+Prickly pear	Opuntia	106975
+Quinoa	Chenopodium quinoa	63459
+European rabbit	Oryctolagus	9984
+Rainbow smelt	Osmerus mordax	8014
+Rainbow trout	Oncorhynchus mykiss	8022
+Malabar plum	Syzygium jambos	334483
+Rose hip	Rosa	3764
+Roselle	Hibiscus sabdariffa	183260
+Orange roughy	Hoplostethus atlanticus	96778
+Sablefish	Anoplopoma fimbria	229290
+Pink salmon	Oncorhynchus gorbuscha	8017
+Chum salmon	Oncorhynchus keta	8018
+Coho salmon	Oncorhynchus kisutch	8019
+Sockeye salmon	Oncorhynchus nerka	8023
+Chinook salmon	Oncorhynchus tshawytscha	74940
+Atlantic salmon	Salmo salar	8030
+Salmonberry	Rubus spectabilis	59499
+Common salsify	Tragopogon porrifolius	13731
+Sapodilla	Manilkara zapota	3741
+Mamey sapote	Pouteria sapota	233744
+Spanish mackerel	Scomberomorus maculatus	99344
+Pacific sardine	Sardinops sagax	28381
+Scallop	Pectinidae	6566
+Scup	Stenotomus chrysops	35579
+Sea cucumber	Parastichopus californicus	7689
+Steller sea lion	Eumetopias jubatus	34886
+Bearded seal	Erignathus barbatus	39304
+Ringed seal	Pusa hispida	9718
+Sea trout	Salmo trutta forma trutta	13028
+Sesbania flower	Sesbania bispinosa	485725
+American shad	Alosa sapidissima	34773
+Shark	Squaliformes	282414
+Sheefish	Stenodus leucichthys	59296
+Sheep (Mutton, Lamb)	Ovis aries	9940
+Sheepshead	Archosargus probatocephalus	119682
+Hedge mustard	Sisymbrium	3729
+Skipjack tuna	Katsuwonus pelamis	8226
+Snapper	Lutjanidae	30850
+Soursop	Annona muricata	13337
+Spelt	Triticum spelta	58933
+Spirulina	Spirulina	551299
+Squab	Columba	8931
+Strawberry guava	Psidium cattleianum	375274
+Greater sturgeon	Acipenser	7901
+White sucker	Catostomus commersonii	7971
+Sugar apple	Annona squamosa	301693
+Pumpkinseed sunfish	Lepomis gibbosus	270329
+Swordfish	Xiphias gladius	8245
+Taro	Colocasia esculenta	4460
+Teff	Eragrostis tef	110835
+Tilefish	Lopholatilus chamaeleonticeps	390349
+Mexican groundcherry	Physalis philadelphica var. immaculata	374021
+Towel gourd	Luffa aegyptiaca	3670
+Salmonidae (Salmon, Trout)	Salmonidae	8015
+Turkey	Meleagris gallopavo	9103
+Cattle (Beef, Veal)	Bos taurus	9913
+Walleye	Sander vitreus	283036
+Alaska pollock	Theragra chalcogramma	1042646
+Wasabi	Wasabia japonica	75806
+Wax gourd	Benincasa hispida	102211
+Whelk	Buccinidae	37796
+Coalfish pollock	Pollachius virens	8060
+Broad whitefish	Coregonus nasus	348707
+Whitefish	Coregonus	27772
+Whiting	Merlangius merlangus	8058
+Wild rice	Zizania	15949
+Tea leaf willow	Salix pulchra	669814
+Winged bean	Psophocarpus tetragonolobus	3891
+Yam	Dioscorea	4672
+Jicama	Pachyrhizus erosus	109171
+Yautia	Xanthosoma sagittifolium	28478
+Yellowfin tuna	Thunnus albacares	8236
+Yellowtail amberjack	Seriola lalandi	302047
+Pollock	Pollachius	8059
+Albacore tuna	Thunnus alalunga	8235
+Gadus (Common cod)	Gadus	8048
+Atlantic halibut	Hippoglossus hippoglossus	8267
+Pacific halibut	Hippoglossus stenolepis	195615
+Pacific salmon	Oncorhynchus	8016
+Smelt	Osmeridae	8012
+Clupeinae (Herring, Sardine, Sprat)	Clupeinae	7948
+Spiny lobster	Palinuridae	6731
+Snow crab	Chionoecetes opilio	41210
+Black-eyed pea	Vigna unguiculata ssp. unguiculata	3920
+Deer	Cervidae	9850
+Macadamia nut	Macadamia	4329
+Percoidei (Bass and others)	Percoidei	8112
+Perciformes	Perciformes	8111
+Rabbit	Leporidae	9979
+Domestic goat	Capra aegagrus hircus	9925
+Beefalo	Bos taurus X Bison bison	297284
+Bivalvia (Clam, Mussel, Oyster)	Bivalvia	6544
+Squid	Teuthida	551290
+Shrimp	Caridea	6694
+Crayfish	Astacidea	6712
+Flatfish	Pleuronectiformes	8252
+Domestic pig	Sus scrofa domestica	9825
+Walrus	Odobenus rosmarus	9707
+Alaska wild rhubarb	Polygonum alpinum	125586
+Oriental wheat	Triticum turanicum	376534
+Yardlong bean	Vigna unguiculata ssp. sesquipedalis	138955
+Quail	Phasianidae	9005
+Persian lime	Citrus latifolia	200541
+Feijoa	Feijoa sellowiana	260130
+Rowal	Pangium edule	112823
+Jew's ear	Auricularia auricula-judae	29892
+Common mushroom	Agaricus bisporus	5341
+Shiitake	Lentinus edodes	5353
+Wakame	Undaria pinnatifida	74381
+Enokitake	Flammulina velutipes	38945
+Epazote	Dysphania ambrosioides	330163
+Oyster mushroom	Pleurotus ostreatus	5322
+Cloud ear fungus	Auricularia polytricha	29893
+Maitake	Grifola frondosa	5627
+Ostrich fern	Matteuccia struthiopteris	3277
+Spot croaker	Leiostomus xanthurus	59837
+Sourdock	Rumex articus	395311
+Atlantic menhaden	Brevoortia tyrannus	224708
+Wheat	Triticum	4564
+Common chokecherry	Prunus virginiana	133204
+Agave	Agave	39509
+Narrowleaf cattail	Typha angustifolia	59011
+Jellyfish	Scyphozoa	6142
+Anchovy	Engraulidae	43062
+Blue whiting	Micromesistius poutassou	81636
+Carp bream	Abramis brama	38527
+Chanterelle	Cantharellus cibarius	36066
+Sturgeon	Acipenseridae	7900
+Charr	Salvelinus	8033
+Cinnamon	Cinnamomum	13428
+Crab	Brachyura	6752
+Common dab	Limanda limanda	27771
+Spiny dogfish	Squalus acanthias	7797
+Anatidae	Anatidae	8830
+Anguilliformes	Anguilliformes	7933
+True frog	Ranidae	8397
+Garfish	Belone belone	129037
+Gadiformes	Gadiformes	8043
+Mountain hare	Lepus timidus	62621
+Lake trout	Salvelinus namaycush	8040
+Lemon sole	Microstomus kitt	106175
+Clawed lobster	Nephropidae	6704
+Lumpsucker	Cyclopteridae	8101
+Scombridae (Bonito, Mackerel, Tuna)	Scombridae	8224
+Marine mussel	Mytilidae	6547
+Norway haddock	Sebastes viviparus	394708
+Norway lobster	Nephrops norvegicus	6829
+Norway pout	Trisopterus esmarkii	80723
+Oil palm	Elaeis	51952
+True oyster	Ostreidae	6563
+Sago palm	Metroxylon sagu	93297
+Persimmon	Diospyros	13492
+Pikeperch	Sander lucioperca	283035
+Pleuronectidae (Dab, Halibut, Plaice)	Pleuronectidae	8256
+Rock ptarmigan	Lagopus muta	64668
+Pacific ocean perch	Sebastes alutus	72055
+Black salsify	Scorzonera hispanica	114289
+True seal	Phocidae	9709
+Red algae	Rhodophyta	2763
+Kombu	Saccharina japonica	88149
+Snail	Gastropoda	6448
+True sole	Soleidae	30948
+Catfish	Siluriformes	7995
+Thistle	Cirsium	41549
+Thunnus	Thunnus	8234
+Walnut	Juglans	16718
+Cetacea (Dolphin, Porpoise, Whale)	Cetacea	9721
+Columbidae (Dove, Pigeon)	Columbidae	8930
+Conch	Strombidae	69694
+Cichlidae (Tilapia)	Cichlidae	8113
+Green turtle	Chelonia mydas	8469
+Hibiscus tea	Hibiscus sabbariffa	183260
+Morchella (Morel)	Morchellaceae	5192
+Horned melon	Cucumis metuliferus	61886
+Canola		138011
+Babassu palm	Attalea speciosa	145700
+Cupuaçu	Theobroma grandiflorum	108881
+Shea tree	Vitellaria paradoxa	292385
+Oil-seed Camellia	Camellia oleifera	385388
+Ucuhuba	Virola surinamensis	224910
+Nance	Byrsonima crassifolia	4270
+Naranjilla	Solanum quitoense	227725
+Greenthread tea	Thelesperma	153159
+Ascidians	Ascidiacea	7713
+Yellow pond-lily	Nuphar lutea	77113
+Pepper (C. pubescens)	Capsicum pubescens	113210
+Soft-necked garlic	Allium sativum L. var. sativum	4682
+Cabbage	Brassica oleracea var. capitata	3716
+Chinese bayberry	Myrica rubra	262757
+Brassicas		3705
+Crustaceans		6657
+Mollusks		6447
+Green bell pepper	Capsicum annuum	4072
+Yellow bell pepper	Capsicum annuum	4072
+Orange bell pepper	Capsicum annuum	4072
+Red bell pepper	Capsicum annuum	4072
+Italian sweet red pepper	Capsicum annuum	4072
+Yellow wax bean	Phaseolus vulgaris	3885
+Green bean	Phaseolus vulgaris	3885
+Saskatoon berry	Amelanchier alnifolia	32219
+Nanking cherry	Prunus tomentosa	105667
+Japanese pumpkin	Cucurbita maxima	3661

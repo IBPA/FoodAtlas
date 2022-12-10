@@ -17,4 +17,4 @@ python process_foodb.py \
     --output_filepath=./foodb_foods.txt
 
 # NCBI Taxonomy
-# Downloaded new_taxdump.zip from https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/ on 09/24/2022 at 11:38 PM.
+# Downloaded new_taxdump.zip from https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/ on 11/30/2022 at 9:53 AM.
