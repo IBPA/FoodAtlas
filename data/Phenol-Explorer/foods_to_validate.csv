@@ -1,0 +1,224 @@
+id,name,food_source_scientific_name,ncbi_taxid
+300,"Barley, whole grain flour",Hordeum vulgare L.,4513
+529,"Buckwheat, groats, thermally treated",Fagopyrum esculentum,3617
+315,"Common wheat, germ",Triticum aestivum L.,4565
+218,"Hard wheat, refined flour",Triticum durum L.,4567
+326,"Maize, refined flour",Zea mays L.,4577
+325,"Oat, refined flour",Avena sativa L.,4498
+522,"Rice, parboiled",Oryza sativa L.,4530
+316,"Rye, refined flour",Secale cereale L.,4550
+308,"Sorghum, whole grain",Sorghum bicolor L.,4558
+146,"Grape, raisin",Vitis vinifera L.,29760
+558,"Apricot, dried",Prunus armeniaca L.,36596
+51,"Plum, prune",Prunus domestica L.,3758
+913,"Date, dried",Phoenix dactylifera L.,42345
+920,"Fig, dried",Ficus carica L.,3494
+62,Aestivalis grape [Black],Vitis aestivalis L.,3605
+74,American cranberry,Vaccinium macrocarpon Aiton,
+98,Arctic blackberry,Rubus arcticus ssp. Stellatus,190231
+94,"Bilberry, raw",Vaccinium myrtillus L.,180763
+106,Black chokeberry,Aronia melanocarpa,661339
+107,Black crowberry,Empetrum nigrum L.,191066
+124,Black elderberry,Sambucus nigra L.,4202
+109,Black huckleberry,Gaylussacia baccata,128893
+101,"Black raspberry, raw",Rubus occidentalis L.,75079
+79,"Blackberry, raw",Rubus L.,
+77,"Blackcurrant, raw",Ribes nigrum L.,78511
+92,"Bog bilberry, raw",Vaccinium uliginosum,190548
+126,Buffalo,Ribes odoratum Wendl.,207533
+125,Canada blueberry,Vaccinium myrtilloides Michx.,1503870
+114,Cascade huckleberry,Vaccinium deliciosum Piper,
+99,Cloudberry,Rubus chamaemorus L.,57936
+93,European cranberry,Vaccinium oxycoccus L.,516948
+111,Evergreen huckleberry,Vaccinium ovatum Pursh,
+158,Fox grape [Black],Vitis labrusca L.,103355
+91,Gooseberry,Ribes uva-crispa L.,135518
+113,Half-highbush blueberry,Vaccinium augustifolium Aiton x Vaccinium corymbosum,
+95,"Highbush blueberry, raw",Vaccinium corymbosum L. and Vaccinium corymbosum L. hybrids,69266
+104,Jostaberry,Ribes × nidigrolaria Rud. Bauer & A. Bauer,
+83,"Lingonberry, raw",Vaccinium vitis-idaea L.,180772
+81,"Lowbush blueberry, raw",Vaccinium augustifolium Aiton,
+110,Oval-leaf huckleberry,Vaccinium ovalifolium,190544
+100,Rabbiteye blueberry,Vaccinium corymbosum L.,69266
+112,Red huckleberry,Vaccinium parvifolium Sm.,180766
+67,"Red raspberry, raw",Rubus idaeus L.,32247
+86,"Redcurrant, raw",Ribes rubrum L.,175228
+108,"Rowanberry, raw",Sorbus aucuparia L.,36599
+115,Sea-buckthornberry,Hippophae rhamnoides L.,193516
+127,Skunk,Ribes valdivianum Phil.,2338899
+69,"Strawberry, raw",Fragaria L.,
+116,Sweet rowanberry,Grataegosorbus mitschurinii,
+11,Grapefruit,Citrus paradisi,37656
+16,Lemon,Citrus limon,2708
+205,Lime,Citrus aurantifolia,159033
+8,Orange [Blond],Citrus sinensis L.,2711
+22,Tangerine,Citrus tangerina,237575
+60,"Nectarine, peeled",Prunus persica var. nucipersica,323851
+45,"Peach, peeled",Prunus persica L.,3760
+47,Sour cherry,Prunus cerasus L.,140311
+46,"Sweet cherry, raw",Prunus avium L.,42229
+3,Cantaloupe,Cucumis melo var. dudaim,2034236
+449,Honeydew melon,Cucumis melo,3656
+181,Watermelon,Citrullus lanatus vulgaris,
+34,"Apple [Cider], peeled",Malus domestica,3750
+187,Medlar,Mespilus germanica L.,36616
+40,"Pear, peeled",Pyrus communis,23211
+41,"Quince, peeled, raw",Cydonia Oblonga Mill.,36610
+157,"Rhubarb, raw",Rheum  L.,
+159,"Banana, raw",Musa  L.,
+185,Custard apple,Annona reticulata L.,301862
+168,Guava,Psidium guajava L.,120290
+155,Kiwi,Actinidia chinensis Planch,
+167,Lichee,Litchi chinensis L.,151069
+909,Longan,Dymocarpus longan Lour.,128017
+912,Loquat,Eriobotrya japonica Lindl.,2843217
+156,Mango,Mangifera indica L.,29780
+201,Papaya,Carica papaya L.,3649
+910,Passion fruit,Passiflora edulis L.,78168
+918,"Persimmon, fresh",Diospyros kaki L.,35925
+161,Pineapple,Ananas comosus L. Merr.,4615
+180,Pomegranate,Punica granatum L.,22663
+200,Star fruit,Averroha carambola L.,
+162,"Muscadine grape [Black], pure juice",Vitis rotundifolia Michx.,103349
+18,"Grapefruit/Pummelo hybrid, pure juice",Citrus paradisi x Citrus grandis,
+7,"Orange [Blood], juice from concentrate",Citrus sinensis,2711
+13,"Pummelo, pure juice",Citrus maxima,37334
+4,"Common sage, tea",Salvia officinalis L.,38868
+857,"Common thyme, tea",Thymus L.,
+865,"Coriander, tea",Coriandrum sativum L.,4047
+866,"Fennel, tea",Foeniculum vulgare Mill.,2849586
+863,"German camomile, tea",Matricaria chamomilla L.,98504
+867,"Hyssop, tea",Hyssopus officinalis L.,39324
+864,"Lemon grass, tea",Cymbopogon citratus,66014
+877,"Lemon thyme, tea",Thymus pulegioides L.,751873
+872,"Lemon verbena, tea",Lippia tryphilla Kuntze,
+870,"Lovage, tea",Levisticum officinale,48042
+869,"Peppermint, tea",Mentha piperita var piperita L.,
+873,"Roman camomile, tea",Chamaemelum nobile L.,99037
+862,"Rosemary, tea",Rosmarinus officinalis L.,39367
+876,"Small-leaf linden, tea",Tilia cordata,172266
+868,"Spearmint, tea",Mentha spicata L.,29719
+874,"Sweet basil, tea",Ocimum basilicum L.,39350
+871,"Sweet bay, tea",Laurus nobilis L.,85223
+878,"Tarragon, tea",Artemisia dranunculus,
+875,"Winter savory, tea",Satureja montana L.,49988
+822,"Olive, oil, extra virgin",Olea europaea L.,4146
+714,"Peanut, butter",Arachis hypogaea L.,3818
+842,"Rape seed, oil",Brassica napus L.,3708
+848,"Sesame seed [Black], oil",Sesamum indicum L.,4182
+937,"Soy, oil",Glycine Max L. Merr.,3847
+825,"Sunflower seed, oil",Helianthus annuus L.,4232
+833,"Angelica, fresh",Angelica L.,
+791,"Anise herb, dried",Pimpinella anisum L.,271192
+348,"Celery leaves, fresh",Apium graveolens L. var. secalineum,
+476,"Chinese chives, fresh",Allium odurum L.,
+762,"Chives, fresh",Allium schoenoprasum L.,74900
+829,"Common verbena, fresh",Verbena officinalis L.,79772
+784,"Dill, dried",Anethum graveolens L.,40922
+844,"Fenugreek, dried",Trigonella foenum-graecum L.,78534
+329,"Garlic, fresh",Allium sativum L.,4682
+753,"Italian oregano, fresh",Origanum x majoricum,
+733,"Lemon balm, dried",Melissa officinalis L.,39338
+742,"Marjoram, dried",Origanum marjorana L.,
+796,"Mexican oregano, dried",Lippia graveolens H.B.K.,1986359
+752,"Orange mint, fresh",Mentha aquatica,190902
+731,"Oregano, dried (wild marjoram)",Origanum vulgare L.,39352
+465,"Parsley, dried",Petroselinum crispum Mill.,4043
+756,"Pineapple sage, fresh",Salvia elegans Vahl.,888065
+737,"Pot marjoram, dried",Origanum onites L.,452416
+453,"Purslane, fresh",Portulaca olearacea L.,
+789,"Silver linden, dried",Tilia argentea,
+794,"Sorrel, dried",Rumex acetosa L.,41241
+738,"Summer savory, dried",Satureja hortensis L.,49987
+466,"Watercress, fresh",Nasturtium officinale,65948
+477,"Welsh onion, fresh",Allium fistulosum L.,35875
+451,"Wild turnip tops, fresh",Brassica rapa var. campestris,
+786,Capers,Capparis spinosa L.,65558
+804,Caraway,Carum carvi L.,48032
+780,Cardamom,Elettaria cardamomum L.,105181
+807,Celery seed,Apium graveolens L.,4045
+830,Ceylan cinnamon,Cinnamomum versum J. S. Presl.,
+879,Chinese cinnamon,Cinnamomum cassia Presl.,119260
+797,Cloves,Syzygium aromaticum,219868
+779,Cumin,Cuminum cyminum L.,52462
+785,"Ginger, dried",Zingiber P. Mill,
+793,"Horseradish, dried",Armoracia rusticana,3704
+831,Nutmeg,Myristica fragans Houtt.,
+798,Pepper spice [Black],Piper nigrum L.,13216
+805,Saffron,Crocus sativus L.,82528
+835,Star anise,Illicium verum Hook. f.,124778
+799,"Turmeric, dried",Curcuma longa L.,136217
+712,Almond,Prunus dulcis,3755
+708,Brazil nut,Bertholletia excelsia,
+709,"Cashew nut, raw",Anacardium occidentale L.,171929
+467,"Chestnut, raw",Castanea P. Mill,
+710,"Hazelnut, raw",Corylus L.,
+727,Japanese walnut,Juglans ailanthifolia Carr.,91209
+723,Macadamia nut,Macadamia intergrifolia/tetraphylla,
+707,Pecan nut,Caryna illinoinensis,
+724,Pines,Pinus L.,
+711,Pistachio,Pistacia vera L.,55513
+184,Walnut,Juglans regia L.,51240
+809,"Flaxseed, meal",Linum usitatissimum L.,4006
+815,"Poppy seed, meal",Papaver  L.,
+544,"Common bean [Black], dehulled, raw",Phaseolus vulgaris L.,3885
+563,"Adzuki bean, whole, raw",Vigna angularis,3914
+573,"Broad bean seed, dehulled, raw",Vicia faba L.,3906
+602,"Climbing bean, whole, raw",Vigna umbellata,87088
+576,"Lima bean, dehulled, raw",Phaseolus lunatus var. linatus,
+571,"Mung bean, dehulled, raw",Vigna radiata L.,157791
+566,"Lentils, dehulled, raw",Lens culinaris,3864
+578,"Chickpea, dehulled, raw",Cicer arietinum ssp. Arietinum,
+577,"Cowpea, dehulled, raw",Vigna unguiculata spp.,3917
+572,"Dried pea, dehulled, raw",Pisum sativum L.,3888
+569,"Grass pea, whole, raw",Lathyrus sativus L.,3860
+574,"Pigeon pea, dehulled, raw",Cajanus cajan L.,3821
+362,"Black cabbage, raw",Brassica oleracea var. viridis L.,3713
+263,"Broccoli, raw",Brassica oleracea var. italica,36774
+333,"Brussel sprouts, raw",Brassica oleracea. var. gemmifera L.,
+264,"Cauliflower, raw",Brassica oleracea var. botrytis L.,3715
+282,"Common cabbage [Green], raw",Brassica oleracea var. capitata L.,3716
+491,"Italian cabbage, raw",Brassica oleracea var. sabauda L.??,
+273,"Kai-lan, raw",Brassica oleracea var. alboglabra L.,3714
+291,"Mustard cabbage, raw",Brassica juncea var. rugosa,366465
+461,"Oxheart cabbage, raw",Brassica oleracea var. conica L.,
+284,"Savoy cabbage, raw",Brassica oleracea var. sabauda L.,1216010
+323,"Napa cabbage, raw",Brassica rapa ssp. Pekinensis,51351
+322,"Pak choy, raw",Brassica rapa var. chinensis,93385
+154,"Avocado, raw",Persea americana Mill.,3435
+360,"Chilli pepper [Green], raw",Capsicum annuum L.,4072
+359,"Eggplant [Purple], whole, raw",Solanum melongena L.,4111
+260,"Tomato [Cherry], whole, raw",Lycopersicon esculentum var. cerasiforme Alef.,195583
+258,"Tomato, whole, raw",Lycopersicon esculentum Mill.,4081
+270,"Cucumber, raw",Cucumis sativus L.,3659
+183,"Pumpkin, raw",Cucurbita maxima var. maxima,
+331,"Squash, raw",Cucurbita Pepo L.,3663
+502,"Zucchini, raw",Cucurbita pepo L.,3663
+435,"Arugula, raw",Eruca vesicaria ssp.sativa,
+500,"Beet greens, raw",Beta vulgaris var. vulgaris,
+310,"Chicory [Green], raw",Cichorium intybus L.,13427
+747,"Dandelion, raw",Taraxacum officinale,50225
+311,"Endive [Curly], raw",Cichorium endivia L.,114280
+773,"Garden cress, raw",Lepdium sativum,
+313,"Lettuce [Green], raw",Lactuca sativa L.,4236
+272,"Spinach, raw",Spinacia oleracea L.,3562
+319,"Swiss chard leaves [Red], raw",Beta vulgaris var. flavescens,
+255,"Onion [Red], raw",Allium cepa L. var. cepa,
+382,"Shallot [Pink], raw",Allium cepa Aggregatum Group,
+446,"Sugar pea, raw",Pisum sativum ssp. Sativum,208194
+507,"Burdock root, raw",Arctium lappa var. lappa,
+269,"Carrot, raw",Daucus carota sp. Sativus,79200
+351,"Celeriac, raw",Apium graveolens L. var. rapaceum,278110
+352,"Kohlrabi, raw",Brassica oleracea L. var. gongylodes L.,109379
+350,"Parsnip, raw",Pastinaca sativa L.,4041
+349,"Radish [Black], raw",Raphanus sativus var. niger L.,41679
+353,"Radish, raw",Raphanus sativus var. sativus L.,240228
+499,"Red beetroot, raw",Beta vulgaris var. Rubra L.,
+408,"Swede, raw",Brassica napus ssp.napobrassica L.,
+471,"Turnip root, raw",Brassica rapa var. rapa,1652998
+328,"Asparagus, raw",Asparagus officinalis L.,4686
+977,Fennel,Foenicum Vulgare P. Mill,
+368,"Globe artichoke, heads, raw",Cynara cardunculus var. scolymus L.,59895
+407,"Celery stalks, raw",Apium graveolens L. var. dulce,117781
+254,"Potato, raw",Solanum tuberosum L.,4113
+332,"Sweet potato, raw",Ipomoea batatas L.,4120

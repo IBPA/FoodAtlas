@@ -1,0 +1,7 @@
+*
+!.gitignore
+!download.sh
+!foods_to_validate.csv
+!foods_manually_validated.csv
+!references_to_validate.csv
+!references_manually_validated.csv

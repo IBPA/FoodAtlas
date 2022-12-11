@@ -73,21 +73,30 @@ def get_pmids(titles):
 
     # Hashing all the title-pmid pairs.
     hash_entries_new = []
-    for title in tqdm(titles):
-        title_query = format_query(title.lower())
+    failed = False
+    try:
+        for title in tqdm(titles):
+            title_query = format_query(title.lower())
 
-        # If the food name is already in the hash table, retrieve it.
-        try:
-            hash_table_title2pmid.loc[title_query]['pmid']
-            continue
-        except KeyError:
-            pass
+            # If the food name is already in the hash table, retrieve it.
+            try:
+                hash_table_title2pmid.loc[title_query]['pmid']
+                continue
+            except KeyError:
+                pass
 
-        pmid = ';'.join(query_pmid(title_query))
-        hash_entries_new += [{
-            'query': title_query,
-            'pmid': pmid
-        }]
+            pmid = ';'.join(query_pmid(title_query))
+            hash_entries_new += [{
+                'query': title_query,
+                'pmid': pmid
+            }]
+    except Exception as e:
+        failed = True
+        print("The following error occupied. Saving the hash table.")
+        print("==============================================")
+        print(type(e).__name__)
+        print(e)
+        print("==============================================")
 
     if hash_entries_new:
         hash_table_title2pmid = pd.concat(
@@ -102,6 +111,10 @@ def get_pmids(titles):
             "data/_CACHED_QUERIES/_title_to_pmid.csv"
         )
 
+    if failed:
+        print("Exiting the program.")
+        exit()
+
     # Verify that the pmids are correct.
     # First, get all the titles with PMIDs.
     pmids_new = []
@@ -115,9 +128,9 @@ def get_pmids(titles):
                     continue
                 except KeyError:
                     pmids_new += [pmid]
-
     if pmids_new:
-        hash_table_pmid2title_new = query_titles(pmids_new)
+        hash_table_pmid2title_new = query_titles(pmids_new).astype(
+            {'pmid': 'Int64'})
         hash_table_pmid2title = pd.concat(
             [
                 hash_table_pmid2title,
@@ -141,6 +154,7 @@ def get_pmids(titles):
             title = title.replace(char, '')
 
         return title
+
     pmids_verified = []
     for i, title in enumerate(titles):
         pmids = hash_table_title2pmid.loc[format_query(title.lower())]['pmid']
@@ -149,7 +163,6 @@ def get_pmids(titles):
             pmids_verified += ['']
             continue
 
-        # print(i)
         matched = False
         for pmid in pmids.split(';'):
             title_pubmed = hash_table_pmid2title.loc[int(pmid)]['title']
@@ -157,11 +170,17 @@ def get_pmids(titles):
                 pmids_verified += [pmid]
                 matched = True
                 break
-            # print(clean_title(title))
-            # print(clean_title(title_pubmed))
+
         if not matched:
             pmids_verified += ['']
-        # print(matched)
-        # print()
+
+            # Print out the mismatched titles for manual inspection.
+            for pmid in pmids.split(';'):
+                title_pubmed = hash_table_pmid2title.loc[int(pmid)]['title']
+                print(f"DB    : {title}")
+                print(f"PubMed: {title_pubmed}")
+                print(f"PMID  : {pmid}")
+                print()
+            print()
 
     return pmids_verified
