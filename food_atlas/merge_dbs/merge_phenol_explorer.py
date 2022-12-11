@@ -149,9 +149,12 @@ def load_references(validate=False):
     else:
         references = pd.read_csv(
             'data/Phenol-Explorer/references_manually_validated.csv'
-        ).set_index('id').sort_index()
+        )
+        references['pmid'] = references['pmid'].apply(
+            lambda x: str(int(x)) if not pd.isna(x) else ''
+        )
 
-        return references
+        return references.set_index('id').sort_index()
 
 
 def get_triples():
@@ -164,7 +167,7 @@ def get_triples():
     references = load_references()
 
     data = pd.read_excel("data/Phenol-Explorer/composition-data.xlsx")
-    print(f"Phenol-Explorer - Content before cleaning: {len(data)}")
+    print(f"Phenol-Explorer before cleaning: {len(data)} triples.")
 
     # Did some sanity checks. We need to query PMIDs because the database does
     #   not match reference_id to PMID. Using our method, we have queried 651
@@ -200,7 +203,7 @@ def get_triples():
     )
     data = data.query("food_id in @foods.index")
     data = data.query("chemical_id in @chemicals.index")
-    print(f"Phenol-Explorer - Content after cleaning: {len(data)}")
+    print(f"Phenol-Explorer after cleaning: {len(data)} triples.")
 
     data = data.copy()
     triples = get_food_atlas_triples(data, foods, chemicals, references)
@@ -209,7 +212,8 @@ def get_triples():
         sep='\t',
         index=False,
     )
-    print(f"Phenol-Explorer - Added {len(triples)} evidences")
+    print(f"Phenol-Explorer adds {len(triples)} evidences.")
+    print(triples['confidence'].value_counts())
 
 
 if __name__ == '__main__':

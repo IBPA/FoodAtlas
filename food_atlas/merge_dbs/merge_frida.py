@@ -221,7 +221,7 @@ def get_triples():
         'data/Frida/Frida_Dataset_June2022.xlsx',
         sheet_name='Data_Normalised',
     )
-    print(f"Frida - Content before cleaning: {len(data)} triples.")
+    print(f"Frida before cleaning: {len(data)} triples.")
 
     data = data.query("ResVal != 0")
     data = data.rename(columns={
@@ -236,7 +236,7 @@ def get_triples():
     )
     data = data.query("food_id in @foods.index")
     data = data.query("chemical_id in @chemicals.index")
-    print(f"Frida - Content after cleaning: {len(data)} triples.")
+    print(f"Frida after cleaning: {len(data)} triples.")
 
     data = data.copy()
     triples = get_food_atlas_triples(data, foods, chemicals, references)
@@ -245,6 +245,8 @@ def get_triples():
         sep='\t',
         index=False,
     )
+    print(f"Frida adds {len(triples)} evidences.")
+    print(triples['confidence'].value_counts())
 
 
 if __name__ == '__main__':
