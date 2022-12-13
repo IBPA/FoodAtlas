@@ -84,6 +84,14 @@ python merge_ncbi_taxonomy.py \
 
 
 
+X. Add PubChem.
+python merge_pubchem.py \
+    --input_kg_dir=../../outputs/kg/annotations_mesh_ncbi/ \
+    --output_kg_dir=../../outputs/kg/annotations_mesh_ncbi_pubchem \
+    --use_pkl
+
+
+
 X. Generate k-folds for training the deploy entailment model.
 python generate_folds.py \
     --input_train_filepath=../../outputs/data_processing/train_pool.tsv \
@@ -100,11 +108,6 @@ python generate_folds.py \
 
 
 
-
-X. Add InChI and InChIKey to the KG using CAS.
-python merge_inchi.py \
-    --input_kg_dir=../../outputs/kg/annotations_mesh_ncbi/ \
-    --output_kg_dir=../../outputs/kg/annotations_mesh_ncbi_inchi
 
 
 
