@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -8,8 +9,9 @@ def get_positive_result(
         active_learning_strategies=['certain_pos', 'stratified', 'uncertain']):
     """
     """
-    PATH_REUSLT = "~/git/FoodAtlas/outputs/data_generation/{}/run_{}/"\
-        "round_{}/train.tsv"
+    PATH_REUSLT = f"{os.path.abspath(os.path.dirname(__file__))}/../.."\
+        f"/outputs/data_generation/{{}}/run_{{}}/"\
+        f"round_{{}}/train.tsv"
 
     result_rows = []
     for al in active_learning_strategies:
@@ -58,7 +60,7 @@ if __name__ == '__main__':
     active_learning_strategies = ['stratified', 'uncertain']
 
     data = get_positive_result(
-        run_ids=range(1, 101),
+        run_ids=range(1, 1 + 17),
         active_learning_strategies=active_learning_strategies,
     )
 

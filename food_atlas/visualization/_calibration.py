@@ -1,3 +1,5 @@
+import os
+
 from sklearn.metrics import confusion_matrix, r2_score
 import pandas as pd
 import seaborn as sns
@@ -24,8 +26,9 @@ def get_bin_membership(probs, n_bins=5):
 def get_test_prob_result(
         run_ids,
         active_learning_strategies=['certain_pos', 'stratified', 'uncertain']):
-    PATH_REUSLT = "~/git/FoodAtlas/outputs/data_generation/{}/run_{}/"\
-        "round_{}/test_probs.tsv"
+    PATH_REUSLT = f"{os.path.abspath(os.path.dirname(__file__))}/../.."\
+        f"/outputs/data_generation/{{}}/run_{{}}/"\
+        f"round_{{}}/test_probs.tsv"
 
     result_rows = []
     for al in active_learning_strategies:

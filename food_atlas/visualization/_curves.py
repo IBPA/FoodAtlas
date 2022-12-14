@@ -1,3 +1,5 @@
+import os
+
 from sklearn.metrics import (
     precision_recall_curve, roc_curve, average_precision_score, roc_auc_score
 )
@@ -10,9 +12,12 @@ from tqdm import tqdm
 
 def get_test_prob_result(
         run_ids,
-        active_learning_strategies=['certain_pos', 'stratified', 'uncertain']):
-    PATH_REUSLT = "~/git/FoodAtlas/outputs/data_generation/{}/run_{}/"\
-        "round_{}/test_probs.tsv"
+        active_learning_strategies=[
+            'certain_pos', 'uncertain', 'stratified', 'random'
+        ]):
+    PATH_REUSLT = f"{os.path.abspath(os.path.dirname(__file__))}/../.."\
+        f"/outputs/data_generation/{{}}/run_{{}}/"\
+        f"round_{{}}/test_probs.tsv"
 
     result_rows = []
     for al in active_learning_strategies:
@@ -35,7 +40,9 @@ def get_test_prob_result(
 
 def plot_curves_all(
         run_ids,
-        active_learning_strategies=['certain_pos', 'stratified', 'uncertain'],
+        active_learning_strategies=[
+            'certain_pos', 'uncertain', 'stratified', 'random'
+        ],
         path_save=None):
     """
     """
@@ -101,57 +108,45 @@ def plot_curves_all(
 
 def plot_curves_average(
         run_ids,
-        active_learning_strategies=['certain_pos', 'stratified', 'uncertain'],
         path_save=None):
     """
     """
-    result = get_test_prob_result(
-        run_ids,
-        active_learning_strategies,
+    result = get_test_prob_result(run_ids)
+
+    labels_total = []
+    probs_total = []
+    for row in result.itertuples():
+        labels_total += row.labels.tolist()
+        probs_total += row.probs.tolist()
+    labels_total = [1 if x == 'Entails' else 0 for x in labels_total]
+    prec, rec, _ = precision_recall_curve(labels_total, probs_total)
+    fpr, tpr, _ = roc_curve(labels_total, probs_total)
+    ap = average_precision_score(labels_total, probs_total)
+    auroc = roc_auc_score(labels_total, probs_total)
+
+    fig, axs = plt.subplots(1, 2, figsize=(12, 6))
+    sns.lineplot(
+        x=rec,
+        y=prec,
+        color='#e6e6e6',
+        ax=axs[0],
+    )
+    sns.lineplot(
+        x=fpr,
+        y=tpr,
+        color='#e6e6e6',
+        ax=axs[1],
+    )
+    print(
+        f"average precision: {ap}\n"
+        f"auroc            : {auroc}"
     )
 
-    ALPHA = 0.1
-    fig, axs = plt.subplots(1, 2, figsize=(12, 6))
-    for i, al in enumerate(active_learning_strategies):
-        result_al = result[result['al'] == al]
-
-        labels_total = []
-        probs_total = []
-        for row in result_al.itertuples():
-            labels_total += row.labels.tolist()
-            probs_total += row.probs.tolist()
-
-        labels_total = [1 if x == 'Entails' else 0 for x in labels_total]
-        prec, rec, _ = precision_recall_curve(labels_total, probs_total)
-        fpr, tpr, _ = roc_curve(labels_total, probs_total)
-        ap = average_precision_score(labels_total, probs_total)
-        auroc = roc_auc_score(labels_total, probs_total)
-
-        sns.lineplot(
-            x=rec,
-            y=prec,
-            color='#e6e6e6',
-            label=al,
-            ax=axs[0],
-        )
-        sns.lineplot(
-            x=fpr,
-            y=tpr,
-            color='#e6e6e6',
-            label=al,
-            ax=axs[1],
-        )
-        print(
-            f"{al}\n"
-            f"    average precision: {ap}\n"
-            f"    auroc            : {auroc}"
-        )
-
-    axs[0].set_title('Precision-Recall Curve')
+    axs[0].set_title(f"Precision-Recall Curve: AP={ap:0.3f}")
     axs[0].set_xlabel('Recall')
     axs[0].set_ylabel('Precision')
 
-    axs[1].set_title('ROC Curve')
+    axs[1].set_title(f"ROC Curve (AUROC={auroc:0.3f})")
     axs[1].set_xlabel('False Positive Rate')
     axs[1].set_ylabel('True Positive Rate')
 
