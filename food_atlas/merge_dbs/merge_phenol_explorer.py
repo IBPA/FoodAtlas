@@ -52,7 +52,9 @@ def load_foods(validate=False):
         # Enrich NCBI Taxonomy IDs.
         sci_to_taxid = {}
         ncbi_taxids = get_ncbi_taxids(
-            foods['food_source_scientific_name'].unique().tolist())
+            foods['food_source_scientific_name'].unique().tolist(),
+            verbose=True,
+        )
         for sci_name, taxid in zip(
                 foods['food_source_scientific_name'].unique().tolist(),
                 ncbi_taxids):
@@ -117,7 +119,7 @@ def load_references(validate=False):
 
         # Enrich PMIDs.
         titles = references['title'].unique().tolist()
-        pmids = get_pmids(titles)
+        pmids = get_pmids(titles, verbose=True)
 
         title2pmid = {title: pmid for title, pmid in zip(titles, pmids)}
         references.loc[references.index, 'pmid'] \
@@ -151,8 +153,8 @@ def load_references(validate=False):
             'data/Phenol-Explorer/references_manually_validated.csv'
         )
         references['pmid'] = references['pmid'].apply(
-            lambda x: str(int(x)) if not pd.isna(x) else ''
-        )
+            lambda x: str(int(x)) if not pd.isna(x) else np.nan
+        ).astype('Int64')
 
         return references.set_index('id').sort_index()
 
@@ -207,21 +209,35 @@ def get_triples():
 
     data = data.copy()
     triples = get_food_atlas_triples(data, foods, chemicals, references)
-    triples.to_csv(
-        'outputs/merge_dbs/food_chemical_triples/phenol_explorer.tsv',
-        sep='\t',
-        index=False,
-    )
-    print(f"Phenol-Explorer adds {len(triples)} evidences.")
-    print(triples['confidence'].value_counts())
+
+    return triples
 
 
 if __name__ == '__main__':
-    triples = get_triples()
-    # triples['database'] = 'Phenol-Explorer'
+    # triples = get_triples()
     # triples.to_csv(
     #     'outputs/merge_dbs/food_chemical_triples/phenol_explorer.tsv',
     #     sep='\t',
     #     index=False,
     # )
-    # print(triples['confidence'].value_counts())
+    foods = pd.read_csv("data/Phenol-Explorer/foods.csv")
+    print(f"Number of foods before cleaning: {len(foods)}")
+    foods = load_foods()
+    print(f"Number of foods after cleaning: {len(foods)}")
+
+    chemicals = pd.read_csv("data/Phenol-Explorer/compounds.csv")
+    print(f"Number of chemicals before cleaning: {len(chemicals)}")
+    chemicals = load_chemicals()
+    print(f"Number of chemicals after cleaning: {len(chemicals)}")
+
+    references = pd.read_csv(
+        "data/Phenol-Explorer/publications.csv", encoding='latin-1'
+    )
+    print(f"Number of references: {len(references)}")
+    references = load_references()
+    print(f"Number of references with PMID: {len(references['pmid'].unique())}")
+
+    # Triples.
+    triples = get_triples()
+    print(f"Number of triples with unique evidence: {len(triples)}")
+    print(triples['confidence'].value_counts())

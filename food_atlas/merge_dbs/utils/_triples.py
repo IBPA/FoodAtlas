@@ -34,20 +34,22 @@ def _get_food_atlas_triples(row, triples, references):
     for reference_id in row['reference_ids']:
         try:
             reference_id = int(reference_id)
-            reference = references.loc[reference_id]
+            references.loc[reference_id]
         except KeyError:
-            print(f"{reference_id} not found in references. Skipping.")
+            # Skip if the reference ID is not found in the references.
             continue
         except ValueError:
-            print(f"{reference_id} is not a valid reference ID. Skipping.")
+            # Skip if the reference ID is not an integer.
             continue
 
         triple_ = deepcopy(triple)
-        triple_['reference_pmid'] = references.loc[reference_id]['pmid']
+        triple_['reference_pmid'] \
+            = references.loc[reference_id]['pmid']
         triple_['reference_title'] \
             = references.loc[reference_id]['reference_name']
-        triple_['confidence'] = 'high' \
-            if references.loc[reference_id]['pmid'] != '' else 'low'
+        triple_['confidence'] \
+            = 'high' if pd.notna(references.loc[reference_id]['pmid']) \
+              else 'low'
 
         triples += [triple_]
 

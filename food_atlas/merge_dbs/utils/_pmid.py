@@ -54,20 +54,20 @@ def query_titles(pmids):
     return pd.DataFrame(entries)
 
 
-def get_pmids(titles):
-    if not os.path.exists("data/_CACHED_QUERIES/_title_to_pmid.csv"):
+def get_pmids(titles, verbose=False):
+    if not os.path.exists("data/_CACHED/_title_to_pmid.csv"):
         hash_table_title2pmid = pd.DataFrame()
     else:
         hash_table_title2pmid = pd.read_csv(
-            "data/_CACHED_QUERIES/_title_to_pmid.csv",
+            "data/_CACHED/_title_to_pmid.csv",
             index_col='query',
         )
 
-    if not os.path.exists("data/_CACHED_QUERIES/_pmid_to_title.csv"):
+    if not os.path.exists("data/_CACHED/_pmid_to_title.csv"):
         hash_table_pmid2title = pd.DataFrame()
     else:
         hash_table_pmid2title = pd.read_csv(
-            "data/_CACHED_QUERIES/_pmid_to_title.csv",
+            "data/_CACHED/_pmid_to_title.csv",
             index_col='pmid',
         )
 
@@ -108,7 +108,7 @@ def get_pmids(titles):
         hash_table_title2pmid = hash_table_title2pmid.reset_index()\
             .drop_duplicates('query', keep='first').set_index('query')
         hash_table_title2pmid.to_csv(
-            "data/_CACHED_QUERIES/_title_to_pmid.csv"
+            "data/_CACHED/_title_to_pmid.csv"
         )
 
     if failed:
@@ -140,7 +140,7 @@ def get_pmids(titles):
         hash_table_pmid2title = hash_table_pmid2title.reset_index()\
             .drop_duplicates('pmid', keep='first').set_index('pmid')
         hash_table_pmid2title.to_csv(
-            "data/_CACHED_QUERIES/_pmid_to_title.csv"
+            "data/_CACHED/_pmid_to_title.csv"
         )
 
     # Start doing title matching.
@@ -171,7 +171,7 @@ def get_pmids(titles):
                 matched = True
                 break
 
-        if not matched:
+        if not matched and verbose:
             pmids_verified += ['']
 
             # Print out the mismatched titles for manual inspection.

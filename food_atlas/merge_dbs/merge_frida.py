@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 
 from .utils import (
@@ -61,7 +62,10 @@ def load_foods(validate=False):
 
         # Enrich NCBI Taxonomy IDs.
         sci_to_taxid = {}
-        ncbi_taxids = get_ncbi_taxids(foods['TaxonomicName'].unique().tolist())
+        ncbi_taxids = get_ncbi_taxids(
+            foods['TaxonomicName'].unique().tolist(),
+            verbose=True,
+        )
         for sci_name, taxid in zip(
                 foods['TaxonomicName'].unique().tolist(),
                 ncbi_taxids):
@@ -173,7 +177,7 @@ def load_chemicals():
     return chemicals
 
 
-def load_references():
+def load_references(validate=False):
     """Load references. Frida provides publications with different languages.
     For PMID enrichment, we only use English publications.
 
@@ -194,7 +198,7 @@ def load_references():
         "Language == 'English' & pmid == ''"
     )
     titles_eng = references_eng['TitleEnglish'].unique().tolist()
-    pmids_eng = get_pmids(titles_eng)
+    pmids_eng = get_pmids(titles_eng, verbose=True if validate else False)
 
     title2pmid = {title: pmid for title, pmid in zip(titles_eng, pmids_eng)}
     references.loc[references_eng.index, 'pmid'] \
@@ -207,6 +211,8 @@ def load_references():
         f"PageStart:{row['PageStart']},PageEnd:{row['PageEnd']}]",
         axis=1,
     )
+    references['pmid'] = references['pmid'].replace(
+        {'': np.nan}).astype('Int64')
     references = references.set_index('SourceID')
 
     return references
@@ -240,14 +246,39 @@ def get_triples():
 
     data = data.copy()
     triples = get_food_atlas_triples(data, foods, chemicals, references)
-    triples.to_csv(
-        'outputs/merge_dbs/food_chemical_triples/frida.tsv',
-        sep='\t',
-        index=False,
-    )
-    print(f"Frida adds {len(triples)} evidences.")
-    print(triples['confidence'].value_counts())
+
+    return triples
 
 
 if __name__ == '__main__':
-    get_triples()
+    # triples = get_triples()
+    # triples.to_csv(
+    #     'outputs/merge_dbs/food_chemical_triples/frida.tsv',
+    #     sep='\t',
+    #     index=False,
+    # )
+
+    # Print all the statistics.
+    foods = pd.read_excel(
+        'data/Frida/Frida_Dataset_June2022.xlsx', sheet_name='Food',
+    )
+    print(f"Number of foods before cleaning: {len(foods)}")
+    foods = load_foods()
+    print(f"Number of foods after cleaning: {len(foods)}")
+
+    chemicals = load_chemicals()
+    print(f"Number of chemicals before cleaning: {len(chemicals)}")
+    chemicals = chemicals.query(
+        "pubchem.notna() | cas.notna()"
+    )
+    chemicals = chemicals[['pubchem', 'cas']].drop_duplicates()
+    print(f"Number of chemicals after cleaning: {len(chemicals)}")
+
+    references = load_references()
+    print(f"Number of references: {len(references)}")
+    print(f"Number of references with PMID: {len(references['pmid'].value_counts())}")
+
+    # Triples.
+    triples = get_triples()
+    print(f"Number of triples with unique evidence: {len(triples)}")
+    print(triples['confidence'].value_counts())

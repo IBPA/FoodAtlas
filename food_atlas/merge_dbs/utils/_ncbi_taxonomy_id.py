@@ -84,12 +84,12 @@ def query_ncbi_taxid(scientific_name):
     return record['IdList']
 
 
-def get_ncbi_taxids(scientific_names):
-    if not os.path.exists("data/_CACHED_QUERIES/_sci_name_to_ncbi_taxid.csv"):
+def get_ncbi_taxids(scientific_names, verbose=False):
+    if not os.path.exists("data/_CACHED/_sci_name_to_ncbi_taxid.csv"):
         hash_table = pd.DataFrame()
     else:
         hash_table = pd.read_csv(
-            "data/_CACHED_QUERIES/_sci_name_to_ncbi_taxid.csv",
+            "data/_CACHED/_sci_name_to_ncbi_taxid.csv",
             index_col='food',
         ).astype({'ncbi_taxid': 'Int64'})
 
@@ -110,7 +110,9 @@ def get_ncbi_taxids(scientific_names):
         if len(ncbi_taxid) == 1:
             ncbi_taxid = ncbi_taxid[0]
         elif len(ncbi_taxid) > 1:
-            print(f"WARNING: {food} has multiple NCBI taxids: {ncbi_taxid}.")
+            if verbose:
+                print(
+                    f"WARNING: {food} has multiple NCBI taxids: {ncbi_taxid}.")
             ncbi_taxid = ';'.join(ncbi_taxid)
         else:
             ncbi_taxid = ''
@@ -130,7 +132,7 @@ def get_ncbi_taxids(scientific_names):
             'food', keep='first'
         ).set_index('food')
         hash_table.to_csv(
-            "data/_CACHED_QUERIES/_sci_name_to_ncbi_taxid.csv"
+            "data/_CACHED/_sci_name_to_ncbi_taxid.csv"
         )
 
     return ncbi_taxids
