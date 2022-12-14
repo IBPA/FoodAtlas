@@ -5,14 +5,14 @@ set -e
 #SBATCH --job-name=FA_grid_search
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=fzli@ucdavis.edu
-#SBATCH --output=/home/lfz/git/FoodAtlas/logs/%j.out
-#SBATCH --error=/home/lfz/git/FoodAtlas/logs/%j.err
+#SBATCH --output=/home/lfz/git/IBPA/FoodAtlas/logs/%j.out
+#SBATCH --error=/home/lfz/git/IBPA/FoodAtlas/logs/%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:1
 #SBATCH --mem=32
-#SBATCH --time=10-00:00:00
+#SBATCH --time=20-00:00:00
 
 cd ..
 
@@ -34,6 +34,9 @@ then
 elif [ $1 == 'stratified' ]
 then
     RANDOM_SEED=3
+elif [ $1 == 'random' ]
+then
+    RANDOM_SEED=4
 fi
 
 RANDOM_SEED=$((RANDOM_SEED * 10000 + RUN))
@@ -41,9 +44,9 @@ RANDOM_SEED=$((RANDOM_SEED * 10000 + RUN))
 echo $RANDOM_SEED
 
 PATH_OUTPUT=/data/lfz/projects/FoodAtlas/outputs/entailment_model/$AL/run_${RUN}/round_${ROUND}
-PATH_TRAIN_POOL=outputs/data_generation/train_pool_small.tsv
-PATH_VAL=outputs/data_generation/val_small.tsv
-PATH_TEST=outputs/data_generation/test_small.tsv
+PATH_TRAIN_POOL=outputs/data_generation/train_pool.tsv
+PATH_VAL=outputs/data_generation/val.tsv
+PATH_TEST=outputs/data_generation/test.tsv
 
 cd food_atlas/data_generation
 python prepare_training_data.py \
