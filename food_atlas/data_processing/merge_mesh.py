@@ -17,6 +17,7 @@ SUPP_FILEPATH = "../../data/MESH/supp2022.xml"
 KG_FILENAME = "kg.txt"
 EVIDENCE_FILENAME = "evidence.txt"
 ENTITIES_FILENAME = "entities.txt"
+RETIRED_ENTITIES_FILENAME = "retired_entities.txt"
 RELATIONS_FILENAME = "relations.txt"
 
 
@@ -68,13 +69,14 @@ def main():
         kg_filepath=os.path.join(args.input_kg_dir, KG_FILENAME),
         evidence_filepath=os.path.join(args.input_kg_dir, EVIDENCE_FILENAME),
         entities_filepath=os.path.join(args.input_kg_dir, ENTITIES_FILENAME),
+        retired_entities_filepath=os.path.join(args.input_kg_dir, RETIRED_ENTITIES_FILENAME),
         relations_filepath=os.path.join(args.input_kg_dir, RELATIONS_FILENAME),
     )
 
-    df_chemicals = fa_kg.get_entities_by_type(type_="chemical")
+    df_chemicals = fa_kg.get_entities_by_type(exact_type="chemical")
     print(f"Number of chemicals in KG: {df_chemicals.shape[0]}")
 
-    mesh_ids = [x["MESH"] for x in df_chemicals["other_db_ids"].tolist()]
+    mesh_ids = [y for x in df_chemicals["other_db_ids"].tolist() for y in x["MESH"]]
     mesh_ids = list(set(mesh_ids))
     print(f"Number of unique MESH ids: {len(mesh_ids)}")
 
@@ -266,26 +268,6 @@ def main():
     head_tail_pairs = list(k for k, _ in itertools.groupby(head_tail_pairs))
     print(f"Number of head tail pairs: {len(head_tail_pairs)}")
 
-    # update existing entities
-    mesh_ids_to_add = [x for pairs in head_tail_pairs for x in pairs]
-    mesh_ids_to_update = list(set(mesh_ids).intersection(mesh_ids_to_add))
-    print("Updating existing entities...")
-    for mesh_id in tqdm(mesh_ids_to_update):
-        df_match = df_chemicals[df_chemicals["other_db_ids"].apply(lambda x: x["MESH"] == mesh_id)]
-        assert df_match.shape[0] == 1
-
-        if mesh_id.startswith("C"):
-            name = supp_mesh_id_name_lookup[mesh_id]
-        elif mesh_id.startswith("D"):
-            name = desc_mesh_id_name_lookup[mesh_id]
-
-        fa_kg._update_entity(
-            foodatlas_id=df_match.iloc[0]["foodatlas_id"],
-            type_="chemical",
-            name=name,
-            synonyms=[],
-        )
-
     # generate and add triple
     relation = CandidateRelation(
         name='isA',
@@ -302,7 +284,7 @@ def main():
             type="chemical",
             name=head_name,
             synonyms=[],
-            other_db_ids={"MESH": head_mesh_id}
+            other_db_ids={"MESH": [head_mesh_id]}
         )
 
         if tail_mesh_id.startswith("C"):
@@ -314,26 +296,31 @@ def main():
             type="chemical",
             name=tail_name,
             synonyms=[],
-            other_db_ids={"MESH": tail_mesh_id}
+            other_db_ids={"MESH": [tail_mesh_id]}
         )
 
         triples.append([head_ent, relation, tail_ent])
     df_candidate_triples = pd.DataFrame(triples, columns=["head", "relation", "tail"])
-    fa_kg.add_triples(df_candidate_triples, origin="MESH")
+    df_candidate_triples["source"] = "MeSH"
+    df_candidate_triples["quality"] = "high"
+    fa_kg.add_triples(df_candidate_triples)
 
     # enter CAS ids and MeSH tree numbers
     cas_ids = list(desc_mesh_id_cas_lookup.values()) + list(supp_mesh_id_cas_lookup.values())
     assert len(set.intersection(*map(set, cas_ids))) == 0
 
-    df_chemicals = fa_kg.get_entities_by_type(type_="chemical")
+    df_chemicals = fa_kg.get_entities_by_type(exact_type="chemical")
     print(f"Number of chemicals in KG: {df_chemicals.shape[0]}")
 
-    mesh_ids = [x["MESH"] for x in df_chemicals["other_db_ids"].tolist()]
+    mesh_ids = [y for x in df_chemicals["other_db_ids"].tolist() for y in x["MESH"]]
     mesh_ids = list(set(mesh_ids))
     print(f"Number of unique MESH ids: {len(mesh_ids)}")
 
+    entities_to_update = []
     for mesh_id in tqdm(mesh_ids):
-        entity = fa_kg.get_entity_by_other_db_id("MESH", mesh_id)
+        df_entity = fa_kg.get_entity_by_other_db_id("MESH", mesh_id)
+        assert df_entity.shape[0] == 1
+        entity = df_entity.iloc[0]
         other_db_ids = entity["other_db_ids"]
         assert "CAS" not in other_db_ids
         assert "MESH_tree" not in other_db_ids
@@ -352,15 +339,19 @@ def main():
         if other_db_ids == entity["other_db_ids"]:
             continue
 
-        fa_kg._update_entity(
-            foodatlas_id=entity["foodatlas_id"],
+        ent = CandidateEntity(
+            type="chemical",
             other_db_ids=other_db_ids,
         )
+        entities_to_update.append(ent)
+
+    fa_kg.add_update_entities(entities_to_update)
 
     fa_kg.save(
         kg_filepath=os.path.join(args.output_kg_dir, KG_FILENAME),
         evidence_filepath=os.path.join(args.output_kg_dir, EVIDENCE_FILENAME),
         entities_filepath=os.path.join(args.output_kg_dir, ENTITIES_FILENAME),
+        retired_entities_filepath=os.path.join(args.output_kg_dir, RETIRED_ENTITIES_FILENAME),
         relations_filepath=os.path.join(args.output_kg_dir, RELATIONS_FILENAME),
     )
 

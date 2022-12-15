@@ -1,4 +1,5 @@
 import argparse
+from copy import deepcopy
 import os
 import requests
 import sys
@@ -9,20 +10,20 @@ sys.path.append('..')
 from tqdm import tqdm  # noqa: E402
 import pandas as pd  # noqa: E402
 
-from common_utils.knowledge_graph import KnowledgeGraph  # noqa: E402
+from common_utils.knowledge_graph import KnowledgeGraph, CandidateEntity  # noqa: E402
 from common_utils.utils import save_pkl, load_pkl  # noqa: E402
 
 KG_FILENAME = "kg.txt"
 EVIDENCE_FILENAME = "evidence.txt"
 ENTITIES_FILENAME = "entities.txt"
+RETIRED_ENTITIES_FILENAME = "retired_entities.txt"
 RELATIONS_FILENAME = "relations.txt"
 CAS_ID_CID_QUERY_URL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/{}/cids/JSON"
 CID_QUERY_URL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/{}/JSON"
-CAS_CID_MAPPING_FILEPATH = "../../data/FoodAtlas/cas_cid_mapping.pkl"
-CAS_INCHI_MAPPING_FILEPATH = "../../data/FoodAtlas/cas_inchi_mapping.pkl"
-CAS_INCHIKEY_MAPPING_FILEPATH = "../../data/FoodAtlas/cas_inchikey_mapping.pkl"
-CAS_CANONICAL_SMILES_MAPPING_FILEPATH = "../../data/FoodAtlas/cas_canonical_smiles_mapping.pkl"
-CAS_MOLECULAR_FORMULA_MAPPING_FILEPATH = "../../data/FoodAtlas/cas_molecular_formula_mapping.pkl"
+CAS_CID_MAPPING_FILEPATH = "../../data/PubChem/cas_cid_mapping.pkl"
+CAS_INCHI_MAPPING_FILEPATH = "../../data/PubChem/cas_inchi_mapping.pkl"
+CAS_INCHIKEY_MAPPING_FILEPATH = "../../data/PubChem/cas_inchikey_mapping.pkl"
+CAS_CANONICAL_SMILES_MAPPING_FILEPATH = "../../data/PubChem/cas_canonical_smiles_mapping.pkl"
 
 
 def parse_argument() -> argparse.Namespace:
@@ -73,10 +74,11 @@ def main():
         kg_filepath=os.path.join(args.input_kg_dir, KG_FILENAME),
         evidence_filepath=os.path.join(args.input_kg_dir, EVIDENCE_FILENAME),
         entities_filepath=os.path.join(args.input_kg_dir, ENTITIES_FILENAME),
+        retired_entities_filepath=os.path.join(args.input_kg_dir, RETIRED_ENTITIES_FILENAME),
         relations_filepath=os.path.join(args.input_kg_dir, RELATIONS_FILENAME),
     )
 
-    df_chemicals = fa_kg.get_entities_by_type(type_="chemical")
+    df_chemicals = fa_kg.get_entities_by_type(exact_type="chemical")
     print(f"Number of chemicals in KG: {df_chemicals.shape[0]}")
 
     cas_ids = []
@@ -92,69 +94,62 @@ def main():
         cas_inchi_mapping = load_pkl(CAS_INCHI_MAPPING_FILEPATH)
         cas_inchikey_mapping = load_pkl(CAS_INCHIKEY_MAPPING_FILEPATH)
         cas_canonical_smiles_mapping = load_pkl(CAS_CANONICAL_SMILES_MAPPING_FILEPATH)
-        cas_molecular_formula_mapping = load_pkl(CAS_MOLECULAR_FORMULA_MAPPING_FILEPATH)
     else:
-        failed_cas_ids = []
-
         cas_cid_mapping = {}
         cas_inchi_mapping = {}
         cas_inchikey_mapping = {}
         cas_canonical_smiles_mapping = {}
-        cas_molecular_formula_mapping = {}
 
-        for cas_id in tqdm(cas_ids):
-            url = CAS_ID_CID_QUERY_URL.format(cas_id)
-            response = requests.get(url)
-            if response.status_code != 200:
-                failed_cas_ids.append(cas_id)
-                warnings.warn(f"Error requesting data from {url}: {response.status_code}")
-                continue
+    pickled_cas_ids = list(cas_cid_mapping.keys())
+    print(f"Number of known CAS IDs in pickled data: {len(pickled_cas_ids)}")
 
-            response_json = response.json()
-            cids = response_json["IdentifierList"]["CID"]
-            cas_cid_mapping[cas_id] = cids
+    # for cas_id in tqdm(cas_ids):
+    #     if cas_id in pickled_cas_ids:
+    #         continue
 
-            for cid in cids:
-                url = CID_QUERY_URL.format(cid)
-                response = requests.get(url)
-                if response.status_code != 200:
-                    raise ValueError(f"Error requesting data from {url}: {response.status_code}")
+    #     url = CAS_ID_CID_QUERY_URL.format(cas_id)
+    #     response = requests.get(url)
+    #     if response.status_code != 200:
+    #         warnings.warn(f"Error requesting data from {url}: {response.status_code}")
+    #         continue
 
-                response_json = response.json()
-                record_section = response_json["Record"]["Section"]
-                names_and_identifiers = _get_sections(record_section, "Names and Identifiers")
-                computed_descriptors = _get_sections(names_and_identifiers, "Computed Descriptors")
+    #     response_json = response.json()
+    #     cids = response_json["IdentifierList"]["CID"]
+    #     cas_cid_mapping[cas_id] = cids
 
-                # InChI
-                inchi = _get_values(computed_descriptors, "InChI")
-                if cas_id in cas_inchi_mapping:
-                    cas_inchi_mapping[cas_id].extend(inchi)
-                else:
-                    cas_inchi_mapping[cas_id] = inchi
+    #     for cid in cids:
+    #         url = CID_QUERY_URL.format(cid)
+    #         response = requests.get(url)
+    #         if response.status_code != 200:
+    #             raise ValueError(f"Error requesting data from {url}: {response.status_code}")
 
-                # InChIKey
-                inchikey = _get_values(computed_descriptors, "InChIKey")
-                if cas_id in cas_inchikey_mapping:
-                    cas_inchikey_mapping[cas_id].extend(inchikey)
-                else:
-                    cas_inchikey_mapping[cas_id] = inchikey
+    #         response_json = response.json()
+    #         record_section = response_json["Record"]["Section"]
+    #         names_and_identifiers = _get_sections(record_section, "Names and Identifiers")
+    #         computed_descriptors = _get_sections(names_and_identifiers, "Computed Descriptors")
 
-                # Canonical SMILES
-                canonical_smiles = _get_values(computed_descriptors, "Canonical SMILES")
-                if cas_id in cas_canonical_smiles_mapping:
-                    cas_canonical_smiles_mapping[cas_id].extend(canonical_smiles)
-                else:
-                    cas_canonical_smiles_mapping[cas_id] = canonical_smiles
+    #         # InChI
+    #         inchi = _get_values(computed_descriptors, "InChI")
+    #         if cas_id in cas_inchi_mapping:
+    #             cas_inchi_mapping[cas_id].extend(inchi)
+    #         else:
+    #             cas_inchi_mapping[cas_id] = inchi
 
-                # molecular formula
-                molecular_formula = _get_values(names_and_identifiers, "Molecular Formula")
-                if cas_id in cas_molecular_formula_mapping:
-                    cas_molecular_formula_mapping[cas_id].extend(molecular_formula)
-                else:
-                    cas_molecular_formula_mapping[cas_id] = molecular_formula
+    #         # InChIKey
+    #         inchikey = _get_values(computed_descriptors, "InChIKey")
+    #         if cas_id in cas_inchikey_mapping:
+    #             cas_inchikey_mapping[cas_id].extend(inchikey)
+    #         else:
+    #             cas_inchikey_mapping[cas_id] = inchikey
 
-        print(f"Failed CAS IDs: {failed_cas_ids}")
+    #         # Canonical SMILES
+    #         canonical_smiles = _get_values(computed_descriptors, "Canonical SMILES")
+    #         if cas_id in cas_canonical_smiles_mapping:
+    #             cas_canonical_smiles_mapping[cas_id].extend(canonical_smiles)
+    #         else:
+    #             cas_canonical_smiles_mapping[cas_id] = canonical_smiles
 
+    if args.use_pkl:
         print(f"Saving pickled data to: {CAS_CID_MAPPING_FILEPATH}")
         save_pkl(cas_cid_mapping, CAS_CID_MAPPING_FILEPATH)
 
@@ -167,22 +162,19 @@ def main():
         print(f"Saving pickled data to: {CAS_CANONICAL_SMILES_MAPPING_FILEPATH}")
         save_pkl(cas_canonical_smiles_mapping, CAS_CANONICAL_SMILES_MAPPING_FILEPATH)
 
-        print(f"Saving pickled data to: {CAS_MOLECULAR_FORMULA_MAPPING_FILEPATH}")
-        save_pkl(cas_molecular_formula_mapping, CAS_MOLECULAR_FORMULA_MAPPING_FILEPATH)
-
     print(f"Found {len(cas_cid_mapping)}/{len(cas_ids)} CAS ID to cid mapping")
     print(f"Found {len(cas_inchi_mapping)}/{len(cas_ids)} CAS ID to inchi mapping")
     print(f"Found {len(cas_inchikey_mapping)}/{len(cas_ids)} CAS ID to inchikey mapping")
-    print(f"Found {len(cas_canonical_smiles_mapping)}/{len(cas_ids)} CAS ID to canonical_smiles mapping")
-    print(f"Found {len(cas_molecular_formula_mapping)}/{len(cas_ids)} CAS ID to molecular_formula mapping")
+    print(f"Found {len(cas_canonical_smiles_mapping)}/{len(cas_ids)} "
+          f"CAS ID to canonical_smiles mapping")
 
     print("Updating entities...")
+    entities_to_update = []
     for cas_id in tqdm(cas_ids):
         cid = None
         inchi = None
         inchikey = None
         canonical_smiles = None
-        molecular_formula = None
 
         if cas_id in cas_cid_mapping:
             cid = [str(x) for x in cas_cid_mapping[cas_id]]
@@ -192,13 +184,13 @@ def main():
             inchikey = [str(x) for x in cas_inchikey_mapping[cas_id]]
         if cas_id in cas_canonical_smiles_mapping:
             canonical_smiles = [str(x) for x in cas_canonical_smiles_mapping[cas_id]]
-        if cas_id in cas_molecular_formula_mapping:
-            molecular_formula = [str(x) for x in cas_molecular_formula_mapping[cas_id]]
 
-        if [cid, inchi, inchikey, canonical_smiles, molecular_formula].count(None) == 5:
+        if [cid, inchi, inchikey, canonical_smiles].count(None) == 4:
             continue
 
-        entity = fa_kg.get_entity_by_other_db_id("CAS", cas_id)
+        df_entity = fa_kg.get_entity_by_other_db_id("CAS", cas_id)
+        assert df_entity.shape[0] == 1
+        entity = df_entity.iloc[0]
         other_db_ids = entity["other_db_ids"]
 
         def _update_other_db_ids(key, val):
@@ -206,24 +198,28 @@ def main():
                 if key in other_db_ids:
                     assert type(other_db_ids[key]) == list
                     other_db_ids[key].extend(val)
+                    other_db_ids[key] = list(set(other_db_ids[key]))
                 else:
                     other_db_ids[key] = val
 
-        _update_other_db_ids("PubChem", cid)
-        _update_other_db_ids("InChI", inchi)
-        _update_other_db_ids("InChIKey", inchikey)
-        _update_other_db_ids("canonical_SMILES", canonical_smiles)
-        _update_other_db_ids("molecular_formula", molecular_formula)
+        _update_other_db_ids("PubChem", list(set(cid)))
+        _update_other_db_ids("InChI", list(set(inchi)))
+        _update_other_db_ids("InChIKey", list(set(inchikey)))
+        _update_other_db_ids("canonical_SMILES", list(set(canonical_smiles)))
 
-        fa_kg._update_entity(
-            foodatlas_id=entity["foodatlas_id"],
+        ent = CandidateEntity(
+            type="chemical",
             other_db_ids=other_db_ids,
         )
+        entities_to_update.append(ent)
+
+    fa_kg.add_update_entities(entities_to_update)
 
     fa_kg.save(
         kg_filepath=os.path.join(args.output_kg_dir, KG_FILENAME),
         evidence_filepath=os.path.join(args.output_kg_dir, EVIDENCE_FILENAME),
         entities_filepath=os.path.join(args.output_kg_dir, ENTITIES_FILENAME),
+        retired_entities_filepath=os.path.join(args.output_kg_dir, RETIRED_ENTITIES_FILENAME),
         relations_filepath=os.path.join(args.output_kg_dir, RELATIONS_FILENAME),
     )
 

@@ -1,0 +1,1 @@
+foodatlas_id	type	name	synonyms	other_db_ids	reason

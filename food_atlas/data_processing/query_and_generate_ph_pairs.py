@@ -211,7 +211,7 @@ def query_litsense(
                         candidate_ent = CandidateEntity(
                             type="chemical",
                             name=ent_text,
-                            other_db_ids={"MESH": ent_id.replace("MESH:", "")}
+                            other_db_ids={"MESH": [ent_id.replace("MESH:", "")]}
                         )
                         chemicals.append(candidate_ent)
                     elif category == "species":
@@ -226,7 +226,7 @@ def query_litsense(
                             type="organism",
                             name=match["name"],
                             synonyms=synonyms,
-                            other_db_ids={"NCBI_taxonomy": ent_id}
+                            other_db_ids={"NCBI_taxonomy": [ent_id]}
                         )
                         organisms.append(candidate_ent)
 

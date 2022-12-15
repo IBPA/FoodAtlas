@@ -14,6 +14,7 @@ TAXLINEAGE_FILEPATH = "../../data/NCBI_Taxonomy/taxidlineage.dmp"
 KG_FILENAME = "kg.txt"
 EVIDENCE_FILENAME = "evidence.txt"
 ENTITIES_FILENAME = "entities.txt"
+RETIRED_ENTITIES_FILENAME = "retired_entities.txt"
 RELATIONS_FILENAME = "relations.txt"
 
 
@@ -84,16 +85,17 @@ def main():
         kg_filepath=os.path.join(args.input_kg_dir, KG_FILENAME),
         evidence_filepath=os.path.join(args.input_kg_dir, EVIDENCE_FILENAME),
         entities_filepath=os.path.join(args.input_kg_dir, ENTITIES_FILENAME),
+        retired_entities_filepath=os.path.join(args.input_kg_dir, RETIRED_ENTITIES_FILENAME),
         relations_filepath=os.path.join(args.input_kg_dir, RELATIONS_FILENAME),
     )
 
-    df_organisms = fa_kg.get_entities_by_type(type_="organism")
+    df_organisms = fa_kg.get_entities_by_type(exact_type="organism")
     print(f"Number of organisms in KG: {df_organisms.shape[0]}")
 
-    df_organisms_with_part = fa_kg.get_entities_by_type(type_="organism_with_part")
+    df_organisms_with_part = fa_kg.get_entities_by_type(exact_type="organism_with_part")
     print(f"Number of organisms_with_part in KG: {df_organisms_with_part.shape[0]}")
 
-    kg_tax_ids = [x["NCBI_taxonomy"] for x in df_organisms["other_db_ids"].tolist()]
+    kg_tax_ids = [y for x in df_organisms["other_db_ids"].tolist() for y in x["NCBI_taxonomy"]]
     prev_len = len(kg_tax_ids)
     kg_tax_ids = list(set(kg_tax_ids))
     assert len(kg_tax_ids) == prev_len
@@ -114,9 +116,12 @@ def main():
     df_nodes_subset = df_nodes[df_nodes["tax_id"].apply(lambda x: x in kg_tax_ids)]
     df_names_subset = df_names[df_names["tax_id"].apply(lambda x: x in kg_tax_ids)]
 
+    entities_to_update = []
     df_entities_to_update = pd.concat([df_organisms, df_organisms_with_part]).reset_index(drop=True)
     for idx, row in tqdm(df_entities_to_update.iterrows(), total=df_entities_to_update.shape[0]):
         query_id = row["other_db_ids"]["NCBI_taxonomy"]
+        assert len(query_id) == 1
+        query_id = query_id[0]
 
         matching_node = get_matching_row(df_nodes_subset, query_id)
         if matching_node is None:
@@ -133,11 +138,9 @@ def main():
         else:
             raise RuntimeError()
 
-        fa_kg._update_entity(
+        fa_kg._overwrite_entity(
             foodatlas_id=row["foodatlas_id"],
             type_=type_,
-            name=names_dict["scientific name"][0],
-            synonyms=[x for k, v in names_dict.items() if k != "scientific name" for x in v],
         )
 
     # taxlineage
@@ -174,6 +177,7 @@ def main():
     print(f"Number of candidate entities to add from NCBI taxonomy: {len(all_lineage_tax_ids)}")
     print(f"Number of candidate pairs to add from NCBI taxonomy: {len(all_lineage_pairs)}")
 
+    print("Gettiing subset of nodes and names...")
     df_nodes_subset = df_nodes[df_nodes["tax_id"].apply(lambda x: x in all_lineage_tax_ids)]
     df_names_subset = df_names[df_names["tax_id"].apply(lambda x: x in all_lineage_tax_ids)]
 
@@ -189,7 +193,7 @@ def main():
             type=f"organism:{matching_node['rank']}",
             name=names_dict["scientific name"][0],
             synonyms=[x for k, v in names_dict.items() if k != "scientific name" for x in v],
-            other_db_ids={"NCBI_taxonomy": tax_id}
+            other_db_ids={"NCBI_taxonomy": [tax_id]}
         )
 
         candidate_entity_dict[tax_id] = ent
@@ -207,12 +211,15 @@ def main():
         data.append(
             [candidate_entity_dict[head_tax_id], relation, candidate_entity_dict[tail_tax_id]])
     df_candiate_triples = pd.DataFrame(data, columns=["head", "relation", "tail"])
-    fa_kg.add_triples(df_candiate_triples, origin="NCBI_taxonomy")
+    df_candiate_triples["source"] = "NCBI_taxonomy"
+    df_candiate_triples["quality"] = "high"
+    fa_kg.add_triples(df_candiate_triples)
 
     fa_kg.save(
         kg_filepath=os.path.join(args.output_kg_dir, KG_FILENAME),
         evidence_filepath=os.path.join(args.output_kg_dir, EVIDENCE_FILENAME),
         entities_filepath=os.path.join(args.output_kg_dir, ENTITIES_FILENAME),
+        retired_entities_filepath=os.path.join(args.output_kg_dir, RETIRED_ENTITIES_FILENAME),
         relations_filepath=os.path.join(args.output_kg_dir, RELATIONS_FILENAME),
     )
 

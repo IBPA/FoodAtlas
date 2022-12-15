@@ -1,0 +1,20 @@
+foodatlas_id	type	name	synonyms	other_db_ids	reason
+e230	chemical	isoprene	[]	{'MESH': ['C005059'], 'CAS': ['78-79-5']}	Merged to e136
+e379	chemical	vitamin E	['vitamins E', 'Vitamin E', 'vitamin-E']	{'MESH': ['D014810'], 'CAS': ['1406-18-4'], 'MESH_tree': ['D03.633.100.150.909', 'D03.383.663.283.909']}	Merged to e79
+e1762	chemical	Polylactic acid	['poly(lactide)']	{'MESH': ['C033616'], 'CAS': ['26811-96-1', '26100-51-6', '26969-66-4', '31587-11-8']}	Merged to e238
+e1952	chemical	beta-HCH	['beta-hexachlorocyclohexane']	{'MESH': ['C023888'], 'CAS': ['319-85-7']}	Merged to e1866
+e2052	chemical	curcumin III	[]	{'MESH': ['C475935'], 'CAS': ['33171-05-0']}	Merged to e104
+e2188	chemical	furanodiene	[]	{'MESH': ['C442489'], 'CAS': ['19912-61-9']}	Merged to e33
+e2213	chemical	gentisic acid	['2,5-dihydroxybenzoic acid']	{'MESH': ['C010925'], 'CAS': ['27138-57-4', '86820-65-7', '490-79-9']}	Merged to e2116
+e2321	chemical	l-bornyl acetate	['bornyl acetate']	{'MESH': ['C071528'], 'CAS': ['76-49-3']}	Merged to e2287
+e2449	chemical	ornithine	['Ornithine']	{'MESH': ['D009952'], 'CAS': ['7006-33-9', '70-26-8', '3184-13-2'], 'MESH_tree': ['D12.125.068.665', 'D12.125.095.765']}	Merged to e1678
+e2529	chemical	procyanidin D	[]	{'MESH': ['C479584'], 'CAS': ['35356-34-4']}	Merged to e1133
+e2601	chemical	sodium glutamate	['Sodium Glutamate']	{'MESH': ['D012970'], 'CAS': ['142-47-2'], 'MESH_tree': ['D12.125.067.625.349.850', 'D12.125.119.409.349.575']}	Merged to e28
+e3818	chemical	isoleucine	['l-isoleucine', 'polyisoleucine']	{'MESH': ['C043801'], 'CAS': ['34464-35-2']}	Merged to e2293
+e3974	chemical	alpha lindane	['methyl lindane', 'Hexachlorocyclohexane']	{'MESH': ['D001556'], 'CAS': ['58-89-9'], 'MESH_tree': ['D02.455.526.439.600']}	Merged to e1866
+e3986	chemical	alpha-cellulose	['Cellulose']	{'MESH': ['D002482'], 'CAS': ['9004-34-6'], 'MESH_tree': ['J01.637.051.720.099.500', 'D09.698.365.180', 'D25.720.099.500', 'D05.750.078.562.180']}	Merged to e2348
+e3990	chemical	cholecalciferol	['vitamin D3', 'Cholecalciferol']	{'MESH': ['D002762'], 'CAS': ['67-97-0'], 'MESH_tree': ['D10.570.938.146', 'D04.210.500.812.768.196', 'D04.210.500.247.222.159', 'D04.210.500.247.808.146']}	Merged to e377
+e4011	chemical	Gln	['Glutamine', 'Q']	{'MESH': ['D005973'], 'CAS': ['56-85-9', '6899-04-3'], 'MESH_tree': ['D12.125.068.330', 'D12.125.154.424', 'D12.125.095.461']}	Merged to e2508
+e4036	chemical	pectin	['Pectins']	{'MESH': ['D010368'], 'CAS': ['9000-69-5'], 'MESH_tree': ['D09.698.670', 'D20.215.784.500.618', 'D05.750.078.738']}	Merged to e36
+e4728	chemical	Poly I	[]	{'MESH': ['D011069'], 'CAS': ['25249-22-3'], 'MESH_tree': ['D13.695.578.550.650']}	Merged to e4020
+e4800	chemical	Rubber	[]	{'MESH': ['D012408'], 'CAS': ['9006-04-6'], 'MESH_tree': ['J01.637.051.720.099.750', 'J01.637.051.720.327.840', 'J01.637.412.767', 'D25.720.099.750', 'D25.720.327.840']}	Merged to e136

@@ -1,3 +1,4 @@
+import os
 import sys
 import pickle
 
@@ -7,8 +8,16 @@ sys.path.append('./')
 from .knowledge_graph import CandidateEntity, CandidateRelation  # noqa: E402
 
 
-def read_tsv(filepath) -> pd.DataFrame:
-    df = pd.read_csv(filepath, sep='\t', keep_default_na=False)
+def read_dataframe(filepath) -> pd.DataFrame:
+    extension = os.path.basename(filepath).split('.')[-1]
+    if extension == "csv":
+        sep = ','
+    elif extension == "tsv":
+        sep = '\t'
+    else:
+        raise ValueError()
+
+    df = pd.read_csv(filepath, sep=sep, keep_default_na=False)
     df["head"] = df["head"].apply(lambda x: eval(x, globals()))
     df["relation"] = df["relation"].apply(lambda x: eval(x, globals()))
     df["tail"] = df["tail"].apply(lambda x: eval(x, globals()))

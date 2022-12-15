@@ -1,8 +1,9 @@
 from ast import literal_eval
 from collections import namedtuple, OrderedDict
-from copy import deepcopy
+from copy import deepcopy, copy
 import os
 from pathlib import Path
+import pickle
 from typing import Dict, List, Any
 import sys
 
@@ -24,10 +25,13 @@ _EVIDENCE_COLUMNS = [
     "triple",
     "pmid",
     "pmcid",
+    "title",
     "section",
     "premise",
     "source",
-    "prob",
+    "quality",
+    "prob_mean",
+    "prob_std",
 ]
 
 _ENTITY_COLUMNS = [
@@ -36,6 +40,15 @@ _ENTITY_COLUMNS = [
     "name",
     "synonyms",
     "other_db_ids",
+]
+
+_RETIRED_ENTITY_COLUMNS = [
+    "foodatlas_id",
+    "type",
+    "name",
+    "synonyms",
+    "other_db_ids",
+    "reason",
 ]
 
 _ENTITY_DEFAULTS = [
@@ -143,13 +156,22 @@ _ENTITY_TYPES = [
     "organism_with_part:subcohort",
 ]
 
-_ENTITY_OTHER_DBS = [
+_FOOD_OTHER_DBS = [
     "NCBI_taxonomy",
-    "FooDB",
+]
+_CHEMICAL_UNIQUE_OTHER_DBS = [
     "MESH",
     "MESH_tree",
     "CAS",
+    "PubChem",
+    "InChI",
 ]
+_CHEMICAL_NOT_UNIQUE_OTHER_DBS = [
+    "canonical_SMILES",
+    "InChIKey",
+]
+_CHEMICAL_OTHER_DBS = _CHEMICAL_UNIQUE_OTHER_DBS + _CHEMICAL_NOT_UNIQUE_OTHER_DBS
+_ENTITY_OTHER_DBS = _FOOD_OTHER_DBS + _CHEMICAL_OTHER_DBS
 
 _ENTITY_CONVERTERS = {
     "synonyms": literal_eval,
@@ -187,6 +209,7 @@ class KnowledgeGraph():
             kg_filepath: str,
             evidence_filepath: str,
             entities_filepath: str,
+            retired_entities_filepath: str,
             relations_filepath: str,
     ):
         # load the graph
@@ -195,6 +218,10 @@ class KnowledgeGraph():
 
         self.evidence_filepath = evidence_filepath
         self.df_evidence = self._read_evidence()
+
+        # load the retired entities
+        self.retired_entities_filepath = retired_entities_filepath
+        self.df_retired_entities = self._read_retired_entities()
 
         # load the entities
         self.entities_filepath = entities_filepath
@@ -239,13 +266,28 @@ class KnowledgeGraph():
 
         return df_evidence
 
-    @staticmethod
-    def _find_avail_foodatlas_id(ids: List[str]):
+    def _find_avail_foodatlas_id(self, ids: List[str], entity_or_relation: str):
         prefix_str = list(set([x[0] for x in ids]))
         assert len(prefix_str) == 1
         prefix_str = prefix_str[0]
-        ids = [int(x[1:]) for x in ids]
-        return f"{prefix_str}{max(ids) + 1}"
+
+        if entity_or_relation == "entity":
+            assert prefix_str == "e"
+            ids = [int(x[1:]) for x in ids]
+
+            # make sure that avail foodatlas id is not retired
+            retired_ids = [int(x[1:]) for x in self.df_retired_entities["foodatlas_id"].tolist()]
+            avail_id = max(ids) + 1
+            while avail_id in retired_ids:
+                avail_id += 1
+
+            return f"{prefix_str}{avail_id}"
+        elif entity_or_relation == "relation":
+            assert prefix_str == "r"
+            ids = [int(x[1:]) for x in ids]
+            return f"{prefix_str}{max(ids) + 1}"
+        else:
+            raise ValueError()
 
     def _get_and_update_foodatlas_id(self, prefix_str: str):
         if prefix_str == "e":
@@ -271,8 +313,8 @@ class KnowledgeGraph():
         df_entities = pd.read_csv(
             self.entities_filepath, sep="\t", converters=_ENTITY_CONVERTERS)
 
-        avail_entity_id = KnowledgeGraph._find_avail_foodatlas_id(
-            df_entities["foodatlas_id"].tolist())
+        avail_entity_id = self._find_avail_foodatlas_id(
+            df_entities["foodatlas_id"].tolist(), entity_or_relation="entity")
 
         # check integrity
         types = df_entities.type.tolist()
@@ -282,6 +324,19 @@ class KnowledgeGraph():
         assert set(other_dbs).issubset(_ENTITY_OTHER_DBS)
 
         return df_entities, avail_entity_id
+
+    def _read_retired_entities(self):
+        # if no entities file exists
+        if not Path(self.retired_entities_filepath).is_file():
+            print("Retired entities file does not exist.")
+            df_retired_entities = pd.DataFrame(columns=_RETIRED_ENTITY_COLUMNS)
+            return df_retired_entities
+
+        # if entities file exists
+        print(f"Loading retired entities file from {self.retired_entities_filepath}...")
+        df_retired_entities = pd.read_csv(self.retired_entities_filepath, sep="\t")
+
+        return df_retired_entities
 
     def _read_relations(self):
         # if no relations file exists
@@ -294,8 +349,8 @@ class KnowledgeGraph():
         print(f"Loading relations file from {self.relations_filepath}...")
         df_relations = pd.read_csv(self.relations_filepath, sep="\t")
 
-        avail_relation_id = KnowledgeGraph._find_avail_foodatlas_id(
-            df_relations["foodatlas_id"].tolist())
+        avail_relation_id = self._find_avail_foodatlas_id(
+            df_relations["foodatlas_id"].tolist(), entity_or_relation="relation")
 
         return df_relations, avail_relation_id
 
@@ -303,10 +358,8 @@ class KnowledgeGraph():
             self,
             df: pd.DataFrame,
     ):
-        assert set(["head", "relation", "tail", "premise"]).issubset(df.columns)
-
         entities = df["head"].tolist() + df["tail"].tolist()
-        self._add_candidate_entities(entities)
+        self.add_update_entities(entities)
 
         relations = df["relation"].tolist()
         self._add_candidate_relations(relations)
@@ -333,10 +386,13 @@ class KnowledgeGraph():
                 "triple": f"({head_foodatlas_id},{relation_foodatlas_id},{tail_foodatlas_id})",
                 "pmid": row["pmid"],
                 "pmcid": row["pmcid"],
+                "title": row["title"],
                 "section": row["section"],
                 "premise": row["premise"],
                 "source": row["source"],
-                "prob": row["prob"] if row["source"].startswith("prediction") else "",
+                "quality": row["quality"],
+                "prob_mean": row["prob_mean"] if row["source"].startswith("prediction") else "",
+                "prob_std": row["prob_std"] if row["source"].startswith("prediction") else "",
             })
             evidence.append(e)
 
@@ -372,18 +428,20 @@ class KnowledgeGraph():
                     "triple": f"({head_foodatlas_id},{relation.foodatlas_id},{tail_foodatlas_id})",
                     "pmid": row["pmid"],
                     "pmcid": row["pmcid"],
+                    "title": row["title"],
                     "section": row["section"],
                     "premise": row["premise"],
                     "source": row["source"],
-                    "prob": row["prob"] if row["source"].startswith("prediction") else "",
+                    "quality": row["quality"],
+                    "prob_mean": row["prob_mean"] if row["source"].startswith("prediction") else "",
+                    "prob_std": row["prob_std"] if row["source"].startswith("prediction") else "",
                 })
                 evidence.append(e)
 
-        self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data, columns=_KG_COLUMNS)])
+        self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data)])
         self.df_kg.drop_duplicates(inplace=True, ignore_index=True)
 
-        self.df_evidence = pd.concat(
-            [self.df_evidence, pd.DataFrame(evidence, columns=_EVIDENCE_COLUMNS)])
+        self.df_evidence = pd.concat([self.df_evidence, pd.DataFrame(evidence)])
         self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
 
         return self.df_kg, self.df_evidence
@@ -391,13 +449,12 @@ class KnowledgeGraph():
     def add_triples(
             self,
             df: pd.DataFrame,
-            origin: str,
     ):
-        assert origin in ["NCBI_taxonomy", "MESH"]
-        assert set(["head", "relation", "tail"]).issubset(df.columns)
+        assert set(["head", "relation", "tail", "source", "quality"]).issubset(df.columns)
+        print(f"Size of triples to add: {df.shape[0]}")
 
         entities = df["head"].tolist() + df["tail"].tolist()
-        self._add_candidate_entities(entities)
+        self.add_update_entities(entities)
 
         relations = df["relation"].tolist()
         self._add_candidate_relations(relations)
@@ -422,25 +479,27 @@ class KnowledgeGraph():
                 "relation": relation_foodatlas_id,
                 "tail": tail_foodatlas_id,
                 "triple": f"({head_foodatlas_id},{relation_foodatlas_id},{tail_foodatlas_id})",
-                "pmid": None,
-                "pmcid": None,
-                "section": None,
-                "premise": None,
-                "source": origin,
-                "prob": None,
+                "pmid": row["pmid"] if "pmid" in row.index else None,
+                "pmcid": row["pmcid"] if "pmcid" in row.index else None,
+                "title": row["title"] if "title" in row.index else None,
+                "section": row["section"] if "section" in row.index else None,
+                "premise": row["premise"] if "premise" in row.index else None,
+                "source": row["source"],
+                "quality": row["quality"],
+                "prob_mean": row["prob_mean"] if "prob_mean" in row.index else None,
+                "prob_std": row["prob_std"] if "prob_std" in row.index else None,
             })
             evidence.append(e)
 
-        self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data, columns=_KG_COLUMNS)])
+        self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data)])
         self.df_kg.drop_duplicates(inplace=True, ignore_index=True)
 
-        self.df_evidence = pd.concat(
-            [self.df_evidence, pd.DataFrame(evidence, columns=_EVIDENCE_COLUMNS)])
+        self.df_evidence = pd.concat([self.df_evidence, pd.DataFrame(evidence)])
         self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
 
         return self.df_kg, self.df_evidence
 
-    def _add_candidate_entities(
+    def add_update_entities(
             self,
             entities: List[CandidateEntity],
     ) -> pd.Series:
@@ -452,9 +511,11 @@ class KnowledgeGraph():
         df_entities_to_add = pd.DataFrame(data, columns=_ENTITY_COLUMNS)
 
         # extract organisms from organisms_with_part
-        df_extracted_organisms = \
-            df_entities_to_add[df_entities_to_add["type"].apply(
-                lambda x: x == "organism_with_part" or x.startswith("organism_with_part:"))]
+        df_extracted_organisms = self.get_entities_by_type(
+            df=df_entities_to_add,
+            exact_type="organism_with_part",
+            startswith_type="organism_with_part:",
+        )
         df_extracted_organisms["type"] = df_extracted_organisms["type"].apply(
             lambda x: x.replace("organism_with_part", "organism"))
         df_extracted_organisms["name"] = df_extracted_organisms["name"].apply(
@@ -463,43 +524,61 @@ class KnowledgeGraph():
             lambda synonyms: [x.split(" - ")[0] for x in synonyms])
 
         df_entities = pd.concat([
-            self.df_entities.copy(), df_entities_to_add, df_extracted_organisms])
+            self._nested_deep_copy(self.df_entities), df_entities_to_add, df_extracted_organisms])
         df_entities.reset_index(inplace=True, drop=True)
 
         duplicate_idx = []
 
         # organisms
         print("Finding duplicate organisms...")
-        df_organisms = df_entities[df_entities["type"].apply(
-            lambda x: x == "organism" or x.startswith("organism:"))]
+        df_organisms = self.get_entities_by_type(
+            df=df_entities,
+            exact_type="organism",
+            startswith_type="organism:",
+        )
 
         for db in ["NCBI_taxonomy"]:
-            df_organisms[db] = df_organisms["other_db_ids"].apply(lambda x: x[db])
-            for db_id, df_subset in df_organisms.groupby(db):
+            df_organisms_copy = self._nested_deep_copy(df_organisms)
+            df_organisms_copy[db] = df_organisms_copy["other_db_ids"].apply(
+                lambda x: x[db] if db in x else None)
+            df_organisms_copy = df_organisms_copy.explode(db)
+            for _, df_subset in df_organisms_copy.groupby(db):
                 if df_subset.shape[0] == 1:
                     continue
                 duplicate_idx.append(list(df_subset.index))
 
         # organisms with part
         print("Finding duplicate organisms with part...")
-        df_organisms_with_part = df_entities[df_entities["type"].apply(
-            lambda x: x == "organism_with_part" or x.startswith("organism_with_part:"))]
+        df_organisms_with_part = self.get_entities_by_type(
+            df=df_entities,
+            exact_type="organism_with_part",
+            startswith_type="organism_with_part:",
+        )
 
-        for db in ["NCBI_taxonomy"]:
-            df_organisms_with_part[db] = df_organisms_with_part.apply(
-                lambda row: row["other_db_ids"][db]+row["name"].split(" - ")[1], axis=1)
-            for db_id, df_subset in df_organisms_with_part.groupby(db):
+        for db in _FOOD_OTHER_DBS:
+            df_organisms_with_part_copy = self._nested_deep_copy(df_organisms_with_part)
+            df_organisms_with_part_copy[db] = df_organisms_with_part_copy.apply(
+                lambda row: [x+row["name"].split(" - ")[1] for x in row["other_db_ids"][db]]
+                if db in row["other_db_ids"] else None, axis=1)
+            df_organisms_with_part_copy = df_organisms_with_part_copy.explode(db)
+            for _, df_subset in df_organisms_with_part_copy.groupby(db):
                 if df_subset.shape[0] == 1:
                     continue
                 duplicate_idx.append(list(df_subset.index))
 
         # chemicals
         print("Finding duplicate chemicals...")
-        df_chemicals = df_entities[df_entities["type"] == "chemical"]
+        df_chemicals = self.get_entities_by_type(
+            df=df_entities,
+            exact_type="chemical",
+        )
 
-        for db in ["MESH"]:
-            df_chemicals[db] = df_chemicals["other_db_ids"].apply(lambda x: x[db])
-            for db_id, df_subset in df_chemicals.groupby(db):
+        for db in _CHEMICAL_UNIQUE_OTHER_DBS:
+            df_chemicals_copy = self._nested_deep_copy(df_chemicals)
+            df_chemicals_copy[db] = df_chemicals_copy["other_db_ids"].apply(
+                lambda x: x[db] if db in x else None)
+            df_chemicals_copy = df_chemicals_copy.explode(db)
+            for _, df_subset in df_chemicals_copy.groupby(db):
                 if df_subset.shape[0] == 1:
                     continue
                 duplicate_idx.append(list(df_subset.index))
@@ -519,25 +598,33 @@ class KnowledgeGraph():
         # merge duplicates
         print("Merging duplicate entities...")
         merged_duplicates = []
+        entities_to_merge = {"merge_from": [], "merge_to": []}
         for idx in duplicate_idx:
             df_duplicates = df_entities.iloc[idx]
-            assert len(set(df_duplicates["type"].tolist())) == 1
-            _type = df_duplicates["type"].tolist()[0]
+            _type = df_duplicates.iloc[0]["type"]
 
             ids = list(set(df_duplicates["foodatlas_id"].tolist()))
-            if "" in ids:
-                ids.remove("")
+            ids = [x for x in ids if x != ""]
 
             if len(ids) == 0:
                 foodatlas_id = ""
                 name = df_duplicates.iloc[0]["name"]
+                assert name is not None
             elif len(ids) == 1:
                 foodatlas_id = ids[0]
                 name = df_duplicates[df_duplicates["foodatlas_id"] != ""].iloc[0]["name"]
             else:
-                raise ValueError("Cannot have more than two ids")
+                ids = sorted(ids, key=lambda x: int("".join([i for i in x if i.isdigit()])))
+                foodatlas_id = ids[0]
+                name = df_duplicates[df_duplicates["foodatlas_id"] != ""].iloc[0]["name"]
+
+                for x in ids[1:]:
+                    entities_to_merge["merge_from"].append(x)
+                    entities_to_merge["merge_to"].append(foodatlas_id)
 
             names = df_duplicates["name"].tolist()
+            names = [x for x in names if x is not None]
+
             synonyms = [x for subset in df_duplicates["synonyms"].tolist() for x in subset]
             to_merge = list(set(names + synonyms))
             to_merge.remove(name)
@@ -547,12 +634,23 @@ class KnowledgeGraph():
 
             other_db_ids = {}
             for d in df_duplicates["other_db_ids"].tolist():
-                other_db_ids.update(d)
+                for k, v in d.items():
+                    if k not in other_db_ids:
+                        other_db_ids[k] = v
+                    else:
+                        other_db_ids[k].extend(v)
+            other_db_ids = {k: list(set(v)) for k, v in other_db_ids.items()}
 
             merged_duplicates.append([foodatlas_id, _type, name, synonyms, other_db_ids])
 
         flattened_idx = list(set([y for x in duplicate_idx for y in x]))
         non_duplicate_idx = [x for x in df_entities.index if x not in flattened_idx]
+
+        # update retired entities
+        df_entities_to_merge = pd.DataFrame(entities_to_merge)
+        df_entities_to_merge.drop_duplicates(inplace=True)
+        if df_entities_to_merge.shape[0] > 0:
+            self._update_retired_entities(df_entities_to_merge, reason="merge")
 
         df_entities = pd.concat([
             df_entities.iloc[non_duplicate_idx],
@@ -569,6 +667,24 @@ class KnowledgeGraph():
 
         print(f"Number of entities after updating: {self.df_entities.shape[0]}")
 
+    def _update_retired_entities(self, _input, reason):
+        if reason == "merge":
+            assert type(_input) == pd.DataFrame
+            entities_to_remove = list(set(_input["merge_from"].tolist()))
+            _input_dict = dict(zip(_input["merge_from"].tolist(), _input["merge_to"].tolist()))
+
+            df_retired_entities = self.df_entities[self.df_entities["foodatlas_id"].apply(
+                lambda x: x in entities_to_remove
+            )]
+            df_retired_entities["reason"] = df_retired_entities["foodatlas_id"].apply(
+                lambda x: f"Merged to {_input_dict[x]}"
+            )
+            df_retired_entities = df_retired_entities[_RETIRED_ENTITY_COLUMNS]
+
+            self.df_retired_entities = pd.concat([self.df_retired_entities, df_retired_entities])
+        else:
+            raise NotImplementedError
+
     def _add_candidate_relations(
             self,
             relations: List[CandidateRelation],
@@ -578,7 +694,7 @@ class KnowledgeGraph():
         relations = [eval(r, globals()) for r in sorted(set([str(r) for r in relations]))]
         data = [["", r.name, r.translation] for r in relations]
         df_relations = pd.concat([
-            self.df_relations.copy(),
+            self._nested_deep_copy(self.df_relations),
             pd.DataFrame(data, columns=_RELATION_COLUMNS),
         ])
         df_relations.drop_duplicates("name", inplace=True)
@@ -594,8 +710,13 @@ class KnowledgeGraph():
 
     def _find_matching_foodatlas_id(self, entity_or_relation):
         if type(entity_or_relation) == CandidateEntity:
-            df_match = self.df_entities[self.df_entities["other_db_ids"].apply(
-                lambda x: x.items() >= entity_or_relation.other_db_ids.items())]
+            match = []
+            for db_name, db_ids in entity_or_relation.other_db_ids.items():
+                for x in db_ids:
+                    match.append(self.get_entity_by_other_db_id(db_name, x))
+
+            df_match = pd.concat(match)
+            df_match = df_match[~df_match.index.duplicated(keep='first')]
             df_match = df_match[df_match["type"] == entity_or_relation.type]
 
             if entity_or_relation.type == "organism_with_part":
@@ -620,7 +741,7 @@ class KnowledgeGraph():
             seen[lo] = min(word, seen.get(lo, word))
         return list(seen.values())
 
-    def _update_entity(
+    def _overwrite_entity(
             self,
             foodatlas_id: str,
             type_: str = None,
@@ -635,7 +756,7 @@ class KnowledgeGraph():
             if type_.startswith("organism_with_part"):
                 part_name = self.df_entities.at[foodatlas_id, "name"].split(" - ")[-1]
         if name:
-            all_names = self.df_entities.at[foodatlas_id, "synonyms"].copy()
+            all_names = self._nested_deep_copy(self.df_entities.at[foodatlas_id, "synonyms"])
             all_names += [self.df_entities.at[foodatlas_id, "name"]]
             all_names += [name]
             all_names = list(set(all_names))
@@ -655,7 +776,7 @@ class KnowledgeGraph():
                     KnowledgeGraph._merge_synonyms(all_names)
 
         if synonyms:
-            all_names = self.df_entities.at[foodatlas_id, "synonyms"].copy()
+            all_names = self._nested_deep_copy(self.df_entities.at[foodatlas_id, "synonyms"])
             if type_.startswith("organism_with_part"):
                 all_names += [f"{x} - {part_name}" for x in synonyms]
             else:
@@ -677,48 +798,62 @@ class KnowledgeGraph():
         return self.df_entities.loc[foodatlas_id]
 
     def get_kg(self) -> pd.DataFrame:
-        return self.df_kg.copy()
+        return self._nested_deep_copy(self.df_kg)
 
     def get_evidence(self) -> pd.DataFrame:
-        return self.df_evidence.copy()
+        return self._nested_deep_copy(self.df_evidence)
 
     def get_all_entities(self) -> pd.DataFrame:
-        return self.df_entities.copy()
+        return self._nested_deep_copy(self.df_entities)
 
     def get_entity_by_id(self, foodatlas_id: str) -> pd.Series:
         entity = self.df_entities[self.df_entities["foodatlas_id"] == foodatlas_id]
         assert entity.shape[0] == 1
-        return entity.iloc[0].copy()
+        return self._nested_deep_copy(entity.iloc[0])
 
-    def get_entity_by_other_db_id(self, db_name: str, db_id: str) -> pd.Series:
+    def get_entity_by_other_db_id(self, db_name: str, db_id: str) -> pd.DataFrame:
         entity = self.df_entities[self.df_entities["other_db_ids"].apply(lambda x: db_name in x)]
 
         def _match_db_id(x, y):
             if type(x) == str:
-                return x == y
+                raise NotImplementedError()
             elif type(x) == list:
                 return y in x
             else:
                 raise ValueError
 
         entity = entity[entity["other_db_ids"].apply(lambda x: _match_db_id(x[db_name], db_id))]
-        assert entity.shape[0] == 1
-        return entity.iloc[0].copy()
+        return self._nested_deep_copy(entity)
+
+    def _nested_deep_copy(self, x):
+        return pickle.loads(pickle.dumps(x))
 
     def get_entity_by_name(self, name: str) -> pd.Series:
         raise NotImplementedError()
 
     def get_entities_by_type(
             self,
-            type_: str = None,
-            startswith: str = None,
+            df: pd.DataFrame = None,
+            exact_type: str = None,
+            startswith_type: str = None,
     ) -> pd.DataFrame:
-        if type_:
-            return self.df_entities[self.df_entities["type"] == type_].copy()
-        if startswith:
-            return self.df_entities[self.df_entities["type"].startswith(startswith)].copy()
+        if df is not None:
+            df_to_filter = self._nested_deep_copy(df)
+        else:
+            df_to_filter = self._nested_deep_copy(self.df_entities)
 
-        raise RuntimeError()
+        data = []
+        if exact_type:
+            data.append(
+                df_to_filter[df_to_filter["type"].apply(lambda x: x == exact_type)])
+        if startswith_type:
+            data.append(
+                df_to_filter[df_to_filter["type"].apply(lambda x: x.startswith(startswith_type))])
+
+        if len(data) == 0:
+            return None
+        else:
+            return pd.concat(data)
 
     def print_all_entities(self) -> None:
         print(self.df_entities)
@@ -750,7 +885,7 @@ class KnowledgeGraph():
         return row
 
     def get_all_relations(self) -> pd.DataFrame:
-        return self.df_relations.copy()
+        return self._nested_deep_copy(self.df_relations)
 
     def get_relation_by_id(self, foodatlas_id: str) -> pd.Series:
         relation = self.df_relations[self.df_relations["foodatlas_id"] == foodatlas_id]
@@ -768,17 +903,26 @@ class KnowledgeGraph():
             kg_filepath: str = None,
             evidence_filepath: str = None,
             entities_filepath: str = None,
+            retired_entities_filepath: str = None,
             relations_filepath: str = None,
     ) -> None:
-        self.df_entities["foodatlas_id_val_only"] = self.df_entities["foodatlas_id"].apply(
-            lambda x: int(x[1:]))
-        self.df_entities.sort_values("foodatlas_id_val_only", inplace=True, ignore_index=True)
+        self.df_entities["foodatlas_id_val_only"] = \
+            self.df_entities["foodatlas_id"].apply(lambda x: int(x[1:]))
+        self.df_entities.sort_values(
+            "foodatlas_id_val_only", inplace=True, ignore_index=True)
 
-        self.df_relations["foodatlas_id_val_only"] = self.df_relations["foodatlas_id"].apply(
-            lambda x: int(x[1:]))
-        self.df_relations.sort_values("foodatlas_id_val_only", inplace=True, ignore_index=True)
+        self.df_retired_entities["foodatlas_id_val_only"] = \
+            self.df_retired_entities["foodatlas_id"].apply(lambda x: int(x[1:]))
+        self.df_retired_entities.sort_values(
+            "foodatlas_id_val_only", inplace=True, ignore_index=True)
+
+        self.df_relations["foodatlas_id_val_only"] = \
+            self.df_relations["foodatlas_id"].apply(lambda x: int(x[1:]))
+        self.df_relations.sort_values(
+            "foodatlas_id_val_only", inplace=True, ignore_index=True)
 
         self.df_entities.drop("foodatlas_id_val_only", inplace=True, axis=1)
+        self.df_retired_entities.drop("foodatlas_id_val_only", inplace=True, axis=1)
         self.df_relations.drop("foodatlas_id_val_only", inplace=True, axis=1)
 
         if kg_filepath:
@@ -805,6 +949,14 @@ class KnowledgeGraph():
             print(f"Saving entities to original filepath: {self.entities_filepath}")
             self.df_entities.to_csv(self.entities_filepath, sep='\t', index=False)
 
+        if retired_entities_filepath:
+            Path(retired_entities_filepath).parent.mkdir(parents=True, exist_ok=True)
+            print(f"Saving retired entities to a new filepath: {retired_entities_filepath}")
+            self.df_retired_entities.to_csv(retired_entities_filepath, sep='\t', index=False)
+        else:
+            print(f"Saving retired entities to original filepath: {self.retired_entities_filepath}")
+            self.df_retired_entities.to_csv(self.retired_entities_filepath, sep='\t', index=False)
+
         if relations_filepath:
             Path(relations_filepath).parent.mkdir(parents=True, exist_ok=True)
             print(f"Saving relations to a new filepath: {relations_filepath}")
@@ -815,28 +967,7 @@ class KnowledgeGraph():
 
 
 def main():
-    df = pd.read_csv("../../data/toy/test_kg_api.txt", sep='\t', keep_default_na=False)
-    # df = pd.read_csv("../../outputs/data_generation/train_pool.tsv", sep='\t', keep_default_na=False)
-    df = df[df["answer"] == "Entails"]
-    df["head"] = df["head"].apply(lambda x: eval(x, globals()))
-    df["relation"] = df["relation"].apply(lambda x: eval(x, globals()))
-    df["tail"] = df["tail"].apply(lambda x: eval(x, globals()))
-
-    temporary_dir = "/home/jasonyoun/Jason/Scratch/temp"
-    fa_kg = KnowledgeGraph(
-        kg_filepath=os.path.join(temporary_dir, "kg.txt"),
-        evidence_filepath=os.path.join(temporary_dir, "evidence.txt"),
-        entities_filepath=os.path.join(temporary_dir, "entities.txt"),
-        relations_filepath=os.path.join(temporary_dir, "relations.txt"),
-    )
-    fa_kg.add_ph_pairs(df)
-    fa_kg.save()
-    # fa_kg.save(
-    #     kg_filepath=os.path.join(temporary_dir.replace("temp", "temp2"), "kg.txt"),
-    #     evidence_filepath=os.path.join(temporary_dir.replace("temp", "temp2"), "evidence.txt"),
-    #     entities_filepath=os.path.join(temporary_dir.replace("temp", "temp2"), "entities.txt"),
-    #     relations_filepath=os.path.join(temporary_dir.replace("temp", "temp2"), "relations.txt"),
-    # )
+    raise NotImplementedError()
 
 
 if __name__ == '__main__':

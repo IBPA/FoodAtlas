@@ -1,0 +1,4 @@
+foodatlas_id	name	translation
+r0	contains	contains
+r1	hasPart	has part
+r2	isA	is a
