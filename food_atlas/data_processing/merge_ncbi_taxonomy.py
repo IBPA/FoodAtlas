@@ -11,11 +11,6 @@ from common_utils.knowledge_graph import KnowledgeGraph, CandidateEntity, Candid
 NODES_FILEPATH = "../../data/NCBI_Taxonomy/nodes.dmp"
 NAMES_FILEPATH = "../../data/NCBI_Taxonomy/names.dmp"
 TAXLINEAGE_FILEPATH = "../../data/NCBI_Taxonomy/taxidlineage.dmp"
-KG_FILENAME = "kg.txt"
-EVIDENCE_FILENAME = "evidence.txt"
-ENTITIES_FILENAME = "entities.txt"
-RETIRED_ENTITIES_FILENAME = "retired_entities.txt"
-RELATIONS_FILENAME = "relations.txt"
 
 
 def parse_argument() -> argparse.Namespace:
@@ -81,14 +76,7 @@ def main():
     args = parse_argument()
 
     # read KG
-    fa_kg = KnowledgeGraph(
-        kg_filepath=os.path.join(args.input_kg_dir, KG_FILENAME),
-        evidence_filepath=os.path.join(args.input_kg_dir, EVIDENCE_FILENAME),
-        entities_filepath=os.path.join(args.input_kg_dir, ENTITIES_FILENAME),
-        retired_entities_filepath=os.path.join(args.input_kg_dir, RETIRED_ENTITIES_FILENAME),
-        relations_filepath=os.path.join(args.input_kg_dir, RELATIONS_FILENAME),
-    )
-
+    fa_kg = KnowledgeGraph(kg_dir=args.input_kg_dir)
     df_organisms = fa_kg.get_entities_by_type(exact_type="organism")
     print(f"Number of organisms in KG: {df_organisms.shape[0]}")
 
@@ -116,7 +104,6 @@ def main():
     df_nodes_subset = df_nodes[df_nodes["tax_id"].apply(lambda x: x in kg_tax_ids)]
     df_names_subset = df_names[df_names["tax_id"].apply(lambda x: x in kg_tax_ids)]
 
-    entities_to_update = []
     df_entities_to_update = pd.concat([df_organisms, df_organisms_with_part]).reset_index(drop=True)
     for idx, row in tqdm(df_entities_to_update.iterrows(), total=df_entities_to_update.shape[0]):
         query_id = row["other_db_ids"]["NCBI_taxonomy"]
@@ -193,7 +180,7 @@ def main():
             type=f"organism:{matching_node['rank']}",
             name=names_dict["scientific name"][0],
             synonyms=[x for k, v in names_dict.items() if k != "scientific name" for x in v],
-            other_db_ids={"NCBI_taxonomy": [tax_id]}
+            other_db_ids={"NCBI_taxonomy": [tax_id], "foodatlas_part_id": "p0"}
         )
 
         candidate_entity_dict[tax_id] = ent
@@ -215,13 +202,7 @@ def main():
     df_candiate_triples["quality"] = "high"
     fa_kg.add_triples(df_candiate_triples)
 
-    fa_kg.save(
-        kg_filepath=os.path.join(args.output_kg_dir, KG_FILENAME),
-        evidence_filepath=os.path.join(args.output_kg_dir, EVIDENCE_FILENAME),
-        entities_filepath=os.path.join(args.output_kg_dir, ENTITIES_FILENAME),
-        retired_entities_filepath=os.path.join(args.output_kg_dir, RETIRED_ENTITIES_FILENAME),
-        relations_filepath=os.path.join(args.output_kg_dir, RELATIONS_FILENAME),
-    )
+    fa_kg.save(kg_dir=args.output_kg_dir)
 
 
 if __name__ == '__main__':

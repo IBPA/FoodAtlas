@@ -1,5 +1,6 @@
 import argparse
 from collections import Counter
+from copy import deepcopy
 from datetime import datetime
 from itertools import product
 from pathlib import Path
@@ -18,9 +19,9 @@ from common_utils.knowledge_graph import KnowledgeGraph
 
 FOOD_NAMES_FILEPATH = "../../data/FooDB/foodb_foods.txt"
 QUERY_FSTRING = "{} contains"
-QUERY_RESULTS_FILEPATH = "../../outputs/data_generation/query_results.txt"
+QUERY_RESULTS_FILEPATH = "../../outputs/data_processing/query_results.txt"
 FOOD_PARTS_FILEPATH = "../../data/FoodAtlas/food_parts.txt"
-PH_PAIRS_FILEPATH = "../../outputs/data_generation/ph_pairs_{}.txt"
+PH_PAIRS_FILEPATH = "../../outputs/data_processing/ph_pairs_{}.txt"
 ENTITIES_FILEPATH = "../../data/FoodAtlas/entities.txt"
 RELATIONS_FILEPATH = "../../data/FoodAtlas/relations.txt"
 
@@ -94,7 +95,7 @@ def get_food_parts(
     premise = re.sub('[^A-Za-z0-9 ]+', '', premise.lower()).split()
 
     parts = []
-    for idx, row in df_food_parts.iterrows():
+    for _, row in df_food_parts.iterrows():
         synonyms = row.food_part_synonyms.split(', ')
         parts_list = [row.food_part] + synonyms
 
@@ -104,6 +105,7 @@ def get_food_parts(
                     type="food_part",
                     name=row.food_part,
                     synonyms=synonyms,
+                    other_db_ids={"foodatlas_part_id": row["foodatlas_part_id"]},
                 )
 
                 if part_entity not in parts:
@@ -285,7 +287,14 @@ def generate_ph_pairs(
 
         for s, c in product(row["organisms"], row["chemicals"]):
             newrow = row.copy().drop(["search_term", "chemicals", "organisms", "food_parts"])
-            newrow["head"] = s
+
+            #
+            new_s = deepcopy(s)
+            new_other_db_ids = new_s.other_db_ids
+            new_other_db_ids["foodatlas_part_id"] = "p0"
+            new_s = new_s._replace(other_db_ids=new_other_db_ids)
+
+            newrow["head"] = new_s
             newrow["relation"] = contains
             newrow["tail"] = c
 
@@ -312,8 +321,10 @@ def generate_ph_pairs(
 
             newrow["hypothesis_string"] = f"{organisms} contains {chemicals}"
 
-            ncbi_taxonomy = s.other_db_ids["NCBI_taxonomy"]
-            mesh = c.other_db_ids["MESH"]
+            assert len(s.other_db_ids["NCBI_taxonomy"]) == 1
+            assert len(c.other_db_ids["MESH"]) == 1
+            ncbi_taxonomy = s.other_db_ids["NCBI_taxonomy"][0]
+            mesh = c.other_db_ids["MESH"][0]
             newrow["hypothesis_id"] = f"NCBI_taxonomy:{ncbi_taxonomy}_contains_MESH:{mesh}"
             newrows.append(newrow)
 
@@ -322,11 +333,15 @@ def generate_ph_pairs(
                 # contains
                 newrow = row.copy().drop(["search_term", "chemicals", "organisms", "food_parts"])
 
+                new_s = deepcopy(s)
+                new_other_db_ids = new_s.other_db_ids
+                new_other_db_ids["foodatlas_part_id"] = p.other_db_ids["foodatlas_part_id"]
+                new_s = new_s._replace(other_db_ids=new_other_db_ids)
                 organism_with_part = CandidateEntity(
                     type="organism_with_part",
                     name=f"{s.name} - {p.name}",
                     synonyms=[f"{x} - {p.name}" for x in s.synonyms],
-                    other_db_ids=s.other_db_ids,
+                    other_db_ids=new_s.other_db_ids,
                 )
 
                 newrow["head"] = organism_with_part
@@ -364,8 +379,10 @@ def generate_ph_pairs(
 
                 newrow["hypothesis_string"] = f"{organisms} - {parts} contains {chemicals}"
 
-                ncbi_taxonomy = s.other_db_ids["NCBI_taxonomy"]
-                mesh = c.other_db_ids["MESH"]
+                assert len(s.other_db_ids["NCBI_taxonomy"]) == 1
+                assert len(c.other_db_ids["MESH"]) == 1
+                ncbi_taxonomy = s.other_db_ids["NCBI_taxonomy"][0]
+                mesh = c.other_db_ids["MESH"][0]
                 newrow["hypothesis_id"] = f"NCBI_taxonomy:{ncbi_taxonomy}-" + \
                                           f"{p.name}_contains_MESH:{mesh}"
                 newrows.append(newrow)
