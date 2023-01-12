@@ -133,11 +133,12 @@ def query_litsense(
     # data = load_pkl(query_data_pkl_filepath)
     # start_idx = query_items.index("strawberry cellobiose")
     # query_items = query_items[start_idx:]
+    query_items = query_items[20000:]
 
     data = []
 
-    for search_term in tqdm(query_items):
-        print(f"Requesting '{search_term}'...")
+    for idx, search_term in enumerate(tqdm(query_items)):
+        print(f"\nRequesting '{search_term}'...")
 
         query_url = "https://www.ncbi.nlm.nih.gov/research/litsense-api/api/" + \
             f"?query={search_term}&rerank=true&match_all=false"
@@ -164,6 +165,10 @@ def query_litsense(
         if response.status_code not in [404, 200]:
             save_pkl(data, query_data_pkl_filepath)
             sys.exit(1)
+
+        if idx % 100 == 0:
+            save_pkl(data, query_data_pkl_filepath)
+            print(f"Saving temporarl data pickle (idx: {idx}) file to {query_data_pkl_filepath}")
 
         data_to_extend = []
         print("Parsing {} results...".format(len(response.json())))
@@ -255,6 +260,10 @@ def generate_ph_pairs(
     df: pd.DataFrame,
     ph_pairs_filepath: str,
 ):
+    subset = list(df.columns.values)
+    subset.remove("search_term")
+    df.drop_duplicates(subset, inplace=True, ignore_index=True)
+
     df["chemicals"] = df["chemicals"].apply(lambda x: eval(x, globals()))
     df["organisms"] = df["organisms"].apply(lambda x: eval(x, globals()))
     df["food_parts"] = df["food_parts"].apply(lambda x: eval(x, globals()))
@@ -266,9 +275,6 @@ def generate_ph_pairs(
 
     def _f(row):
         newrows = []
-        failed = []
-
-        cleaned_premise = " " + re.sub('[^A-Za-z0-9 ]+', ' ', row["premise"].lower()) + ""
 
         for s, c in product(row["organisms"], row["chemicals"]):
             newrow = row.copy().drop(["search_term", "chemicals", "organisms", "food_parts"])
@@ -283,34 +289,12 @@ def generate_ph_pairs(
             newrow["relation"] = contains
             newrow["tail"] = c
 
-            organisms = None
-            if s.name.lower() not in row["premise"].lower() or \
-               f" {s.name.lower()} " not in cleaned_premise:
-                for x in s.synonyms:
-                    if x.lower() in row["premise"].lower():
-                        organisms = x
-            else:
-                organisms = s.name
+            assert new_s.name in row["premise"]
+            assert c.name in row["premise"]
+            newrow["hypothesis_string"] = f"{new_s.name} contains {c.name}"
 
-            chemicals = None
-            if c.name.lower() not in row["premise"].lower():
-                for x in c.synonyms:
-                    if x.lower() in row["premise"].lower():
-                        chemicals = x
-            else:
-                chemicals = c.name
-
-            if organisms is None or chemicals is None:
-                failed.append(row)
-                continue
-
-            newrow["hypothesis_string"] = f"{organisms} contains {chemicals}"
-
-            assert len(s.other_db_ids["NCBI_taxonomy"]) == 1
+            assert len(new_s.other_db_ids["NCBI_taxonomy"]) == 1
             assert len(c.other_db_ids["MESH"]) == 1
-            ncbi_taxonomy = s.other_db_ids["NCBI_taxonomy"][0]
-            mesh = c.other_db_ids["MESH"][0]
-            newrow["hypothesis_id"] = f"NCBI_taxonomy:{ncbi_taxonomy}_contains_MESH:{mesh}"
             newrows.append(newrow)
 
         if row["food_parts"]:
@@ -324,8 +308,7 @@ def generate_ph_pairs(
                 new_s = new_s._replace(other_db_ids=new_other_db_ids)
                 organism_with_part = CandidateEntity(
                     type="organism_with_part",
-                    name=f"{s.name} - {p.name}",
-                    synonyms=[f"{x} - {p.name}" for x in s.synonyms],
+                    name=f"{new_s.name} - {p.name}",
                     other_db_ids=new_s.other_db_ids,
                 )
 
@@ -333,69 +316,29 @@ def generate_ph_pairs(
                 newrow["relation"] = contains
                 newrow["tail"] = c
 
-                organisms = None
-                if s.name.lower() not in row["premise"].lower() or \
-                   f" {s.name.lower()} " not in cleaned_premise:
-                    for x in s.synonyms:
-                        if x.lower() in row["premise"].lower():
-                            organisms = x
-                else:
-                    organisms = s.name
+                assert new_s.name in row["premise"]
+                assert c.name in row["premise"]
+                part_in_premise = False
+                for x in [p.name] + p.synonyms:
+                    if x in row["premise"].lower():
+                        part_in_premise = True
+                assert part_in_premise
 
-                parts = None
-                if p.name.lower() not in row["premise"].lower():
-                    for x in p.synonyms:
-                        if x.lower() in row["premise"].lower():
-                            parts = x
-                else:
-                    parts = p.name
-
-                chemicals = None
-                if c.name.lower() not in row["premise"].lower():
-                    for x in c.synonyms:
-                        if x.lower() in row["premise"].lower():
-                            chemicals = x
-                else:
-                    chemicals = c.name
-
-                if organisms is None or parts is None or chemicals is None:
-                    failed.append(row)
-                    continue
-
-                newrow["hypothesis_string"] = f"{organisms} - {parts} contains {chemicals}"
+                newrow["hypothesis_string"] = f"{new_s.name} - {p.name} contains {c.name}"
 
                 assert len(s.other_db_ids["NCBI_taxonomy"]) == 1
                 assert len(c.other_db_ids["MESH"]) == 1
-                ncbi_taxonomy = s.other_db_ids["NCBI_taxonomy"][0]
-                mesh = c.other_db_ids["MESH"][0]
-                newrow["hypothesis_id"] = f"NCBI_taxonomy:{ncbi_taxonomy}-" + \
-                                          f"{p.name}_contains_MESH:{mesh}"
                 newrows.append(newrow)
 
-        return newrows, failed
+        return newrows
 
     results = []
-    skipped = []
-    for result, failed in df.parallel_apply(_f, axis=1):
+    for result in df.parallel_apply(_f, axis=1):
         results.append(pd.DataFrame(result))
-        skipped.extend(failed)
-
-    print(f"Skipped {len(skipped)} rows.")
-    for x in skipped:
-        print(f"Premise: {x['premise']}")
-        print(f"Chemicals: {x['chemicals']}")
-        print(f"Organisms: {x['organisms']}")
-        print(f"Food parts: {x['food_parts']}")
 
     df_ph_pairs = pd.concat(results).reset_index(drop=True)
-    df_ph_pairs.fillna("", inplace=True)
     df_ph_pairs = df_ph_pairs.astype(str)
     df_ph_pairs.drop_duplicates(inplace=True)
-
-    hypothesis_id = df_ph_pairs["hypothesis_id"].tolist()
-    duplicates = [item for item, count in Counter(hypothesis_id).items() if count > 1]
-    print(f"Found {len(duplicates)} duplicate hypothesis IDs out of {len(hypothesis_id)}.")
-
     df_ph_pairs.to_csv(ph_pairs_filepath, index=False, sep="\t")
 
     return df_ph_pairs
@@ -409,17 +352,20 @@ def main():
     args.query_results_filepath = args.query_results_filepath.format(timestamp)
     args.ph_pairs_filepath = args.ph_pairs_filepath.format(timestamp)
 
-    df = query_litsense(
-        query_filepath=args.query_filepath,
-        food_parts_filepath=args.food_parts_filepath,
-        allowed_ncbi_taxids_filepath=args.allowed_ncbi_taxids_filepath,
-        query_results_filepath=args.query_results_filepath,
-        cache_dir=args.cache_dir,
-    )
+    # df = query_litsense(
+    #     query_filepath=args.query_filepath,
+    #     food_parts_filepath=args.food_parts_filepath,
+    #     allowed_ncbi_taxids_filepath=args.allowed_ncbi_taxids_filepath,
+    #     query_results_filepath=args.query_results_filepath,
+    #     cache_dir=args.cache_dir,
+    # )
 
-    sys.exit()
+    # sys.exit()
 
-    df = pd.read_csv(args.query_results_filepath, sep='\t')
+    args.query_results_filepath = "../../outputs/data_processing/query_results_20230111_224704.txt"
+    args.ph_pairs_filepath = "../../outputs/data_processing/ph_pairs_20230111_224704.txt"
+
+    df = pd.read_csv(args.query_results_filepath, sep='\t', keep_default_na=False)
     generate_ph_pairs(
         df=df,
         ph_pairs_filepath=args.ph_pairs_filepath,
