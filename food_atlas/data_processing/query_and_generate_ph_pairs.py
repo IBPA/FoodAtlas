@@ -67,6 +67,12 @@ def parse_argument() -> argparse.Namespace:
     )
 
     parser.add_argument(
+        "--match_all",
+        action="store_true",
+        help="Set if match all queries when quering LitSense.",
+    )
+
+    parser.add_argument(
         "--ph_pairs_filepath",
         type=str,
         default=PH_PAIRS_FILEPATH,
@@ -109,6 +115,7 @@ def query_litsense(
     allowed_ncbi_taxids_filepath: str,
     query_results_filepath: str,
     cache_dir: str,
+    match_all: bool,
     delay: float = 0.9,
 ) -> Optional[pd.DataFrame]:
     # queries
@@ -130,18 +137,20 @@ def query_litsense(
     Path(query_data_pkl_filepath).parent.mkdir(parents=True, exist_ok=True)
     print(f"In case of runtime fail, query data will be pickled to {query_data_pkl_filepath}")
 
-    # data = load_pkl(query_data_pkl_filepath)
-    # start_idx = query_items.index("strawberry cellobiose")
-    # query_items = query_items[start_idx:]
-    query_items = query_items[20000:]
-
     data = []
+    # data = load_pkl(query_data_pkl_filepath)
+    query_items = query_items[:19000]
 
     for idx, search_term in enumerate(tqdm(query_items)):
-        print(f"\nRequesting '{search_term}'...")
-
         query_url = "https://www.ncbi.nlm.nih.gov/research/litsense-api/api/" + \
-            f"?query={search_term}&rerank=true&match_all=false"
+            f"?query={search_term}&rerank=true"
+
+        if match_all:
+            query_url += "&match_all=true"
+        else:
+            query_url += "&match_all=false"
+
+        print(f"\nRequesting: {query_url}...")
 
         try_count = 0
         while True:
@@ -352,15 +361,16 @@ def main():
     args.query_results_filepath = args.query_results_filepath.format(timestamp)
     args.ph_pairs_filepath = args.ph_pairs_filepath.format(timestamp)
 
-    # df = query_litsense(
-    #     query_filepath=args.query_filepath,
-    #     food_parts_filepath=args.food_parts_filepath,
-    #     allowed_ncbi_taxids_filepath=args.allowed_ncbi_taxids_filepath,
-    #     query_results_filepath=args.query_results_filepath,
-    #     cache_dir=args.cache_dir,
-    # )
+    df = query_litsense(
+        query_filepath=args.query_filepath,
+        food_parts_filepath=args.food_parts_filepath,
+        allowed_ncbi_taxids_filepath=args.allowed_ncbi_taxids_filepath,
+        query_results_filepath=args.query_results_filepath,
+        cache_dir=args.cache_dir,
+        match_all=args.match_all,
+    )
 
-    # sys.exit()
+    sys.exit()
 
     args.query_results_filepath = "../../outputs/data_processing/query_results_20230111_224704.txt"
     args.ph_pairs_filepath = "../../outputs/data_processing/ph_pairs_20230111_224704.txt"
