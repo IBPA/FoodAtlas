@@ -199,7 +199,7 @@ def main():
             [candidate_entity_dict[head_tax_id], relation, candidate_entity_dict[tail_tax_id]])
     df_candiate_triples = pd.DataFrame(data, columns=["head", "relation", "tail"])
     df_candiate_triples["source"] = "NCBI_taxonomy"
-    df_candiate_triples["quality"] = "high"
+    df_candiate_triples["quality"] = "medium"
     fa_kg.add_triples(df_candiate_triples)
 
     fa_kg.save(kg_dir=args.output_kg_dir)

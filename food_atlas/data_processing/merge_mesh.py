@@ -174,7 +174,7 @@ def main():
 
     df_candidate_triples = pd.DataFrame(triples, columns=["head", "relation", "tail"])
     df_candidate_triples["source"] = "MeSH"
-    df_candidate_triples["quality"] = "high"
+    df_candidate_triples["quality"] = "medium"
 
     fa_kg.add_triples(df_candidate_triples)
 

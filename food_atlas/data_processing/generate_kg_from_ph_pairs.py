@@ -81,7 +81,7 @@ def main():
         print(f"Predicted shape: {df.shape}")
 
         df_pos = df[df["prob_mean"] > args.threshold]
-        df_pos["quality"] = "low"
+        df_pos["quality"] = "medium"
         print(f"Predicted positives shape: {df_pos.shape}")
     else:
         raise ValueError()

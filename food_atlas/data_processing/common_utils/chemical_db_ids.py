@@ -31,7 +31,9 @@ PUBCHEM_CID_MESH_FILEPATH = "../../data/PubChem/CID-MeSH.txt"
 CAS_ID_CID_QUERY_URL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/{}/cids/JSON"
 CID_QUERY_URL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/{}/JSON"
 PUBCHEM_OTHER_DB_IDS_FILEPATH = "../../data/FoodAtlas/pubchem_other_db_ids.pkl"
+PUBCHEM_NAMES_FILEPATH = "../../data/FoodAtlas/pubchem_names.pkl"
 CAS_OTHER_DB_IDS_FILEPATH = "../../data/FoodAtlas/cas_other_db_ids.pkl"
+CAS_NAMES_FILEPATH = "../../data/FoodAtlas/cas_names.pkl"
 
 
 def query_using_cid(cid: str):
@@ -121,6 +123,7 @@ def query_using_cid(cid: str):
     mesh_id = list(set(mesh_id))
 
     return {
+        "name": response_json["Record"]["RecordTitle"],
         "CAS": cas_id,
         "inchi": inchi,
         "inchikey": inchikey,
@@ -201,6 +204,14 @@ def make_pubchem_request(pubchem_id):
     return (pubchem_id, result)
 
 
+def make_pubchem_name_request(pubchem_id):
+    result = query_using_cid(pubchem_id)
+    if result is None:
+        return (pubchem_id, None)
+
+    return (pubchem_id, result["name"])
+
+
 def make_cas_id_request(cas_id):
     cas_id_from_pubchem = []
     inchi_from_pubchem = []
@@ -243,6 +254,33 @@ def make_cas_id_request(cas_id):
     return (cas_id, result)
 
 
+def make_cas_id_name_request(cas_id):
+    cas_id_from_pubchem = []
+    names = []
+
+    url = CAS_ID_CID_QUERY_URL.format(cas_id)
+    response = requests.get(url)
+    if response.status_code != 200:
+        warnings.warn(f"Error requesting data from {url}: {response.status_code}")
+        return (cas_id, None)
+
+    response_json = response.json()
+    pubchem_ids = [str(x) for x in response_json["IdentifierList"]["CID"]]
+
+    for pubchem_id in pubchem_ids:
+        result = query_using_cid(pubchem_id)
+        if result is None:
+            continue
+
+        cas_id_from_pubchem.extend(result["CAS"])
+        names.append(result["name"])
+
+    if cas_id not in cas_id_from_pubchem:
+        return (cas_id, None)
+
+    return (cas_id, list(set(names)))
+
+
 def get_other_db_ids_using_cids(
         cids,
         new_pkl,
@@ -275,6 +313,38 @@ def get_other_db_ids_using_cids(
     return pubchem_other_db_ids
 
 
+def get_pubchem_name_using_cids(
+        cids,
+        new_pkl,
+        pubchem_names_filepath=PUBCHEM_NAMES_FILEPATH,
+        num_proc=None,
+):
+    if Path(pubchem_names_filepath).is_file() and new_pkl is False:
+        print(f"Loading pubchem_names pickled file: {pubchem_names_filepath}")
+        pubchem_names = load_pkl(pubchem_names_filepath)
+    else:
+        print(f"Initializing new pubchem_names: {pubchem_names_filepath}")
+        pubchem_names = {}
+
+    print("Getting names using PubChem IDs...")
+
+    original_shape = len(cids)
+    cids = [x for x in cids if x not in pubchem_names.keys()]
+    print(f"{len(cids)}/{original_shape} are not in pickled file")
+
+    with Pool(processes=cpu_count() if num_proc is None else num_proc) as pool:
+        r = list(tqdm(pool.imap(make_pubchem_name_request, cids), total=len(cids)))
+    name = {x[0]: x[1] for x in r if x[1] is not None}
+
+    for k, v in name.items():
+        if k not in pubchem_names:
+            pubchem_names[k] = v
+
+    save_pkl(pubchem_names, pubchem_names_filepath)
+
+    return pubchem_names
+
+
 def get_other_db_ids_using_cas_ids(
         cas_ids,
         new_pkl,
@@ -305,6 +375,38 @@ def get_other_db_ids_using_cas_ids(
     save_pkl(cas_other_db_ids, cas_other_db_ids_filepath)
 
     return cas_other_db_ids
+
+
+def get_pubchem_name_using_cas_ids(
+        cas_ids,
+        new_pkl,
+        cas_names_filepath=CAS_NAMES_FILEPATH,
+        num_proc=None,
+):
+    if Path(cas_names_filepath).is_file() and new_pkl is False:
+        print(f"Loading cas_names pickled file: {cas_names_filepath}")
+        cas_names = load_pkl(cas_names_filepath)
+    else:
+        print(f"Initializing new cas_names: {cas_names_filepath}")
+        cas_names = {}
+
+    print("Getting PubChem names using CAS IDs...")
+
+    original_shape = len(cas_ids)
+    cas_ids = [x for x in cas_ids if x not in cas_names.keys()]
+    print(f"{len(cas_ids)}/{original_shape} are not in pickled file")
+
+    with Pool(processes=cpu_count() if num_proc is None else num_proc) as pool:
+        r = list(tqdm(pool.imap(make_cas_id_name_request, cas_ids), total=len(cas_ids)))
+    other_db_ids = {x[0]: x[1] for x in r if x[1] is not None}
+
+    for k, v in other_db_ids.items():
+        if k not in cas_names:
+            cas_names[k] = v
+
+    save_pkl(cas_names, cas_names_filepath)
+
+    return cas_names
 
 
 def update_using_mesh(

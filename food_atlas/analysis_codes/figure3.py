@@ -76,15 +76,15 @@ def pie_chart_sources(fa_kg):
         # High
         ["High", "Source", df_high.shape[0]],
         ["FoodAtlas:annotation", "High", df_annotation.shape[0]],
-        ["MeSH", "High", df_mesh.shape[0]],
-        ["NCBI", "High", df_ncbi.shape[0]],
         # Medium
         ["Medium", "Source", df_medium.shape[0]],
         ["Frida:Medium", "Medium", df_frida_medium.shape[0]],
         ["Phenol-Explorer:Medium", "Medium", df_phenol_explorer_medium.shape[0]],
+        ["MeSH", "Medium", df_mesh.shape[0]],
+        ["NCBI", "Medium", df_ncbi.shape[0]],
+        ["FoodAtlas:prediction", "Medium", df_prediction.shape[0]],
         # Low
         ["Low", "Source", df_low.shape[0]],
-        ["FoodAtlas:prediction", "Low", df_prediction.shape[0]],
         ["Frida:Low", "Low", df_frida_low.shape[0]],
         ["Phenol-Explorer:Low", "Low", df_phenol_explorer_low.shape[0]],
     ]
@@ -565,13 +565,13 @@ def plot_node_stats(fa_kg, G, dictionary):
 def main():
     fa_kg = KnowledgeGraph(kg_dir=FINAL_DATA_DIR)
 
-    # pie_chart_sources(fa_kg)
+    pie_chart_sources(fa_kg)
     # upset_plot(fa_kg)
     # pie_chart_entities(fa_kg)
     # pie_chart_relations(fa_kg)
     # plot_sunburst_chemicals("../../outputs/backend_data/v0.1/chemicals_group.txt")
     # plot_sunburst_organisms("../../outputs/backend_data/v0.1/organisms_group.txt")
-    plot_num_sources_per_triple(fa_kg)
+    # plot_num_sources_per_triple(fa_kg)
 
     # G, dictionary = generate_kg(fa_kg)
     # plot_node_stats(fa_kg, G, dictionary)

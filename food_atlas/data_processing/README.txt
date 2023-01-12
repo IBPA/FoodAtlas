@@ -1,6 +1,9 @@
 1. Generate PH pairs.
 
-python query_and_generate_ph_pairs.py
+python query_and_generate_ph_pairs.py \
+    --query_filepath=../../data/FooDB/names.txt \
+    --allowed_ncbi_taxids_filepath=../../data/FoodAtlas/allowed_ncbi_taxids.tsv \
+    --cache_dir=/home/jasonyoun/Temp
 
 Output files
 - ../../outputs/data_processing/query_results.txt
@@ -52,3 +55,7 @@ python generate_folds.py \
     --input_val_filepath=../../outputs/data_processing/val.tsv \
     --input_test_filepath=../../outputs/data_processing/test.tsv \
     --output_dir=../../outputs/data_processing/folds_for_prod_model
+
+X. Generated queries
+python generate_food_chem_queries.py --input_filepath=../../data/Frida/frida.tsv --output_filepath=../../data/Frida/frida_queries.txt
+python generate_food_chem_queries.py --input_filepath=../../data/Phenol-Explorer/phenol_explorer.tsv --output_filepath=../../data/Phenol-Explorer/phenol_explorer_queries.txt
