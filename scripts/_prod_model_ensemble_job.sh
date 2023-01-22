@@ -27,7 +27,7 @@ echo "SEED_END: $2"
 
 for (( seed=$1; seed<=$2; seed++ ))
 do
-    python -m food_atlas.entailment.run_prod_model_ensemble \
+    python -m food_atlas.entailment.train_prod_model \
         $PATH_DATA_TRAIN \
         $PATH_DATA_TO_PREDICT \
         biobert \
