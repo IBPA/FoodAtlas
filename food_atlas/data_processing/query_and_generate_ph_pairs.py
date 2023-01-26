@@ -1,9 +1,12 @@
 import argparse
+from ast import literal_eval
 from collections import Counter
 from copy import deepcopy
 from datetime import datetime
+import glob
 import os
 from itertools import product
+import json
 from pathlib import Path
 import re
 import requests
@@ -30,6 +33,13 @@ QUERY_DATA_PKL_FILENAME = "query_data.pkl"
 
 def parse_argument() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Main code for running the data generation.")
+
+    parser.add_argument(
+        "--input_type",
+        type=str,
+        required=True,
+        help="Either query_string or query_results.",
+    )
 
     parser.add_argument(
         "--query_filepath",
@@ -79,6 +89,12 @@ def parse_argument() -> argparse.Namespace:
         help=f"Filepath to save the PH pairs. (Default: {PH_PAIRS_FILEPATH})",
     )
 
+    parser.add_argument(
+        "--nb_workers",
+        type=int,
+        help=f"Number of workers for pandarallel.",
+    )
+
     args = parser.parse_args()
     return args
 
@@ -110,6 +126,7 @@ def get_food_parts(
 
 
 def query_litsense(
+    input_type: str,
     query_filepath: str,
     food_parts_filepath: str,
     allowed_ncbi_taxids_filepath: str,
@@ -118,9 +135,14 @@ def query_litsense(
     match_all: bool,
     delay: float = 0.9,
 ) -> Optional[pd.DataFrame]:
-    # queries
-    query_items = pd.read_csv(query_filepath, sep='\t', keep_default_na=False, names=["data"])
-    query_items = query_items["data"].tolist()
+    if input_type == "query_string":
+        # queries
+        query_items = pd.read_csv(query_filepath, sep='\t', keep_default_na=False, names=["data"])
+        query_items = query_items["data"].tolist()
+    elif input_type == "query_results":
+        query_items = sorted(glob.glob(query_filepath))
+    else:
+        raise ValueError()
 
     # food parts
     df_food_parts = pd.read_csv(food_parts_filepath, sep='\t', keep_default_na=False)
@@ -139,49 +161,57 @@ def query_litsense(
 
     data = []
     # data = load_pkl(query_data_pkl_filepath)
-    query_items = query_items[:19000]
+    # query_items = query_items[:19000]
 
     for idx, search_term in enumerate(tqdm(query_items)):
-        query_url = "https://www.ncbi.nlm.nih.gov/research/litsense-api/api/" + \
-            f"?query={search_term}&rerank=true"
+        if input_type == "query_string":
+            query_url = "https://www.ncbi.nlm.nih.gov/research/litsense-api/api/" + \
+                f"?query={search_term}&rerank=true"
 
-        if match_all:
-            query_url += "&match_all=true"
-        else:
-            query_url += "&match_all=false"
-
-        print(f"\nRequesting: {query_url}...")
-
-        try_count = 0
-        while True:
-            time.sleep(delay)  # avoid throttling
-            response = requests.get(query_url)
-            if response.status_code == 404:
-                warnings.warn(f"Failed to request data from {query_url}: {response.status_code}")
-                break
-            elif response.status_code not in [404, 200]:
-                warnings.warn(f"Error requesting data from {query_url}: {response.status_code}")
-                warnings.warn("Trying again...")
-                try_count += 1
-                if try_count == 5:
-                    break
+            if match_all:
+                query_url += "&match_all=true"
             else:
-                break
+                query_url += "&match_all=false"
 
-        if response.status_code == 404:
-            continue
+            print(f"\nRequesting: {query_url}...")
 
-        if response.status_code not in [404, 200]:
-            save_pkl(data, query_data_pkl_filepath)
-            sys.exit(1)
+            try_count = 0
+            while True:
+                time.sleep(delay)  # avoid throttling
+                response = requests.get(query_url)
+                if response.status_code == 404:
+                    warnings.warn(f"Failed to request data from {query_url}: {response.status_code}")
+                    break
+                elif response.status_code not in [404, 200]:
+                    warnings.warn(f"Error requesting data from {query_url}: {response.status_code}")
+                    warnings.warn("Trying again...")
+                    try_count += 1
+                    if try_count == 5:
+                        break
+                else:
+                    break
 
-        if idx % 100 == 0:
-            save_pkl(data, query_data_pkl_filepath)
-            print(f"Saving temporarl data pickle (idx: {idx}) file to {query_data_pkl_filepath}")
+            if response.status_code == 404:
+                continue
+
+            if response.status_code not in [404, 200]:
+                save_pkl(data, query_data_pkl_filepath)
+                sys.exit(1)
+
+            if idx % 100 == 0:
+                save_pkl(data, query_data_pkl_filepath)
+                print(f"Saving temporarl data pickle (idx: {idx}) file to {query_data_pkl_filepath}")
+
+            response = response.json()
+        elif input_type == "query_results":
+            with open(search_term) as _f:
+                response = _f.readlines()[1:]
+                assert len(response) == 1
+                response = json.loads(response[0])
 
         data_to_extend = []
-        print("Parsing {} results...".format(len(response.json())))
-        for doc in response.json():
+        print("Parsing {} results...".format(len(response)))
+        for doc in response:
             if doc["annotations"] is None:
                 continue
 
@@ -284,6 +314,7 @@ def generate_ph_pairs(
 
     def _f(row):
         newrows = []
+        failed = []
 
         for s, c in product(row["organisms"], row["chemicals"]):
             newrow = row.copy().drop(["search_term", "chemicals", "organisms", "food_parts"])
@@ -298,8 +329,9 @@ def generate_ph_pairs(
             newrow["relation"] = contains
             newrow["tail"] = c
 
-            assert new_s.name in row["premise"]
-            assert c.name in row["premise"]
+            if new_s.name not in row["premise"] or c.name not in row["premise"]:
+                failed.append(row)
+                continue
             newrow["hypothesis_string"] = f"{new_s.name} contains {c.name}"
 
             assert len(new_s.other_db_ids["NCBI_taxonomy"]) == 1
@@ -325,13 +357,16 @@ def generate_ph_pairs(
                 newrow["relation"] = contains
                 newrow["tail"] = c
 
-                assert new_s.name in row["premise"]
-                assert c.name in row["premise"]
                 part_in_premise = False
                 for x in [p.name] + p.synonyms:
                     if x in row["premise"].lower():
                         part_in_premise = True
-                assert part_in_premise
+
+                if new_s.name not in row["premise"] or \
+                        c.name not in row["premise"] or \
+                        part_in_premise is False:
+                    failed.append(row)
+                    continue
 
                 newrow["hypothesis_string"] = f"{new_s.name} - {p.name} contains {c.name}"
 
@@ -339,11 +374,20 @@ def generate_ph_pairs(
                 assert len(c.other_db_ids["MESH"]) == 1
                 newrows.append(newrow)
 
-        return newrows
+        return newrows, failed
 
     results = []
-    for result in df.parallel_apply(_f, axis=1):
+    skipped = []
+    for result, failed in df.parallel_apply(_f, axis=1):
         results.append(pd.DataFrame(result))
+        skipped.extend(failed)
+
+    print(f"Skipped {len(skipped)} rows.")
+    for x in skipped:
+        print(f"Premise: {x['premise']}")
+        print(f"Chemicals: {x['chemicals']}")
+        print(f"Organisms: {x['organisms']}")
+        print(f"Food parts: {x['food_parts']}")
 
     df_ph_pairs = pd.concat(results).reset_index(drop=True)
     df_ph_pairs = df_ph_pairs.astype(str)
@@ -355,27 +399,31 @@ def generate_ph_pairs(
 
 def main():
     args = parse_argument()
-    pandarallel.initialize(progress_bar=True)
+
+    if args.nb_workers is None:
+        pandarallel.initialize(progress_bar=True)
+    else:
+        pandarallel.initialize(progress_bar=True, nb_workers=args.nb_workers)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     args.query_results_filepath = args.query_results_filepath.format(timestamp)
     args.ph_pairs_filepath = args.ph_pairs_filepath.format(timestamp)
 
-    df = query_litsense(
-        query_filepath=args.query_filepath,
-        food_parts_filepath=args.food_parts_filepath,
-        allowed_ncbi_taxids_filepath=args.allowed_ncbi_taxids_filepath,
-        query_results_filepath=args.query_results_filepath,
-        cache_dir=args.cache_dir,
-        match_all=args.match_all,
-    )
+    # df = query_litsense(
+    #     input_type=args.input_type,
+    #     query_filepath=args.query_filepath,
+    #     food_parts_filepath=args.food_parts_filepath,
+    #     allowed_ncbi_taxids_filepath=args.allowed_ncbi_taxids_filepath,
+    #     query_results_filepath=args.query_results_filepath,
+    #     cache_dir=args.cache_dir,
+    #     match_all=args.match_all,
+    # )
 
-    sys.exit()
-
-    args.query_results_filepath = "../../outputs/data_processing/query_results_20230111_224704.txt"
-    args.ph_pairs_filepath = "../../outputs/data_processing/ph_pairs_20230111_224704.txt"
+    args.query_results_filepath = "../../outputs/data_processing/query_results_20230119_214855.txt"
+    args.ph_pairs_filepath = "../../outputs/data_processing/ph_pairs_temp.txt"
 
     df = pd.read_csv(args.query_results_filepath, sep='\t', keep_default_na=False)
+    df = df.sample(frac=0.4)
     generate_ph_pairs(
         df=df,
         ph_pairs_filepath=args.ph_pairs_filepath,

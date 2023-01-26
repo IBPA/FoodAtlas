@@ -4,6 +4,7 @@ _CACHED/
 .tags
 .tags_sorted_by_file
 .vscode
+*.code-workspace
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

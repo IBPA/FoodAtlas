@@ -48,6 +48,12 @@ def parse_argument() -> argparse.Namespace:
         help="Set if using new pickled data.",
     )
 
+    parser.add_argument(
+        "--nb_workers",
+        type=int,
+        help="Number of workers for pandarallel.",
+    )
+
     args = parser.parse_args()
     return args
 
@@ -56,7 +62,7 @@ def main():
     args = parse_argument()
 
     #
-    fa_kg = KnowledgeGraph(kg_dir=args.input_kg_dir)
+    fa_kg = KnowledgeGraph(kg_dir=args.input_kg_dir, nb_workers=args.nb_workers)
     df_chemicals = fa_kg.get_entities_by_type(exact_type="chemical")
     print(f"Number of chemicals in KG: {df_chemicals.shape[0]}")
 
@@ -189,8 +195,9 @@ def main():
     mesh_ids = list(set(mesh_ids))
     print(f"Number of unique MESH ids: {len(mesh_ids)}")
 
+    print("Adding MeSH tree...")
     for mesh_id in tqdm(mesh_ids):
-        df_entities = fa_kg.get_entity_by_other_db_id("MESH", mesh_id)
+        df_entities = fa_kg.get_entity_by_other_db_id({"MESH": mesh_id})
         for _, row in df_entities.iterrows():
             other_db_ids = deepcopy(row["other_db_ids"])
 

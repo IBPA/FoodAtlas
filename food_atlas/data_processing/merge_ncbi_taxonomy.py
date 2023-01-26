@@ -30,6 +30,12 @@ def parse_argument() -> argparse.Namespace:
         help="KG directory to merge the MESH to.",
     )
 
+    parser.add_argument(
+        "--nb_workers",
+        type=int,
+        help="Number of workers for pandarallel.",
+    )
+
     args = parser.parse_args()
     return args
 
@@ -76,7 +82,7 @@ def main():
     args = parse_argument()
 
     # read KG
-    fa_kg = KnowledgeGraph(kg_dir=args.input_kg_dir)
+    fa_kg = KnowledgeGraph(kg_dir=args.input_kg_dir, nb_workers=args.nb_workers)
     df_organisms = fa_kg.get_entities_by_type(exact_type="organism")
     print(f"Number of organisms in KG: {df_organisms.shape[0]}")
 

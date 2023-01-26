@@ -9,6 +9,7 @@ import sys
 
 from tqdm import tqdm
 import pandas as pd
+from pandarallel import pandarallel
 pd.options.mode.chained_assignment = None
 
 
@@ -114,6 +115,7 @@ class KnowledgeGraph():
             retired_entities_filename: str = "retired_entities.txt",
             entities_filename: str = "entities.txt",
             relations_filename: str = "relations.txt",
+            nb_workers: int = None,
     ):
         # load the graph
         self.kg_filepath = os.path.join(kg_dir, kg_filename)
@@ -134,6 +136,11 @@ class KnowledgeGraph():
         # load the relations
         self.relations_filepath = os.path.join(kg_dir, relations_filename)
         self.df_relations, self.avail_relation_id = self._read_relations()
+
+        if nb_workers is None:
+            pandarallel.initialize(progress_bar=True)
+        else:
+            pandarallel.initialize(progress_bar=True, nb_workers=nb_workers)
 
     def _read_kg(self) -> pd.DataFrame:
         if not Path(self.kg_filepath).is_file():
@@ -250,110 +257,6 @@ class KnowledgeGraph():
     def _check_duplicate_evidence(self, evidence):
         raise NotImplementedError()
 
-    def add_ph_pairs(self, df: pd.DataFrame):
-        entities = df["head"].tolist() + df["tail"].tolist()
-        # check all chemical entities have PubChem ID
-        chemical_entities = [e for e in entities if e.type == "chemical"]
-        for e in chemical_entities:
-            assert "PubChem" in e.other_db_ids and len(e.other_db_ids["PubChem"]) != 0
-        self.add_update_entities(entities)
-
-        relations = df["relation"].tolist()
-        self._add_candidate_relations(relations)
-
-        print("Adding triples...")
-        data = []
-        evidence = []
-        for _, row in tqdm(df.iterrows(), total=df.shape[0]):
-            head_foodatlas_id = self._find_matching_foodatlas_id(row["head"])
-            relation_foodatlas_id = self._find_matching_foodatlas_id(row["relation"])
-            tail_foodatlas_id = self._find_matching_foodatlas_id(row["tail"])
-
-            e = pd.Series({
-                "head": head_foodatlas_id,
-                "relation": relation_foodatlas_id,
-                "tail": tail_foodatlas_id,
-                "triple": f"({head_foodatlas_id},{relation_foodatlas_id},{tail_foodatlas_id})",
-                "pmid": row["pmid"],
-                "pmcid": row["pmcid"],
-                "title": row["title"],
-                "section": row["section"],
-                "premise": row["premise"],
-                "hypothesis": row["hypothesis_string"],
-                "source": row["source"],
-                "quality": row["quality"],
-                "prob_mean":
-                    row["prob_mean"] if row["source"].startswith("FoodAtlas:prediction") else "",
-                "prob_std":
-                    row["prob_std"] if row["source"].startswith("FoodAtlas:prediction") else "",
-            })
-            evidence.append(e)
-
-            triple = pd.Series({
-                "head": head_foodatlas_id,
-                "relation": relation_foodatlas_id,
-                "tail": tail_foodatlas_id,
-            })
-            data.append(triple)
-
-            # has part
-            if row["head"].type == "organism_with_part" or \
-               row["head"].type.startswith("organism_with_part:"):
-                relation = self._add_relation(
-                    name="hasPart",
-                    translation="has part",
-                )
-
-                head_without_part = self._nested_deep_copy(row["head"])
-                new_other_db_ids = self._nested_deep_copy(head_without_part.other_db_ids)
-                new_other_db_ids["foodatlas_part_id"] = 'p0'
-                head_without_part = head_without_part._replace(
-                    type=head_without_part.type.replace("organism_with_part", "organism"),
-                    name=head_without_part.name.split(" - ")[0],
-                    synonyms=[x.split(" - ")[0] for x in head_without_part.synonyms],
-                    other_db_ids=new_other_db_ids,
-                )
-
-                head_foodatlas_id = self._find_matching_foodatlas_id(head_without_part)
-                tail_foodatlas_id = self._find_matching_foodatlas_id(row["head"])
-
-                triple = pd.Series({
-                    "head": head_foodatlas_id,
-                    "relation": relation.foodatlas_id,
-                    "tail": tail_foodatlas_id,
-                })
-                data.append(triple)
-
-                e = pd.Series({
-                    "head": head_foodatlas_id,
-                    "relation": relation.foodatlas_id,
-                    "tail": tail_foodatlas_id,
-                    "triple": f"({head_foodatlas_id},{relation.foodatlas_id},{tail_foodatlas_id})",
-                    "pmid": row["pmid"],
-                    "pmcid": row["pmcid"],
-                    "title": row["title"],
-                    "section": row["section"],
-                    "premise": row["premise"],
-                    "hypothesis": row["hypothesis_string"],
-                    "source": row["source"],
-                    "quality": row["quality"],
-                    "prob_mean":
-                        row["prob_mean"] if row["source"].startswith("FoodAtlas:prediction")
-                        else "",
-                    "prob_std":
-                        row["prob_std"] if row["source"].startswith("FoodAtlas:prediction")
-                        else "",
-                })
-                evidence.append(e)
-
-        self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data)])
-        self.df_kg.drop_duplicates(inplace=True, ignore_index=True)
-
-        self.df_evidence = pd.concat([self.df_evidence, pd.DataFrame(evidence)])
-        self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
-
-        return self.df_kg, self.df_evidence
-
     def add_triples(self, df: pd.DataFrame):
         assert set(["head", "relation", "tail", "source", "quality"]).issubset(df.columns)
         print(f"Size of triples to add: {df.shape[0]}")
@@ -371,9 +274,10 @@ class KnowledgeGraph():
         self._add_candidate_relations(relations)
 
         print("Adding triples...")
-        data = []
-        evidence = []
-        for _, row in tqdm(df.iterrows(), total=df.shape[0]):
+
+        def _f(row):
+            data = []
+            evidence = []
             head_foodatlas_id = self._find_matching_foodatlas_id(row["head"])
             relation_foodatlas_id = self._find_matching_foodatlas_id(row["relation"])
             tail_foodatlas_id = self._find_matching_foodatlas_id(row["tail"])
@@ -404,10 +308,21 @@ class KnowledgeGraph():
             })
             evidence.append(e)
 
+            return data, evidence
+
+        data, evidence = [], []
+        for d, e in df.parallel_apply(_f, axis=1):
+            data.extend(d)
+            evidence.extend(e)
+
+        print("Updating the KG...")
         self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data)])
+        print("Dropping duplicates in the KG...")
         self.df_kg.drop_duplicates(inplace=True, ignore_index=True)
 
+        print("Updating the evidence...")
         self.df_evidence = pd.concat([self.df_evidence, pd.DataFrame(evidence)])
+        print("Dropping duplicates in the evidence...")
         self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
 
         return self.df_kg, self.df_evidence
@@ -672,36 +587,23 @@ class KnowledgeGraph():
 
     def _find_matching_foodatlas_id(self, entity_or_relation):
         if type(entity_or_relation) == CandidateEntity:
-            match = []
-            index_list = []
-            for db_name, db_ids in entity_or_relation.other_db_ids.items():
-                if type(db_ids) == list:
-                    for x in db_ids:
-                        entities = self.get_entity_by_other_db_id(db_name, x)
-                        match.append(entities)
-                        index_list.append(set(entities.index.tolist()))
-                if type(db_ids) == str:
-                    entities = self.get_entity_by_other_db_id(db_name, db_ids)
-                    match.append(entities)
-                    index_list.append(set(entities.index.tolist()))
-
-            df_match = pd.concat(match)
-            df_match = df_match.loc[list(set.intersection(*index_list))]
-            df_match = df_match[~df_match.index.duplicated(keep='first')]
-            df_match = df_match[df_match["type"] == entity_or_relation.type]
-
-            if entity_or_relation.type.startswith("organism_with_part"):
-                df_match = df_match[df_match["name"].apply(
-                    lambda x: x.split(" - ")[1] == entity_or_relation.name.split(" - ")[1])]
-
-            assert df_match.shape[0] == 1
-            return df_match.iloc[0]["foodatlas_id"]
+            if entity_or_relation.type.startswith("organism"):
+                df_match = self.get_entity_by_other_db_id(entity_or_relation.other_db_ids)
+            elif entity_or_relation.type == "chemical":
+                if entity_or_relation.other_db_ids["PubChem"]:
+                    other_db_ids = {"PubChem": entity_or_relation.other_db_ids["PubChem"]}
+                elif entity_or_relation.other_db_ids["MESH"]:
+                    other_db_ids = {"MESH": entity_or_relation.other_db_ids["MESH"]}
+                else:
+                    raise ValueError()
+                df_match = self.get_entity_by_other_db_id(other_db_ids)
         elif type(entity_or_relation) == CandidateRelation:
             df_match = self.df_relations[self.df_relations["name"] == entity_or_relation.name]
-            assert df_match.shape[0] == 1
-            return df_match.iloc[0]["foodatlas_id"]
         else:
             raise ValueError()
+
+        assert df_match.shape[0] == 1
+        return df_match.iloc[0]["foodatlas_id"]
 
     @staticmethod
     def _merge_synonyms(synonyms):
@@ -777,18 +679,9 @@ class KnowledgeGraph():
         assert entity.shape[0] == 1
         return self._nested_deep_copy(entity.iloc[0])
 
-    def get_entity_by_other_db_id(self, db_name: str, db_id: str) -> pd.DataFrame:
-        entity = self.df_entities[self.df_entities["other_db_ids"].apply(lambda x: db_name in x)]
-
-        def _match_db_id(x, y):
-            if type(x) == str:
-                return x == y
-            elif type(x) == list:
-                return y in x
-            else:
-                raise ValueError
-
-        entity = entity[entity["other_db_ids"].apply(lambda x: _match_db_id(x[db_name], db_id))]
+    def get_entity_by_other_db_id(self, other_db_ids) -> pd.DataFrame:
+        entity = self.df_entities[self.df_entities["other_db_ids"].apply(
+            lambda x: other_db_ids.items() <= x.items())]
         return self._nested_deep_copy(entity)
 
     def _nested_deep_copy(self, x):

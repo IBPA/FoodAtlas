@@ -1,7 +1,8 @@
 1. Generate PH pairs.
 
 python query_and_generate_ph_pairs.py \
-    --query_filepath=../../data/FooDB/names.txt \
+    --input_type=query_string \
+    --query_filepath=../../data/FooDB/foodb_queries.txt \
     --allowed_ncbi_taxids_filepath=../../data/FoodAtlas/allowed_ncbi_taxids.tsv \
     --cache_dir=/home/jasonyoun/Temp
 
@@ -59,3 +60,16 @@ python generate_folds.py \
 X. Generated queries
 python generate_food_chem_queries.py --input_filepath=../../data/Frida/frida.tsv --output_filepath=../../data/Frida/frida_queries.txt
 python generate_food_chem_queries.py --input_filepath=../../data/Phenol-Explorer/phenol_explorer.tsv --output_filepath=../../data/Phenol-Explorer/phenol_explorer_queries.txt
+
+
+python query_and_generate_ph_pairs.py \
+    --input_type=query_results \
+    --query_filepath=../../data/FoodAtlas/litsense_query/20230118/queries_output/*.json \
+    --allowed_ncbi_taxids_filepath=../../data/FoodAtlas/allowed_ncbi_taxids.tsv \
+    --cache_dir=/home/jasonyoun/Temp
+
+python query_and_generate_ph_pairs.py \
+    --input_type=query_results \
+    --query_filepath=../../data/FoodAtlas/litsense_query/20230119/queries_output/*.json \
+    --allowed_ncbi_taxids_filepath=../../data/FoodAtlas/allowed_ncbi_taxids.tsv \
+    --cache_dir=/home/jasonyoun/Temp

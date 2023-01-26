@@ -116,7 +116,11 @@ def query_using_cid(cid: str):
 
     mesh_id = []
     for ncbi_url in ncbi_urls:
-        soup = BeautifulSoup(urlopen(ncbi_url), features="html.parser")
+        try:
+            soup = BeautifulSoup(urlopen(ncbi_url), features="html.parser")
+        except Exception as e:
+            print(f"Failed for {cid}: {ncbi_url}")
+            continue
         for paragraph in soup.find_all('p'):
             if paragraph.text.startswith("MeSH Unique ID: "):
                 mesh_id.append(paragraph.text.split(": ")[1])

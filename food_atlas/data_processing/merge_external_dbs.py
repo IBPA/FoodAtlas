@@ -8,6 +8,7 @@ sys.path.append('..')
 
 from tqdm import tqdm  # noqa: E402
 import pandas as pd  # noqa: E402
+from pandarallel import pandarallel  # noqa: E402
 
 from common_utils.knowledge_graph import KnowledgeGraph,  CandidateEntity, CandidateRelation  # noqa: E402
 from common_utils.utils import save_pkl, load_pkl  # noqa: E402
@@ -57,6 +58,12 @@ def parse_argument() -> argparse.Namespace:
         help="Set if using new pickled data.",
     )
 
+    parser.add_argument(
+        "--nb_workers",
+        type=int,
+        help="Number of workers for pandarallel.",
+    )
+
     args = parser.parse_args()
     return args
 
@@ -79,6 +86,11 @@ def merge_other_db_ids(dict1, dict2):
 
 def main():
     args = parse_argument()
+
+    if args.nb_workers is None:
+        pandarallel.initialize(progress_bar=True)
+    else:
+        pandarallel.initialize(progress_bar=True, nb_workers=args.nb_workers)
 
     #
     df_to_add = pd.read_csv(args.external_db_filepath, sep='\t', keep_default_na=False)
@@ -181,11 +193,10 @@ def main():
         assert num_intersection >= 1
 
     # now update triples
-    rows = []
-    print("Updating chemical entities in the PH pairs...")
-    for _, row in tqdm(df_triples.iterrows(), total=df_triples.shape[0]):
+    def _f(row):
         head = row["head"]
         tail = row["tail"]
+        newrows = []
 
         head_incompatible_dbs = set.intersection(
             set(COMPATIBLE_CHEMICAL_DBS.values()),
@@ -219,13 +230,20 @@ def main():
                 other_db_ids = pubchem_id_other_db_ids_dict[pubchem_id]
                 _check_new_other_db_ids(tail.other_db_ids, other_db_ids)
                 row["tail"] = tail._replace(other_db_ids=other_db_ids)
-                rows.append(deepcopy(row))
+                newrows.append(deepcopy(row))
         else:
             _check_new_other_db_ids(tail.other_db_ids, other_db_ids)
             row["tail"] = tail._replace(other_db_ids=other_db_ids)
-            rows.append(deepcopy(row))
+            newrows.append(deepcopy(row))
 
-    df_triples_updated = pd.DataFrame(rows)
+        return newrows
+
+    #
+    print("Updating chemical entities in the PH pairs...")
+    results = []
+    for result in df_triples.parallel_apply(_f, axis=1):
+        results.extend(result)
+    df_triples_updated = pd.DataFrame(results)
 
     fa_kg = KnowledgeGraph(kg_dir=args.input_kg_dir)
     fa_kg.add_triples(df_triples_updated)

@@ -21,25 +21,11 @@ OUTPUT_DIR = "../../outputs/analysis_codes"
 BACKEND_DATA_DIR = "../../outputs/backend_data/v0.1"
 
 
-def pie_chart_sources(fa_kg):
+def visualize_source(fa_kg):
     df_evidence = fa_kg.get_evidence()
     print(df_evidence)
     sources = list(set(df_evidence['source'].tolist()))
     print(f"Sources: {sources}")
-    qualities = list(set(df_evidence['quality'].tolist()))
-    print(f"Qualities: {qualities}")
-
-    df_high = df_evidence[df_evidence["quality"].apply(
-        lambda x: x == "high")]
-    print(f"Number of df_high: {df_high.shape[0]}")
-
-    df_medium = df_evidence[df_evidence["quality"].apply(
-        lambda x: x == "medium")]
-    print(f"Number of df_medium: {df_medium.shape[0]}")
-
-    df_low = df_evidence[df_evidence["quality"].apply(
-        lambda x: x == "low")]
-    print(f"Number of df_low: {df_low.shape[0]}")
 
     df_annotation = df_evidence[df_evidence["source"].apply(
         lambda x: x == "FoodAtlas:annotation")]
@@ -71,38 +57,162 @@ def pie_chart_sources(fa_kg):
     print(f"Number of df_phenol_explorer_medium: {df_phenol_explorer_medium.shape[0]}")
     print(f"Number of df_phenol_explorer_low: {df_phenol_explorer_low.shape[0]}")
 
-    rows = [
-        ["Source", "", df_evidence.shape[0]],
-        # High
-        ["High", "Source", df_high.shape[0]],
-        ["FoodAtlas:annotation", "High", df_annotation.shape[0]],
-        # Medium
-        ["Medium", "Source", df_medium.shape[0]],
-        ["Frida:Medium", "Medium", df_frida_medium.shape[0]],
-        ["Phenol-Explorer:Medium", "Medium", df_phenol_explorer_medium.shape[0]],
-        ["MeSH", "Medium", df_mesh.shape[0]],
-        ["NCBI", "Medium", df_ncbi.shape[0]],
+    df_fdc = df_evidence[df_evidence["source"].apply(lambda x: x == "FDC")]
+    print(f"Number of df_fdc: {df_fdc.shape[0]}")
+    df_fdc_medium = df_fdc[df_fdc["quality"].apply(lambda x: x == "medium")]
+    df_fdc_low = df_fdc[df_fdc["quality"].apply(lambda x: x == "low")]
+    print(f"Number of df_fdc_medium: {df_fdc_medium.shape[0]}")
+    print(f"Number of df_fdc_low: {df_fdc_low.shape[0]}")
+
+    data = [
         ["FoodAtlas:prediction", "Medium", df_prediction.shape[0]],
-        # Low
-        ["Low", "Source", df_low.shape[0]],
-        ["Frida:Low", "Low", df_frida_low.shape[0]],
-        ["Phenol-Explorer:Low", "Low", df_phenol_explorer_low.shape[0]],
+        ["MeSH", "Medium", df_mesh.shape[0]],
+        ["Frida", "Medium", df_frida_medium.shape[0]],
+        ["Frida", "Low", df_frida_low.shape[0]],
+        ["FoodAtlas:annotation", "High", df_annotation.shape[0]],
+        ["Phenol-Explorer", "Medium", df_phenol_explorer_medium.shape[0]],
+        ["NCBI", "Medium", df_ncbi.shape[0]],
+        ["FDC", "Low", df_fdc_low.shape[0]],
     ]
 
-    df = pd.DataFrame(rows, columns=["labels", "parents", "values"])
+    df = pd.DataFrame(data, columns=["Source", "Quality", "Count"])
+    print(df)
 
-    print(df["labels"])
+    category_orders = {
+        "Source": [
+            "FoodAtlas:prediction",
+            "MeSH",
+            "Frida",
+            "FoodAtlas:annotation",
+            "Phenol-Explorer",
+            "NCBI",
+            "FDC"
+        ],
+        "Quality": [
+            "High",
+            "Medium",
+            "Low",
+        ],
+    }
 
-    fig = go.Figure(go.Sunburst(
-        labels=df["labels"],
-        parents=df["parents"],
-        values=df["values"],
-        branchvalues="total",
-    ))
-
+    fig = px.bar(
+        df,
+        x="Source",
+        y="Count",
+        color="Quality",
+        log_y=True,
+        category_orders=category_orders,
+        text="Count",
+        width=500,
+        height=400,
+    )
     fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), font_family="Arial")
-    fig.write_image(os.path.join(OUTPUT_DIR, "sunburst_sources.png"))
-    fig.write_image(os.path.join(OUTPUT_DIR, "sunburst_sources.svg"))
+    fig.write_image(os.path.join(OUTPUT_DIR, "quality_sources.png"))
+    fig.write_image(os.path.join(OUTPUT_DIR, "quality_sources.svg"))
+
+
+# def visualize_source(fa_kg):
+#     df_evidence = fa_kg.get_evidence()
+#     print(df_evidence)
+#     sources = list(set(df_evidence['source'].tolist()))
+#     print(f"Sources: {sources}")
+#     qualities = list(set(df_evidence['quality'].tolist()))
+#     print(f"Qualities: {qualities}")
+
+#     df_high = df_evidence[df_evidence["quality"].apply(
+#         lambda x: x == "high")]
+#     print(f"Number of df_high: {df_high.shape[0]}")
+
+#     df_medium = df_evidence[df_evidence["quality"].apply(
+#         lambda x: x == "medium")]
+#     print(f"Number of df_medium: {df_medium.shape[0]}")
+
+#     df_low = df_evidence[df_evidence["quality"].apply(
+#         lambda x: x == "low")]
+#     print(f"Number of df_low: {df_low.shape[0]}")
+
+#     df_annotation = df_evidence[df_evidence["source"].apply(
+#         lambda x: x == "FoodAtlas:annotation")]
+#     print(f"Number of df_annotation: {df_annotation.shape[0]}")
+
+#     df_prediction = df_evidence[df_evidence["source"].apply(
+#         lambda x: x.startswith("FoodAtlas:prediction"))]
+#     print(f"Number of df_prediction: {df_prediction.shape[0]}")
+
+#     df_mesh = df_evidence[df_evidence["source"].apply(lambda x: x == "MeSH")]
+#     print(f"Number of df_mesh: {df_mesh.shape[0]}")
+
+#     df_ncbi = df_evidence[df_evidence["source"].apply(lambda x: x == "NCBI_taxonomy")]
+#     print(f"Number of df_ncbi: {df_ncbi.shape[0]}")
+
+#     df_frida = df_evidence[df_evidence["source"].apply(lambda x: x == "Frida")]
+#     print(f"Number of df_frida: {df_frida.shape[0]}")
+#     df_frida_medium = df_frida[df_frida["quality"].apply(lambda x: x == "medium")]
+#     df_frida_low = df_frida[df_frida["quality"].apply(lambda x: x == "low")]
+#     print(f"Number of df_frida_medium: {df_frida_medium.shape[0]}")
+#     print(f"Number of df_frida_low: {df_frida_low.shape[0]}")
+
+#     df_phenol_explorer = df_evidence[df_evidence["source"].apply(lambda x: x == "Phenol-Explorer")]
+#     print(f"Number of df_phenol_explorer: {df_phenol_explorer.shape[0]}")
+#     df_phenol_explorer_medium = df_phenol_explorer[df_phenol_explorer["quality"].apply(
+#         lambda x: x == "medium")]
+#     df_phenol_explorer_low = df_phenol_explorer[df_phenol_explorer["quality"].apply(
+#         lambda x: x == "low")]
+#     print(f"Number of df_phenol_explorer_medium: {df_phenol_explorer_medium.shape[0]}")
+#     print(f"Number of df_phenol_explorer_low: {df_phenol_explorer_low.shape[0]}")
+
+#     df_fdc = df_evidence[df_evidence["source"].apply(lambda x: x == "FDC")]
+#     print(f"Number of df_fdc: {df_fdc.shape[0]}")
+#     df_fdc_medium = df_fdc[df_fdc["quality"].apply(lambda x: x == "medium")]
+#     df_fdc_low = df_fdc[df_fdc["quality"].apply(lambda x: x == "low")]
+#     print(f"Number of df_fdc_medium: {df_fdc_medium.shape[0]}")
+#     print(f"Number of df_fdc_low: {df_fdc_low.shape[0]}")
+
+#     # main high/med/low
+#     data = [
+#         # High
+#         ["High", len(set(df_high["triple"].tolist()))],
+#         # Medium
+#         ["Medium", len(set(df_medium["triple"].tolist()))],
+#         # Low
+#         ["Low", len(set(df_low["triple"].tolist()))],
+#     ]
+#     df = pd.DataFrame(data, columns=["Quality", "Count"])
+#     print(df)
+
+#     fig = px.bar(
+#         df,
+#         x="Quality",
+#         y="Count",
+#         log_y=True,
+#     )
+#     fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), font_family="Arial")
+#     fig.write_image(os.path.join(OUTPUT_DIR, "quality_sources_main.png"))
+#     fig.write_image(os.path.join(OUTPUT_DIR, "quality_sources_main.svg"))
+
+#     sys.exit()
+
+#     data = [
+#         # High
+#         ["High", "FoodAtlas:annotation", df_annotation.shape[0]],
+#         # Medium
+#         ["Medium", "FoodAtlas:prediction", df_prediction.shape[0]],
+#         ["Medium", "MeSH", df_mesh.shape[0]],
+#         ["Medium", "Phenol-Explorer:Medium", df_phenol_explorer_medium.shape[0]],
+#         ["Medium", "NCBI", df_ncbi.shape[0]],
+#         ["Medium", "Frida:Medium", df_frida_medium.shape[0]],
+#         # Low
+#         ["Low", "Frida:Low", df_frida_low.shape[0]],
+#         ["Low", "FDC:Low", df_fdc_low.shape[0]],
+#     ]
+
+#     df = pd.DataFrame(data, columns=["Quality", "Source", "Count"])
+#     print(df)
+
+#     fig = px.bar(df, x="Quality", y="Count", color="Source", log_y=True)
+#     fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), font_family="Arial")
+#     fig.write_image(os.path.join(OUTPUT_DIR, "quality_sources.png"))
+#     fig.write_image(os.path.join(OUTPUT_DIR, "quality_sources.svg"))
 
 
 def upset_plot(fa_kg):
@@ -127,6 +237,7 @@ def upset_plot(fa_kg):
         df_evidence,
         show_counts='%d',
         # show_percentages=True,
+        sort_by='cardinality',
         intersection_plot_elements=0,
         totals_plot_elements=5,
     )
@@ -143,7 +254,7 @@ def upset_plot(fa_kg):
     plt.savefig(os.path.join(OUTPUT_DIR, "upset_plot.svg"))
 
 
-def pie_chart_entities(fa_kg):
+def visualize_entities(fa_kg):
     df_entities = fa_kg.get_all_entities()
     df_evidence = fa_kg.get_evidence()
 
@@ -241,43 +352,76 @@ def pie_chart_entities(fa_kg):
     print("Number of foods_with_part only by both external and us: "
           f"{df_foods_with_part_both.shape[0]}")
 
-    rows = [
-        ["Entity", "", df_entities.shape[0]],
+    data = [
         # food
-        ["organism", "Entity", df_foods.shape[0]],
-        ["food - taxonomy", "organism", df_foods_taxonomy.shape[0]],
-        ["food - only us", "organism", df_foods_only_ours.shape[0]],
-        ["food - only ext", "organism", df_foods_only_ext.shape[0]],
-        ["food - both", "organism", df_foods_both.shape[0]],
+        ["Organism (food)", "Taxonomic lineage", df_foods_taxonomy.shape[0]],
+        ["Organism (food)", "FoodAtlas only", df_foods_only_ours.shape[0]],
+        ["Organism (food)", "External DB only", df_foods_only_ext.shape[0]],
+        ["Organism (food)", "FoodAtlas & external db", df_foods_both.shape[0]],
         # food - part
-        ["food-part", "Entity", df_foods_with_part.shape[0]],
-        ["food-part - taxonomy", "food-part", df_foods_with_part_taxonomy.shape[0]],
-        ["food-part - only us", "food-part", df_foods_with_part_only_ours.shape[0]],
-        ["food-part - only ext", "food-part", df_foods_with_part_only_ext.shape[0]],
-        ["food-part - both", "food-part", df_foods_with_part_both.shape[0]],
+        ["Food - part", "FoodAtlas only", df_foods_with_part_only_ours.shape[0]],
         # chemical
-        ["chemical", "Entity", df_chemicals.shape[0]],
-        ["chemical - MeSH", "chemical", df_chemicals_mesh.shape[0]],
-        ["chemical - only us", "chemical", df_chemicals_only_ours.shape[0]],
-        ["chemical - only ext", "chemical", df_chemicals_only_ext.shape[0]],
-        ["chemical - both", "chemical", df_chemicals_both.shape[0]],
+        ["Chemical", "MeSH", df_chemicals_mesh.shape[0]],
+        ["Chemical", "FoodAtlas only", df_chemicals_only_ours.shape[0]],
+        ["Chemical", "External DB only", df_chemicals_only_ext.shape[0]],
+        ["Chemical", "FoodAtlas & external db", df_chemicals_both.shape[0]],
     ]
 
-    df = pd.DataFrame(rows, columns=["labels", "parents", "values"])
+    df = pd.DataFrame(data, columns=["Entity Type", "Source", "Count"])
+    print(df)
 
-    fig = go.Figure(go.Sunburst(
-        labels=df["labels"],
-        parents=df["parents"],
-        values=df["values"],
-        branchvalues="total",
-    ))
+    category_orders = {
+        "Source": [
+            "External DB only",
+            "FoodAtlas & external db",
+            "MeSH",
+            "Taxonomic lineage",
+            "FoodAtlas only",
+        ],
+    }
 
-    fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), font_family="Arial")
-    fig.write_image(os.path.join(OUTPUT_DIR, "sunburst_entities.png"))
-    fig.write_image(os.path.join(OUTPUT_DIR, "sunburst_entities.svg"))
+    fig = px.bar(
+        df,
+        x="Entity Type",
+        y="Count",
+        color="Source",
+        category_orders=category_orders,
+        text="Count",
+        width=500,
+        height=400,
+    )
+
+    fig.update_traces(width=0.5)
+
+    subplots = make_subplots(
+        rows=2, cols=1,
+        vertical_spacing=0.05,
+        shared_xaxes=True,
+        row_heights=[0.25, 0.75],
+    )
+
+    for d in fig.data:
+        subplots.append_trace(d, row=1, col=1)
+        d.showlegend = False
+        subplots.append_trace(d, row=2, col=1)
+
+    subplots.update_yaxes(range=[17000, 18500], row=1, col=1)
+    subplots.update_xaxes(visible=False, row=1, col=1)
+    subplots.update_yaxes(range=[0, 4500], row=2, col=1)
+    subplots.update_layout(
+        barmode='stack',
+        margin=dict(t=0, l=0, r=0, b=0),
+        font_family="Arial",
+        xaxis={
+            'categoryorder': 'array',
+            'categoryarray': ["Organism (food)", "Food - part", "Chemical"]
+        },
+    )
+    subplots.write_image(os.path.join(OUTPUT_DIR, "entities.png"))
+    subplots.write_image(os.path.join(OUTPUT_DIR, "entities.svg"))
 
 
-def pie_chart_relations(fa_kg):
+def visualize_relations(fa_kg):
     # relations
     df_evidence = fa_kg.get_evidence()
     df_evidence = df_evidence.groupby("triple")["quality"].apply(list).reset_index()
@@ -349,6 +493,8 @@ def pie_chart_relations(fa_kg):
 
     df = pd.DataFrame(rows, columns=["labels", "parents", "values"])
 
+    print(df)
+
     fig = go.Figure(go.Sunburst(
         labels=df["labels"],
         parents=df["parents"],
@@ -357,8 +503,8 @@ def pie_chart_relations(fa_kg):
     ))
 
     fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), font_family="Arial")
-    fig.write_image(os.path.join(OUTPUT_DIR, "sunburst_relations.png"))
-    fig.write_image(os.path.join(OUTPUT_DIR, "sunburst_relations.svg"))
+    fig.write_image(os.path.join(OUTPUT_DIR, "relations.png"))
+    fig.write_image(os.path.join(OUTPUT_DIR, "relations.svg"))
 
 
 def plot_sunburst_chemicals(chemicals_group_filename):
@@ -565,10 +711,10 @@ def plot_node_stats(fa_kg, G, dictionary):
 def main():
     fa_kg = KnowledgeGraph(kg_dir=FINAL_DATA_DIR)
 
-    pie_chart_sources(fa_kg)
+    # visualize_source(fa_kg)
+    # visualize_entities(fa_kg)
+    visualize_relations(fa_kg)
     # upset_plot(fa_kg)
-    # pie_chart_entities(fa_kg)
-    # pie_chart_relations(fa_kg)
     # plot_sunburst_chemicals("../../outputs/backend_data/v0.1/chemicals_group.txt")
     # plot_sunburst_organisms("../../outputs/backend_data/v0.1/organisms_group.txt")
     # plot_num_sources_per_triple(fa_kg)
