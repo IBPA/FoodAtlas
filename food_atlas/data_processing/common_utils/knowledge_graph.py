@@ -262,11 +262,14 @@ class KnowledgeGraph():
         print(f"Size of triples to add: {df.shape[0]}")
 
         entities = df["head"].tolist() + df["tail"].tolist()
-        # check all chemical entities have PubChem ID or at least MeSH
+
+        # check all chemical entities integrity
         chemical_entities = [e for e in entities if e.type == "chemical"]
         for e in chemical_entities:
-            assert "PubChem" in e.other_db_ids and "MESH" in e.other_db_ids
-            if len(e.other_db_ids["PubChem"]) == 0:
+            assert "PubChem" in e.other_db_ids or "MESH" in e.other_db_ids
+            if "PubChem" in e.other_db_ids:
+                assert len(e.other_db_ids["PubChem"]) == 1
+            if "MESH" in e.other_db_ids:
                 assert len(e.other_db_ids["MESH"]) != 0
         self.add_update_entities(entities)
 
@@ -337,72 +340,29 @@ class KnowledgeGraph():
         entities = [eval(e, globals()) for e in sorted(set([str(e) for e in entities]))]
         data = [["", e.type, e.name, e.synonyms + [e.name], e.other_db_ids] for e in entities]
         df_entities_to_add = pd.DataFrame(data, columns=_ENTITY_COLUMNS)
-
-        # extract organisms from organisms_with_part
-        def _remove_foodatlas_part_id(x):
-            x["foodatlas_part_id"] = 'p0'
-            return x
-
-        df_extracted_organisms = self.get_entities_by_type(
-            df=df_entities_to_add,
-            exact_type="organism_with_part",
-            startswith_type="organism_with_part:",
-        )
-        df_extracted_organisms["type"] = df_extracted_organisms["type"].apply(
-            lambda x: x.replace("organism_with_part", "organism"))
-        df_extracted_organisms["name"] = df_extracted_organisms["name"].apply(
-            lambda x: x.split(" - ")[0])
-        df_extracted_organisms["synonyms"] = df_extracted_organisms["synonyms"].apply(
-            lambda synonyms: [x.split(" - ")[0] for x in synonyms])
-        df_extracted_organisms["other_db_ids"] = df_extracted_organisms["other_db_ids"].apply(
-            _remove_foodatlas_part_id)
-
-        df_entities = pd.concat([
-            self._nested_deep_copy(self.df_entities), df_entities_to_add, df_extracted_organisms])
+        df_entities = pd.concat([self._nested_deep_copy(self.df_entities), df_entities_to_add])
         df_entities.reset_index(inplace=True, drop=True)
 
         duplicate_idx = []
 
-        # organisms
+        # organisms and organism with part
         print("Finding duplicate organisms...")
         df_organisms = self.get_entities_by_type(
             df=df_entities,
-            exact_type="organism",
-            startswith_type="organism:",
+            startswith_type="organism",
         )
 
-        def _organism_unique_id(other_db_ids, _type):
+        def _organism_unique_id(other_db_ids):
             assert "NCBI_taxonomy" in other_db_ids and \
-                len(other_db_ids["NCBI_taxonomy"]) == 1
-            if _type == "organism":
-                assert "foodatlas_part_id" in other_db_ids and \
-                    other_db_ids["foodatlas_part_id"] == 'p0'
-            elif _type == "organism_with_part":
-                assert "foodatlas_part_id" in other_db_ids and \
-                    other_db_ids["foodatlas_part_id"] != 'p0'
+                len(other_db_ids["NCBI_taxonomy"]) == 1 and \
+                "foodatlas_part_id" in other_db_ids
             return other_db_ids["NCBI_taxonomy"][0] + '-' + other_db_ids["foodatlas_part_id"]
 
         if df_organisms.shape[0] > 0:
             df_organisms = self._nested_deep_copy(df_organisms)
             df_organisms["_unique_id"] = df_organisms["other_db_ids"].apply(
-                lambda x: _organism_unique_id(x, 'organism'))
+                lambda x: _organism_unique_id(x))
             for _, df_subset in df_organisms.groupby("_unique_id"):
-                if df_subset.shape[0] > 1:
-                    duplicate_idx.append(list(df_subset.index))
-
-        # organisms with part
-        print("Finding duplicate organisms with part...")
-        df_organisms_with_part = self.get_entities_by_type(
-            df=df_entities,
-            exact_type="organism_with_part",
-            startswith_type="organism_with_part:",
-        )
-
-        if df_organisms_with_part.shape[0] > 0:
-            df_organisms_with_part = self._nested_deep_copy(df_organisms_with_part)
-            df_organisms_with_part["_unique_id"] = df_organisms_with_part["other_db_ids"].apply(
-                lambda x: _organism_unique_id(x, 'organism_with_part'))
-            for _, df_subset in df_organisms_with_part.groupby("_unique_id"):
                 if df_subset.shape[0] > 1:
                     duplicate_idx.append(list(df_subset.index))
 
@@ -415,30 +375,25 @@ class KnowledgeGraph():
 
         # chemicals with PubChem
         df_chemicals_with_pubchem = df_chemicals[df_chemicals["other_db_ids"].apply(
-            lambda x: len(x["PubChem"]) != 0)]
+            lambda x: "PubChem" in x)]
 
         if df_chemicals_with_pubchem.shape[0] > 0:
             df_chemicals_with_pubchem = self._nested_deep_copy(df_chemicals_with_pubchem)
             df_chemicals_with_pubchem["PubChem"] = \
-                df_chemicals_with_pubchem["other_db_ids"].apply(
-                    lambda x: x["PubChem"] if "PubChem" in x else None)
-            assert df_chemicals_with_pubchem["PubChem"].apply(lambda x: x == []).sum() == 0
-            assert df_chemicals_with_pubchem["PubChem"].apply(lambda x: x is None).sum() == 0
+                df_chemicals_with_pubchem["other_db_ids"].apply(lambda x: x["PubChem"])
             df_chemicals_with_pubchem = df_chemicals_with_pubchem.explode("PubChem")
             for _, df_subset in df_chemicals_with_pubchem.groupby("PubChem"):
                 if df_subset.shape[0] > 1:
                     duplicate_idx.append(list(df_subset.index))
 
-        # chemicals without PubChem (for MeSH ontology)
+        # chemicals without PubChem (for MeSH ontology or entities without matching PubChem ID)
         df_chemicals_without_pubchem = df_chemicals[df_chemicals["other_db_ids"].apply(
-            lambda x: len(x["PubChem"]) == 0)]
+            lambda x: "PubChem" not in x)]
 
         if df_chemicals_without_pubchem.shape[0] > 0:
             df_chemicals_without_pubchem = self._nested_deep_copy(df_chemicals_without_pubchem)
             df_chemicals_without_pubchem["MESH"] = \
                 df_chemicals_without_pubchem["other_db_ids"].apply(lambda x: x["MESH"])
-            assert df_chemicals_without_pubchem["MESH"].apply(lambda x: x == []).sum() == 0
-            assert df_chemicals_without_pubchem["MESH"].apply(lambda x: x is None).sum() == 0
             df_chemicals_without_pubchem = df_chemicals_without_pubchem.explode("MESH")
             for _, df_subset in df_chemicals_without_pubchem.groupby("MESH"):
                 if df_subset.shape[0] > 1:
@@ -590,9 +545,9 @@ class KnowledgeGraph():
             if entity_or_relation.type.startswith("organism"):
                 df_match = self.get_entity_by_other_db_id(entity_or_relation.other_db_ids)
             elif entity_or_relation.type == "chemical":
-                if entity_or_relation.other_db_ids["PubChem"]:
+                if "PubChem" in entity_or_relation.other_db_ids:
                     other_db_ids = {"PubChem": entity_or_relation.other_db_ids["PubChem"]}
-                elif entity_or_relation.other_db_ids["MESH"]:
+                elif "MESH" in entity_or_relation.other_db_ids:
                     other_db_ids = {"MESH": entity_or_relation.other_db_ids["MESH"]}
                 else:
                     raise ValueError()

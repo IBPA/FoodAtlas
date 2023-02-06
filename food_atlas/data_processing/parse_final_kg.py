@@ -53,14 +53,9 @@ def main():
     df_organisms = df_organisms[["foodatlas_id", "NCBI_taxonomy"]]
 
     df_chemicals = fa_kg.get_entities_by_type(startswith_type="chemical")
-    for x in df_chemicals["other_db_ids"].tolist():
-        assert "MESH" in x
-        assert "PubChem" in x
-    df_chemicals["MESH"] = df_chemicals["other_db_ids"].apply(lambda x: x["MESH"])
-    df_chemicals["PubChem"] = df_chemicals["other_db_ids"].apply(lambda x: x["PubChem"])
-    df_chemicals = df_chemicals[["foodatlas_id", "MESH", "PubChem"]]
+    df_chemicals["MESH"] = df_chemicals["other_db_ids"].apply(
+        lambda x: x["MESH"] if "MESH" in x else [])
     df_chemicals = df_chemicals.explode("MESH")
-    df_chemicals = df_chemicals.explode("PubChem")
 
     # we need to find foods and chemicals that has contains relation
     # not the taxonomic/ontoligical ones

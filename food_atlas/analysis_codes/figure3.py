@@ -1,3 +1,5 @@
+from itertools import product
+import math
 import os
 import sys
 import textwrap
@@ -27,81 +29,93 @@ def visualize_source(fa_kg):
     sources = list(set(df_evidence['source'].tolist()))
     print(f"Sources: {sources}")
 
-    df_annotation = df_evidence[df_evidence["source"].apply(
-        lambda x: x == "FoodAtlas:annotation")]
-    print(f"Number of df_annotation: {df_annotation.shape[0]}")
-
-    df_prediction = df_evidence[df_evidence["source"].apply(
-        lambda x: x.startswith("FoodAtlas:prediction"))]
-    print(f"Number of df_prediction: {df_prediction.shape[0]}")
-
+    df_fa = df_evidence[df_evidence["source"].apply(lambda x: x.startswith("FoodAtlas"))]
+    print(f"Number of df_fa: {df_fa.shape[0]}")
+    df_frida = df_evidence[df_evidence["source"].apply(lambda x: x == "Frida")]
+    print(f"Number of df_frida: {df_frida.shape[0]}")
+    df_phenol_explorer = df_evidence[df_evidence["source"].apply(lambda x: x == "Phenol-Explorer")]
+    print(f"Number of df_phenol_explorer: {df_phenol_explorer.shape[0]}")
+    df_fdc = df_evidence[df_evidence["source"].apply(lambda x: x == "FDC")]
+    print(f"Number of df_fdc: {df_fdc.shape[0]}")
     df_mesh = df_evidence[df_evidence["source"].apply(lambda x: x == "MeSH")]
     print(f"Number of df_mesh: {df_mesh.shape[0]}")
-
     df_ncbi = df_evidence[df_evidence["source"].apply(lambda x: x == "NCBI_taxonomy")]
     print(f"Number of df_ncbi: {df_ncbi.shape[0]}")
 
-    df_frida = df_evidence[df_evidence["source"].apply(lambda x: x == "Frida")]
-    print(f"Number of df_frida: {df_frida.shape[0]}")
-    df_frida_medium = df_frida[df_frida["quality"].apply(lambda x: x == "medium")]
-    df_frida_low = df_frida[df_frida["quality"].apply(lambda x: x == "low")]
+    # high
+    print()
+    df_fa_high = df_fa[df_fa["quality"] == "high"]
+    print(f"Number of df_fa_high: {df_fa_high.shape[0]}")
+    df_frida_high = df_frida[df_frida["quality"] == "high"]
+    print(f"Number of df_frida_high: {df_frida_high.shape[0]}")
+    df_phenol_explorer_high = df_phenol_explorer[df_phenol_explorer["quality"] == "high"]
+    print(f"Number of df_phenol_explorer_high: {df_phenol_explorer_high.shape[0]}")
+    df_fdc_high = df_fdc[df_fdc["quality"] == "high"]
+    print(f"Number of df_fdc_high: {df_fdc_high.shape[0]}")
+    df_mesh_high = df_mesh[df_mesh["quality"] == "high"]
+    print(f"Number of df_mesh_high: {df_mesh_high.shape[0]}")
+    df_ncbi_high = df_ncbi[df_ncbi["quality"] == "high"]
+    print(f"Number of df_ncbi_high: {df_ncbi_high.shape[0]}")
+
+    # medium
+    print()
+    df_fa_medium = df_fa[df_fa["quality"] == "medium"]
+    print(f"Number of df_fa_medium: {df_fa_medium.shape[0]}")
+    df_frida_medium = df_frida[df_frida["quality"] == "medium"]
     print(f"Number of df_frida_medium: {df_frida_medium.shape[0]}")
-    print(f"Number of df_frida_low: {df_frida_low.shape[0]}")
-
-    df_phenol_explorer = df_evidence[df_evidence["source"].apply(lambda x: x == "Phenol-Explorer")]
-    print(f"Number of df_phenol_explorer: {df_phenol_explorer.shape[0]}")
-    df_phenol_explorer_medium = df_phenol_explorer[df_phenol_explorer["quality"].apply(
-        lambda x: x == "medium")]
-    df_phenol_explorer_low = df_phenol_explorer[df_phenol_explorer["quality"].apply(
-        lambda x: x == "low")]
+    df_phenol_explorer_medium = df_phenol_explorer[df_phenol_explorer["quality"] == "medium"]
     print(f"Number of df_phenol_explorer_medium: {df_phenol_explorer_medium.shape[0]}")
-    print(f"Number of df_phenol_explorer_low: {df_phenol_explorer_low.shape[0]}")
-
-    df_fdc = df_evidence[df_evidence["source"].apply(lambda x: x == "FDC")]
-    print(f"Number of df_fdc: {df_fdc.shape[0]}")
-    df_fdc_medium = df_fdc[df_fdc["quality"].apply(lambda x: x == "medium")]
-    df_fdc_low = df_fdc[df_fdc["quality"].apply(lambda x: x == "low")]
+    df_fdc_medium = df_fdc[df_fdc["quality"] == "medium"]
     print(f"Number of df_fdc_medium: {df_fdc_medium.shape[0]}")
+    df_mesh_medium = df_mesh[df_mesh["quality"] == "medium"]
+    print(f"Number of df_mesh_medium: {df_mesh_medium.shape[0]}")
+    df_ncbi_medium = df_ncbi[df_ncbi["quality"] == "medium"]
+    print(f"Number of df_ncbi_medium: {df_ncbi_medium.shape[0]}")
+
+    # low
+    print()
+    df_fa_low = df_fa[df_fa["quality"] == "low"]
+    print(f"Number of df_fa_low: {df_fa_low.shape[0]}")
+    df_frida_low = df_frida[df_frida["quality"] == "low"]
+    print(f"Number of df_frida_low: {df_frida_low.shape[0]}")
+    df_phenol_explorer_low = df_phenol_explorer[df_phenol_explorer["quality"] == "low"]
+    print(f"Number of df_phenol_explorer_low: {df_phenol_explorer_low.shape[0]}")
+    df_fdc_low = df_fdc[df_fdc["quality"] == "low"]
     print(f"Number of df_fdc_low: {df_fdc_low.shape[0]}")
+    df_mesh_low = df_mesh[df_mesh["quality"] == "low"]
+    print(f"Number of df_mesh_low: {df_mesh_low.shape[0]}")
+    df_ncbi_low = df_ncbi[df_ncbi["quality"] == "low"]
+    print(f"Number of df_ncbi_low: {df_ncbi_low.shape[0]}")
 
     data = [
-        ["FoodAtlas:prediction", "Medium", df_prediction.shape[0]],
-        ["MeSH", "Medium", df_mesh.shape[0]],
-        ["Frida", "Medium", df_frida_medium.shape[0]],
-        ["Frida", "Low", df_frida_low.shape[0]],
-        ["FoodAtlas:annotation", "High", df_annotation.shape[0]],
-        ["Phenol-Explorer", "Medium", df_phenol_explorer_medium.shape[0]],
-        ["NCBI", "Medium", df_ncbi.shape[0]],
-        ["FDC", "Low", df_fdc_low.shape[0]],
+        ["FoodAtlas - High", df_fa_high.shape[0]],
+        ["FoodAtlas - Medium", df_fa_medium.shape[0]],
+        ["FoodAtlas - Low", df_fa_low.shape[0]],
+        ["Frida - High", df_frida_high.shape[0]],
+        ["Frida - Medium", df_frida_medium.shape[0]],
+        ["Frida - Low", df_frida_low.shape[0]],
+        ["Phenol-Explorer - High", df_phenol_explorer_high.shape[0]],
+        ["Phenol-Explorer - Medium", df_phenol_explorer_medium.shape[0]],
+        ["Phenol-Explorer - Low", df_phenol_explorer_low.shape[0]],
+        ["FDC - High", df_fdc_high.shape[0]],
+        ["FDC - Medium", df_fdc_medium.shape[0]],
+        ["FDC - Low", df_fdc_low.shape[0]],
+        ["MeSH - High", df_mesh_high.shape[0]],
+        ["MeSH - Medium", df_mesh_medium.shape[0]],
+        ["MeSH - Low", df_mesh_low.shape[0]],
+        ["NCBI - High", df_ncbi_high.shape[0]],
+        ["NCBI - Medium", df_ncbi_medium.shape[0]],
+        ["NCBI - Low", df_ncbi_low.shape[0]],
     ]
 
-    df = pd.DataFrame(data, columns=["Source", "Quality", "Count"])
+    df = pd.DataFrame(data, columns=["Source-Quality", "Count"])
     print(df)
-
-    category_orders = {
-        "Source": [
-            "FoodAtlas:prediction",
-            "MeSH",
-            "Frida",
-            "FoodAtlas:annotation",
-            "Phenol-Explorer",
-            "NCBI",
-            "FDC"
-        ],
-        "Quality": [
-            "High",
-            "Medium",
-            "Low",
-        ],
-    }
 
     fig = px.bar(
         df,
-        x="Source",
+        x="Source-Quality",
         y="Count",
-        color="Quality",
         log_y=True,
-        category_orders=category_orders,
         text="Count",
         width=500,
         height=400,
@@ -111,113 +125,11 @@ def visualize_source(fa_kg):
     fig.write_image(os.path.join(OUTPUT_DIR, "quality_sources.svg"))
 
 
-# def visualize_source(fa_kg):
-#     df_evidence = fa_kg.get_evidence()
-#     print(df_evidence)
-#     sources = list(set(df_evidence['source'].tolist()))
-#     print(f"Sources: {sources}")
-#     qualities = list(set(df_evidence['quality'].tolist()))
-#     print(f"Qualities: {qualities}")
-
-#     df_high = df_evidence[df_evidence["quality"].apply(
-#         lambda x: x == "high")]
-#     print(f"Number of df_high: {df_high.shape[0]}")
-
-#     df_medium = df_evidence[df_evidence["quality"].apply(
-#         lambda x: x == "medium")]
-#     print(f"Number of df_medium: {df_medium.shape[0]}")
-
-#     df_low = df_evidence[df_evidence["quality"].apply(
-#         lambda x: x == "low")]
-#     print(f"Number of df_low: {df_low.shape[0]}")
-
-#     df_annotation = df_evidence[df_evidence["source"].apply(
-#         lambda x: x == "FoodAtlas:annotation")]
-#     print(f"Number of df_annotation: {df_annotation.shape[0]}")
-
-#     df_prediction = df_evidence[df_evidence["source"].apply(
-#         lambda x: x.startswith("FoodAtlas:prediction"))]
-#     print(f"Number of df_prediction: {df_prediction.shape[0]}")
-
-#     df_mesh = df_evidence[df_evidence["source"].apply(lambda x: x == "MeSH")]
-#     print(f"Number of df_mesh: {df_mesh.shape[0]}")
-
-#     df_ncbi = df_evidence[df_evidence["source"].apply(lambda x: x == "NCBI_taxonomy")]
-#     print(f"Number of df_ncbi: {df_ncbi.shape[0]}")
-
-#     df_frida = df_evidence[df_evidence["source"].apply(lambda x: x == "Frida")]
-#     print(f"Number of df_frida: {df_frida.shape[0]}")
-#     df_frida_medium = df_frida[df_frida["quality"].apply(lambda x: x == "medium")]
-#     df_frida_low = df_frida[df_frida["quality"].apply(lambda x: x == "low")]
-#     print(f"Number of df_frida_medium: {df_frida_medium.shape[0]}")
-#     print(f"Number of df_frida_low: {df_frida_low.shape[0]}")
-
-#     df_phenol_explorer = df_evidence[df_evidence["source"].apply(lambda x: x == "Phenol-Explorer")]
-#     print(f"Number of df_phenol_explorer: {df_phenol_explorer.shape[0]}")
-#     df_phenol_explorer_medium = df_phenol_explorer[df_phenol_explorer["quality"].apply(
-#         lambda x: x == "medium")]
-#     df_phenol_explorer_low = df_phenol_explorer[df_phenol_explorer["quality"].apply(
-#         lambda x: x == "low")]
-#     print(f"Number of df_phenol_explorer_medium: {df_phenol_explorer_medium.shape[0]}")
-#     print(f"Number of df_phenol_explorer_low: {df_phenol_explorer_low.shape[0]}")
-
-#     df_fdc = df_evidence[df_evidence["source"].apply(lambda x: x == "FDC")]
-#     print(f"Number of df_fdc: {df_fdc.shape[0]}")
-#     df_fdc_medium = df_fdc[df_fdc["quality"].apply(lambda x: x == "medium")]
-#     df_fdc_low = df_fdc[df_fdc["quality"].apply(lambda x: x == "low")]
-#     print(f"Number of df_fdc_medium: {df_fdc_medium.shape[0]}")
-#     print(f"Number of df_fdc_low: {df_fdc_low.shape[0]}")
-
-#     # main high/med/low
-#     data = [
-#         # High
-#         ["High", len(set(df_high["triple"].tolist()))],
-#         # Medium
-#         ["Medium", len(set(df_medium["triple"].tolist()))],
-#         # Low
-#         ["Low", len(set(df_low["triple"].tolist()))],
-#     ]
-#     df = pd.DataFrame(data, columns=["Quality", "Count"])
-#     print(df)
-
-#     fig = px.bar(
-#         df,
-#         x="Quality",
-#         y="Count",
-#         log_y=True,
-#     )
-#     fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), font_family="Arial")
-#     fig.write_image(os.path.join(OUTPUT_DIR, "quality_sources_main.png"))
-#     fig.write_image(os.path.join(OUTPUT_DIR, "quality_sources_main.svg"))
-
-#     sys.exit()
-
-#     data = [
-#         # High
-#         ["High", "FoodAtlas:annotation", df_annotation.shape[0]],
-#         # Medium
-#         ["Medium", "FoodAtlas:prediction", df_prediction.shape[0]],
-#         ["Medium", "MeSH", df_mesh.shape[0]],
-#         ["Medium", "Phenol-Explorer:Medium", df_phenol_explorer_medium.shape[0]],
-#         ["Medium", "NCBI", df_ncbi.shape[0]],
-#         ["Medium", "Frida:Medium", df_frida_medium.shape[0]],
-#         # Low
-#         ["Low", "Frida:Low", df_frida_low.shape[0]],
-#         ["Low", "FDC:Low", df_fdc_low.shape[0]],
-#     ]
-
-#     df = pd.DataFrame(data, columns=["Quality", "Source", "Count"])
-#     print(df)
-
-#     fig = px.bar(df, x="Quality", y="Count", color="Source", log_y=True)
-#     fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), font_family="Arial")
-#     fig.write_image(os.path.join(OUTPUT_DIR, "quality_sources.png"))
-#     fig.write_image(os.path.join(OUTPUT_DIR, "quality_sources.svg"))
-
-
 def upset_plot(fa_kg):
     df_evidence = fa_kg.get_evidence()
-    sources = list(set(df_evidence['source'].tolist()))
+    df_evidence["source"] = df_evidence["source"].str.replace(
+        'FoodAtlas:prediction:entailment', 'FoodAtlas:prediction')
+    sources = sorted(list(set(df_evidence['source'].tolist())))
 
     df_relation = fa_kg.get_all_relations()
     relation_dict = dict(zip(df_relation["foodatlas_id"].tolist(), df_relation["name"].tolist()))
@@ -236,7 +148,6 @@ def upset_plot(fa_kg):
     upset = UpSet(
         df_evidence,
         show_counts='%d',
-        # show_percentages=True,
         sort_by='cardinality',
         intersection_plot_elements=0,
         totals_plot_elements=5,
@@ -249,9 +160,67 @@ def upset_plot(fa_kg):
     )
     axes = upset.plot()
     axes["extra0"].set_yscale("log")
-
     plt.savefig(os.path.join(OUTPUT_DIR, "upset_plot.png"))
     plt.savefig(os.path.join(OUTPUT_DIR, "upset_plot.svg"))
+
+    # print(df_evidence)
+    # # FoodAtlas:annotation only
+    # df_subset = df_evidence.loc[(False, False, True, False, False, False, False), :]
+    # print(df_subset.shape)
+    # df_subset_contains = df_subset[df_subset["relation"] == "contains"]
+    # print(df_subset_contains.shape)
+
+
+def upset_plot_contains(fa_kg):
+    df_evidence = fa_kg.get_evidence()
+    contains_foodatlas_id = fa_kg.get_relation_by_name("contains")["foodatlas_id"]
+    df_evidence = df_evidence[df_evidence["relation"].apply(lambda x: x == contains_foodatlas_id)]
+    df_evidence["source"] = df_evidence["source"].str.replace(
+        'FoodAtlas:prediction:entailment', 'FoodAtlas')
+    df_evidence["source"] = df_evidence["source"].str.replace(
+        'FoodAtlas:annotation', 'FoodAtlas')
+    df_evidence["source"] = df_evidence.apply(
+        lambda row: f"{row['source']}-{row['quality']}", axis=1)
+    sources = sorted(list(set(df_evidence['source'].tolist())))
+
+    df_relation = fa_kg.get_all_relations()
+    relation_dict = dict(zip(df_relation["foodatlas_id"].tolist(), df_relation["name"].tolist()))
+
+    df_evidence = df_evidence.groupby("triple")["source"].apply(list).reset_index()
+    df_evidence["relation"] = df_evidence["triple"].apply(lambda x: relation_dict[x.split(',')[1]])
+
+    for idx, s in enumerate(sources):
+        index = (df_evidence["source"].apply(lambda x: s in x))
+        index.name = s
+        if idx == 0:
+            df_evidence = df_evidence.set_index(index)
+        else:
+            df_evidence = df_evidence.set_index(index, append=True)
+
+    upset = UpSet(
+        df_evidence,
+        show_counts='%d',
+        sort_by='cardinality',
+        intersection_plot_elements=0,
+        totals_plot_elements=5,
+    )
+    upset.add_stacked_bars(
+        by="relation",
+        colors=cm.Pastel1,
+        title="Number of unique triples",
+        elements=7,
+    )
+    axes = upset.plot()
+    axes["extra0"].set_yscale("log")
+    plt.savefig(os.path.join(OUTPUT_DIR, "upset_plot_contains.png"))
+    plt.savefig(os.path.join(OUTPUT_DIR, "upset_plot_contains.svg"))
+
+    # print(df_evidence)
+    # # FoodAtlas:annotation only
+    # df_subset = df_evidence.loc[(False, False, True, False, False, False, False), :]
+    # print(df_subset.shape)
+    # df_subset_contains = df_subset[df_subset["relation"] == "contains"]
+    # print(df_subset_contains.shape)
 
 
 def visualize_entities(fa_kg):
@@ -405,9 +374,9 @@ def visualize_entities(fa_kg):
         d.showlegend = False
         subplots.append_trace(d, row=2, col=1)
 
-    subplots.update_yaxes(range=[17000, 18500], row=1, col=1)
+    subplots.update_yaxes(range=[20000, 22000], row=1, col=1)
     subplots.update_xaxes(visible=False, row=1, col=1)
-    subplots.update_yaxes(range=[0, 4500], row=2, col=1)
+    subplots.update_yaxes(range=[0, 5000], row=2, col=1)
     subplots.update_layout(
         barmode='stack',
         margin=dict(t=0, l=0, r=0, b=0),
@@ -471,37 +440,45 @@ def visualize_relations(fa_kg):
     df_contains_low = df_contains[df_contains["quality"] == "low"]
     print(f"Number of contains low quality triples: {df_contains_low.shape[0]}")
 
-    rows = [
-        ["Relation", "", df_evidence.shape[0]],
+    data = [
         # contains
-        ["contains", "Relation", df_contains.shape[0]],
-        ["contains - high", "contains", df_contains_high.shape[0]],
-        ["contains - medium", "contains", df_contains_medium.shape[0]],
-        ["contains - low", "contains", df_contains_low.shape[0]],
+        ["contains - High", df_contains_high.shape[0]],
+        ["contains - Medium", df_contains_medium.shape[0]],
+        ["contains - Low", df_contains_low.shape[0]],
         # isA
-        ["isA", "Relation", df_isA.shape[0]],
-        ["isA - high", "isA", df_isA.shape[0]],
+        ["isA - Medium", df_isA.shape[0]],
         # hasChild
-        ["hasChild", "Relation", df_hasChild.shape[0]],
-        ["hasChild - high", "hasChild", df_hasChild.shape[0]],
+        ["hasChild - Medium", df_hasChild.shape[0]],
         # hasPart
-        ["hasPart", "Relation", df_hasPart.shape[0]],
-        ["hasPart - high", "hasPart", df_hasPart_high.shape[0]],
-        ["hasPart - medium", "hasPart", df_hasPart_medium.shape[0]],
-        ["hasPart - low", "hasPart", df_hasPart_low.shape[0]],
+        ["hasPart - High", df_hasPart_high.shape[0]],
+        ["hasPart - Medium", df_hasPart_medium.shape[0]],
     ]
 
-    df = pd.DataFrame(rows, columns=["labels", "parents", "values"])
-
+    df = pd.DataFrame(data, columns=["Relation", "Count"])
     print(df)
 
-    fig = go.Figure(go.Sunburst(
-        labels=df["labels"],
-        parents=df["parents"],
-        values=df["values"],
-        branchvalues="total",
-    ))
+    category_orders = {
+        "Relation": [
+            "contains - High",
+            "contains - Medium",
+            "contains - Low",
+            "hasPart - High",
+            "hasPart - Medium",
+            "isA - Medium",
+            "hasChild - Medium",
+        ],
+    }
 
+    fig = px.bar(
+        df,
+        x="Relation",
+        y="Count",
+        log_y=True,
+        category_orders=category_orders,
+        text="Count",
+        width=500,
+        height=400,
+    )
     fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), font_family="Arial")
     fig.write_image(os.path.join(OUTPUT_DIR, "relations.png"))
     fig.write_image(os.path.join(OUTPUT_DIR, "relations.svg"))
@@ -553,6 +530,44 @@ def plot_sunburst_organisms(organisms_group_filename):
     fig.write_image(os.path.join(OUTPUT_DIR, "sunburst_foods.svg"))
 
 
+def plot_treemap_chemicals(chemicals_group_filename):
+    df_chemicals = pd.read_csv(chemicals_group_filename, sep='\t', keep_default_na=False)
+    df_chemicals = df_chemicals[df_chemicals["is_contains"]]
+    print(df_chemicals)
+
+    fig = px.treemap(
+        df_chemicals,
+        path=['group', 'subgroup'],
+        color_discrete_sequence=px.colors.qualitative.Pastel,
+    )
+
+    fig.update_layout(
+        uniformtext=dict(minsize=100),
+        margin=dict(t=0, l=0, r=0, b=0), font_family="Arial")
+    fig.write_image(os.path.join(OUTPUT_DIR, "treemap_chemicals.png"))
+    fig.write_image(os.path.join(OUTPUT_DIR, "treemap_chemicals.svg"))
+
+
+def plot_treemap_organisms(organisms_group_filename):
+    df_organisms = pd.read_csv(organisms_group_filename, sep='\t', keep_default_na=False)
+    df_organisms = df_organisms[df_organisms["is_food"]]
+    df_organisms["group"] = df_organisms["group"].apply(
+        lambda x: "Unknown" if x == "" else x)
+    df_organisms["subgroup"] = df_organisms["subgroup"].apply(
+        lambda x: "Unknown" if x == "" else x)
+    print(df_organisms)
+
+    fig = px.treemap(
+        df_organisms,
+        path=['group', 'subgroup'],
+        color_discrete_sequence=px.colors.qualitative.Pastel,
+    )
+
+    fig.update_layout(margin=dict(t=0, l=0, r=0, b=0), font_family="Arial")
+    fig.write_image(os.path.join(OUTPUT_DIR, "treemap_foods.png"))
+    fig.write_image(os.path.join(OUTPUT_DIR, "treemap_foods.svg"))
+
+
 def plot_num_sources_per_triple(fa_kg):
     df_evidence = fa_kg.get_evidence()
     df_evidence = df_evidence.groupby("triple")["source"].apply(list).reset_index()
@@ -582,8 +597,9 @@ def plot_num_sources_per_triple(fa_kg):
     fig.update_layout(
         margin=dict(t=0, l=2, r=2, b=0),
         font_family="Arial",
-        xaxis=dict(tickfont=dict(size=9)))
-    fig.update_xaxes(tickangle=90, tickmode="linear")
+        # xaxis=dict(tickfont=dict(size=9)),
+    )
+    # fig.update_xaxes(tickangle=90, tickmode="linear")
     fig.write_image(os.path.join(OUTPUT_DIR, "num_sources_per_triple.png"))
     fig.write_image(os.path.join(OUTPUT_DIR, "num_sources_per_triple.svg"))
 
@@ -708,16 +724,228 @@ def plot_node_stats(fa_kg, G, dictionary):
     fig.write_image(os.path.join(OUTPUT_DIR, "centrality.svg"))
 
 
+def visualize_sankey(fa_kg):
+    df_evidence = fa_kg.get_evidence()
+    print(f"Evidence shape: {df_evidence.shape[0]}")
+    df_entities = fa_kg.get_all_entities()
+    df_relations = fa_kg.get_all_relations()
+
+    opacity = 0.4
+    color_dict = {
+        # source
+        'FDC': '#dbecff',
+        'FoodAtlas': '#dcf0cb',
+        'Frida': '#ffeb9c',
+        'MeSH': '#48e797',
+        'NCBI_taxonomy': '#2be959',
+        'Phenol-Explorer': '#7ffde9',
+        # quality
+        'high': '#666666',
+        'low': '#e6e6e6',
+        'medium': '#b3b3b3',
+        # pmid / pmcid
+        'pmid': '#fd8c80',
+        'none': '#dfef59',
+        'pmid & pmcid': '#ff6343',
+    }
+
+    def hex_to_rgb(h):
+        h = h.lstrip('#')
+        return tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
+
+    color_dict = {k: hex_to_rgb(v) for k, v in color_dict.items()}
+
+    def _check_pmid_pmcid(row):
+        if row["pmid"] != "" and row["pmcid"]!= "":
+            return "pmid & pmcid"
+        elif row["pmid"] != "":
+            return "pmid"
+        elif row["pmcid"] != "":
+            return "pmcid"
+        else:
+            return "none"
+    df_evidence["pmid/pmcid"] = df_evidence.apply(lambda row: _check_pmid_pmcid(row), axis=1)
+
+    # node
+    quality_label = list(set(df_evidence["quality"]))
+    source_label = list(set(
+        [x if not x.startswith("FoodAtlas") else "FoodAtlas" for x in df_evidence["source"]]))
+    pmid_pmcid_label = list(set(df_evidence["pmid/pmcid"]))
+    label = sorted(quality_label + source_label + pmid_pmcid_label)
+    label = {x: idx for idx, x in enumerate(label)}
+    node_color = [f"rgba{color_dict[x] + (1.0,)}" for x in list(label.keys())]
+
+    # link
+    source = []
+    target = []
+    value = []
+
+    # quality - source
+    for q, s in sorted(list(product(quality_label, source_label))):
+        df_temp = df_evidence[df_evidence["quality"] == q]
+        df_temp = df_temp[df_temp["source"].apply(lambda x: x.startswith(s))]
+        size = df_temp.shape[0]
+        if size > 0:
+            source.append(label[q])
+            target.append(label[s])
+            value.append(np.log2(size))
+
+    # source - pmid/pmcid
+    for s, p in sorted(list(product(source_label, pmid_pmcid_label))):
+        df_temp = df_evidence[df_evidence["source"].apply(lambda x: x.startswith(s))]
+        df_temp = df_temp[df_temp["pmid/pmcid"] == p]
+        size = df_temp.shape[0]
+        if size > 0:
+            source.append(label[s])
+            target.append(label[p])
+            value.append(np.log2(size))
+
+    fig = go.Figure(data=[go.Sankey(
+        node=dict(
+            pad=15,
+            thickness=15,
+            line=dict(color="black", width=0.5),
+            label=list(label.keys()),
+            color=node_color,
+        ),
+        link=dict(
+            source=source,
+            target=target,
+            value=value,
+        )
+    )])
+
+    fig.update_layout(
+        margin=dict(t=0, l=0, r=0, b=0),
+        font_family="Arial",
+        width=600,
+        height=300,
+    )
+    fig.write_image(os.path.join(OUTPUT_DIR, "sankey.png"))
+    fig.write_image(os.path.join(OUTPUT_DIR, "sankey.svg"))
+
+
+def venn_diagram(fa_kg):
+    import matplotlib
+    matplotlib.use('Agg')
+    from venn import venn
+
+    df_evidence = fa_kg.get_evidence()
+    contains_foodatlas_id = fa_kg.get_relation_by_name("contains")["foodatlas_id"]
+    df_evidence = df_evidence[df_evidence["relation"].apply(lambda x: x == contains_foodatlas_id)]
+    print(f"Number of df_evidence: {df_evidence.shape[0]}")
+
+    df_fa = df_evidence[df_evidence["source"].apply(lambda x: x.startswith("FoodAtlas"))]
+    print(f"Number of df_fa: {df_fa.shape[0]}")
+    df_frida = df_evidence[df_evidence["source"].apply(lambda x: x == "Frida")]
+    print(f"Number of df_frida: {df_frida.shape[0]}")
+    df_phenol_explorer = df_evidence[df_evidence["source"].apply(lambda x: x == "Phenol-Explorer")]
+    print(f"Number of df_phenol_explorer: {df_phenol_explorer.shape[0]}")
+    df_fdc = df_evidence[df_evidence["source"].apply(lambda x: x == "FDC")]
+    print(f"Number of df_fdc: {df_fdc.shape[0]}")
+
+    # high
+    print()
+    df_fa_high = df_fa[df_fa["quality"] == "high"]
+    print(f"Number of df_fa_high: {df_fa_high.shape[0]}")
+    df_frida_high = df_frida[df_frida["quality"] == "high"]
+    print(f"Number of df_frida_high: {df_frida_high.shape[0]}")
+    df_phenol_explorer_high = df_phenol_explorer[df_phenol_explorer["quality"] == "high"]
+    print(f"Number of df_phenol_explorer_high: {df_phenol_explorer_high.shape[0]}")
+    df_fdc_high = df_fdc[df_fdc["quality"] == "high"]
+    print(f"Number of df_fdc_high: {df_fdc_high.shape[0]}")
+
+    # medium
+    print()
+    df_fa_medium = df_fa[df_fa["quality"] == "medium"]
+    print(f"Number of df_fa_medium: {df_fa_medium.shape[0]}")
+    df_frida_medium = df_frida[df_frida["quality"] == "medium"]
+    print(f"Number of df_frida_medium: {df_frida_medium.shape[0]}")
+    df_phenol_explorer_medium = df_phenol_explorer[df_phenol_explorer["quality"] == "medium"]
+    print(f"Number of df_phenol_explorer_medium: {df_phenol_explorer_medium.shape[0]}")
+    df_fdc_medium = df_fdc[df_fdc["quality"] == "medium"]
+    print(f"Number of df_fdc_medium: {df_fdc_medium.shape[0]}")
+
+    # low
+    print()
+    df_fa_low = df_fa[df_fa["quality"] == "low"]
+    print(f"Number of df_fa_low: {df_fa_low.shape[0]}")
+    df_frida_low = df_frida[df_frida["quality"] == "low"]
+    print(f"Number of df_frida_low: {df_frida_low.shape[0]}")
+    df_phenol_explorer_low = df_phenol_explorer[df_phenol_explorer["quality"] == "low"]
+    print(f"Number of df_phenol_explorer_low: {df_phenol_explorer_low.shape[0]}")
+    df_fdc_low = df_fdc[df_fdc["quality"] == "low"]
+    print(f"Number of df_fdc_low: {df_fdc_low.shape[0]}")
+
+    # high
+    data = {
+        "df_fa_high": set(df_fa_high["triple"].tolist()),
+        "df_frida_high": set(df_frida_high["triple"].tolist()),
+        "df_phenol_explorer_high": set(df_phenol_explorer_high["triple"].tolist()),
+        "df_fdc_high": set(df_fdc_high["triple"].tolist()),
+    }
+
+    ax = venn(data)
+    fig = ax.get_figure()
+    fig.savefig(os.path.join(OUTPUT_DIR, "venn_high.png"))
+    fig.savefig(os.path.join(OUTPUT_DIR, "venn_high.svg"))
+
+    # medium
+    data = {
+        "df_fa_medium": set(df_fa_medium["triple"].tolist()),
+        "df_frida_medium": set(df_frida_medium["triple"].tolist()),
+        "df_phenol_explorer_medium": set(df_phenol_explorer_medium["triple"].tolist()),
+        # "df_fdc_medium": set(df_fdc_medium["triple"].tolist()),
+    }
+
+    ax = venn(data)
+    fig = ax.get_figure()
+    fig.savefig(os.path.join(OUTPUT_DIR, "venn_medium.png"))
+    fig.savefig(os.path.join(OUTPUT_DIR, "venn_medium.svg"))
+
+    # low
+    data = {
+        # "df_fa_low": set(df_fa_low["triple"].tolist()),
+        "df_frida_low": set(df_frida_low["triple"].tolist()),
+        # "df_phenol_explorer_low": set(df_phenol_explorer_low["triple"].tolist()),
+        "df_fdc_low": set(df_fdc_low["triple"].tolist()),
+    }
+
+    ax = venn(data)
+    fig = ax.get_figure()
+    fig.savefig(os.path.join(OUTPUT_DIR, "venn_low.png"))
+    fig.savefig(os.path.join(OUTPUT_DIR, "venn_low.svg"))
+
+    # low
+    data = {
+        "df_fa_high": set(df_fa_high["triple"].tolist()),
+        "df_fa_medium": set(df_fa_medium["triple"].tolist()),
+        "df_frida": set(df_frida["triple"].tolist()),
+        "df_phenol_explorer": set(df_phenol_explorer["triple"].tolist()),
+        "df_fdc": set(df_fdc["triple"].tolist()),
+    }
+
+    ax = venn(data)
+    fig = ax.get_figure()
+    fig.savefig(os.path.join(OUTPUT_DIR, "venn.png"))
+    fig.savefig(os.path.join(OUTPUT_DIR, "venn.svg"))
+
+
 def main():
     fa_kg = KnowledgeGraph(kg_dir=FINAL_DATA_DIR)
 
     # visualize_source(fa_kg)
     # visualize_entities(fa_kg)
-    visualize_relations(fa_kg)
+    # visualize_relations(fa_kg)
     # upset_plot(fa_kg)
+    # upset_plot_contains(fa_kg)
     # plot_sunburst_chemicals("../../outputs/backend_data/v0.1/chemicals_group.txt")
     # plot_sunburst_organisms("../../outputs/backend_data/v0.1/organisms_group.txt")
+    # plot_treemap_chemicals("../../outputs/backend_data/v0.1/chemicals_group.txt")
+    # plot_treemap_organisms("../../outputs/backend_data/v0.1/organisms_group.txt")
     # plot_num_sources_per_triple(fa_kg)
+    visualize_sankey(fa_kg)
+    # venn_diagram(fa_kg)
 
     # G, dictionary = generate_kg(fa_kg)
     # plot_node_stats(fa_kg, G, dictionary)

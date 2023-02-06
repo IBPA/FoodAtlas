@@ -192,6 +192,12 @@ def main():
 
         assert num_intersection >= 1
 
+    def _clean_other_db_ids(other_db_ids):
+        return {
+            k: v for k, v in other_db_ids.items()
+            if k in ["MESH", "PubChem", "CAS"] and len(v) != 0
+        }
+
     # now update triples
     def _f(row):
         head = row["head"]
@@ -229,11 +235,11 @@ def main():
             for pubchem_id in other_db_ids["PubChem"]:
                 other_db_ids = pubchem_id_other_db_ids_dict[pubchem_id]
                 _check_new_other_db_ids(tail.other_db_ids, other_db_ids)
-                row["tail"] = tail._replace(other_db_ids=other_db_ids)
+                row["tail"] = tail._replace(other_db_ids=_clean_other_db_ids(other_db_ids))
                 newrows.append(deepcopy(row))
         else:
             _check_new_other_db_ids(tail.other_db_ids, other_db_ids)
-            row["tail"] = tail._replace(other_db_ids=other_db_ids)
+            row["tail"] = tail._replace(other_db_ids=_clean_other_db_ids(other_db_ids))
             newrows.append(deepcopy(row))
 
         return newrows

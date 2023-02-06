@@ -1,13 +1,13 @@
 #!/bin/bash
 set -e
 
-echo "Annotation training pool to KG..."
-python generate_kg_from_ph_pairs.py \
-    --input_filepath=../../outputs/data_processing/train_pool.tsv \
-    --input_kg_dir=../../outputs/kg/annotations/ \
-    --output_kg_dir=../../outputs/kg/annotations \
-    --mode=annotated \
-    --nb_workers=10
+# echo "Annotation training pool to KG..."
+# python generate_kg_from_ph_pairs.py \
+#     --input_filepath=../../outputs/data_processing/train_pool.tsv \
+#     --input_kg_dir=../../outputs/kg/annotations/ \
+#     --output_kg_dir=../../outputs/kg/annotations \
+#     --mode=annotated \
+#     --nb_workers=10
 
 # echo
 # echo "Annotation validation to KG..."
@@ -102,8 +102,8 @@ python generate_kg_from_ph_pairs.py \
 #     --output_kg_dir=../../outputs/kg/annotations_predictions_extdb_extdbpred_mesh_ncbi \
 #     --nb_workers=10
 
-# echo
-# echo "Final KG parsing..."
-# python parse_final_kg.py \
-#     --input_kg_dir=../../outputs/kg/annotations_predictions_extdb_extdbpred_mesh_ncbi \
-#     --output_dir=../../outputs/backend_data/v0.1
+echo
+echo "Final KG parsing..."
+python parse_final_kg.py \
+    --input_kg_dir=../../outputs/kg/annotations_predictions_extdb_extdbpred_mesh_ncbi \
+    --output_dir=../../outputs/backend_data/v0.1

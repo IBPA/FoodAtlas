@@ -144,6 +144,12 @@ def main():
 
         return other_db_ids_list
 
+    def _clean_other_db_ids(other_db_ids):
+        return {
+            k: v for k, v in other_db_ids.items()
+            if k in ["MESH", "PubChem", "CAS"] and len(v) != 0
+        }
+
     triples = []
     for head_mesh_id, tail_mesh_id, in tqdm(head_tail_pairs):
         if head_mesh_id.startswith("C"):
@@ -166,14 +172,14 @@ def main():
                 type="chemical",
                 name=head_name,
                 synonyms=[],
-                other_db_ids=head_other_db_ids,
+                other_db_ids=_clean_other_db_ids(head_other_db_ids),
             )
 
             tail_ent = CandidateEntity(
                 type="chemical",
                 name=tail_name,
                 synonyms=[],
-                other_db_ids=tail_other_db_ids,
+                other_db_ids=_clean_other_db_ids(tail_other_db_ids),
             )
 
             triples.append([head_ent, relation, tail_ent])
