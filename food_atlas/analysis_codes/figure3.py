@@ -87,6 +87,25 @@ def visualize_source(fa_kg):
     df_ncbi_low = df_ncbi[df_ncbi["quality"] == "low"]
     print(f"Number of df_ncbi_low: {df_ncbi_low.shape[0]}")
 
+    df_fa_high.drop_duplicates("triple", inplace=True)
+    df_fa_medium.drop_duplicates("triple", inplace=True)
+    df_fa_low.drop_duplicates("triple", inplace=True)
+    df_frida_high.drop_duplicates("triple", inplace=True)
+    df_frida_medium.drop_duplicates("triple", inplace=True)
+    df_frida_low.drop_duplicates("triple", inplace=True)
+    df_phenol_explorer_high.drop_duplicates("triple", inplace=True)
+    df_phenol_explorer_medium.drop_duplicates("triple", inplace=True)
+    df_phenol_explorer_low.drop_duplicates("triple", inplace=True)
+    df_fdc_high.drop_duplicates("triple", inplace=True)
+    df_fdc_medium.drop_duplicates("triple", inplace=True)
+    df_fdc_low.drop_duplicates("triple", inplace=True)
+    df_mesh_high.drop_duplicates("triple", inplace=True)
+    df_mesh_medium.drop_duplicates("triple", inplace=True)
+    df_mesh_low.drop_duplicates("triple", inplace=True)
+    df_ncbi_high.drop_duplicates("triple", inplace=True)
+    df_ncbi_medium.drop_duplicates("triple", inplace=True)
+    df_ncbi_low.drop_duplicates("triple", inplace=True)
+
     data = [
         ["FoodAtlas - High", df_fa_high.shape[0]],
         ["FoodAtlas - Medium", df_fa_medium.shape[0]],
@@ -570,11 +589,11 @@ def plot_treemap_organisms(organisms_group_filename):
 
 def plot_num_sources_per_triple(fa_kg):
     df_evidence = fa_kg.get_evidence()
-    df_evidence = df_evidence.groupby("triple")["source"].apply(list).reset_index()
-    df_evidence["num_source"] = df_evidence["source"].apply(len)
     contains_fa_id = fa_kg.get_relation_by_name("contains")["foodatlas_id"]
     df_evidence = df_evidence[df_evidence["triple"].apply(
         lambda x: x.split(',')[1] == contains_fa_id)]
+    df_evidence = df_evidence.groupby("triple")["source"].apply(list).reset_index()
+    df_evidence["num_source"] = df_evidence["source"].apply(len)
 
     num_sources = df_evidence["num_source"].tolist()
     num_sources_avg = np.mean(num_sources)
@@ -585,6 +604,7 @@ def plot_num_sources_per_triple(fa_kg):
 
     df = df_evidence.groupby("num_source")["triple"].apply(len).reset_index()
     df.rename({"num_source": "# of sources", "triple": "# of triples"}, inplace=True, axis=1)
+    print(df)
 
     fig = px.bar(
         df,
@@ -597,9 +617,7 @@ def plot_num_sources_per_triple(fa_kg):
     fig.update_layout(
         margin=dict(t=0, l=2, r=2, b=0),
         font_family="Arial",
-        # xaxis=dict(tickfont=dict(size=9)),
     )
-    # fig.update_xaxes(tickangle=90, tickmode="linear")
     fig.write_image(os.path.join(OUTPUT_DIR, "num_sources_per_triple.png"))
     fig.write_image(os.path.join(OUTPUT_DIR, "num_sources_per_triple.svg"))
 
@@ -931,6 +949,29 @@ def venn_diagram(fa_kg):
     fig.savefig(os.path.join(OUTPUT_DIR, "venn.svg"))
 
 
+def count_high_med_low_quality_triples(fa_kg):
+    df_evidence = fa_kg.get_evidence()
+    df_evidence = df_evidence.groupby("triple")["quality"].apply(list).reset_index()
+    print(df_evidence.shape[0])
+
+    def _select_quality(x):
+        if "high" in x:
+            return "high"
+        elif "medium" in x:
+            return "medium"
+        else:
+            return "low"
+    df_evidence["quality"] = df_evidence["quality"].apply(_select_quality)
+
+    df_high = df_evidence[df_evidence["quality"] == "high"]
+    df_medium = df_evidence[df_evidence["quality"] == "medium"]
+    df_low = df_evidence[df_evidence["quality"] == "low"]
+
+    print(f"Number of high-quality triples: {df_high.shape[0]}")
+    print(f"Number of medium-quality triples: {df_medium.shape[0]}")
+    print(f"Number of low-quality triples: {df_low.shape[0]}")
+
+
 def main():
     fa_kg = KnowledgeGraph(kg_dir=FINAL_DATA_DIR)
 
@@ -943,9 +984,10 @@ def main():
     # plot_sunburst_organisms("../../outputs/backend_data/v0.1/organisms_group.txt")
     # plot_treemap_chemicals("../../outputs/backend_data/v0.1/chemicals_group.txt")
     # plot_treemap_organisms("../../outputs/backend_data/v0.1/organisms_group.txt")
-    # plot_num_sources_per_triple(fa_kg)
-    visualize_sankey(fa_kg)
+    plot_num_sources_per_triple(fa_kg)
+    # visualize_sankey(fa_kg)
     # venn_diagram(fa_kg)
+    # count_high_med_low_quality_triples(fa_kg)
 
     # G, dictionary = generate_kg(fa_kg)
     # plot_node_stats(fa_kg, G, dictionary)
