@@ -96,9 +96,11 @@ class FoodAtlasEntailmentModel:
         train_stats = {}
         for epoch in range(epochs):
             self.model.train()
+            y_true = []
+            y_pred = []
+            y_score = []
             n_samples = 0
             loss_total = 0.0
-
             pbar = tqdm((data_loader_train), position=0, leave=True)
             for (input_ids, attention_mask, token_type_ids), y in pbar:
                 input_ids = input_ids.to(self.device)
@@ -118,14 +120,16 @@ class FoodAtlasEntailmentModel:
 
                 n_samples += len(y)
                 loss_total += loss.detach().cpu().numpy()
-                y_true = y.detach().cpu().numpy()
-                y_pred = output.argmax(dim=1).detach().cpu().numpy()
+                y_true += y.detach().cpu().numpy().tolist()
+                y_pred += output.argmax(dim=1).detach().cpu().numpy().tolist()
+                y_score += output.softmax(dim=1)[
+                    :, 1].detach().cpu().numpy().tolist()
 
-                with warnings.catch_warnings():
-                    warnings.simplefilter('ignore')
-                    metrics = get_all_metrics(y_true, y_pred)
+                # torch.cuda.empty_cache()
 
-                torch.cuda.empty_cache()
+            with warnings.catch_warnings():
+                warnings.simplefilter('ignore')
+                metrics = get_all_metrics(y_true, y_pred)
 
             train_stats[f'train_iter_{epoch}'] = {
                 'metrics': metrics,

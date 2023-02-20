@@ -1,0 +1,75 @@
+1. Generate PH pairs.
+
+python query_and_generate_ph_pairs.py \
+    --input_type=query_string \
+    --query_filepath=../../data/FooDB/foodb_queries.txt \
+    --allowed_ncbi_taxids_filepath=../../data/FoodAtlas/allowed_ncbi_taxids.tsv \
+    --cache_dir=/home/jasonyoun/Temp
+
+Output files
+- ../../outputs/data_processing/query_results.txt
+- ../../outputs/data_processing/ph_pairs_{timestamp}.txt
+
+
+
+2. Generate pre-annotation data for training pool.
+
+python generate_pre_annotation.py \
+    --train_pre_annotation_filepath=../../outputs/data_processing/train_pool_pre_annotation.tsv
+
+Output files
+- ../../outputs/data_processing/train_pool_pre_annotation.tsv
+- ../../outputs/data_processing/val_pre_annotation.tsv
+- ../../outputs/data_processing/test_pre_annotation.tsv
+- ../../outputs/data_processing/to_predict.tsv
+
+
+
+3. Annotate pre_annotation files. When finished, save the file names as below.
+
+../../outputs/data_processing/train_pool_pre_annotation.tsv-> ../../outputs/data_processing/train_pool_post_annotation.tsv
+../../outputs/data_processing/val_pre_annotation.tsv -> ../../outputs/data_processing/val_post_annotation.tsv
+../../outputs/data_processing/test_pre_annotation.tsv -> ../../outputs/data_processing/test_post_annotation.tsv
+
+
+
+4. Post process the annotation.
+
+python post_process_annotation.py \
+    --train_post_annotation_filepath=../../outputs/data_processing/train_pool_post_annotation.tsv \
+    --train_filepath=../../outputs/data_processing/train_pool.tsv
+
+Output files
+- ../../outputs/data_processing/train_pool.tsv
+- ../../outputs/data_processing/val.tsv
+- ../../outputs/data_processing/test.tsv
+
+
+
+5. Train the entailment model.
+
+
+
+X. Generate k-folds for training the deploy entailment model.
+python generate_folds.py \
+    --input_train_filepath=../../outputs/data_processing/train_pool.tsv \
+    --input_val_filepath=../../outputs/data_processing/val.tsv \
+    --input_test_filepath=../../outputs/data_processing/test.tsv \
+    --output_dir=../../outputs/data_processing/folds_for_prod_model
+
+X. Generated queries
+python generate_food_chem_queries.py --input_filepath=../../data/Frida/frida.tsv --output_filepath=../../data/Frida/frida_queries.txt
+python generate_food_chem_queries.py --input_filepath=../../data/Phenol-Explorer/phenol_explorer.tsv --output_filepath=../../data/Phenol-Explorer/phenol_explorer_queries.txt
+
+
+python query_and_generate_ph_pairs.py \
+    --input_type=query_results \
+    --query_filepath=../../data/FoodAtlas/litsense_query/20230118/queries_output/*.json \
+    --allowed_ncbi_taxids_filepath=../../data/FoodAtlas/allowed_ncbi_taxids.tsv \
+    --cache_dir=/home/jasonyoun/Temp
+
+python query_and_generate_ph_pairs.py \
+    --input_type=query_results \
+    --query_filepath=../../data/FoodAtlas/litsense_query/20230119/queries_output/*.json \
+    --allowed_ncbi_taxids_filepath=../../data/FoodAtlas/allowed_ncbi_taxids.tsv \
+    --cache_dir=/home/jasonyoun/Temp

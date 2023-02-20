@@ -3,3 +3,5 @@
 # Except these file
 !.gitignore
 !process_foodb.py
+!foodb_foods.txt
+!names.txt

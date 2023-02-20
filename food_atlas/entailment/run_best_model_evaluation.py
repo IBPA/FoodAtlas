@@ -127,10 +127,6 @@ def main(
     ).iloc[0][['batch_size', 'lr', 'epochs']]
     batch_size = int(batch_size)
     epochs = int(epochs)
-    # print(
-    #     f"Best hyperparameters: batch_size={batch_size}, lr={lr}, "
-    #     f"epochs={epochs}"
-    # )
 
     failed = []
     for seed in seeds:

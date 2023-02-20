@@ -1,0 +1,217 @@
+FoodID,FoodName,TaxonomicName,ncbi_taxid
+1,"Strawberry, raw",Fragaria x ananassa Duchesne,3747
+2,"Apple, raw, all varieties",Malus domestica Borkh.,3750
+3,"Banana, raw",Musa x paradisiaca L.,89151
+4,"Potato, raw",Solanum tuberosum L.,4113
+5,"Raspberry, raw",Rubus idaeus L.,32247
+8,"Parsley, raw",Petroselium crispum (Miller) Nyman ex A.W. Hill,
+9,"Pear, raw",Pirus communis L. var. sativa,
+10,"Rhubarb, raw",Rheum rhabarbarum L.,3621
+11,"Currant, black, raw",Ribes nigrum L.,78511
+13,"Celery, raw",Apium graveolens L. var. dulce,117781
+14,"Cauliflower, all varieties, raw",Brassica oleracea L. convar. botrytis,
+15,"Plum, raw",Prunus domestica L.,3758
+16,"Blueberries, raw",Vaccinium myrtillus L.,180763
+17,"Broccoli, raw",Brassica oleracea var. Italica,36774
+18,"Blackberry, raw",Rubus fructicosus L.,
+19,"Beans, brown, dried, raw",Phaseolus vulgaris L.,3885
+21,"Lemon, raw",Citrus limon (L.) Burm. f.,2708
+22,"Dill, raw",Anethum graveolens L.,40922
+23,"Kale, raw",Brassica oleracea (L.) convar. acephala,
+24,"Carrot, raw",Daucus carota L.,4039
+25,"Garfish, raw",Belone belone,129037
+26,"Cabbage, white, raw",Brassica oleracea L. convar. capitata (L.) Alef. var alba DC,
+27,"Rose hip, raw",Rosa rugosa Thunb.,74645
+28,"Elderberry, raw",Sambucus nigra L.,4202
+29,"Cherry, raw",Prunus avium (L.) L.,42229
+30,"Salmon, Atlantic, wild, raw",Salmo salar,8030
+31,"Sweetcorn, on-the-cob, raw",Zea mays L.,4577
+34,"Mackerel, raw",Scomber scombrus,13677
+35,"Almond, raw",Amygdalus Communis L.,3755
+36,"Watermelon, raw",Citrullus lanatus (Thunb.) Matsum. et Nakai,3654
+37,"Pepper, sweet, green, raw",Capsicum annuum L. var. grossum (L.) Terpø,40321
+38,"Pepper, sweet, red, raw",Capsicum annuum L. var grossum (L.) Terpø,40321
+39,"Radish, raw",Raphanus sativus L. var. sativus,240228
+40,"Currant, red, raw",Ribes rubrum L.,175228
+41,"Brussels sprouts, raw",Brassica oleracea L. convar. oleracea (L.) var. gemmifera DC,
+43,"Beet, red, raw",Beta vulgaris L. var conditiva Alef.,
+44,"Cabbage, red, raw",Brassica oleracea L. convar. capitata (L.),
+45,"Plaice, raw",Pleuronectes platessa,8262
+46,"Celeriac, celery root, raw",Apium graveolens L.,4045
+48,"Herring, raw",Clupea harengus,7950
+49,"Cabbage, pointed, raw",Brassica oleracea L. convar. capitata (L.) var. conica,
+50,"Spinach, raw",Spinacia oleracea L.,3562
+51,"Gooseberry, raw",Ribes uva-crispa L.,135518
+52,"Tomato, ripe, raw, origin unknown",Lycopersicon esculentum (L.) Karsten ex Farw.,4081
+54,"Grape, raw",Vitis vinifera L.,29760
+55,"Peas, green, raw",Pisum sativum L.,3888
+56,"Squash, raw",Curcubita pepo L.,
+57,"Artichoke, raw",Cynara scolymus L.,59895
+58,"Beans, mung, dried, raw",Phaseolus radiatus L.,3916
+62,"Ginger root, raw",Zingiber officinale,94328
+63,"Okra, raw",Hibiscus esculentus L.,455045
+64,"Asparagus, green, raw",Asparagus officinalis L.,4686
+65,"Fennel, root, raw",Foeniculum vulgare (Miller) var. azoricum,
+66,"Saithe, raw",Pollachius virens,8060
+67,"Buckwheat, whole, raw",Fogopyrum esculentum Moench,
+69,"Aubergine, raw",Solanum melongena L.,4111
+70,"Orange, raw",Citrus sinensis (L.) Pers.,2711
+71,"Lamb, leg, unspecified , raw",Ovis aries,9940
+72,"Cod, fillet, raw",Gadus morhua,8049
+74,"Pork, collar with rind, raw",Sus scrofa,9823
+76,"Rice groats, brown, raw",Oryza sativa L.,4530
+87,"Goose, flesh and skin, raw",Anser anser,8843
+88,"Nut, coco, raw",Cocos nucifera L.,13894
+101,"Duck, flesh and skin, raw",Anas platyrhynchos,8839
+116,"Chestnut, raw",Castanea sativa Miller,21020
+149,"Linseeds, raw",Linum usitatissimum L.,4006
+163,"Oyster, raw",Ostreidae fam.,
+176,"Barley groats, raw",Hordeum vulgare L.,4513
+205,"Garlic, raw",Allium sativum L.,4682
+215,"Eggs, chicken, egg white, raw",Gallus domesticus,9031
+222,"Tamarind, Indian date, raw",Tamarindus indica L.,58860
+283,"Bulgur, parboiled, raw",Triticum aestivum L.,4565
+285,"Lentils, sprouted, raw",Lens culinaris (L.) Medikus,3864
+350,"Cranberry, raw",Vaccinium oxycoccus L.,516948
+364,"Quinces, raw",Cydonia oblonga Miller,36610
+366,"Pumpkin, raw",Cucurbita pepo L.,3663
+368,"Radishes, oriental, daikon, Japanese radish, raw",Raphanus sativus L. var. achantiformis Makino,
+381,"Turnip, raw",Brassica rapa (L.) var. rapa (L.) Thell.,1652998
+384,"Bean, adzuki, sprouted, raw",Vigna angularis (Willd.) Ohwi & H. Ohashi var. angularis,157739
+387,"Mussel, raw",Mytilus edulis,6550
+388,"Cucumber, raw",Cucumis sativus L.,3659
+389,"Loquat, raw",Eriobotrya japonica (Thunb.) Lindley,2843217
+397,"Melon, honeydew, raw",Cucumis melo L.,3656
+428,"Chayote fruit, raw",Sechium edule,184140
+447,"Muskmelon, raw",Cucumis melo L. var. reticulatus Naud.,3658
+464,"Lime, raw","Citrus aurantifolia (Christm.), Swingle",
+465,"Crab apple, raw",Malus sylvstris Miller. ssp. mitis (Wallr.) Mansf. var paradisiaca (l.),
+472,"Strawberry juice, concentrated, sugar not added",Fragraria x ananassa Duchesne,3747
+474,"Burbot, raw",Lota lota,69944
+475,"Hake, raw",Merluccius merluccius,8063
+479,"Lettuce, iceberg (incl. crisphead types), raw",Lactuca sativa L. var. capitata L.,1049369
+485,"Pineapple, raw",Ananas comosus (L.) Merr.,4615
+490,"Radish, white, raw",Raphanus sativus L. var. niger (Miller),41679
+491,"Melon, cantaloup, raw",Cucumis melo L. var. cantaloupensis Naud.,
+495,"Octopus, raw",Octopus bimaculatus,37652
+496,"Horse-radish, raw","Armoracia rusticana P. Gaertn., Meyer et Sherb.",
+510,"Papaya, raw",Carica papaya L.,3649
+519,"Swede, raw",Brassica napus L. var. napobrassica (L.) Reichb.,3709
+524,"Apricot, raw",Prunus armeniaca L.,36596
+541,"Lemon sole, raw",Microstomus kitt,106175
+544,"Chicory, raw",Cichorium intybus L. var. foliosum Hegi,
+545,"Mango, raw",Mangifera indica L.,29780
+546,"Dab, raw",Limanda limanda,27771
+549,"Blue whiting, fillet, raw",Micromesistius poutassou,81636
+552,"Grapefruit, raw",Citrus x paradisi Macfad.,37656
+553,"Whiting, raw",Merlangius merlangus merlangus,8058
+560,"Tangerine, raw",Citrus reticulata Blanco (Clementin),85571
+561,"Perch, raw",Perca fluviatilis,8168
+564,"Wolffish (catfish), raw",Anarhichas lupus lupus,8204
+569,"Kidney, ox, raw",Bos taurus,9913
+570,"Torsk, tusk, raw",Brosme brosme,81638
+572,"Prickly pear, Indian fig, raw",Opuntia ficus indica (L.) Miller,
+573,"Cabbage, Chinese, raw",Brassica pekinensis (Lour.) Rupr.,51351
+575,"Norway pout, flesh, raw",Trisopterus esmarki,80723
+578,"Figs, raw",Ficus carica L.,3494
+579,"Carambola, raw",Averrhoa carambola L.,28974
+581,"Turbot, raw",Psetta maxima,52904
+582,"Haddock, raw",Melanogrammus aeglefinus,8056
+584,"Flounder, raw",Platichtys flesus,
+585,"Endive (escarole), raw",Cichorium endivia L. var. latifolium Lam.,
+587,"Pollack, raw",Pollachius pollachius,185739
+591,"Lettuce, looseleaf, raw",Lactuca sativa L. var. crispa,466611
+593,"Persimmon, kaki fruit, raw",Diospyros kaki L.,35925
+594,"Ling, fillet, raw",Molva molvo,
+595,"Sole, raw",Solea solea,90069
+599,"Endive (frisee), raw",Cichorium endivia L. var. crispum Lam.,
+600,"Lettuce, Cos or romaine, raw",Lactuca sativa L. var. longifolia,1759395
+601,"Pikeperch, raw",Stizostedion lucioperca,283035
+603,"Redfish, ocean perch, raw",Sebastes marinus,34821
+609,"Peach, raw",Prunus persica (L.) Batsch,3760
+610,"Nectarine, raw",Prunus persica (L.) Batsch var. nucipersica (L.) C. Schneid.,323851
+611,"Pike, raw",Esox lucius,8010
+616,"Avocado, raw",Persea americana Miller,3435
+622,"Lentils, brown, dried, raw",Lens culinaris Medicus,3864
+630,"Lychee, raw",Litchi chinensis Sonn.,151069
+632,"Pomegranate, raw",Punica granatum L.,22663
+633,"Guava, common, raw",Psidium guajava L.,120290
+634,"Spotted wolffish, fillet, raw",Anarhichas minor,65739
+636,"Cape gooseberries, raw",Physalis peruviana,126903
+639,"Bream, raw",Abramis spp.,
+643,"Pak choi (bok choy), raw",Brassica chinensis L.,93385
+652,"Chickory, raddichio, raw",Chichorium intybus L. var. foliosum,
+654,"Lobster, raw",Homarus gammarus,6707
+655,"Norway lobster, raw",Nephros norvegicus,
+658,"Norway haddock, fillet, raw",Sebastes viviparus,394708
+683,"Kohlrabi, raw",Brassica oleracea L var. gongylodes,109379
+685,"Watercress, raw",Nasturtium officinalis R. Br.,
+692,"Brazil nuts, dried, raw",Bertholethia excelsa Humb. et Bonpl.,
+694,"Charr, raw",Salmo alpinus,8036
+711,"Halibut, atlantic, raw",Hippoglossus hippoglossus,8267
+713,"Trout, raw",Salmo trutta,8032
+714,"Sweet potato, raw",Ipomoea batatas (L.) Poiret,4120
+715,"Chard, swiss, raw",Beta vulgaris L. var. vulgaris,
+716,"Onion, raw",Allium cepa L.,4679
+719,"Sapodilla, raw",Manilkara zapota (L.) van Royen,3741
+723,"Kiwi fruit, raw","Actinidia chinensis Planchon, var. deliciosa",3627
+732,"Turkey, flesh only, raw",Meleagris gallopavo,9103
+737,"Lump, lumpsucker, raw",Cyclopterus lumpus,8103
+741,"Peas, chick/garbanzo, dry, raw",Cicer arietinum L.,3827
+752,"Cabbage, savoy, raw",Brassica oleracea L. convar. capitata (L.) var. sabauda,
+755,"Lentils, red, dried, raw",Lens culinaris Medikus,3864
+756,"Lemon peel, raw",Ctrus limon (L.) Burm. f.,
+768,"Whitefish, raw",Coregonus lavaretus,59291
+769,"Lingonberry, raw",Vaccinium vitis-idaea L.,180772
+774,"Rainbow trout, raw","Oncorhynchus mykiss (Walbaum, 1792)",8022
+783,"Crab claws, meat, raw",Cancer pagurus,6755
+802,"Ptarmigan, flesh, raw",Lagopus mutus.,64668
+807,"Rabbit, flesh only, raw",Oryetalagus euniculus,
+808,"Pepper, hot chili, raw",Capsicum frutescens,4073
+824,"Leek, raw",Allium porrum L.,4681
+842,"Lake trout, raw",Salmo trutta lacustris,8032
+844,"Pheasant, flesh only, raw",Phasianus colchinus,
+845,"Yam, raw",Dioscorea opposita Thunb.,569628
+860,"Squab (pigeon), flesh, raw",Columba spp.,
+866,"Sprat, raw",Sprattus sprattus,196075
+867,"Coriander, leaf, raw",Coriandrum sativum,4047
+872,"Dock (US), sorrel (UK), raw",Rumex acetosa L.,41241
+895,"Cherimoya, raw",Annona cherimolia Miller,
+897,"Halibut, greenland, raw",Reinhardtius hippoglossoides,111784
+902,"Dogfish, piked, raw",Squalus acanthias,7797
+904,"Tuna, raw",Thunnus thynnus,8237
+930,"Chives, raw",Allium schoenoprasum L.,74900
+932,"Kumquats, raw","Fortunella japonica (Thunb.), Swingle",
+937,"Parsnip, raw",Pastinaca sativa L.,4041
+939,"Cassava, raw",Manihot esculenta,3983
+950,"Jerusalem artichoke, raw",Helianthus tuberosus L.,4233
+961,"Mushroom, raw",Agaricus bisporus forma albus,5341
+969,"Cress, garden, raw",Lepidium sativum L.,33125
+970,"Bean sprouts, mung, raw",Phaseolus radiata L. (Vigna radiata (L.) R. Wilczek),
+976,"Parsley root, raw",Petroselium crispum (Miller) Nyman ssp. tuberosum,
+1051,"Bamboo shoots, raw",Phyllostachys bambusoides,35706
+1055,"Passion fruit, raw",Passiflora edulis Sims,78168
+1061,"Sugar pea (Snow pea, Mangetout) raw",Pisum sativum,3888
+1089,"Black salsify, raw",Scorzonera hispanica L.,114289
+1095,"Dandelion, leaves, raw",Taraxacum spp.,
+1100,"Cantherelle, raw",Cantharellus cibarius,36066
+1102,"Sapotes, raw",Pouteria sapota (Jacq.) H.E. Moore et Stern,233744
+1111,"Alfalfa seeds, sprouted, raw",Medicago sativa L.,3879
+1159,"Brussels sprouts, winter (January to April), raw",Brassica oleracea var. gemmifera,178616
+1160,"Chervil, raw",Antriscus cerefolium (L.) Hoffm.,
+1217,"Beans, soy, dried, raw",Glycine max (L.) Merr..,3847
+1240,"Buckwheat groats, raw",Fagopyrum esculentum Moench,3617
+1248,"Eel, raw",Anguilla anguilla,7936
+1317,"Beansprouts, soy, raw",Glycine max. (L.) Merr.,3847
+1548,"Tiger prawn, aquaculture, raw, frozen",Penaeus monodon,6687
+1585,"Pomelo (pommelo; shaddock), raw",Citrus grandis; Citrus maxima,37334
+1653,"Tuna, yellowfin, raw",Thunnus albacares,8236
+1656,"Flounder, fillet, breaded, raw, frozen",Platichthys flesus,8260
+1659,"Salmon, pacific, wild, raw",Oncorhynchus spp.,
+1660,"Striped catfish, raw, frozen",Pangasianodon hypophthalmus,310915
+1697,"Caraway seed, raw",Carum carvi,48032
+1698,"Cumin seeds, raw",Cuminum cyminum,52462
+1721,"Pepper, sweet, yellow, raw",Capsicum annuum,4072
+1724,"Quinoa, white, raw",Chenopodium quinoa,63459
+1743,"Salad, little gem, raw",Lactuca sativa var. romana,
+1745,"Butternut squash, raw",Cucurbita moschata,3662
