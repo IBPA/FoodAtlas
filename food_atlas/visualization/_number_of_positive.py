@@ -57,15 +57,16 @@ def plot_number_of_positive(
 
 
 if __name__ == '__main__':
-    active_learning_strategies = ['stratified', 'uncertain']
+    active_learning_strategies = [
+        'certain_pos', 'stratified', 'uncertain', 'random']
 
     data = get_positive_result(
-        run_ids=range(1, 1 + 17),
+        run_ids=range(1, 100 + 1),
         active_learning_strategies=active_learning_strategies,
     )
 
     n_poss_rows = []
-    for al in ['stratified', 'uncertain']:
+    for al in active_learning_strategies:
         data_al = data.query("al == @al")
         data_al_dict = data_al.groupby('round_id').mean()['n_pos'].to_dict()
         data_al_dict['al'] = al
@@ -73,10 +74,11 @@ if __name__ == '__main__':
     n_poss = pd.DataFrame(n_poss_rows).set_index('al')
     print(n_poss)
 
-    n_poss_diff = n_poss.loc['uncertain'] - n_poss.loc['stratified']
-    n_poss_diff_ratio = n_poss_diff / n_poss.loc['stratified']
-    print(n_poss_diff)
-    print(n_poss_diff_ratio)
-
-    print(n_poss_diff.mean(), n_poss_diff.std())
-    print(n_poss_diff_ratio.mean(), n_poss_diff_ratio.std())
+    for al in ['certain_pos', 'stratified', 'uncertain']:
+        print(al)
+        n_poss_diff = n_poss.loc[al] - n_poss.loc['random']
+        n_poss_diff_ratio = n_poss_diff / n_poss.loc['random']
+        print(n_poss_diff)
+        print(n_poss_diff_ratio)
+        print(n_poss_diff.mean(), n_poss_diff.std())
+        print(n_poss_diff_ratio.mean(), n_poss_diff_ratio.std())

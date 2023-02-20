@@ -106,6 +106,9 @@ def plot_reliability_diagram(
         .reset_index(drop=True)
     data_plot_2['frac_pos'] = data_plot_2['pos'] / data_plot_2['count']
     frac_pos = data_plot_2.groupby(['bin_id']).mean()['frac_pos'].values
+    print(data_plot_2.groupby(['bin_id']).mean()['pos'].values)
+    print(data_plot_2.groupby(['bin_id']).mean()['count'].values)
+    print(data_plot_2)
 
     bin_width = 10 // n_bins / 10
     y_true = [(x / 10) - (bin_width / 2)
@@ -138,3 +141,13 @@ def plot_reliability_diagram(
     if path_save is not None:
         plt.savefig(path_save)
     plt.close()
+
+
+if __name__ == '__main__':
+    plot_reliability_diagram(
+        run_ids=list(range(1, 100 + 1)),
+        active_learning_strategies=[
+            'certain_pos', 'stratified', 'uncertain', 'random'],
+        n_bins=5,
+        path_save=None,
+    )
