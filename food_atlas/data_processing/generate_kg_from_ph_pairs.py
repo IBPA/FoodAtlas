@@ -7,10 +7,14 @@ import pandas as pd
 from pandarallel import pandarallel
 from tqdm import tqdm
 
-from common_utils.chemical_db_ids import get_mesh_name_using_mesh_id, read_pubchem_cid_mesh
-from common_utils.chemical_db_ids import read_mesh_data, get_pubchem_id_other_db_ids_using_mesh
+from common_utils.chemical_db_ids import (
+    get_mesh_name_using_mesh_id,
+    read_pubchem_cid_mesh,
+    read_mesh_data,
+    get_pubchem_id_data_dict_using,
+)
 from common_utils.knowledge_graph import KnowledgeGraph, CandidateRelation
-from common_utils.utils import read_dataframe
+from common_utils.utils import read_dataframe, singularize
 
 
 THRESHOLD = 0.5
@@ -112,11 +116,11 @@ def main():
     print(f"Found {len(mesh_ids)} MeSH IDs")
 
     # find the Dict[pubchem ID, other_db_ids] using the MeSH IDs
-    pubchem_id_other_db_ids_dict = get_pubchem_id_other_db_ids_using_mesh(
-        mesh_ids, args.new_pkl)
+    pubchem_id_data_dict = get_pubchem_id_data_dict_using(
+        mesh_ids, ['CAS', 'MESH', 'synonyms'], 'MESH')
 
     # now update ph_pairs
-    mesh_data_dict = read_mesh_data(use_pkl=True)
+    mesh_data_dict = read_mesh_data()
     df_cid_mesh = read_pubchem_cid_mesh()
 
     has_part = CandidateRelation(
@@ -156,7 +160,7 @@ def main():
         mesh_id = tail.other_db_ids["MESH"][0]
         mesh_name = get_mesh_name_using_mesh_id(mesh_id, mesh_data_dict)
         if mesh_name is None:
-            warnings.warn(f"Did not find MeSH name: {mesh_name}")
+            # warnings.warn(f"Did not find MeSH name: {mesh_name}")
             return newrows
 
         df_cid_mesh_match = df_cid_mesh[df_cid_mesh["mesh_name"].apply(lambda x: x == mesh_name)]
@@ -166,17 +170,29 @@ def main():
             return newrows
 
         for pubchem_id in pubchem_ids:
-            other_db_ids = pubchem_id_other_db_ids_dict[pubchem_id]
-            if mesh_id not in other_db_ids["MESH"]:
-                warnings.warn(f"Did not find {mesh_id} in {other_db_ids}")
+            data = pubchem_id_data_dict[pubchem_id]
+            if 'MESH' in data and mesh_id not in data["MESH"]:
+                # warnings.warn(f"Did not find {mesh_id} in {data}")
                 continue
 
-            # Keep onnly PubChem or MESH since others cab be added later
-            other_db_ids = {
-                k: v for k, v in other_db_ids.items()
-                if k in ["MESH", "PubChem", "CAS"]
-            }
+            if args.mode == "predicted":
+                if 'synonyms' not in data:
+                    # warnings.warn(f"Did not find any synonyms for PubChem ID {pubchem_id}")
+                    continue
+
+                synonyms = [x.lower() for x in data['synonyms']]
+                synonyms += [singularize(x) for x in synonyms]
+                tail_names = [tail.name.lower(), singularize(tail.name.lower())]
+                if not bool(set(tail_names) & set(synonyms)):
+                    # warnings.warn(f"Did not find synonym {tail.name} for {mesh_id}")
+                    continue
+
+            other_db_ids = data.copy()
+            if 'synonyms' in other_db_ids:
+                del other_db_ids['synonyms']
+            other_db_ids['PubChem'] = [pubchem_id]
             row_copy["tail"] = tail._replace(other_db_ids=other_db_ids)
+
             newrows.append(deepcopy(row_copy))
 
         return newrows
@@ -191,6 +207,7 @@ def main():
 
     df_pos_updated.to_csv("/home/jasonyoun/Temp/temp.tsv", sep='\t')
     df_pos_updated = read_dataframe("/home/jasonyoun/Temp/temp.tsv")
+    print('Finished saving. You are good now.')
 
     # add predictions
     fa_kg = KnowledgeGraph(kg_dir=args.input_kg_dir, nb_workers=args.nb_workers)

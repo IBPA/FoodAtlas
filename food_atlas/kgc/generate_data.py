@@ -1,25 +1,33 @@
 import argparse
+from itertools import product
 import os
 from pathlib import Path
 import shutil
 import sys
 
-sys.path.append('..')
+sys.path.append('../data_processing/')
 
 import pandas as pd  # noqa: E402
+from tqdm import tqdm  # noqa: E402
 
 from common_utils.knowledge_graph import KnowledgeGraph  # noqa: E402
+from common_utils.utils import load_pkl  # noqa: E402
+from common_utils.chemical_db_ids import (
+    _get_name_from_json, _get_summary_description_from_json,
+    read_mesh_data, get_mesh_name_using_mesh_id
+)  # noqa: E402
+from merge_ncbi_taxonomy import read_dmp_files  # noqa: E402
 
-THRESHOLD = 0.5
-KG_FILENAME = "kg.txt"
-EVIDENCE_FILENAME = "evidence.txt"
 ENTITIES_FILENAME = "entities.txt"
 RELATIONS_FILENAME = "relations.txt"
 TRAIN_FILENAME = "train.txt"
 VAL_FILENAME = "val.txt"
 TEST_FILENAME = "test.txt"
-
-COLUMNS_TO_KEEP = ["head", "relation", "tail"]
+HYPOTHESES_FILENAME = "hypotheses.txt"
+CID_JSON_LOOKUP_PKL_FILEPATH = "../../data/FoodAtlas/cid_json_lookup.pkl"
+NCBI_NAME_CLASS_TO_USE = ["genbank common name", "scientific name", "common name"]
+NCBI_NAMES_FILEPATH = "../../data/NCBI_Taxonomy/names.dmp"
+PARTS_FILEPATH = "../../data/FoodAtlas/food_parts.txt"
 
 
 def parse_argument() -> argparse.Namespace:
@@ -39,6 +47,20 @@ def parse_argument() -> argparse.Namespace:
         help="Output directory to save train/val/test set.",
     )
 
+    parser.add_argument(
+        "--data_split",
+        type=str,
+        default='70:15:15',
+        help='train:val:test split expressed in ratio (Default: 70:15:15)',
+    )
+
+    parser.add_argument(
+        "--random_state",
+        type=int,
+        default=530,
+        help='Random state (Default: 530)',
+    )
+
     args = parser.parse_args()
     return args
 
@@ -46,46 +68,173 @@ def parse_argument() -> argparse.Namespace:
 def main():
     args = parse_argument()
 
-    fa_kg = KnowledgeGraph(
-        kg_filepath=os.path.join(args.input_kg_dir, KG_FILENAME),
-        evidence_filepath=os.path.join(args.input_kg_dir, EVIDENCE_FILENAME),
-        entities_filepath=os.path.join(args.input_kg_dir, ENTITIES_FILENAME),
-        relations_filepath=os.path.join(args.input_kg_dir, RELATIONS_FILENAME),
-    )
+    fa_kg = KnowledgeGraph(kg_dir=args.input_kg_dir)
 
     df_relations = fa_kg.get_all_relations()
     contains_foodatlas_id = df_relations[
         df_relations["name"] == "contains"]["foodatlas_id"].tolist()[0]
 
-    # extract train/va/test from evidence
-    df_evidence = pd.read_csv(
-        os.path.join(args.input_kg_dir, EVIDENCE_FILENAME),
-        sep='\t',
-        keep_default_na=False,
-    )
+    df_organism = fa_kg.get_entities_by_type(
+        exact_type='organism', startswith_type='organism:')
+    df_organism_with_part = fa_kg.get_entities_by_type(
+        exact_type='organism_with_part', startswith_type='organism_with_part:')
+    df_chemical = fa_kg.get_entities_by_type(
+        exact_type='chemical')
 
-    df_train = df_evidence[df_evidence["source"].apply(
-        lambda x: x not in ["annotation:val", "annotation:test"])]
-    df_val = df_evidence[df_evidence["source"] == "annotation:val"]
-    df_test = df_evidence[df_evidence["source"] == "annotation:test"]
+    organism_foodatlas_ids = list(set(df_organism['foodatlas_id'].tolist()))
+    organism_with_part_foodatlas_ids = list(set(df_organism_with_part['foodatlas_id'].tolist()))
+    chemical_foodatlas_ids = list(set(df_chemical['foodatlas_id'].tolist()))
 
-    df_val = df_val[df_val["relation"] == contains_foodatlas_id]
-    df_test = df_test[df_test["relation"] == contains_foodatlas_id]
+    #
+    df_kg = fa_kg.get_kg()
+    print(f'KG size: {df_kg.shape[0]}')
 
-    df_train = df_train[COLUMNS_TO_KEEP]
-    df_val = df_val[COLUMNS_TO_KEEP]
-    df_test = df_test[COLUMNS_TO_KEEP]
+    df_contains = df_kg[df_kg['relation'] == contains_foodatlas_id]
+    print(f'Size of contains triples: {df_contains.shape[0]}')
+
+    df_organism_contains = df_contains[
+        df_contains['head'].apply(lambda x: x in organism_foodatlas_ids)]
+    print(f'Size of organism contains triples: {df_organism_contains.shape[0]}')
+
+    df_organism_with_part_contains = df_contains[
+        df_contains['head'].apply(lambda x: x in organism_with_part_foodatlas_ids)]
+    print(f'Size of organism_with_part contains triples: {df_organism_with_part_contains.shape[0]}')
+
+    df_others = df_kg[df_kg['relation'] != contains_foodatlas_id]
+    print(f'Size of non-contains triples: {df_others.shape[0]}')
+
+    # shuffle
+    df_organism_contains = df_organism_contains.sample(
+        frac=1, random_state=args.random_state)
+    df_organism_with_part_contains = df_organism_with_part_contains.sample(
+        frac=1, random_state=args.random_state)
+    df_others = df_others.sample(
+        frac=1, random_state=args.random_state)
+
+    #
+    num_train = int(df_organism_contains.shape[0] * int(args.data_split.split(':')[0]) / 100)
+    num_val = int(df_organism_contains.shape[0] * int(args.data_split.split(':')[1]) / 100)
+    df_organism_contains_train = df_organism_contains[:num_train]
+    df_organism_contains_val = df_organism_contains[num_train:num_train+num_val]
+    df_organism_contains_test = df_organism_contains[num_train+num_val:]
+
+    # exclude these NCBI taxonomies since they're in the val set
+    organism_val_test_entities = \
+        df_organism_contains_val['head'].tolist() + df_organism_contains_test['head'].tolist()
+    organism_val_test_entities = list(set(organism_val_test_entities))
+    ncbi_taxonomies_to_exclude = []
+    for x in organism_val_test_entities:
+        entity = fa_kg.get_entity_by_id(x)
+        ncbi_taxonomies_to_exclude.extend(entity['other_db_ids']['NCBI_taxonomy'])
+    ncbi_taxonomies_to_exclude = list(set(ncbi_taxonomies_to_exclude))
+
+    # do the exclusion
+    def _f(head):
+        entity = fa_kg.get_entity_by_id(head)
+        if entity['other_db_ids']['NCBI_taxonomy'][0] in ncbi_taxonomies_to_exclude:
+            return False
+        else:
+            return True
+
+    df_organism_with_part_contains = df_organism_with_part_contains[
+        df_organism_with_part_contains['head'].apply(lambda x: _f(x))
+    ]
+
+    # concat
+    df_train = pd.concat([df_organism_contains_train, df_organism_with_part_contains, df_others])
+    df_val = df_organism_contains_val
+    df_test = df_organism_contains_test
+
+    print(f'Train size: {df_train.shape[0]}')
+    print(f'Val size: {df_val.shape[0]}')
+    print(f'Test size: {df_test.shape[0]}')
 
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
-    df_train.to_csv(os.path.join(args.output_dir, TRAIN_FILENAME), sep='\t', index=False)
-    df_val.to_csv(os.path.join(args.output_dir, VAL_FILENAME), sep='\t', index=False)
-    df_test.to_csv(os.path.join(args.output_dir, TEST_FILENAME), sep='\t', index=False)
+    df_train.to_csv(
+        os.path.join(args.output_dir, TRAIN_FILENAME), sep='\t', index=False, header=False)
+    df_val.to_csv(
+        os.path.join(args.output_dir, VAL_FILENAME), sep='\t', index=False, header=False)
+    df_test.to_csv(
+        os.path.join(args.output_dir, TEST_FILENAME), sep='\t', index=False, header=False)
 
     # copy other files
-    shutil.copy(
-        os.path.join(args.input_kg_dir, ENTITIES_FILENAME),
-        os.path.join(args.output_dir, ENTITIES_FILENAME)
-    )
+    df_entities = fa_kg.get_all_entities()
+    cid_json_lookup = load_pkl(CID_JSON_LOOKUP_PKL_FILEPATH)
+    mesh_data_dict = read_mesh_data()
+    df_names = read_dmp_files(NCBI_NAMES_FILEPATH, filetype="names")
+    df_names = df_names[df_names["name_class"].apply(lambda x: x in NCBI_NAME_CLASS_TO_USE)]
+    df_names = df_names.groupby("tax_id")["name_txt"].apply(set).reset_index()
+    names_lookup = dict(zip(
+        df_names['tax_id'].tolist(), df_names['name_txt'].tolist()
+    ))
+    df_food_parts = pd.read_csv(PARTS_FILEPATH, sep='\t')
+    food_parts_lookup = dict(zip(
+        df_food_parts['foodatlas_part_id'].tolist(), df_food_parts['food_part'].tolist()
+    ))
+
+    def _get_short_name(row):
+        other_db_ids = row['other_db_ids']
+        if row['type'] == 'chemical':
+            if 'PubChem' in other_db_ids:
+                json = cid_json_lookup[other_db_ids['PubChem'][0]]
+                return _get_name_from_json(json)
+            elif 'MESH' in other_db_ids:
+                mesh_id = other_db_ids['MESH'][0]
+                return get_mesh_name_using_mesh_id(mesh_id, mesh_data_dict)
+            else:
+                raise ValueError()
+        elif row['type'] == 'organism_with_part' or row['type'].startswith('organism_with_part:'):
+            foodatlas_part_id = other_db_ids['foodatlas_part_id']
+            part_name = food_parts_lookup[foodatlas_part_id]
+            ncbi_taxonomy = other_db_ids['NCBI_taxonomy'][0]
+            if ncbi_taxonomy in names_lookup:
+                names = names_lookup[ncbi_taxonomy]
+                names = [f'{x} {part_name}' for x in names]
+                return ' '.join(names)
+            else:
+                return ' '.join(row['name'].split(' - '))
+        elif row['type'] == 'organism' or row['type'].startswith('organism:'):
+            ncbi_taxonomy = other_db_ids['NCBI_taxonomy'][0]
+            if ncbi_taxonomy in names_lookup:
+                names = names_lookup[ncbi_taxonomy]
+                return ' '.join(names)
+            else:
+                return row['name']
+        else:
+            raise ValueError()
+
+    def _get_long_name(row):
+        other_db_ids = row['other_db_ids']
+        if row['type'] == 'chemical':
+            if 'PubChem' in other_db_ids:
+                json = cid_json_lookup[other_db_ids['PubChem'][0]]
+                descriptions = _get_summary_description_from_json(json)
+                if descriptions:
+                    return row['short_name'] + ' ' + descriptions[0]
+                else:
+                    return row['short_name']
+            elif 'MESH' in other_db_ids:
+                return row['short_name']
+            else:
+                raise ValueError()
+        elif row['type'] == 'organism_with_part' or row['type'].startswith('organism_with_part:'):
+            return row['short_name']
+        elif row['type'] == 'organism' or row['type'].startswith('organism:'):
+            return row['short_name']
+        else:
+            raise ValueError()
+
+    df_entities['short_name'] = df_entities.apply(lambda row: _get_short_name(row), axis=1)
+    df_entities['long_name'] = df_entities.apply(lambda row: _get_long_name(row), axis=1)
+    df_entities.to_csv(os.path.join(args.output_dir, ENTITIES_FILENAME), sep='\t', index=False)
+
+    short_names = df_entities['short_name'].tolist()
+    if len(short_names) != len(set(short_names)):
+        raise RuntimeError('Duplicates in short names!')
+
+    long_names = df_entities['long_name'].tolist()
+    if len(long_names) != len(set(long_names)):
+        raise RuntimeError('Duplicates in long names!')
 
     shutil.copy(
         os.path.join(args.input_kg_dir, RELATIONS_FILENAME),
@@ -93,6 +242,41 @@ def main():
     )
 
     # generate hypotheses
+    # chemicals
+    df_chemicals = fa_kg.get_entities_by_type(exact_type='chemical')
+    print(f"Number of chemical entities: {df_chemicals.shape[0]}")
+
+    df_kg_contains = fa_kg.get_kg_using_relation_name("contains")
+    df_chemicals_not_mesh = df_chemicals[df_chemicals["foodatlas_id"].apply(
+        lambda x: x in set(df_kg_contains["tail"].tolist()))]
+    print(f"Number of chemicals used for non-MeSH ontology: {df_chemicals_not_mesh.shape[0]}")
+
+    # foods
+    df_foods = fa_kg.get_entities_by_type(exact_type='organism', startswith_type='organism:')
+    print(f"Number of food entities: {df_foods.shape[0]}")
+
+    df_foods_not_taxonomy = df_foods[df_foods["foodatlas_id"].apply(
+        lambda x: x in set(df_kg_contains["head"].tolist()))]
+    print(f"Number of foods used for non-NCBI taxonomy: {df_foods_not_taxonomy.shape[0]}")
+
+    # pairs
+    all_foods = list(set(df_foods_not_taxonomy['foodatlas_id'].tolist()))
+    all_chemicals = list(set(df_chemicals_not_mesh['foodatlas_id'].tolist()))
+    organism_chemical_pairs = list(product(all_foods, all_chemicals))
+    print(f'Size of organism-chemical pairs: {len(organism_chemical_pairs)}')
+
+    all_known_triples = df_kg.apply(
+        lambda row: f"({row['head']}, {row['relation']}, {row['tail']})", axis=1).tolist()
+
+    data = []
+    for head, tail in tqdm(organism_chemical_pairs):
+        triple = f"({head}, {contains_foodatlas_id}, {tail})"
+        if triple not in all_known_triples:
+            data.append([head, contains_foodatlas_id, tail])
+
+    df_hypotheses = pd.DataFrame(data, columns=['head', 'relation', 'tail'])
+    print(f'Hypotheses size: {df_hypotheses.shape[0]}')
+    df_hypotheses.to_csv(os.path.join(args.output_dir, HYPOTHESES_FILENAME), sep='\t', index=False)
 
 
 if __name__ == '__main__':

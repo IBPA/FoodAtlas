@@ -1,1 +1,7 @@
-litsense_query
+# Ignore everything in this directory
+*
+# Except these file
+!.gitignore
+*.py
+*.txt
+*.tsv

@@ -12,8 +12,8 @@ from pandarallel import pandarallel  # noqa: E402
 
 from common_utils.knowledge_graph import KnowledgeGraph,  CandidateEntity, CandidateRelation  # noqa: E402
 from common_utils.utils import save_pkl, load_pkl  # noqa: E402
-from common_utils.chemical_db_ids import get_other_db_ids_using_cids  # noqa: E402
-from common_utils.chemical_db_ids import get_other_db_ids_using_cas_ids  # noqa: E402
+from common_utils.chemical_db_ids import get_pubchem_id_data_dict_using  # noqa: E402
+from common_utils.chemical_db_ids import get_cas_cid_lookup_using_cas_ids  # noqa: E402
 
 COMPATIBLE_FOOD_DBS = {"ncbi_taxid": "NCBI_taxonomy"}
 COMPATIBLE_CHEMICAL_DBS = {"pubchem": "PubChem", "cas": "CAS"}
@@ -73,7 +73,6 @@ def merge_other_db_ids(dict1, dict2):
 
     for k, v in dict2.items():
         if type(v) is not list:
-            print(v)
             raise RuntimeError()
 
         if k in merged:
@@ -81,7 +80,7 @@ def merge_other_db_ids(dict1, dict2):
         else:
             merged[k] = v
 
-    return {k: list(set(v)) for k, v in merged.items()}
+    return {k: sorted(list(set(v))) for k, v in merged.items()}
 
 
 def main():
@@ -165,32 +164,25 @@ def main():
 
     # add other DB ids
     other_db_ids_dict = {k: list(set(v)) for k, v in other_db_ids_dict.items()}
+    pubchem_id_other_db_ids_dict = {}
     for db_name, db_ids in other_db_ids_dict.items():
         if db_name == "PubChem":
-            pubchem_id_other_db_ids_dict = get_other_db_ids_using_cids(
-                db_ids, new_pkl=args.new_pkl, num_proc=4)
+            new_pubchem_id_other_db_ids_dict = get_pubchem_id_data_dict_using(
+                db_ids, what_data=['CAS', 'MESH'], using_type='PubChem')
         elif db_name == "CAS":
-            cas_id_other_db_ids_dict = get_other_db_ids_using_cas_ids(
-                db_ids, new_pkl=args.new_pkl, num_proc=4)
+            cas_cid_lookup = get_cas_cid_lookup_using_cas_ids(db_ids)
 
             pubchem_ids = []
-            for _, other_db_ids in cas_id_other_db_ids_dict.items():
-                pubchem_ids.extend(other_db_ids["PubChem"])
+            for _, val in cas_cid_lookup.items():
+                pubchem_ids.extend(val)
             pubchem_ids = list(set(pubchem_ids))
-            pubchem_id_other_db_ids_dict = get_other_db_ids_using_cids(
-                pubchem_ids, new_pkl=args.new_pkl, num_proc=4)
+            new_pubchem_id_other_db_ids_dict = get_pubchem_id_data_dict_using(
+                pubchem_ids, what_data=['CAS', 'MESH'], using_type='PubChem')
         else:
             raise ValueError()
 
-    def _check_new_other_db_ids(original_other_db_ids, new_other_db_ids):
-        num_intersection = 0
-        for db_name, db_id in original_other_db_ids.items():
-            new_db_id = new_other_db_ids[db_name]
-            db_id_intersection = set.intersection(set(db_id), set(new_db_id))
-            if len(db_id_intersection) == 1:
-                num_intersection += 1
-
-        assert num_intersection >= 1
+        pubchem_id_other_db_ids_dict = {
+            **pubchem_id_other_db_ids_dict, **new_pubchem_id_other_db_ids_dict}
 
     def _clean_other_db_ids(other_db_ids):
         return {
@@ -211,34 +203,23 @@ def main():
         if len(head_incompatible_dbs) != 0:
             raise NotImplementedError()
 
-        other_db_ids = {}
+        pubchem_ids = []
         if "PubChem" in tail.other_db_ids:
             assert len(tail.other_db_ids["PubChem"]) == 1
             pubchem_id = tail.other_db_ids["PubChem"][0]
             if pubchem_id in pubchem_id_other_db_ids_dict:
-                other_db_ids = pubchem_id_other_db_ids_dict[pubchem_id]
+                pubchem_ids.append(pubchem_id)
 
-        if len(other_db_ids) == 0 and "CAS" in tail.other_db_ids:
+        if len(pubchem_ids) == 0 and "CAS" in tail.other_db_ids:
             assert len(tail.other_db_ids["CAS"]) == 1
             cas_id = tail.other_db_ids["CAS"][0]
-            if cas_id in cas_id_other_db_ids_dict:
-                other_db_ids = cas_id_other_db_ids_dict[cas_id]
+            if cas_id in cas_cid_lookup:
+                pubchem_ids.extend(cas_cid_lookup[cas_id])
 
-        if len(other_db_ids) == 0:
-            raise RuntimeError()
-
-        # check if other_db_ids have PubChem that is not zero
-        if "PubChem" not in other_db_ids or len(other_db_ids["PubChem"]) == 0:
-            raise RuntimeError()
-
-        if len(other_db_ids["PubChem"]) > 1:
-            for pubchem_id in other_db_ids["PubChem"]:
-                other_db_ids = pubchem_id_other_db_ids_dict[pubchem_id]
-                _check_new_other_db_ids(tail.other_db_ids, other_db_ids)
-                row["tail"] = tail._replace(other_db_ids=_clean_other_db_ids(other_db_ids))
-                newrows.append(deepcopy(row))
-        else:
-            _check_new_other_db_ids(tail.other_db_ids, other_db_ids)
+        for pubchem_id in pubchem_ids:
+            other_db_ids = pubchem_id_other_db_ids_dict[pubchem_id]
+            other_db_ids['PubChem'] = [pubchem_id]
+            other_db_ids = merge_other_db_ids(tail.other_db_ids, other_db_ids)
             row["tail"] = tail._replace(other_db_ids=_clean_other_db_ids(other_db_ids))
             newrows.append(deepcopy(row))
 

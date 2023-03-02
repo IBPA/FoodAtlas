@@ -11,8 +11,8 @@ from common_utils.utils import read_dataframe
 from common_utils.knowledge_graph import KnowledgeGraph
 from common_utils.knowledge_graph import CandidateEntity, CandidateRelation
 from common_utils.chemical_db_ids import read_mesh_data, get_mesh_name_using_mesh_id
-from common_utils.chemical_db_ids import read_pubchem_cid_mesh, get_other_db_ids_using_cids
-from common_utils.chemical_db_ids import get_pubchem_id_other_db_ids_using_mesh
+from common_utils.chemical_db_ids import read_pubchem_cid_mesh
+from common_utils.chemical_db_ids import get_pubchem_id_data_dict_using
 
 MESH_DATA_DIR = "../../data/MESH"
 DESC_FILEPATH = "../../data/MESH/desc2022.xml"
@@ -73,7 +73,7 @@ def main():
     mesh_ids = list(set(mesh_ids))
     print(f"Number of unique MESH ids: {len(mesh_ids)}")
 
-    mesh_data_dict = read_mesh_data(args.use_pkl)
+    mesh_data_dict = read_mesh_data()
     desc_mesh_id_tree_number_lookup = mesh_data_dict["desc_mesh_id_tree_number_lookup"]
     desc_mesh_id_name_lookup = mesh_data_dict["desc_mesh_id_name_lookup"]
     desc_tree_number_mesh_id_lookup = mesh_data_dict["desc_tree_number_mesh_id_lookup"]
@@ -115,9 +115,9 @@ def main():
 
     mesh_ids = list(set([y for x in head_tail_pairs for y in x]))
     print(f"Found {len(mesh_ids)} unique MeSH IDs")
-    print(f"Generating pubchem_id_other_db_ids_dict...")
-    pubchem_id_other_db_ids_dict = get_pubchem_id_other_db_ids_using_mesh(
-        mesh_ids, args.new_pkl)
+    print(f"Generating pubchem_id_data_dict...")
+    pubchem_id_data_dict = get_pubchem_id_data_dict_using(
+        mesh_ids, ['CAS', 'MESH', 'synonyms'], 'MESH')
 
     # generate and add triple
     relation = CandidateRelation(
@@ -131,16 +131,18 @@ def main():
         other_db_ids_list = []
         mesh_name = get_mesh_name_using_mesh_id(mesh_id, mesh_data_dict)
         if mesh_name is None:
-            other_db_ids_list.append({"MESH": [mesh_id], "PubChem": [], "CAS": []})
+            other_db_ids_list.append({"MESH": [mesh_id]})
         else:
             df_cid_mesh_match = df_cid_mesh[
                 df_cid_mesh["mesh_name"].apply(lambda x: x == mesh_name)]
             pubchem_ids = list(set(df_cid_mesh_match["pubchem_id"].tolist()))
             if len(pubchem_ids) != 0:
                 for pubchem_id in pubchem_ids:
-                    other_db_ids_list.append(pubchem_id_other_db_ids_dict[pubchem_id])
+                    other_db_ids = pubchem_id_data_dict[pubchem_id]
+                    other_db_ids['PubChem'] = [pubchem_id]
+                    other_db_ids_list.append(other_db_ids)
             else:
-                other_db_ids_list.append({"MESH": [mesh_id], "PubChem": [], "CAS": []})
+                other_db_ids_list.append({"MESH": [mesh_id]})
 
         return other_db_ids_list
 
@@ -190,7 +192,7 @@ def main():
 
     fa_kg.add_triples(df_candidate_triples)
 
-    # enter MeSH tree number and overwrite name
+    # enter MeSH tree number
     df_chemicals = fa_kg.get_entities_by_type(exact_type="chemical")
     print(f"Number of chemicals in KG: {df_chemicals.shape[0]}")
 

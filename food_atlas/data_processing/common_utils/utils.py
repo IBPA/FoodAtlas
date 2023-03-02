@@ -2,10 +2,25 @@ import os
 import sys
 import pickle
 
+import inflect
 import pandas as pd
 
 sys.path.append('./')
 from .knowledge_graph import CandidateEntity, CandidateRelation  # noqa: E402
+
+
+def singularize(input_str: str):
+    p = inflect.engine()
+
+    output_str = []
+    for x in input_str.split():
+        x_singular = p.singular_noun(x)
+        if x_singular is False:
+            output_str.append(x)
+        else:
+            output_str.append(x_singular)
+
+    return ' '.join(output_str)
 
 
 def read_dataframe(filepath) -> pd.DataFrame:
