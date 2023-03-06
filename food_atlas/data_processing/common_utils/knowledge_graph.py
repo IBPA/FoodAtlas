@@ -297,17 +297,17 @@ class KnowledgeGraph():
                 "relation": relation_foodatlas_id,
                 "tail": tail_foodatlas_id,
                 "triple": f"({head_foodatlas_id},{relation_foodatlas_id},{tail_foodatlas_id})",
-                "pmid": row["pmid"] if "pmid" in row.index else None,
-                "pmcid": row["pmcid"] if "pmcid" in row.index else None,
-                "title": row["title"] if "title" in row.index else None,
-                "section": row["section"] if "section" in row.index else None,
-                "premise": row["premise"] if "premise" in row.index else None,
+                "pmid": row["pmid"] if "pmid" in row.index else '',
+                "pmcid": row["pmcid"] if "pmcid" in row.index else '',
+                "title": row["title"] if "title" in row.index else '',
+                "section": row["section"] if "section" in row.index else '',
+                "premise": row["premise"] if "premise" in row.index else '',
                 "hypothesis":
-                    row["hypothesis_string"] if "hypothesis_string" in row.index else None,
+                    row["hypothesis_string"] if "hypothesis_string" in row.index else '',
                 "source": row["source"],
                 "quality": row["quality"],
-                "prob_mean": row["prob_mean"] if "prob_mean" in row.index else None,
-                "prob_std": row["prob_std"] if "prob_std" in row.index else None,
+                "prob_mean": row["prob_mean"] if "prob_mean" in row.index else '',
+                "prob_std": row["prob_std"] if "prob_std" in row.index else '',
             })
             evidence.append(e)
 
@@ -325,6 +325,7 @@ class KnowledgeGraph():
 
         print("Updating the evidence...")
         self.df_evidence = pd.concat([self.df_evidence, pd.DataFrame(evidence)])
+        self.df_evidence = self.df_evidence.astype('str')
         print("Dropping duplicates in the evidence...")
         self.df_evidence.drop_duplicates(inplace=True, ignore_index=True)
 
@@ -458,7 +459,7 @@ class KnowledgeGraph():
                     else:
                         assert type(v) == str
                         foodatlas_part_ids.append(v)
-            other_db_ids = {k: list(set(v)) for k, v in other_db_ids.items()}
+            other_db_ids = {k: sorted(set(v)) for k, v in other_db_ids.items()}
             if len(foodatlas_part_ids) != 0:
                 foodatlas_part_ids = list(set(foodatlas_part_ids))
                 assert len(foodatlas_part_ids) == 1

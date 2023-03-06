@@ -5,6 +5,7 @@ import requests
 import os
 import sys
 from time import time
+from typing import List
 from urllib.request import urlopen
 import urllib3
 import warnings
@@ -30,18 +31,13 @@ RELATIONS_FILENAME = "relations.txt"
 PUBCHEM_CID_MESH_FILEPATH = "../../data/PubChem/CID-MeSH.txt"
 CAS_ID_CID_QUERY_URL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/{}/cids/JSON"
 CID_QUERY_URL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/{}/JSON"
-PUBCHEM_OTHER_DB_IDS_FILEPATH = "../../data/FoodAtlas/pubchem_other_db_ids.pkl"
 PUBCHEM_NAMES_FILEPATH = "../../data/FoodAtlas/pubchem_names.pkl"
-CAS_OTHER_DB_IDS_FILEPATH = "../../data/FoodAtlas/cas_other_db_ids.pkl"
-CAS_NAMES_FILEPATH = "../../data/FoodAtlas/cas_names.pkl"
+CAS_CID_LOOKUP_PKL_FILEPATH = "../../data/FoodAtlas/cas_cid_lookup.pkl"
+CID_JSON_LOOKUP_PKL_FILEPATH = "../../data/FoodAtlas/cid_json_lookup.pkl"
+NCBI_MESH_URL_MESH_ID_LOOKUP_PKL_FILEPATH = "../../data/FoodAtlas/ncbi_mesh_url_mesh_id_lookup.pkl"
 
 
-def query_using_cid(cid: str):
-    cas_id = []
-    inchi = []
-    inchikey = []
-    canonical_smiles = []
-
+def _get_cid_json_lookup_using_cid(cid: str):
     url = CID_QUERY_URL.format(cid)
     response = requests.get(url)
     retry_count = 0
@@ -50,41 +46,190 @@ def query_using_cid(cid: str):
         retry_count += 1
         if retry_count == 10:
             raise RuntimeError(f"Error requesting data from {url}: {response.status_code}")
-    response_json = response.json()
-    record_section = response_json["Record"]["Section"]
-    references = response_json["Record"]["Reference"]
 
-    def _get_sections(input_list, tocheading):
-        sections = [x for x in input_list if x["TOCHeading"] == tocheading]
-        if len(sections) == 1:
-            return sections[0]["Section"]
-        elif len(sections) == 0:
-            return None
-        else:
-            raise RuntimeError()
+    return {cid: response.json()}
 
-    def _get_values(input_list, tocheading):
-        sections = [x for x in input_list if x["TOCHeading"] == tocheading]
-        if len(sections) == 1:
-            values = [
-                x["Value"]["StringWithMarkup"][0]["String"]
-                for x in sections[0]["Information"]
-            ]
-            return list(set(values))
-        elif len(sections) == 0:
-            return []
-        else:
-            raise RuntimeError()
 
-    def _get_reference_numbers(input_list):
-        sections = [x for x in input_list if x["TOCHeading"] == "MeSH Entry Terms"]
-        if len(sections) == 1:
-            rn = [x["ReferenceNumber"] for x in sections[0]["Information"]]
-            return list(set(rn))
-        elif len(sections) == 0:
-            return []
-        else:
-            raise RuntimeError()
+def get_cid_json_lookup_using_cids(cids: List[str], num_proc=4):
+    assert len(cids) == len(set(cids))
+    with Pool(processes=num_proc) as pool:
+        r = list(tqdm(pool.imap(_get_cid_json_lookup_using_cid, cids), total=len(cids)))
+    return {k: v for x in r for k, v in x.items()}
+
+
+def get_ncbi_mesh_url_mesh_id_lookup_using_ncbi_mesh_url(ncbi_mesh_url: str):
+    mesh_id = []
+    try:
+        soup = BeautifulSoup(urlopen(ncbi_mesh_url), features="html.parser")
+    except Exception as e:
+        print(f"Failed {ncbi_mesh_url}")
+        return {}
+    for paragraph in soup.find_all('p'):
+        if paragraph.text.startswith("MeSH Unique ID: "):
+            mesh_id.append(paragraph.text.split(": ")[1])
+
+    if len(mesh_id) != 1:
+        print(mesh_id)
+        raise RuntimeError()
+    return {ncbi_mesh_url: mesh_id[0]}
+
+
+def get_ncbi_mesh_url_mesh_id_lookup_using_ncbi_mesh_urls(ncbi_mesh_urls: List[str], num_proc=3):
+    assert len(ncbi_mesh_urls) == len(set(ncbi_mesh_urls))
+    with Pool(processes=num_proc) as pool:
+        r = list(tqdm(
+            pool.imap(get_ncbi_mesh_url_mesh_id_lookup_using_ncbi_mesh_url, ncbi_mesh_urls),
+            total=len(ncbi_mesh_urls)
+        ))
+    return {k: v for x in r for k, v in x.items()}
+
+
+def get_pubchem_id_data_dict_using(
+        using=List[str],
+        what_data=List[str],
+        using_type=str,
+):
+    if using_type.lower() == 'mesh':
+        mesh_ids = using
+        mesh_data_dict = read_mesh_data()
+        mesh_names = []
+        for x in mesh_ids:
+            mesh_name = get_mesh_name_using_mesh_id(x, mesh_data_dict)
+            if mesh_name:
+                mesh_names.append(mesh_name)
+        mesh_names = list(set(mesh_names))
+        print(f"Found {len(mesh_names)} MeSH names from {len(mesh_ids)} MeSH IDs")
+
+        df_cid_mesh = read_pubchem_cid_mesh()
+        df_cid_mesh_match = df_cid_mesh[df_cid_mesh["mesh_name"].apply(lambda x: x in mesh_names)]
+        pubchem_ids = list(set(df_cid_mesh_match["pubchem_id"].tolist()))
+        print(f"Found {len(pubchem_ids)} PubChem IDs using {len(mesh_names)} MeSH names")
+    elif using_type.lower() == 'pubchem':
+        pubchem_ids = using
+        print(f"Passed {len(pubchem_ids)} PubChem IDs")
+    else:
+        raise ValueError()
+
+    if Path(CID_JSON_LOOKUP_PKL_FILEPATH).is_file():
+        print(f"Loading pickled CID-JSON lookup file: {CID_JSON_LOOKUP_PKL_FILEPATH}")
+        cid_json_lookup = load_pkl(CID_JSON_LOOKUP_PKL_FILEPATH)
+    else:
+        print(f"Initializing new CID-JSON lookup file: {CID_JSON_LOOKUP_PKL_FILEPATH}")
+        cid_json_lookup = {}
+
+    unpickled_pubchem_ids = [x for x in pubchem_ids if x not in cid_json_lookup]
+    print(f"Length of previously unpickled PubChem IDs: {len(unpickled_pubchem_ids)}")
+    if unpickled_pubchem_ids:
+        new_cid_json_lookup = get_cid_json_lookup_using_cids(unpickled_pubchem_ids)
+        cid_json_lookup = {**cid_json_lookup, **new_cid_json_lookup}
+        save_pkl(cid_json_lookup, CID_JSON_LOOKUP_PKL_FILEPATH)
+
+    # MeSH from NCBI URLs
+    ncbi_mesh_urls = []
+    for pubchem_id in pubchem_ids:
+        ncbi_mesh_urls.extend(_get_ncbi_mesh_urls_from_json(cid_json_lookup[pubchem_id]))
+    ncbi_mesh_urls = list(set(ncbi_mesh_urls))
+    print(f"Found {len(ncbi_mesh_urls)} NCBI MeSH URLs")
+
+    if Path(NCBI_MESH_URL_MESH_ID_LOOKUP_PKL_FILEPATH).is_file():
+        print(f"Loading pickled NCBI MeSH URL - MeSH ID lookup file: "
+              f"{NCBI_MESH_URL_MESH_ID_LOOKUP_PKL_FILEPATH}")
+        ncbi_mesh_url_mesh_id_lookup = load_pkl(NCBI_MESH_URL_MESH_ID_LOOKUP_PKL_FILEPATH)
+    else:
+        print(f"Initializing new NCBI MeSH URL - MeSH ID lookup file: "
+              f"{NCBI_MESH_URL_MESH_ID_LOOKUP_PKL_FILEPATH}")
+        ncbi_mesh_url_mesh_id_lookup = {}
+
+    unpickled_ncbi_mesh_urls = [x for x in ncbi_mesh_urls if x not in ncbi_mesh_url_mesh_id_lookup]
+    print(f"Length of previously unpickled NCBI MeSH URLs: {len(unpickled_ncbi_mesh_urls)}")
+    if unpickled_ncbi_mesh_urls:
+        new_ncbi_mesh_url_mesh_id_lookup = get_ncbi_mesh_url_mesh_id_lookup_using_ncbi_mesh_urls(
+            unpickled_ncbi_mesh_urls)
+        ncbi_mesh_url_mesh_id_lookup = {
+            **ncbi_mesh_url_mesh_id_lookup,
+            **new_ncbi_mesh_url_mesh_id_lookup
+        }
+        save_pkl(ncbi_mesh_url_mesh_id_lookup, NCBI_MESH_URL_MESH_ID_LOOKUP_PKL_FILEPATH)
+
+    pubchem_id_other_db_ids_dict = {}
+    for pubchem_id in pubchem_ids:
+        json = cid_json_lookup[pubchem_id]
+        data = {}
+        for d in what_data:
+            if d == 'CAS':
+                cas_ids = _get_cas_ids_from_json(json)
+                if cas_ids:
+                    data[d] = cas_ids
+            elif d == 'MESH':
+                ncbi_mesh_urls = _get_ncbi_mesh_urls_from_json(json)
+                if ncbi_mesh_urls:
+                    mesh_ids = [ncbi_mesh_url_mesh_id_lookup[x] for x in ncbi_mesh_urls]
+                    data[d] = mesh_ids
+            elif d == 'synonyms':
+                synonyms = _get_synonyms_from_json(json)
+                if synonyms:
+                    data[d] = synonyms
+            else:
+                raise ValueError()
+        pubchem_id_other_db_ids_dict[pubchem_id] = data.copy()
+
+    return pubchem_id_other_db_ids_dict
+
+
+def _get_sections(input_list, tocheading):
+    sections = [x for x in input_list if x["TOCHeading"] == tocheading]
+    if len(sections) == 1:
+        return sections[0]["Section"]
+    elif len(sections) == 0:
+        return None
+    else:
+        raise RuntimeError()
+
+
+def _get_values(input_list, tocheading):
+    sections = [x for x in input_list if x["TOCHeading"] == tocheading]
+    if len(sections) == 1:
+        return [
+            x["Value"]["StringWithMarkup"][0]["String"]
+            for x in sections[0]["Information"]
+        ]
+    elif len(sections) == 0:
+        return []
+    else:
+        raise RuntimeError()
+
+
+def _get_reference_numbers(input_list):
+    sections = [x for x in input_list if x["TOCHeading"] == "MeSH Entry Terms"]
+    if len(sections) == 1:
+        rn = [x["ReferenceNumber"] for x in sections[0]["Information"]]
+        return list(set(rn))
+    elif len(sections) == 0:
+        return []
+    else:
+        raise RuntimeError()
+
+
+def _get_name_from_json(json):
+    return json["Record"]["RecordTitle"]
+
+
+def _get_cas_ids_from_json(json):
+    record_section = json["Record"]["Section"]
+
+    names_and_identifiers = _get_sections(record_section, "Names and Identifiers")
+    if names_and_identifiers is None:
+        raise RuntimeError()
+
+    other_identifiers = _get_sections(names_and_identifiers, "Other Identifiers")
+    if other_identifiers is not None:
+        return list(set(_get_values(other_identifiers, "CAS")))
+    else:
+        return []
+
+
+def _get_inchi_from_json(json):
+    record_section = json["Record"]["Section"]
 
     names_and_identifiers = _get_sections(record_section, "Names and Identifiers")
     if names_and_identifiers is None:
@@ -93,119 +238,99 @@ def query_using_cid(cid: str):
     computed_descriptors = _get_sections(names_and_identifiers, "Computed Descriptors")
     if computed_descriptors is None:
         raise RuntimeError()
-    inchi = _get_values(computed_descriptors, "InChI")
-    inchikey = _get_values(computed_descriptors, "InChIKey")
-    canonical_smiles = _get_values(computed_descriptors, "Canonical SMILES")
 
-    other_identifiers = _get_sections(names_and_identifiers, "Other Identifiers")
-    if other_identifiers is not None:
-        cas_id = _get_values(other_identifiers, "CAS")
+    return list(set(_get_values(computed_descriptors, "InChI")))
 
-    # mesh
+
+def _get_inchikey_from_json(json):
+    record_section = json["Record"]["Section"]
+
+    names_and_identifiers = _get_sections(record_section, "Names and Identifiers")
+    if names_and_identifiers is None:
+        raise RuntimeError()
+
+    computed_descriptors = _get_sections(names_and_identifiers, "Computed Descriptors")
+    if computed_descriptors is None:
+        raise RuntimeError()
+
+    return list(set(_get_values(computed_descriptors, "InChIKey")))
+
+
+def _get_canonical_smiles_from_json(json):
+    record_section = json["Record"]["Section"]
+
+    names_and_identifiers = _get_sections(record_section, "Names and Identifiers")
+    if names_and_identifiers is None:
+        raise RuntimeError()
+
+    computed_descriptors = _get_sections(names_and_identifiers, "Computed Descriptors")
+    if computed_descriptors is None:
+        raise RuntimeError()
+
+    return list(set(_get_values(computed_descriptors, "Canonical SMILES")))
+
+
+def _get_ncbi_mesh_urls_from_json(json):
+    record_section = json["Record"]["Section"]
+    references = json["Record"]["Reference"]
+
+    names_and_identifiers = _get_sections(record_section, "Names and Identifiers")
+    if names_and_identifiers is None:
+        raise RuntimeError()
+
     synonyms = _get_sections(names_and_identifiers, "Synonyms")
     reference_numbers = []
     if synonyms is not None:
         reference_numbers = _get_reference_numbers(synonyms)
 
-    ncbi_urls = []
+    ncbi_mesh_urls = []
     if len(reference_numbers) > 0:
         for x in references:
             if x["SourceName"] == "Medical Subject Headings (MeSH)" and \
                x["ReferenceNumber"] in reference_numbers:
-                ncbi_urls.append(x["URL"])
+                ncbi_mesh_urls.append(x["URL"])
 
-    mesh_id = []
-    for ncbi_url in ncbi_urls:
-        try:
-            soup = BeautifulSoup(urlopen(ncbi_url), features="html.parser")
-        except Exception as e:
-            print(f"Failed for {cid}: {ncbi_url}")
-            continue
-        for paragraph in soup.find_all('p'):
-            if paragraph.text.startswith("MeSH Unique ID: "):
-                mesh_id.append(paragraph.text.split(": ")[1])
-    mesh_id = list(set(mesh_id))
-
-    return {
-        "name": response_json["Record"]["RecordTitle"],
-        "CAS": cas_id,
-        "inchi": inchi,
-        "inchikey": inchikey,
-        "canonical_smiles": canonical_smiles,
-        "mesh_id": mesh_id,
-    }
+    return ncbi_mesh_urls
 
 
-def make_mesh_request(mesh_id, df_cid_mesh, supp_mesh_id_name_lookup, desc_mesh_id_name_lookup):
-    # 1. get mesh name using MeSH DB
-    if mesh_id.startswith('C'):
-        if mesh_id not in supp_mesh_id_name_lookup:
-            return (mesh_id, None)
-        mesh_name = supp_mesh_id_name_lookup[mesh_id]
-    elif mesh_id.startswith('D'):
-        if mesh_id not in desc_mesh_id_name_lookup:
-            return (mesh_id, None)
-        mesh_name = desc_mesh_id_name_lookup[mesh_id]
-    else:
-        raise ValueError
+def _get_synonyms_from_json(json):
+    record_section = json["Record"]["Section"]
 
-    # 2. Use CID-MeSH to find all PubChem IDs
-    pubchem_ids = df_cid_mesh[df_cid_mesh["mesh_name"] == mesh_name]
-    pubchem_ids = list(set(pubchem_ids["pubchem_id"].tolist()))
+    names_and_identifiers = _get_sections(record_section, "Names and Identifiers")
+    if names_and_identifiers is None:
+        raise RuntimeError()
 
-    if len(pubchem_ids) == 0:
-        return (mesh_id, None)
+    synonyms = _get_sections(names_and_identifiers, "Synonyms")
+    if synonyms is None:
+        return []
 
-    cas_id_from_pubchem = []
-    inchi_from_pubchem = []
-    inchikey_from_pubchem = []
-    canonical_smiles_from_pubchem = []
-    mesh_id_from_pubchem = []
-    # 3. For each PubChem ID use API to get MeSH Entry Terms
-    # 4. Use the mesh URL link and get MeSH Unique ID
-    for pubchem_id in pubchem_ids:
-        result = query_using_cid(pubchem_id)
-        if result is None:
-            continue
+    def _get_synonyms(tocheading):
+        sections = [x for x in synonyms if x["TOCHeading"] == tocheading]
+        if len(sections) == 1:
+            values = [
+                x["Value"]["StringWithMarkup"]
+                for x in sections[0]["Information"]
+            ]
+            values = [x["String"] for x in values[0]]
+            return list(set(values))
+        elif len(sections) == 0:
+            return []
+        else:
+            raise RuntimeError()
 
-        cas_id_from_pubchem.extend(result["CAS"])
-        inchi_from_pubchem.extend(result["inchi"])
-        inchikey_from_pubchem.extend(result["inchikey"])
-        canonical_smiles_from_pubchem.extend(result["canonical_smiles"])
-        mesh_id_from_pubchem.extend(result["mesh_id"])
-
-    # 5. Match that MeSH Unique ID with original MeSH ID
-    # 6. If match, add all the PubChemIDs
-    if mesh_id not in mesh_id_from_pubchem:
-        return (mesh_id, None)
-
-    result = {
-        "MESH": list(set(mesh_id_from_pubchem)),
-        "PubChem": list(set(pubchem_ids)),
-        "CAS": list(set(cas_id_from_pubchem)),
-        "InChI": list(set(inchi_from_pubchem)),
-        "InChIKey": list(set(inchikey_from_pubchem)),
-        "canonical_SMILES": list(set(canonical_smiles_from_pubchem)),
-    }
-
-    return (mesh_id, result)
+    mesh_entry_terms = _get_synonyms("MeSH Entry Terms")
+    depositor_supplied_synonyms = _get_synonyms("Depositor-Supplied Synonyms")
+    return list(set(mesh_entry_terms + depositor_supplied_synonyms))
 
 
-def make_pubchem_request(pubchem_id):
-    result = query_using_cid(pubchem_id)
-    if result is None:
-        return (pubchem_id, None)
+def _get_summary_description_from_json(json):
+    record_section = json["Record"]["Section"]
 
-    result = {
-        "MESH": list(set(result["mesh_id"])),
-        "PubChem": [pubchem_id],
-        "CAS": list(set(result["CAS"])),
-        "InChI": list(set(result["inchi"])),
-        "InChIKey": list(set(result["inchikey"])),
-        "canonical_SMILES": list(set(result["canonical_smiles"])),
-    }
+    names_and_identifiers = _get_sections(record_section, "Names and Identifiers")
+    if names_and_identifiers is None:
+        raise RuntimeError()
 
-    return (pubchem_id, result)
+    return _get_values(names_and_identifiers, "Record Description")
 
 
 def make_pubchem_name_request(pubchem_id):
@@ -216,46 +341,55 @@ def make_pubchem_name_request(pubchem_id):
     return (pubchem_id, result["name"])
 
 
-def make_cas_id_request(cas_id):
-    cas_id_from_pubchem = []
-    inchi_from_pubchem = []
-    inchikey_from_pubchem = []
-    canonical_smiles_from_pubchem = []
-    mesh_id_from_pubchem = []
-
+def _get_cas_cid_lookup_using_cas_id(cas_id: str):
     url = CAS_ID_CID_QUERY_URL.format(cas_id)
     response = requests.get(url)
-    if response.status_code != 200:
-        warnings.warn(f"Error requesting data from {url}: {response.status_code}")
-        return (cas_id, None)
+    if response.status_code == 503:
+        retry_count = 0
+        while response.status_code == 503:
+            response = requests.get(url)
+            retry_count += 1
+            if retry_count == 10:
+                raise RuntimeError(f"Error requesting data from {url}: {response.status_code}")
 
-    response_json = response.json()
-    pubchem_ids = [str(x) for x in response_json["IdentifierList"]["CID"]]
+    if response.status_code == 404:
+        return {cas_id: []}
+    elif response.status_code == 200:
+        response_json = response.json()
+        pubchem_ids = list(set([str(x) for x in response_json["IdentifierList"]["CID"]]))
+        return {cas_id: sorted(pubchem_ids)}
+    else:
+        raise RuntimeError()
 
-    for pubchem_id in pubchem_ids:
-        result = query_using_cid(pubchem_id)
-        if result is None:
-            continue
 
-        cas_id_from_pubchem.extend(result["CAS"])
-        inchi_from_pubchem.extend(result["inchi"])
-        inchikey_from_pubchem.extend(result["inchikey"])
-        canonical_smiles_from_pubchem.extend(result["canonical_smiles"])
-        mesh_id_from_pubchem.extend(result["mesh_id"])
+def get_cas_cid_lookup_using_cas_ids(cas_ids: List[str], num_proc=4):
+    assert len(cas_ids) == len(set(cas_ids))
 
-    if cas_id not in cas_id_from_pubchem:
-        return (cas_id, None)
+    if Path(CAS_CID_LOOKUP_PKL_FILEPATH).is_file():
+        print(f"Loading cas_cid_lookup pickled file: {CAS_CID_LOOKUP_PKL_FILEPATH}")
+        cas_cid_lookup = load_pkl(CAS_CID_LOOKUP_PKL_FILEPATH)
+    else:
+        print(f"Initializing new cas_cid_lookup: {CAS_CID_LOOKUP_PKL_FILEPATH}")
+        cas_cid_lookup = {}
 
-    result = {
-        "MESH": list(set(mesh_id_from_pubchem)),
-        "PubChem": list(set(pubchem_ids)),
-        "CAS": list(set(cas_id_from_pubchem)),
-        "InChI": list(set(inchi_from_pubchem)),
-        "InChIKey": list(set(inchikey_from_pubchem)),
-        "canonical_SMILES": list(set(canonical_smiles_from_pubchem)),
-    }
+    print("Getting CAS-CID lookup using CAS IDs...")
 
-    return (cas_id, result)
+    unpickled_cas_ids = [x for x in cas_ids if x not in cas_cid_lookup]
+    print(f"Length of previously unpickled CAS IDs: {len(unpickled_cas_ids)}")
+    if unpickled_cas_ids:
+        with Pool(processes=num_proc) as pool:
+            r = list(tqdm(
+                pool.imap(_get_cas_cid_lookup_using_cas_id, cas_ids), total=len(cas_ids)
+            ))
+        new_cas_cid_lookup = {k: v for x in r for k, v in x.items()}
+        cas_cid_lookup = {**cas_cid_lookup, **new_cas_cid_lookup}
+        save_pkl(cas_cid_lookup, CAS_CID_LOOKUP_PKL_FILEPATH)
+
+    result = {}
+    for cas_id in cas_ids:
+        result[cas_id] = cas_cid_lookup[cas_id]
+
+    return result
 
 
 def make_cas_id_name_request(cas_id):
@@ -283,38 +417,6 @@ def make_cas_id_name_request(cas_id):
         return (cas_id, None)
 
     return (cas_id, list(set(names)))
-
-
-def get_other_db_ids_using_cids(
-        cids,
-        new_pkl,
-        pubchem_other_db_ids_filepath=PUBCHEM_OTHER_DB_IDS_FILEPATH,
-        num_proc=None,
-):
-    if Path(pubchem_other_db_ids_filepath).is_file() and new_pkl is False:
-        print(f"Loading pubchem_other_db_ids pickled file: {pubchem_other_db_ids_filepath}")
-        pubchem_other_db_ids = load_pkl(pubchem_other_db_ids_filepath)
-    else:
-        print(f"Initializing new pubchem_other_db_ids: {pubchem_other_db_ids_filepath}")
-        pubchem_other_db_ids = {}
-
-    print("Getting other DB IDs using PubChem IDs...")
-
-    original_shape = len(cids)
-    cids = [x for x in cids if x not in pubchem_other_db_ids.keys()]
-    print(f"{len(cids)}/{original_shape} are not in pickled file")
-
-    with Pool(processes=cpu_count() if num_proc is None else num_proc) as pool:
-        r = list(tqdm(pool.imap(make_pubchem_request, cids), total=len(cids)))
-    other_db_ids = {x[0]: x[1] for x in r if x[1] is not None}
-
-    for k, v in other_db_ids.items():
-        if k not in pubchem_other_db_ids:
-            pubchem_other_db_ids[k] = v
-
-    save_pkl(pubchem_other_db_ids, pubchem_other_db_ids_filepath)
-
-    return pubchem_other_db_ids
 
 
 def get_pubchem_name_using_cids(
@@ -349,90 +451,6 @@ def get_pubchem_name_using_cids(
     return pubchem_names
 
 
-def get_other_db_ids_using_cas_ids(
-        cas_ids,
-        new_pkl,
-        cas_other_db_ids_filepath=CAS_OTHER_DB_IDS_FILEPATH,
-        num_proc=None,
-):
-    if Path(cas_other_db_ids_filepath).is_file() and new_pkl is False:
-        print(f"Loading cas_other_db_ids pickled file: {cas_other_db_ids_filepath}")
-        cas_other_db_ids = load_pkl(cas_other_db_ids_filepath)
-    else:
-        print(f"Initializing new cas_other_db_ids: {cas_other_db_ids_filepath}")
-        cas_other_db_ids = {}
-
-    print("Getting other DB IDs using CAS IDs...")
-
-    original_shape = len(cas_ids)
-    cas_ids = [x for x in cas_ids if x not in cas_other_db_ids.keys()]
-    print(f"{len(cas_ids)}/{original_shape} are not in pickled file")
-
-    with Pool(processes=cpu_count() if num_proc is None else num_proc) as pool:
-        r = list(tqdm(pool.imap(make_cas_id_request, cas_ids), total=len(cas_ids)))
-    other_db_ids = {x[0]: x[1] for x in r if x[1] is not None}
-
-    for k, v in other_db_ids.items():
-        if k not in cas_other_db_ids:
-            cas_other_db_ids[k] = v
-
-    save_pkl(cas_other_db_ids, cas_other_db_ids_filepath)
-
-    return cas_other_db_ids
-
-
-def get_pubchem_name_using_cas_ids(
-        cas_ids,
-        new_pkl,
-        cas_names_filepath=CAS_NAMES_FILEPATH,
-        num_proc=None,
-):
-    if Path(cas_names_filepath).is_file() and new_pkl is False:
-        print(f"Loading cas_names pickled file: {cas_names_filepath}")
-        cas_names = load_pkl(cas_names_filepath)
-    else:
-        print(f"Initializing new cas_names: {cas_names_filepath}")
-        cas_names = {}
-
-    print("Getting PubChem names using CAS IDs...")
-
-    original_shape = len(cas_ids)
-    cas_ids = [x for x in cas_ids if x not in cas_names.keys()]
-    print(f"{len(cas_ids)}/{original_shape} are not in pickled file")
-
-    with Pool(processes=cpu_count() if num_proc is None else num_proc) as pool:
-        r = list(tqdm(pool.imap(make_cas_id_name_request, cas_ids), total=len(cas_ids)))
-    other_db_ids = {x[0]: x[1] for x in r if x[1] is not None}
-
-    for k, v in other_db_ids.items():
-        if k not in cas_names:
-            cas_names[k] = v
-
-    save_pkl(cas_names, cas_names_filepath)
-
-    return cas_names
-
-
-def update_using_mesh(
-        mesh_ids,
-        df_cid_mesh,
-        desc_mesh_id_name_lookup,
-        supp_mesh_id_name_lookup,
-):
-    other_db_ids = {}
-    with Pool(processes=cpu_count()) as pool:
-        r = list(tqdm(pool.imap(partial(
-                make_mesh_request, df_cid_mesh=df_cid_mesh,
-                supp_mesh_id_name_lookup=supp_mesh_id_name_lookup,
-                desc_mesh_id_name_lookup=desc_mesh_id_name_lookup
-                ), mesh_ids),
-            total=len(mesh_ids))
-        )
-    other_db_ids = {x[0]: x[1] for x in r if x[1] is not None}
-
-    return other_db_ids
-
-
 def read_pubchem_cid_mesh():
     with open(PUBCHEM_CID_MESH_FILEPATH) as _f:
         cid_mesh = [line.rstrip() for line in _f]
@@ -443,7 +461,7 @@ def read_pubchem_cid_mesh():
     return df_cid_mesh
 
 
-def read_mesh_data(use_pkl):
+def read_mesh_data():
     # parse descriptors
     desc_mesh_id_tree_number_lookup_filepath = os.path.join(
         MESH_DATA_DIR, 'desc_mesh_id_tree_number_lookup.pkl')
@@ -454,7 +472,11 @@ def read_mesh_data(use_pkl):
     desc_tree_number_name_lookup_filepath = os.path.join(
         MESH_DATA_DIR, 'desc_tree_number_name_lookup.pkl')
 
-    if use_pkl:
+    if Path(desc_mesh_id_tree_number_lookup_filepath).is_file() and \
+       Path(desc_mesh_id_name_lookup_filepath).is_file() and \
+       Path(desc_tree_number_mesh_id_lookup_filepath).is_file() and \
+       Path(desc_tree_number_name_lookup_filepath).is_file():
+        print("Found all pickle files for descriptor mesh data.")
         desc_mesh_id_tree_number_lookup = load_pkl(desc_mesh_id_tree_number_lookup_filepath)
         desc_mesh_id_name_lookup = load_pkl(desc_mesh_id_name_lookup_filepath)
         desc_tree_number_mesh_id_lookup = load_pkl(desc_tree_number_mesh_id_lookup_filepath)
@@ -507,7 +529,10 @@ def read_mesh_data(use_pkl):
     supp_mesh_id_name_lookup_filepath = os.path.join(
         MESH_DATA_DIR, 'supp_mesh_id_name_lookup.pkl')
 
-    if use_pkl:
+    if Path(supp_mesh_id_element_lookup_filepath).is_file() and \
+       Path(supp_mesh_id_heading_mesh_id_lookup_filepath).is_file() and \
+       Path(supp_mesh_id_name_lookup_filepath).is_file():
+        print("Found all pickle files for supplementary mesh data.")
         supp_mesh_id_element_lookup = load_pkl(supp_mesh_id_element_lookup_filepath)
         supp_mesh_id_heading_mesh_id_lookup = load_pkl(supp_mesh_id_heading_mesh_id_lookup_filepath)
         supp_mesh_id_name_lookup = load_pkl(supp_mesh_id_name_lookup_filepath)
@@ -572,31 +597,3 @@ def get_mesh_name_using_mesh_id(mesh_id, mesh_data_dict):
         raise ValueError
 
     return mesh_name
-
-
-def get_cid_using_mesh_id(mesh_id, df_cid_mesh, mesh_data_dict):
-    mesh_name = get_mesh_name_using_mesh_id(mesh_id, mesh_data_dict)
-    if mesh_name is None:
-        return []
-
-    df_cid_mesh_match = df_cid_mesh[df_cid_mesh["mesh_name"] == mesh_name]
-    return df_cid_mesh_match["pubchem_id"].tolist()
-
-
-def get_pubchem_id_other_db_ids_using_mesh(mesh_ids, new_pkl):
-    mesh_data_dict = read_mesh_data(use_pkl=True)
-    mesh_names = []
-    for x in mesh_ids:
-        mesh_name = get_mesh_name_using_mesh_id(x, mesh_data_dict)
-        if mesh_name:
-            mesh_names.append(mesh_name)
-    mesh_names = list(set(mesh_names))
-    print(f"Found {len(mesh_names)} MeSH names")
-
-    df_cid_mesh = read_pubchem_cid_mesh()
-    df_cid_mesh_match = df_cid_mesh[df_cid_mesh["mesh_name"].apply(lambda x: x in mesh_names)]
-    pubchem_ids = list(set(df_cid_mesh_match["pubchem_id"].tolist()))
-    pubchem_id_other_db_ids_dict = get_other_db_ids_using_cids(
-        pubchem_ids, new_pkl=new_pkl, num_proc=4)
-
-    return pubchem_id_other_db_ids_dict

@@ -2,6 +2,5 @@
 *
 # Except these file
 !.gitignore
-*.py
-*.txt
-*.tsv
+README.md
+download_and_process_data.sh

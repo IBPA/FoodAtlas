@@ -20,14 +20,14 @@ def parse_argument() -> argparse.Namespace:
         "--input_kg_dir",
         type=str,
         required=True,
-        help="KG directory to merge the MESH to.",
+        help="Input KG directory.",
     )
 
     parser.add_argument(
         "--output_kg_dir",
         type=str,
         required=True,
-        help="KG directory to merge the MESH to.",
+        help="Output KG directory.",
     )
 
     parser.add_argument(

@@ -109,9 +109,13 @@ def main():
             return ""
 
         if x.startswith("D"):
+            if x not in desc_mesh_id_tree_number_lookup_filepath:
+                return ""
             x_tree_numbers = desc_mesh_id_tree_number_lookup_filepath[x]
         elif x.startswith("C"):
             x_tree_numbers = []
+            if x not in supp_mesh_id_heading_mesh_id_lookup:
+                return ""
             heading_mesh_ids = supp_mesh_id_heading_mesh_id_lookup[x]
             for heading_mesh_id in heading_mesh_ids:
                 x_tree_numbers.extend(desc_mesh_id_tree_number_lookup_filepath[heading_mesh_id])
