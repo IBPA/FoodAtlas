@@ -8,7 +8,7 @@ This section provides detailed explanation how entailment models are trained and
 - the grid search result
 - the best model weights
 - the evaluation statistics for the best model
-- and the predictions for all unlabelled data using the best model
+- and the predictions for all unlabeled data using the best model
 
 The production models are also going to be dumped in this folder, which is an ensembled model of 100 language models.
 
@@ -58,11 +58,11 @@ Other parameters:
 - To modify SLURM parameters, go to `FoodAtlas/scripts/_al_*_job.sh` files.
 - To modify the number of active learning runs to reduce disk space usage, go to `FoodAtlas/scripts/_run_round_job.sh` file.
 
-### 2c. Production model ensembling
+### 2c. Production model ensemble
 
-Output Directory File Structire:
+Output Directory File Structure:
 
-```console
+```
 prod
 ├── ensemble
 │   ├── 0
