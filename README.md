@@ -107,6 +107,8 @@ This project is licensed under the Apache-2.0 License. Please see the <code>[LIC
 
 ## Acknowledgements
 * Alexis Allot from National Center for Biotechnology Information (NCBI) for runninng LitSense queries internally.
+* Kyle McKillop and Kai Blumberg from U.S. Department of Agriculture Agricultural Research Service (USDA ARS) for providing the FoodData Central (FDC) data internally.
+* Anders Poulsen from Technical University of Denmark (DTU) for providing the Frida data internally.
 * Navneet Rai and Adil Muhammad from the Tagkopoulos lab for annotating the PH pairs.
 
 ## Funding
