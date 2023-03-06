@@ -119,3 +119,9 @@ Finally, we will ensemble the 100 production models to get predictions for all u
 The `predicted.tsv` of the 100 production models will be dumped in the corresponding folders in `prod/ensemble`.
 
 
+## Step 3. Generate the Knowledge Graph (KG).
+Run the script as below to generate the KG. The script was ran on a PC with 12 cores and 64 GB of RAM. Depending on your computer, you may want to adjust the `--nb_workers` argument to fit your needs. Please refer to the script for detailed steps.
+
+```
+./kg.sh
+```
