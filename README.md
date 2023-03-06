@@ -6,7 +6,7 @@
 ## Overview
 
 ### Introduction
-We present a semi-automated framework for extracting food-chemical relationships from scientific literature using deep learning-based language models, and in turn, constructing a quality-controlled FoodAtlas knowledge graph regarding food composition (Figure 1). We tested 4 different active learning strategies and found that selecting samples that maximize the likelihood leads to discovering new knowledge 38.2% faster than the random sampling baseline. The entailment models achieved an average of 0.82 precision, 0,84 recall, and 0.83 F1 score in extracting the food-chemical relations from the premise in the final round of active learning, with the predicted probabilities being highly correlated to the ground-truth annotations (R2 = 0.94). The FoodAtlas KG with 329,022 triples integrates knowledge from the entailment model pipeline, multiple external databases, as well as taxonomical and ontological relationships of foods and chemicals, respectively.
+We present a semi-automated framework for extracting food-chemical relationships from scientific literature using deep learning-based language models, and in turn, constructing a quality-controlled FoodAtlas knowledge graph regarding food composition (Figure 1). We tested 4 different active learning strategies and found that selecting samples that maximize the likelihood leads to discovering new knowledge 38.2% faster than the random sampling baseline. The entailment models achieved an average of 0.82 precision, 0,84 recall, and 0.83 F1 score in extracting the food-chemical relations from the premise in the final round of active learning, with the predicted probabilities being highly correlated to the ground-truth annotations ($R^2$ = 0.94). The FoodAtlas KG with 329,022 triples integrates knowledge from the entailment model pipeline, multiple external databases, as well as taxonomical and ontological relationships of foods and chemicals, respectively.
 
 We are actively working on developing the [*FoodAtlas website*](https://www.foodatlas.ai/) where you can access all of our data (coming soon in April, 2023; pending review). Please check back later for updates.
 
@@ -107,6 +107,8 @@ This project is licensed under the Apache-2.0 License. Please see the <code>[LIC
 
 ## Acknowledgements
 * Alexis Allot from National Center for Biotechnology Information (NCBI) for runninng LitSense queries internally.
+* Kyle McKillop and Kai Blumberg from U.S. Department of Agriculture Agricultural Research Service (USDA ARS) for providing the FoodData Central (FDC) data internally.
+* Anders Poulsen from Technical University of Denmark (DTU) for providing the Frida data internally.
 * Navneet Rai and Adil Muhammad from the Tagkopoulos lab for annotating the PH pairs.
 
 ## Funding
