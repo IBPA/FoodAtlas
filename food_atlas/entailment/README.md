@@ -12,7 +12,7 @@ This section provides detailed explanation how entailment models are trained and
 
 The production models are also going to be dumped in this folder, which is an ensembled model of 100 language models.
 
-Output Directory File Structire:
+Output Directory File Structure:
 ```
 {PATH_OUTPUT_ROOT}/entailment_model
 ├── certain_pos
@@ -117,3 +117,5 @@ Finally, we will ensemble the 100 production models to get predictions for all u
 ```
 
 The `predicted.tsv` of the 100 production models will be dumped in the corresponding folders in `prod/ensemble`.
+
+
