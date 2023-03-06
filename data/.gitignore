@@ -1,0 +1,6 @@
+# Ignore everything in this directory
+*
+# Except these file
+!.gitignore
+README.md
+download_and_process_data.sh
