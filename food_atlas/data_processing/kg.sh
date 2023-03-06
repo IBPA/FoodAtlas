@@ -46,6 +46,24 @@ python generate_kg_from_ph_pairs.py \
     --nb_workers=2
 
 echo
+echo "Phenol-Explorer Predictions to KG..."
+python generate_kg_from_ph_pairs.py \
+    --input_filepath=../../outputs/data_processing/ph_pairs_20230111_224704_predicted.tsv \
+    --input_kg_dir=../../outputs/kg/annotations_predictions \
+    --output_kg_dir=../../outputs/kg/annotations_predictions \
+    --mode=predicted \
+    --nb_workers=5
+
+echo
+echo "Frida Predictions to KG..."
+python generate_kg_from_ph_pairs.py \
+    --input_filepath=../../outputs/data_processing/ph_pairs_20230112_114749_predicted.tsv \
+    --input_kg_dir=../../outputs/kg/annotations_predictions \
+    --output_kg_dir=../../outputs/kg/annotations_predictions \
+    --mode=predicted \
+    --nb_workers=5
+
+echo
 echo "Frida to KG..."
 python merge_external_dbs.py \
     --input_kg_dir=../../outputs/kg/annotations_predictions \
@@ -70,40 +88,22 @@ python merge_external_dbs.py \
     --external_db_name=FDC
 
 echo
-echo "Phenol-Explorer Predictions to KG..."
-python generate_kg_from_ph_pairs.py \
-    --input_filepath=../../outputs/data_processing/ph_pairs_20230111_224704_predicted.tsv \
-    --input_kg_dir=../../outputs/kg/annotations_predictions_extdb \
-    --output_kg_dir=../../outputs/kg/annotations_predictions_extdb_extdbpred \
-    --mode=predicted \
-    --nb_workers=5
-
-echo
-echo "Frida Predictions to KG..."
-python generate_kg_from_ph_pairs.py \
-    --input_filepath=../../outputs/data_processing/ph_pairs_20230112_114749_predicted.tsv \
-    --input_kg_dir=../../outputs/kg/annotations_predictions_extdb_extdbpred \
-    --output_kg_dir=../../outputs/kg/annotations_predictions_extdb_extdbpred \
-    --mode=predicted \
-    --nb_workers=5
-
-echo
 echo "MeSH to KG..."
 python merge_mesh.py \
-    --input_kg_dir=../../outputs/kg/annotations_predictions_extdb_extdbpred \
-    --output_kg_dir=../../outputs/kg/annotations_predictions_extdb_extdbpred_mesh \
+    --input_kg_dir=../../outputs/kg/annotations_predictions_extdb \
+    --output_kg_dir=../../outputs/kg/annotations_predictions_extdb_mesh \
     --use_pkl \
     --nb_workers=10
 
 echo
 echo "NCBI taxonomy to KG..."
 python merge_ncbi_taxonomy.py \
-    --input_kg_dir=../../outputs/kg/annotations_predictions_extdb_extdbpred_mesh \
-    --output_kg_dir=../../outputs/kg/annotations_predictions_extdb_extdbpred_mesh_ncbi \
+    --input_kg_dir=../../outputs/kg/annotations_predictions_extdb_mesh \
+    --output_kg_dir=../../outputs/kg/annotations_predictions_extdb_mesh_ncbi \
     --nb_workers=10
 
 echo
 echo "Final KG parsing..."
 python parse_final_kg.py \
-    --input_kg_dir=../../outputs/kg/annotations_predictions_extdb_extdbpred_mesh_ncbi \
+    --input_kg_dir=../../outputs/kg/annotations_predictions_extdb_mesh_ncbi \
     --output_dir=../../outputs/backend_data/v0.1

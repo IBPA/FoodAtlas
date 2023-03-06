@@ -8,6 +8,7 @@ from pykeen.training import SLCWATrainingLoop
 from pykeen.evaluation import ClassificationEvaluator
 from pykeen.datasets.base import PathDataset
 from pykeen.stoppers import EarlyStopper
+from pykeen.optimizers import optimizers_hpo_defaults
 
 TRAIN_DATASET_FILENAME = "train.txt"
 VAL_DATASET_FILENAME = "val.txt"
