@@ -14,6 +14,11 @@ set -e
 #SBATCH --mem=32
 #SBATCH --time=20-00:00:00
 
+# TODO: Change this to your own path with enough disk space.
+#   This is where all the training related results will be saved. Be prepared
+#   for the disk space usage to be around 2 TB.
+PATH_OUTPUT_ROOT=/data/lfz/projects/FoodAtlas/outputs
+
 cd ..
 
 echo "AL strategy: $1"
@@ -43,7 +48,7 @@ RANDOM_SEED=$((RANDOM_SEED * 10000 + RUN))
 
 echo $RANDOM_SEED
 
-PATH_OUTPUT=/data/lfz/projects/FoodAtlas/outputs/entailment_model/$AL/run_${RUN}/round_${ROUND}
+PATH_OUTPUT=$PATH_OUTPUT_ROOT/entailment_model/$AL/run_${RUN}/round_${ROUND}
 PATH_TRAIN_POOL=outputs/data_generation/train_pool.tsv
 PATH_VAL=outputs/data_generation/val.tsv
 PATH_TEST=outputs/data_generation/test.tsv
