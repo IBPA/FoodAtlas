@@ -38,7 +38,7 @@ Output Directory File Structure:
 │   └── ..
 ├── stratified
 │   └── ..
-└── prod (See 2c)
+└── prod (See 3c)
     └── ..
 ```
 
