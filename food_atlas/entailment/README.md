@@ -1,8 +1,8 @@
-## Step 2. Entailment model training
+## Step 3. Entailment model training
 
 This section provides detailed explanation how entailment models are trained and inferred.
 
-### 2a. Configure the output path
+### 3a. Configure the output path
 
 **Before running, you must make sure to specify output path with enough disk space (>= 2 TB)**. This can be done by changing `PATH_OUTPUT_ROOT` parameter in `FoodAtlas/scripts/_run_round_job.sh` file. For each active learning round (i.e., 4000 rounds = 4 AL * 100 runs/AL * 10 rounds/run), this output folder will be dumped with the following files:
 - the grid search result
@@ -42,7 +42,7 @@ Output Directory File Structure:
     └── ..
 ```
 
-### 2b. Simulate active learning
+### 3b. Simulate active learning
 
 Once the data are ready from [Step 1](../data_processing/README.md), and the output path is configured, we can use them to train/validate/test each active learning strategies.
 
@@ -58,7 +58,7 @@ Other parameters:
 - To modify SLURM parameters, go to `FoodAtlas/scripts/_al_*_job.sh` files.
 - To modify the number of active learning runs to reduce disk space usage, go to `FoodAtlas/scripts/_run_round_job.sh` file.
 
-### 2c. Production model ensemble
+### 3c. Production model ensembling
 
 Output Directory File Structure:
 
@@ -88,7 +88,7 @@ prod
 
 Once we finished the simulation, we can merge train/val/test datasets all together to train the production model.
 
-#### 2c1. Production model hyperparameter tuning
+#### Production model hyperparameter tuning
 
 First, we use 10-fold cross validation to find the best hyperparameters for the production model.
 
@@ -98,7 +98,7 @@ First, we use 10-fold cross validation to find the best hyperparameters for the 
 
 The outputs of the grid search will be dumped in `prod/grid_search` folder.
 
-#### 2c2. Production model training
+#### Production model training
 
 Then, we will use the best hyperparameters to train 100 production model with different random seeds.
 
@@ -108,7 +108,7 @@ Then, we will use the best hyperparameters to train 100 production model with di
 
 The `model_state.pt` and `result_train.pkl` of the 100 production models will be dumped in the corresponding folders in `prod/ensemble`.
 
-#### 2c3. Production model ensemble prediction
+#### Production model ensemble prediction
 
 Finally, we will ensemble the 100 production models to get predictions for all unlabeled data.
 
@@ -117,11 +117,3 @@ Finally, we will ensemble the 100 production models to get predictions for all u
 ```
 
 The `predicted.tsv` of the 100 production models will be dumped in the corresponding folders in `prod/ensemble`.
-
-
-## Step 3. Generate the Knowledge Graph (KG).
-Run the script as below to generate the KG. The script was ran on a PC with 12 cores and 64 GB of RAM. Depending on your computer, you may want to adjust the `--nb_workers` argument to fit your needs. Please refer to the script for detailed steps.
-
-```
-./kg.sh
-```
