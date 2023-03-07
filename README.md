@@ -78,7 +78,7 @@ cd data
 ```
 
 ### Step 2. Generate the PH pairs and train/val/test set
-Please follow the instructions in section 'Step 2' of the [README](./food_atlas/data_processing/README.md) file.
+Please follow the instructions in the [README](./food_atlas/data_processing/README.md) file.
 
 ### Step 3. Train the entailmnet model
 Please follow the instructions in the [README](./food_atlas/entailment/README.md) file.
