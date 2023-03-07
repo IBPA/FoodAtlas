@@ -70,16 +70,28 @@ pip install -r requirement.txt
 
 In order to reproduce the results obtained in our work, please follow the detailed steps below.
 
-### Step 1. Generate the PH pairs and train/val/test set
-Please follow the instructions in section 'Step 1' of the [README](./food_atlas/data_processing/README.md) file.
+### Step 1. Download data
+Download all input data first.
+```
+cd data
+./download_and_process_data.sh
+```
 
-### Step 2. Train the entailmnet model
+### Step 2. Generate the PH pairs and train/val/test set
+Please follow the instructions in section 'Step 2' of the [README](./food_atlas/data_processing/README.md) file.
+
+### Step 3. Train the entailmnet model
 Please follow the instructions in the [README](./food_atlas/entailment/README.md) file.
 
-### Step 3. Generate the FoodAtlas KG
-Please follow the instructions in section 'Step 3' of the [README](./food_atlas/data_processing/README.md) file.
+### Step 4. Generate the FoodAtlas KG
+Run the script as below to generate the KG. The script was ran on a PC with 12 cores and 64 GB of RAM. Depending on your computer, you may want to adjust the `--nb_workers` argument to fit your needs. Please refer to the script for detailed steps.
 
-### Step 4. Perform knowledge graph completion
+```
+cd ./food_atlas/data_processing
+./kg.sh
+```
+
+### Step 5. Perform knowledge graph completion
 Please follow the instructions in the [README](./food_atlas/kgc/README.md) file.
 
 ## Authors

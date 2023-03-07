@@ -1,8 +1,8 @@
-## Step 1. Generate PH pairs and train/val/test set
+## Step 2. Generate PH pairs and train/val/test set
 
 This section shows a step-by-step instructions on how to generate the PH pairs, perform annotation, and generate post-process the annotations to generate train/val/test set.
 
-### 1a. Generate annotation data
+### 2a. Generate annotation data
 
 We first generate the PH pairs. Make sure to replace the `--cache_dir` to some temporary directory in your local filesystem.
 ```
@@ -19,7 +19,7 @@ Output files are as follows:
 - ../../outputs/data_processing/ph_pairs_{timestamp}.txt
 ```
 
-### 1b. Generate pre-annotation data
+### 2b. Generate pre-annotation data
 
 Using the PH pairs generated above, we randomly generate sample train/val/test set, which is ready for annotation.
 ```
@@ -35,7 +35,7 @@ Output files are as follows:
 - ../../outputs/data_processing/to_predict.tsv
 ```
 
-### 1c. Annotation time!
+### 2c. Annotation time!
 
 We used [Label Studio](https://labelstud.io/) deployed on [Heroku](https://www.heroku.com/) to annnotate the PH pairs. Once finished with annotation, export the annotation files as a .tsv file with the name format specified below for each dataset.
 ```
@@ -55,7 +55,7 @@ We used [Label Studio](https://labelstud.io/) deployed on [Heroku](https://www.h
 ../../outputs/data_processing/test_post_annotation.tsv
 ```
 
-### 1d. Post process annotation
+### 2d. Post process annotation
 
 We now need to post-process the annotation to generate a clean version of train/val/test set.
 ```
@@ -71,7 +71,7 @@ Output files are as follows:
 - ../../outputs/data_processing/test.tsv
 ```
 
-### 1e. Generate data for deployment entailment model
+### 2e. Generate data for deployment entailment model
 We need to do hyperparameter optimization for the deployment (final) entailment model. Run the following Python script to generate the necessary files.
 ```
 python generate_folds.py \
@@ -81,7 +81,7 @@ python generate_folds.py \
     --output_dir=../../outputs/data_processing/folds_for_prod_model
 ```
 
-### 1f. (Optional) Generate more data
+### 2f. (Optional) Generate more data
 
 Following the above steps finished the data generation process (PH pairs and train/val/test set). In this work, we generated additional PH pairs.
 
@@ -122,17 +122,4 @@ python query_and_generate_ph_pairs.py \
     --query_filepath=../../data/FoodAtlas/litsense_query/queries_output/*.json \
     --allowed_ncbi_taxids_filepath=../../data/FoodAtlas/allowed_ncbi_taxids.tsv \
     --cache_dir=/home/jasonyoun/Temp
-```
-
-
-## Step 2. Train the entailmnet model
-
-We now need to train the entailment model using the train/val/test set generated above. Please refer to its own [README](../entailment/README.md) file. Once finished, come back and follow the remaining steps.
-
-
-## Step 3. Generate the Knowledge Graph (KG).
-Run the script as below to generate the KG. The script was ran on a PC with 12 cores and 64 GB of RAM. Depending on your computer, you may want to adjust the `--nb_workers` argument to fit your needs. Please refer to the script for detailed steps.
-
-```
-./kg.sh
 ```
