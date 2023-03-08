@@ -118,6 +118,7 @@ Citation will be updated later.
 This project is licensed under the Apache-2.0 License. Please see the <code>[LICENSE](./LICENSE)</code> file for details.
 
 ## Acknowledgements
+* Danielle Lemay from U.S. Department of Agriculture Agricultural Research Service (USDA ARS) for consultancy.
 * Alexis Allot from National Center for Biotechnology Information (NCBI) for runninng LitSense queries internally.
 * Kyle McKillop and Kai Blumberg from U.S. Department of Agriculture Agricultural Research Service (USDA ARS) for providing the FoodData Central (FDC) data internally.
 * Anders Poulsen from Technical University of Denmark (DTU) for providing the Frida data internally.
