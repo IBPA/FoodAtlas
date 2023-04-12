@@ -1,0 +1,1725 @@
+Source	Target	Label	Label_copy	Weight	Type
+Allium sativum	Sulfur	contains	contains	1	Directed
+Allium sativum	Allium sativum - tissue	hasPart	hasPart	1	Directed
+Allium sativum - tissue	2-propene-1-sulfinothioic acid S-1-propenyl ester	contains	contains	1	Directed
+Allium sativum	(2R,4S,5R,8R,10S,13R,14R,18S,20R)-10-[(2S,3R,4S,5S)-3-[(2S,3R,4S,5S,6R)-4,5-dihydroxy-6-(hydroxymethyl)-3-[(2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxyoxan-2-yl]oxy-4-[(2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-5-[(2S,3R,4S,5R)-3,4,5-trihydroxyoxan-2-yl]oxyoxan-2-yl]oxy-2-hydroxy-4,5,9,9,13,20-hexamethyl-24-oxahexacyclo[15.5.2.01,18.04,17.05,14.08,13]tetracosane-20-carbaldehyde	contains	contains	1	Directed
+Allium sativum	Saponins	contains	contains	1	Directed
+Allium sativum	Saponin	contains	contains	1	Directed
+Allium sativum	Sasanquasaponin	contains	contains	1	Directed
+Allium sativum	2-propene-1-sulfinothioic acid S-1-propenyl ester	contains	contains	1	Directed
+Allium sativum	Diallyl tetrasulfide	contains	contains	1	Directed
+Allium sativum - tissue	Sulfur	contains	contains	1	Directed
+Allium sativum	2-Amino-3-prop-2-enylsulfinylpropanoic acid	contains	contains	1	Directed
+Allium sativum	Alliin	contains	contains	1	Directed
+Allium sativum	(R)-1-PeCSO	contains	contains	1	Directed
+Allium sativum	Propiin	contains	contains	1	Directed
+Allium sativum	(2S)-2-Amino-3-prop-2-enylsulfinylpropanoic acid	contains	contains	1	Directed
+Allium sativum	(+)-L-Alliin	contains	contains	1	Directed
+Allium sativum	Isoalliin	contains	contains	1	Directed
+Allium sativum	S-(1-Propenyl)cysteine sulfoxide	contains	contains	1	Directed
+Allium sativum	Amino Acids, Sulfur	contains	contains	1	Directed
+Allium sativum	Allicin	contains	contains	1	Directed
+Allium sativum	Diallyl disulfide	contains	contains	1	Directed
+Allium sativum	Sulfoxides	contains	contains	1	Directed
+Allium sativum	n-Caffeoyltyramine	contains	contains	1	Directed
+Allium sativum - tissue	Allicin	contains	contains	1	Directed
+Allium sativum	Retinol	contains	contains	1	Directed
+Allium sativum	11-cis-Retinol	contains	contains	1	Directed
+Allium sativum	3-Mercapto-2-(prop-2-enylamino)propanoic acid	contains	contains	1	Directed
+Allium sativum	S-allyl-L-cysteine	contains	contains	1	Directed
+Allium sativum	Allyl cysteine	contains	contains	1	Directed
+Allium sativum	L-Deoxyalliin	contains	contains	1	Directed
+Allium sativum	S-Methyl-L-cysteine	contains	contains	1	Directed
+Allium sativum	Thymoquinone	contains	contains	1	Directed
+Allium sativum	Allium sativum - bulb	hasPart	hasPart	1	Directed
+Allium sativum - bulb	(2R,4S,5R,8R,10S,13R,14R,18S,20R)-10-[(2S,3R,4S,5S)-3-[(2S,3R,4S,5S,6R)-4,5-dihydroxy-6-(hydroxymethyl)-3-[(2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxyoxan-2-yl]oxy-4-[(2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-5-[(2S,3R,4S,5R)-3,4,5-trihydroxyoxan-2-yl]oxyoxan-2-yl]oxy-2-hydroxy-4,5,9,9,13,20-hexamethyl-24-oxahexacyclo[15.5.2.01,18.04,17.05,14.08,13]tetracosane-20-carbaldehyde	contains	contains	1	Directed
+Allium sativum - bulb	Saponins	contains	contains	1	Directed
+Allium sativum - bulb	Saponin	contains	contains	1	Directed
+Allium sativum - bulb	Sasanquasaponin	contains	contains	1	Directed
+Allium sativum	Diallyl trisulfide	contains	contains	1	Directed
+Allium sativum	N,N-Diallyl-tyrosyl-leucyl-glycyl-tyrosyl-leucine	contains	contains	1	Directed
+Allium sativum	Ajoene	contains	contains	1	Directed
+Allium sativum	(Z)-Ajoene	contains	contains	1	Directed
+Allium sativum	Acuagel; Adjoen	contains	contains	1	Directed
+Allium sativum - tissue	N,N-Diallyl-tyrosyl-leucyl-glycyl-tyrosyl-leucine	contains	contains	1	Directed
+Allium sativum	Moupinamide	contains	contains	1	Directed
+Allium sativum	Diallyl sulfide	contains	contains	1	Directed
+Allium sativum - bulb	Oils, Volatile	contains	contains	1	Directed
+Allium sativum	Steroids	contains	contains	1	Directed
+Allium sativum	Alkaloids	contains	contains	1	Directed
+Allium sativum	Allium sativum - leaf	hasPart	hasPart	1	Directed
+Allium sativum - leaf	Oils, Volatile	contains	contains	1	Directed
+Allium sativum	Oils, Volatile	contains	contains	1	Directed
+Allium sativum	Flavonoids	contains	contains	1	Directed
+Allium sativum	Terpenes	contains	contains	1	Directed
+Allium sativum	Nitrate	contains	contains	1	Directed
+Allium sativum	Sulfide	contains	contains	1	Directed
+Allium sativum	Thioether	contains	contains	1	Directed
+Allium sativum	Elaidamide	contains	contains	1	Directed
+Allium sativum	9-Octadecenamide	contains	contains	1	Directed
+Allium sativum	Oleamide	contains	contains	1	Directed
+Allium sativum	Selenium-80	contains	contains	1	Directed
+Allium sativum	bis(1-propenyl)thiosulfinate	contains	contains	1	Directed
+Allium sativum	Sulfhydryl Compounds	contains	contains	1	Directed
+Allium sativum	phenolic acid	contains	contains	1	Directed
+Allium sativum	S-Methyl-L-cysteine sulfoxide	contains	contains	1	Directed
+Allium sativum	S-Methylcysteine sulfoxide	contains	contains	1	Directed
+Allium sativum	S-Methylcysteine S-oxide	contains	contains	1	Directed
+Allium sativum	Methiin	contains	contains	1	Directed
+Allium sativum	3-methylsulfinyl-L-alanine	contains	contains	1	Directed
+Allium sativum	Polyphenols	contains	contains	1	Directed
+Allium sativum	Isoeruboside B	contains	contains	1	Directed
+Allium sativum - bulb	Sulfur	contains	contains	1	Directed
+Allium sativum - bulb	Allicin	contains	contains	1	Directed
+Allium sativum	s-Allylmercaptocysteine	contains	contains	1	Directed
+Allium sativum	Polyfructose	contains	contains	1	Directed
+Allium sativum	Pyridinium, 3-carboxy-1-methyl-, salt with 4-methylbenzenesulfonic acid (1:1)	contains	contains	1	Directed
+Allium sativum	Trigonelline hydrochloride	contains	contains	1	Directed
+Allium sativum	Trigonelline	contains	contains	1	Directed
+Allium sativum	Sulfuric Acids	contains	contains	1	Directed
+Allium sativum	garlicnin A	contains	contains	1	Directed
+Allium sativum	12-oxo-phytoenoic acid	contains	contains	1	Directed
+Allium sativum	n-Oleoylethanolamine	contains	contains	1	Directed
+Allium sativum	Carbohydrates	contains	contains	1	Directed
+Allium sativum - bulb	garlicnin A	contains	contains	1	Directed
+Allium sativum	D-(-)-Fructose	contains	contains	1	Directed
+Allium sativum	D-Fructose	contains	contains	1	Directed
+Allium sativum	methylallyl thiosulfinate	contains	contains	1	Directed
+Allium sativum	Melanin	contains	contains	1	Directed
+Allium sativum	Farnesene	contains	contains	1	Directed
+Allium sativum	Sesquiterpenes	contains	contains	1	Directed
+Allium sativum	Monoterpenes	contains	contains	1	Directed
+Allium sativum	Dimethyl trisulfide	contains	contains	1	Directed
+Allium sativum	Astrobain	contains	contains	1	Directed
+Allium sativum	2-Vinyl-4H-1,3-dithiine	contains	contains	1	Directed
+Allium sativum	Kaempferol	contains	contains	1	Directed
+Allium sativum	Oils	contains	contains	1	Directed
+Allium sativum	Phenols	contains	contains	1	Directed
+Allium sativum	cis-Ferulic acid	contains	contains	1	Directed
+Allium sativum	Sodium ferulate	contains	contains	1	Directed
+Allium sativum	Ferulic acid	contains	contains	1	Directed
+Allium sativum	8,8'-Diferulic acid	contains	contains	1	Directed
+Allium sativum	Gallic Acid	contains	contains	1	Directed
+Allium sativum	cis-Caffeic acid	contains	contains	1	Directed
+Allium sativum	Sodium caffeate	contains	contains	1	Directed
+Allium sativum	Caffeic Acid	contains	contains	1	Directed
+Allium sativum	Allyl Compounds	contains	contains	1	Directed
+Allium sativum	Resveratrol-3-O-sulfate	contains	contains	1	Directed
+Allium sativum	Resveratrol	contains	contains	1	Directed
+Allium sativum	(Z)-resveratrol	contains	contains	1	Directed
+Allium sativum	quercetin-3-O-rutinoside	contains	contains	1	Directed
+Allium sativum	Calcium elenoate	contains	contains	1	Directed
+Allium sativum	Calcium elenolate	contains	contains	1	Directed
+Allium sativum	Elenolic acid	contains	contains	1	Directed
+Allium sativum	Allium sativum - flower	hasPart	hasPart	1	Directed
+Allium sativum - flower	quercetin-3-O-rutinoside	contains	contains	1	Directed
+Allium sativum	Epigallocatechin	contains	contains	1	Directed
+Allium sativum	(+)-Gallocatechin	contains	contains	1	Directed
+Allium sativum	Piperine	contains	contains	1	Directed
+Allium sativum	Phospholipids	contains	contains	1	Directed
+Allium sativum	Quercetin	contains	contains	1	Directed
+Allium sativum	Myricetin	contains	contains	1	Directed
+Allium sativum	Curcumin	contains	contains	1	Directed
+Allium sativum	Coumaric Acids	contains	contains	1	Directed
+Allium sativum	(-)-Epicatechin	contains	contains	1	Directed
+Allium sativum	Cianidanol	contains	contains	1	Directed
+Allium sativum	Glutathione	contains	contains	1	Directed
+Allium sativum	Quercitrin	contains	contains	1	Directed
+Allium sativum	Oligosaccharides	contains	contains	1	Directed
+Allium sativum	Dipropyl disulfide	contains	contains	1	Directed
+Allium sativum	Nickel	contains	contains	1	Directed
+Allium sativum	Sugars	contains	contains	1	Directed
+Allium sativum	Fatty Acids	contains	contains	1	Directed
+Allium sativum	Cysteine	contains	contains	1	Directed
+Allium sativum	Zinc Cysteinate	contains	contains	1	Directed
+Allium sativum	(2R)-2-amino-3-sulfanylpropanoic acid;zinc	contains	contains	1	Directed
+Allium sativum	L-Cysteine hydrochloride	contains	contains	1	Directed
+Allium sativum	Cysteine hydrochloride	contains	contains	1	Directed
+Allium sativum - bulb	Astrobain	contains	contains	1	Directed
+Allium sativum	(-)-Epigallocatechin gallate	contains	contains	1	Directed
+Allium sativum	Nitrogen	contains	contains	1	Directed
+Allium sativum	Morin	contains	contains	1	Directed
+Allium sativum	Morin hydrate	contains	contains	1	Directed
+Allium sativum	Chlorogenic Acid	contains	contains	1	Directed
+Allium sativum	Phenylalanine	contains	contains	1	Directed
+Allium sativum	Phytosterol	contains	contains	1	Directed
+Allium sativum	Phytosterols	contains	contains	1	Directed
+Allium sativum	Capsaicin	contains	contains	1	Directed
+Allium sativum	N-[(4-Hydroxy-3-methoxyphenyl)methyl]-8-methyl-6-nonenamide	contains	contains	1	Directed
+Allium sativum	Leucine	contains	contains	1	Directed
+Allium sativum	1,2-Anthraquinone	contains	contains	1	Directed
+Allium sativum	Anthraquinone	contains	contains	1	Directed
+Allium sativum	Anthraquinone Derivative	contains	contains	1	Directed
+Allium sativum	Magnesium Ascorbate	contains	contains	1	Directed
+Allium sativum	Iron(2+) L-ascorbate	contains	contains	1	Directed
+Allium sativum	Ferrous ascorbate	contains	contains	1	Directed
+Allium sativum	Ascorbic Acid	contains	contains	1	Directed
+Allium sativum	Sodium ascorbate	contains	contains	1	Directed
+Allium sativum	Flavins	contains	contains	1	Directed
+Allium sativum	1-propenylcysteine sulfoxide	contains	contains	1	Directed
+Allium sativum	Nervonic acid	contains	contains	1	Directed
+Allium sativum	Thymol	contains	contains	1	Directed
+Allium sativum	3-Thiomorpholinecarboxylic acid, 5-methyl-, 1-oxide, (1S,3R,5S)-	contains	contains	1	Directed
+Allium sativum	Cycloalliin	contains	contains	1	Directed
+Allium sativum	Apigenin	contains	contains	1	Directed
+Allium sativum	Acyl Coenzyme A	contains	contains	1	Directed
+Allium sativum	Ginsenosides	contains	contains	1	Directed
+Allium sativum	Magnesium	contains	contains	1	Directed
+Allium sativum	Nordihydrocapsaicin	contains	contains	1	Directed
+Allium sativum	Tryptophan	contains	contains	1	Directed
+Allium sativum	Water	contains	contains	1	Directed
+Allium sativum	Trisulfane	contains	contains	1	Directed
+Allium sativum	Trisulfide(2-)	contains	contains	1	Directed
+Allium sativum	Dihydrocapsaicin	contains	contains	1	Directed
+Allium sativum	Menthol	contains	contains	1	Directed
+Allium sativum	Isomenthone	contains	contains	1	Directed
+Allium sativum	4-O-beta-D-Galactopyranosyl-D-fructose	contains	contains	1	Directed
+Allium sativum	Tal(b1-4)Hex2ulof	contains	contains	1	Directed
+Allium sativum	(2S,3R,4S,5S,6R)-2-[(2R,3R,4S,5R)-4,5-dihydroxy-2,5-bis(hydroxymethyl)oxolan-3-yl]oxy-6-(hydroxymethyl)oxane-3,4,5-triol	contains	contains	1	Directed
+Allium sativum	Lactulose	contains	contains	1	Directed
+Allium sativum	4-O-hexopyranosylhex-2-ulofuranose	contains	contains	1	Directed
+Allium sativum	Duphalac	contains	contains	1	Directed
+Allium sativum	4-O-D-Galactopyranosyl-D-fructose	contains	contains	1	Directed
+Allium sativum	Eucalyptol	contains	contains	1	Directed
+Allium sativum	Allium sativum - seed	hasPart	hasPart	1	Directed
+Allium sativum - seed	Sulfur	contains	contains	1	Directed
+Allium sativum - seed	Nervonic acid	contains	contains	1	Directed
+Allium sativum	Nitrite	contains	contains	1	Directed
+Allium sativum	D-Glucose	contains	contains	1	Directed
+Allium sativum	TAG 12	contains	contains	1	Directed
+Allium sativum	Triglyceride	contains	contains	1	Directed
+Allium sativum	Organoselenium Compounds	contains	contains	1	Directed
+Allium sativum	Allium sativum - sprout	hasPart	hasPart	1	Directed
+Allium sativum - sprout	Sulfur	contains	contains	1	Directed
+Allium sativum	N-Me-pAB-Glu-gamma-Glu-gamma-Tyr(3-NO(2))	contains	contains	1	Directed
+Allium sativum	Mercury	contains	contains	1	Directed
+Allium sativum	Metals	contains	contains	1	Directed
+Allium sativum - bulb	Metals	contains	contains	1	Directed
+Allium sativum	5-Isopropyl-2-methyl-2-cyclohexen-1-one	contains	contains	1	Directed
+Allium sativum	Carvone	contains	contains	1	Directed
+Allium sativum	s-Propyl cysteine sulfoxide	contains	contains	1	Directed
+Allium sativum	Caffeic Acids	contains	contains	1	Directed
+Allium sativum	Thiosulfate ion	contains	contains	1	Directed
+Allium sativum	Flavonols	contains	contains	1	Directed
+Allium sativum	quercetin 3-acetyl-7,3',4'-trisulfate	contains	contains	1	Directed
+Allium sativum	Acetylcysteine sodium	contains	contains	1	Directed
+Allium sativum	Acetylcysteine Zinc	contains	contains	1	Directed
+Allium sativum	Acetylcysteine	contains	contains	1	Directed
+Allium sativum	Allyl methyl sulfide	contains	contains	1	Directed
+Allium sativum	CID 907504	contains	contains	1	Directed
+Allium sativum	(1S,9S)-1-Amino-13-ethylidene-11-methyl-6-azatricyclo[7.3.1.02,7]trideca-2(7),3,10-trien-5-one	contains	contains	1	Directed
+Allium sativum	Selagine	contains	contains	1	Directed
+Allium sativum	(1R)-1-amino-13-ethylidene-11-methyl-6-azatricyclo[7.3.1.02,7]trideca-2(7),3,10-trien-5-one	contains	contains	1	Directed
+Allium sativum	CID 4369233	contains	contains	1	Directed
+Allium sativum	CID 9794806	contains	contains	1	Directed
+Allium sativum	(-)-Selagine	contains	contains	1	Directed
+Allium sativum	Huperzine A	contains	contains	1	Directed
+Allium sativum	(+/-)-Huperzine A	contains	contains	1	Directed
+Allium sativum	Rosmarinic acid	contains	contains	1	Directed
+Allium sativum	Berberine	contains	contains	1	Directed
+Allium sativum	Luteolin	contains	contains	1	Directed
+Allium sativum	Lignans	contains	contains	1	Directed
+Allium sativum	Lignan	contains	contains	1	Directed
+Allium sativum	Hydrolyzable Tannins	contains	contains	1	Directed
+Allium sativum	Sterol	contains	contains	1	Directed
+Allium sativum	9,10,11-Trihydroxy-2,2,6a,6b,9,12a-hexamethyl-1,3,4,5,6,6a,7,10,11,12,13,14b-dodecahydropicene-4a-carboxylic acid	contains	contains	1	Directed
+Allium sativum	Triterpenoid	contains	contains	1	Directed
+Allium sativum	Triterpenoids	contains	contains	1	Directed
+Allium sativum - leaf	Sulfur	contains	contains	1	Directed
+Allium sativum	Coumarin	contains	contains	1	Directed
+Allium sativum	Allyl methyl trisulfide	contains	contains	1	Directed
+Allium sativum	Benfotiamine	contains	contains	1	Directed
+Allium sativum	S-Benzoylthiamine O-monophosphate	contains	contains	1	Directed
+Allium sativum	S-(2-(N-((4-Amino-2-methylpyrimidin-5-yl)methyl)formamido)-5-(phosphonooxy)pent-2-en-3-yl) benzothioate	contains	contains	1	Directed
+Allium sativum	Allithiamine	contains	contains	1	Directed
+Allium sativum	CID 172285	contains	contains	1	Directed
+Allium sativum	N-[(4-amino-2-methylpyrimidin-5-yl)methyl]-N-[(Z)-5-hydroxy-3-(prop-2-enyldisulfanyl)pent-2-en-2-yl]formamide	contains	contains	1	Directed
+Allium sativum	2-[3-[(4-Amino-2-methylpyrimidin-5-yl)methyl]-4-methyl-1,3-thiazol-3-ium-5-yl]ethanol;hydron;dichloride	contains	contains	1	Directed
+Allium sativum	Thiamine	contains	contains	1	Directed
+Allium sativum	vitamin B1	contains	contains	1	Directed
+Allium sativum	Thiamine nitrate	contains	contains	1	Directed
+Allium sativum	2-[3-[(4-Amino-2-methylpyrimidin-5-yl)methyl]-4-methyl-1,3-thiazol-3-ium-5-yl]ethanol;hydrochloride	contains	contains	1	Directed
+Allium sativum	Diuretics	contains	contains	1	Directed
+Allium sativum - bulb	Thioether	contains	contains	1	Directed
+Allium sativum - bulb	Sulfide	contains	contains	1	Directed
+Allium sativum	Hydrogen Sulfide	contains	contains	1	Directed
+Allium sativum	Disulfane	contains	contains	1	Directed
+Allium sativum	Dipropyl sulfide	contains	contains	1	Directed
+Allium sativum	Iron, isotope of mass 56	contains	contains	1	Directed
+Allium sativum	Beta-Carotene	contains	contains	1	Directed
+Allium sativum	beta-Carotene beta,beta-Carotene Carotene Solatene trans-beta-Carotene	contains	contains	1	Directed
+Allium sativum	Calcium-40	contains	contains	1	Directed
+Allium sativum	Calcium	contains	contains	1	Directed
+Allium sativum	Fish Oils	contains	contains	1	Directed
+Allium sativum	Disulfides	contains	contains	1	Directed
+Allium sativum - tissue	Disulfides	contains	contains	1	Directed
+Allium sativum - tissue	Glutathione	contains	contains	1	Directed
+Allium sativum - bulb	Acuagel; Adjoen	contains	contains	1	Directed
+Allium sativum - bulb	(Z)-Ajoene	contains	contains	1	Directed
+Allium sativum - bulb	Ajoene	contains	contains	1	Directed
+Allium sativum	D-Galactose	contains	contains	1	Directed
+Allium sativum	(2R,3S,4S,5R)-2,3,4,5,6-pentahydroxyhexanal	contains	contains	1	Directed
+Allium sativum	Dextrose monohydrate	contains	contains	1	Directed
+Allium sativum	Mannose, D-	contains	contains	1	Directed
+Allium sativum	(2R,3S,4R,5R)-2,3,4,5,6-pentahydroxyhexanal	contains	contains	1	Directed
+Allium sativum	(2S,3R,4S,5S)-2,3,4,5,6-pentahydroxyhexanal	contains	contains	1	Directed
+Allium sativum	Monosaccharides	contains	contains	1	Directed
+Allium sativum	Polysaccharides	contains	contains	1	Directed
+Allium sativum	Oxylipins	contains	contains	1	Directed
+Allium sativum	Dipeptides	contains	contains	1	Directed
+Allium sativum	1,5-Hexadiene	contains	contains	1	Directed
+Allium sativum	3-Benzylidene-4-chromanone	contains	contains	1	Directed
+Allium sativum	Isoflavone	contains	contains	1	Directed
+Allium sativum	3-Benzylchroman-4-one	contains	contains	1	Directed
+Allium sativum	Desmethylxanthohumol	contains	contains	1	Directed
+Allium sativum	Xanthohumol	contains	contains	1	Directed
+Allium sativum	alpha-Bisabolol	contains	contains	1	Directed
+Allium sativum	Bisabolol	contains	contains	1	Directed
+Allium sativum	Levomenol	contains	contains	1	Directed
+Allium sativum	Allyl methyl disulfide	contains	contains	1	Directed
+Allium sativum	Dronabinol	contains	contains	1	Directed
+Allium sativum	Glucosinolates	contains	contains	1	Directed
+Allium sativum	Sucrose	contains	contains	1	Directed
+Allium sativum	Allylsulfenate	contains	contains	1	Directed
+Allium sativum	Sodium allylthiosulphate	contains	contains	1	Directed
+Allium sativum	Copper	contains	contains	1	Directed
+Allium sativum	Sulfenic Acids	contains	contains	1	Directed
+Allium sativum - bulb	Aspirin	contains	contains	1	Directed
+Allium sativum	Imino Acids	contains	contains	1	Directed
+Allium sativum	Flavone	contains	contains	1	Directed
+Allium sativum	gamma-Glutamylcysteine	contains	contains	1	Directed
+Allium sativum	Ethylenes	contains	contains	1	Directed
+Allium sativum	Allium sativum - shoot	hasPart	hasPart	1	Directed
+Allium sativum - shoot	Ethylenes	contains	contains	1	Directed
+Allium sativum	Flavylium	contains	contains	1	Directed
+Allium sativum	4-Hydroxybenzoic acid	contains	contains	1	Directed
+Allium sativum	Lignin	contains	contains	1	Directed
+Allium sativum	Aspirin	contains	contains	1	Directed
+Allium sativum - tissue	Sulfhydryl Compounds	contains	contains	1	Directed
+Allium sativum	Fructooligosaccharide	contains	contains	1	Directed
+Allium sativum	Tellurium	contains	contains	1	Directed
+Allium sativum	Palmatine hydroxide	contains	contains	1	Directed
+Allium sativum	Palmatine chloride	contains	contains	1	Directed
+Allium sativum	Palmatine	contains	contains	1	Directed
+Allium sativum	Palmatine iodide	contains	contains	1	Directed
+Allium sativum	Hydroxyl radical	contains	contains	1	Directed
+Allium sativum	Ammonium aurintricarboxylate	contains	contains	1	Directed
+Allium sativum	Aurintricarboxylate	contains	contains	1	Directed
+Allium sativum	Aurintricarboxylic acid triammonium salt	contains	contains	1	Directed
+Allium sativum	Aurintricarboxylic acid ammonium salt	contains	contains	1	Directed
+Allium sativum	Aurintricarboxylic acid	contains	contains	1	Directed
+Allium sativum	Aluminon	contains	contains	1	Directed
+Allium sativum	Allium sativum - root	hasPart	hasPart	1	Directed
+Allium sativum - root	Ammonium aurintricarboxylate	contains	contains	1	Directed
+Allium sativum - root	Aurintricarboxylate	contains	contains	1	Directed
+Allium sativum - root	Aurintricarboxylic acid triammonium salt	contains	contains	1	Directed
+Allium sativum - root	Aurintricarboxylic acid ammonium salt	contains	contains	1	Directed
+Allium sativum - root	Aurintricarboxylic acid	contains	contains	1	Directed
+Allium sativum - root	Aluminon	contains	contains	1	Directed
+Allium sativum	1-(4-(octahydropyrido(1,2-a)pyrazin-2-yl)phenyl)-2-phenyl-1,2,3,4-tetrahydroisoquinolin-6-ol	contains	contains	1	Directed
+Allium sativum	ganglioside GT1b-bovine serum albumin complex	contains	contains	1	Directed
+Allium sativum	Carbon	contains	contains	1	Directed
+Allium sativum	Omega-3 Fatty Acids	contains	contains	1	Directed
+Allium sativum - sprout	phenolic acid	contains	contains	1	Directed
+Allium sativum - sprout	Omega-3 Fatty Acids	contains	contains	1	Directed
+Allium sativum	Allium sativum - pericarp	hasPart	hasPart	1	Directed
+Allium sativum - pericarp	Oils, Volatile	contains	contains	1	Directed
+Allium sativum	Ashwagandhanolide	contains	contains	1	Directed
+Allium sativum - leaf	Sodium ascorbate	contains	contains	1	Directed
+Allium sativum - leaf	Ferrous ascorbate	contains	contains	1	Directed
+Allium sativum - leaf	Magnesium Ascorbate	contains	contains	1	Directed
+Allium sativum - leaf	Ascorbic Acid	contains	contains	1	Directed
+Allium sativum - leaf	Iron(2+) L-ascorbate	contains	contains	1	Directed
+Allium sativum	3-O-(quinovopyranosyl(1-6)glucopyranosyl(1-6)glucopyranosyl)chlorogenin	contains	contains	1	Directed
+Allium sativum	S-Ethylcysteine	contains	contains	1	Directed
+Allium sativum	S-Ethyl-L-cysteine	contains	contains	1	Directed
+Allium sativum - bulb	3-O-(quinovopyranosyl(1-6)glucopyranosyl(1-6)glucopyranosyl)chlorogenin	contains	contains	1	Directed
+Allium sativum - bulb	S-Ethylcysteine	contains	contains	1	Directed
+Allium sativum - bulb	S-Ethyl-L-cysteine	contains	contains	1	Directed
+Allium sativum - bulb	Cycloalliin	contains	contains	1	Directed
+Allium sativum - bulb	3-Thiomorpholinecarboxylic acid, 5-methyl-, 1-oxide, (1S,3R,5S)-	contains	contains	1	Directed
+Allium sativum	Linalool	contains	contains	1	Directed
+Allium sativum	beta-Terpinene	contains	contains	1	Directed
+Allium sativum	alpha-Terpinene	contains	contains	1	Directed
+Allium sativum	gamma-Terpinene	contains	contains	1	Directed
+Allium sativum	S-allylmercapto-N-acetylcysteine	contains	contains	1	Directed
+Allium sativum	Lead	contains	contains	1	Directed
+Allium sativum - root	Lead	contains	contains	1	Directed
+Allium sativum	(1R,5S,8S,9S,10R,12S)-5,12-dihydroxy-11-methyl-6-methylidene-16-oxo-15-oxapentacyclo[9.3.2.15,8.01,10.02,8]heptadec-13-ene-9-carboxylic acid	contains	contains	1	Directed
+Allium sativum	Gibberellins	contains	contains	1	Directed
+Allium sativum	(1R,2R,5S,8S,9S,10R,12S)-5,12-dihydroxy-11-methyl-6-methylidene-16-oxo-15-oxapentacyclo[9.3.2.15,8.01,10.02,8]heptadec-13-ene-9-carboxylic acid	contains	contains	1	Directed
+Allium sativum - root	(1R,5S,8S,9S,10R,12S)-5,12-dihydroxy-11-methyl-6-methylidene-16-oxo-15-oxapentacyclo[9.3.2.15,8.01,10.02,8]heptadec-13-ene-9-carboxylic acid	contains	contains	1	Directed
+Allium sativum - root	Gibberellins	contains	contains	1	Directed
+Allium sativum - root	(1R,2R,5S,8S,9S,10R,12S)-5,12-dihydroxy-11-methyl-6-methylidene-16-oxo-15-oxapentacyclo[9.3.2.15,8.01,10.02,8]heptadec-13-ene-9-carboxylic acid	contains	contains	1	Directed
+Allium sativum	Nerol	contains	contains	1	Directed
+Allium sativum	Geraniol	contains	contains	1	Directed
+Allium sativum	Vitamin K	contains	contains	1	Directed
+Allium sativum	Isothiocyanates	contains	contains	1	Directed
+Allium sativum	Isoquercitrin	contains	contains	1	Directed
+Allium sativum	2-(3,4-Dihydroxyphenyl)-5,7-dihydroxy-6-[3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]chromen-4-one	contains	contains	1	Directed
+Allium sativum	Luteolin-6-C-glucoside	contains	contains	1	Directed
+Allium sativum	Isoorientin	contains	contains	1	Directed
+Allium sativum	Isovitexin	contains	contains	1	Directed
+Allium sativum	Vitexin	contains	contains	1	Directed
+Allium sativum	beta-Cyclodextrins	contains	contains	1	Directed
+Allium sativum	Eugenol	contains	contains	1	Directed
+Allium sativum - leaf	beta-Cyclodextrins	contains	contains	1	Directed
+Allium sativum - leaf	Eugenol	contains	contains	1	Directed
+Allium sativum - root	Tricarboxylic Acids	contains	contains	1	Directed
+Allium sativum	Dimethyl disulfide	contains	contains	1	Directed
+Allium sativum - leaf	Diallyl trisulfide	contains	contains	1	Directed
+Allium sativum - leaf	Diallyl disulfide	contains	contains	1	Directed
+Allium sativum	Silver	contains	contains	1	Directed
+Allium sativum	Carotenoids	contains	contains	1	Directed
+Allium sativum	Fatty Acids, Essential	contains	contains	1	Directed
+Allium sativum	Ethyl linoleate	contains	contains	1	Directed
+Allium sativum	Allixin	contains	contains	1	Directed
+Allium sativum	1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl-	contains	contains	1	Directed
+Allium sativum	Nerolidol	contains	contains	1	Directed
+Allium sativum	Peruviol	contains	contains	1	Directed
+Allium sativum	(3S,6E)-Nerolidol	contains	contains	1	Directed
+Allium sativum	cis-Nerolidol	contains	contains	1	Directed
+Allium sativum	(3R,6E)-nerolidol	contains	contains	1	Directed
+Allium sativum	Adenosine	contains	contains	1	Directed
+Allium sativum	6A,6A'-dicyclohexylamine-6B,6B'-diselenide-bis-beta-cyclodextrin	contains	contains	1	Directed
+Allium sativum	Amino Acids	contains	contains	1	Directed
+Allium sativum	Ammonia	contains	contains	1	Directed
+Allium sativum	Hydrogen Cyanide	contains	contains	1	Directed
+Allium sativum	Indole-3-acetic acid	contains	contains	1	Directed
+Allium sativum	Pyruvate	contains	contains	1	Directed
+Allium sativum	Pyruvic acid	contains	contains	1	Directed
+Allium sativum	Ellagic acid	contains	contains	1	Directed
+Allium sativum	Dipotassium;(2S,3S,4S,5R,6R)-6-[(2R,3R,4S,5S,6S)-2-[[(3S,4aR,6aR,6bS,8aS,11S,12aR,14aR,14bS)-11-carboxy-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl]oxy]-6-carboxylato-4,5-dihydroxyoxan-3-yl]oxy-3,4,5-trihydroxyoxane-2-carboxylate	contains	contains	1	Directed
+Allium sativum	30-hydroxy-11,30-dioxoolean-12-en-3beta-yl 2-O-beta-D-glucopyranuronosyl-beta-D-glucopyranosiduronic acid	contains	contains	1	Directed
+Allium sativum	Glycyrrhizin	contains	contains	1	Directed
+Allium sativum	(6R)-6-[(2S)-2-[[(4aR,12aS,14aR)-11-carboxy-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl]oxy]-6-carboxy-4,5-dihydroxyoxan-3-yl]oxy-3,4,5-trihydroxyoxane-2-carboxylic acid;azane	contains	contains	1	Directed
+Allium sativum	(2S,3S,4S,5R,6R)-6-[(2S,3R,4S,5S,6S)-2-[[(3S,4aS,6aR,6bS,8aS,11R,12aR,14aR,14bS)-11-carboxy-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl]oxy]-6-carboxy-4,5-dihydroxyoxan-3-yl]oxy-3,4,5-trihydroxyoxane-2-carboxylic acid	contains	contains	1	Directed
+Allium sativum	Glycyrrhizic acid dipotassium	contains	contains	1	Directed
+Allium sativum	(3S,4S,5R,6R)-6-[(2S,3R,4S,5S,6S)-2-[[(4aR,6bS,8aS,11S,12aR,14aR,14bS)-11-carboxy-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl]oxy]-6-carboxy-4,5-dihydroxyoxan-3-yl]oxy-3,4,5-trihydroxyoxane-2-carboxylic acid;azane	contains	contains	1	Directed
+Allium sativum	Diammonium glycyrrhizinate	contains	contains	1	Directed
+Allium sativum	dipotassium;(2S,3S,4S,5R,6R)-6-[(3R,4S,5S,6S)-2-[[(3S,4aR,6aR,6bS,8aS,11S,12aR,14aR,14bS)-11-carboxy-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl]oxy]-6-carboxylato-4,5-dihydroxyoxan-3-yl]oxy-3,4,5-trihydroxyoxane-2-carboxylate	contains	contains	1	Directed
+Allium sativum	6-[2-[[(6aR,6bS,8aS,11S,14bS)-11-carboxy-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl]oxy]-6-carboxy-4,5-dihydroxyoxan-3-yl]oxy-3,4,5-trihydroxyoxane-2-carboxylic acid	contains	contains	1	Directed
+Allium sativum	Glycyrrhizic acid	contains	contains	1	Directed
+Allium sativum	dipotassium;6-[[(3S,4aR,6aR,6bS,8aS,11S,12aR,14aR,14bS)-11-carboxylato-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl]oxy]-5-(6-carboxy-3,4,5-trihydroxyoxan-2-yl)oxy-3,4-dihydroxyoxane-2-carboxylate	contains	contains	1	Directed
+Allium sativum	(2S,3S,4S,5R,6R)-6-[(2S,3R,4S,5S,6S)-2-[[(3S,4aR,6aR,6bS,8aS,11S,12aS,14aR,14bS)-11-carboxy-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl]oxy]-6-carboxy-4,5-dihydroxyoxan-3-yl]oxy-3,4,5-trihydroxyoxane-2-carboxylic acid;azane	contains	contains	1	Directed
+Allium sativum	CID 87061467	contains	contains	1	Directed
+Allium sativum	dipotassium;(2S,3S,4S,5R,6R)-6-[(2S,3R,4S,5S,6S)-2-[[(3S,4aR,6aR,6bS,8aS,11S,12aR,14aR,14bS)-11-carboxylato-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl]oxy]-6-carboxy-4,5-dihydroxyoxan-3-yl]oxy-3,4,5-trihydroxyoxane-2-carboxylate	contains	contains	1	Directed
+Allium sativum	azane;6-[6-carboxy-2-[(11-carboxy-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl)oxy]-4,5-dihydroxyoxan-3-yl]oxy-3,4,5-trihydroxyoxane-2-carboxylic acid	contains	contains	1	Directed
+Allium sativum	dipotassium;6-[2-[(11-carboxy-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl)oxy]-6-carboxylato-4,5-dihydroxyoxan-3-yl]oxy-3,4,5-trihydroxyoxane-2-carboxylate	contains	contains	1	Directed
+Allium sativum	Dipotassium glycyrrhizinate	contains	contains	1	Directed
+Allium sativum	(2S,3S,4S,5R,6R)-6-[(2S,3R,4S,5S,6S)-2-[[(4aR,6aR,6bS,8aS,11R,12aR,14aR,14bS)-11-carboxy-4,4,6a,6b,8a,11,14b-heptamethyl-14-oxo-2,3,4a,5,6,7,8,9,10,12,12a,14a-dodecahydro-1H-picen-3-yl]oxy]-6-carboxy-4,5-dihydroxyoxan-3-yl]oxy-3,4,5-trihydroxyoxane-2-carboxylic acid;azane	contains	contains	1	Directed
+Allium sativum	Phyllanthin	contains	contains	1	Directed
+Allium sativum	Allium sativum - embryo	hasPart	hasPart	1	Directed
+Allium sativum - embryo	(+)-L-Alliin	contains	contains	1	Directed
+Allium sativum - embryo	(2S)-2-Amino-3-prop-2-enylsulfinylpropanoic acid	contains	contains	1	Directed
+Allium sativum - embryo	Alliin	contains	contains	1	Directed
+Allium sativum - embryo	(R)-1-PeCSO	contains	contains	1	Directed
+Allium sativum - embryo	Isoalliin	contains	contains	1	Directed
+Allium sativum - embryo	Propiin	contains	contains	1	Directed
+Allium sativum - embryo	2-Amino-3-prop-2-enylsulfinylpropanoic acid	contains	contains	1	Directed
+Allium sativum - embryo	S-(1-Propenyl)cysteine sulfoxide	contains	contains	1	Directed
+Allium sativum	sulfurous acid allyl ester 3-allylsulfanylallyl ester	contains	contains	1	Directed
+Allium sativum	Sulfur Acids	contains	contains	1	Directed
+Allium sativum	n-propyl thiosulfate	contains	contains	1	Directed
+Allium sativum	coenzyme A thiosulfonate	contains	contains	1	Directed
+Allium sativum - bulb	bis(1-propenyl)thiosulfinate	contains	contains	1	Directed
+Allium sativum - bulb	coenzyme A thiosulfonate	contains	contains	1	Directed
+Allium sativum	Rutin	contains	contains	1	Directed
+Allium sativum	2-(3,4-Dihydroxyphenyl)-3,5,7-trihydroxy-6-[2,3,4,5-tetrahydroxy-6-(hydroxymethyl)-3-(2,3,4,5-tetrahydroxy-6-methyloxan-3-yl)oxan-2-yl]chromen-4-one	contains	contains	1	Directed
+Allium sativum	2-(3,4-dihydroxyphenyl)-3,5,7-trihydroxy-6-[(3R,4S,5S,6R)-2,3,4,5-tetrahydroxy-6-(hydroxymethyl)-3-[(3S,4R,5R,6S)-2,3,4,5-tetrahydroxy-6-methyloxan-3-yl]oxan-2-yl]chromen-4-one	contains	contains	1	Directed
+Allium sativum	Astragalin	contains	contains	1	Directed
+Allium sativum	Potassium hydrogen phthalate	contains	contains	1	Directed
+Allium sativum	1,2-Benzenedicarboxylic acid, monosodium salt	contains	contains	1	Directed
+Allium sativum	Dipotassium phthalate	contains	contains	1	Directed
+Allium sativum	Phthalic acid	contains	contains	1	Directed
+Allium sativum	Monosodium 4-sulfophthalate	contains	contains	1	Directed
+Allium sativum	Phthalic acid, sodium salt	contains	contains	1	Directed
+Allium sativum	Phthalate	contains	contains	1	Directed
+Allium sativum	Disodium phthalate	contains	contains	1	Directed
+Allium sativum	Phytochelatin	contains	contains	1	Directed
+Allium sativum - root	Cysteine hydrochloride	contains	contains	1	Directed
+Allium sativum - root	(2R)-2-amino-3-sulfanylpropanoic acid;zinc	contains	contains	1	Directed
+Allium sativum - root	Cysteine	contains	contains	1	Directed
+Allium sativum - root	Zinc Cysteinate	contains	contains	1	Directed
+Allium sativum - root	L-Cysteine hydrochloride	contains	contains	1	Directed
+Allium sativum - root	Phytochelatin	contains	contains	1	Directed
+Allium sativum	garlicnin B(1)	contains	contains	1	Directed
+Allium sativum	Copper-63	contains	contains	1	Directed
+Allium sativum - root	Copper-63	contains	contains	1	Directed
+Allium sativum - root	Copper	contains	contains	1	Directed
+Allium sativum	Aluminum	contains	contains	1	Directed
+Allium sativum - root	Aluminum	contains	contains	1	Directed
+Allium sativum	Se-methylselenocysteine	contains	contains	1	Directed
+Allium sativum	Acids, Acyclic	contains	contains	1	Directed
+Allium sativum	Selenious acid	contains	contains	1	Directed
+Allium sativum	Selenite	contains	contains	1	Directed
+Allium sativum	Tfp;skf5019	contains	contains	1	Directed
+Allium sativum	Trifluoperazine hydrochloride	contains	contains	1	Directed
+Allium sativum	Trifluoperazine	contains	contains	1	Directed
+Allium sativum	Eskazine	contains	contains	1	Directed
+Allium sativum	Allium sativum - juice	hasPart	hasPart	1	Directed
+Allium sativum - juice	Allicin	contains	contains	1	Directed
+Allium sativum	seryl-seryl-seryl-arginine	contains	contains	1	Directed
+Allium sativum	Glycyl-L-tyrosine	contains	contains	1	Directed
+Allium sativum	Amaryllidaceae Alkaloids	contains	contains	1	Directed
+Allium sativum	Gitogenin	contains	contains	1	Directed
+Allium sativum	Spirostans	contains	contains	1	Directed
+Allium sativum	Prolycopene	contains	contains	1	Directed
+Allium sativum	Lycopene	contains	contains	1	Directed
+Allium sativum	3,4-Dihydroxybenzoic acid	contains	contains	1	Directed
+Allium sativum	Morpholine (4-methoxyphenyl)(morpholino)phosphinodithioate	contains	contains	1	Directed
+Allium sativum	Allium sativum - anther	hasPart	hasPart	1	Directed
+Allium sativum - anther	Polysaccharides	contains	contains	1	Directed
+Allium sativum	CID 5748352	contains	contains	1	Directed
+Allium sativum	Chlorophylls	contains	contains	1	Directed
+Allium sativum	magnesium;methyl (3R,21S,22S)-16-ethenyl-11-ethyl-12,17,21,26-tetramethyl-4-oxo-22-[3-oxo-3-[(E)-3,7,11,15-tetramethylhexadec-2-enoxy]propyl]-23,25-diaza-7,24-diazanidahexacyclo[18.2.1.15,8.110,13.115,18.02,6]hexacosa-1,5,8(26),9,11,13(25),14,16,18,20(23)-decaene-3-carboxylate	contains	contains	1	Directed
+Allium sativum	magnesium;(3R,21S,22S)-16-ethenyl-11-ethyl-3-methoxycarbonyl-12,17,21,26-tetramethyl-22-[3-oxo-3-[(E)-3,7,11,15-tetramethylhexadec-2-enoxy]propyl]-7,23,24,25-tetrazahexacyclo[18.2.1.15,8.110,13.115,18.02,6]hexacosa-1,4,6,8(26),9,11,13(25),14,16,18(24),19-undecaen-4-olate	contains	contains	1	Directed
+Allium sativum	Bile Acid Malabsorption, Primary	contains	contains	1	Directed
+Allium sativum	Cadmium	contains	contains	1	Directed
+Allium sativum - root	Cadmium	contains	contains	1	Directed
+Allium sativum	1,4-Benzoquinone	contains	contains	1	Directed
+Allium sativum - root	1,4-Benzoquinone	contains	contains	1	Directed
+Allium sativum - shoot	Sucrose	contains	contains	1	Directed
+Allium sativum	Galactans	contains	contains	1	Directed
+Allium sativum - bulb	Galactans	contains	contains	1	Directed
+Allium sativum	Allyl alcohol	contains	contains	1	Directed
+Allium sativum	(S)-sulforaphane	contains	contains	1	Directed
+Allium sativum	L-Sulforaphane	contains	contains	1	Directed
+Allium sativum	Sulforaphane	contains	contains	1	Directed
+Allium sativum	Pendimethalin	contains	contains	1	Directed
+Allium sativum	Aldehydes	contains	contains	1	Directed
+Allium sativum	Methyl Salicylate	contains	contains	1	Directed
+Allium sativum	Myristic acid	contains	contains	1	Directed
+Allium sativum	Tetradecanoate	contains	contains	1	Directed
+Allium sativum	Calcium laurate	contains	contains	1	Directed
+Allium sativum	Dodecanoic acid, magnesium salt	contains	contains	1	Directed
+Allium sativum	Lauric Acid	contains	contains	1	Directed
+Allium sativum	Ammonium laurate	contains	contains	1	Directed
+Allium sativum	Potassium laurate	contains	contains	1	Directed
+Allium sativum	Sodium laurate	contains	contains	1	Directed
+Allium sativum	Piperonyl sulfoxide	contains	contains	1	Directed
+Allium sativum	Cy5-benzyl thioester	contains	contains	1	Directed
+Allium sativum	Fatty Acids, Monounsaturated	contains	contains	1	Directed
+Allium sativum	Phenol, 4-(3-hydroxy-1-propenyl)-	contains	contains	1	Directed
+Allium sativum	p-Coumaryl alcohol	contains	contains	1	Directed
+Allium sativum	4-Hydroxycinnamic acid	contains	contains	1	Directed
+Allium sativum - leaf	Phenol, 4-(3-hydroxy-1-propenyl)-	contains	contains	1	Directed
+Allium sativum - leaf	p-Coumaryl alcohol	contains	contains	1	Directed
+Allium sativum - leaf	4-Hydroxycinnamic acid	contains	contains	1	Directed
+Allium sativum	(10)-Gingerol	contains	contains	1	Directed
+Allium sativum	Gingerol	contains	contains	1	Directed
+Allium sativum	4-Methoxybenzaldehyde	contains	contains	1	Directed
+Allium sativum	Raffinose	contains	contains	1	Directed
+Allium sativum	Polymers	contains	contains	1	Directed
+Allium sativum	oligofructose	contains	contains	1	Directed
+Allium sativum	5,7,4'-trihydroxyflavone	contains	contains	1	Directed
+Allium sativum	Inositol	contains	contains	1	Directed
+Allium sativum	(2-1)-fructan	contains	contains	1	Directed
+Allium sativum	(2S)-2-amino-5-guanidinopentanoate	contains	contains	1	Directed
+Allium sativum	Arginine Hydrochloride	contains	contains	1	Directed
+Allium sativum	Arginine	contains	contains	1	Directed
+Allium sativum	Fumonisins	contains	contains	1	Directed
+Allium sativum	Arsenic	contains	contains	1	Directed
+Allium sativum	Matairesinol	contains	contains	1	Directed
+Allium sativum	Secoisolariciresinol	contains	contains	1	Directed
+Allium sativum	polyol	contains	contains	1	Directed
+Allium sativum	Amides	contains	contains	1	Directed
+Allium sativum	cis-Sinapic acid	contains	contains	1	Directed
+Allium sativum	4-Hydroxy-3,5-dimethoxycinnamic acid	contains	contains	1	Directed
+Allium sativum	Sinapic acid	contains	contains	1	Directed
+Allium sativum	Carvacrol	contains	contains	1	Directed
+Allium sativum	Chromium	contains	contains	1	Directed
+Allium sativum	tris(1,10-phenanthroline)chromium(III) chloride	contains	contains	1	Directed
+Allium sativum	Folic acid, potassium salt	contains	contains	1	Directed
+Allium sativum	Sodium folate	contains	contains	1	Directed
+Allium sativum	Folic Acid	contains	contains	1	Directed
+Allium sativum	Folate sodium	contains	contains	1	Directed
+Allium sativum	Oleanolic acid	contains	contains	1	Directed
+Allium sativum	4,4,6a,6b,11,11,14b-heptamethyl-2,3,4a,5,6,6a,7,8,9,10,12,13,14,14a-tetradecahydro-1H-picen-3-ol	contains	contains	1	Directed
+Allium sativum	Oleanol	contains	contains	1	Directed
+Allium sativum	Tricin	contains	contains	1	Directed
+Allium sativum	Demethoxycurcumin	contains	contains	1	Directed
+Allium sativum	3-Hydroxyflavone	contains	contains	1	Directed
+Allium sativum	Theaflavine	contains	contains	1	Directed
+Allium sativum	3,4,5-trihydroxy-1-[(2R,3R)-3,5,7-trihydroxy-3,4-dihydro-2H-chromen-2-yl]-8-(3,5,7-trihydroxy-3,4-dihydro-2H-chromen-2-yl)benzo[7]annulen-6-one	contains	contains	1	Directed
+Allium sativum	Fatty Acids, Unsaturated	contains	contains	1	Directed
+Allium sativum	Nucleotides	contains	contains	1	Directed
+Allium sativum	diisopropyl xanthogen polysulphide	contains	contains	1	Directed
+Allium sativum	Kaempferols	contains	contains	1	Directed
+Allium sativum	2(3H)-Furanone	contains	contains	1	Directed
+Allium sativum	Tebuconazole	contains	contains	1	Directed
+Allium sativum	Zinc	contains	contains	1	Directed
+Allium sativum	Cinnamic acid	contains	contains	1	Directed
+Allium sativum	Sodium cinnamate	contains	contains	1	Directed
+Allium sativum	cis-Cinnamic acid	contains	contains	1	Directed
+Allium sativum	Potassium cinnamate	contains	contains	1	Directed
+Allium sativum	Cinnamic acid, potassium salt	contains	contains	1	Directed
+Allium sativum	Hydroxy Acids	contains	contains	1	Directed
+Allium sativum	(5-Hydroxy-4,6-dimethylpyridin-3-yl)methyl phosphate	contains	contains	1	Directed
+Allium sativum	Flavan-3-ol	contains	contains	1	Directed
+Allium sativum	Scopoletin	contains	contains	1	Directed
+Allium sativum	Methylselenocysteine	contains	contains	1	Directed
+Allium sativum	Se-methyl-D-selenocysteine	contains	contains	1	Directed
+Allium sativum	Flavones	contains	contains	1	Directed
+Allium sativum	A 7	contains	contains	1	Directed
+Allium sativum	Allium sativum - stem	hasPart	hasPart	1	Directed
+Allium sativum - stem	Flavonoids	contains	contains	1	Directed
+Allium sativum - stem	A 7	contains	contains	1	Directed
+Allium sativum - stem	Apigenin	contains	contains	1	Directed
+Allium sativum - leaf	Flavonoids	contains	contains	1	Directed
+Allium sativum - leaf	Apigenin	contains	contains	1	Directed
+Allium sativum	Wogonin	contains	contains	1	Directed
+Allium sativum	Tangeretin	contains	contains	1	Directed
+Allium sativum	Baicalein	contains	contains	1	Directed
+Allium sativum	Nobiletin	contains	contains	1	Directed
+Allium sativum	Chrysin	contains	contains	1	Directed
+Allium sativum	Microcystins	contains	contains	1	Directed
+Allium sativum	Procymidone	contains	contains	1	Directed
+Allium sativum	Dicyclidine	contains	contains	1	Directed
+Allium sativum	S-methyl 2-propene-1-thiosulfinate	contains	contains	1	Directed
+Allium sativum	Prochloraz	contains	contains	1	Directed
+Allium sativum	Graphite	contains	contains	1	Directed
+Allium sativum	Allyl isothiocyanate	contains	contains	1	Directed
+Allium sativum	Genistein	contains	contains	1	Directed
+Allium sativum	1-Methyl-3-(2-oxopropylidene)indolin-2-one	contains	contains	1	Directed
+Allium sativum	Cinnamaldehyde	contains	contains	1	Directed
+Allium sativum	Supercinnamaldehyde	contains	contains	1	Directed
+Allium sativum	1-Methyl-3-(2-oxopropylidene)indol-2-one	contains	contains	1	Directed
+Allium sativum	2,3,4-Tri-O-acetylarabinopyranosyl isothiocyanate	contains	contains	1	Directed
+Allium sativum	Manganese (II) ion	contains	contains	1	Directed
+Allium sativum	Carboxylic Acids	contains	contains	1	Directed
+Allium sativum	Fats, Unsaturated	contains	contains	1	Directed
+Allium sativum	Benzyl isothiocyanate	contains	contains	1	Directed
+Allium sativum - bulb	Polyphenols	contains	contains	1	Directed
+Allium sativum	Aniline Compounds	contains	contains	1	Directed
+Allium sativum	N-methyl,N-(benzyl),N-(pyrrol-2-ylmethyl)amine	contains	contains	1	Directed
+Allium sativum	2,6-Diamino-5-hydroxyhexanoic acid	contains	contains	1	Directed
+Allium sativum	5-Hydroxylysine	contains	contains	1	Directed
+Allium sativum	Sorbitol	contains	contains	1	Directed
+Allium sativum	Mannitol	contains	contains	1	Directed
+Allium sativum	(2R,3R,4S,5S)-2,3,4,5-tetrahydroxyhexanal	contains	contains	1	Directed
+Allium sativum	L-Rhamnose	contains	contains	1	Directed
+Allium sativum	Trehalose	contains	contains	1	Directed
+Allium sativum	Arsenites	contains	contains	1	Directed
+Allium sativum	Camphor	contains	contains	1	Directed
+Allium sativum	Allium sativum - rhizome	hasPart	hasPart	1	Directed
+Allium sativum - rhizome	Curcumin	contains	contains	1	Directed
+Allium sativum - rhizome	(10)-Gingerol	contains	contains	1	Directed
+Allium sativum - rhizome	Gingerol	contains	contains	1	Directed
+Allium sativum - rhizome	Allicin	contains	contains	1	Directed
+Allium sativum	Linoleic Acids	contains	contains	1	Directed
+Allium sativum - bulb	Fatty Acids	contains	contains	1	Directed
+Allium sativum - bulb	Linoleic Acids	contains	contains	1	Directed
+Allium sativum - bulb	Fatty Acids, Unsaturated	contains	contains	1	Directed
+Allium sativum	Propylene	contains	contains	1	Directed
+Allium sativum	Abscisic acid	contains	contains	1	Directed
+Allium sativum	(+)-Abscisic acid	contains	contains	1	Directed
+Allium sativum	Dormin	contains	contains	1	Directed
+Allium sativum	2-cis,4-trans-Abscisic acid	contains	contains	1	Directed
+Allium sativum	5-(1-Hydroxy-2,6,6-trimethyl-4-oxocyclohex-2-en-1-yl)-3-methylpenta-2,4-dienoic acid	contains	contains	1	Directed
+Allium sativum - bulb	phenolic acid	contains	contains	1	Directed
+Allium sativum	Waxes	contains	contains	1	Directed
+Allium sativum - bulb	Flavylium	contains	contains	1	Directed
+Allium sativum - leaf	Flavylium	contains	contains	1	Directed
+Allium sativum - leaf	phenolic acid	contains	contains	1	Directed
+Allium sativum - seed	Flavylium	contains	contains	1	Directed
+Allium sativum - seed	phenolic acid	contains	contains	1	Directed
+Allium sativum	Isocaryophyllene	contains	contains	1	Directed
+Allium sativum	Caryophyllene	contains	contains	1	Directed
+Allium sativum	alchinal	contains	contains	1	Directed
+Allium sativum	Crocin	contains	contains	1	Directed
+Allium sativum	Calcium selenate	contains	contains	1	Directed
+Allium sativum	Sodium selenate	contains	contains	1	Directed
+Allium sativum	Selenic acid, diammonium salt	contains	contains	1	Directed
+Allium sativum	Selenate	contains	contains	1	Directed
+Allium sativum	Potassium selenate	contains	contains	1	Directed
+Allium sativum	Selenic acid	contains	contains	1	Directed
+Allium sativum	Magnesium selenate	contains	contains	1	Directed
+Allium sativum	Zeaxanthin	contains	contains	1	Directed
+Allium sativum	4-Isopropylbenzaldehyde	contains	contains	1	Directed
+Allium sativum - seed	Spirostans	contains	contains	1	Directed
+Allium sativum	Chlorpyrifos	contains	contains	1	Directed
+Allium sativum	Cyclopropanecarboxylic acid, 3-(2,2-dibromoethenyl)-2,2-dimethyl-, cyano(3-phenoxyphenyl)methyl ester	contains	contains	1	Directed
+Allium sativum	Deltamethrin	contains	contains	1	Directed
+Allium sativum	Salicylate	contains	contains	1	Directed
+Allium sativum	Hydrocarbons	contains	contains	1	Directed
+Allium sativum	(3Z,7E)-3,7-dimethyl-10-propan-2-ylidenecyclodeca-3,7-dien-1-one	contains	contains	1	Directed
+Allium sativum	(3E,7Z)-3,7-dimethyl-10-propan-2-ylidenecyclodeca-3,7-dien-1-one	contains	contains	1	Directed
+Allium sativum	Germacrone	contains	contains	1	Directed
+Allium sativum	3,7-Cyclodecadien-1-one, 3,7-dimethyl-10-(1-methylethylidene)-, (Z,E)-	contains	contains	1	Directed
+Allium sativum	3,7-Cyclodecadien-1-one, 3,7-dimethyl-10-(1-methylethylidene)-, (E,E)-	contains	contains	1	Directed
+Allium sativum	Sodium-23 atom	contains	contains	1	Directed
+Allium sativum	Sodium	contains	contains	1	Directed
+Allium sativum	Potassium	contains	contains	1	Directed
+Allium sativum	Oxalate	contains	contains	1	Directed
+Allium sativum	Oxalates	contains	contains	1	Directed
+Allium sativum	Zingerone	contains	contains	1	Directed
+Allium sativum	4-Hydroxy-8-methyl-3,5,7,8-tetrakis(3-methylbutyl)-1-(2-methylpropanoyl)bicyclo[3.3.1]non-3-ene-2,9-dione	contains	contains	1	Directed
+Allium sativum	Hyperforin	contains	contains	1	Directed
+Allium sativum	Octahydrohyperforin	contains	contains	1	Directed
+Allium sativum	Phosphatidic Acids	contains	contains	1	Directed
+Allium sativum	Lipids	contains	contains	1	Directed
+Allium sativum	1,2-Diacyl-sn-glycero-3-phosphocholine	contains	contains	1	Directed
+Allium sativum	Allium sativum - exudate	hasPart	hasPart	1	Directed
+Allium sativum - exudate	CID 5748352	contains	contains	1	Directed
+Allium sativum - exudate	Chlorophylls	contains	contains	1	Directed
+Allium sativum - exudate	magnesium;methyl (3R,21S,22S)-16-ethenyl-11-ethyl-12,17,21,26-tetramethyl-4-oxo-22-[3-oxo-3-[(E)-3,7,11,15-tetramethylhexadec-2-enoxy]propyl]-23,25-diaza-7,24-diazanidahexacyclo[18.2.1.15,8.110,13.115,18.02,6]hexacosa-1,5,8(26),9,11,13(25),14,16,18,20(23)-decaene-3-carboxylate	contains	contains	1	Directed
+Allium sativum - exudate	magnesium;(3R,21S,22S)-16-ethenyl-11-ethyl-3-methoxycarbonyl-12,17,21,26-tetramethyl-22-[3-oxo-3-[(E)-3,7,11,15-tetramethylhexadec-2-enoxy]propyl]-7,23,24,25-tetrazahexacyclo[18.2.1.15,8.110,13.115,18.02,6]hexacosa-1,4,6,8(26),9,11,13(25),14,16,18(24),19-undecaen-4-olate	contains	contains	1	Directed
+Allium sativum	(2S)-2-amino-5-[[(1S)-1-carboxy-2-methylselanylethyl]amino]-5-oxopentanoic acid	contains	contains	1	Directed
+Allium sativum	(2S)-2-amino-5-[(1-carboxy-2-methylselanyl-ethyl)amino]-5-oxo-pentanoic acid	contains	contains	1	Directed
+Allium sativum	gamma-Glutamyl-Se-methylselenocysteine	contains	contains	1	Directed
+Allium sativum	Vitamin D	contains	contains	1	Directed
+Allium sativum	Spirotetramat	contains	contains	1	Directed
+Allium sativum	Salts	contains	contains	1	Directed
+Allium sativum	DL-Methionine	contains	contains	1	Directed
+Allium sativum	D-Methionine	contains	contains	1	Directed
+Allium sativum	Methionine	contains	contains	1	Directed
+Allium sativum	Methoxsalen	contains	contains	1	Directed
+Allium sativum	Allium sativum - fruit	hasPart	hasPart	1	Directed
+Allium sativum - fruit	Flavonoids	contains	contains	1	Directed
+Allium sativum - bulb	Polysaccharides	contains	contains	1	Directed
+Allium sativum	Allium sativum - pod	hasPart	hasPart	1	Directed
+Allium sativum - pod	Polysaccharides	contains	contains	1	Directed
+Allium sativum	Menthone	contains	contains	1	Directed
+Allium sativum	(+)-Menthone	contains	contains	1	Directed
+Allium sativum	p-Menthan-3-one	contains	contains	1	Directed
+Allium sativum	5,7-Dihydroxy-2-(4-hydroxyphenyl)chroman-4-one	contains	contains	1	Directed
+Allium sativum	(2R)-5,7-dihydroxy-2-(4-hydroxyphenyl)-2,3-dihydro-4H-chromen-4-one	contains	contains	1	Directed
+Allium sativum	Naringenin	contains	contains	1	Directed
+Allium sativum	S-Methyl thioacetate	contains	contains	1	Directed
+Allium sativum	Methyl thioacetate	contains	contains	1	Directed
+Allium sativum	Pyridoxine Hydrochloride	contains	contains	1	Directed
+Allium sativum	Pyridoxine	contains	contains	1	Directed
+Allium sativum	Pyridoxine phosphate	contains	contains	1	Directed
+Allium sativum	Pyridoxal	contains	contains	1	Directed
+Allium sativum	Pyridoxal phosphate	contains	contains	1	Directed
+Allium sativum	Pyridoxamine	contains	contains	1	Directed
+Allium sativum	Lactic Acid	contains	contains	1	Directed
+Allium sativum	D-Lactic acid	contains	contains	1	Directed
+Allium sativum	L-Lactic acid	contains	contains	1	Directed
+Allium sativum	Lactate	contains	contains	1	Directed
+Allium sativum	Ammonium lactate	contains	contains	1	Directed
+Allium sativum	Oxathiapiprolin	contains	contains	1	Directed
+Allium sativum	Polyynes	contains	contains	1	Directed
+Allium sativum	Sodium beta-resorcylate	contains	contains	1	Directed
+Allium sativum	2,4-Dihydroxybenzoic acid	contains	contains	1	Directed
+Allium sativum	2,4-Dihydroxybenzoate	contains	contains	1	Directed
+Allium sativum	GI 5269	contains	contains	1	Directed
+Allium sativum	Phenol	contains	contains	1	Directed
+Allium sativum	Sodium phenoxide	contains	contains	1	Directed
+Allium sativum	Phenol, sodium salt	contains	contains	1	Directed
+Allium sativum	tris-boric-polyol buffer	contains	contains	1	Directed
+Allium sativum	Iodine	contains	contains	1	Directed
+Allium sativum	Estrogens	contains	contains	1	Directed
+Allium sativum	Sesamol	contains	contains	1	Directed
+Allium sativum	Fluazinam	contains	contains	1	Directed
+Allium sativum	Prothioconazole	contains	contains	1	Directed
+Allium sativum	L-ornithine	contains	contains	1	Directed
+Allium sativum	DL-Ornithine	contains	contains	1	Directed
+Allium sativum	myo-Inositol, hexakis(dihydrogen phosphate), calcium magnesium salt	contains	contains	1	Directed
+Allium sativum	CID 87585109	contains	contains	1	Directed
+Allium sativum	Calcium phytate	contains	contains	1	Directed
+Allium sativum	Phytic acid	contains	contains	1	Directed
+Allium sativum	Phytin	contains	contains	1	Directed
+Allium sativum	Magnesium pentacalcium phytate	contains	contains	1	Directed
+Allium sativum	CID 44630435	contains	contains	1	Directed
+Allium sativum	Sodium phytate	contains	contains	1	Directed
+Allium sativum	CID 126963567	contains	contains	1	Directed
+Allium sativum	Coumarin derivative	contains	contains	1	Directed
+Allium sativum	Quinones	contains	contains	1	Directed
+Allium sativum	Diarylheptanoids	contains	contains	1	Directed
+Allium sativum	Hydrocarbons, Halogenated	contains	contains	1	Directed
+Allium sativum	Phenethyl isothiocyanate	contains	contains	1	Directed
+Allium sativum	beta-Glucan	contains	contains	1	Directed
+Allium sativum	Diterpenes	contains	contains	1	Directed
+Allium sativum	Indole	contains	contains	1	Directed
+Allium sativum	Indole hydrochloride	contains	contains	1	Directed
+Allium sativum	Sulfite	contains	contains	1	Directed
+Allium sativum	Methanethiolate	contains	contains	1	Directed
+Allium sativum	Methanethiol	contains	contains	1	Directed
+Allium sativum	Piceatannol	contains	contains	1	Directed
+Allium sativum	4-[2-(3,5-Dihydroxyphenyl)ethenyl]benzene-1,2-diol	contains	contains	1	Directed
+Allium sativum - bulb	Diallyl disulfide	contains	contains	1	Directed
+Allium sativum - bulb	Diallyl trisulfide	contains	contains	1	Directed
+Allium sativum	Hordenine	contains	contains	1	Directed
+Allium sativum	Hordenine hydrochloride	contains	contains	1	Directed
+Allium sativum	Citronellol	contains	contains	1	Directed
+Allium sativum	D-Citronellol	contains	contains	1	Directed
+Allium sativum	alpha-Terpinyl acetate	contains	contains	1	Directed
+Allium sativum - bulb	Citronellol	contains	contains	1	Directed
+Allium sativum - bulb	D-Citronellol	contains	contains	1	Directed
+Allium sativum - bulb	alpha-Terpinyl acetate	contains	contains	1	Directed
+Allium sativum	Caffeine	contains	contains	1	Directed
+Allium sativum	5-Hydroxymethylfurfural	contains	contains	1	Directed
+Allium sativum - root	Sucrose	contains	contains	1	Directed
+Allium sativum	5,10,15,20-tetrakis(2-(2,3,4,6-tetraacetylglucopyranosyl)-1-O-phenyl)porphyrin	contains	contains	1	Directed
+Allium sativum	fructofuranosyl-(2-2)-fructofuranosyl	contains	contains	1	Directed
+Allium sativum	Tryptoline	contains	contains	1	Directed
+Allium sativum	THbetaC	contains	contains	1	Directed
+Allium sativum	Oxide	contains	contains	1	Directed
+Allium sativum - bulb	Oxide	contains	contains	1	Directed
+Allium sativum	gamma-L-glutamyl-trans-S-1-propenyl-L-cysteine sulfoxide	contains	contains	1	Directed
+Allium sativum - bulb	Quercetin	contains	contains	1	Directed
+Allium sativum - bulb	Kaempferols	contains	contains	1	Directed
+Allium sativum	Paeonol	contains	contains	1	Directed
+Allium sativum	Chlorine	contains	contains	1	Directed
+Allium sativum - bulb	Phenols	contains	contains	1	Directed
+Allium sativum - bulb	Chlorine	contains	contains	1	Directed
+Allium sativum - bulb	Carbohydrates	contains	contains	1	Directed
+Allium sativum - bulb	Iodine	contains	contains	1	Directed
+Allium sativum - bulb	Water	contains	contains	1	Directed
+Allium sativum - bulb	gamma-Glutamylcysteine	contains	contains	1	Directed
+Allium sativum	melanoidin polymers	contains	contains	1	Directed
+Allium sativum	D-glutamine	contains	contains	1	Directed
+Allium sativum	Glutamine	contains	contains	1	Directed
+Allium sativum	Gastrotelos	contains	contains	1	Directed
+Allium sativum	Cyanidin	contains	contains	1	Directed
+Allium sativum	Cyanidin chloride	contains	contains	1	Directed
+Allium sativum	Germanium	contains	contains	1	Directed
+Allium sativum	L-Alloisoleucine	contains	contains	1	Directed
+Allium sativum	l-Isoleucine	contains	contains	1	Directed
+Allium sativum	Phosphorous Acids	contains	contains	1	Directed
+Allium sativum	thymosin alpha(1) (24-28)	contains	contains	1	Directed
+Allium sativum - leaf	Lactic Acid	contains	contains	1	Directed
+Allium sativum - leaf	D-Lactic acid	contains	contains	1	Directed
+Allium sativum - leaf	L-Lactic acid	contains	contains	1	Directed
+Allium sativum - leaf	Lactate	contains	contains	1	Directed
+Allium sativum - leaf	Ammonium lactate	contains	contains	1	Directed
+Allium sativum - juice	Phenols	contains	contains	1	Directed
+Allium sativum - juice	Flavonoids	contains	contains	1	Directed
+Allium sativum	3-Hydroxydiploptene	contains	contains	1	Directed
+Allium sativum	Arborinol	contains	contains	1	Directed
+Allium sativum	Fernenol	contains	contains	1	Directed
+Allium sativum	alpha-Fernenol	contains	contains	1	Directed
+Allium sativum	Isoarborinol	contains	contains	1	Directed
+Allium sativum	DL-Alanine	contains	contains	1	Directed
+Allium sativum	Alanine	contains	contains	1	Directed
+Allium sativum	(2S)-2-azaniumylpropanoate	contains	contains	1	Directed
+Allium sativum - leaf	Tellurium	contains	contains	1	Directed
+Allium sativum	Allium sativum - flesh	hasPart	hasPart	1	Directed
+Allium sativum - flesh	Flavonols	contains	contains	1	Directed
+Allium sativum - leaf	Allyl methyl trisulfide	contains	contains	1	Directed
+Allium sativum	Pyrazine	contains	contains	1	Directed
+Allium sativum	2-Amino-4-chloropyridine	contains	contains	1	Directed
+Allium sativum	Phosphorus	contains	contains	1	Directed
+Allium sativum	Tetraphosphorus	contains	contains	1	Directed
+Allium sativum	Essential amino acids	contains	contains	1	Directed
+Allium sativum - bulb	Terpenes	contains	contains	1	Directed
+Allium sativum - bulb	Flavonoids	contains	contains	1	Directed
+Allium sativum - bulb	Lipids	contains	contains	1	Directed
+Allium sativum - bulb	Copper-63	contains	contains	1	Directed
+Allium sativum - bulb	Copper	contains	contains	1	Directed
+Allium sativum - bulb	Potassium	contains	contains	1	Directed
+Allium sativum - bulb	Phosphorus	contains	contains	1	Directed
+Allium sativum - bulb	Tetraphosphorus	contains	contains	1	Directed
+Allium sativum - bulb	Sugars	contains	contains	1	Directed
+Allium sativum - bulb	Selenium-80	contains	contains	1	Directed
+Allium sativum - bulb	Essential amino acids	contains	contains	1	Directed
+Allium sativum	Heterocyclic Compounds	contains	contains	1	Directed
+Allium sativum - juice	Sulfur	contains	contains	1	Directed
+Allium sativum	alpha-D-galactopyranuronic acid	contains	contains	1	Directed
+Allium sativum	Cystamine dihydrochloride	contains	contains	1	Directed
+Allium sativum	Cystamine Hydrobromide	contains	contains	1	Directed
+Allium sativum	Cystamine	contains	contains	1	Directed
+Allium sativum	Cystamine hydrochloride	contains	contains	1	Directed
+Allium sativum	1,2-Dithiane	contains	contains	1	Directed
+Allium sativum	Thiophene	contains	contains	1	Directed
+Allium sativum - bulb	1,2-Dithiane	contains	contains	1	Directed
+Allium sativum - bulb	Thiophene	contains	contains	1	Directed
+Allium sativum	3-Vinyl-4H-1,2-dithiin	contains	contains	1	Directed
+Allium sativum	Peptides, Cyclic	contains	contains	1	Directed
+Allium sativum	bis(allixinato)oxovanadium(IV)	contains	contains	1	Directed
+Allium sativum	1-O-cis-alk-1'-enyl-2-lyso-sn-glycero-3-phosphate	contains	contains	1	Directed
+Allium sativum - juice	1-O-cis-alk-1'-enyl-2-lyso-sn-glycero-3-phosphate	contains	contains	1	Directed
+Allium sativum - juice	Diallyl disulfide	contains	contains	1	Directed
+Allium sativum - juice	Diallyl trisulfide	contains	contains	1	Directed
+Allium sativum	Selenomethionine	contains	contains	1	Directed
+Allium sativum	L-selenomethionine	contains	contains	1	Directed
+Allium sativum	Selenomethionine Se 75	contains	contains	1	Directed
+Allium sativum	Glycine hemihydrochloride	contains	contains	1	Directed
+Allium sativum	Glycine hydrochloride	contains	contains	1	Directed
+Allium sativum	Glycine phosphate	contains	contains	1	Directed
+Allium sativum	Glycine	contains	contains	1	Directed
+Allium sativum	Ammonium glycinate	contains	contains	1	Directed
+Allium sativum	Cobalt glycine	contains	contains	1	Directed
+Allium sativum	Glycine, Copper Salt	contains	contains	1	Directed
+Allium sativum	Sodium glycinate	contains	contains	1	Directed
+Allium sativum	Potassium glycinate	contains	contains	1	Directed
+Allium sativum	L-Lysine acetate	contains	contains	1	Directed
+Allium sativum	Lysine	contains	contains	1	Directed
+Allium sativum	L-Lysine hydrochloride	contains	contains	1	Directed
+Allium sativum	DL-Lysine monohydrochloride	contains	contains	1	Directed
+Allium sativum	Magnesium L-aspartate	contains	contains	1	Directed
+Allium sativum	Potassium hydrogen aspartate	contains	contains	1	Directed
+Allium sativum	Monopotassium aspartate	contains	contains	1	Directed
+Allium sativum	Magnesium aspartate	contains	contains	1	Directed
+Allium sativum	Calcium aspartate	contains	contains	1	Directed
+Allium sativum	Calcium l-aspartate	contains	contains	1	Directed
+Allium sativum	Aspartic acid, disodium salt	contains	contains	1	Directed
+Allium sativum	Magnesium aspartate hydrochloride	contains	contains	1	Directed
+Allium sativum	Sodium aspartate	contains	contains	1	Directed
+Allium sativum	Aspartate	contains	contains	1	Directed
+Allium sativum	DL-Aspartic acid	contains	contains	1	Directed
+Allium sativum	Potassium L-aspartate	contains	contains	1	Directed
+Allium sativum	Monosodium aspartate	contains	contains	1	Directed
+Allium sativum	L-Aspartic acid potassium salt	contains	contains	1	Directed
+Allium sativum	Sodium L-aspartate	contains	contains	1	Directed
+Allium sativum	Calcium aspartic acid	contains	contains	1	Directed
+Allium sativum	Ammonium aspartate	contains	contains	1	Directed
+Allium sativum	(2S)-2-aminobutanedioate	contains	contains	1	Directed
+Allium sativum	Aspartic acid	contains	contains	1	Directed
+Allium sativum	L-Aspartic acid, magnesium salt, hydrate (2:1:4)	contains	contains	1	Directed
+Allium sativum	Magnesium aspartate tetrahydrate	contains	contains	1	Directed
+Allium sativum	Magnesium dihydrogen di-L-aspartate	contains	contains	1	Directed
+Allium sativum	Aspartic acid, magnesium salt	contains	contains	1	Directed
+Allium sativum	Proline	contains	contains	1	Directed
+Allium sativum	L-threonine	contains	contains	1	Directed
+Allium sativum	Histidine	contains	contains	1	Directed
+Allium sativum	Valine	contains	contains	1	Directed
+Allium sativum	Dipropyl tetrasulfide	contains	contains	1	Directed
+Allium sativum	Methyl isothiocyanate	contains	contains	1	Directed
+Allium sativum	Cholesterol Formate	contains	contains	1	Directed
+Allium sativum - juice	phenolic acid	contains	contains	1	Directed
+Allium sativum - juice	(2R,4S,5R,8R,10S,13R,14R,18S,20R)-10-[(2S,3R,4S,5S)-3-[(2S,3R,4S,5S,6R)-4,5-dihydroxy-6-(hydroxymethyl)-3-[(2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxyoxan-2-yl]oxy-4-[(2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-5-[(2S,3R,4S,5R)-3,4,5-trihydroxyoxan-2-yl]oxyoxan-2-yl]oxy-2-hydroxy-4,5,9,9,13,20-hexamethyl-24-oxahexacyclo[15.5.2.01,18.04,17.05,14.08,13]tetracosane-20-carbaldehyde	contains	contains	1	Directed
+Allium sativum - juice	Saponins	contains	contains	1	Directed
+Allium sativum - juice	Sasanquasaponin	contains	contains	1	Directed
+Allium sativum - juice	Saponin	contains	contains	1	Directed
+Allium sativum	triterpenoid TP-222	contains	contains	1	Directed
+Allium sativum	Fisetinidin	contains	contains	1	Directed
+Allium sativum	Fisetin	contains	contains	1	Directed
+Allium sativum	Fisetinidin chloride	contains	contains	1	Directed
+Allium sativum	Onionin A	contains	contains	1	Directed
+Allium sativum	Diosgenin	contains	contains	1	Directed
+Allium sativum	furostanol saponin I	contains	contains	1	Directed
+Allium sativum	Sulfur Dioxide	contains	contains	1	Directed
+Allium sativum - bulb	Thiosulfate ion	contains	contains	1	Directed
+Allium sativum - root	L-Deoxyalliin	contains	contains	1	Directed
+Allium sativum - root	S-allyl-L-cysteine	contains	contains	1	Directed
+Allium sativum - root	Allyl cysteine	contains	contains	1	Directed
+Allium sativum - root	3-Mercapto-2-(prop-2-enylamino)propanoic acid	contains	contains	1	Directed
+Allium sativum - root	s-Allylmercaptocysteine	contains	contains	1	Directed
+Allium sativum	Riboflavin	contains	contains	1	Directed
+Allium sativum	Pantothenic acid	contains	contains	1	Directed
+Allium sativum	Calcium pantothenate	contains	contains	1	Directed
+Allium sativum	Dexol	contains	contains	1	Directed
+Allium sativum	Calcium (R)-3-(2,4-dihydroxy-3,3-dimethylbutanamido)propanoate	contains	contains	1	Directed
+Allium sativum	Pancal	contains	contains	1	Directed
+Allium sativum	Pantothenic acid, calcium salt, D-	contains	contains	1	Directed
+Allium sativum	Zinc pantothenate	contains	contains	1	Directed
+Allium sativum	3-[[(2R)-2,4-dihydroxy-3,3-dimethylbutanoyl]amino]propanoic acid;zinc	contains	contains	1	Directed
+Allium sativum	Nicotinic acid	contains	contains	1	Directed
+Allium sativum	Nicotinate	contains	contains	1	Directed
+Allium sativum	Lithium nicotinate	contains	contains	1	Directed
+Allium sativum	Niacin hydrochloride	contains	contains	1	Directed
+Allium sativum	Erucin	contains	contains	1	Directed
+Allium sativum	Dietary Fiber	contains	contains	1	Directed
+Allium sativum	(3beta,24xi)-Stigmast-5-en-3-ol	contains	contains	1	Directed
+Allium sativum	Clionasterol	contains	contains	1	Directed
+Allium sativum	Beta-Sitosterol	contains	contains	1	Directed
+Allium sativum	gamma-Glutamylphenylalanine	contains	contains	1	Directed
+Allium sativum	5-Hydroxyindolepropionic acid	contains	contains	1	Directed
+Allium sativum	Indole-3-lactic acid	contains	contains	1	Directed
+Allium sativum	Potassium glutamate	contains	contains	1	Directed
+Allium sativum	Aluminum l-glutamate	contains	contains	1	Directed
+Allium sativum	DL-Glutamic acid	contains	contains	1	Directed
+Allium sativum	L-glutamate(2-)	contains	contains	1	Directed
+Allium sativum	L-2-Aminopentanedioic Acid Sodium Salt	contains	contains	1	Directed
+Allium sativum	Glutamic Acid	contains	contains	1	Directed
+Allium sativum	L-Glutamic acid, ion(1-)	contains	contains	1	Directed
+Allium sativum	bis[(5R)-5-amino-4,8-dioxo-1,3,2-dioxalumocan-2-yl] (2S)-2-aminopentanedioate	contains	contains	1	Directed
+Allium sativum	L-glutamate	contains	contains	1	Directed
+Allium sativum	L-glutamate(1-)	contains	contains	1	Directed
+Allium sativum	Glutamate	contains	contains	1	Directed
+Allium sativum	D-glutamic acid	contains	contains	1	Directed
+Allium sativum	Monopotassium glutamate	contains	contains	1	Directed
+Allium sativum	Glutamate(2-)	contains	contains	1	Directed
+Allium sativum	Potassium L-glutamate	contains	contains	1	Directed
+Allium sativum	D-glutamate(1-)	contains	contains	1	Directed
+Allium sativum	Monopotassium L-glutamate	contains	contains	1	Directed
+Allium sativum	acetyl-glutaminyl-glutaminyl-arginyl-phenylalanyl-glutaminyl-tryptophyl-glutaminyl-phenylalanyl-glutamyl-glutaminyl-glutaminamide	contains	contains	1	Directed
+Allium sativum - leaf	acetyl-glutaminyl-glutaminyl-arginyl-phenylalanyl-glutaminyl-tryptophyl-glutaminyl-phenylalanyl-glutamyl-glutaminyl-glutaminamide	contains	contains	1	Directed
+Allium sativum - bulb	Amino Acids	contains	contains	1	Directed
+Allium sativum	Allyl propyl disulfide	contains	contains	1	Directed
+Allium sativum	Melatonin	contains	contains	1	Directed
+Allium sativum	aliin	contains	contains	1	Directed
+Allium sativum - bulb	(+)-L-Alliin	contains	contains	1	Directed
+Allium sativum - bulb	(2S)-2-Amino-3-prop-2-enylsulfinylpropanoic acid	contains	contains	1	Directed
+Allium sativum - bulb	Alliin	contains	contains	1	Directed
+Allium sativum - bulb	(R)-1-PeCSO	contains	contains	1	Directed
+Allium sativum - bulb	Isoalliin	contains	contains	1	Directed
+Allium sativum - bulb	Propiin	contains	contains	1	Directed
+Allium sativum - bulb	2-Amino-3-prop-2-enylsulfinylpropanoic acid	contains	contains	1	Directed
+Allium sativum - bulb	S-(1-Propenyl)cysteine sulfoxide	contains	contains	1	Directed
+Allium sativum - bulb	Diallyl sulfide	contains	contains	1	Directed
+Allium sativum - bulb	Trisulfane	contains	contains	1	Directed
+Allium sativum - bulb	Trisulfide(2-)	contains	contains	1	Directed
+Allium sativum	Tellurous acid	contains	contains	1	Directed
+Allium sativum	Tellurite	contains	contains	1	Directed
+Allium sativum	Tellurate	contains	contains	1	Directed
+Allium sativum	PENTA	contains	contains	1	Directed
+Allium sativum	Oxygen	contains	contains	1	Directed
+Allium sativum	Allium sativum - bark	hasPart	hasPart	1	Directed
+Allium sativum - bark	Oxygen	contains	contains	1	Directed
+Allium sativum - bark	Sulfur	contains	contains	1	Directed
+Allium sativum	Allium sativum - wood	hasPart	hasPart	1	Directed
+Allium sativum - wood	Sulfur	contains	contains	1	Directed
+Allium sativum	Dimethyl selenide	contains	contains	1	Directed
+Allium sativum	dimerumic acid	contains	contains	1	Directed
+Allium sativum - bulb	Cysteine hydrochloride	contains	contains	1	Directed
+Allium sativum - bulb	(2R)-2-amino-3-sulfanylpropanoic acid;zinc	contains	contains	1	Directed
+Allium sativum - bulb	Cysteine	contains	contains	1	Directed
+Allium sativum - bulb	Zinc Cysteinate	contains	contains	1	Directed
+Allium sativum - bulb	L-Cysteine hydrochloride	contains	contains	1	Directed
+Allium sativum - juice	Diallyl sulfide	contains	contains	1	Directed
+Allium sativum	Fructose-arginine	contains	contains	1	Directed
+Allium sativum	Vanillic acid	contains	contains	1	Directed
+Allium sativum	Neral	contains	contains	1	Directed
+Allium sativum	Citral	contains	contains	1	Directed
+Allium sativum	Prostaglandin	contains	contains	1	Directed
+Allium sativum	Phloroglucinol	contains	contains	1	Directed
+Allium sativum	hemicellulose	contains	contains	1	Directed
+Allium sativum	Allium sativum - skin	hasPart	hasPart	1	Directed
+Allium sativum - skin	hemicellulose	contains	contains	1	Directed
+Allium sativum	Sapogenins	contains	contains	1	Directed
+Allium sativum	Oleic Acids	contains	contains	1	Directed
+Allium sativum	Palmitic Acid	contains	contains	1	Directed
+Allium sativum	Sodium palmitate	contains	contains	1	Directed
+Allium sativum	Calcium palmitate	contains	contains	1	Directed
+Allium sativum	Linolenic Acids	contains	contains	1	Directed
+Allium sativum - juice	(+)-L-Alliin	contains	contains	1	Directed
+Allium sativum - juice	(2S)-2-Amino-3-prop-2-enylsulfinylpropanoic acid	contains	contains	1	Directed
+Allium sativum - juice	Alliin	contains	contains	1	Directed
+Allium sativum - juice	(R)-1-PeCSO	contains	contains	1	Directed
+Allium sativum - juice	Isoalliin	contains	contains	1	Directed
+Allium sativum - juice	Propiin	contains	contains	1	Directed
+Allium sativum - juice	2-Amino-3-prop-2-enylsulfinylpropanoic acid	contains	contains	1	Directed
+Allium sativum - juice	S-(1-Propenyl)cysteine sulfoxide	contains	contains	1	Directed
+Allium sativum - juice	Allyl Compounds	contains	contains	1	Directed
+Allium sativum - tissue	bis(1-propenyl)thiosulfinate	contains	contains	1	Directed
+Allium sativum - tissue	Acuagel; Adjoen	contains	contains	1	Directed
+Allium sativum - tissue	(Z)-Ajoene	contains	contains	1	Directed
+Allium sativum - tissue	Ajoene	contains	contains	1	Directed
+Allium sativum - root	Polyphenols	contains	contains	1	Directed
+Allium sativum	1,2,4-Triazole	contains	contains	1	Directed
+Allium sativum	N-Acetyl-S-allyl-L-cysteine	contains	contains	1	Directed
+Allium sativum	phytoalexins	contains	contains	1	Directed
+Allium sativum	iso-10-devinylajoene	contains	contains	1	Directed
+Allium sativum	Tetrahydroharman-3-carboxylic acid	contains	contains	1	Directed
+Allium sativum	scordinin	contains	contains	1	Directed
+Allium sativum	N-(2-furoylmethyl)aminobutyric acid	contains	contains	1	Directed
+Allium sativum	Diallyl sulfoxide	contains	contains	1	Directed
+Allium sativum	Diallyl sulfone	contains	contains	1	Directed
+Allium sativum	Thiacremonone	contains	contains	1	Directed
+Allium sativum	S-Methyl methanesulfinothioate	contains	contains	1	Directed
+Allium sativum - flesh	Allicin	contains	contains	1	Directed
+Allium sativum - juice	(Z)-Ajoene	contains	contains	1	Directed
+Allium sativum - juice	Ajoene	contains	contains	1	Directed
+Allium sativum - flower	phenolic acid	contains	contains	1	Directed
+Allium sativum - tissue	Sulfoxides	contains	contains	1	Directed
+Allium sativum	Sialic acids	contains	contains	1	Directed
+Allium sativum	Phenyl isothiocyanate	contains	contains	1	Directed
+Allium sativum - bulb	Zinc	contains	contains	1	Directed
+Allium sativum - root	Zinc	contains	contains	1	Directed
+Allium sativum - shoot	Zinc	contains	contains	1	Directed
+Allium sativum - root	Carbon	contains	contains	1	Directed
+Allium sativum	Penicillins	contains	contains	1	Directed
+Allium sativum	PLP2 protein, human	contains	contains	1	Directed
+Allium sativum	esculentoside A	contains	contains	1	Directed
+Allium sativum	Levamisole hydrochloride	contains	contains	1	Directed
+Allium sativum	Levamisole	contains	contains	1	Directed
+Allium sativum - bulb	Nitrogen	contains	contains	1	Directed
+Allium sativum	Sulfuric Acid Esters	contains	contains	1	Directed
+Allium sativum	Hesperidin	contains	contains	1	Directed
+Allium sativum	Hesperetin-7-rutinoside	contains	contains	1	Directed
+Allium sativum	lysyl-cysteinyl-cysteinyl-arginyl-cysteinyl-lysine	contains	contains	1	Directed
+Allium sativum - root	CID 5748352	contains	contains	1	Directed
+Allium sativum - root	Chlorophylls	contains	contains	1	Directed
+Allium sativum - root	magnesium;methyl (3R,21S,22S)-16-ethenyl-11-ethyl-12,17,21,26-tetramethyl-4-oxo-22-[3-oxo-3-[(E)-3,7,11,15-tetramethylhexadec-2-enoxy]propyl]-23,25-diaza-7,24-diazanidahexacyclo[18.2.1.15,8.110,13.115,18.02,6]hexacosa-1,5,8(26),9,11,13(25),14,16,18,20(23)-decaene-3-carboxylate	contains	contains	1	Directed
+Allium sativum - root	magnesium;(3R,21S,22S)-16-ethenyl-11-ethyl-3-methoxycarbonyl-12,17,21,26-tetramethyl-22-[3-oxo-3-[(E)-3,7,11,15-tetramethylhexadec-2-enoxy]propyl]-7,23,24,25-tetrazahexacyclo[18.2.1.15,8.110,13.115,18.02,6]hexacosa-1,4,6,8(26),9,11,13(25),14,16,18(24),19-undecaen-4-olate	contains	contains	1	Directed
+Allium sativum	Nitric Acid	contains	contains	1	Directed
+Allium sativum	6''-O-glucopyranoside	contains	contains	1	Directed
+Allium sativum	Allyl formate	contains	contains	1	Directed
+Allium sativum	Pentylene	contains	contains	1	Directed
+Allium sativum	Olefin	contains	contains	1	Directed
+Allium sativum	Fipronil	contains	contains	1	Directed
+Allium sativum - skin	Quercetin	contains	contains	1	Directed
+Allium sativum	Carbonate Ion	contains	contains	1	Directed
+Allium sativum	Hydrocarbons, Aromatic	contains	contains	1	Directed
+Allium sativum	Plant Oils	contains	contains	1	Directed
+Allium sativum	gamma-Glutamyl-s-methylcysteine	contains	contains	1	Directed
+Allium sativum - stem	Sugars	contains	contains	1	Directed
+Allium sativum - juice	Polyphenols	contains	contains	1	Directed
+Allium sativum	Thioanisole	contains	contains	1	Directed
+Allium sativum	Serine	contains	contains	1	Directed
+Allium sativum - root	Serine	contains	contains	1	Directed
+Allium sativum	Disaccharides	contains	contains	1	Directed
+Allium sativum	Lysophospholipids	contains	contains	1	Directed
+Allium sativum	Sphingomyelins	contains	contains	1	Directed
+Allium sativum	Ammonium fumarate	contains	contains	1	Directed
+Allium sativum	Magnesium fumarate	contains	contains	1	Directed
+Allium sativum	Diammonium fumarate	contains	contains	1	Directed
+Allium sativum	Fumaric acid	contains	contains	1	Directed
+Allium sativum	Disodium fumarate	contains	contains	1	Directed
+Allium sativum	diazanium;(E)-but-2-enedioic acid	contains	contains	1	Directed
+Allium sativum	2-Butenedioic acid	contains	contains	1	Directed
+Allium sativum	Cadmium formate	contains	contains	1	Directed
+Allium sativum	Cobaltous formate	contains	contains	1	Directed
+Allium sativum	Ammonium tetraformate	contains	contains	1	Directed
+Allium sativum	Aluminum formate	contains	contains	1	Directed
+Allium sativum	Basosiv(TM) M050, produced by BASF	contains	contains	1	Directed
+Allium sativum	Magnesium formate	contains	contains	1	Directed
+Allium sativum	Cesium formate	contains	contains	1	Directed
+Allium sativum	Strontium formate	contains	contains	1	Directed
+Allium sativum	Tetraazanium;tetraformate	contains	contains	1	Directed
+Allium sativum	Azanium;tetraformate	contains	contains	1	Directed
+Allium sativum	CID 90473727	contains	contains	1	Directed
+Allium sativum	Lead diformate	contains	contains	1	Directed
+Allium sativum	Sodium formate	contains	contains	1	Directed
+Allium sativum	Formic acid, copper salt	contains	contains	1	Directed
+Allium sativum	ZINC formate	contains	contains	1	Directed
+Allium sativum	Formic Acid	contains	contains	1	Directed
+Allium sativum	Potassium formate	contains	contains	1	Directed
+Allium sativum	Calcium formate	contains	contains	1	Directed
+Allium sativum	Formate	contains	contains	1	Directed
+Allium sativum	Lithium formate	contains	contains	1	Directed
+Allium sativum	CID 57473661	contains	contains	1	Directed
+Allium sativum	Nickel(2+);formate	contains	contains	1	Directed
+Allium sativum	Formic acid, magnesium salt	contains	contains	1	Directed
+Allium sativum	Formic acid, zinc salt	contains	contains	1	Directed
+Allium sativum	Chromic formate	contains	contains	1	Directed
+Allium sativum	Rubidium formate	contains	contains	1	Directed
+Allium sativum	Ammonium formate	contains	contains	1	Directed
+Allium sativum	Nickel formate dihydrate	contains	contains	1	Directed
+Allium sativum	Formic acid, cadmium salt	contains	contains	1	Directed
+Allium sativum	Cupric formate	contains	contains	1	Directed
+Allium sativum	Nickel formate	contains	contains	1	Directed
+Allium sativum	Formic acid, nickel salt	contains	contains	1	Directed
+Allium sativum	Malic acid	contains	contains	1	Directed
+Allium sativum	Malate	contains	contains	1	Directed
+Allium sativum	Sodium malate	contains	contains	1	Directed
+Allium sativum	Citric Acid	contains	contains	1	Directed
+Allium sativum	Uralyt U	contains	contains	1	Directed
+Allium sativum	Citric Acid Monohydrate	contains	contains	1	Directed
+Allium sativum	Pectin	contains	contains	1	Directed
+Allium sativum	4,4'-Sulfonyldiphenol	contains	contains	1	Directed
+Allium sativum	Acrylonitrile	contains	contains	1	Directed
+Allium sativum	Peptides	contains	contains	1	Directed
+Allium sativum	Glycerol	contains	contains	1	Directed
+Allium sativum	Sugar Alcohols	contains	contains	1	Directed
+Allium sativum	Acetic Acid	contains	contains	1	Directed
+Allium sativum	N-[(4-amino-2-methylpyrimidin-5-yl)methyl]-N-[(Z)-3-[[(E)-2-[(4-amino-2-methylpyrimidin-5-yl)methyl-formylamino]-5-hydroxypent-2-en-3-yl]disulfanyl]-5-hydroxypent-2-en-2-yl]formamide	contains	contains	1	Directed
+Allium sativum	N-[(4-amino-2-methylpyrimidin-5-yl)methyl]-N-[3-[[2-[(4-amino-2-methylpyrimidin-5-yl)methyl-formylamino]-5-hydroxypent-2-en-3-yl]disulfanyl]-5-hydroxypent-2-en-2-yl]formamide	contains	contains	1	Directed
+Allium sativum	Formamide, N,N'-(dithiobis(2-(2-hydroxyethyl)-1-methyl-2,1-ethenediyl))bis(N-((4-amino-2-methyl-5-pyrimidinyl)methyl)-	contains	contains	1	Directed
+Allium sativum	Thiamine disulfide	contains	contains	1	Directed
+Allium sativum	N-((4-amino-2-methylpyrimidin-5-yl)methyl)-N-((E)-3-(((Z)-2-(N-((4-amino-2-methylpyrimidin-5-yl)methyl)formamido)-5-hydroxypent-2-en-3-yl)disulfanyl)-5-hydroxypent-2-en-2-yl)formamide	contains	contains	1	Directed
+Allium sativum - bulb	N-[(4-amino-2-methylpyrimidin-5-yl)methyl]-N-[(Z)-3-[[(E)-2-[(4-amino-2-methylpyrimidin-5-yl)methyl-formylamino]-5-hydroxypent-2-en-3-yl]disulfanyl]-5-hydroxypent-2-en-2-yl]formamide	contains	contains	1	Directed
+Allium sativum - bulb	N-[(4-amino-2-methylpyrimidin-5-yl)methyl]-N-[3-[[2-[(4-amino-2-methylpyrimidin-5-yl)methyl-formylamino]-5-hydroxypent-2-en-3-yl]disulfanyl]-5-hydroxypent-2-en-2-yl]formamide	contains	contains	1	Directed
+Allium sativum - bulb	Formamide, N,N'-(dithiobis(2-(2-hydroxyethyl)-1-methyl-2,1-ethenediyl))bis(N-((4-amino-2-methyl-5-pyrimidinyl)methyl)-	contains	contains	1	Directed
+Allium sativum - bulb	Thiamine disulfide	contains	contains	1	Directed
+Allium sativum - bulb	N-((4-amino-2-methylpyrimidin-5-yl)methyl)-N-((E)-3-(((Z)-2-(N-((4-amino-2-methylpyrimidin-5-yl)methyl)formamido)-5-hydroxypent-2-en-3-yl)disulfanyl)-5-hydroxypent-2-en-2-yl)formamide	contains	contains	1	Directed
+Allium sativum - bulb	Allithiamine	contains	contains	1	Directed
+Allium sativum - bulb	CID 172285	contains	contains	1	Directed
+Allium sativum - bulb	N-[(4-amino-2-methylpyrimidin-5-yl)methyl]-N-[(Z)-5-hydroxy-3-(prop-2-enyldisulfanyl)pent-2-en-2-yl]formamide	contains	contains	1	Directed
+Allium sativum	L-methionine sulfoxide	contains	contains	1	Directed
+Allium sativum	Methionine sulfoxide	contains	contains	1	Directed
+Allium sativum	L-Methionine (R)-S-oxide	contains	contains	1	Directed
+Allium sativum	Starch	contains	contains	1	Directed
+Allium sativum	Propylene sulfide	contains	contains	1	Directed
+Allium sativum	Florfenicol	contains	contains	1	Directed
+Allium sativum	Butyrate	contains	contains	1	Directed
+Allium sativum	Gallium	contains	contains	1	Directed
+Allium sativum	Allium sativum - seedling	hasPart	hasPart	1	Directed
+Allium sativum - seedling	Calcium selenate	contains	contains	1	Directed
+Allium sativum - seedling	Sodium selenate	contains	contains	1	Directed
+Allium sativum - seedling	Selenic acid, diammonium salt	contains	contains	1	Directed
+Allium sativum - seedling	Selenate	contains	contains	1	Directed
+Allium sativum - seedling	Potassium selenate	contains	contains	1	Directed
+Allium sativum - seedling	Selenic acid	contains	contains	1	Directed
+Allium sativum - seedling	Magnesium selenate	contains	contains	1	Directed
+Allium sativum - seedling	Selenomethionine	contains	contains	1	Directed
+Allium sativum - seedling	L-selenomethionine	contains	contains	1	Directed
+Allium sativum - seedling	Selenomethionine Se 75	contains	contains	1	Directed
+Allium sativum - bulb	Mercury	contains	contains	1	Directed
+Allium sativum - leaf	Mercury	contains	contains	1	Directed
+Allium sativum - leaf	Copper	contains	contains	1	Directed
+Allium sativum - leaf	Zinc	contains	contains	1	Directed
+Allium sativum	Tocopherols	contains	contains	1	Directed
+Allium sativum	Vitamin E	contains	contains	1	Directed
+Allium sativum	Vinyl ether	contains	contains	1	Directed
+Allium sativum - bulb	Vinyl ether	contains	contains	1	Directed
+Allium sativum	N-(1-deoxy-fructos-1-yl)-L-arginine	contains	contains	1	Directed
+Allium sativum - bulb	N-Me-pAB-Glu-gamma-Glu-gamma-Tyr(3-NO(2))	contains	contains	1	Directed
+Allium sativum - leaf	N-Me-pAB-Glu-gamma-Glu-gamma-Tyr(3-NO(2))	contains	contains	1	Directed
+Allium sativum	polyisoleucine	contains	contains	1	Directed
+Allium sativum - bulb	Dipeptides	contains	contains	1	Directed
+Allium sativum	3-Methoxy-5-methyl-4-oxo-2,5-hexadienoic acid	contains	contains	1	Directed
+Allium sativum	Penicillic acid	contains	contains	1	Directed
+Allium sativum	CID 7025	contains	contains	1	Directed
+Allium sativum	N-carboxy-3-phenylpropyl-alanyl-aminoisobutyric acid-tyrosyl-aminobenzoate	contains	contains	1	Directed
+Allium sativum - leaf	N-carboxy-3-phenylpropyl-alanyl-aminoisobutyric acid-tyrosyl-aminobenzoate	contains	contains	1	Directed
+Allium sativum - juice	Thiacremonone	contains	contains	1	Directed
+Allium sativum	3-Epiursolic acid	contains	contains	1	Directed
+Allium sativum	Sodium oleanolate	contains	contains	1	Directed
+Allium sativum	Ursolic acid	contains	contains	1	Directed
+Allium sativum	N-trans-Feruloyloctopamine	contains	contains	1	Directed
+Allium sativum	N-Feruloyloctopamine	contains	contains	1	Directed
+Allium sativum - skin	N-trans-Feruloyloctopamine	contains	contains	1	Directed
+Allium sativum - skin	N-Feruloyloctopamine	contains	contains	1	Directed
+Allium sativum - bark	phenolic acid	contains	contains	1	Directed
+Allium sativum	Maltose	contains	contains	1	Directed
+Allium sativum	L-Glc(a1-4)a-L-Glc	contains	contains	1	Directed
+Allium sativum	D-(+)-Maltose	contains	contains	1	Directed
+Allium sativum	D-Maltose	contains	contains	1	Directed
+Allium sativum	antigen III cell wall polysaccharide, Trichosporon domesticum	contains	contains	1	Directed
+Allium sativum	Pyruvates	contains	contains	1	Directed
+Allium sativum	Propionate	contains	contains	1	Directed
+Allium sativum	Lutein	contains	contains	1	Directed
+Allium sativum	Lutein G	contains	contains	1	Directed
+Allium sativum	Lutein F	contains	contains	1	Directed
+Allium sativum	technetium 99m tricarbonyl 4-((2-methoxyphenyl)piperazin-1-yl)dithioformate	contains	contains	1	Directed
+Allium sativum	Bifenazate	contains	contains	1	Directed
+Allium sativum - root	phenolic acid	contains	contains	1	Directed
+Allium sativum - exudate	Proline	contains	contains	1	Directed
+Allium sativum - leaf	Proline	contains	contains	1	Directed
+Allium sativum	furostanol glycoside	contains	contains	1	Directed
+Allium sativum - skin	Flavylium	contains	contains	1	Directed
+Allium sativum	Chromium Adenosine Triphosphate	contains	contains	1	Directed
+Allium sativum	Manganese adenosine triphosphate	contains	contains	1	Directed
+Allium sativum	[[[(2R,3S,4R,5R)-5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy-oxidophosphoryl]oxy-oxidophosphoryl] phosphate	contains	contains	1	Directed
+Allium sativum	Adenosine-5'-triphosphate magnesium salt	contains	contains	1	Directed
+Allium sativum	Adenosine-5'-triphosphate	contains	contains	1	Directed
+Allium sativum	Magnesium ATP	contains	contains	1	Directed
+Allium sativum	MgAtp	contains	contains	1	Directed
+Allium sativum - root	Proline	contains	contains	1	Directed
+Allium sativum - leaf	Sucrose	contains	contains	1	Directed
+Allium sativum	S-propargylcysteine	contains	contains	1	Directed
+Allium sativum	4-Hydroxybenzoate	contains	contains	1	Directed
+Allium sativum	Phosphonic acid	contains	contains	1	Directed
+Allium sativum - root	Magnesium	contains	contains	1	Directed
+Allium sativum	Diethyl Ether	contains	contains	1	Directed
+Allium sativum	3-Ethyl-2,5-dimethylpyrazine	contains	contains	1	Directed
+Allium sativum	Erythritol	contains	contains	1	Directed
+Allium sativum	Isocitric acid	contains	contains	1	Directed
+Allium sativum	Iberin	contains	contains	1	Directed
+Allium sativum - leaf	Oils	contains	contains	1	Directed
+Allium sativum - bulb	(1R,5S,8S,9S,10R,12S)-5,12-dihydroxy-11-methyl-6-methylidene-16-oxo-15-oxapentacyclo[9.3.2.15,8.01,10.02,8]heptadec-13-ene-9-carboxylic acid	contains	contains	1	Directed
+Allium sativum - bulb	Gibberellins	contains	contains	1	Directed
+Allium sativum - bulb	(1R,2R,5S,8S,9S,10R,12S)-5,12-dihydroxy-11-methyl-6-methylidene-16-oxo-15-oxapentacyclo[9.3.2.15,8.01,10.02,8]heptadec-13-ene-9-carboxylic acid	contains	contains	1	Directed
+Allium sativum	gamma-Aminobutyric acid	contains	contains	1	Directed
+Allium sativum	Citrate	contains	contains	1	Directed
+Allium sativum	Organophosphates	contains	contains	1	Directed
+Allium sativum	Flavanone	contains	contains	1	Directed
+Allium sativum	Dimethyl telluride	contains	contains	1	Directed
+Allium sativum	Cannabinol	contains	contains	1	Directed
+Allium sativum	Cresols	contains	contains	1	Directed
+Allium sativum	gamma-Glutamyl-S-allylcysteine	contains	contains	1	Directed
+Allium sativum	Secoisolariciresinol diglucoside	contains	contains	1	Directed
+Allium sativum	2-Acetylpyrrole	contains	contains	1	Directed
+Allium sativum	Uridine	contains	contains	1	Directed
+Allium sativum	4,4-Diaminostilbene-2,2'-disulfonic acid	contains	contains	1	Directed
+Allium sativum	4,4'-Diamino-2,2'-stilbenedisulfonic acid	contains	contains	1	Directed
+Allium sativum	Sodium;4-(4-hexadecoxysulfonylphenoxy)benzenesulfonate	contains	contains	1	Directed
+Allium sativum	Sulfate	contains	contains	1	Directed
+Allium sativum	Limonins	contains	contains	1	Directed
+Allium sativum	Heptanal	contains	contains	1	Directed
+Allium sativum	Prostacyclin sodium salt	contains	contains	1	Directed
+Allium sativum	Epoprostenol sodium	contains	contains	1	Directed
+Allium sativum	sodium;(5Z)-5-[(3aR,4R,5R,6aS)-5-hydroxy-4-[(E,3S)-3-hydroxyoct-1-enyl]-3,3a,4,5,6,6a-hexahydrocyclopenta[b]furan-2-ylidene]pentanoic acid	contains	contains	1	Directed
+Allium sativum	prostaglandin I2	contains	contains	1	Directed
+Allium sativum	Epoprostenol	contains	contains	1	Directed
+Allium sativum	Degalactotigonin	contains	contains	1	Directed
+Allium sativum	Nicotinic Acids	contains	contains	1	Directed
+Allium sativum	Biotin	contains	contains	1	Directed
+Allium sativum - bulb	2-[3-[(4-Amino-2-methylpyrimidin-5-yl)methyl]-4-methyl-1,3-thiazol-3-ium-5-yl]ethanol;hydron;dichloride	contains	contains	1	Directed
+Allium sativum - bulb	Thiamine	contains	contains	1	Directed
+Allium sativum - bulb	vitamin B1	contains	contains	1	Directed
+Allium sativum - bulb	Thiamine nitrate	contains	contains	1	Directed
+Allium sativum - bulb	2-[3-[(4-Amino-2-methylpyrimidin-5-yl)methyl]-4-methyl-1,3-thiazol-3-ium-5-yl]ethanol;hydrochloride	contains	contains	1	Directed
+Allium sativum - bulb	Disulfides	contains	contains	1	Directed
+Allium sativum	3-Methylindole	contains	contains	1	Directed
+Allium sativum - skin	phenolic acid	contains	contains	1	Directed
+Allium sativum - bulb	2-Vinyl-4H-1,3-dithiine	contains	contains	1	Directed
+Allium sativum - bulb	3-Vinyl-4H-1,2-dithiin	contains	contains	1	Directed
+Allium sativum	Dimethyl sulfide	contains	contains	1	Directed
+Allium sativum	Reactive Oxygen Species	contains	contains	1	Directed
+Allium sativum - exudate	Reactive Oxygen Species	contains	contains	1	Directed
+Allium sativum - leaf	Reactive Oxygen Species	contains	contains	1	Directed
+Allium sativum - root	Reactive Oxygen Species	contains	contains	1	Directed
+Allium sativum - skin	Lignans	contains	contains	1	Directed
+Allium sativum - skin	Lignan	contains	contains	1	Directed
+Allium sativum	Acyl-Butyrolactones	contains	contains	1	Directed
+Allium sativum	(2R)-2-azaniumyl-3-tritylsulfanylpropanoate	contains	contains	1	Directed
+Allium sativum	Tritylcysteine	contains	contains	1	Directed
+Allium sativum	S-Trityl-L-cysteine	contains	contains	1	Directed
+Allium sativum - juice	bis(1-propenyl)thiosulfinate	contains	contains	1	Directed
+Allium sativum	Allyl(allyldithio) sulfoxide	contains	contains	1	Directed
+Allium sativum	Diethyl phthalate	contains	contains	1	Directed
+Allium sativum	Fructosamine	contains	contains	1	Directed
+Allium sativum - bulb	Dextrose monohydrate	contains	contains	1	Directed
+Allium sativum - bulb	D-Glucose	contains	contains	1	Directed
+Allium sativum - bulb	Mannose, D-	contains	contains	1	Directed
+Allium sativum - bulb	(2R,3S,4R,5R)-2,3,4,5,6-pentahydroxyhexanal	contains	contains	1	Directed
+Allium sativum - bulb	(2S,3R,4S,5S)-2,3,4,5,6-pentahydroxyhexanal	contains	contains	1	Directed
+Allium sativum - bulb	Sucrose	contains	contains	1	Directed
+Allium sativum - bulb	D-(-)-Fructose	contains	contains	1	Directed
+Allium sativum - bulb	D-Fructose	contains	contains	1	Directed
+Allium sativum	2,6-diisopropyl-4-(1-hydroxy-2,2,2-trifluoroethyl)phenol	contains	contains	1	Directed
+Allium sativum - exudate	2,6-diisopropyl-4-(1-hydroxy-2,2,2-trifluoroethyl)phenol	contains	contains	1	Directed
+Allium sativum - exudate	Phenols	contains	contains	1	Directed
+Allium sativum - exudate	phenolic acid	contains	contains	1	Directed
+Allium sativum - root	2,6-diisopropyl-4-(1-hydroxy-2,2,2-trifluoroethyl)phenol	contains	contains	1	Directed
+Allium sativum - root	Phenols	contains	contains	1	Directed
+Allium sativum - tissue	phenolic acid	contains	contains	1	Directed
+Allium sativum	delta-Bilirubin	contains	contains	1	Directed
+Allium sativum	Bilirubin	contains	contains	1	Directed
+Allium sativum	Carbolines	contains	contains	1	Directed
+Allium sativum	Garlicnin D	contains	contains	1	Directed
+Allium sativum - bulb	Cadmium	contains	contains	1	Directed
+Allium sativum - shoot	Cadmium	contains	contains	1	Directed
+Allium sativum	Chl1 protein, mouse	contains	contains	1	Directed
+Allium sativum - seedling	CID 5748352	contains	contains	1	Directed
+Allium sativum - seedling	Chlorophylls	contains	contains	1	Directed
+Allium sativum - seedling	magnesium;methyl (3R,21S,22S)-16-ethenyl-11-ethyl-12,17,21,26-tetramethyl-4-oxo-22-[3-oxo-3-[(E)-3,7,11,15-tetramethylhexadec-2-enoxy]propyl]-23,25-diaza-7,24-diazanidahexacyclo[18.2.1.15,8.110,13.115,18.02,6]hexacosa-1,5,8(26),9,11,13(25),14,16,18,20(23)-decaene-3-carboxylate	contains	contains	1	Directed
+Allium sativum - seedling	magnesium;(3R,21S,22S)-16-ethenyl-11-ethyl-3-methoxycarbonyl-12,17,21,26-tetramethyl-22-[3-oxo-3-[(E)-3,7,11,15-tetramethylhexadec-2-enoxy]propyl]-7,23,24,25-tetrazahexacyclo[18.2.1.15,8.110,13.115,18.02,6]hexacosa-1,4,6,8(26),9,11,13(25),14,16,18(24),19-undecaen-4-olate	contains	contains	1	Directed
+Allium sativum	Allium sativum - stalk	hasPart	hasPart	1	Directed
+Allium sativum - stalk	CID 5748352	contains	contains	1	Directed
+Allium sativum - stalk	Chlorophylls	contains	contains	1	Directed
+Allium sativum - stalk	magnesium;methyl (3R,21S,22S)-16-ethenyl-11-ethyl-12,17,21,26-tetramethyl-4-oxo-22-[3-oxo-3-[(E)-3,7,11,15-tetramethylhexadec-2-enoxy]propyl]-23,25-diaza-7,24-diazanidahexacyclo[18.2.1.15,8.110,13.115,18.02,6]hexacosa-1,5,8(26),9,11,13(25),14,16,18,20(23)-decaene-3-carboxylate	contains	contains	1	Directed
+Allium sativum - stalk	magnesium;(3R,21S,22S)-16-ethenyl-11-ethyl-3-methoxycarbonyl-12,17,21,26-tetramethyl-22-[3-oxo-3-[(E)-3,7,11,15-tetramethylhexadec-2-enoxy]propyl]-7,23,24,25-tetrazahexacyclo[18.2.1.15,8.110,13.115,18.02,6]hexacosa-1,4,6,8(26),9,11,13(25),14,16,18(24),19-undecaen-4-olate	contains	contains	1	Directed
+Allium sativum - stalk	Phosphorus	contains	contains	1	Directed
+Allium sativum - stalk	Tetraphosphorus	contains	contains	1	Directed
+Allium sativum	Maleic hydrazide	contains	contains	1	Directed
+Allium sativum	Nitric oxide	contains	contains	1	Directed
+Allium sativum	Estrogens, Non-Steroidal	contains	contains	1	Directed
+Allium sativum	Uracil	contains	contains	1	Directed
+Allium sativum	(7R,8S)-dihydrodehydrodiconiferyl alcohol 4-beta-D-xyloside	contains	contains	1	Directed
+Allium sativum	Alkanesulfonates	contains	contains	1	Directed
+Allium sativum	Allium sativum - sap	hasPart	hasPart	1	Directed
+Allium sativum - sap	Isothiocyanates	contains	contains	1	Directed
+Allium sativum	Hesperetin	contains	contains	1	Directed
+Allium sativum	alpha-Farnesene	contains	contains	1	Directed
+Allium sativum	Baicalin	contains	contains	1	Directed
+Allium sativum	trans,trans-Farnesol	contains	contains	1	Directed
+Allium sativum	N-(N-(3-Amino-3-carboxypropyl)-3-amino-3-carboxypropyl)azetidine-2-carboxylic acid	contains	contains	1	Directed
+Allium sativum	Nicotianamine	contains	contains	1	Directed
+Allium sativum	Scutellarin	contains	contains	1	Directed
+Allium sativum	Scutellarein 7-glucuronide	contains	contains	1	Directed
+Allium sativum	Lactose, anhydrous	contains	contains	1	Directed
+Allium sativum	alpha-Lactose	contains	contains	1	Directed
+Allium sativum	beta-Lactose	contains	contains	1	Directed
+Allium sativum	propyl thiosulfinate oxide	contains	contains	1	Directed
+Allium sativum	Allium sativum - grain	hasPart	hasPart	1	Directed
+Allium sativum - grain	Oils	contains	contains	1	Directed
+Allium sativum	Calenduloside E	contains	contains	1	Directed
+Allium sativum - leaf	Hydrogen Peroxide	contains	contains	1	Directed
+Allium sativum	Phosphate ion	contains	contains	1	Directed
+Allium sativum	Furfural	contains	contains	1	Directed
+Allium sativum	Phenylacetaldehyde	contains	contains	1	Directed
+Allium sativum	Xylans	contains	contains	1	Directed
+Allium sativum	xylooligosaccharide	contains	contains	1	Directed
+Allium sativum	Linoleic Acid	contains	contains	1	Directed
+Allium sativum	9Z,12E-octadecadienoic acid	contains	contains	1	Directed
+Allium sativum	Linoelaidic acid	contains	contains	1	Directed
+Allium sativum	9,12-Octadecadienoic acid	contains	contains	1	Directed
+Allium sativum	Linoleate	contains	contains	1	Directed
+Allium sativum	Tyrosine	contains	contains	1	Directed
+Allium sativum	4-Hydroxy-2,5,6-trichloroisophthalonitrile	contains	contains	1	Directed
+Allium sativum	Chlorothalonil	contains	contains	1	Directed
+Allium sativum	Lithium-7	contains	contains	1	Directed
+Allium sativum	Lithium	contains	contains	1	Directed
+Allium sativum - flesh	Sulfur	contains	contains	1	Directed
+Allium sativum - skin	Sulfhydryl Compounds	contains	contains	1	Directed
+Allium sativum - skin	Sulfur	contains	contains	1	Directed
+Allium sativum - skin	Allicin	contains	contains	1	Directed
+Allium sativum	1-Pentanol	contains	contains	1	Directed
+Allium sativum	Methyl gallate	contains	contains	1	Directed
+Allium sativum	Syringic acid	contains	contains	1	Directed
+Allium sativum	mustard oil	contains	contains	1	Directed
+Allium sativum	Isothiocyanic acid	contains	contains	1	Directed
+Allium sativum - bulb	2-(3,4-Dihydroxyphenyl)-5,7-Dihydroxy-3-[(2S,3R,4S,5R,6R)-3,4,5-Trihydroxy-6-(Hydroxymethyl)Oxan-2-yl]Oxy-Chromen-4-one	contains	contains	1	Directed
+Allium sativum - bulb	Isoquercitrin	contains	contains	1	Directed
+Allium sativum - bulb	3-(((2S,3R,4R,5R)-5-((R)-1,2-Dihydroxyethyl)-3,4-dihydroxytetrahydrofuran-2-yl)oxy)-2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4H-chromen-4-one	contains	contains	1	Directed
+Allium sativum - bulb	Isoquercitrin with HPLC [21637-25-2]	contains	contains	1	Directed
+Allium sativum - bulb	Quercetin-3-glucoside	contains	contains	1	Directed
+Allium sativum - bulb	Isoquercitin	contains	contains	1	Directed
+Allium sativum - bulb	2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-3-[(2S,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxychromen-4-one	contains	contains	1	Directed
+Allium sativum - bulb	Kaempferol	contains	contains	1	Directed
+Allium sativum	Thiocyanate	contains	contains	1	Directed
+Allium sativum - root	Fructooligosaccharide	contains	contains	1	Directed
+Allium sativum	Tyramine	contains	contains	1	Directed
+Allium sativum	Tyraminium	contains	contains	1	Directed
+Allium sativum	Methylene dithiocyanate	contains	contains	1	Directed
+Allium sativum - leaf	Serine	contains	contains	1	Directed
+Allium sativum - leaf	Cysteine hydrochloride	contains	contains	1	Directed
+Allium sativum - leaf	(2R)-2-amino-3-sulfanylpropanoic acid;zinc	contains	contains	1	Directed
+Allium sativum - leaf	Cysteine	contains	contains	1	Directed
+Allium sativum - leaf	Zinc Cysteinate	contains	contains	1	Directed
+Allium sativum - leaf	L-Cysteine hydrochloride	contains	contains	1	Directed
+Allium sativum	(R)-3-(allylthio)-2-((R)-3-(allylthio)-2-aminopropanamido)propanoic acid	contains	contains	1	Directed
+Allium sativum - bulb	(R)-3-(allylthio)-2-((R)-3-(allylthio)-2-aminopropanamido)propanoic acid	contains	contains	1	Directed
+Allium sativum	Silibinin	contains	contains	1	Directed
+Allium sativum	Silibinin B	contains	contains	1	Directed
+Allium sativum	2,3-Dehydrosilybin	contains	contains	1	Directed
+Allium sativum	Legalon	contains	contains	1	Directed
+Allium sativum - leaf	Polyphenols	contains	contains	1	Directed
+Allium sativum	Monosodium fumarate	contains	contains	1	Directed
+Allium sativum	Hydrogen maleate	contains	contains	1	Directed
+Allium sativum	Maleic acid	contains	contains	1	Directed
+Allium sativum	Monosodium maleate	contains	contains	1	Directed
+Allium sativum	Magnesium maleate	contains	contains	1	Directed
+Allium sativum	Maleic acid, potassium salt	contains	contains	1	Directed
+Allium sativum	Disodium maleate	contains	contains	1	Directed
+Allium sativum	Maleate	contains	contains	1	Directed
+Allium sativum	Calcium Maleate	contains	contains	1	Directed
+Allium sativum - exudate	Magnesium L-aspartate	contains	contains	1	Directed
+Allium sativum - exudate	Potassium hydrogen aspartate	contains	contains	1	Directed
+Allium sativum - exudate	Monopotassium aspartate	contains	contains	1	Directed
+Allium sativum - exudate	Magnesium aspartate	contains	contains	1	Directed
+Allium sativum - exudate	Calcium aspartate	contains	contains	1	Directed
+Allium sativum - exudate	Calcium l-aspartate	contains	contains	1	Directed
+Allium sativum - exudate	Aspartic acid, disodium salt	contains	contains	1	Directed
+Allium sativum - exudate	Magnesium aspartate hydrochloride	contains	contains	1	Directed
+Allium sativum - exudate	Sodium aspartate	contains	contains	1	Directed
+Allium sativum - exudate	Aspartate	contains	contains	1	Directed
+Allium sativum - exudate	DL-Aspartic acid	contains	contains	1	Directed
+Allium sativum - exudate	Potassium L-aspartate	contains	contains	1	Directed
+Allium sativum - exudate	Monosodium aspartate	contains	contains	1	Directed
+Allium sativum - exudate	L-Aspartic acid potassium salt	contains	contains	1	Directed
+Allium sativum - exudate	Sodium L-aspartate	contains	contains	1	Directed
+Allium sativum - exudate	Calcium aspartic acid	contains	contains	1	Directed
+Allium sativum - exudate	Ammonium aspartate	contains	contains	1	Directed
+Allium sativum - exudate	(2S)-2-aminobutanedioate	contains	contains	1	Directed
+Allium sativum - exudate	Aspartic acid	contains	contains	1	Directed
+Allium sativum - exudate	L-Aspartic acid, magnesium salt, hydrate (2:1:4)	contains	contains	1	Directed
+Allium sativum - exudate	Magnesium aspartate tetrahydrate	contains	contains	1	Directed
+Allium sativum - exudate	Magnesium dihydrogen di-L-aspartate	contains	contains	1	Directed
+Allium sativum - exudate	Aspartic acid, magnesium salt	contains	contains	1	Directed
+Allium sativum - exudate	Monosodium fumarate	contains	contains	1	Directed
+Allium sativum - exudate	Hydrogen maleate	contains	contains	1	Directed
+Allium sativum - exudate	Maleic acid	contains	contains	1	Directed
+Allium sativum - exudate	Monosodium maleate	contains	contains	1	Directed
+Allium sativum - exudate	Magnesium maleate	contains	contains	1	Directed
+Allium sativum - exudate	Maleic acid, potassium salt	contains	contains	1	Directed
+Allium sativum - exudate	Disodium maleate	contains	contains	1	Directed
+Allium sativum - exudate	Maleate	contains	contains	1	Directed
+Allium sativum - exudate	Calcium Maleate	contains	contains	1	Directed
+Allium sativum - exudate	Acetic Acid	contains	contains	1	Directed
+Allium sativum - root	Magnesium L-aspartate	contains	contains	1	Directed
+Allium sativum - root	Potassium hydrogen aspartate	contains	contains	1	Directed
+Allium sativum - root	Monopotassium aspartate	contains	contains	1	Directed
+Allium sativum - root	Magnesium aspartate	contains	contains	1	Directed
+Allium sativum - root	Calcium aspartate	contains	contains	1	Directed
+Allium sativum - root	Calcium l-aspartate	contains	contains	1	Directed
+Allium sativum - root	Aspartic acid, disodium salt	contains	contains	1	Directed
+Allium sativum - root	Magnesium aspartate hydrochloride	contains	contains	1	Directed
+Allium sativum - root	Sodium aspartate	contains	contains	1	Directed
+Allium sativum - root	Aspartate	contains	contains	1	Directed
+Allium sativum - root	DL-Aspartic acid	contains	contains	1	Directed
+Allium sativum - root	Potassium L-aspartate	contains	contains	1	Directed
+Allium sativum - root	Monosodium aspartate	contains	contains	1	Directed
+Allium sativum - root	L-Aspartic acid potassium salt	contains	contains	1	Directed
+Allium sativum - root	Sodium L-aspartate	contains	contains	1	Directed
+Allium sativum - root	Calcium aspartic acid	contains	contains	1	Directed
+Allium sativum - root	Ammonium aspartate	contains	contains	1	Directed
+Allium sativum - root	(2S)-2-aminobutanedioate	contains	contains	1	Directed
+Allium sativum - root	Aspartic acid	contains	contains	1	Directed
+Allium sativum - root	L-Aspartic acid, magnesium salt, hydrate (2:1:4)	contains	contains	1	Directed
+Allium sativum - root	Magnesium aspartate tetrahydrate	contains	contains	1	Directed
+Allium sativum - root	Magnesium dihydrogen di-L-aspartate	contains	contains	1	Directed
+Allium sativum - root	Aspartic acid, magnesium salt	contains	contains	1	Directed
+Allium sativum - root	Monosodium fumarate	contains	contains	1	Directed
+Allium sativum - root	Hydrogen maleate	contains	contains	1	Directed
+Allium sativum - root	Maleic acid	contains	contains	1	Directed
+Allium sativum - root	Monosodium maleate	contains	contains	1	Directed
+Allium sativum - root	Magnesium maleate	contains	contains	1	Directed
+Allium sativum - root	Maleic acid, potassium salt	contains	contains	1	Directed
+Allium sativum - root	Disodium maleate	contains	contains	1	Directed
+Allium sativum - root	Maleate	contains	contains	1	Directed
+Allium sativum - root	Calcium Maleate	contains	contains	1	Directed
+Allium sativum	Asparagine	contains	contains	1	Directed
+Allium sativum - root	Allicin	contains	contains	1	Directed
+Allium sativum - root	Sulfur	contains	contains	1	Directed
+Allium sativum - shoot	Glycerol	contains	contains	1	Directed
+Allium sativum - root	Selenium-80	contains	contains	1	Directed
+Allium sativum	Amines	contains	contains	1	Directed
+Allium sativum	Ethanol	contains	contains	1	Directed
+Allium sativum	2-(2-fluorobenzamido)-3-carboxamide-4,5-dimethylthiophene	contains	contains	1	Directed
+Allium sativum	L-Arabinose	contains	contains	1	Directed
+Allium sativum	L-(+)-Arabinose	contains	contains	1	Directed
+Allium sativum - bulb	Magnesium	contains	contains	1	Directed
+Allium sativum	Heme b	contains	contains	1	Directed
+Allium sativum	Protoheme	contains	contains	1	Directed
+Allium sativum	3-[18-(2-Carboxylatoethyl)-8,13-bis(ethenyl)-3,7,12,17-tetramethylporphyrin-21,24-diid-2-yl]propanoate;iron(2+)	contains	contains	1	Directed
+Allium sativum	protoheme IX	contains	contains	1	Directed
+Allium sativum	Ferroprotoporphyrin IX	contains	contains	1	Directed
+Allium sativum	Reduced hematin	contains	contains	1	Directed
+Allium sativum	Protoporphyrin IX containing fe	contains	contains	1	Directed
+Allium sativum	Squalene	contains	contains	1	Directed
+Allium sativum	Azulene	contains	contains	1	Directed
+Allium sativum - sprout	Prochloraz	contains	contains	1	Directed
+Allium sativum - stem	Prochloraz	contains	contains	1	Directed
+Allium sativum	S-carboxymethylsomatotropin	contains	contains	1	Directed
+Allium sativum	Bergamottin	contains	contains	1	Directed
+Allium sativum	Xanthotoxol geranyl ether	contains	contains	1	Directed
+Allium sativum - tissue	Sucrose	contains	contains	1	Directed
+Allium sativum - tissue	Dextrose monohydrate	contains	contains	1	Directed
+Allium sativum - tissue	D-Glucose	contains	contains	1	Directed
+Allium sativum - tissue	Mannose, D-	contains	contains	1	Directed
+Allium sativum - tissue	(2R,3S,4R,5R)-2,3,4,5,6-pentahydroxyhexanal	contains	contains	1	Directed
+Allium sativum - tissue	(2S,3R,4S,5S)-2,3,4,5,6-pentahydroxyhexanal	contains	contains	1	Directed
+Allium sativum	Fas Ligand Protein	contains	contains	1	Directed
+Allium sativum	Chloride ion	contains	contains	1	Directed
+Allium sativum	2'-methylseleno-2'-deoxyadenosine-5'- triphosphate	contains	contains	1	Directed
+Allium sativum	Superoxide	contains	contains	1	Directed
+Allium sativum	Trolox	contains	contains	1	Directed
+Allium sativum - juice	Acuagel; Adjoen	contains	contains	1	Directed
+Allium sativum	polyoxyethylene allylmethyl diether-maleic anhydride copolymer	contains	contains	1	Directed
+Allium sativum	Potassium benzoate	contains	contains	1	Directed
+Allium sativum	Benzoic Acid	contains	contains	1	Directed
+Allium sativum - root	Nitrate	contains	contains	1	Directed
+Allium sativum - root	Sulfate	contains	contains	1	Directed
+Allium sativum - bulb	Manganese (II) ion	contains	contains	1	Directed
+Allium sativum - bulb	Iron, isotope of mass 56	contains	contains	1	Directed
+Allium sativum - bulb	Calcium-40	contains	contains	1	Directed
+Allium sativum - bulb	Calcium	contains	contains	1	Directed
+Allium sativum	Allium sativum - husk	hasPart	hasPart	1	Directed
+Allium sativum - husk	Lignin	contains	contains	1	Directed
+Allium sativum - husk	hemicellulose	contains	contains	1	Directed
+Allium sativum	Pyrogallol	contains	contains	1	Directed
+Allium sativum	3-Hydroxycinnamic acid	contains	contains	1	Directed
+Allium sativum - bulb	Oils	contains	contains	1	Directed
+Allium sativum	5-Bromovanillin	contains	contains	1	Directed
+Allium sativum	Vanillin	contains	contains	1	Directed
+Allium sativum	3-Chloro-4-hydroxy-5-methoxybenzaldehyde	contains	contains	1	Directed
+Allium sativum	Furfuryl mercaptan	contains	contains	1	Directed
+Allium sativum	S-Methyl methanethiosulfonate	contains	contains	1	Directed
+Allium sativum	Linolenic Acid	contains	contains	1	Directed
+Allium sativum	Oleic Acid	contains	contains	1	Directed
+Allium sativum	Oleate	contains	contains	1	Directed
+Allium sativum	9-Octadecenoic acid	contains	contains	1	Directed
+Allium sativum	Brassinolide	contains	contains	1	Directed
+Allium sativum	(2R,4R,5S,7S,11S,15R,16S)-15-[(2S,3R,4R,5R)-3,4-dihydroxy-5,6-dimethylheptan-2-yl]-4,5-dihydroxy-2,16-dimethyl-9-oxatetracyclo[9.7.0.02,7.012,16]octadecan-8-one	contains	contains	1	Directed
+Allium sativum	24-epi-Brassinolide	contains	contains	1	Directed
+Allium sativum	(1S,2R,4R,5S,7S,11S,15R,16S)-15-[(2S,3R,4R,5R)-3,4-Dihydroxy-5,6-dimethylheptan-2-yl]-4,5-dihydroxy-2,16-dimethyl-9-oxatetracyclo[9.7.0.02,7.012,16]octadecan-8-one	contains	contains	1	Directed
+Allium sativum	24-Epibrassinolide	contains	contains	1	Directed
+Allium sativum	(2R,4R,5S,7S,12S,16S)-15-[(2S,3R,4R,5R)-3,4-dihydroxy-5,6-dimethylheptan-2-yl]-4,5-dihydroxy-2,16-dimethyl-9-oxatetracyclo[9.7.0.02,7.012,16]octadecan-8-one	contains	contains	1	Directed
+Allium sativum	(+)-cis,trans-Abscisic Acid	contains	contains	1	Directed
+Allium sativum	(-)-Abscisic acid	contains	contains	1	Directed
+Allium sativum	Dihydrozeatin	contains	contains	1	Directed
+Allium sativum	2-methyl-4-(7H-purin-6-ylamino)butan-1-ol	contains	contains	1	Directed
+Allium sativum	2-Methyl-4-(1H-purin-6-ylamino)butan-1-ol	contains	contains	1	Directed
+Allium sativum	Alcohols	contains	contains	1	Directed
+Allium sativum	L-Ergothionine hydrochloride	contains	contains	1	Directed
+Allium sativum	Ergothioneine	contains	contains	1	Directed
+Allium sativum	1-propenyl-benzene	contains	contains	1	Directed
+Allium sativum - tissue	Phenols	contains	contains	1	Directed
+Allium sativum - leaf	Allicin	contains	contains	1	Directed
+Allium sativum - tissue	Diallyl disulfide	contains	contains	1	Directed
+Allium sativum - bulb	s-Allylmercaptocysteine	contains	contains	1	Directed
+Allium sativum	soyasaponin alpha a	contains	contains	1	Directed
+Allium sativum	Acetate	contains	contains	1	Directed
+Allium sativum	Zwiebelane A	contains	contains	1	Directed
+Allium sativum - root	Hydrogen Peroxide	contains	contains	1	Directed
+Allium sativum	poly(3-(pyrrolyl)carboxylic acid)	contains	contains	1	Directed
+Allium sativum	acylcarnitine	contains	contains	1	Directed
+Allium sativum - stalk	Nitrogen	contains	contains	1	Directed
+Allium sativum	bis(3-hydroxy-1(H)-2-methyl-4-pyridonato)oxidovanadium(IV)	contains	contains	1	Directed
+Allium sativum	Fatty Acids, Nonesterified	contains	contains	1	Directed
+Allium sativum	Allium sativum - bud	hasPart	hasPart	1	Directed
+Allium sativum - bud	Carbohydrates	contains	contains	1	Directed
+Allium sativum	2-methyl-1-propenylbenzoate	contains	contains	1	Directed
+Allium sativum	DL-Homocysteine	contains	contains	1	Directed
+Allium sativum	L-Homocysteine	contains	contains	1	Directed
+Allium sativum	Salivary Cystatins	contains	contains	1	Directed
+Allium sativum	Uronic Acids	contains	contains	1	Directed
+Allium sativum	Vitamin e succinate	contains	contains	1	Directed
+Allium sativum	alpha-Tocopherol acetate	contains	contains	1	Directed
+Allium sativum	Tocopherol calcium succinate	contains	contains	1	Directed
+Allium sativum	DL-alpha-Tocopherol acetate	contains	contains	1	Directed
+Allium sativum	Tocopheryl acetate	contains	contains	1	Directed
+Allium sativum	Oleuropein	contains	contains	1	Directed
+Allium sativum	L-selenocysteine	contains	contains	1	Directed
+Allium sativum	Selenocysteine	contains	contains	1	Directed
+Allium sativum - exudate	Carbohydrates	contains	contains	1	Directed
+Allium sativum - leaf	Carbohydrates	contains	contains	1	Directed
+Allium sativum - root	Carbohydrates	contains	contains	1	Directed
+Allium sativum	Zingiberene	contains	contains	1	Directed
+Allium sativum - skin	Sodium ferulate	contains	contains	1	Directed
+Allium sativum - skin	Ferulic acid	contains	contains	1	Directed
+Allium sativum - skin	8,8'-Diferulic acid	contains	contains	1	Directed
+Allium sativum - skin	cis-Ferulic acid	contains	contains	1	Directed
+Allium sativum - bulb	Carbon	contains	contains	1	Directed
+Allium sativum	S-Hydroxycysteine	contains	contains	1	Directed
+Allium sativum - root	Glutamic Acid	contains	contains	1	Directed
+Allium sativum - root	Potassium glutamate	contains	contains	1	Directed
+Allium sativum - root	Aluminum l-glutamate	contains	contains	1	Directed
+Allium sativum - root	DL-Glutamic acid	contains	contains	1	Directed
+Allium sativum - root	L-glutamate(2-)	contains	contains	1	Directed
+Allium sativum - root	L-2-Aminopentanedioic Acid Sodium Salt	contains	contains	1	Directed
+Allium sativum - root	L-Glutamic acid, ion(1-)	contains	contains	1	Directed
+Allium sativum - root	bis[(5R)-5-amino-4,8-dioxo-1,3,2-dioxalumocan-2-yl] (2S)-2-aminopentanedioate	contains	contains	1	Directed
+Allium sativum - root	L-glutamate	contains	contains	1	Directed
+Allium sativum - root	L-glutamate(1-)	contains	contains	1	Directed
+Allium sativum - root	Glutamate	contains	contains	1	Directed
+Allium sativum - root	D-glutamic acid	contains	contains	1	Directed
+Allium sativum - root	Monopotassium glutamate	contains	contains	1	Directed
+Allium sativum - root	Glutamate(2-)	contains	contains	1	Directed
+Allium sativum - root	Potassium L-glutamate	contains	contains	1	Directed
+Allium sativum - root	D-glutamate(1-)	contains	contains	1	Directed
+Allium sativum - root	Monopotassium L-glutamate	contains	contains	1	Directed
+Allium sativum	Acetaldehyde	contains	contains	1	Directed
+Allium sativum - bulb	4,4-Diaminostilbene-2,2'-disulfonic acid	contains	contains	1	Directed
+Allium sativum - bulb	4,4'-Diamino-2,2'-stilbenedisulfonic acid	contains	contains	1	Directed
+Allium sativum - bulb	Sodium;4-(4-hexadecoxysulfonylphenoxy)benzenesulfonate	contains	contains	1	Directed
+Allium sativum	Genistin	contains	contains	1	Directed
+Allium sativum	genistein 7-O-glucoside	contains	contains	1	Directed
+Allium sativum	Daidzein	contains	contains	1	Directed
+Allium sativum	Nootkatone	contains	contains	1	Directed
+Allium sativum	Limonene	contains	contains	1	Directed
+Allium sativum	D-Limonene	contains	contains	1	Directed
+Allium sativum	(-)-Limonene	contains	contains	1	Directed
+Allium sativum	Sinapyl alcohol	contains	contains	1	Directed
+Allium sativum	DL-Asparagine	contains	contains	1	Directed
+Allium sativum	2-Linoleoylglycerol	contains	contains	1	Directed
+Allium sativum	Cucurbitacin B	contains	contains	1	Directed
+Allium sativum	cucurbitacin B 2-sulfate	contains	contains	1	Directed
+Allium sativum - leaf	Cadmium	contains	contains	1	Directed
+Allium sativum - leaf	Lead	contains	contains	1	Directed
+Allium sativum - leaf	Chromium	contains	contains	1	Directed
+Allium sativum	Ammonium3-carboxypropanoate	contains	contains	1	Directed
+Allium sativum	Ammonium succinate	contains	contains	1	Directed
+Allium sativum	Dipotassium succinate	contains	contains	1	Directed
+Allium sativum	Diazanium;butanedioic acid	contains	contains	1	Directed
+Allium sativum	Succinate	contains	contains	1	Directed
+Allium sativum	Succinic Acid	contains	contains	1	Directed
+Allium sativum	Butanedioic acid monoammonium salt	contains	contains	1	Directed
+Allium sativum	Azanium;butanedioic acid	contains	contains	1	Directed
+Allium sativum	2-Formylcyclopropane-1-carboxylic acid	contains	contains	1	Directed
+Allium sativum	Captopril	contains	contains	1	Directed
+Allium sativum	Epicaptopril	contains	contains	1	Directed
+Allium sativum	1-(3-Mercapto-2-methyl-1-oxopropyl)-L-proline	contains	contains	1	Directed
+Allium sativum	CID 13022439	contains	contains	1	Directed
+Allium sativum	Calcium;5-butylpyridine-2-carboxylate;hydrate	contains	contains	1	Directed
+Allium sativum	Fusaric acid	contains	contains	1	Directed
+Allium sativum	Calcium fusarate	contains	contains	1	Directed
+Allium sativum	2,6-Dimethylpyrazine	contains	contains	1	Directed
+Allium sativum	2,5-Dimethylpyrazine	contains	contains	1	Directed
+Allium sativum - skin	Lignin	contains	contains	1	Directed
+Allium sativum	2,7-Naphthalenedisulfonic acid, 3-azido-	contains	contains	1	Directed
+Allium sativum	alpha-dicarbonyl methylglyoxal	contains	contains	1	Directed
+Allium sativum	1,4-dicarbonyl butene	contains	contains	1	Directed
+Allium sativum - root	(2R,4S,5R,8R,10S,13R,14R,18S,20R)-10-[(2S,3R,4S,5S)-3-[(2S,3R,4S,5S,6R)-4,5-dihydroxy-6-(hydroxymethyl)-3-[(2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxyoxan-2-yl]oxy-4-[(2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-5-[(2S,3R,4S,5R)-3,4,5-trihydroxyoxan-2-yl]oxyoxan-2-yl]oxy-2-hydroxy-4,5,9,9,13,20-hexamethyl-24-oxahexacyclo[15.5.2.01,18.04,17.05,14.08,13]tetracosane-20-carbaldehyde	contains	contains	1	Directed
+Allium sativum - root	Saponins	contains	contains	1	Directed
+Allium sativum - root	Sasanquasaponin	contains	contains	1	Directed
+Allium sativum - root	Saponin	contains	contains	1	Directed
+Allium sativum - shoot	Magnesium	contains	contains	1	Directed
+Allium sativum	Chromium(III) trispicolinate	contains	contains	1	Directed
+Allium sativum	Picolinate	contains	contains	1	Directed
+Allium sativum	Chromium tripicolinate	contains	contains	1	Directed
+Allium sativum	Chromium;pyridine-2-carboxylic acid	contains	contains	1	Directed
+Allium sativum	Calcium dipicolinate trihydrate	contains	contains	1	Directed
+Allium sativum	Picolinic acid	contains	contains	1	Directed
+Allium sativum	Zinc Picolinate	contains	contains	1	Directed
+Allium sativum	Chromax	contains	contains	1	Directed
+Allium sativum	Ferric picolinate	contains	contains	1	Directed
+Allium sativum	iron(III) picolinate	contains	contains	1	Directed
+Allium sativum	Salicylic Acid	contains	contains	1	Directed
+Allium sativum - bulb	Salicylic Acid	contains	contains	1	Directed
+Allium sativum	2-Amino-6-oxohexanoic acid	contains	contains	1	Directed
+Allium sativum	Allysine	contains	contains	1	Directed
+Allium sativum	Levothroid	contains	contains	1	Directed
+Allium sativum	Levoxyl	contains	contains	1	Directed
+Allium sativum	Levothyroxine	contains	contains	1	Directed
+Allium sativum	Sodium levothyroxine	contains	contains	1	Directed
+Allium sativum	Levothyroxine sodium monohydrate	contains	contains	1	Directed
+Allium sativum	Thyroxine sodium salt	contains	contains	1	Directed
+Allium sativum	Sodium thyroxine	contains	contains	1	Directed
+Allium sativum	Levothyroxine sodium	contains	contains	1	Directed
+Allium sativum	Arsenic	contains	contains	1	Directed
+Allium sativum	Arsine	contains	contains	1	Directed
+Allium sativum - tissue	Flavonoids	contains	contains	1	Directed
+Allium sativum	Xylotriose	contains	contains	1	Directed
+Allium sativum	2-[4,5-Dihydroxy-6-(4,5,6-trihydroxyoxan-3-yl)oxyoxan-3-yl]oxyoxane-3,4,5-triol	contains	contains	1	Directed
+Allium sativum	CID 91873341	contains	contains	1	Directed
+Allium sativum - bulb	S-allylmercapto-N-acetylcysteine	contains	contains	1	Directed
+Allium sativum - tissue	Selenium-80	contains	contains	1	Directed
+Allium sativum - bulb	Oxylipins	contains	contains	1	Directed
+Allium sativum	kaempferol-3-O-glucoside	contains	contains	1	Directed
+Allium sativum	Plastochromanol 8	contains	contains	1	Directed
+Allium sativum	gamma-Tocotrienol	contains	contains	1	Directed
+Allium sativum	tripeptide K-26	contains	contains	1	Directed
+Allium sativum	policosanol	contains	contains	1	Directed
+Allium sativum	L-HISTIDINE, N-beta-ALANYL-	contains	contains	1	Directed
+Allium sativum	Carnosine	contains	contains	1	Directed
+Allium sativum	Carnosine hydrochloride	contains	contains	1	Directed
+Allium sativum	Pyrroloquinoline	contains	contains	1	Directed
+Allium sativum	Hydralazine	contains	contains	1	Directed
+Allium sativum	Hydralazine hydrochloride	contains	contains	1	Directed
+Allium sativum	1,3-Dithiane	contains	contains	1	Directed
+Allium sativum	Radioisotopes	contains	contains	1	Directed
+Allium sativum - leaf	Sugars	contains	contains	1	Directed
+Allium sativum	Jasmonic acid	contains	contains	1	Directed
+Allium sativum	Aminoguanidine	contains	contains	1	Directed
+Allium sativum	Aminoguanidine hydrochloride	contains	contains	1	Directed
+Allium sativum	Aminoguanidine sulfate	contains	contains	1	Directed
+Allium sativum	trans-Stilbene	contains	contains	1	Directed
+Allium sativum	Stilbene	contains	contains	1	Directed
+Allium sativum	Thiobarbituric Acid Reactive Substances	contains	contains	1	Directed
+Allium sativum	Nemispor	contains	contains	1	Directed
+Allium sativum	Ethylenebisdithiocarbamic acid	contains	contains	1	Directed
+Allium sativum	Mancozeb	contains	contains	1	Directed
+Allium sativum	zinc;manganese(2+);N-[2-(sulfidocarbothioylamino)ethyl]carbamodithioate	contains	contains	1	Directed
+Allium sativum	Silicon	contains	contains	1	Directed
+Allium sativum	Fursultiamine	contains	contains	1	Directed
+Allium sativum	Silicon-28	contains	contains	1	Directed
+Allium sativum - shoot	Calcium	contains	contains	1	Directed
+Allium sativum - shoot	Calcium-40	contains	contains	1	Directed
+Allium sativum	Acrolein	contains	contains	1	Directed
+Allium sativum - sprout	Linolenic Acid	contains	contains	1	Directed
+Allium sativum	delta-aminolevulinic acid methyl ester	contains	contains	1	Directed
+Allium sativum - sprout	delta-aminolevulinic acid methyl ester	contains	contains	1	Directed
+Allium sativum	histidine-pyridine-histidine-3	contains	contains	1	Directed
+Allium sativum	Sodium Chloride	contains	contains	1	Directed
+Allium sativum	Sodium ion	contains	contains	1	Directed
+Allium sativum	Potassium ion	contains	contains	1	Directed
+Allium sativum	Calcium ion	contains	contains	1	Directed
+Allium sativum	Magnesium ion	contains	contains	1	Directed
+Allium sativum	Ferrous ion	contains	contains	1	Directed
+Allium sativum	Cupric ion	contains	contains	1	Directed
+Allium sativum	ZINC ion	contains	contains	1	Directed
+Allium sativum	Manganese(2+)	contains	contains	1	Directed
+Allium sativum	Selenium	contains	contains	1	Directed
+Allium sativum	Decanoic acid	contains	contains	1	Directed
+Allium sativum	Loxoprofen	contains	contains	1	Directed
+Allium sativum	6-Fluoro-2',5'-dioxo-2,3-dihydrospiro[chromene-4,4'-imidazolidine]-2-carboxamide	contains	contains	1	Directed
+Allium sativum	L-cystine	contains	contains	1	Directed
+Allium sativum	Lariciresinol	contains	contains	1	Directed
+Allium sativum	Pinoresinol	contains	contains	1	Directed
+Allium sativum	(2R,3R)-2,3-bis[(4-hydroxy-3-methoxyphenyl)(113C)methyl](113C)butane-1,4-diol	contains	contains	1	Directed
+Allium sativum	Ketones	contains	contains	1	Directed
+Allium sativum	Glucosides	contains	contains	1	Directed
+Allium sativum	Stearic Acid	contains	contains	1	Directed
+Allium sativum	Lactones	contains	contains	1	Directed
+Allium sativum	Iodide ion	contains	contains	1	Directed
+Allium sativum	Flavanones	contains	contains	1	Directed
+Allium sativum	Strontium	contains	contains	1	Directed
+Allium sativum	Stearic Acids	contains	contains	1	Directed
+Allium sativum	Barium	contains	contains	1	Directed
+Allium sativum	D-(+)-Cellobiose	contains	contains	1	Directed
+Allium sativum	acetyl-arginyl-arginyl-methionyl-tyrosyl-arginyl-arginyl-isoleucyl-tyrosyl-arginyl-argininamide	contains	contains	1	Directed
+Allium sativum	Hydroxybenzoates	contains	contains	1	Directed
+Allium sativum	DL-Xylose	contains	contains	1	Directed
+Allium sativum	Proanthocyanidins	contains	contains	1	Directed
+Allium sativum	Polyamines	contains	contains	1	Directed
+Allium sativum	Deae-cellulose	contains	contains	1	Directed
+Allium sativum	Hydrogen Peroxide	contains	contains	1	Directed
+Allium sativum	Poriferasterol	contains	contains	1	Directed
+Allium sativum	Sitosterols	contains	contains	1	Directed
+Allium sativum	Isorhamnetin	contains	contains	1	Directed
+Allium sativum	Taxifolin	contains	contains	1	Directed
+Allium sativum	Procyanidin	contains	contains	1	Directed
+Allium sativum	Hydrogen	contains	contains	1	Directed
+Allium sativum	Delphinidin	contains	contains	1	Directed
+Allium sativum	Palmitoleic acid	contains	contains	1	Directed
+Allium sativum	Glucans	contains	contains	1	Directed
+Allium sativum	AN 3	contains	contains	1	Directed

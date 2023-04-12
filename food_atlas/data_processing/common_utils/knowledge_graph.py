@@ -257,33 +257,41 @@ class KnowledgeGraph():
     def _check_duplicate_evidence(self, evidence):
         raise NotImplementedError()
 
-    def add_triples(self, df: pd.DataFrame):
+    def add_triples(self, df: pd.DataFrame, source=None):
         assert set(["head", "relation", "tail", "source", "quality"]).issubset(df.columns)
+        assert source in [None, 'lp']
         print(f"Size of triples to add: {df.shape[0]}")
 
-        entities = df["head"].tolist() + df["tail"].tolist()
+        if source is None:
+            entities = df["head"].tolist() + df["tail"].tolist()
 
-        # check all chemical entities integrity
-        chemical_entities = [e for e in entities if e.type == "chemical"]
-        for e in chemical_entities:
-            assert "PubChem" in e.other_db_ids or "MESH" in e.other_db_ids
-            if "PubChem" in e.other_db_ids:
-                assert len(e.other_db_ids["PubChem"]) == 1
-            if "MESH" in e.other_db_ids:
-                assert len(e.other_db_ids["MESH"]) != 0
-        self.add_update_entities(entities)
+            # check all chemical entities integrity
+            chemical_entities = [e for e in entities if e.type == "chemical"]
+            for e in chemical_entities:
+                assert "PubChem" in e.other_db_ids or "MESH" in e.other_db_ids
+                if "PubChem" in e.other_db_ids:
+                    assert len(e.other_db_ids["PubChem"]) == 1
+                if "MESH" in e.other_db_ids:
+                    assert len(e.other_db_ids["MESH"]) != 0
+            self.add_update_entities(entities)
 
-        relations = df["relation"].tolist()
-        self._add_candidate_relations(relations)
+            relations = df["relation"].tolist()
+            self._add_candidate_relations(relations)
 
         print("Adding triples...")
 
         def _f(row):
             data = []
             evidence = []
-            head_foodatlas_id = self._find_matching_foodatlas_id(row["head"])
-            relation_foodatlas_id = self._find_matching_foodatlas_id(row["relation"])
-            tail_foodatlas_id = self._find_matching_foodatlas_id(row["tail"])
+
+            if source == 'lp':
+                head_foodatlas_id = row["head"]
+                relation_foodatlas_id = row["relation"]
+                tail_foodatlas_id = row["tail"]
+            else:
+                head_foodatlas_id = self._find_matching_foodatlas_id(row["head"])
+                relation_foodatlas_id = self._find_matching_foodatlas_id(row["relation"])
+                tail_foodatlas_id = self._find_matching_foodatlas_id(row["tail"])
 
             triple = pd.Series({
                 "head": head_foodatlas_id,
@@ -318,6 +326,7 @@ class KnowledgeGraph():
             data.extend(d)
             evidence.extend(e)
 
+        print()
         print("Updating the KG...")
         self.df_kg = pd.concat([self.df_kg, pd.DataFrame(data)])
         print("Dropping duplicates in the KG...")
@@ -590,14 +599,9 @@ class KnowledgeGraph():
             all_names += [name]
             all_names = list(set(all_names))
 
-            if type_.startswith("organism_with_part"):
-                self.df_entities.at[foodatlas_id, "name"] = f"{name} - {part_name}"
-                self.df_entities.at[foodatlas_id, "synonyms"] = \
-                    KnowledgeGraph._merge_synonyms(all_names)
-            else:
-                self.df_entities.at[foodatlas_id, "name"] = name
-                self.df_entities.at[foodatlas_id, "synonyms"] = \
-                    KnowledgeGraph._merge_synonyms(all_names)
+            self.df_entities.at[foodatlas_id, "name"] = name
+            self.df_entities.at[foodatlas_id, "synonyms"] = \
+                KnowledgeGraph._merge_synonyms(all_names)
 
         if synonyms:
             all_names = self._nested_deep_copy(self.df_entities.at[foodatlas_id, "synonyms"])

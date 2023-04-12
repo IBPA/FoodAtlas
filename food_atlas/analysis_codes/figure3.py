@@ -1,6 +1,8 @@
+from collections import Counter
 from itertools import product
 import math
 import os
+from pathlib import Path
 import sys
 import textwrap
 
@@ -19,7 +21,7 @@ from common_utils.knowledge_graph import KnowledgeGraph  # noqa: E402
 from upsetplot import UpSet  # noqa: E402
 
 FINAL_DATA_DIR = "../../outputs/backend_data/v0.1"
-OUTPUT_DIR = "../../outputs/analysis_codes"
+OUTPUT_DIR = "../../outputs/analysis_codes/figure3"
 BACKEND_DATA_DIR = "../../outputs/backend_data/v0.1"
 
 
@@ -146,9 +148,16 @@ def visualize_source(fa_kg):
 
 def upset_plot(fa_kg):
     df_evidence = fa_kg.get_evidence()
+
     df_evidence["source"] = df_evidence["source"].str.replace(
-        'FoodAtlas:prediction:entailment', 'FoodAtlas:prediction')
+        'FoodAtlas:prediction:entailment', 'FoodAtlas:pred:ent')
+    df_evidence["source"] = df_evidence["source"].str.replace(
+        'FoodAtlas:prediction:lp', 'FoodAtlas:pred:LP')
+    df_evidence["source"] = df_evidence["source"].str.replace(
+        'FoodAtlas:annotation', 'FoodAtlas:annot')
+
     sources = sorted(list(set(df_evidence['source'].tolist())))
+    print(sources)
 
     df_relation = fa_kg.get_all_relations()
     relation_dict = dict(zip(df_relation["foodatlas_id"].tolist(), df_relation["name"].tolist()))
@@ -169,7 +178,7 @@ def upset_plot(fa_kg):
         show_counts='%d',
         sort_by='cardinality',
         intersection_plot_elements=0,
-        totals_plot_elements=5,
+        totals_plot_elements=3,
     )
     upset.add_stacked_bars(
         by="relation",
@@ -198,8 +207,10 @@ def upset_plot_contains(fa_kg):
         'FoodAtlas:prediction:entailment', 'FoodAtlas')
     df_evidence["source"] = df_evidence["source"].str.replace(
         'FoodAtlas:annotation', 'FoodAtlas')
+    df_evidence["source"] = df_evidence["source"].str.replace(
+        'FoodAtlas:prediction:lp', 'FoodAtlas')
     df_evidence["source"] = df_evidence.apply(
-        lambda row: f"{row['source']}-{row['quality']}", axis=1)
+        lambda row: f"{row['source']} ({row['quality']})", axis=1)
     sources = sorted(list(set(df_evidence['source'].tolist())))
 
     df_relation = fa_kg.get_all_relations()
@@ -221,7 +232,7 @@ def upset_plot_contains(fa_kg):
         show_counts='%d',
         sort_by='cardinality',
         intersection_plot_elements=0,
-        totals_plot_elements=5,
+        totals_plot_elements=3,
     )
     upset.add_stacked_bars(
         by="relation",
@@ -639,6 +650,7 @@ def plot_node_stats(fa_kg, G, dictionary):
     # degree centrality
     # The number of edges it has (either in or out).
     # Higher = more central.
+    print('Degree centrality')
     degree_centrality = nx.degree_centrality(G)
     df_degree_centrality = pd.DataFrame({
         "foodatlas_id": degree_centrality.keys(),
@@ -651,6 +663,7 @@ def plot_node_stats(fa_kg, G, dictionary):
     # of nodes that pass through the node of interest.
     # Higher = More control over the network
     # since more information passes through this node.
+    print('betweenness centrality')
     betweenness_centrality = nx.betweenness_centrality(G)
     df_betweenness_centrality = pd.DataFrame({
         "foodatlas_id": betweenness_centrality.keys(),
@@ -662,6 +675,7 @@ def plot_node_stats(fa_kg, G, dictionary):
     # Average length of the shortest path between the
     # node and all other nodes in the graph.
     # Higher = close to all other nodes
+    print('closeness centrality')
     closeness_centrality = nx.closeness_centrality(G)
     df_closeness_centrality = pd.DataFrame({
         "foodatlas_id": closeness_centrality.keys(),
@@ -670,6 +684,7 @@ def plot_node_stats(fa_kg, G, dictionary):
     df_closeness_centrality.sort_values("closeness_centrality", ascending=False, inplace=True)
 
     # eigenvector centrality
+    print('eigenvector centrality')
     eigenvector_centrality = nx.eigenvector_centrality(G, max_iter=1000)
     df_eigenvector_centrality = pd.DataFrame({
         "foodatlas_id": eigenvector_centrality.keys(),
@@ -972,13 +987,54 @@ def count_high_med_low_quality_triples(fa_kg):
     print(f"Number of low-quality triples: {df_low.shape[0]}")
 
 
+def count_fig3a(fa_kg):
+    df_kg = fa_kg.get_kg()
+    df_relations = fa_kg.get_all_relations()
+    df_entities =fa_kg.get_all_entities()
+
+    rel_dict = dict(zip(df_relations['name'], df_relations['foodatlas_id']))
+    print(rel_dict)
+
+    relations = df_kg['relation'].tolist()
+    print(Counter(relations))
+
+    df_entities_foodpart = fa_kg.get_entities_by_type(
+        exact_type='organism_with_part',
+        startswith_type='organism_with_part:',
+    )
+    print(df_entities_foodpart)
+
+    df_entities_food = fa_kg.get_entities_by_type(
+        exact_type='organism',
+        startswith_type='organism:',
+    )
+    print(df_entities_food)
+
+    df_entities_chemical = fa_kg.get_entities_by_type(
+        exact_type='chemical',
+        startswith_type='chemical:',
+    )
+    print(df_entities_chemical)
+
+    df_contains = df_kg[df_kg['relation'] == rel_dict['contains']]
+    print(df_contains)
+
+    df_foodpart_contains = df_contains[df_contains['head'].apply(
+        lambda x: x in df_entities_foodpart['foodatlas_id'].tolist()
+    )]
+    print(df_foodpart_contains)
+
+
 def main():
     fa_kg = KnowledgeGraph(kg_dir=FINAL_DATA_DIR)
 
+    Path(OUTPUT_DIR).mkdir(exist_ok=True, parents=True)
+
+    # count_fig3a(fa_kg)
     # visualize_source(fa_kg)
-    # visualize_entities(fa_kg)
+    visualize_entities(fa_kg)
     # visualize_relations(fa_kg)
-    upset_plot(fa_kg)
+    # upset_plot(fa_kg)
     # upset_plot_contains(fa_kg)
     # plot_sunburst_chemicals("../../outputs/backend_data/v0.1/chemicals_group.txt")
     # plot_sunburst_organisms("../../outputs/backend_data/v0.1/organisms_group.txt")
