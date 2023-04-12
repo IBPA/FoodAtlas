@@ -241,22 +241,3 @@ def plot_venn3():
 
 if __name__ == '__main__':
     plot_venn3()
-
-    # data_cocoa_lp = pd.read_excel(
-    #     "outputs/benchmark/annotated/link_prediction_annotated.xlsx",
-    #     sheet_name='cocoa',
-    # ).query("Validation == 'Yes'")['inchikey_code']
-    # print(data_cocoa_lp)
-
-    # from ..data_processing.common_utils.knowledge_graph import KnowledgeGraph
-
-    # kg = KnowledgeGraph('outputs/backend_data/v0.1')
-    # evidence = kg.get_evidence()
-    # entities_cocoa = kg.get_entity_by_other_db_id({
-    #     'NCBI_taxonomy': ['3641'],
-    # })['foodatlas_id'].tolist()
-    # evidence_cocoa = evidence.query(
-    #     f"head in {entities_cocoa} & relation == 'r0'"
-    # )
-    # evidence_cocoa.to_csv("check_cocoa_evidence.csv")
-    # print(evidence_cocoa)
