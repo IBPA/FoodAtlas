@@ -1,0 +1,155 @@
+Source	Target	Label	Label_copy	Weight	Type
+Brassica rapa var. rapa	L-cystine	contains	contains	1.0	Directed
+Lota lota	Arsenic(3+)	contains	contains	1.0	Directed
+Juglans cinerea	5(2-(2-mercaptoethanol)-3-methyl-1,4-napthoquinone)	contains	contains	0.996026492	Directed
+Brassica oleracea var. italica	Linolenic Acid	contains	contains	0.996026492	Directed
+Melanogrammus aeglefinus	Iodide ion	contains	contains	0.995744681	Directed
+Rhaphiolepis bibas	Pyridoxal phosphate	contains	contains	0.993536663	Directed
+Pangasianodon hypophthalmus	Thiamine	contains	contains	0.993518877	Directed
+Phasianus colchicus	Vitamin E	contains	contains	0.99304142	Directed
+Solea solea	Pyridoxal phosphate	contains	contains	0.992266417	Directed
+Microstomus kitt	ZINC ion	contains	contains	0.992266417	Directed
+Raphanus sativus var. sativus	Arsenic(3+)	contains	contains	0.991771173	Directed
+Anser anser	Iodide ion	contains	contains	0.991771173	Directed
+Microstomus kitt	Manganese(2+)	contains	contains	0.990196073	Directed
+Solea solea	Manganese(2+)	contains	contains	0.989281344	Directed
+Phasianus colchicus	Selenium	contains	contains	0.988292909	Directed
+Lupinus albus	Iron, isotope of mass 56	contains	contains	0.988292909	Directed
+Anacardium occidentale	Nitrogen	contains	contains	0.985319555	Directed
+Sambucus nigra	Manganese(2+)	contains	contains	0.985307837	Directed
+Panax ginseng	Hydrolyzable Tannins	contains	contains	0.985307837	Directed
+Vaccinium myrtillus	Fatty Acids, Unsaturated	contains	contains	0.985307837	Directed
+Nelumbo nucifera	Iron, isotope of mass 56	contains	contains	0.985307837	Directed
+Durio zibethinus	Phenols	contains	contains	0.983175504	Directed
+Pouteria sapota	L-cystine	contains	contains	0.981967247	Directed
+Sprattus sprattus	Sodium ion	contains	contains	0.981612849	Directed
+Origanum vulgare	Myricetin	contains	contains	0.981119657	Directed
+Solea solea	Cupric ion	contains	contains	0.979715014	Directed
+Petroselinum crispum Radicosum Group	ZINC ion	contains	contains	0.979715014	Directed
+Melanogrammus aeglefinus	Manganese(2+)	contains	contains	0.979361415	Directed
+Octopus bimaculatus	Cupric ion	contains	contains	0.97921977	Directed
+Averrhoa carambola	Pyridoxal phosphate	contains	contains	0.979201996	Directed
+Sprattus sprattus	Iodide ion	contains	contains	0.978584361	Directed
+Belone belone	Thiamine	contains	contains	0.978146303	Directed
+Panax ginseng	Zinc	contains	contains	0.978134584	Directed
+Cucumis melo	Vitamin E	contains	contains	0.977005696	Directed
+Cucumis melo var. cantalupo	Chromium(III)	contains	contains	0.976883304	Directed
+Rhaphiolepis bibas	Pantothenic acid	contains	contains	0.976795721	Directed
+Theobroma cacao	Beta-Carotene	contains	contains	0.97582947	Directed
+Trachinotus carolinus	Leucine	contains	contains	0.975106096	Directed
+Apium graveolens Dulce Group	Linolenic Acid	contains	contains	0.975106096	Directed
+Abelmoschus esculentus	Sterol	contains	contains	0.972909796	Directed
+Clupea harengus	Thiamine	contains	contains	0.972876334	Directed
+Artemisia vulgaris	Flavonols	contains	contains	0.972756433	Directed
+Triticum turgidum subsp. durum	Coumaric Acids	contains	contains	0.972028744	Directed
+Prunus dulcis	Flavones	contains	contains	0.972028744	Directed
+Theobroma cacao	beta Carotene	contains	contains	0.971678317	Directed
+Abramis	Pyridoxal phosphate	contains	contains	0.970434773	Directed
+Ficus carica	Oils, Volatile	contains	contains	0.970067954	Directed
+Momordica charantia	Copper-63	contains	contains	0.96955533	Directed
+Vigna radiata	Oleic Acids	contains	contains	0.969398069	Directed
+Artocarpus heterophyllus	Zinc	contains	contains	0.969398069	Directed
+Moringa oleifera	Cadmium	contains	contains	0.969398069	Directed
+Myristica fragrans	Eucalyptol	contains	contains	0.969398069	Directed
+Musa x paradisiaca	Flavonols	contains	contains	0.969398069	Directed
+Columba	Selenium	contains	contains	0.969060552	Directed
+Musa x paradisiaca	Linolenic Acid	contains	contains	0.968646133	Directed
+Pastinaca sativa	Selenium	contains	contains	0.96815294	Directed
+Cucumis melo var. cantalupo	Selenium	contains	contains	0.967582417	Directed
+Ribes rubrum	Selenium	contains	contains	0.966795611	Directed
+Petroselinum crispum Radicosum Group	Manganese(2+)	contains	contains	0.966709983	Directed
+Brassica oleracea var. italica	Proline	contains	contains	0.966362715	Directed
+Raphanus sativus var. niger	Cupric ion	contains	contains	0.966304815	Directed
+Cucumis sativus	Retinol	contains	contains	0.966304815	Directed
+Petroselinum crispum Radicosum Group	Selenium	contains	contains	0.965937579	Directed
+Rumex acetosa	Tryptophan	contains	contains	0.965637422	Directed
+Coriandrum sativum	Coumaric Acids	contains	contains	0.965302169	Directed
+Clupea harengus	Molybdenum	contains	contains	0.965302169	Directed
+Averrhoa carambola	Pantothenic acid	contains	contains	0.965302169	Directed
+Brosme brosme	Sodium Chloride	contains	contains	0.965136063	Directed
+Brosme brosme	Sodium Chloride	contains	contains	0.965136063	Directed
+Petroselinum crispum Radicosum Group	Cupric ion	contains	contains	0.963865542	Directed
+Odobenus rosmarus	Cadmium	contains	contains	0.963511944	Directed
+Zingiber officinale	Coumaric Acids	contains	contains	0.96344949	Directed
+Persea americana	Aldehydes	contains	contains	0.96344949	Directed
+Brassica rapa var. rapa	Iodide ion	contains	contains	0.962952507	Directed
+Thunnus thynnus	Cupric ion	contains	contains	0.962554693	Directed
+Thunnus thynnus	Iodide ion	contains	contains	0.962224817	Directed
+Hippophae rhamnoides	Coumaric Acids	contains	contains	0.962224817	Directed
+Raphanus sativus var. niger	ZINC ion	contains	contains	0.962205946	Directed
+Lactuca sativa var. longifolia	Methionine	contains	contains	0.962205946	Directed
+Anarhichas lupus	Manganese(2+)	contains	contains	0.961783755	Directed
+Phaseolus vulgaris	Steroids	contains	contains	0.9598014	Directed
+Ribes rubrum	Flavan-3-ol	contains	contains	0.9598014	Directed
+Petroselinum crispum	Arsenic	contains	contains	0.958716249	Directed
+Brassica oleracea var. italica	Potassium	contains	contains	0.958716249	Directed
+Petroselinum crispum	Arsenic	contains	contains	0.958716249	Directed
+Anarhichas lupus	Cupric ion	contains	contains	0.958638704	Directed
+Ananas comosus	L-threonine	contains	contains	0.958349013	Directed
+Brassica rapa subsp. rapa	Tocopherols	contains	contains	0.958128917	Directed
+Panax ginseng	Tocopherols	contains	contains	0.958128917	Directed
+Ribes rubrum	Kaempferol	contains	contains	0.958128917	Directed
+Taraxacum officinale	Oils	contains	contains	0.956846666	Directed
+Vaccinium myrtillus	Polysaccharides	contains	contains	0.956846666	Directed
+Prunus armeniaca	Alkaloids	contains	contains	0.956846666	Directed
+Manilkara zapota	Thiamine	contains	contains	0.956846666	Directed
+Capparis spinosa	Fatty Acids, Unsaturated	contains	contains	0.956204569	Directed
+Squalus acanthias	Nickel (II) ion	contains	contains	0.956103075	Directed
+Ficus carica	Hydrolyzable Tannins	contains	contains	0.956051207	Directed
+Daucus carota	Glucosides	contains	contains	0.956045151	Directed
+Capsicum frutescens	Phosphorus	contains	contains	0.956045151	Directed
+Brassica rapa	Chromium	contains	contains	0.9557055	Directed
+Brassica rapa	Chromium	contains	contains	0.9557055	Directed
+Capsicum annuum var. annuum	Potassium	contains	contains	0.950356317	Directed
+Basella alba	Magnesium	contains	contains	0.93334738	Directed
+Brassica rapa	Phenols	contains	contains	0.913268924	Directed
+Passiflora edulis	Caffeic Acids	contains	contains	0.910490334	Directed
+Vigna angularis	Amino Acids	contains	contains	0.876390123	Directed
+Molva molva	Steroids	contains	contains	0.873575962	Directed
+Rhaphiolepis bibas	Folic Acid	contains	contains	0.857456255	Directed
+Nelumbo nucifera	Potassium	contains	contains	0.853535426	Directed
+Pleuronectes platessa	Docosa-2,4,6,8,10,12-hexaenoic acid	contains	contains	0.851144683	Directed
+Mentha aquatica	Phenols	contains	contains	0.85050863	Directed
+Psidium guajava	Zeaxanthin	contains	contains	0.840899408	Directed
+Cydonia oblonga	Leucine	contains	contains	0.811576164	Directed
+Anethum graveolens	cis-Caffeic acid	contains	contains	0.804438078	Directed
+Ceratonia siliqua	Kaempferol	contains	contains	0.790963066	Directed
+Lactuca sativa	Linolenic Acid	contains	contains	0.765565169	Directed
+Citrus limon	Diterpenes	contains	contains	0.762688994	Directed
+Lens culinaris	Biotin	contains	contains	0.752311313	Directed
+Portulaca oleracea	Flavonols	contains	contains	0.745710003	Directed
+Anser anser	Chromium(III)	contains	contains	0.74064002	Directed
+Artocarpus heterophyllus	Alcohols	contains	contains	0.722978282	Directed
+Fagopyrum esculentum	Ellagic acid	contains	contains	0.677989209	Directed
+Rubus occidentalis	Chlorophyll	contains	contains	0.676259166	Directed
+Prunus dulcis	L-Alloisoleucine	contains	contains	0.67145505	Directed
+Vigna umbellata	Copper	contains	contains	0.666105425	Directed
+Nelumbo nucifera	Arginine	contains	contains	0.665643716	Directed
+Ginkgo biloba	Alkanes	contains	contains	0.663046682	Directed
+Allium fistulosum	Oils	contains	contains	0.658132553	Directed
+Averrhoa carambola	Flavone	contains	contains	0.610864866	Directed
+Phyllostachys bambusoides	Manganese(2+)	contains	contains	0.596943271	Directed
+Glycine max	Xanthophylls	contains	contains	0.586147732	Directed
+Momordica charantia	Plant Oils	contains	contains	0.529377705	Directed
+Coffea canephora	hemicellulose	contains	contains	0.516333294	Directed
+Ribes rubrum	Lipids	contains	contains	0.511613017	Directed
+Pyrus communis	Campesterol	contains	contains	0.459341806	Directed
+Cancer pagurus	Phenylalanine	contains	contains	0.454545248	Directed
+Acca sellowiana	Calcium ion	contains	contains	0.44460125	Directed
+Salmo salar	Cholesterol Formate	contains	contains	0.441023898	Directed
+Sus scrofa domesticus	Cadmium	contains	contains	0.383114529	Directed
+Satureja montana	alpha-Thujone	contains	contains	0.356238234	Directed
+Prunus armeniaca	Phloroglucinol	contains	contains	0.320182419	Directed
+Brassica rapa subsp. rapa	Poriferasterol	contains	contains	0.308523369	Directed
+Prunus cerasus	Polydatin	contains	contains	0.278929347	Directed
+Levisticum officinale	beta-Pinene	contains	contains	0.253311792	Directed
+Solanum lycopersicum	Phthalate	contains	contains	0.237910298	Directed
+Apium graveolens	Molybdenum	contains	contains	0.235169685	Directed
+Raphanus sativus var. niger	Clothianidin	contains	contains	0.11741723	Directed
+Capsicum	Polysaccharides	contains	contains	0.112056766	Directed
+Morella rubra	Anions	contains	contains	0.110367998	Directed
+Cydonia oblonga	Protopam chloride	contains	contains	0.051450051	Directed
+Sebastes alutus	Phosphatidylinositol Phosphates	contains	contains	0.01	Directed
+Salmo trutta	N-Acetyl-L-aspartic acid	contains	contains	0.01	Directed
+Brassica oleracea var. sabauda	Clethodim	contains	contains	0.01	Directed
+Origanum onites	coenzyme A(4-)	contains	contains	0.01	Directed

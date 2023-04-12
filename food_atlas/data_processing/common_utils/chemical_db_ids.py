@@ -19,22 +19,22 @@ from common_utils.utils import save_pkl, load_pkl
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-FOODATLAS_DATA_DIR = "../../data/FoodAtlas"
-MESH_DATA_DIR = "../../data/MESH"
-DESC_FILEPATH = "../../data/MESH/desc2022.xml"
-SUPP_FILEPATH = "../../data/MESH/supp2022.xml"
+FOODATLAS_DATA_DIR = "../../../data/FoodAtlas"
+MESH_DATA_DIR = "../../../data/MESH"
+DESC_FILEPATH = "../../../data/MESH/desc2022.xml"
+SUPP_FILEPATH = "../../../data/MESH/supp2022.xml"
 KG_FILENAME = "kg.txt"
 EVIDENCE_FILENAME = "evidence.txt"
 ENTITIES_FILENAME = "entities.txt"
 RETIRED_ENTITIES_FILENAME = "retired_entities.txt"
 RELATIONS_FILENAME = "relations.txt"
-PUBCHEM_CID_MESH_FILEPATH = "../../data/PubChem/CID-MeSH.txt"
+PUBCHEM_CID_MESH_FILEPATH = "../../../data/PubChem/CID-MeSH.txt"
 CAS_ID_CID_QUERY_URL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/{}/cids/JSON"
 CID_QUERY_URL = "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/{}/JSON"
-PUBCHEM_NAMES_FILEPATH = "../../data/FoodAtlas/pubchem_names.pkl"
-CAS_CID_LOOKUP_PKL_FILEPATH = "../../data/FoodAtlas/cas_cid_lookup.pkl"
-CID_JSON_LOOKUP_PKL_FILEPATH = "../../data/FoodAtlas/cid_json_lookup.pkl"
-NCBI_MESH_URL_MESH_ID_LOOKUP_PKL_FILEPATH = "../../data/FoodAtlas/ncbi_mesh_url_mesh_id_lookup.pkl"
+PUBCHEM_NAMES_FILEPATH = "../../../data/FoodAtlas/pubchem_names.pkl"
+CAS_CID_LOOKUP_PKL_FILEPATH = "../../../data/FoodAtlas/cas_cid_lookup.pkl"
+CID_JSON_LOOKUP_PKL_FILEPATH = "../../../data/FoodAtlas/cid_json_lookup.pkl"
+NCBI_MESH_URL_MESH_ID_LOOKUP_PKL_FILEPATH = "../../../data/FoodAtlas/ncbi_mesh_url_mesh_id_lookup.pkl"
 
 
 def _get_cid_json_lookup_using_cid(cid: str):
@@ -461,16 +461,20 @@ def read_pubchem_cid_mesh():
     return df_cid_mesh
 
 
-def read_mesh_data():
+def read_mesh_data(
+        mesh_data_dir=MESH_DATA_DIR,
+        desc_filepath=DESC_FILEPATH,
+        supp_filepath=SUPP_FILEPATH,
+):
     # parse descriptors
     desc_mesh_id_tree_number_lookup_filepath = os.path.join(
-        MESH_DATA_DIR, 'desc_mesh_id_tree_number_lookup.pkl')
+        mesh_data_dir, 'desc_mesh_id_tree_number_lookup.pkl')
     desc_mesh_id_name_lookup_filepath = os.path.join(
-        MESH_DATA_DIR, 'desc_mesh_id_name_lookup.pkl')
+        mesh_data_dir, 'desc_mesh_id_name_lookup.pkl')
     desc_tree_number_mesh_id_lookup_filepath = os.path.join(
-        MESH_DATA_DIR, 'desc_tree_number_mesh_id_lookup.pkl')
+        mesh_data_dir, 'desc_tree_number_mesh_id_lookup.pkl')
     desc_tree_number_name_lookup_filepath = os.path.join(
-        MESH_DATA_DIR, 'desc_tree_number_name_lookup.pkl')
+        mesh_data_dir, 'desc_tree_number_name_lookup.pkl')
 
     if Path(desc_mesh_id_tree_number_lookup_filepath).is_file() and \
        Path(desc_mesh_id_name_lookup_filepath).is_file() and \
@@ -483,7 +487,7 @@ def read_mesh_data():
         desc_tree_number_name_lookup = load_pkl(desc_tree_number_name_lookup_filepath)
     else:
         print("Loading descriptor XML...")
-        desc = ET.parse(DESC_FILEPATH)
+        desc = ET.parse(desc_filepath)
         desc_root = desc.getroot()
 
         print("Generating descriptor parent map...")
@@ -523,11 +527,11 @@ def read_mesh_data():
 
     # parse supplementary
     supp_mesh_id_element_lookup_filepath = os.path.join(
-        MESH_DATA_DIR, 'supp_mesh_id_element_lookup.pkl')
+        mesh_data_dir, 'supp_mesh_id_element_lookup.pkl')
     supp_mesh_id_heading_mesh_id_lookup_filepath = os.path.join(
-        MESH_DATA_DIR, 'supp_mesh_id_heading_mesh_id_lookup.pkl')
+        mesh_data_dir, 'supp_mesh_id_heading_mesh_id_lookup.pkl')
     supp_mesh_id_name_lookup_filepath = os.path.join(
-        MESH_DATA_DIR, 'supp_mesh_id_name_lookup.pkl')
+        mesh_data_dir, 'supp_mesh_id_name_lookup.pkl')
 
     if Path(supp_mesh_id_element_lookup_filepath).is_file() and \
        Path(supp_mesh_id_heading_mesh_id_lookup_filepath).is_file() and \
@@ -538,7 +542,7 @@ def read_mesh_data():
         supp_mesh_id_name_lookup = load_pkl(supp_mesh_id_name_lookup_filepath)
     else:
         print("Loading supplementary XML...")
-        supp = ET.parse(SUPP_FILEPATH)
+        supp = ET.parse(supp_filepath)
         supp_root = supp.getroot()
 
         print("Generating supplementary parent map...")
