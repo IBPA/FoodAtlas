@@ -223,6 +223,7 @@ def plot_venn3():
             "outputs/benchmark/annotated/link_prediction_annotated.xlsx",
             sheet_name=food,
         ).query("Validation == 'Yes'")['inchikey_code'].tolist()
+        print(f"LP: {food}: {len(set(chems_fa_lp))}")
         chems_fa.update(chems_fa_lp)
 
         if food == 'cocoa':
