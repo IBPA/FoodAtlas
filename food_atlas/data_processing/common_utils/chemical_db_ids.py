@@ -475,16 +475,20 @@ def read_mesh_data(
         mesh_data_dir, 'desc_tree_number_mesh_id_lookup.pkl')
     desc_tree_number_name_lookup_filepath = os.path.join(
         mesh_data_dir, 'desc_tree_number_name_lookup.pkl')
+    desc_mesh_id_entry_lookup_filepath = os.path.join(
+        mesh_data_dir, 'desc_mesh_id_entry_lookup.pkl')
 
     if Path(desc_mesh_id_tree_number_lookup_filepath).is_file() and \
        Path(desc_mesh_id_name_lookup_filepath).is_file() and \
        Path(desc_tree_number_mesh_id_lookup_filepath).is_file() and \
-       Path(desc_tree_number_name_lookup_filepath).is_file():
+       Path(desc_tree_number_name_lookup_filepath).is_file() and \
+       Path(desc_mesh_id_entry_lookup_filepath).is_file():
         print("Found all pickle files for descriptor mesh data.")
         desc_mesh_id_tree_number_lookup = load_pkl(desc_mesh_id_tree_number_lookup_filepath)
         desc_mesh_id_name_lookup = load_pkl(desc_mesh_id_name_lookup_filepath)
         desc_tree_number_mesh_id_lookup = load_pkl(desc_tree_number_mesh_id_lookup_filepath)
         desc_tree_number_name_lookup = load_pkl(desc_tree_number_name_lookup_filepath)
+        desc_mesh_id_entry_lookup = load_pkl(desc_mesh_id_entry_lookup_filepath)
     else:
         print("Loading descriptor XML...")
         desc = ET.parse(desc_filepath)
@@ -496,6 +500,7 @@ def read_mesh_data(
         print("Generating descriptor lookups...")
         desc_mesh_id_tree_number_lookup = {}
         desc_mesh_id_name_lookup = {}
+        desc_mesh_id_entry_lookup = {}
         for x in desc_root.iter("DescriptorUI"):
             parent = desc_parent_map[x]
             if parent.tag != "DescriptorRecord":
@@ -511,6 +516,12 @@ def read_mesh_data(
                 assert desc_parent_map[y].tag == "TreeNumberList"
                 desc_mesh_id_tree_number_lookup[x.text].append(y.text)
 
+            desc_mesh_id_entry_lookup[x.text] = []
+            for y in parent.iter("String"):
+                if desc_parent_map[y].tag != "Term":
+                    continue
+                desc_mesh_id_entry_lookup[x.text].append(y.text)
+
         desc_tree_number_mesh_id_lookup = {}
         for k, v in desc_mesh_id_tree_number_lookup.items():
             for x in v:
@@ -520,10 +531,12 @@ def read_mesh_data(
         for k, v in desc_tree_number_mesh_id_lookup.items():
             desc_tree_number_name_lookup[k] = desc_mesh_id_name_lookup[v]
 
+        print('Saving desc pickles...')
         save_pkl(desc_mesh_id_tree_number_lookup, desc_mesh_id_tree_number_lookup_filepath)
         save_pkl(desc_mesh_id_name_lookup, desc_mesh_id_name_lookup_filepath)
         save_pkl(desc_tree_number_mesh_id_lookup, desc_tree_number_mesh_id_lookup_filepath)
         save_pkl(desc_tree_number_name_lookup, desc_tree_number_name_lookup_filepath)
+        save_pkl(desc_mesh_id_entry_lookup, desc_mesh_id_entry_lookup_filepath)
 
     # parse supplementary
     supp_mesh_id_element_lookup_filepath = os.path.join(
@@ -532,14 +545,18 @@ def read_mesh_data(
         mesh_data_dir, 'supp_mesh_id_heading_mesh_id_lookup.pkl')
     supp_mesh_id_name_lookup_filepath = os.path.join(
         mesh_data_dir, 'supp_mesh_id_name_lookup.pkl')
+    supp_mesh_id_entry_lookup_filepath = os.path.join(
+        mesh_data_dir, 'supp_mesh_id_entry_lookup.pkl')
 
     if Path(supp_mesh_id_element_lookup_filepath).is_file() and \
        Path(supp_mesh_id_heading_mesh_id_lookup_filepath).is_file() and \
-       Path(supp_mesh_id_name_lookup_filepath).is_file():
+       Path(supp_mesh_id_name_lookup_filepath).is_file() and \
+       Path(supp_mesh_id_entry_lookup_filepath).is_file():
         print("Found all pickle files for supplementary mesh data.")
         supp_mesh_id_element_lookup = load_pkl(supp_mesh_id_element_lookup_filepath)
         supp_mesh_id_heading_mesh_id_lookup = load_pkl(supp_mesh_id_heading_mesh_id_lookup_filepath)
         supp_mesh_id_name_lookup = load_pkl(supp_mesh_id_name_lookup_filepath)
+        supp_mesh_id_entry_lookup = load_pkl(supp_mesh_id_entry_lookup_filepath)
     else:
         print("Loading supplementary XML...")
         supp = ET.parse(supp_filepath)
@@ -552,6 +569,7 @@ def read_mesh_data(
         supp_mesh_id_element_lookup = {}
         supp_mesh_id_heading_mesh_id_lookup = {}
         supp_mesh_id_name_lookup = {}
+        supp_mesh_id_entry_lookup = {}
         for x in supp_root.iter("SupplementalRecordUI"):
             parent = supp_parent_map[x]
             if parent.tag != "SupplementalRecord":
@@ -570,18 +588,28 @@ def read_mesh_data(
                     continue
                 supp_mesh_id_heading_mesh_id_lookup[x.text].append(y.text.lstrip('*'))
 
+            supp_mesh_id_entry_lookup[x.text] = []
+            for y in parent.iter("String"):
+                if supp_parent_map[y].tag != "Term":
+                    continue
+                supp_mesh_id_entry_lookup[x.text].append(y.text)
+
+        print('Saving supp pickles...')
         save_pkl(supp_mesh_id_element_lookup, supp_mesh_id_element_lookup_filepath)
         save_pkl(supp_mesh_id_heading_mesh_id_lookup, supp_mesh_id_heading_mesh_id_lookup_filepath)
         save_pkl(supp_mesh_id_name_lookup, supp_mesh_id_name_lookup_filepath)
+        save_pkl(supp_mesh_id_entry_lookup, supp_mesh_id_entry_lookup_filepath)
 
     return {
         "desc_mesh_id_tree_number_lookup": desc_mesh_id_tree_number_lookup,
         "desc_mesh_id_name_lookup": desc_mesh_id_name_lookup,
         "desc_tree_number_mesh_id_lookup": desc_tree_number_mesh_id_lookup,
         "desc_tree_number_name_lookup": desc_tree_number_name_lookup,
+        "desc_mesh_id_entry_lookup": desc_mesh_id_entry_lookup,
         "supp_mesh_id_element_lookup": supp_mesh_id_element_lookup,
         "supp_mesh_id_heading_mesh_id_lookup": supp_mesh_id_heading_mesh_id_lookup,
         "supp_mesh_id_name_lookup": supp_mesh_id_name_lookup,
+        "supp_mesh_id_entry_lookup": supp_mesh_id_entry_lookup,
     }
 
 

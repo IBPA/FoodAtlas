@@ -33,6 +33,9 @@ curl -L https://ucdavis.box.com/shared/static/llcxnyuvh08yy7msd7jhtv5p2zbymquk -
 echo 'Downloading PubChem.zip...'
 curl -L https://ucdavis.box.com/shared/static/qoku65gfiqsnkwwo9bej20i4qvyovam2 --output PubChem.zip
 
+echo 'Downloading umls.zip...'
+curl -L https://ucdavis.box.com/shared/static/ba0brrlgojjks0icupr6fm7ybk9j2tcl --output umls.zip
+
 echo 'Unzipping all files...'
 unzip "*.zip"
 
