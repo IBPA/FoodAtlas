@@ -117,44 +117,44 @@ def load_foodatlas():
 if __name__ == '__main__':
     data_food_atlas = load_foodatlas()
     data_foodb = load_foodb()
-    print(data_foodb.drop_duplicates(['ncbi_id', 'cid']))
-    # # Chemicals.
-    # venn2(
-    #     subsets=(
-    #         set(data_food_atlas['cid'].dropna().tolist()),
-    #         set(data_foodb['cid'].dropna().tolist())
-    #     ),
-    #     set_labels=('FoodAtlas', 'FooDB'),
-    # )
-    # plt.savefig('outputs/benchmark/venn_fa_foodb_chemicals.svg')
-    # plt.close()
 
-    # # Foods.
-    # venn2(
-    #     subsets=(
-    #         set(data_food_atlas['ncbi_id'].dropna().tolist()),
-    #         set(data_foodb['ncbi_id'].dropna().tolist())
-    #     ),
-    #     set_labels=('FoodAtlas', 'FooDB'),
-    # )
-    # plt.savefig('outputs/benchmark/venn_fa_foodb_foods.svg')
-    # plt.close()
+    # Chemicals.
+    venn2(
+        subsets=(
+            set(data_food_atlas['cid'].dropna().tolist()),
+            set(data_foodb['cid'].dropna().tolist())
+        ),
+        set_labels=('FoodAtlas', 'FooDB'),
+    )
+    plt.savefig('outputs/benchmark/venn_fa_foodb_chemicals.svg')
+    plt.close()
 
-    # # Triplets.
-    # venn2(
-    #     subsets=(
-    #         set(
-    #             data_food_atlas[['ncbi_id', 'cid']].dropna().parallel_apply(
-    #                 lambda x: (x['ncbi_id'], x['cid']), axis=1
-    #             ).tolist()
-    #         ),
-    #         set(
-    #             data_foodb[['ncbi_id', 'cid']].dropna().parallel_apply(
-    #                 lambda x: (x['ncbi_id'], x['cid']), axis=1
-    #             ).tolist()
-    #         )
-    #     ),
-    #     set_labels=('FoodAtlas', 'FooDB'),
-    # )
-    # plt.savefig('outputs/benchmark/venn_fa_foodb_triplets.svg')
-    # plt.close()
+    # Foods.
+    venn2(
+        subsets=(
+            set(data_food_atlas['ncbi_id'].dropna().tolist()),
+            set(data_foodb['ncbi_id'].dropna().tolist())
+        ),
+        set_labels=('FoodAtlas', 'FooDB'),
+    )
+    plt.savefig('outputs/benchmark/venn_fa_foodb_foods.svg')
+    plt.close()
+
+    # Triplets.
+    venn2(
+        subsets=(
+            set(
+                data_food_atlas[['ncbi_id', 'cid']].dropna().parallel_apply(
+                    lambda x: (x['ncbi_id'], x['cid']), axis=1
+                ).tolist()
+            ),
+            set(
+                data_foodb[['ncbi_id', 'cid']].dropna().parallel_apply(
+                    lambda x: (x['ncbi_id'], x['cid']), axis=1
+                ).tolist()
+            )
+        ),
+        set_labels=('FoodAtlas', 'FooDB'),
+    )
+    plt.savefig('outputs/benchmark/venn_fa_foodb_triplets.svg')
+    plt.close()
