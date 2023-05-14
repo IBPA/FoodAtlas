@@ -46,6 +46,7 @@ if __name__ == '__main__':
 
     # 1. Unique triples per article.
     n_trip_mean = n_triplets['n_triples'].sum() / evidence['pmid'].nunique()
+    print(n_trip_mean)  # 1.3194619737335318
 
     # 2. Estimate based on # of sources related to food in AGRICOLA. We
     # searched for "food" in any field.
@@ -55,4 +56,19 @@ if __name__ == '__main__':
     #  - 4,469 book chapters
     n_sources = 887127 + 89940 + 6961 + 4469
     n_triplets_gt_est = n_trip_mean * n_sources
-    print(n_triplets_gt_est)  # 1304284.202649675
+    print(n_triplets_gt_est)  # 1304284
+
+    # 3. Estimate based on # of sources related to food in PubMed. We searched
+    #   for "food" in any field.
+    # Search query:
+    #   "((food) OR (fruit) OR (vegetable))"
+    n_sources = 1588596
+    n_triplets_gt_est = n_trip_mean * n_sources
+    print(n_triplets_gt_est)  # 2096092
+
+    # Search query:
+    #   "((food) OR (fruit) OR (vegetable)) AND
+    #       ((chemical) OR (compound) OR (molecule) OR (nutrient))"
+    n_sources = 448105
+    n_triplets_gt_est = n_trip_mean * n_sources
+    print(n_triplets_gt_est)  # 591258
