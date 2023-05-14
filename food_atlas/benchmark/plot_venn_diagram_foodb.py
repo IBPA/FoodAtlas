@@ -158,3 +158,23 @@ if __name__ == '__main__':
     )
     plt.savefig('outputs/benchmark/venn_fa_foodb_triplets.svg')
     plt.close()
+
+    # Triplets with FooDB removing predicted triplets.
+    data_foodb = data_foodb.query("citation_type != 'PREDICTED'")
+    venn2(
+        subsets=(
+            set(
+                data_food_atlas[['ncbi_id', 'cid']].dropna().parallel_apply(
+                    lambda x: (x['ncbi_id'], x['cid']), axis=1
+                ).tolist()
+            ),
+            set(
+                data_foodb[['ncbi_id', 'cid']].dropna().parallel_apply(
+                    lambda x: (x['ncbi_id'], x['cid']), axis=1
+                ).tolist()
+            )
+        ),
+        set_labels=('FoodAtlas', 'FooDB w/o Pathway Predictions)'),
+    )
+    plt.savefig('outputs/benchmark/venn_fa_foodb_no_pred_triplets.svg')
+    plt.close()
