@@ -1,10 +1,12 @@
 from itertools import combinations
 
+import numpy as np
 import pandas as pd
 from sklearn.metrics import (
     confusion_matrix,
     roc_auc_score,
-    average_precision_score
+    average_precision_score,
+    precision_score,
 )
 from scipy.stats import ttest_ind
 from statsmodels.stats.multitest import fdrcorrection
@@ -55,10 +57,8 @@ if __name__ == '__main__':
         data_val_prob_dfs += [data_val_prob]
 
     data_val_probs = pd.concat(data_val_prob_dfs, axis=1)
-    print(data_val_probs)
     data_val_probs['mean'] = data_val_probs.mean(axis=1)
     data_val_probs['std'] = data_val_probs.std(axis=1)
-
     data = pd.concat(
         [data_val,
          data_val_probs],
@@ -82,29 +82,53 @@ if __name__ == '__main__':
         try:
             result = get_all_metrics(
                 data_['answer'], data_['pred'], data_['mean'])
+            print(f"{sec}: {result['precision']}")
         except Exception:
             pass
 
-    # Compare each pair of sections to see if they are significantly different.
-    sec_1_list = []
-    sec_2_list = []
-    ps = []
-    for sec_1, sec_2 in combinations(data['section'].unique().tolist(), 2):
-        data_1 = data.query(f"section == '{sec_1}'")
-        data_2 = data.query(f"section == '{sec_2}'")
-        try:
-            _, p = ttest_ind(data_1['mean'], data_2['mean'])
-            sec_1_list += [sec_1]
-            sec_2_list += [sec_2]
-            ps += [p]
-        except Exception:
-            pass
-    ps_adj = fdrcorrection(
-        ps,
-        alpha=0.05,
-        method='indep',
-    )[1]
+    # # Compare each pair of sections to see if they are significantly
+    # #   different.
+    # sec_1_list = []
+    # sec_2_list = []
+    # ps = []
+    # for sec_1, sec_2 in combinations(data['section'].unique().tolist(), 2):
+    #     data_1 = data.query(f"section == '{sec_1}'")
+    #     data_2 = data.query(f"section == '{sec_2}'")
+    #     try:
+    #         _, p = ttest_ind(data_1['mean'], data_2['mean'])
+    #         sec_1_list += [sec_1]
+    #         sec_2_list += [sec_2]
+    #         ps += [p]
+    #     except Exception:
+    #         pass
+    # ps_adj = fdrcorrection(
+    #     ps,
+    #     alpha=0.05,
+    #     method='indep',
+    # )[1]
 
-    for sec_1, sec_2, p_adj in zip(sec_1_list, sec_2_list, ps_adj):
-        if p_adj < 0.05:
-            print(f"{sec_1} vs {sec_2}: p_adj={p_adj}")
+    # for sec_1, sec_2, p_adj in zip(sec_1_list, sec_2_list, ps_adj):
+    #     if p_adj < 0.05:
+    #         print(f"{sec_1} vs {sec_2}: p_adj={p_adj}")
+
+    # Check if precisions for the two groups are statistically different.
+    #   Group 1: introduction, methods
+    #   Group 2: abstract, title, conclusion
+    group_1 = []
+    group_2 = []
+    for section in ['INTRO', 'METHODS', 'abstract', 'title', 'CONCL']:
+        data_ = data.query(f"section == '{section}'")
+        precs = []
+        for seed in range(50):
+            precs += [precision_score(
+                data_['answer'],
+                [1 if x > 0.5 else 0 for x in data_[f"prob_{seed}"].tolist()],
+            )]
+        print(f"{section}: precision = {np.mean(precs)} +/- {np.std(precs)}")
+
+        if section in ['INTRO', 'METHODS']:
+            group_1 += precs
+        else:
+            group_2 += precs
+
+    print(ttest_ind(group_1, group_2))
