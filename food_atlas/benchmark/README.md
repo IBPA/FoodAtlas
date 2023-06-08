@@ -38,3 +38,17 @@ cd ../..
 python -m food_atlas.benchmark.plot_venn_diagram_foodb
 cd food_atlas/benchmark
 ```
+
+### Statistics of Indexed Journal Articles in Databases
+
+- First, download the indexed journal databases (AGRICOLA, CABI, Web of Science, Scopus) by following the below:
+```console
+cd indexed_journals
+./download_data.sh
+cd ..
+```
+
+- Run the script.
+```console
+python -m food_atlas.benchmark.get_ext_db_stats
+```
