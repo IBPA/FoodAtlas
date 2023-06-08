@@ -11,7 +11,7 @@ if __name__ == '__main__':
     counts = data[
         ['citation', 'citation_type']
     ].value_counts().reset_index().rename(columns={0: 'count'})
-
+    counts.to_csv("foodb_ref.csv")
     n_total = counts['count'].sum()
     n_excl = 0  # Number of citations to exclude due to are not scientific lit.
     n_excl += counts.query(
