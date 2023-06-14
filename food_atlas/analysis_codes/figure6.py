@@ -24,29 +24,35 @@ NAMES = ['head', 'relation', 'tail']
 
 
 def get_df():
-    df_top_100 = pd.read_csv(
-        os.path.join('../../outputs/hypotheses/validated_top_100.tsv'),
+    df_random = pd.read_csv(
+        os.path.join('../../outputs/hypotheses/random_200.tsv'),
         sep='\t',
     )
 
-    df_bottom_100 = pd.read_csv(
-        os.path.join('../../outputs/hypotheses/validated_bottom_100.tsv'),
+    df_top = pd.read_csv(
+        os.path.join('../../outputs/hypotheses/above_90.tsv'),
         sep='\t',
     )
 
-    df_random_100 = pd.read_csv(
-        os.path.join('../../outputs/hypotheses/validated_random_100.tsv'),
-        sep='\t',
-    )
-
-    df = pd.concat([df_top_100, df_bottom_100, df_random_100])
+    df = pd.concat([df_random, df_top])
     df.sort_values('prob_mean', inplace=True, ascending=False)
+    df.drop_duplicates(['head', 'relation', 'tail'], inplace=True, keep='last')
+    df = df[df['IsClass'].apply(lambda x: x is False)]
+    df = df[df['Validation'] == 'Yes']
 
     return df
 
 
-def plot_calibration_plot(df):
-    bins = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+def calibration_plot():
+    df = pd.read_csv('../../outputs/hypotheses/random_200.tsv', sep='\t')
+    print(df)
+
+    df = df[df['IsClass'].apply(lambda x: x is False)]
+    print(df)
+    print(set(df['Validation'].tolist()))
+
+    # bins = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+    bins = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
     lineplot_x = []
     lineplot_y = []
 
@@ -62,10 +68,9 @@ def plot_calibration_plot(df):
             df_bin = df[df['prob_mean'].apply(lambda x: x >= low_prob)]
 
         validation_labels = df_bin['Validation'].tolist()
-        validation_labels = [x for x in validation_labels if x != 'NER error']
         num_pos = validation_labels.count('Yes')
         fraction_pos = num_pos / len(validation_labels)
-        # print(f'{low_prob}, {high_prob}: {num_pos}/{len(validation_labels)} ({fraction_pos})')
+        print(f'{low_prob}, {high_prob}: {num_pos}/{len(validation_labels)} ({fraction_pos})')
 
         lineplot_x.append(float(f'{(low_prob + high_prob)/2:.1f}'))
         lineplot_y.append(fraction_pos)
@@ -85,12 +90,14 @@ def plot_calibration_plot(df):
     plt.plot(lineplot_x, lineplot_y)
     plt.plot(lineplot_x, lineplot_x)
     plt.text(0.2, 0.8, str(r2))
-    plt.savefig(os.path.join(OUTPUT_DIR, 'calibration_plot.png'))
-    plt.savefig(os.path.join(OUTPUT_DIR, 'calibration_plot.svg'))
+    plt.savefig(os.path.join('../../outputs/analysis_codes/figure6/', 'calibration_plot_10bins.png'))
+    plt.savefig(os.path.join('../../outputs/analysis_codes/figure6/', 'calibration_plot_10bins.svg'))
 
     plot = df_bar.plot(x='x', kind='bar', stacked=False)
-    plot.get_figure().savefig(os.path.join(OUTPUT_DIR, 'calibration_plot_bar.png'))
-    plot.get_figure().savefig(os.path.join(OUTPUT_DIR, 'calibration_plot_bar.svg'))
+    plot.get_figure().savefig(
+        os.path.join('../../outputs/analysis_codes/figure6/', 'calibration_plot_bar_10bins.png'))
+    plot.get_figure().savefig(
+        os.path.join('../../outputs/analysis_codes/figure6/', 'calibration_plot_bar_10bins.svg'))
 
 
 def generate_gephi(df, fa_kg):
@@ -101,16 +108,30 @@ def generate_gephi(df, fa_kg):
     df_pos = df[df['Validation'] == 'Yes']
     df_pos.drop_duplicates(['head', 'relation', 'tail'], inplace=True)
     print(df_pos.shape)
+
+    most_foods = Counter(df_pos['head'].tolist())
+    top_foods = [x[0] for x in most_foods.most_common(5)]
+    print(most_foods)
+
+    most_chemicals = Counter(df_pos['tail'].tolist())
+    top_chemicals = [x[0] for x in most_chemicals.most_common(3)]
+    print(most_chemicals)
+
     foods = set(df_pos['head'].tolist())
     chemicals = set(df_pos['tail'].tolist())
     print(len(foods))
     print(len(chemicals))
 
-    sys.exit()
+    print(top_foods)
+    print(top_chemicals)
 
     edge_data = []
     entities = []
     for _, row in df_pos.iterrows():
+
+        if row['head'] not in top_foods and row['tail'] not in top_chemicals:
+            continue
+
         entities.extend([row['head'], row['tail']])
         source = fa_kg.get_entity_by_id(row['head'])['name']
         target = fa_kg.get_entity_by_id(row['tail'])['name']
@@ -303,7 +324,7 @@ def main():
     fa_kg = KnowledgeGraph(kg_dir=KG_DIR)
 
     df = get_df()
-    # plot_calibration_plot(df)
+    # calibration_plot(df)
     generate_gephi(df, fa_kg)
     # plot_hypotheses_bins(fa_kg)
     # find_interesting_food_chem(fa_kg)

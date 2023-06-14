@@ -1,204 +1,61 @@
 Id	Label	Type
-Brassica rapa subsp. rapa	Brassica rapa subsp. rapa	organism
-Coumaric Acids	Coumaric Acids	chemical
-Brassica rapa	Brassica rapa	organism
-Campesterol	Campesterol	chemical
-Glycine max	Glycine max	organism
-Sodium ion	Sodium ion	chemical
+Magnesium Ascorbate	Magnesium Ascorbate	chemical
 Sodium Chloride	Sodium Chloride	chemical
-Ananas comosus	Ananas comosus	organism
-Artemisia vulgaris	Artemisia vulgaris	organism
-Flavones	Flavones	chemical
-beta Carotene	beta Carotene	chemical
-Hydrolyzable Tannins	Hydrolyzable Tannins	chemical
-Phosphorus	Phosphorus	chemical
-Methionine	Methionine	chemical
-Polydatin	Polydatin	chemical
-Aldehydes	Aldehydes	chemical
-Proline	Proline	chemical
-Clothianidin	Clothianidin	chemical
-Solea solea	Solea solea	organism
-Selenium	Selenium	chemical
-Cucumis sativus	Cucumis sativus	organism
-Moringa oleifera	Moringa oleifera	organism
-Lipids	Lipids	chemical
-Nickel (II) ion	Nickel (II) ion	chemical
-Sebastes alutus	Sebastes alutus	organism
-Anarhichas lupus	Anarhichas lupus	organism
-Vitamin E	Vitamin E	chemical
-Belone belone	Belone belone	organism
-Cucumis melo	Cucumis melo	organism
-Psidium guajava	Psidium guajava	organism
-Clupea harengus	Clupea harengus	organism
-Arginine	Arginine	chemical
-Phasianus colchicus	Phasianus colchicus	organism
-Ginkgo biloba	Ginkgo biloba	organism
-Polysaccharides	Polysaccharides	chemical
-Prunus dulcis	Prunus dulcis	organism
-Portulaca oleracea	Portulaca oleracea	organism
-Cupric ion	Cupric ion	chemical
-Vaccinium myrtillus	Vaccinium myrtillus	organism
-Capsicum frutescens	Capsicum frutescens	organism
-coenzyme A(4-)	coenzyme A(4-)	chemical
-Solanum lycopersicum	Solanum lycopersicum	organism
-Linolenic Acid	Linolenic Acid	chemical
-Microstomus kitt	Microstomus kitt	organism
-Thiamine	Thiamine	chemical
-Nelumbo nucifera	Nelumbo nucifera	organism
-Capsicum	Capsicum	organism
-Brassica oleracea var. sabauda	Brassica oleracea var. sabauda	organism
-Ceratonia siliqua	Ceratonia siliqua	organism
-Glucosides	Glucosides	chemical
-Panax ginseng	Panax ginseng	organism
-Columba	Columba	organism
-Juglans cinerea	Juglans cinerea	organism
-Fatty Acids, Unsaturated	Fatty Acids, Unsaturated	chemical
-Citrus limon	Citrus limon	organism
-Chlorophyll	Chlorophyll	chemical
-N-Acetyl-L-aspartic acid	N-Acetyl-L-aspartic acid	chemical
-L-threonine	L-threonine	chemical
-Oils	Oils	chemical
-Myristica fragrans	Myristica fragrans	organism
-Eucalyptol	Eucalyptol	chemical
-Abramis	Abramis	organism
-Sambucus nigra	Sambucus nigra	organism
-Alkaloids	Alkaloids	chemical
-Fagopyrum esculentum	Fagopyrum esculentum	organism
-Salmo trutta	Salmo trutta	organism
-Satureja montana	Satureja montana	organism
-5(2-(2-mercaptoethanol)-3-methyl-1,4-napthoquinone)	5(2-(2-mercaptoethanol)-3-methyl-1,4-napthoquinone)	chemical
-Alkanes	Alkanes	chemical
-Pangasianodon hypophthalmus	Pangasianodon hypophthalmus	organism
-Sterol	Sterol	chemical
-Taraxacum officinale	Taraxacum officinale	organism
-Retinol	Retinol	chemical
-Mentha aquatica	Mentha aquatica	organism
-Diterpenes	Diterpenes	chemical
-Capparis spinosa	Capparis spinosa	organism
-Zeaxanthin	Zeaxanthin	chemical
-Cydonia oblonga	Cydonia oblonga	organism
-Flavonols	Flavonols	chemical
-Flavan-3-ol	Flavan-3-ol	chemical
-Brassica rapa var. rapa	Brassica rapa var. rapa	organism
-Zingiber officinale	Zingiber officinale	organism
-Vigna radiata	Vigna radiata	organism
-Phosphatidylinositol Phosphates	Phosphatidylinositol Phosphates	chemical
-Anions	Anions	chemical
 Cadmium	Cadmium	chemical
-Rhaphiolepis bibas	Rhaphiolepis bibas	organism
-Leucine	Leucine	chemical
-Steroids	Steroids	chemical
-Rumex acetosa	Rumex acetosa	organism
-Acca sellowiana	Acca sellowiana	organism
-Molva molva	Molva molva	organism
-Thunnus thynnus	Thunnus thynnus	organism
-Protopam chloride	Protopam chloride	chemical
-Anser anser	Anser anser	organism
-Folic Acid	Folic Acid	chemical
-Salmo salar	Salmo salar	organism
-Iron, isotope of mass 56	Iron, isotope of mass 56	chemical
-Zinc	Zinc	chemical
-Clethodim	Clethodim	chemical
-Calcium ion	Calcium ion	chemical
-Lota lota	Lota lota	organism
-Coffea canephora	Coffea canephora	organism
-Artocarpus heterophyllus	Artocarpus heterophyllus	organism
-Alcohols	Alcohols	chemical
-Biotin	Biotin	chemical
-L-Alloisoleucine	L-Alloisoleucine	chemical
-Theobroma cacao	Theobroma cacao	organism
-Capsicum annuum var. annuum	Capsicum annuum var. annuum	organism
-Plant Oils	Plant Oils	chemical
-Levisticum officinale	Levisticum officinale	organism
-Rubus occidentalis	Rubus occidentalis	organism
-Phyllostachys bambusoides	Phyllostachys bambusoides	organism
-L-cystine	L-cystine	chemical
-Odobenus rosmarus	Odobenus rosmarus	organism
-Anethum graveolens	Anethum graveolens	organism
-hemicellulose	hemicellulose	chemical
-Pyridoxal phosphate	Pyridoxal phosphate	chemical
-Chromium(III)	Chromium(III)	chemical
-Caffeic Acids	Caffeic Acids	chemical
-Origanum vulgare	Origanum vulgare	organism
-Basella alba	Basella alba	organism
-alpha-Thujone	alpha-Thujone	chemical
-Phloroglucinol	Phloroglucinol	chemical
-Brassica oleracea var. italica	Brassica oleracea var. italica	organism
-Poriferasterol	Poriferasterol	chemical
-Amino Acids	Amino Acids	chemical
-Phaseolus vulgaris	Phaseolus vulgaris	organism
-Copper	Copper	chemical
-Manilkara zapota	Manilkara zapota	organism
-Tryptophan	Tryptophan	chemical
-Raphanus sativus var. niger	Raphanus sativus var. niger	organism
-Coriandrum sativum	Coriandrum sativum	organism
-Iodide ion	Iodide ion	chemical
-Brosme brosme	Brosme brosme	organism
-Cholesterol Formate	Cholesterol Formate	chemical
-Hippophae rhamnoides	Hippophae rhamnoides	organism
-Nitrogen	Nitrogen	chemical
-Pastinaca sativa	Pastinaca sativa	organism
-Ficus carica	Ficus carica	organism
-Pleuronectes platessa	Pleuronectes platessa	organism
-Flavone	Flavone	chemical
-Origanum onites	Origanum onites	organism
-Melanogrammus aeglefinus	Melanogrammus aeglefinus	organism
-Xanthophylls	Xanthophylls	chemical
+Columba	Columba	organism
 Apium graveolens Dulce Group	Apium graveolens Dulce Group	organism
-Petroselinum crispum Radicosum Group	Petroselinum crispum Radicosum Group	organism
-Myricetin	Myricetin	chemical
-Pantothenic acid	Pantothenic acid	chemical
-Anacardium occidentale	Anacardium occidentale	organism
-Passiflora edulis	Passiflora edulis	organism
-Morella rubra	Morella rubra	organism
-Daucus carota	Daucus carota	organism
-Cancer pagurus	Cancer pagurus	organism
-Sus scrofa domesticus	Sus scrofa domesticus	organism
-Phenols	Phenols	chemical
-Copper-63	Copper-63	chemical
-Apium graveolens	Apium graveolens	organism
+Leucine	Leucine	chemical
+Raphanus sativus var. niger	Raphanus sativus var. niger	organism
 Manganese(2+)	Manganese(2+)	chemical
-Oleic Acids	Oleic Acids	chemical
-Lactuca sativa var. longifolia	Lactuca sativa var. longifolia	organism
-Musa x paradisiaca	Musa x paradisiaca	organism
-Docosa-2,4,6,8,10,12-hexaenoic acid	Docosa-2,4,6,8,10,12-hexaenoic acid	chemical
-Prunus armeniaca	Prunus armeniaca	organism
-Averrhoa carambola	Averrhoa carambola	organism
-Petroselinum crispum	Petroselinum crispum	organism
-Arsenic(3+)	Arsenic(3+)	chemical
-Momordica charantia	Momordica charantia	organism
-Oils, Volatile	Oils, Volatile	chemical
-Triticum turgidum subsp. durum	Triticum turgidum subsp. durum	organism
-beta-Pinene	beta-Pinene	chemical
-Chromium	Chromium	chemical
-Potassium	Potassium	chemical
-Lactuca sativa	Lactuca sativa	organism
-Durio zibethinus	Durio zibethinus	organism
-Octopus bimaculatus	Octopus bimaculatus	organism
-ZINC ion	ZINC ion	chemical
-Lens culinaris	Lens culinaris	organism
-Molybdenum	Molybdenum	chemical
-Pyrus communis	Pyrus communis	organism
+Pseudopodospermum hispanicum	Pseudopodospermum hispanicum	organism
+Panax ginseng	Panax ginseng	organism
+Sodium ion	Sodium ion	chemical
+Microstomus kitt	Microstomus kitt	organism
+Citrus aurantiifolia	Citrus aurantiifolia	organism
+Solanum melongena	Solanum melongena	organism
+Linoleic Acid	Linoleic Acid	chemical
 Sprattus sprattus	Sprattus sprattus	organism
-Trachinotus carolinus	Trachinotus carolinus	organism
-Arsenic	Arsenic	chemical
-Tocopherols	Tocopherols	chemical
-cis-Caffeic acid	cis-Caffeic acid	chemical
-Phthalate	Phthalate	chemical
-Cucumis melo var. cantalupo	Cucumis melo var. cantalupo	organism
-Magnesium	Magnesium	chemical
-Allium fistulosum	Allium fistulosum	organism
-Prunus cerasus	Prunus cerasus	organism
-Squalus acanthias	Squalus acanthias	organism
-Vigna umbellata	Vigna umbellata	organism
-Kaempferol	Kaempferol	chemical
+Cyclopterus lumpus	Cyclopterus lumpus	organism
+Lactuca sativa	Lactuca sativa	organism
+Iodide ion	Iodide ion	chemical
+Vitis vinifera	Vitis vinifera	organism
+Proline	Proline	chemical
+Solea solea	Solea solea	organism
+Myricetin	Myricetin	chemical
+Luteolin	Luteolin	chemical
+Sodium	Sodium	chemical
+Phyllostachys bambusoides	Phyllostachys bambusoides	organism
+Petroselinum crispum Radicosum Group	Petroselinum crispum Radicosum Group	organism
+Pyridoxal phosphate	Pyridoxal phosphate	chemical
+Citrus japonica	Citrus japonica	organism
 Lupinus albus	Lupinus albus	organism
-Ellagic acid	Ellagic acid	chemical
-Beta-Carotene	Beta-Carotene	chemical
-Abelmoschus esculentus	Abelmoschus esculentus	organism
-Ribes rubrum	Ribes rubrum	organism
-Raphanus sativus var. sativus	Raphanus sativus var. sativus	organism
-Persea americana	Persea americana	organism
-Pouteria sapota	Pouteria sapota	organism
-Phenylalanine	Phenylalanine	chemical
-Vigna angularis	Vigna angularis	organism
+Iron, isotope of mass 56	Iron, isotope of mass 56	chemical
+Manilkara zapota	Manilkara zapota	organism
+Perfluorooctanesulfonic acid	Perfluorooctanesulfonic acid	chemical
+Brassica oleracea var. italica	Brassica oleracea var. italica	organism
+Arsenic(3+)	Arsenic(3+)	chemical
+Capsicum annuum	Capsicum annuum	organism
+Cocos nucifera	Cocos nucifera	organism
+Apigenin	Apigenin	chemical
+Beta vulgaris	Beta vulgaris	organism
+Musa x paradisiaca	Musa x paradisiaca	organism
+Lota lota	Lota lota	organism
+Thunnus thynnus	Thunnus thynnus	organism
+Sinapis alba	Sinapis alba	organism
+Zinc	Zinc	chemical
+Melanogrammus aeglefinus	Melanogrammus aeglefinus	organism
+Iron(2+) L-ascorbate	Iron(2+) L-ascorbate	chemical
+Ferrous ascorbate	Ferrous ascorbate	chemical
+Ficus carica	Ficus carica	organism
+Potassium	Potassium	chemical
+Sinapic acid	Sinapic acid	chemical
+Anser anser	Anser anser	organism
+Sambucus nigra	Sambucus nigra	organism
+Brassica rapa var. rapa	Brassica rapa var. rapa	organism
+Lead (II) ion	Lead (II) ion	chemical
+Agaricus bisporus	Agaricus bisporus	organism
+Dioscorea oppositifolia	Dioscorea oppositifolia	organism
+Linolenic Acid	Linolenic Acid	chemical
+Iodine	Iodine	chemical
+Anarhichas lupus	Anarhichas lupus	organism
+Prunus cerasus	Prunus cerasus	organism

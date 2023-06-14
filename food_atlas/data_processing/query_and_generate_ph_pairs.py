@@ -161,7 +161,7 @@ def query_litsense(
 
     data = []
     # data = load_pkl(query_data_pkl_filepath)
-    # query_items = query_items[:19000]
+    # query_items = query_items[400:]
 
     for idx, search_term in enumerate(tqdm(query_items)):
         if input_type == "query_string":
@@ -184,9 +184,9 @@ def query_litsense(
                     break
                 elif response.status_code not in [404, 200]:
                     warnings.warn(f"Error requesting data from {query_url}: {response.status_code}")
-                    warnings.warn("Trying again...")
+                    print('Trying again...')
                     try_count += 1
-                    if try_count == 5:
+                    if try_count == 10:
                         break
                 else:
                     break
@@ -194,7 +194,7 @@ def query_litsense(
             if response.status_code == 404:
                 continue
 
-            if response.status_code not in [404, 200]:
+            if response.status_code not in [404, 200, 502]:
                 save_pkl(data, query_data_pkl_filepath)
                 sys.exit(1)
 
@@ -409,18 +409,15 @@ def main():
     args.query_results_filepath = args.query_results_filepath.format(timestamp)
     args.ph_pairs_filepath = args.ph_pairs_filepath.format(timestamp)
 
-    # df = query_litsense(
-    #     input_type=args.input_type,
-    #     query_filepath=args.query_filepath,
-    #     food_parts_filepath=args.food_parts_filepath,
-    #     allowed_ncbi_taxids_filepath=args.allowed_ncbi_taxids_filepath,
-    #     query_results_filepath=args.query_results_filepath,
-    #     cache_dir=args.cache_dir,
-    #     match_all=args.match_all,
-    # )
-
-    args.query_results_filepath = "../../outputs/data_processing/query_results_20230119_214855.txt"
-    args.ph_pairs_filepath = "../../outputs/data_processing/ph_pairs_temp.txt"
+    df = query_litsense(
+        input_type=args.input_type,
+        query_filepath=args.query_filepath,
+        food_parts_filepath=args.food_parts_filepath,
+        allowed_ncbi_taxids_filepath=args.allowed_ncbi_taxids_filepath,
+        query_results_filepath=args.query_results_filepath,
+        cache_dir=args.cache_dir,
+        match_all=args.match_all,
+    )
 
     df = pd.read_csv(args.query_results_filepath, sep='\t', keep_default_na=False)
     df = df.sample(frac=0.4)

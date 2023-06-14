@@ -125,7 +125,8 @@ def main():
             if 'PubChem' in other_db_ids:
                 for pubchem_id in other_db_ids['PubChem']:
                     if pubchem_id in cid_json_lookup:
-                        synonyms.extend(_get_synonyms_from_json(cid_json_lookup[pubchem_id]))
+                        synonyms.extend(_get_synonyms_from_json(
+                            cid_json_lookup[pubchem_id], pubchem_top_n=3))
         elif row['type'].startswith('organism'):
             if 'NCBI_taxonomy' in other_db_ids:
                 for ncbi_taxonomy in other_db_ids['NCBI_taxonomy']:

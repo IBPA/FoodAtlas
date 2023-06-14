@@ -293,7 +293,7 @@ def _get_ncbi_mesh_urls_from_json(json):
     return ncbi_mesh_urls
 
 
-def _get_synonyms_from_json(json):
+def _get_synonyms_from_json(json, pubchem_top_n=None):
     record_section = json["Record"]["Section"]
 
     names_and_identifiers = _get_sections(record_section, "Names and Identifiers")
@@ -312,15 +312,23 @@ def _get_synonyms_from_json(json):
                 for x in sections[0]["Information"]
             ]
             values = [x["String"] for x in values[0]]
-            return list(set(values))
+            return values
         elif len(sections) == 0:
             return []
         else:
             raise RuntimeError()
 
+    res = _get_synonyms("Depositor-Supplied Synonyms")
+    if pubchem_top_n:
+        res = res[:pubchem_top_n]
+
+    res_lower = [x.lower() for x in res]
     mesh_entry_terms = _get_synonyms("MeSH Entry Terms")
-    depositor_supplied_synonyms = _get_synonyms("Depositor-Supplied Synonyms")
-    return list(set(mesh_entry_terms + depositor_supplied_synonyms))
+    for x in mesh_entry_terms:
+        if x.lower() not in res_lower:
+            res.append(x)
+
+    return res
 
 
 def _get_summary_description_from_json(json):
