@@ -1,0 +1,993 @@
+,id,public_id,name,name_scientific,itis_id,wikipedia_id,food_group,food_subgroup,food_type,category,ncbi_taxonomy_id
+0,1,FOOD00001,Angelica,Angelica keiskei,,Angelica,Herbs and Spices,Herbs,Type 1,specific,357850.0
+1,2,FOOD00002,Savoy cabbage,Brassica oleracea var. sabauda,,Savoy cabbage,Vegetables,Cabbages,Type 1,specific,1216010.0
+2,3,FOOD00003,Silver linden,Tilia argentea,845789,Tilia tomentosa,Herbs and Spices,Herbs,Type 1,specific,
+3,4,FOOD00004,Kiwi,Actinidia chinensis,506775,Kiwifruit,Fruits,Tropical fruits,Type 1,specific,3625.0
+4,5,FOOD00005,Allium,Allium,42634,Allium haematochiton,Vegetables,Onion-family vegetables,Type 1,specific,4678.0
+5,6,FOOD00006,Garden onion,Allium cepa,42720,Onion,Vegetables,Onion-family vegetables,Type 1,specific,4679.0
+6,7,FOOD00007,Leek,Allium porrum,42659,Leek,Vegetables,Onion-family vegetables,Type 1,specific,
+7,8,FOOD00008,Garlic,Allium sativum,42652,Garlic,Herbs and Spices,Herbs,Type 1,specific,4682.0
+8,9,FOOD00009,Chives,Allium schoenoprasum,42636,Chives,Herbs and Spices,Herbs,Type 1,specific,74900.0
+9,10,FOOD00010,Lemon verbena,Aloysia triphylla,32135,Aloysia citrodora,Herbs and Spices,Herbs,Type 1,specific,542672.0
+10,11,FOOD00011,Cashew nut,Anacardium occidentale,28793,Cashew_nut,Nuts,Nuts,Type 1,specific,171929.0
+11,12,FOOD00012,Pineapple,Ananas comosus,42335,Pineapple,Fruits,Tropical fruits,Type 1,specific,4615.0
+12,13,FOOD00013,Dill,Anethum graveolens,29584,Dill,Herbs and Spices,Herbs,Type 1,specific,40922.0
+13,14,FOOD00014,Custard apple,Annona reticulata,18099,Custard apple,Fruits,Tropical fruits,Type 1,specific,301862.0
+14,15,FOOD00015,Wild celery,Apium graveolens,182184,Wild celery,Herbs and Spices,Spices,Type 1,specific,4045.0
+15,16,FOOD00016,Peanut,Arachis hypogaea,26463,Mr. Peanut,Nuts,Nuts,Type 1,specific,3818.0
+16,17,FOOD00017,Burdock,Arctium lappa,36545,Arctium_lappa,Vegetables,Root vegetables,Type 1,specific,4217.0
+17,18,FOOD00018,Horseradish,Armoracia rusticana,23044,Horseradish,Herbs and Spices,Spices,Type 1,specific,3704.0
+18,19,FOOD00019,Tarragon,Artemisia dracunculus,35462,Artemisia_dracunculus,Herbs and Spices,Herbs,Type 1,specific,72341.0
+19,20,FOOD00020,Mugwort,Artemisia vulgaris,35505,List of plants named mugwort,Herbs and Spices,Herbs,Type 1,specific,4220.0
+20,21,FOOD00021,Asparagus,Asparagus officinalis,42784,Asparagus,Vegetables,Shoot vegetables,Type 1,specific,4686.0
+21,22,FOOD00022,Oat,Avena sativa,41459,Oat,Cereals and cereal products,Cereals,Type 1,specific,4498.0
+22,23,FOOD00023,Star fruit,Averrhoa carambola,506371,Averrhoa carambola,Fruits,Tropical fruits,Type 1,specific,28974.0
+23,24,FOOD00024,Brazil nut,Bertholletia excelsa,21989,Brazil nut,Nuts,Nuts,Type 1,specific,3645.0
+24,25,FOOD00025,Common beet,Beta vulgaris,20681,Beet,Vegetables,Leaf vegetables,Type 1,specific,161934.0
+25,26,FOOD00026,Borage,Borago officinalis,31727,Borage,Herbs and Spices,Oilseed crops,Type 1,specific,13363.0
+26,27,FOOD00027,Chinese mustard,Brassica juncea,23059,Brassica juncea,Vegetables,Cabbages,Type 1,specific,3707.0
+27,28,FOOD00028,Swede,Brassica napus,23060,Rutabaga,Vegetables,Root vegetables,Type 1,specific,3708.0
+28,29,FOOD00029,Rape,Brassica napus var. napus,530955,Rapeseed,Vegetables,Root vegetables,Type 1,specific,138011.0
+29,30,FOOD00030,Common cabbage,Brassica oleracea,23062,Brassica_oleracea,Vegetables,Cabbages,Type 1,specific,3712.0
+30,31,FOOD00031,Cauliflower,Brassica oleracea var. botrytis,530957,Cauliflower,Vegetables,Cabbages,Type 1,specific,3715.0
+31,32,FOOD00032,Brussel sprouts,Brassica oleracea var. gemmifera,530959,Brussels sprout,Vegetables,Cabbages,Type 1,specific,178616.0
+32,33,FOOD00033,Kohlrabi,Brassica oleracea var. gongylodes,530960,Kohlrabi,Vegetables,Root vegetables,Type 1,specific,109379.0
+33,34,FOOD00034,Broccoli,Brassica oleracea var. italica,530961,Broccoli,Vegetables,Cabbages,Type 1,specific,36774.0
+34,35,FOOD00035,Chinese cabbage,Brassica rapa,23063,Chinese_cabbage,Vegetables,Cabbages,Type 1,specific,3711.0
+35,36,FOOD00036,Turnip,Brassica rapa var. rapa,526965,Turnip,Herbs and Spices,Herbs,Type 1,specific,51350.0
+36,37,FOOD00037,Pigeon pea,Cajanus cajan,26516,Pigeon pea,Pulses,Peas,Type 1,specific,3821.0
+37,38,FOOD00038,Tea,Camellia sinensis,506801,Tea,Teas,Teas,Type 1,specific,4442.0
+38,39,FOOD00039,Capers,Capparis spinosa,505885,Capers,Herbs and Spices,Spices,Type 1,specific,65558.0
+39,40,FOOD00040,Pepper,Capsicum annuum,30492,Capsicum_annuum,Vegetables,Fruit vegetables,Type 1,specific,4072.0
+40,41,FOOD00041,Papaya,Carica papaya,22324,Papaya,Fruits,Tropical fruits,Type 1,specific,3649.0
+41,42,FOOD00042,Safflower,Carthamus tinctorius,501305,Safflower,Herbs and Spices,Oilseed crops,Type 1,specific,4222.0
+42,43,FOOD00043,Caraway,Carum carvi,29610,Caraway,Herbs and Spices,Spices,Type 1,specific,48032.0
+43,44,FOOD00044,Pecan nut,Carya illinoinensis,19234,Pecan_nut,Nuts,Nuts,Type 1,specific,32201.0
+44,45,FOOD00045,Chestnut,Castanea,19451,Chestnut,Nuts,Nuts,Type 1,specific,21019.0
+45,46,FOOD00046,Roman camomile,Chamaemelum nobile,501396,Chamaemelum nobile,Herbs and Spices,Herbs,Type 1,specific,99037.0
+46,47,FOOD00047,Chickpea,Cicer arietinum,26537,Chickpea,Pulses,Peas,Type 1,specific,3827.0
+47,48,FOOD00048,Endive,Cichorium endivia,501522,Endive,Vegetables,Leaf vegetables,Type 1,specific,114280.0
+48,49,FOOD00049,Chicory,Cichorium intybus,36763,Chicory,Vegetables,Root vegetables,Type 1,specific,13427.0
+49,50,FOOD00050,Chinese cinnamon,Cinnamomum aromaticum,506205,Chinese_cinnamon,Herbs and Spices,Spices,Type 1,specific,119260.0
+50,51,FOOD00051,Ceylon cinnamon,Cinnamomum verum,501529,Cinnamomum_verum,Herbs and Spices,Spices,Type 1,specific,128608.0
+51,52,FOOD00052,Watermelon,Citrullus lanatus,22356,Watermelon,Gourds,Gourds,Type 1,specific,3654.0
+52,53,FOOD00053,Lime,Citrus aurantiifolia,506403,Citrus_aurantiifolia,Fruits,Citrus,Type 1,specific,159033.0
+53,54,FOOD00054,Lemon,Citrus limon,28885,Lemon,Fruits,Citrus,Type 1,specific,2708.0
+54,55,FOOD00055,Pummelo,Citrus maxima,501574,Pomelo,Fruits,Citrus,Type 1,specific,37334.0
+55,56,FOOD00056,"Mandarin orange (Clementine, Tangerine)",Citrus reticulata,28888,Mandarin_orange,Fruits,Citrus,Type 1,specific,85571.0
+56,57,FOOD00057,Sweet orange,Citrus sinensis,28889,Sweet_orange,Fruits,Citrus,Type 1,specific,2711.0
+57,58,FOOD00058,Coffee,Coffea,35189,Coffee,Coffee and coffee products,Coffee,Type 1,generic,13442.0
+58,59,FOOD00059,Arabica coffee,Coffea arabica,35190,Arabica_coffee,Coffee and coffee products,Coffee,Type 1,specific,13443.0
+59,60,FOOD00060,Robusta coffee,Coffea canephora,506060,Robusta coffee,Coffee and coffee products,Coffee,Type 1,specific,49390.0
+60,61,FOOD00061,Coriander,Coriandrum sativum,29622,Coriander,Herbs and Spices,Herbs,Type 1,specific,4047.0
+61,62,FOOD00062,Common hazelnut,Corylus avellana,501642,Corylus avellana,Nuts,Nuts,Type 1,specific,13451.0
+62,63,FOOD00063,Saffron,Crocus sativus,501794,Saffron,Herbs and Spices,Spices,Type 1,specific,82528.0
+63,64,FOOD00064,Muskmelon,Cucumis melo,22362,Muskmelon,Gourds,Gourds,Type 1,specific,3656.0
+64,65,FOOD00065,Cucumber,Cucumis sativus,22364,Cucumber,Gourds,Gourds,Type 1,specific,3659.0
+65,66,FOOD00066,Cucurbita,Cucurbita,22365,Cucurbita,Gourds,Gourds,Type 1,specific,3660.0
+66,67,FOOD00067,Cumin,Cuminum cyminum,501839,Cumin,Herbs and Spices,Spices,Type 1,specific,52462.0
+67,68,FOOD00068,Turmeric,Curcuma longa,42394,Turmeric,Herbs and Spices,Spices,Type 1,specific,136217.0
+68,69,FOOD00069,Quince,Cydonia oblonga,25159,Quince,Fruits,Pomes,Type 1,specific,36610.0
+69,70,FOOD00070,Lemon grass,Cymbopogon citratus,41613,Cymbopogon citratus,Herbs and Spices,Herbs,Type 1,specific,66014.0
+70,71,FOOD00071,Globe artichoke,Cynara scolymus,37222,Artichoke,Vegetables,Shoot vegetables,Type 1,specific,59895.0
+71,72,FOOD00072,Wild carrot,Daucus carota,29477,Daucus carota,Vegetables,Root vegetables,Type 1,specific,4039.0
+72,73,FOOD00073,Japanese persimmon,Diospyros kaki,505970,Japanese_persimmon,Fruits,Tropical fruits,Type 1,specific,35925.0
+73,74,FOOD00074,Cardamom,Elettaria cardamomum,506505,Cardamom,Herbs and Spices,Spices,Type 1,specific,105181.0
+74,75,FOOD00075,Black crowberry,Empetrum nigrum,23743,Empetrum nigrum,Fruits,Berries,Type 1,specific,191066.0
+75,76,FOOD00076,Loquat,Eriobotrya japonica,502403,Loquat,Fruits,Tropical fruits,Type 1,specific,32224.0
+76,77,FOOD00077,Rocket salad (ssp.),Eruca vesicaria ssp. sativa,524057,Rocket_(salad),Vegetables,Leaf vegetables,Type 1,specific,29727.0
+77,78,FOOD00078,Wax apple,Eugenia javanica,27192,Wax_apple,Fruits,Tropical fruits,Type 1,specific,119950.0
+78,79,FOOD00079,Common buckwheat,Fagopyrum esculentum,502589,Buckwheat,Cereals and cereal products,Cereals,Type 1,specific,3617.0
+79,80,FOOD00080,Tartary buckwheat,Fagopyrum tataricum,21283,Fagopyrum tataricum,Cereals and cereal products,Cereals,Type 1,specific,62330.0
+80,81,FOOD00081,Fig,Ficus carica,19093,Ficus_carica,Fruits,Other fruits,Type 1,specific,3494.0
+81,82,FOOD00082,Fennel,Foeniculum vulgare,29509,Fennel,Herbs and Spices,Herbs,Type 1,specific,48038.0
+82,83,FOOD00083,Strawberry,Fragaria X ananassa,24630,Strawberry,Fruits,Berries,Type 1,specific,3747.0
+83,84,FOOD00084,Black huckleberry,Gaylussacia baccata,23660,Black_huckleberry,Fruits,Berries,Type 1,specific,128893.0
+84,85,FOOD00085,Soy bean,Glycine max,26716,Soybean,Soy,Soy,Type 1,specific,3847.0
+85,86,FOOD00086,Sunflower,Helianthus annuus,36616,Sunflower,Herbs and Spices,Oilseed crops,Type 1,specific,4232.0
+86,87,FOOD00087,Sea-buckthornberry,Hippophae rhamnoides,503044,Hippophae rhamnoides,Fruits,Berries,Type 1,specific,193516.0
+87,88,FOOD00088,Barley,Hordeum vulgare,40874,Barley,Cereals and cereal products,Cereals,Type 1,specific,4513.0
+88,89,FOOD00089,Hyssop,Hyssopus officinalis,32536,Hyssop,Herbs and Spices,Herbs,Type 1,specific,39324.0
+89,90,FOOD00090,Star anise,Illicium verum,505892,Illicium verum,Herbs and Spices,Spices,Type 1,specific,124778.0
+90,91,FOOD00091,Swamp cabbage,Ipomoea aquatica,30759,Ipomoea_aquatica,Vegetables,Leaf vegetables,Type 1,specific,89636.0
+91,92,FOOD00092,Sweet potato,Ipomoea batatas,30764,Sweet Potato Pie (album),Vegetables,Tubers,Type 1,specific,4120.0
+92,93,FOOD00093,Black walnut,Juglans nigra,19254,Black_walnut,Nuts,Nuts,Type 1,specific,16719.0
+93,94,FOOD00094,Common walnut,Juglans regia,503244,Juglans regia,Nuts,Nuts,Type 1,specific,51240.0
+94,95,FOOD00095,Lettuce,Lactuca sativa,36607,Lettuce,Vegetables,Leaf vegetables,Type 1,specific,4236.0
+95,96,FOOD00096,Grass pea,Lathyrus sativus,25877,Lathyrus sativus,Pulses,Peas,Type 1,specific,3860.0
+96,97,FOOD00097,Sweet bay,Laurus nobilis,503343,Sweet_bay,Herbs and Spices,Herbs,Type 1,specific,85223.0
+97,98,FOOD00098,Lentils,Lens culinaris,503364,Lentils,Pulses,Lentils,Type 1,generic,3864.0
+98,99,FOOD00099,Garden cress,Lepidium sativum,22978,Garden cress,Vegetables,Leaf vegetables,Type 1,specific,33125.0
+99,100,FOOD00100,Lovage,Levisticum officinale,29673,Lovage,Herbs and Spices,Herbs,Type 1,specific,48042.0
+100,101,FOOD00101,Flaxseed,Linum usitatissimum,29226,Flax,Herbs and Spices,Oilseed crops,Type 1,specific,4006.0
+101,102,FOOD00102,Mexican oregano,Lippia graveolens,32068,Mexican_oregano,Herbs and Spices,Herbs,Type 1,specific,
+102,103,FOOD00103,Lichee,Litchi chinensis,503504,Lichee,Fruits,Tropical fruits,Type 1,specific,151069.0
+103,104,FOOD00104,Lupine,Lupinus,25916,Lupin,Pulses,Other pulses,Type 1,specific,3869.0
+104,105,FOOD00105,Apple,Malus pumila,25262,Apple,Fruits,Pomes,Type 1,specific,283210.0
+105,106,FOOD00106,Mango,Mangifera indica,28803,Mango,Fruits,Tropical fruits,Type 1,specific,29780.0
+106,107,FOOD00107,German camomile,Matricaria recutita,38079,Matricaria chamomilla,Herbs and Spices,Herbs,Type 1,specific,127986.0
+107,108,FOOD00108,Lemon balm,Melissa officinalis,32565,Melissa officinalis,Herbs and Spices,Herbs,Type 1,specific,39338.0
+108,109,FOOD00109,Mentha,Mentha,32264,Mentha,Herbs and Spices,Herbs,Type 1,specific,21819.0
+109,110,FOOD00110,Orange mint,Mentha aquatica,32268,Mentha_citrata,Herbs and Spices,Herbs,Type 1,specific,190902.0
+110,111,FOOD00111,Cornmint,Mentha arvensis,565302,Mentha arvensis,Herbs and Spices,Herbs,Type 1,specific,292239.0
+111,112,FOOD00112,Spearmint,Mentha spicata,32272,Spearmint,Herbs and Spices,Herbs,Type 1,specific,29719.0
+112,113,FOOD00113,Peppermint,Mentha X piperita,32275,Peppermint,Herbs and Spices,Herbs,Type 1,specific,34256.0
+113,114,FOOD00114,Medlar,Mespilus germanica,506235,Medlar,Fruits,Pomes,Type 1,specific,36616.0
+114,115,FOOD00115,Bitter gourd,Momordica charantia,22399,Bitter melon,Gourds,Gourds,Type 1,specific,3673.0
+115,116,FOOD00116,Mulberry,Morus,19064,Mulberry,Fruits,Berries,Type 1,specific,3497.0
+116,117,FOOD00117,Black mulberry,Morus nigra,19069,Black_mulberry,Fruits,Berries,Type 1,specific,85232.0
+117,118,FOOD00118,Nutmeg,Myristica fragrans,18125,Nutmeg,Herbs and Spices,Spices,Type 1,specific,51089.0
+118,119,FOOD00119,Sweet basil,Ocimum basilicum,32627,Sweet_basil,Herbs and Spices,Herbs,Type 1,specific,39350.0
+119,120,FOOD00120,Evening primrose,Oenothera biennis,27368,Evening_primrose,Herbs and Spices,Oilseed crops,Type 1,specific,3942.0
+120,121,FOOD00121,Olive,Olea europaea,32990,Olive,Vegetables,Fruit vegetables,Type 1,specific,4146.0
+121,122,FOOD00122,Sweet marjoram,Origanum majorana,32631,Sweet_marjoram,Herbs and Spices,Herbs,Type 1,specific,268884.0
+122,123,FOOD00123,Pot marjoram,Origanum onites,506029,Pot_marjoram,Herbs and Spices,Herbs,Type 1,specific,452416.0
+123,124,FOOD00124,Common oregano,Origanum vulgare,32632,Oregano,Herbs and Spices,Herbs,Type 1,specific,39352.0
+124,125,FOOD00125,Rice,Oryza sativa,41976,Rice,Cereals and cereal products,Cereals,Type 1,specific,4530.0
+125,126,FOOD00126,Millet,Panicum miliaceum,40946,Millet,Cereals and cereal products,Cereals,Type 1,specific,4540.0
+126,127,FOOD00127,Poppy,Papaver,18881,Poppy,Herbs and Spices,Oilseed crops,Type 1,specific,3468.0
+127,128,FOOD00128,Passion fruit,Passiflora edulis,22223,Passiflora edulis,Fruits,Tropical fruits,Type 1,specific,78168.0
+128,129,FOOD00129,Parsnip,Pastinaca sativa,29795,Parsnip,Vegetables,Root vegetables,Type 1,specific,4041.0
+129,130,FOOD00130,Avocado,Persea americana,18154,Avocado,Vegetables,Fruit vegetables,Type 1,specific,3435.0
+130,131,FOOD00131,Parsley,Petroselinum crispum,29817,Parsley,Herbs and Spices,Herbs,Type 1,specific,4043.0
+131,132,FOOD00132,Scarlet bean,Phaseolus coccineus,26845,Phaseolus_coccineus,Pulses,Beans,Type 1,specific,3886.0
+132,133,FOOD00133,Lima bean,Phaseolus lunatus,26850,Phaseolus lunatus,Pulses,Beans,Type 1,specific,3884.0
+133,134,FOOD00134,Common bean,Phaseolus vulgaris,26857,Phaseolus_vulgaris,Pulses,Beans,Type 1,specific,3885.0
+134,135,FOOD00135,Date,Phoenix dactylifera,42458,Date_(fruit)#Dates,Fruits,Other fruits,Type 1,specific,42345.0
+135,136,FOOD00136,Black chokeberry,Photinia melanocarpa,565397,Photinia_melanocarpa,Fruits,Berries,Type 1,specific,661339.0
+136,137,FOOD00137,Anise,Pimpinella anisum,29822,Anise,Herbs and Spices,Herbs,Type 1,specific,271192.0
+137,138,FOOD00138,Pine nut,Pinus,18035,Pine nut,Nuts,Nuts,Type 1,specific,3337.0
+138,139,FOOD00139,Pepper (Spice),Piper nigrum,18310,Black pepper,Herbs and Spices,Spices,Type 1,specific,13216.0
+139,140,FOOD00140,Pistachio,Pistacia vera,506470,Pistachio,Nuts,Nuts,Type 1,specific,55513.0
+140,141,FOOD00141,Common pea,Pisum sativum,26867,Pea,Pulses,Peas,Type 1,specific,3888.0
+141,142,FOOD00142,Purslane,Portulaca oleracea,20422,Purslane,Herbs and Spices,Herbs,Type 1,specific,46147.0
+142,143,FOOD00143,"Prunus (Cherry, Plum)",Prunus,24762,Prunus,Fruits,Drupes,Type 1,specific,3754.0
+143,144,FOOD00144,Apricot,Prunus armeniaca,24769,Apricot,Fruits,Drupes,Type 1,specific,36596.0
+144,145,FOOD00145,Sweet cherry,Prunus avium,24770,Prunus avium,Fruits,Drupes,Type 1,specific,42229.0
+145,146,FOOD00146,Sour cherry,Prunus cerasus,24773,Prunus_cerasus,Fruits,Drupes,Type 1,specific,140311.0
+146,147,FOOD00147,European plum,Prunus domestica,24774,Prunus_domestica,Fruits,Drupes,Type 1,specific,3758.0
+147,148,FOOD00148,Almond,Prunus dulcis,24775,Prunus_dulcis,Nuts,Nuts,Type 1,specific,3755.0
+148,149,FOOD00149,Peach,Prunus persica,24765,Peach,Fruits,Drupes,Type 1,specific,3760.0
+149,150,FOOD00150,Guava,Psidium guajava,27240,Guava,Fruits,Tropical fruits,Type 1,specific,120290.0
+150,151,FOOD00151,Pomegranate,Punica granatum,27278,Pomegranate,Fruits,Tropical fruits,Type 1,specific,22663.0
+151,152,FOOD00152,Pear,Pyrus communis,25295,Pear,Fruits,Pomes,Type 1,specific,23211.0
+152,153,FOOD00153,Radish,Raphanus sativus,23290,Radish,Vegetables,Root vegetables,Type 1,specific,3726.0
+153,154,FOOD00154,Garden rhubarb,Rheum rhabarbarum,504747,Rhubarb,Vegetables,Stalk vegetables,Type 1,specific,3621.0
+154,155,FOOD00155,Blackcurrant,Ribes nigrum,24488,Blackcurrant,Fruits,Berries,Type 1,specific,78511.0
+155,156,FOOD00156,Redcurrant,Ribes rubrum,504798,Redcurrant,Fruits,Berries,Type 1,specific,175228.0
+156,157,FOOD00157,Gooseberry,Ribes uva-crispa,504800,Gooseberry,Fruits,Berries,Type 1,specific,135518.0
+157,158,FOOD00158,Watercress,Rorippa nasturtium-aquaticum,22993,Watercress,Herbs and Spices,Herbs,Type 1,specific,135518.0
+158,159,FOOD00159,Rosemary,Rosmarinus officinalis,32677,Rosemary,Herbs and Spices,Herbs,Type 1,specific,39367.0
+159,160,FOOD00160,"Rubus (Blackberry, Raspberry)",Rubus,24848,Rubus,Fruits,Berries,Type 1,specific,23216.0
+160,161,FOOD00161,Cloudberry,Rubus chamaemorus,24850,Cloudberry,Fruits,Berries,Type 1,specific,57936.0
+161,162,FOOD00162,Red raspberry,Rubus idaeus,24947,Red_raspberry,Fruits,Berries,Type 1,specific,32247.0
+162,163,FOOD00163,Black raspberry,Rubus occidentalis,24854,Black raspberry,Fruits,Berries,Type 1,specific,75079.0
+163,164,FOOD00164,Sorrel,Rumex acetosa,504901,Sorrel,Herbs and Spices,Herbs,Type 1,specific,41241.0
+164,165,FOOD00165,Common sage,Salvia officinalis,32729,Common_sage,Herbs and Spices,Herbs,Type 1,specific,38868.0
+165,166,FOOD00166,Black elderberry,Sambucus nigra,35324,Sambucus nigra,Fruits,Berries,Type 1,specific,4202.0
+166,167,FOOD00167,Summer savory,Satureja hortensis,32308,Summer_savory,Herbs and Spices,Herbs,Type 1,specific,49987.0
+167,168,FOOD00168,Winter savory,Satureja montana,505016,Winter savory,Herbs and Spices,Herbs,Type 1,specific,49988.0
+168,169,FOOD00169,Rye,Secale cereale,42090,Rye,Cereals and cereal products,Cereals,Type 1,specific,4550.0
+169,170,FOOD00170,Sesame,Sesamum orientale,505186,Sesame,Herbs and Spices,Oilseed crops,Type 1,specific,4182.0
+170,171,FOOD00171,Garden tomato,Solanum lycopersicum,521671,Solanum_lycopersicum,Vegetables,Fruit vegetables,Type 1,specific,4081.0
+171,172,FOOD00172,Cherry tomato,Solanum lycopersicum var. cerasiforme,566309,Cherry tomato,Vegetables,Fruit vegetables,Type 1,specific,195583.0
+172,173,FOOD00173,Garden tomato (var.),Solanum lycopersicum var. lycopersicum,566310,,Vegetables,Fruit vegetables,Type 1,specific,397755.0
+173,174,FOOD00174,Eggplant,Solanum melongena,30446,Eggplant,Vegetables,Fruit vegetables,Type 1,specific,4111.0
+174,175,FOOD00175,Potato,Solanum tuberosum,505272,Potato,Vegetables,Tubers,Type 1,specific,4113.0
+175,176,FOOD00176,Rowanberry,Sorbus aucuparia,25320,Rowanberry,Fruits,Berries,Type 1,specific,36599.0
+176,177,FOOD00177,Sorghum,Sorghum bicolor,42108,Sorghum,Cereals and cereal products,Cereals,Type 1,specific,4558.0
+177,178,FOOD00178,Spinach,Spinacia oleracea,20709,Spinach,Vegetables,Leaf vegetables,Type 1,specific,3562.0
+178,179,FOOD00179,Cloves,Syzygium aromaticum,506167,Cloves,Herbs and Spices,Spices,Type 1,specific,219868.0
+179,180,FOOD00180,Tamarind,Tamarindus indica,26980,Tamarind,Fruits,Tropical fruits,Type 1,specific,58860.0
+180,181,FOOD00181,Dandelion,Taraxacum officinale,36213,Dandelion,Herbs and Spices,Herbs,Type 1,specific,50225.0
+181,182,FOOD00182,Cocoa bean,Theobroma cacao,505487,Cocoa_bean,Cocoa and cocoa products,Cocoa,Type 1,specific,3641.0
+182,183,FOOD00183,Common thyme,Thymus vulgaris,505501,Thymus vulgaris,Herbs and Spices,Herbs,Type 1,specific,49992.0
+183,184,FOOD00184,Linden,Tilia,21535,,Herbs and Spices,Herbs,Type 1,specific,64580.0
+184,185,FOOD00185,Small-leaf linden,Tilia cordata,505507,Tilia cordata,Herbs and Spices,Herbs,Type 1,specific,172266.0
+185,186,FOOD00186,Fenugreek,Trigonella foenum-graecum,505590,Fenugreek,Herbs and Spices,Herbs,Type 1,specific,78534.0
+186,187,FOOD00187,Common wheat,Triticum aestivum,42237,Common wheat,Cereals and cereal products,Cereals,Type 1,specific,4565.0
+187,188,FOOD00188,"Vaccinium (Blueberry, Cranberry, Huckleberry)",Vaccinium,23571,Vaccinium,Fruits,Berries,Type 1,specific,13749.0
+188,189,FOOD00189,Lowbush blueberry,Vaccinium angustifolium,23579,Lowbush_blueberry,Fruits,Berries,Type 1,specific,472369.0
+189,190,FOOD00190,Sparkleberry,Vaccinium arboreum,23580,Sparkleberry,Fruits,Berries,Type 1,specific,229201.0
+190,191,FOOD00191,Highbush blueberry,Vaccinium corymbosum,23573,Vaccinium corymbosum,Fruits,Berries,Type 1,specific,69266.0
+191,192,FOOD00192,American cranberry,Vaccinium macrocarpon,23599,Vaccinium macrocarpon,Fruits,Berries,Type 1,specific,13750.0
+192,193,FOOD00193,Bilberry,Vaccinium myrtillus,23605,Bilberry,Fruits,Berries,Type 1,specific,180763.0
+193,194,FOOD00194,Lingonberry,Vaccinium vitis-idaea,505637,Vaccinium vitis-idaea,Fruits,Berries,Type 1,specific,180772.0
+194,195,FOOD00195,Vanilla,Vanilla,43714,Vanilla,Herbs and Spices,Spices,Type 1,specific,51238.0
+195,196,FOOD00196,Common verbena,Verbena officinalis,32110,Verbena officinalis,Herbs and Spices,Herbs,Type 1,specific,79772.0
+196,197,FOOD00197,Broad bean,Vicia faba,26339,Broad_bean,Pulses,Beans,Type 1,specific,3906.0
+197,198,FOOD00198,Adzuki bean,Vigna angularis,505691,Azuki bean,Pulses,Beans,Type 1,specific,3914.0
+198,199,FOOD00199,Gram bean,Vigna mungo,506273,Vigna_mungo,Pulses,Beans,Type 1,specific,3915.0
+199,200,FOOD00200,Mung bean,Vigna radiata,506804,Mung bean,Pulses,Beans,Type 1,specific,157791.0
+200,201,FOOD00201,Climbing bean,Vigna umbellata,506275,Vigna umbellata,Pulses,Beans,Type 1,specific,87088.0
+201,202,FOOD00202,Cowpea,Vigna unguiculata,27018,Cowpea,Pulses,Peas,Type 1,specific,3917.0
+202,203,FOOD00203,Muscadine grape,Vitis rotundifolia,28609,Muscadine,Fruits,Berries,Type 1,specific,103349.0
+203,204,FOOD00204,Common grape,Vitis vinifera,28629,Vitis vinifera,Fruits,Berries,Type 1,specific,29760.0
+204,205,FOOD00205,Corn,Zea mays,42269,Corn,Cereals and cereal products,Cereals,Type 1,specific,4577.0
+205,206,FOOD00206,Ginger,Zingiber officinale,42402,Ginger,Herbs and Spices,Spices,Type 1,specific,94328.0
+206,207,FOOD00207,Arctic blackberry,Rubus arcticus,24849,Rubus_arcticus,Fruits,Berries,Type 1,specific,70741.0
+207,208,FOOD00208,Banana,Musa acuminata,42390,Banana,Fruits,Tropical fruits,Type 1,specific,4641.0
+208,209,FOOD00209,Bayberry,Myrica,19260,Bayberry,Fruits,Berries,Type 1,specific,3509.0
+209,210,FOOD00210,Elliott's blueberry,Vaccinium elliottii,23592,Vaccinium_elliottii,Fruits,Berries,Type 1,specific,283798.0
+210,211,FOOD00211,Canada blueberry,Vaccinium myrtilloides,23604,Vaccinium myrtilloides,Fruits,Berries,Type 1,specific,1503870.0
+211,212,FOOD00212,Bog bilberry,Vaccinium uliginosum,23574,Vaccinium uliginosum,Fruits,Berries,Type 1,specific,190548.0
+212,213,FOOD00213,Buffalo currant,Ribes aureum var. villosum,530043,Buffalo_currant,Fruits,Berries,Type 1,specific,23283.0
+213,214,FOOD00214,Celeriac,Apium graveolens var. rapaceum,530941,Celeriac,Vegetables,Root vegetables,Type 1,specific,278110.0
+214,215,FOOD00215,Celery stalks,Apium graveolens var. dulce,182185,Apium_graveolens,Vegetables,Stalk vegetables,Type 1,specific,117781.0
+215,216,FOOD00216,Chinese chives,Allium tuberosum,506483,Chinese_chives,Herbs and Spices,Herbs,Type 1,specific,4683.0
+216,217,FOOD00217,European cranberry,Vaccinium oxycoccos,505635,Vaccinium oxycoccos,Fruits,Berries,Type 1,specific,516948.0
+217,218,FOOD00218,Deerberry,Vaccinium stamineum,23615,Vaccinium stamineum,Fruits,Berries,Type 1,specific,176259.0
+218,219,FOOD00219,Ginseng,Panax,29398,Ginseng,Herbs and Spices,Spices,Type 1,specific,4054.0
+219,220,FOOD00220,Cascade huckleberry,Vaccinium deliciosum,23591,Vaccinium deliciosum,Fruits,Berries,Type 1,specific,190531.0
+220,221,FOOD00221,Oval-leaf huckleberry,Vaccinium ovalifolium,23607,Vaccinium_ovalifolium,Fruits,Berries,Type 1,specific,190544.0
+221,222,FOOD00222,Evergreen huckleberry,Vaccinium ovatum,23608,Vaccinium ovatum,Fruits,Berries,Type 1,specific,84019.0
+222,223,FOOD00223,Red huckleberry,Vaccinium parvifolium,23612,Vaccinium parvifolium,Fruits,Berries,Type 1,specific,180766.0
+223,224,FOOD00224,Longan,Dimocarpus longan,506072,Longan,Fruits,Tropical fruits,Type 1,specific,128017.0
+224,225,FOOD00225,Macadamia nut (M. tetraphylla),Macadamia tetraphylla,506560,Macadamia tetraphylla,Nuts,Nuts,Type 1,specific,512563.0
+225,226,FOOD00226,Garden onion (var.),Allium cepa var. cepa,182638,,Vegetables,Onion-family vegetables,Type 1,specific,4679.0
+226,227,FOOD00227,Summer grape,Vitis aestivalis,28607,Vitis aestivalis,Fruits,Berries,Type 1,specific,3605.0
+227,228,FOOD00228,Fox grape,Vitis labrusca,28608,Vitis_labrusca,Fruits,Berries,Type 1,specific,103355.0
+228,229,FOOD00229,Nectarine,Prunus persica var. nucipersica,530965,Nectarine#Nectarines,Fruits,Drupes,Type 1,specific,323851.0
+229,230,FOOD00230,Peach (var.),Prunus persica var. persica,530964,,Fruits,Drupes,Type 1,specific,323852.0
+230,231,FOOD00231,Pepper (C. baccatum),Capsicum baccatum var. baccatum,530932,Capsicum_baccatum,Vegetables,Fruit vegetables,Type 1,specific,165788.0
+231,232,FOOD00232,Pepper (C. chinense),Capsicum chinense,30494,Capsicum_chinense,Vegetables,Fruit vegetables,Type 1,specific,80379.0
+232,233,FOOD00233,Pepper (Capsicum),Capsicum,30491,Capsicum,Vegetables,Fruit vegetables,Type 1,specific,4071.0
+233,234,FOOD00234,Rambutan,Nephelium lappaceum,506073,Rambutan,Fruits,Tropical fruits,Type 1,specific,151071.0
+234,235,FOOD00235,Red rice,Oryza rufipogon,504068,Oryza_rufipogon,Cereals and cereal products,Cereals,Type 1,specific,4529.0
+235,236,FOOD00236,Annual wild rice,Zizania aquatica,41319,Zizania_aquatica,Cereals and cereal products,Cereals,Type 1,specific,75727.0
+236,237,FOOD00237,Swiss chard,Beta vulgaris ssp. cicla,524868,Swiss_chard,Vegetables,Leaf vegetables,Type 1,specific,1527200.0
+237,238,FOOD00238,Lemon thyme,Thymus pulegioides,505500,Thymus_pulegioides,Herbs and Spices,Herbs,Type 1,specific,751873.0
+238,239,FOOD00239,Tronchuda cabbage,Brassica oleracea var. costata,530958,,Vegetables,Cabbages,Type 1,specific,416546.0
+239,240,FOOD00240,Japanese walnut,Juglans ailanthifolia,503241,Juglans ailantifolia,Nuts,Nuts,Type 1,specific,91209.0
+240,241,FOOD00241,Welsh onion,Allium fistulosum,185463,Welsh_onion,Herbs and Spices,Herbs,Type 1,specific,35875.0
+241,242,FOOD00242,Hard wheat,Triticum durum,42240,Hard_wheat,Cereals and cereal products,Cereals,Type 1,specific,4567.0
+242,243,FOOD00243,Shallot,Allium ascalonicum,506481,Shallot,Vegetables,Onion-family vegetables,Type 1,specific,1476995.0
+243,244,FOOD00244,Rocket salad,Eruca vesicaria,502429,Rocket_(salad),Vegetables,Leaf vegetables,Type 1,specific,180536.0
+244,245,FOOD00245,Carrot,Daucus carota ssp. sativus,524846,Carrot,Vegetables,Root vegetables,Type 1,specific,79200.0
+245,246,FOOD00246,Triticale,X Triticosecale rimpaui,506625,Triticale,Cereals and cereal products,Cereals,Type 1,specific,
+246,247,FOOD00247,Black cabbage,Brassica oleracea var. viridis,,,Vegetables,Cabbages,Type 1,specific,3713.0
+247,248,FOOD00248,Half-highbush blueberry,Vaccinium angustifolium X Vaccinium corymbosum,,,Fruits,Berries,Type 1,specific,934696.0
+248,249,FOOD00249,Celery leaves,Apium graveolens var. secalinum,,Apium_graveolens_var._secalinum,Herbs and Spices,Herbs,Type 1,specific,941588.0
+249,250,FOOD00250,Chicory leaves,Cichorium intybus var. foliosum,781014,,Vegetables,Leaf vegetables,Type 1,specific,13427.0
+250,251,FOOD00251,Komatsuna,Brassica rapa var. perviridis,532656,Komatsuna,Vegetables,Cabbages,Type 1,specific,344680.0
+251,252,FOOD00252,Pak choy,Brassica rapa var. chinensis,,Pak_choy,Vegetables,Cabbages,Type 1,specific,93385.0
+252,253,FOOD00253,Napa cabbage,Brassica rapa var. pekinensis,,Napa_cabbage,Vegetables,Cabbages,Type 1,specific,51351.0
+253,254,FOOD00254,Chicory roots,Cichorium intybus var. sativum,781020,Chicory,Vegetables,Root vegetables,Type 1,specific,13427.0
+254,255,FOOD00255,Grapefruit/Pummelo hybrid,Citrus paradisi X Citrus maxima,,,Fruits,Citrus,Type 1,specific,37656.0
+255,256,FOOD00256,Grapefruit,Citrus X paradisi,28887,Grapefruit,Fruits,Citrus,Type 1,specific,37656.0
+256,257,FOOD00257,Jostaberry,Ribes × nidigrolaria,,Jostaberry,Fruits,Berries,Type 1,specific,
+257,258,FOOD00258,Kai-lan,Brassica oleracea var. alboglabra,532650,Kai-lan,Vegetables,Cabbages,Type 1,specific,3714.0
+258,259,FOOD00259,Italian oregano,Origanum X majoricum,,,Herbs and Spices,Herbs,Type 1,specific,1384207.0
+259,260,FOOD00260,Oxheart cabbage,Brassica oleracea var. conica,,,Vegetables,Cabbages,Type 1,specific,
+260,261,FOOD00261,Daikon radish,Raphanus sativus var. longipinnatus,,Daikon,Vegetables,Root vegetables,Type 1,specific,41679.0
+261,262,FOOD00262,Black radish,Raphanus sativus var. niger,,,Vegetables,Root vegetables,Type 1,specific,41679.0
+262,263,FOOD00263,Radish (var.),Raphanus sativus var. sativus,,,Vegetables,Root vegetables,Type 1,specific,240228.0
+263,264,FOOD00264,Red beetroot,Beta vulgaris var. rubra,,Beetroot,Vegetables,Root vegetables,Type 1,specific,
+264,265,FOOD00265,Sweet rowanberry,Grataegosorbus mitschurinii,,,Fruits,Berries,Type 1,specific,
+265,266,FOOD00266,Pineappple sage,Salvia elegans,832880,Salvia_elegans,Herbs and Spices,Herbs,Type 1,specific,888065.0
+266,267,FOOD00267,Skunk currant,Ribes glandulosum,24466,Ribes glandulosum,Fruits,Berries,Type 1,specific,175226.0
+267,268,FOOD00268,Beer,,,Beer,Beverages,Fermented beverages,Type 2,specific,
+268,269,FOOD00269,Other bread,,,Bread,Cereals and cereal products,Other breads,Type 2,specific,
+269,270,FOOD00270,Breakfast cereal,,,Breakfast cereal,Cereals and cereal products,Cereal products,Type 2,specific,
+270,272,FOOD00271,Other soy product,,,,Soy,Soy products,Type 2,specific,
+271,273,FOOD00272,Other cereal product,,,,Cereals and cereal products,Cereal products,Type 2,specific,
+272,274,FOOD00273,Pasta,,,Pasta,Cereals and cereal products,Cereal products,Type 2,specific,
+273,275,FOOD00274,Biscuit,,,Biscuit,Cereals and cereal products,Cereal products,Type 2,specific,
+274,276,FOOD00275,Sourdough,,,Sourdough,Cereals and cereal products,Doughs,Type 2,specific,
+275,277,FOOD00276,Spirit,,,Spirit,Beverages,Distilled beverages,Type 2,specific,
+276,278,FOOD00277,Fortified wine,,,Fortified wine,Beverages,Fortified wines,Type 2,specific,
+277,279,FOOD00278,Other alcoholic beverage,,,Alcoholic_beverage,Beverages,Alcoholic beverages,Type 2,specific,
+278,280,FOOD00279,Abalone,Haliotis,69493,Abalone,Aquatic foods,Mollusks,Type 1,specific,6452.0
+279,281,FOOD00280,Abiyuch,Crateva religiosa,505883,Crateva religiosa,Fruits,Tropical fruits,Type 1,specific,202634.0
+280,282,FOOD00281,Acerola,Malpighia emarginata,29280,Malpighia emarginata,Fruits,Tropical fruits,Type 1,specific,151847.0
+281,283,FOOD00282,Acorn,Quercus,19276,Acorn,Nuts,Nuts,Type 1,specific,3511.0
+282,284,FOOD00283,Winter squash,Cucurbita maxima,22369,Winter squash,Gourds,Gourds,Type 1,specific,3661.0
+283,285,FOOD00284,Agar,Eucheuma,11923,Agar,Aquatic foods,Seaweed,Type 1,specific,31444.0
+284,286,FOOD00285,Red king crab,Paralithodes camtschaticus,97935,Paralithodes camtschaticus,Aquatic foods,Crustaceans,Type 1,specific,6741.0
+285,287,FOOD00286,Alfalfa,Medicago sativa,183623,Alfalfa,Herbs and Spices,Herbs,Type 1,specific,3879.0
+286,288,FOOD00287,Allspice,Pimenta dioica,27247,Allspice,Herbs and Spices,Spices,Type 1,specific,375272.0
+287,289,FOOD00288,Amaranth,Amaranthus,20715,Amaranth,Herbs and Spices,Herbs,Type 1,specific,3564.0
+288,290,FOOD00289,Arrowhead,Sagittaria latifolia,38908,Sagittaria_latifolia,Vegetables,Tubers,Type 1,specific,15008.0
+289,291,FOOD00290,Arrowroot,Maranta arundinacea,503694,Maranta_arundinacea,Vegetables,Tubers,Type 1,specific,210060.0
+290,292,FOOD00291,Asian pear,Pyrus pyrifolia,25296,Pyrus pyrifolia,Fruits,Pomes,Type 1,specific,3767.0
+291,293,FOOD00292,Atlantic herring,Clupea harengus harengus,161724,Atlantic herring,Aquatic foods,Fishes,Type 1,specific,7950.0
+292,294,FOOD00293,Atlantic mackerel,Scomber scombrus,172414,Atlantic mackerel,Aquatic foods,Fishes,Type 1,specific,13677.0
+293,295,FOOD00294,Painted comber,Serranus scriba,167862,Painted comber,Aquatic foods,Fishes,Type 1,specific,349661.0
+294,296,FOOD00295,Atlantic pollock,Pollachius pollachius,164728,Pollachius pollachius,Aquatic foods,Fishes,Type 1,specific,185739.0
+295,297,FOOD00296,Atlantic wolffish,Anarhichas lupus,171341,Atlantic wolffish,Aquatic foods,Fishes,Type 1,specific,8204.0
+296,298,FOOD00297,Bamboo shoots,Phyllostachys edulis,565400,Bamboo_shoots,Vegetables,Shoot vegetables,Type 1,specific,38705.0
+297,299,FOOD00298,Striped bass,Morone saxatilis,167680,Striped bass,Aquatic foods,Fishes,Type 1,specific,34816.0
+298,301,FOOD00299,Beech nut,Fagus,19461,Beech,Nuts,Nuts,Type 1,specific,21024.0
+299,302,FOOD00300,Beluga whale,Delphinapterus leucas,180483,Beluga_whale,Aquatic foods,Cetaceans,Type 1,specific,9749.0
+300,303,FOOD00301,Bison,Bison bison,180706,Bison,Animal foods,Bovines,Type 1,specific,9901.0
+301,305,FOOD00302,Alaska blackfish,Dallia pectoralis,162159,Alaska blackfish,Aquatic foods,Fishes,Type 1,specific,75939.0
+302,306,FOOD00303,Blue crab,Callinectes sapidus,98696,Callinectes_sapidus,Aquatic foods,Crustaceans,Type 1,specific,6763.0
+303,307,FOOD00304,Blue mussel,Mytilus edulis,79454,Blue mussel,Aquatic foods,Mollusks,Type 1,specific,6550.0
+304,308,FOOD00305,Northern bluefin tuna,Thunnus thynnus,172421,Atlantic bluefin tuna,Aquatic foods,Fishes,Type 1,specific,8237.0
+305,309,FOOD00306,Bluefish,Pomatomus saltatrix,168559,Bluefish,Aquatic foods,Fishes,Type 1,specific,75034.0
+306,310,FOOD00307,Wild boar,Sus scrofa,180722,Wild boar,Animal foods,Swine,Type 1,specific,9823.0
+307,311,FOOD00308,Bowhead whale,Balaena mysticetus,180533,Bowhead whale,Aquatic foods,Cetaceans,Type 1,specific,27602.0
+308,312,FOOD00309,Breadfruit,Artocarpus altilis,184181,Breadfruit,Fruits,Tropical fruits,Type 1,specific,194251.0
+309,313,FOOD00310,Breadnut tree seed,Brosimum alicastrum,19075,Brosimum alicastrum,Herbs and Spices,Other seeds,Type 1,specific,194253.0
+310,314,FOOD00311,Rapini,Brassica ruvo,506216,Rapini,Vegetables,Cabbages,Type 1,specific,1204434.0
+311,316,FOOD00312,Buffalo,Bubalus bubalis,552476,Bubalus_bubalis,Animal foods,Bovines,Type 1,specific,89462.0
+312,317,FOOD00313,Burbot,Lota lota,164725,Burbot,Aquatic foods,Fishes,Type 1,specific,69944.0
+313,318,FOOD00314,Giant butterbur,Petasites japonicus,36057,Petasites japonicus,Vegetables,Other vegetables,Type 1,specific,186965.0
+314,319,FOOD00315,American butterfish,Peprilus triacanthus,172567,American butterfish,Aquatic foods,Fishes,Type 1,specific,183653.0
+315,320,FOOD00316,Butternut,Juglans cinerea,19250,Juglans_cinerea,Nuts,Nuts,Type 1,specific,91214.0
+316,321,FOOD00317,Butternut squash,Cucurbita moschata,22370,Butternut squash,Gourds,Gourds,Type 1,specific,3662.0
+317,322,FOOD00318,Calabash,Lagenaria siceraria,22386,Calabash,Gourds,Gourds,Type 1,specific,3668.0
+318,323,FOOD00319,Cardoon,Cynara cardunculus,37221,Cardoon,Vegetables,Shoot vegetables,Type 1,specific,4265.0
+319,325,FOOD00320,Natal plum,Carissa macrocarpa,501290,Carissa macrocarpa,Fruits,Tropical fruits,Type 1,specific,403101.0
+320,326,FOOD00321,Carob,Ceratonia siliqua,26531,Carob,Vegetables,Other vegetables,Type 1,specific,20340.0
+321,327,FOOD00322,Common carp,Cyprinus carpio,163344,Common carp,Aquatic foods,Fishes,Type 1,specific,7962.0
+322,328,FOOD00323,Cassava,Manihot esculenta,503688,Cassava,Vegetables,Tubers,Type 1,specific,3983.0
+323,329,FOOD00324,Channel catfish,Ictalurus punctatus,163998,Channel_catfish,Aquatic foods,Fishes,Type 1,specific,7998.0
+324,330,FOOD00325,Chayote,Sechium edule,22441,Chayote,Gourds,Gourds,Type 1,specific,184140.0
+325,331,FOOD00326,Cherimoya,Annona cherimola,506198,Cherimoya,Fruits,Tropical fruits,Type 1,specific,49314.0
+326,332,FOOD00327,Chervil,Anthriscus cerefolium,29587,Chervil,Herbs and Spices,Spices,Type 1,specific,40888.0
+327,333,FOOD00328,Chia,Salvia hispanica,32718,Salvia_hispanica,Herbs and Spices,Other seeds,Type 1,specific,49212.0
+328,334,FOOD00329,Chicken,Gallus gallus,176086,Chicken,Animal foods,Poultry,Type 1,specific,9031.0
+329,335,FOOD00330,Chinese broccoli,Brassica alboglabra,506218,Chinese_broccoli,Vegetables,Cabbages,Type 1,specific,3714.0
+330,336,FOOD00331,Chinese chestnut,Castanea mollissima,501318,Chinese_chestnut,Nuts,Nuts,Type 1,specific,60419.0
+331,337,FOOD00332,Chinese water chestnut,Eleocharis dulcis,506699,Chinese_water_chestnut,Vegetables,Other vegetables,Type 1,specific,110284.0
+332,338,FOOD00333,Garland chrysanthemum,Chrysanthemum coronarium,35796,Garland chrysanthemum,Vegetables,Leaf vegetables,Type 1,specific,99038.0
+333,339,FOOD00334,Cisco,Coregonus artedi,623384,Coregonus_artedi,Aquatic foods,Fishes,Type 1,specific,36181.0
+334,340,FOOD00335,Nuttall cockle,Clinocardium nuttallii,80873,Clinocardium nuttallii,Aquatic foods,Mollusks,Type 1,specific,410350.0
+335,341,FOOD00336,Coconut,Cocos nucifera,42451,Coconut,Fruits,Tropical fruits,Type 1,specific,13894.0
+336,342,FOOD00337,Pacific cod,Gadus macrocephalus,164711,Pacific_cod,Aquatic foods,Fishes,Type 1,specific,80720.0
+337,343,FOOD00338,Atlantic cod,Gadus morhua,164712,Atlantic_cod,Aquatic foods,Fishes,Type 1,specific,8049.0
+338,344,FOOD00339,Common octopus,Octopus vulgaris,82603,Common octopus,Aquatic foods,Mollusks,Type 1,specific,6645.0
+339,345,FOOD00340,Corn salad,Valerianella locusta,35392,Valerianella locusta,Vegetables,Leaf vegetables,Type 1,specific,59166.0
+340,346,FOOD00341,Cottonseed,Gossypium,21709,Cottonseed,Herbs and Spices,Oilseed crops,Type 1,specific,3633.0
+341,347,FOOD00342,Catjang pea,Vigna unguiculata ssp. cylindrica,524854,Vigna_unguiculata_subsp._cylindrica,Pulses,Peas,Type 1,specific,3840.0
+342,348,FOOD00343,Malus (Crab apple),Malus,25254,Malus,Fruits,Pomes,Type 1,specific,3749.0
+343,349,FOOD00344,Squashberry,Viburnum edule,35261,Squashberry,Fruits,Berries,Type 1,specific,237934.0
+344,350,FOOD00345,Atlantic croaker,Micropogonias undulatus,169283,Atlantic croaker,Aquatic foods,Fishes,Type 1,specific,29154.0
+345,351,FOOD00346,Cusk,Brosme brosme,164740,Cusk (fish),Aquatic foods,Fishes,Type 1,specific,81638.0
+346,352,FOOD00347,Cuttlefish,Sepiidae,82360,Cuttlefish,Aquatic foods,Mollusks,Type 1,specific,6608.0
+347,353,FOOD00348,Mule deer,Odocoileus,180697,Mule deer,Animal foods,Venison,Type 1,specific,9871.0
+348,354,FOOD00349,Devilfish,Myoxocephalus,167311,,Aquatic foods,Fishes,Type 1,specific,8095.0
+349,355,FOOD00350,Dock,Rumex,20933,Rumex,Herbs and Spices,Herbs,Type 1,specific,3618.0
+350,356,FOOD00351,Dolphin fish,Coryphaena hippurus,168791,Dolphin_fish,Aquatic foods,Fishes,Type 1,specific,34814.0
+351,357,FOOD00352,Freshwater drum,Aplodinotus grunniens,169364,Freshwater_drum,Aquatic foods,Fishes,Type 1,specific,225389.0
+352,358,FOOD00353,Mallard duck,Anas platyrhynchos,175063,Mallard_duck,Animal foods,Poultry,Type 1,specific,8839.0
+353,359,FOOD00354,Dungeness crab,Cancer magister,98675,Dungeness crab,Aquatic foods,Crustaceans,Type 1,specific,29965.0
+354,360,FOOD00355,Durian,Durio zibethinus,506099,Durian,Fruits,Tropical fruits,Type 1,specific,66656.0
+355,361,FOOD00356,Eastern oyster,Crassostrea virginica,79872,Eastern oyster,Aquatic foods,Mollusks,Type 1,specific,6565.0
+356,362,FOOD00357,Freshwater eel,Anguilla,161126,Freshwater_eel,Aquatic foods,Fishes,Type 1,specific,7935.0
+357,363,FOOD00358,Elderberry,Sambucus,35315,Elderberry,Fruits,Berries,Type 1,specific,4201.0
+358,364,FOOD00359,Elk,Cervus canadensis,180695,Elk,Animal foods,Venison,Type 1,specific,1574408.0
+359,365,FOOD00360,Emu,Dromaius novaehollandiae,174385,Emu,Animal foods,Poultry,Type 1,specific,8790.0
+360,366,FOOD00361,Oregon yampah,Perideridia oregana,29811,Perideridia oregana,Vegetables,Root vegetables,Type 1,specific,234866.0
+361,367,FOOD00362,European anchovy,Engraulis encrasicolus,161831,European anchovy,Aquatic foods,Fishes,Type 1,specific,184585.0
+362,368,FOOD00363,European chestnut,Castanea sativa,506541,Castanea sativa,Nuts,Nuts,Type 1,specific,21020.0
+363,369,FOOD00364,Turbot,Scophthalmus maximus,616195,Turbot,Aquatic foods,Fishes,Type 1,specific,52904.0
+364,370,FOOD00365,Fireweed,Chamerion angustifolium,510756,Chamerion angustifolium,Herbs and Spices,Herbs,Type 1,specific,13055.0
+365,371,FOOD00366,Florida pompano,Trachinotus carolinus,168708,Florida pompano,Aquatic foods,Fishes,Type 1,specific,173342.0
+366,372,FOOD00367,Ginkgo nuts,Ginkgo biloba,183269,Ginkgo biloba,Herbs and Spices,Other seeds,Type 1,specific,3311.0
+367,373,FOOD00368,Greylag goose,Anser anser,175028,Greylag_goose,Animal foods,Poultry,Type 1,specific,8843.0
+368,374,FOOD00369,Grape,Vitis,28606,Grape,Fruits,Berries,Type 1,specific,3603.0
+369,375,FOOD00370,Greenland halibut/turbot,Reinhardtius hippoglossoides,172930,Greenland halibut,Aquatic foods,Fishes,Type 1,specific,111784.0
+370,376,FOOD00371,Groundcherry,Physalis,30587,Groundcherry,Vegetables,Fruit vegetables,Type 1,specific,24663.0
+371,377,FOOD00372,Grouper,Epinephelus,167694,Grouper,Aquatic foods,Fishes,Type 1,specific,94231.0
+372,378,FOOD00373,Guinea hen,Numida meleagris,176126,Guinea_hen,Animal foods,Poultry,Type 1,specific,8996.0
+373,379,FOOD00374,Haddock,Melanogrammus aeglefinus,164744,Haddock,Aquatic foods,Fishes,Type 1,specific,8056.0
+374,380,FOOD00375,Hippoglossus (Common halibut),Hippoglossus,172931,Hippoglossus,Aquatic foods,Fishes,Type 1,specific,8266.0
+375,381,FOOD00376,Hazelnut,Corylus,19505,Hazelnut,Nuts,Nuts,Type 1,specific,13450.0
+376,382,FOOD00377,Hickory nut,Carya,19223,Hickory_nut,Nuts,Nuts,Type 1,specific,13402.0
+377,383,FOOD00378,Horse,Equus caballus,180691,Horse,Animal foods,Equines,Type 1,specific,9796.0
+378,384,FOOD00379,Horseradish tree,Moringa oleifera,503874,Horseradish_tree,Vegetables,Other vegetables,Type 1,specific,3735.0
+379,385,FOOD00380,Alaska blueberry,Vaccinium alaskaense,23576,Alaska_blueberry,Fruits,Berries,Type 1,specific,190544.0
+380,386,FOOD00381,Hyacinth bean,Lablab purpureus,503300,Lablab purpureus,Pulses,Beans,Type 1,specific,35936.0
+381,387,FOOD00382,Irish moss,Chondrus crispus,12092,Chondrus_crispus,Aquatic foods,Seaweed,Type 1,specific,2769.0
+382,388,FOOD00383,Pacific jack mackerel,Trachurus symmetricus,168586,Pacific jack mackerel,Aquatic foods,Fishes,Type 1,specific,271940.0
+383,389,FOOD00384,Jackfruit,Artocarpus heterophyllus,184183,Jackfruit,Fruits,Tropical fruits,Type 1,specific,3489.0
+384,390,FOOD00385,Japanese chestnut,Castanea crenata,506540,Japanese Chestnut,Nuts,Nuts,Type 1,specific,103480.0
+385,391,FOOD00386,Java plum,Syzygium cumini,505419,Syzgium_cumini,Fruits,Tropical fruits,Type 1,specific,260142.0
+386,392,FOOD00387,Jerusalem artichoke,Helianthus tuberosus,36691,Jerusalem artichoke,Vegetables,Tubers,Type 1,specific,4233.0
+387,393,FOOD00388,Jujube,Ziziphus zizyphus,28598,Jujube,Fruits,Other fruits,Type 1,specific,48393.0
+388,394,FOOD00389,Jute,Corchorus olitorius,21516,Jute,Vegetables,Leaf vegetables,Type 1,specific,93759.0
+389,395,FOOD00390,Kale,Brassica napus var. pabularia,530956,Kale,Vegetables,Cabbages,Type 1,specific,
+390,396,FOOD00391,Kelp,Laminaria,11217,Kelp,Aquatic foods,Seaweed,Type 1,specific,33637.0
+391,397,FOOD00392,King mackerel,Scomberomorus cavalla,172435,King_mackerel,Aquatic foods,Fishes,Type 1,specific,13679.0
+392,398,FOOD00393,Kumquat,Fortunella,500284,Kumquat,Fruits,Tropical fruits,Type 1,specific,2706.0
+393,399,FOOD00394,Lambsquarters,Chenopodium album,20592,Chenopodium album,Vegetables,Leaf vegetables,Type 1,specific,3559.0
+394,400,FOOD00395,Leather chiton,Katharina tunicata,78979,Katharina tunicata,Aquatic foods,Mollusks,Type 1,specific,34587.0
+395,401,FOOD00396,Wild leek,Allium ampeloprasum,42708,Allium_ampeloprasum,Vegetables,Onion-family vegetables,Type 1,specific,4681.0
+396,402,FOOD00397,Common ling,Molva molva,164760,Common ling,Aquatic foods,Fishes,Type 1,specific,163112.0
+397,403,FOOD00398,Lingcod,Ophiodon elongatus,167116,Lingcod,Aquatic foods,Fishes,Type 1,specific,225387.0
+398,404,FOOD00399,American lobster,Homarus americanus,97314,American lobster,Aquatic foods,Crustaceans,Type 1,specific,6706.0
+399,405,FOOD00400,Loganberry,Rubus loganobaccus,506229,Loganberry,Fruits,Berries,Type 1,specific,
+400,406,FOOD00401,Lotus,Nelumbo,18397,Nelumbo,Herbs and Spices,Other seeds,Type 1,specific,4430.0
+401,407,FOOD00402,Sacred lotus,Nelumbo nucifera,18400,Nelumbo_nucifera,Vegetables,Other vegetables,Type 1,specific,4432.0
+402,408,FOOD00403,White lupine,Lupinus albus,503572,White_lupine,Pulses,Other pulses,Type 1,specific,3870.0
+403,409,FOOD00404,Malabar spinach,Basella alba,192210,Basella alba,Vegetables,Leaf vegetables,Type 1,specific,3589.0
+404,410,FOOD00405,Mammee apple,Mammea americana,21492,Mammea_americana,Fruits,Tropical fruits,Type 1,specific,198777.0
+405,411,FOOD00406,Purple mangosteen,Garcinia mangostana,21484,Purple_mangosteen,Fruits,Tropical fruits,Type 1,specific,58228.0
+406,412,FOOD00407,Alpine sweetvetch,Hedysarum alpinum,26723,Hedysarum alpinum,Vegetables,Root vegetables,Type 1,specific,57576.0
+407,413,FOOD00408,Milkfish,Chanos chanos,162838,Milkfish,Aquatic foods,Fishes,Type 1,specific,29144.0
+408,414,FOOD00409,Monkfish,Lophius piscatorius,164501,Monkfish,Aquatic foods,Fishes,Type 1,specific,8074.0
+409,416,FOOD00410,Moth bean,Vigna aconitifolia,506271,Moth bean,Pulses,Beans,Type 1,specific,3918.0
+410,417,FOOD00411,Mountain yam,Dioscorea pentaphylla,43379,Dioscorea pentaphylla,Vegetables,Tubers,Type 1,specific,167592.0
+411,418,FOOD00412,Striped mullet,Mugil cephalus,170335,Flathead mullet,Aquatic foods,Fishes,Type 1,specific,48193.0
+412,420,FOOD00413,White mustard,Sinapis alba,23309,White_mustard,Herbs and Spices,Spices,Type 1,specific,3728.0
+413,421,FOOD00414,Mustard spinach,Brassica perviridis,506223,Brassica_perviridis,Vegetables,Cabbages,Type 1,specific,
+414,422,FOOD00415,New Zealand spinach,Tetragonia tetragonioides,19938,Tetragonia tetragonioides,Vegetables,Leaf vegetables,Type 1,specific,45318.0
+415,423,FOOD00416,Nopal,Opuntia cochenillifera,19699,Nopal,Vegetables,Other vegetables,Type 1,specific,338184.0
+416,424,FOOD00417,Ocean pout,Zoarces americanus,630979,Ocean pout,Aquatic foods,Fishes,Type 1,specific,8199.0
+417,425,FOOD00418,North Pacific giant octopus,Enteroctopus dofleini,557227,Enteroctopus dofleini,Aquatic foods,Mollusks,Type 1,specific,267067.0
+418,426,FOOD00419,Ohelo berry,Vaccinium reticulatum,23622,Vaccinium reticulatum,Fruits,Berries,Type 1,specific,180767.0
+419,427,FOOD00420,Okra,Abelmoschus esculentus,21770,Okra,Vegetables,Other vegetables,Type 1,specific,455045.0
+420,428,FOOD00421,Tunicate,Tunicata,203347,Tunicate,Aquatic foods,Other aquatic foods,Type 1,specific,7712.0
+421,430,FOOD00422,Ostrich,Struthio camelus,174375,Ostrich,Animal foods,Poultry,Type 1,specific,8801.0
+422,431,FOOD00423,Spotted seal,Phoca largha,180642,Spotted_seal,Aquatic foods,Pinnipeds,Type 1,specific,39090.0
+423,432,FOOD00424,Pacific herring,Clupea pallasii,551209,Pacific herring,Aquatic foods,Fishes,Type 1,specific,30724.0
+424,433,FOOD00425,Pacific oyster,Crassostrea gigas,79868,Pacific_oyster,Aquatic foods,Mollusks,Type 1,specific,29159.0
+425,434,FOOD00426,Pacific rockfish,Sebastes,166705,Sebastes,Aquatic foods,Fishes,Type 1,specific,34820.0
+426,435,FOOD00427,Velvet duck,Melanitta fusca,175163,Velvet Scoter,Animal foods,Poultry,Type 1,specific,371864.0
+427,436,FOOD00428,Pepper (C. frutescens),Capsicum annuum var. annuum,527044,Capsicum_frutescens,Vegetables,Fruit vegetables,Type 1,specific,40321.0
+428,437,FOOD00429,Common persimmon,Diospyros virginiana,23855,Common_Persimmon,Fruits,Tropical fruits,Type 1,specific,13493.0
+429,438,FOOD00430,Pheasant,Phasianus colchicus,175905,Pheasant,Animal foods,Poultry,Type 1,specific,9054.0
+430,439,FOOD00431,Northern pike,Esox lucius,162139,Northern_pike,Aquatic foods,Fishes,Type 1,specific,8010.0
+431,440,FOOD00432,Pili nut,Canarium ovatum,506413,Pili_nut,Nuts,Nuts,Type 1,specific,43691.0
+432,441,FOOD00433,Colorado pinyon,Pinus edulis,183336,Colorado_Pinyon,Nuts,Nuts,Type 1,specific,3340.0
+433,442,FOOD00434,Pitanga,Eugenia uniflora,27224,Eugenia_uniflora,Fruits,Tropical fruits,Type 1,specific,119951.0
+434,443,FOOD00435,Plains prickly pear,Opuntia macrorhiza,19718,Opuntia_macrorhiza,Fruits,Tropical fruits,Type 1,specific,1041245.0
+435,444,FOOD00436,French plantain,Musa X paradisiaca,42391,Musa × paradisiaca,Fruits,Tropical fruits,Type 1,specific,89151.0
+436,445,FOOD00437,American pokeweed,Phytolacca americana,19523,Phytolacca americana,Vegetables,Shoot vegetables,Type 1,specific,3527.0
+437,447,FOOD00438,Opium poppy,Papaver somniferum,18894,Opium_poppy,Herbs and Spices,Spices,Type 1,specific,3469.0
+438,448,FOOD00439,Prairie turnip,Pediomelum esculentum,504177,Psoralea esculenta,Vegetables,Root vegetables,Type 1,specific,458363.0
+439,449,FOOD00440,Prickly pear,Opuntia,19686,Opuntia,Fruits,Tropical fruits,Type 1,specific,106975.0
+440,450,FOOD00441,Quinoa,Chenopodium quinoa,506567,Quinoa,Herbs and Spices,Other seeds,Type 1,specific,63459.0
+441,451,FOOD00442,European rabbit,Oryctolagus,180128,European_rabbit,Animal foods,Lagomorphs,Type 1,specific,9984.0
+442,453,FOOD00443,Rainbow smelt,Osmerus mordax,162041,Rainbow smelt,Aquatic foods,Fishes,Type 1,specific,8014.0
+443,454,FOOD00444,Rainbow trout,Oncorhynchus mykiss,161989,Rainbow trout,Aquatic foods,Fishes,Type 1,specific,8022.0
+444,455,FOOD00445,Malabar plum,Syzygium jambos,505420,Malabar_plum,Fruits,Tropical fruits,Type 1,specific,334483.0
+445,456,FOOD00446,Rose hip,Rosa,24807,Rose hip,Herbs and Spices,Herbs,Type 1,specific,3764.0
+446,457,FOOD00447,Roselle,Hibiscus sabdariffa,503001,Roselle_(plant),Herbs and Spices,Herbs,Type 1,specific,183260.0
+447,458,FOOD00448,Orange roughy,Hoplostethus atlanticus,166139,Orange roughy,Aquatic foods,Fishes,Type 1,specific,96778.0
+448,459,FOOD00449,Sablefish,Anoplopoma fimbria,167123,Sablefish,Aquatic foods,Fishes,Type 1,specific,229290.0
+449,460,FOOD00450,Pink salmon,Oncorhynchus gorbuscha,161975,Pink_salmon,Aquatic foods,Fishes,Type 1,specific,8017.0
+450,461,FOOD00451,Chum salmon,Oncorhynchus keta,161976,Chum_salmon,Aquatic foods,Fishes,Type 1,specific,8018.0
+451,462,FOOD00452,Coho salmon,Oncorhynchus kisutch,161977,Coho_salmon,Aquatic foods,Fishes,Type 1,specific,8019.0
+452,463,FOOD00453,Sockeye salmon,Oncorhynchus nerka,161979,Sockeye_salmon,Aquatic foods,Fishes,Type 1,specific,8023.0
+453,464,FOOD00454,Chinook salmon,Oncorhynchus tshawytscha,161980,Chinook salmon,Aquatic foods,Fishes,Type 1,specific,74940.0
+454,465,FOOD00455,Atlantic salmon,Salmo salar,161996,Atlantic salmon,Aquatic foods,Fishes,Type 1,specific,8030.0
+455,466,FOOD00456,Salmonberry,Rubus spectabilis,25051,Salmonberry,Fruits,Berries,Type 1,specific,59499.0
+456,467,FOOD00457,Common salsify,Tragopogon porrifolius,38568,Tragopogon porrifolius,Vegetables,Root vegetables,Type 1,specific,13731.0
+457,468,FOOD00458,Sapodilla,Manilkara zapota,23823,Sapodilla Cayes,Fruits,Tropical fruits,Type 1,specific,3741.0
+458,469,FOOD00459,Mamey sapote,Pouteria sapota,23836,Pouteria sapota,Fruits,Tropical fruits,Type 1,specific,233744.0
+459,470,FOOD00460,Spanish mackerel,Scomberomorus maculatus,172436,Spanish mackerel,Aquatic foods,Fishes,Type 1,specific,99344.0
+460,471,FOOD00461,Pacific sardine,Sardinops sagax,161729,Pacific_sardine,Aquatic foods,Fishes,Type 1,specific,28381.0
+461,472,FOOD00462,Scallop,Pectinidae,79611,Scallop,Aquatic foods,Mollusks,Type 1,specific,6566.0
+462,473,FOOD00463,Scup,Stenotomus chrysops,169182,Scup,Aquatic foods,Fishes,Type 1,specific,35579.0
+463,474,FOOD00464,Sea cucumber,Parastichopus californicus,158344,Sea cucumber,Aquatic foods,Other aquatic foods,Type 1,specific,7689.0
+464,475,FOOD00465,Steller sea lion,Eumetopias jubatus,180625,Steller sea lion,Aquatic foods,Pinnipeds,Type 1,specific,34886.0
+465,476,FOOD00466,Bearded seal,Erignathus barbatus,180655,Bearded_seal,Aquatic foods,Pinnipeds,Type 1,specific,39304.0
+466,477,FOOD00467,Ringed seal,Pusa hispida,622018,Ringed seal,Aquatic foods,Pinnipeds,Type 1,specific,9718.0
+467,478,FOOD00468,Sea trout,Salmo trutta forma trutta,169238,,Aquatic foods,Fishes,Type 1,specific,13028.0
+468,479,FOOD00469,Sesbania flower,Sesbania bispinosa,505187,Sesbania_bispinosa,Vegetables,Other vegetables,Type 1,specific,485725.0
+469,480,FOOD00470,American shad,Alosa sapidissima,161702,American shad,Aquatic foods,Fishes,Type 1,specific,34773.0
+470,481,FOOD00471,Shark,Squaliformes,160602,Shark,Aquatic foods,Fishes,Type 1,specific,282414.0
+471,482,FOOD00472,Sheefish,Stenodus leucichthys,162006,Stenodus leucichthys,Aquatic foods,Fishes,Type 1,specific,59296.0
+472,483,FOOD00473,"Sheep (Mutton, Lamb)",Ovis aries,552475,Sheep,Animal foods,Ovis,Type 1,specific,9940.0
+473,484,FOOD00474,Sheepshead,Archosargus probatocephalus,169189,Archosargus_probatocephalus,Aquatic foods,Fishes,Type 1,specific,119682.0
+474,485,FOOD00475,Hedge mustard,Sisymbrium,23311,Hedge_mustard,Herbs and Spices,Other seeds,Type 1,specific,3729.0
+475,486,FOOD00476,Skipjack tuna,Katsuwonus pelamis,172401,Skipjack tuna,Aquatic foods,Fishes,Type 1,specific,8226.0
+476,487,FOOD00477,Snapper,Lutjanidae,168845,Lutjanidae,Aquatic foods,Fishes,Type 1,specific,30850.0
+477,488,FOOD00478,Soursop,Annona muricata,18098,Soursop,Fruits,Tropical fruits,Type 1,specific,13337.0
+478,489,FOOD00479,Spelt,Triticum spelta,42243,Spelt,Cereals and cereal products,Cereals,Type 1,specific,58933.0
+479,490,FOOD00480,Spirulina,Spirulina,1053,,Aquatic foods,Seaweed,Type 1,specific,551299.0
+480,491,FOOD00481,Squab,Columba,177062,Squab_(food),Animal foods,Poultry,Type 1,specific,8931.0
+481,493,FOOD00482,Strawberry guava,Psidium cattleianum,27239,Strawberry_guava,Fruits,Berries,Type 1,specific,375274.0
+482,494,FOOD00483,Greater sturgeon,Acipenser,161065,,Aquatic foods,Fishes,Type 1,specific,7901.0
+483,495,FOOD00484,White sucker,Catostomus commersonii,553273,White_sucker,Aquatic foods,Fishes,Type 1,specific,7971.0
+484,496,FOOD00485,Sugar apple,Annona squamosa,18100,Sugar_apple,Fruits,Tropical fruits,Type 1,specific,301693.0
+485,497,FOOD00486,Pumpkinseed sunfish,Lepomis gibbosus,168144,Pumpkinseed,Aquatic foods,Fishes,Type 1,specific,270329.0
+486,498,FOOD00487,Swordfish,Xiphias gladius,172482,Swordfish,Aquatic foods,Fishes,Type 1,specific,8245.0
+487,499,FOOD00488,Taro,Colocasia esculenta,42549,Taro,Vegetables,Root vegetables,Type 1,specific,4460.0
+488,500,FOOD00489,Teff,Eragrostis tef,40738,Teff,Herbs and Spices,Herbs,Type 1,specific,110835.0
+489,501,FOOD00490,Tilefish,Lopholatilus chamaeleonticeps,168546,Lopholatilus_chamaeleonticeps,Aquatic foods,Fishes,Type 1,specific,390349.0
+490,502,FOOD00491,Mexican groundcherry,Physalis philadelphica var. immaculata,529632,Mexican_Groundcherry,Vegetables,Fruit vegetables,Type 1,specific,374021.0
+491,503,FOOD00492,Towel gourd,Luffa aegyptiaca,503570,Luffa,Gourds,Gourds,Type 1,specific,3670.0
+492,504,FOOD00493,"Salmonidae (Salmon, Trout)",Salmonidae,161931,Salmonidae,Aquatic foods,Fishes,Type 1,specific,8015.0
+493,505,FOOD00494,Turkey,Meleagris gallopavo,176136,Meleagris_gallopavo,Animal foods,Poultry,Type 1,specific,9103.0
+494,506,FOOD00495,"Cattle (Beef, Veal)",Bos taurus,183838,Cattle,Animal foods,Bovines,Type 1,specific,9913.0
+495,507,FOOD00496,Walleye,Sander vitreus,650173,Walleye,Aquatic foods,Fishes,Type 1,specific,283036.0
+496,508,FOOD00497,Alaska pollock,Theragra chalcogramma,164722,Alaska pollock,Aquatic foods,Fishes,Type 1,specific,1042646.0
+497,509,FOOD00498,Wasabi,Wasabia japonica,506210,Wasabi,Herbs and Spices,Spices,Type 1,specific,75806.0
+498,510,FOOD00499,Wax gourd,Benincasa hispida,505894,Wax_gourd,Gourds,Gourds,Type 1,specific,102211.0
+499,511,FOOD00500,Whelk,Buccinidae,73726,Whelk,Aquatic foods,Mollusks,Type 1,specific,37796.0
+500,512,FOOD00501,Coalfish pollock,Pollachius virens,164727,Pollachius_virens,Aquatic foods,Fishes,Type 1,specific,8060.0
+501,513,FOOD00502,Broad whitefish,Coregonus nasus,161936,Broad whitefish,Aquatic foods,Fishes,Type 1,specific,348707.0
+502,514,FOOD00503,Whitefish,Coregonus,161932,Coregonus,Aquatic foods,Fishes,Type 1,specific,27772.0
+503,515,FOOD00504,Whiting,Merlangius merlangus,164701,Merlangius_merlangus,Aquatic foods,Fishes,Type 1,specific,8058.0
+504,516,FOOD00505,Wild rice,Zizania,41318,Wild_rice,Cereals and cereal products,Cereals,Type 1,specific,15949.0
+505,517,FOOD00506,Tea leaf willow,Salix pulchra,22488,Salix pulchra,Herbs and Spices,Herbs,Type 1,specific,669814.0
+506,518,FOOD00507,Winged bean,Psophocarpus tetragonolobus,506265,Winged bean,Pulses,Beans,Type 1,specific,3891.0
+507,519,FOOD00508,Yam,Dioscorea,43366,Yam_(vegetable),Vegetables,Tubers,Type 1,specific,4672.0
+508,520,FOOD00509,Jicama,Pachyrhizus erosus,26824,Jicama,Vegetables,Root vegetables,Type 1,specific,109171.0
+509,521,FOOD00510,Yautia,Xanthosoma sagittifolium,42586,Xanthosoma sagittifolium,Vegetables,Leaf vegetables,Type 1,specific,28478.0
+510,522,FOOD00511,Yellowfin tuna,Thunnus albacares,172423,Yellowfin_tuna,Aquatic foods,Fishes,Type 1,specific,8236.0
+511,523,FOOD00512,Yellowtail amberjack,Seriola lalandi,168695,Yellowtail amberjack,Aquatic foods,Fishes,Type 1,specific,302047.0
+512,524,FOOD00513,Pollock,Pollachius,164726,Pollock,Aquatic foods,Fishes,Type 1,specific,8059.0
+513,525,FOOD00514,Albacore tuna,Thunnus alalunga,172419,Albacore_tuna,Aquatic foods,Fishes,Type 1,specific,8235.0
+514,526,FOOD00515,Gadus (Common cod),Gadus,164710,Gadus,Aquatic foods,Fishes,Type 1,specific,8048.0
+515,527,FOOD00516,Atlantic halibut,Hippoglossus hippoglossus,172933,Atlantic halibut,Aquatic foods,Fishes,Type 1,specific,8267.0
+516,528,FOOD00517,Pacific halibut,Hippoglossus stenolepis,172932,Pacific_halibut,Aquatic foods,Fishes,Type 1,specific,195615.0
+517,529,FOOD00518,Pacific salmon,Oncorhynchus,161974,Pacific_salmon,Aquatic foods,Fishes,Type 1,specific,8016.0
+518,530,FOOD00519,Smelt,Osmeridae,162028,Osmeridae,Aquatic foods,Fishes,Type 1,specific,8012.0
+519,531,FOOD00520,"Clupeinae (Herring, Sardine, Sprat)",Clupeinae,551153,Clupeinae,Aquatic foods,Fishes,Type 1,specific,7948.0
+520,532,FOOD00521,Spiny lobster,Palinuridae,97646,Spiny lobster,Aquatic foods,Crustaceans,Type 1,specific,6731.0
+521,533,FOOD00522,Snow crab,Chionoecetes opilio,98428,Snow_crab,Aquatic foods,Crustaceans,Type 1,specific,41210.0
+522,534,FOOD00523,Black-eyed pea,Vigna unguiculata ssp. unguiculata,524855,Black-eyed pea,Pulses,Peas,Type 1,specific,3920.0
+523,535,FOOD00524,Deer,Cervidae,180693,Deer,Animal foods,Venison,Type 1,specific,9850.0
+524,536,FOOD00525,Macadamia nut,Macadamia,27784,Macadamia_nut,Nuts,Nuts,Type 1,specific,4329.0
+525,537,FOOD00526,Percoidei (Bass and others),Percoidei,167641,Percoidei,Aquatic foods,Fishes,Type 1,specific,8112.0
+526,538,FOOD00527,Perciformes,Perciformes,167640,Perciformes,Aquatic foods,Fishes,Type 1,specific,8111.0
+527,540,FOOD00528,Rabbit,Leporidae,180110,Rabbit,Animal foods,Lagomorphs,Type 1,specific,9979.0
+528,541,FOOD00529,Domestic goat,Capra aegagrus hircus,180715,Domestic_goat,Animal foods,Caprae,Type 1,specific,9925.0
+529,542,FOOD00530,Beefalo,Bos taurus X Bison bison,,Beefalo,Animal foods,Bovines,Type 1,specific,297284.0
+530,544,FOOD00531,"Bivalvia (Clam, Mussel, Oyster)",Bivalvia,79118,Bivalvia,Aquatic foods,Mollusks,Type 1,specific,6544.0
+531,545,FOOD00532,Squid,Teuthida,82367,Squid,Aquatic foods,Mollusks,Type 1,specific,551290.0
+532,546,FOOD00533,Shrimp,Caridea,96106,Shrimp,Aquatic foods,Crustaceans,Type 1,specific,6694.0
+533,547,FOOD00534,Crayfish,Astacidea,206931,Crayfish,Aquatic foods,Crustaceans,Type 1,specific,6712.0
+534,548,FOOD00535,Flatfish,Pleuronectiformes,172702,Flatfish,Aquatic foods,Fishes,Type 1,specific,8252.0
+535,549,FOOD00536,Domestic pig,Sus scrofa domestica,898917,Domestic pig,Animal foods,Swine,Type 1,specific,9825.0
+536,550,FOOD00537,Walrus,Odobenus rosmarus,180639,Walrus,Aquatic foods,Pinnipeds,Type 1,specific,9707.0
+537,551,FOOD00538,Alaska wild rhubarb,Polygonum alpinum,20870,,Vegetables,Stalk vegetables,Type 1,specific,125586.0
+538,552,FOOD00539,Oriental wheat,Triticum turanicum,506631,Khorasan_wheat,Cereals and cereal products,Cereals,Type 1,specific,376534.0
+539,553,FOOD00540,Yardlong bean,Vigna unguiculata ssp. sesquipedalis,524853,Vigna unguiculata subsp. sesquipedalis,Pulses,Peas,Type 1,specific,138955.0
+540,555,FOOD00541,Quail,Phasianidae,175861,Quail,Animal foods,Poultry,Type 1,specific,9005.0
+541,556,FOOD00542,Boysenberry,Rubus ursinus X idaeus,,Boysenberry,Fruits,Berries,Type 1,specific,
+542,557,FOOD00543,Persian lime,Citrus latifolia,,Persian_lime,Fruits,Citrus,Type 1,specific,200541.0
+543,558,FOOD00544,Feijoa,Feijoa sellowiana,506165,Feijoa,Fruits,Tropical fruits,Type 1,specific,260130.0
+544,559,FOOD00545,Rowal,Pangium edule,837784,Rowal,Herbs and Spices,Other seeds,Type 1,specific,112823.0
+545,560,FOOD00546,Jew's ear,Auricularia auricula-judae,,Jew%27s_ear,Vegetables,Mushrooms,Type 1,specific,29892.0
+546,561,FOOD00547,Common mushroom,Agaricus bisporus,,Agaricus bisporus,Vegetables,Mushrooms,Type 1,specific,5341.0
+547,562,FOOD00548,Shiitake,Lentinus edodes,,Shiitake,Vegetables,Mushrooms,Type 1,specific,5353.0
+548,563,FOOD00549,Purple laver,Porphyra laciniata,,Porphyra,Aquatic foods,Seaweed,Type 1,specific,
+549,564,FOOD00550,Wakame,Undaria pinnatifida,,Wakame,Aquatic foods,Seaweed,Type 1,specific,74381.0
+550,565,FOOD00551,Enokitake,Flammulina velutipes,,Enokitake,Vegetables,Mushrooms,Type 1,specific,38945.0
+551,566,FOOD00552,Epazote,Dysphania ambrosioides,822812,Epazote,Herbs and Spices,Herbs,Type 1,specific,330163.0
+552,567,FOOD00553,Oyster mushroom,Pleurotus ostreatus,,Oyster_mushroom,Vegetables,Mushrooms,Type 1,specific,5322.0
+553,568,FOOD00554,Cloud ear fungus,Auricularia polytricha,,Cloud_ear_fungus,Vegetables,Mushrooms,Type 1,specific,29893.0
+554,569,FOOD00555,Maitake,Grifola frondosa,,Maitake,Vegetables,Mushrooms,Type 1,specific,5627.0
+555,570,FOOD00556,Ostrich fern,Matteuccia struthiopteris,17596,Ostrich_fern,Vegetables,Leaf vegetables,Type 1,specific,3277.0
+556,571,FOOD00557,Spot croaker,Leiostomus xanthurus,169267,Spot croaker,Aquatic foods,Fishes,Type 1,specific,59837.0
+557,572,FOOD00558,Sourdock,Rumex articus,20935,Rumex_arcticus,Herbs and Spices,Herbs,Type 1,specific,395311.0
+558,573,FOOD00559,Tinda,Citrullus lanatus var. fistulosus,,Tinda,Gourds,Gourds,Type 1,specific,
+559,574,FOOD00560,Atlantic menhaden,Brevoortia tyrannus,161732,Atlantic menhaden,Aquatic foods,Fishes,Type 1,specific,224708.0
+560,575,FOOD00561,Wheat,Triticum,42236,Wheat,Cereals and cereal products,Cereals,Type 1,specific,4564.0
+561,576,FOOD00562,Common chokecherry,Prunus virginiana,24806,Common_chokecherry,Fruits,Drupes,Type 1,specific,133204.0
+562,577,FOOD00563,Agave,Agave,182659,Agave,Vegetables,Other vegetables,Type 1,specific,39509.0
+563,578,FOOD00564,Narrowleaf cattail,Typha angustifolia,42325,Narrowleaf_cattail,Vegetables,Other vegetables,Type 1,specific,59011.0
+564,579,FOOD00565,Jellyfish,Scyphozoa,51483,Jellyfish,Aquatic foods,Other aquatic foods,Type 1,specific,6142.0
+565,580,FOOD00566,Anchovy,Engraulidae,553173,Anchovy,Aquatic foods,Fishes,Type 1,specific,43062.0
+566,581,FOOD00567,Blue whiting,Micromesistius poutassou,164774,Blue whiting,Aquatic foods,Fishes,Type 1,specific,81636.0
+567,582,FOOD00568,Carp bream,Abramis brama,163666,Carp_bream,Aquatic foods,Fishes,Type 1,specific,38527.0
+568,583,FOOD00569,Chanterelle,Cantharellus cibarius,,Chanterelle,Vegetables,Mushrooms,Type 1,specific,36066.0
+569,584,FOOD00570,Sturgeon,Acipenseridae,161064,Sturgeon,Aquatic foods,Fishes,Type 1,specific,7900.0
+570,585,FOOD00571,Charr,Salvelinus,161999,Salvelinus,Aquatic foods,Fishes,Type 1,specific,8033.0
+571,586,FOOD00572,Cinnamon,Cinnamomum,18174,Cinnamon,Herbs and Spices,Spices,Type 1,specific,13428.0
+572,587,FOOD00573,Crab,Brachyura,98276,Crab,Aquatic foods,Crustaceans,Type 1,specific,6752.0
+573,588,FOOD00574,Common dab,Limanda limanda,172881,Common dab,Aquatic foods,Fishes,Type 1,specific,27771.0
+574,589,FOOD00575,Spiny dogfish,Squalus acanthias,160617,Spiny dogfish,Aquatic foods,Fishes,Type 1,specific,7797.0
+575,590,FOOD00576,Anatidae,Anatidae,174983,Anatidae,Animal foods,Poultry,Type 1,specific,8830.0
+576,591,FOOD00577,Anguilliformes,Anguilliformes,161123,Anguilliformes,Aquatic foods,Fishes,Type 1,specific,7933.0
+577,592,FOOD00578,True frog,Ranidae,173433,True frog,Aquatic foods,Amphibians,Type 1,specific,8397.0
+578,593,FOOD00579,Garfish,Belone belone,165594,Garfish,Aquatic foods,Fishes,Type 1,specific,129037.0
+579,594,FOOD00580,Gadiformes,Gadiformes,164665,Gadiformes,Aquatic foods,Fishes,Type 1,specific,8043.0
+580,595,FOOD00581,Mountain hare,Lepus timidus,180113,Mountain_hare,Animal foods,Lagomorphs,Type 1,specific,62621.0
+581,596,FOOD00582,Lake trout,Salvelinus namaycush,162002,Lake_trout,Aquatic foods,Fishes,Type 1,specific,8040.0
+582,597,FOOD00583,Lemon sole,Microstomus kitt,172888,Lemon sole,Aquatic foods,Fishes,Type 1,specific,106175.0
+583,598,FOOD00584,Clawed lobster,Nephropidae,97307,Clawed_lobster,Aquatic foods,Crustaceans,Type 1,specific,6704.0
+584,599,FOOD00585,Lumpsucker,Cyclopteridae,167483,Lumpsucker,Aquatic foods,Fishes,Type 1,specific,8101.0
+585,600,FOOD00586,"Scombridae (Bonito, Mackerel, Tuna)",Scombridae,172398,Scombridae,Aquatic foods,Fishes,Type 1,specific,8224.0
+586,601,FOOD00587,Marine mussel,Mytilidae,79451,Mytilidae,Aquatic foods,Mollusks,Type 1,specific,6547.0
+587,602,FOOD00588,Norway haddock,Sebastes viviparus,166779,Norway_haddock,Aquatic foods,Fishes,Type 1,specific,394708.0
+588,603,FOOD00589,Norway lobster,Nephrops norvegicus,97317,Norway_lobster,Aquatic foods,Crustaceans,Type 1,specific,6829.0
+589,604,FOOD00590,Norway pout,Trisopterus esmarkii,164756,Trisopterus esmarkii,Aquatic foods,Fishes,Type 1,specific,80723.0
+590,605,FOOD00591,Oil palm,Elaeis,500805,,Herbs and Spices,Oilseed crops,Type 1,specific,51952.0
+591,606,FOOD00592,True oyster,Ostreidae,79866,Ostreidae,Aquatic foods,Mollusks,Type 1,specific,6563.0
+592,607,FOOD00593,Sago palm,Metroxylon sagu,506732,Metroxylon_sagu,Herbs and Spices,Oilseed crops,Type 1,specific,93297.0
+593,608,FOOD00594,Persimmon,Diospyros,23853,Persimmon,Fruits,Tropical fruits,Type 1,specific,13492.0
+594,609,FOOD00595,Pikeperch,Sander lucioperca,650172,Pikeperch,Aquatic foods,Fishes,Type 1,specific,283035.0
+595,610,FOOD00596,"Pleuronectidae (Dab, Halibut, Plaice)",Pleuronectidae,172859,Pleuronectidae,Aquatic foods,Fishes,Type 1,specific,8256.0
+596,611,FOOD00597,Rock ptarmigan,Lagopus muta,677542,Rock_ptarmigan,Animal foods,Poultry,Type 1,specific,64668.0
+597,612,FOOD00598,Pacific ocean perch,Sebastes alutus,166707,Pacific ocean perch,Aquatic foods,Fishes,Type 1,specific,72055.0
+598,613,FOOD00599,Black salsify,Scorzonera hispanica,505091,Scorzonera hispanica,Vegetables,Root vegetables,Type 1,specific,114289.0
+599,614,FOOD00600,True seal,Phocidae,180640,Earless seal,Aquatic foods,Pinnipeds,Type 1,specific,9709.0
+600,615,FOOD00601,Red algae,Rhodophyta,660046,Red_algae,Aquatic foods,Seaweed,Type 1,specific,2763.0
+601,616,FOOD00602,Kombu,Saccharina japonica,,Kombu,Aquatic foods,Seaweed,Type 1,specific,88149.0
+602,617,FOOD00603,Snail,Gastropoda,69459,Snail,Aquatic foods,Mollusks,Type 1,specific,6448.0
+603,618,FOOD00604,True sole,Soleidae,172980,True_sole,Aquatic foods,Fishes,Type 1,specific,30948.0
+604,619,FOOD00605,Catfish,Siluriformes,163992,Catfish,Aquatic foods,Fishes,Type 1,specific,7995.0
+605,620,FOOD00606,Thistle,Cirsium,36334,Thistle,Vegetables,Root vegetables,Type 1,specific,41549.0
+606,621,FOOD00607,Thunnus,Thunnus,172418,Thunnus,Aquatic foods,Fishes,Type 1,specific,8234.0
+607,622,FOOD00608,Walnut,Juglans,19248,Walnut,Nuts,Nuts,Type 1,specific,16718.0
+608,623,FOOD00609,"Cetacea (Dolphin, Porpoise, Whale)",Cetacea,180403,Cetacea,Aquatic foods,Cetaceans,Type 1,specific,9721.0
+609,624,FOOD00610,"Columbidae (Dove, Pigeon)",Columbidae,177061,Columbidae,Animal foods,Poultry,Type 1,specific,8930.0
+610,625,FOOD00611,Conch,Strombidae,72554,Conch,Aquatic foods,Mollusks,Type 1,specific,69694.0
+611,626,FOOD00612,Grape wine,,,Grape_wine,Beverages,Fermented beverages,Type 2,specific,
+612,627,FOOD00613,Berry wine,,,,Beverages,Fermented beverages,Type 2,specific,
+613,628,FOOD00614,Other wine,,,,Beverages,Fermented beverages,Type 2,specific,
+614,629,FOOD00615,Apple cider,,,Apple_cider,Beverages,Fermented beverages,Type 2,specific,
+615,630,FOOD00616,Liquor,,,Liquor,Beverages,Distilled beverages,Type 2,specific,
+616,631,FOOD00617,Cheese,,,Cheese,Milk and milk products,Fermented milk products,Type 2,specific,
+617,632,FOOD00618,Milk (Cow),,,Milk,Milk and milk products,Unfermented milks,Type 2,specific,
+618,633,FOOD00619,Eggs,,,Eggs,Eggs,Eggs,Unknown,generic,
+619,634,FOOD00620,Yogurt,,,,Milk and milk products,Fermented milk products,Type 2,specific,
+620,638,FOOD00621,Bean,,,Bean,Pulses,Beans,Type 1,specific,
+621,639,FOOD00622,Vodka,,,Vodka,Beverages,Distilled beverages,Type 2,specific,
+622,640,FOOD00623,Whisky,,,Whisky,Beverages,Distilled beverages,Type 2,specific,
+623,641,FOOD00624,Ice cream,,,Ice_cream,Confectioneries,Frozen desserts,Type 2,specific,
+624,642,FOOD00625,Gin,,,Gin,Beverages,Distilled beverages,Type 2,specific,
+625,643,FOOD00626,Honey,,,Honey,Confectioneries,Other confectioneries,Type 2,specific,
+626,644,FOOD00627,Liquorice,,,Liquorice,Confectioneries,Candies,Type 2,specific,
+627,645,FOOD00628,Vinegar,,,Vinegar,Baking goods,Seasonings,Type 2,specific,
+628,646,FOOD00629,Rum,,,Rum,Beverages,Distilled beverages,Type 2,specific,
+629,647,FOOD00630,Port wine,,,Port_wine,Beverages,Fortified wines,Type 2,specific,
+630,648,FOOD00631,Vermouth,,,Vermouth,Beverages,Fortified wines,Type 2,specific,
+631,649,FOOD00632,Sherry,,,Sherry,Beverages,Fortified wines,Type 2,specific,
+632,650,FOOD00633,Madeira wine,,,Madeira_wine,Beverages,Fortified wines,Type 2,specific,
+633,651,FOOD00634,Nougat,,,Nougat,Confectioneries,Other confectioneries,Type 2,specific,
+634,653,FOOD00635,Toffee,,,Toffee,Confectioneries,Other confectioneries,Type 2,specific,
+635,654,FOOD00636,Cake,,,Cake,Confectioneries,Desserts,Type 2,specific,
+636,655,FOOD00637,Pizza,,,Pizza,Dishes,Other dishes,Type 2,specific,
+637,656,FOOD00638,Ymer,,,Ymer_(dairy_product),Milk and milk products,Fermented milk products,Type 2,specific,
+638,657,FOOD00639,Other snack food,,,Snack_food,Snack foods,Snack foods,Type 2,specific,
+639,659,FOOD00640,Crisp bread,,,Crisp_bread,Cereals and cereal products,Flat breads,Type 2,specific,
+640,660,FOOD00641,Pastry,,,Pastry,Confectioneries,Desserts,Type 2,specific,
+641,661,FOOD00642,Dragée,,,Dragée,Confectioneries,Candies,Type 2,specific,
+642,662,FOOD00643,Chewing gum,,,Chewing_gum,Confectioneries,Candies,Type 2,specific,
+643,663,FOOD00644,Marzipan,,,Marzipan,Confectioneries,Other confectioneries,Type 2,specific,
+644,664,FOOD00645,Salad dressing,,,Salad#Dressings,Baking goods,Dressings,Type 2,specific,
+645,665,FOOD00646,Sauce,,,Sauce,Baking goods,Sauces,Type 2,specific,
+646,666,FOOD00647,Salt,,,Salt,Baking goods,Seasonings,Type 2,specific,
+647,667,FOOD00648,Butter,,,Butter,Milk and milk products,Other milk products,Type 2,specific,
+648,668,FOOD00649,Butter substitute,,,,Baking goods,Substitutes,Type 2,specific,
+649,669,FOOD00650,Cream,,,Cream,Milk and milk products,Other milk products,Type 2,specific,
+650,670,FOOD00651,Sugar,,,Sugar,Baking goods,Sugars,Type 2,specific,
+651,671,FOOD00652,Sausage,,,Sausage,Dishes,Ground meat,Type 2,specific,
+652,672,FOOD00653,Meatball,,,Meatball,Dishes,Ground meat,Type 2,specific,
+653,673,FOOD00654,Mustard,,,Mustard_(condiment),Baking goods,Condiments,Type 2,specific,
+654,674,FOOD00655,Pate,,,Pâté,Dishes,Ground meat,Type 2,specific,
+655,676,FOOD00656,Sugar substitute,,,Sugar_substitute,Baking goods,Substitutes,Type 2,specific,
+656,677,FOOD00657,Meat bouillon,,,,Baking goods,Baking goods,Type 2,specific,
+657,679,FOOD00658,Whey,,,Whey,Milk and milk products,Other milk products,Type 2,specific,
+658,680,FOOD00659,Casein,,,Casein,Milk and milk products,Other milk products,Type 2,specific,
+659,681,FOOD00660,Fruit preserve,,,Fruit_preserves,Fruits,Fruit products,Type 2,specific,
+660,682,FOOD00661,Leavening agent,,,Leavening_agent,Baking goods,Baking goods,Type 2,specific,
+661,683,FOOD00662,Marshmallow,,,Marshmallow,Confectioneries,Candies,Type 2,specific,
+662,684,FOOD00663,Gelatin,,,Gelatin,Baking goods,Baking goods,Type 2,specific,
+663,685,FOOD00664,Water,,,Water,Beverages,Waters,Type 2,specific,
+664,686,FOOD00665,Other fish product,,,Fish_products,Aquatic foods,Fish products,Type 2,specific,
+665,687,FOOD00666,Milk (Human),,,Milk,Milk and milk products,Unfermented milks,Type 2,specific,
+666,689,FOOD00667,Other beverage,,,,Beverages,Other beverages,Type 2,specific,
+667,690,FOOD00668,Baby food,,,Baby food,Baby foods,Baby foods,Type 2,specific,
+668,691,FOOD00669,Dumpling,,,Dumpling,Dishes,Other dishes,Type 2,specific,
+669,692,FOOD00670,Soup,,,Soup,Dishes,Other dishes,Type 2,specific,
+670,693,FOOD00671,Other vegetable product,,,,Vegetables,Vegetable products,Type 2,specific,
+671,694,FOOD00672,Unclassified food or beverage,,,,Unclassified,Unclassified,Type 2,specific,
+672,695,FOOD00673,Syrup,,,Syrup,Baking goods,Baking goods,Type 2,specific,
+673,696,FOOD00674,Tallow,,,Tallow,Fats and oils,Animal fats,Type 2,specific,
+674,697,FOOD00675,Remoulade,,,Remoulade,Baking goods,Condiments,Type 2,specific,
+675,698,FOOD00676,Chocolate spread,,,Chocolate spread,Confectioneries,Spreads,Type 2,specific,
+676,699,FOOD00677,Fruit gum,,,Fruit_Gums,Confectioneries,Candies,Type 2,specific,
+677,700,FOOD00678,Curry powder,,,Curry powder,Herbs and Spices,Herb and spice mixtures,Type 2,specific,
+678,701,FOOD00679,Other candy,,,Candy,Confectioneries,Candies,Type 2,specific,
+679,702,FOOD00680,Meringue,,,Meringue,Confectioneries,Other confectioneries,Type 2,specific,
+680,703,FOOD00681,Lard,,,Lard,Fats and oils,Animal fats,Type 2,specific,
+681,704,FOOD00682,Other animal fat,,,Animal_fat,Fats and oils,Animal fats,Type 2,specific,
+682,705,FOOD00683,Other cocoa product,,,,Cocoa and cocoa products,Cocoa products,Type 2,specific,
+683,706,FOOD00684,Cocoa butter,,,Cocoa_butter,Cocoa and cocoa products,Cocoa products,Type 2,specific,
+684,707,FOOD00685,Cocoa powder,,,Cocoa_solids,Cocoa and cocoa products,Cocoa products,Type 2,specific,
+685,708,FOOD00686,Cocoa liquor,,,Chocolate_liquor,Cocoa and cocoa products,Cocoa products,Type 2,specific,
+686,709,FOOD00687,Chocolate,,,Types_of_chocolate,Cocoa and cocoa products,Cocoa products,Type 2,specific,
+687,710,FOOD00688,Hot chocolate,,,Hot_chocolate,Cocoa and cocoa products,Cocoa products,Type 2,specific,
+688,711,FOOD00689,Dried milk,,,Powdered_milk,Milk and milk products,Other milk products,Type 2,specific,
+689,712,FOOD00690,Milk (Other mammals),,,Milk,Milk and milk products,Unfermented milks,Type 2,specific,
+690,713,FOOD00691,Kefir,,,Kefir,Milk and milk products,Fermented milks,Type 2,specific,
+691,714,FOOD00692,Buttermilk,,,Buttermilk,Milk and milk products,Fermented milks,Type 2,specific,
+692,715,FOOD00693,Other fermented milk,,,Fermented_milk_products,Milk and milk products,Fermented milks,Type 2,specific,
+693,716,FOOD00694,Soy sauce,,,Soy_sauce,Soy,Soy products,Type 2,specific,
+694,717,FOOD00695,Miso,,,Miso,Soy,Soy products,Type 2,specific,
+695,718,FOOD00696,Tofu,,,Tofu,Soy,Soy products,Type 2,specific,
+696,721,FOOD00697,Zwieback,,,Zwieback,Cereals and cereal products,Leavened breads,Type 2,specific,
+697,722,FOOD00698,Roe,,,Roe,Aquatic foods,Roe,Type 2,generic,
+698,723,FOOD00699,Cichlidae (Tilapia),Cichlidae,169770,Tilapia,Aquatic foods,Fishes,Type 1,specific,8113.0
+699,724,FOOD00700,Icing,,,Icing_(food),Confectioneries,Other confectioneries,Type 2,specific,
+700,725,FOOD00701,Snack bar,,,,Snack foods,Snack foods,Type 2,specific,
+701,726,FOOD00702,Green turtle,Chelonia mydas,173833,Green sea turtle,Aquatic foods,Other aquatic foods,Type 1,specific,8469.0
+702,727,FOOD00703,Energy drink,,,Energy_drink,Beverages,Nutritional beverages,Type 2,specific,
+703,728,FOOD00704,Burrito,,,Burrito,Dishes,Tex-Mex cuisine,Type 2,specific,
+704,729,FOOD00705,Hamburger,,,Hamburger,Dishes,Sandwiches,Type 2,specific,
+705,730,FOOD00706,Baked beans,,,Baked_beans,Dishes,Other dishes,Type 2,specific,
+706,731,FOOD00707,Chili,,,Chili_con_carne,Dishes,Tex-Mex cuisine,Type 2,specific,
+707,732,FOOD00708,Taco,,,Taco,Dishes,Tex-Mex cuisine,Type 2,specific,
+708,733,FOOD00709,Tortilla,,,Tortilla,Cereals and cereal products,Flat breads,Type 2,specific,
+709,734,FOOD00710,Nachos,,,Nachos,Dishes,Tex-Mex cuisine,Type 2,specific,
+710,735,FOOD00711,Processed cheese,,,Processed_cheese,Milk and milk products,Fermented milk products,Type 2,specific,
+711,736,FOOD00712,Salad,,,Salad,Dishes,Other dishes,Type 2,specific,
+712,737,FOOD00713,Cream substitute,,,,Baking goods,Substitutes,Type 2,specific,
+713,738,FOOD00714,Dulce de leche,,,Dulce_de_leche,Confectioneries,Spreads,Type 2,specific,
+714,739,FOOD00715,Topping,,,,Baking goods,Baking goods,Type 2,specific,
+715,740,FOOD00716,Sweet custard,,,Custard,Confectioneries,Milk desserts,Type 2,specific,
+716,742,FOOD00717,Egg roll,,,Egg_roll,Dishes,Asian cuisine,Type 2,specific,
+717,743,FOOD00718,Heart of palm,,,Heart_of_palm,Vegetables,Other vegetables,Type 1,specific,
+718,744,FOOD00719,Popcorn,,,Popcorn,Snack foods,Snack foods,Type 2,specific,
+719,745,FOOD00720,Potato chip,,,Potato_chip,Snack foods,Snack foods,Type 2,specific,
+720,746,FOOD00721,Tortilla chip,,,Tortilla_chip,Snack foods,Snack foods,Type 2,specific,
+721,747,FOOD00722,Corn chip,,,Corn_chip,Snack foods,Snack foods,Type 2,specific,
+722,748,FOOD00723,Hibiscus tea,Hibiscus sabbariffa,21617,Hibiscus_tea,Teas,Herbal teas,Type 1,specific,183260.0
+723,749,FOOD00724,Stew,,,Stew,Dishes,Other dishes,Type 2,specific,
+724,750,FOOD00725,Gelatin dessert,,,Gelatin_dessert,Confectioneries,Desserts,Type 2,specific,
+725,751,FOOD00726,Junket,,,Junket_(dessert),Confectioneries,Milk desserts,Type 2,specific,
+726,752,FOOD00727,Falafel,,,Falafel,Dishes,Other dishes,Type 2,specific,
+727,753,FOOD00728,Frybread,,,Frybread,Dishes,Other dishes,Type 2,specific,
+728,754,FOOD00729,Other frozen dessert,,,Frozen_dessert,Confectioneries,Frozen desserts,Type 2,specific,
+729,755,FOOD00730,Lasagna,,,Lasagna,Dishes,Pasta dishes,Type 2,specific,
+730,756,FOOD00731,Morchella (Morel),Morchellaceae,612936,Morchellaceae,Vegetables,Mushrooms,Type 1,specific,5192.0
+731,757,FOOD00732,Pancake,,,Pancake,Dishes,Other dishes,Type 2,specific,
+732,758,FOOD00733,Pectin,,,Pectin,Baking goods,Baking goods,Type 2,specific,
+733,759,FOOD00734,Pudding,,,Pudding,Confectioneries,Desserts,Type 2,specific,
+734,760,FOOD00735,Waffle,,,Waffle,Dishes,Other dishes,Type 2,specific,
+735,761,FOOD00736,Soy milk,,,Soy_milk,Soy,Soy products,Type 2,specific,
+736,762,FOOD00737,Meatloaf,,,Meatloaf,Dishes,Ground meat,Type 2,specific,
+737,763,FOOD00738,Sake,,,Sake,Beverages,Fermented beverages,Type 2,specific,
+738,764,FOOD00739,Cocktail,,,List_of_cocktails,Beverages,Alcoholic beverages,Type 2,specific,
+739,765,FOOD00740,Couscous,,,Couscous,Dishes,Berber cuisine,Type 2,specific,
+740,766,FOOD00741,Bulgur,,,Bulgur,Cereals and cereal products,Cereal products,Type 2,specific,
+741,767,FOOD00742,Coffee substitute,,,Coffee_substitute,Baking goods,Substitutes,Type 2,specific,
+742,768,FOOD00743,Coffee mocha,,,Cafe_mocha,Coffee and coffee products,Coffee products,Type 2,specific,
+743,769,FOOD00744,Chimichanga,,,Chimichanga,Dishes,Mexican cuisine,Type 2,specific,
+744,770,FOOD00745,Semolina,,,Semolina,Cereals and cereal products,Cereal products,Type 2,specific,
+745,771,FOOD00746,Tapioca pearl,,,Tapioca,Baking goods,Baking goods,Type 2,specific,
+746,772,FOOD00747,Tostada,,,Tostada,Dishes,Mexican cuisine,Type 2,specific,
+747,773,FOOD00748,Quesadilla,,,Quesadilla,Dishes,Mexican cuisine,Type 2,specific,
+748,774,FOOD00749,Baked potato,,,Baked_potato,Dishes,Potato dishes,Type 2,specific,
+749,775,FOOD00750,Hot dog,,,Hot_dog,Dishes,Sandwiches,Type 2,specific,
+750,776,FOOD00751,Spread,,,Spread_(food),Baking goods,Baking goods,Type 2,specific,
+751,777,FOOD00752,Enchilada,,,Enchilada,Dishes,Mexican cuisine,Type 2,specific,
+752,778,FOOD00753,Egg substitute,,,Egg_substitute#Cooking_substitutes,Baking goods,Substitutes,Type 2,specific,
+753,779,FOOD00754,Nutritional drink,,,Energy drink,Beverages,Nutritional beverages,Type 2,specific,
+754,780,FOOD00755,Other sandwich,,,Sandwich,Dishes,Sandwiches,Type 2,specific,
+755,781,FOOD00756,Ketchup,,,Ketchup,Baking goods,Condiments,Type 2,specific,
+756,782,FOOD00757,Breakfast sandwich,,,Breakfast_sandwich,Dishes,Sandwiches,Type 2,specific,
+757,783,FOOD00758,Adobo,,,Adobo,Baking goods,Seasonings,Type 2,specific,
+758,784,FOOD00759,Macaroni and cheese,,,Macaroni_and_cheese,Dishes,Pasta dishes,Type 2,specific,
+759,785,FOOD00760,Butterfat,,,Butterfat,Milk and milk products,Other milk products,Type 2,specific,
+760,786,FOOD00761,Horned melon,Cucumis metuliferus,501835,Horned_melon,Gourds,Gourds,Type 2,specific,61886.0
+761,787,FOOD00762,Hushpuppy,,,Hushpuppy,Dishes,American cuisine,Type 2,specific,
+762,788,FOOD00763,Fruit juice,,,Juice,Beverages,Other beverages,Type 2,specific,
+763,789,FOOD00764,Relish,,,Relish,Baking goods,Condiments,Type 2,specific,
+764,790,FOOD00765,Other fruit product,,,,Fruits,Fruit products,Type 2,specific,
+765,791,FOOD00766,Fruit salad,,,Fruit_salad,Fruits,Fruit products,Type 2,specific,
+766,792,FOOD00767,Soy yogurt,,,Soy_yogurt,Soy,Soy products,Type 2,specific,
+767,793,FOOD00768,Vegetarian food,,,Vegetarian cuisine,Dishes,Other dishes,Type 2,specific,
+768,794,FOOD00769,Veggie burger,,,Veggie_burger,Dishes,Sandwiches,Type 2,specific,
+769,795,FOOD00770,Cold cut,,,Cold_cut,Dishes,Ground meat,Type 2,specific,
+770,796,FOOD00771,Mixed nuts,,,Mixed_nuts,Nuts,Nuts,Type 2,specific,
+771,797,FOOD00772,Canola,,,Canola,Herbs and spices,Oilseed crops,Type 2,specific,138011.0
+772,798,FOOD00773,Babassu palm,Attalea speciosa,509373,Attalea_speciosa,Herbs and Spices,Oilseed crops,Type 1,specific,145700.0
+773,799,FOOD00774,Cupuaçu,Theobroma grandiflorum,506108,Cupuaçu,Herbs and Spices,Oilseed crops,Type 1,specific,108881.0
+774,800,FOOD00775,Shea tree,Vitellaria paradoxa,505960,Shea_tree,Herbs and Spices,Oilseed crops,Type 1,specific,292385.0
+775,801,FOOD00776,Oil-seed Camellia,Camellia oleifera,,Camellia_oleifera,Herbs and Spices,Oilseed crops,Type 1,specific,385388.0
+776,802,FOOD00777,Ucuhuba,Virola surinamensis,18123,Virola_surinamensis,Herbs and Spices,Oilseed crops,Type 1,specific,224910.0
+777,803,FOOD00778,Phyllo dough,,,Phyllo,Baking goods,Baking goods,Type 2,specific,
+778,804,FOOD00779,Cooking oil,,,Cooking_oil,Baking goods,Baking goods,Type 2,specific,
+779,805,FOOD00780,Pie crust,,,Pie_crust,Baking goods,Wrappers,Type 2,specific,
+780,806,FOOD00781,Pie filling,,,,Baking goods,Baking goods,Type 2,specific,
+781,807,FOOD00782,Pie,,,Pie,Confectioneries,Desserts,Type 2,specific,
+782,808,FOOD00783,Shortening,,,Shortening,Fats and oils,Vegetable fats,Type 2,specific,
+783,809,FOOD00784,Soy cream,,,,Soy,Soy products,Type 2,specific,
+784,810,FOOD00785,Ice cream cone,,,Ice_cream_cone,Baking goods,Wrappers,Type 2,specific,
+785,811,FOOD00786,Molasses,,,Molasses,Baking goods,Baking goods,Type 2,specific,
+786,812,FOOD00787,Cracker,,,Cracker_(food),Snack foods,Snack foods,Type 2,specific,
+787,813,FOOD00788,Nance,Byrsonima crassifolia,29263,Byrsonima_crassifolia,Fruits,Tropical fruits,Type 1,specific,4270.0
+788,814,FOOD00789,Naranjilla,Solanum quitoense,30475,Solanum_quitoense,Fruits,Tropical fruits,Type 1,specific,227725.0
+789,815,FOOD00790,Natto,,,Natto,Soy,Soy products,Type 2,specific,
+790,816,FOOD00791,Ravioli,,,Ravioli,Dishes,Pasta dishes,Type 2,specific,
+791,817,FOOD00792,Scrapple,,,Scrapple,Dishes,American cuisine,Type 2,specific,
+792,818,FOOD00793,Other pasta dish,,,,Dishes,Pasta dishes,Type 2,specific,
+793,819,FOOD00794,Succotash,,,Succotash,Dishes,American cuisine,Type 2,specific,
+794,820,FOOD00795,Tamale,,,Tamale,Dishes,Latin American cuisine,Type 2,specific,
+795,822,FOOD00796,Rice cake,,,Rice_cake,Dishes,Asian cuisine,Type 2,specific,
+796,823,FOOD00797,Tree fern,Cyathea,17937,Cyatheales,Vegetables,Other vegetables,Type 1,specific,
+797,824,FOOD00798,Evaporated milk,,,Evaporated_milk,Milk and milk products,Other milk products,Type 2,specific,
+798,825,FOOD00799,Flour,,,Flour,Cereals and cereal products,Cereal products,Type 2,specific,
+799,826,FOOD00800,Akutaq,,,Akutaq,Confectioneries,Desserts,Type 2,specific,
+800,828,FOOD00801,Dough,,,Dough,Cereals and cereal products,Doughs,Type 2,specific,
+801,829,FOOD00802,Pita bread,,,Pita_bread,Cereals and cereal products,Flat breads,Type 2,specific,
+802,830,FOOD00803,Focaccia,,,Focaccia,Cereals and cereal products,Flat breads,Type 2,specific,
+803,831,FOOD00804,Bagel,,,Bagel,Cereals and cereal products,Leavened breads,Type 2,specific,
+804,832,FOOD00805,Other bread product,,,,Cereals and cereal products,Bread products,Type 2,specific,
+805,834,FOOD00806,Piki bread,,,Piki,Cereals and cereal products,Flat breads,Type 2,specific,
+806,835,FOOD00807,French toast,,,French_toast,Cereals and cereal products,Leavened breads,Type 2,specific,
+807,836,FOOD00808,Wheat bread,,,Wheat_bread,Cereals and cereal products,Leavened breads,Type 2,specific,
+808,837,FOOD00809,Rye bread,,,Rye_bread,Cereals and cereal products,Leavened breads,Type 2,specific,
+809,838,FOOD00810,Oat bread,,,,Cereals and cereal products,Leavened breads,Type 2,specific,
+810,839,FOOD00811,Potato bread,,,Potato_bread,Cereals and cereal products,Other breads,Type 2,specific,
+811,840,FOOD00812,Cornbread,,,Cornbread,Cereals and cereal products,Flat breads,Type 2,specific,
+812,841,FOOD00813,Corn grits,,,Grits,Cereals and cereal products,Cereal products,Type 2,specific,
+813,842,FOOD00814,Multigrain bread,,,,Cereals and cereal products,Leavened breads,Type 2,specific,
+814,843,FOOD00815,Rice bread,,,Rice_bread,Cereals and cereal products,Leavened breads,Type 2,specific,
+815,844,FOOD00816,Pan dulce,,,Gibraltarian_cuisine#Pan_dulce,Cereals and cereal products,Leavened breads,Type 2,specific,
+816,845,FOOD00817,Raisin bread,,,Raisin_bread,Cereals and cereal products,Sweet breads,Type 2,specific,
+817,846,FOOD00818,Wonton wrapper,,,,Baking goods,Wrappers,Type 2,specific,
+818,848,FOOD00819,Trail mix,,,Trail_mix,Snack foods,Snack foods,Type 2,specific,
+819,849,FOOD00820,Greenthread tea,Thelesperma,38517,Thelesperma,Teas,Herbal teas,Type 1,specific,153159.0
+820,850,FOOD00821,Fruit-flavor drink,,,,Beverages,Other beverages,Type 2,specific,
+821,851,FOOD00822,Vegetable juice,,,Vegetable juice,Beverages,Other beverages,Type 2,specific,
+822,852,FOOD00823,Horchata,,,Horchata,Beverages,Other beverages,Type 2,specific,
+823,853,FOOD00824,Soft drink,,,Soft_drink,Beverages,Other beverages,Type 2,specific,
+824,854,FOOD00825,Frozen yogurt,,,Frozen_yogurt,Confectioneries,Frozen desserts,Type 2,specific,
+825,855,FOOD00826,Milkshake,,,Milkshake,Confectioneries,Frozen desserts,Type 2,specific,
+826,856,FOOD00827,Chocolate mousse,,,Mousse,Confectioneries,Desserts,Type 2,specific,
+827,857,FOOD00828,Dripping,,,Dripping,Fats and oils,Animal fats,Type 2,specific,
+828,858,FOOD00829,Pupusa,,,Pupusa,Dishes,Latin American cuisine,Type 2,specific,
+829,859,FOOD00830,Empanada,,,Empanada,Dishes,Latin American cuisine,Type 2,specific,
+830,860,FOOD00831,Arepa,,,Arepa,Dishes,Latin American cuisine,Type 2,specific,
+831,861,FOOD00832,Ascidians,Ascidiacea,158854,Ascidiacea,Aquatic foods,Other aquatic foods,Type 2,specific,7713.0
+832,862,FOOD00833,Gefilte fish,,,Gefilte_fish,Dishes,Jewish cuisine,Type 2,specific,
+833,863,FOOD00834,Yellow pond-lily,Nuphar lutea,503968,Nuphar_lutea,Herbs and Spices,Herbs,Type 1,specific,77113.0
+834,864,FOOD00835,Fish burger,,,Filet-O-Fish,Dishes,Sandwiches,Type 2,specific,
+835,865,FOOD00836,Other dish,,,,Dishes,Other dishes,Type 2,specific,
+836,866,FOOD00837,Pot pie,,,Pot_pie,Dishes,Other dishes,Type 2,specific,
+837,867,FOOD00838,Stuffing,,,Stuffing,Baking goods,Baking goods,Type 2,specific,
+838,868,FOOD00839,Edible shell,,,,Baking goods,Wrappers,Type 2,specific,
+839,869,FOOD00840,Fudge,,,Fudge,Confectioneries,Candies,Type 2,specific,
+840,870,FOOD00841,Candy bar,,,Chocolate_bar,Confectioneries,Candies,Type 2,specific,
+841,871,FOOD00842,Condensed milk,,,Condensed_milk,Milk and milk products,Other milk products,Type 2,specific,
+842,872,FOOD00843,Margarine,,,Margarine,Fats and oils,Vegetable fats,Type 2,specific,
+843,873,FOOD00844,Margarine-like spread,,,,Fats and oils,Vegetable fats,Type 2,specific,
+844,874,FOOD00845,Hummus,,,Hummus,Dishes,Levantine cuisine,Type 2,specific,
+845,876,FOOD00846,Potato puffs,,,,Dishes,Potato dishes,Type 2,specific,
+846,877,FOOD00847,Potato gratin,,,Gratin,Dishes,Potato dishes,Type 2,specific,
+847,878,FOOD00848,Milk substitute,,,Milk_substitute,Baking goods,Substitutes,Type 2,specific,
+848,879,FOOD00849,Pepper (C. pubescens),Capsicum pubescens,505855,Capsicum_pubescens,Vegetables,Fruit vegetables,Type 1,specific,113210.0
+849,880,FOOD00850,Soft-necked garlic,Allium sativum L. var. sativum,,Garlic,Herbs and Spices,Herbs,Type 1,specific,4682.0
+850,881,FOOD00851,Cabbage,Brassica oleracea var. capitata,526962,Cabbage,Vegetables,Cabbages,Type 1,specific,3716.0
+851,882,FOOD00852,Chinese bayberry,Myrica rubra,845180,Myrica rubra,Fruits,Berries,Type 1,specific,262757.0
+852,883,FOOD00853,Mushrooms,,,Mushrooms,Vegetables,Mushrooms,Unknown,generic,
+853,884,FOOD00854,Alcoholic beverages,,,Alcoholic_beverages,Beverages,Alcoholic beverages,Unknown,generic,
+854,885,FOOD00855,Onion-family vegetables,,,,Vegetables,Onion-family vegetables,Unknown,generic,
+855,886,FOOD00856,Pomes,,,Pomes,Fruits,Pomes,Unknown,generic,
+856,887,FOOD00857,Brassicas,,,Brassica,Vegetables,Brassicas,Unknown,generic,3705.0
+857,888,FOOD00858,Cereals and cereal products,,,,Cereals and cereal products,Cereals and cereal products,Unknown,generic,
+858,889,FOOD00859,Citrus,,28882,Citrus,Fruits,Citrus,Unknown,generic,
+859,890,FOOD00860,Cocoa and cocoa products,,,,Cocoa and cocoa products,Cocoa and cocoa products,Unknown,generic,
+860,891,FOOD00861,Coffee and coffee products,,,,Coffee and coffee products,Coffee and coffee products,Unknown,generic,
+861,892,FOOD00862,Crustaceans,,83677,Crustaceans,Aquatic foods,Crustaceans,Unknown,generic,6657.0
+862,893,FOOD00863,Milk and milk products,,,Dairy_product,Milk and milk products,Milk and milk products,Unknown,generic,
+863,894,FOOD00864,Fats and oils,,,Fats_and_oils,Fats and oils,Fats and oils,Unknown,generic,
+864,896,FOOD00865,Fishes,,,Fishes,Aquatic foods,Fishes,Unknown,generic,
+865,897,FOOD00866,Herbs and Spices,,,,Herbs and Spices,Herbs and Spices,Unknown,generic,
+866,898,FOOD00867,Pulses,,,Pulse_(legume),Pulses,Pulses,Unknown,generic,
+867,900,FOOD00868,Mollusks,,69458,Mollusks,Aquatic foods,Mollusks,Unknown,generic,6447.0
+868,901,FOOD00869,Nuts,,,Nut_(fruit),Nuts,Nuts,Unknown,generic,
+869,902,FOOD00870,Beverages,,,Beverages,Beverages,Beverages,Unknown,generic,
+870,903,FOOD00871,Fruits,,,Fruits,Fruits,Fruits,Unknown,generic,
+871,904,FOOD00872,Green vegetables,,,Green_vegetables,Vegetables,Green vegetables,Unknown,generic,
+872,905,FOOD00873,Root vegetables,,,Root_vegetables,Vegetables,Root vegetables,Unknown,generic,
+873,906,FOOD00874,Sunburst squash (pattypan squash),Cucurbita pepo var. clypeata,,Pattypan squash,Gourds,Gourds,Type 1,specific,
+874,907,FOOD00875,Green zucchini,Cucurbita pepo var. cylindrica,,Zucchini,Gourds,Gourds,Type 1,specific,
+875,908,FOOD00876,Yellow zucchini,Cucurbita pepo var. cylindrica,,,Gourds,Gourds,Type 1,specific,
+876,909,FOOD00877,Green bell pepper,Capsicum annuum,30492,Capsicum_annuum,Vegetables,Fruit vegetables,Type 1,specific,4072.0
+877,910,FOOD00878,Yellow bell pepper,Capsicum annuum,30492,Capsicum_annuum,Vegetables,Fruit vegetables,Type 1,specific,4072.0
+878,911,FOOD00879,Orange bell pepper,Capsicum annuum,30492,Capsicum_annuum,Vegetables,Fruit vegetables,Type 1,specific,4072.0
+879,912,FOOD00880,Red bell pepper,Capsicum annuum,30492,Capsicum_annuum,Vegetables,Fruit vegetables,Type 1,specific,4072.0
+880,913,FOOD00881,Italian sweet red pepper,Capsicum annuum,30492,Italian sweet pepper,Vegetables,Fruit vegetables,Type 1,specific,4072.0
+881,914,FOOD00882,Yellow wax bean,Phaseolus vulgaris,26857,Phaseolus_vulgaris,Pulses,Beans,Type 1,specific,3885.0
+882,915,FOOD00883,Green bean,Phaseolus vulgaris,26857,Phaseolus vulgaris,Pulses,Beans,Type 1,specific,3885.0
+883,916,FOOD00884,Saskatoon berry,Amelanchier alnifolia,25109,Amelanchier alnifolia,Fruits,Berries,Type 1,specific,32219.0
+884,917,FOOD00885,Nanking cherry,Prunus tomentosa,504627,Prunus tomentosa,Fruits,Berries,Type 1,specific,105667.0
+885,918,FOOD00886,Japanese pumpkin,Cucurbita maxima,22369,Kabocha,Gourds,Gourds,Type 1,specific,3661.0
+886,919,FOOD00887,White cabbage,Brassica oleracea L. var. capitata L. f. alba DC.,526962,Cabbage,Vegetables,Cabbages,Type 1,specific,
+887,920,FOOD00888,Romaine lettuce,Lactuca sativa L. var. longifolia,,Romaine lettuce,Vegetables,Leaf vegetables,Type 1,specific,
+888,921,FOOD00889,"Cow milk, pasteurized, vitamin A + D added, 0% fat",,,Milk,Milk and milk products,Unfermented milks,Type 2,specific,
+889,922,FOOD00890,"Cow milk, pasteurized, vitamin A + D added, 1% fat",,,Milk,Milk and milk products,Unfermented milks,Type 2,specific,
+890,923,FOOD00891,"Cow milk, pasteurized, vitamin A + D added, 2% fat",,,Milk,Milk and milk products,Unfermented milks,Type 2,specific,
+891,924,FOOD00892,"Cow milk, pasteurized, vitamin D added, 3.25% fat",,,Milk,Milk and milk products,Unfermented milks,Type 2,specific,
+892,925,FOOD00893,Castanospermum australe,Castanospermum australe,,Castanospermum,Vegetables,,Type 1,,
+893,926,FOOD00894,Gentiana lutea,Gentiana lutea,505985,Gentiana_lutea,Vegetables,,Type 1,,
+894,927,FOOD00895,Juniperus communis,Juniperus communis,194820,Juniperus_communis,Vegetables,,Type 1,,
+895,928,FOOD00896,Albizia gummifera,Albizia gummifera,820328,Albizia_gummifera,Vegetables,,Type 1,,
+896,929,FOOD00897,Mundu,Garcinia dulcis,506128,Garcinia_dulcis,Fruits,Tropical fruits,Type 1,,
+897,930,FOOD00898,Rabbiteye blueberry,Vaccinium virgatum,505636,Vaccinium_virgatum,Fruits,Berries,Type 1,specific,
+898,931,FOOD00899,Yali pear,Pyrus × bretschneideri,,Pyrus_×_bretschneideri,Fruits,Pomes,Type 1,specific,
+899,932,FOOD00900,Asparagus racemosus,Asparagus racemosus,,Asparagus_racemosus,Vegetables,Shoot vegetables,Type 1,specific,
+900,933,FOOD00901,Evergreen blackberry,Rubus laciniatus,24853,Rubus_laciniatus,Fruits,Berries,Type 1,specific,
+901,934,FOOD00902,Asparagus fern,Asparagus setaceus,193453,Asparagus_setaceus,Herbs and Spices,Herbs,Type 1,specific,
+902,935,FOOD00903,Thornless blackberry,Rubus ulmifolius,530155,Rubus_ulmifolius,Fruits,Berries,Type 1,specific,
+903,936,FOOD00904,Tropical highland blackberry,Rubus adenotrichos,,Rubus_adenotrichos,Fruits,Berries,Type 1,specific,
+904,937,FOOD00905,Andean blackberry,Rubus glaucus,506228,Rubus_glaucus,Fruits,Berries,Type 1,specific,
+905,938,FOOD00906,Blackberry,Rubus,,Blackberry,Fruits,Berries,Type 1,specific,
+906,939,FOOD00907,Black tea,,,,Teas,Teas,Type 1,,
+907,940,FOOD00908,Green tea,,,,Teas,Teas,Type 1,,
+908,941,FOOD00909,Olive oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+909,942,FOOD00910,Macroalgae,,,,Aquatic foods,Seaweed,Type 1,,
+910,943,FOOD00911,Red wine,,,,Beverages,Fermented beverages,Type 2,,
+911,944,FOOD00912,linseed oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+912,945,FOOD00913,Rapeseed oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+913,946,FOOD00914,Soybean oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+914,947,FOOD00915,Guarana,Paullinia cupana,,,Herbs and Spices,Herbs,Type 1,,
+915,948,FOOD00916,Mate,Ilex paraguariensis,,,Herbs and Spices,Herbs,Type 1,,
+916,949,FOOD00917,White wine,,,,Beverages,Fermented beverages,Type 2,,
+917,950,FOOD00918,Sour orange,Citrus × aurantium,,,Fruits,Citrus,Type 1,,
+918,951,FOOD00919,Egg yolk,,,,Eggs,Eggs,Type 1,,
+919,952,FOOD00920,Rosé wine,,,,Beverages,Fermented beverages,Type 2,,
+920,953,FOOD00921,White mulberry,Morus alba,,,Herbs and Spices,Herbs,Type 1,,
+921,954,FOOD00922,Canola oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+922,955,FOOD00923,Dessert wine,,,,Beverages,Fermented beverages,Type 2,,
+923,956,FOOD00924,Red champagne,,,,Beverages,Alcoholic beverages,Type 1,,
+924,957,FOOD00925,Red tea,,,,Teas,Teas,Type 1,,
+925,958,FOOD00926,White champagne,,,,Beverages,Alcoholic beverages,Type 1,,
+926,959,FOOD00927,Red grape juice,,,,Beverages,Beverages,Type 1,,
+927,960,FOOD00928,White grape juice,,,,Beverages,Beverages,Type 1,,
+928,961,FOOD00929,Crosne,Stachys affinis,,,Vegetables,Root vegetables,Type 1,,
+929,962,FOOD00930,Red clover,Trifolium pratense,,,Herbs and Spices,Herbs,Type 1,,
+930,963,FOOD00931,Partridge berry,Mitchella repens,,,Fruits,Berries,Type 1,,
+931,964,FOOD00932,Mikan,Citrus unshiu,,,Fruits,Citrus,Type 1,,
+932,965,FOOD00933,Mozzarella cheese,,,,Milk and milk products,Fermented milk products,Type 2,,
+933,966,FOOD00934,Plain cream cheese,,,,Milk and milk products,Fermented milk products,Type 2,,
+934,967,FOOD00935,Cheddar Cheese,Cheddar Cheese,,,Milk and milk products,Fermented milk products,Type 2,,
+935,968,FOOD00936,Parmesan cheese,,,,Milk and milk products,Fermented milk products,Type 2,,
+936,969,FOOD00937,Almond milk,,,,Milk and milk products,Other milk products,Type 1,,
+937,970,FOOD00938,Coconut milk,,,,Milk and milk products,Other milk products,Type 1,,
+938,971,FOOD00939,Salted butter,,,,Milk and milk products,Other milk products,Type 1,,
+939,972,FOOD00940,Sunflower oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+940,973,FOOD00941,Coconut oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+941,974,FOOD00942,Peanut oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+942,975,FOOD00943,Cottonseed oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+943,976,FOOD00944,Corn oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+944,977,FOOD00945,Avocado oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+945,978,FOOD00946,Grapeseed oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+946,979,FOOD00947,Sesame oil,,,,Herbs and Spices,Oilseed crops,Type 2,,
+947,980,FOOD00948,Monterey Jack cheese,,,,Milk and milk products,Fermented milk products,Type 2,,
+948,981,FOOD00949,Swiss cheese,,,,Milk and milk products,Fermented milk products,Type 2,,
+949,982,FOOD00950,Cottage cheese,,,,Milk and milk products,Fermented milk products,Type 2,,
+950,983,FOOD00951,Blue cheese,,,,Milk and milk products,Fermented milk products,Type 2,,
+951,984,FOOD00952,Clam,,,,Aquatic foods,Bivalvia,Type 1,,
+952,985,FOOD00953,Sour cream,,,,Milk and milk products,Other milk products,Type 2,,
+953,986,FOOD00954,Whole wheat bread,,,,Cereals and cereal products,Cereals,Type 1,,
+954,987,FOOD00955,Jalapeno pepper,Capsicum annuum 'Jalapeño',,,Vegetables,Fruit vegetables,Type 1,,
+955,988,FOOD00956,Greek feta cheese,,,,Milk and milk products,Fermented milk products,Type 2,,
+956,989,FOOD00957,Eddoe,Colocasia antiquorum,,,Vegetables,Root vegetables,Type 1,,
+957,990,FOOD00958,Plantain,Musa × paradisiaca,,,Fruits,Tropical fruits,Type 1,,
+958,991,FOOD00959,Clementine,Citrus × clementina,,,Fruits,Citrus,Type 1,,
+959,992,FOOD00960,Green apple,,,,Fruits,Pomes,Type 1,,
+960,993,FOOD00961,White onion,,,,Vegetables,Onion-family vegetables,Type 1,,
+961,994,FOOD00962,Red onion,,,,Vegetables,Onion-family vegetables,Type 1,,
+962,995,FOOD00963,Green onion,,,,Vegetables,Onion-family vegetables,Type 1,,
+963,996,FOOD00964,Green grape,,,,Fruits,Berries,Type 1,,
+964,997,FOOD00965,Red grape,,,,Fruits,Berries,Type 1,,
+965,998,FOOD00966,Black plum,Syzygium cumini,,,Fruits,Berries,Type 1,,
+966,999,FOOD00967,Green cabbage,Brassica oleracea var. sabauda L.,,,Vegetables,Cabbages,Type 1,,
+967,1000,FOOD00968,Black raisin,,,,Fruits,Berries,Type 1,,
+968,1001,FOOD00969,Cannellini bean,,,,Pulses,Beans,Type 1,,
+969,1002,FOOD00970,Green lentil,Lens culinaris,,,Pulses,Pulses,Type 1,,
+970,1003,FOOD00971,Cubanelle pepper,,,,Vegetables,Fruit vegetables,Type 1,,
+971,1004,FOOD00972,Acorn squash,Cucurbita pepo var. turbinata,,,Gourds,Gourds,Type 1,,
+972,1005,FOOD00973,Iceberg lettuce,,,,Vegetables,Leaf vegetables,Type 1,,
+973,1006,FOOD00974,Japanese sea bass,Lateolabrax japonicus,,,Aquatic foods,Fishes,Type 1,,
+974,1007,FOOD00975,Pea shoots,,,,Vegetables,Leaf vegetables,Type 1,,
+975,1008,FOOD00976,Yau choy,,,,Vegetables,Leaf vegetables,Type 1,,
+976,1009,FOOD00977,Water spinach,Ipomoea aquatica,,,Vegetables,Leaf vegetables,Type 1,,
+977,1010,FOOD00978,Chineese plum,,,,Fruits,Berries,Type 1,,
+978,1011,FOOD00979,Green plum,,,,Fruits,Berries,Type 1,,
+979,1012,FOOD00980,Wampee,Clausena lansium,,,Fruits,Berries,Type 1,,
+980,1013,FOOD00981,Pitaya,Hylocereus undatus,,,Fruits,Tropical fruits,Type 1,,
+981,1014,FOOD00982,Goji,,,,Fruits,Berries,Type 1,,
+982,1015,FOOD00983,Monk fruit,Siraitia grosvenorii,,,Fruits,Berries,Type 1,,
+983,1016,FOOD00984,Cantaloupe melon,Cucumis melo var. cantalupensis,,,Gourds,Gourds,Type 1,,
+984,1017,FOOD00985,Hawthorn,Crataegus,,,Fruits,Berries,Type 1,,
+985,1018,FOOD00986,Lantern fruit,Physalis alkekengi,,,Fruits,Berries,Type 1,,
+986,1019,FOOD00987,White bread,,,,Cereals and cereal products,Cereals,Type 1,,
+987,1020,FOOD00988,Cape gooseberry,Physalis peruviana,,,Fruits,Berries,Type 1,,
+988,1021,FOOD00989,Herbal tea,,,,Teas,Teas,Type 1,,
+989,1022,FOOD00990,Fish oil,,,,,,Type 1,,
+990,1023,FOOD00991,Taco shell,,,,,,Type 2,,
+991,1024,FOOD00992,Tostada shell,,,,,,Type 2,,

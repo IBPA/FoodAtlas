@@ -1,29 +1,19 @@
 import pandas as pd
 
 
-if __name__ == '__main__':
-    food_categories = pd.read_csv(
-        "tests/kg_v2/data/FDC/FoodData_Central_sr_legacy_food_csv_2018-04/"
-        "food_category.csv"
-    ).set_index('id')
+def get_foundation_food():
+    PATH_DATA_DIR \
+        = "tests/kg_v2/data/FDC/FoodData_Central_foundation_food_csv_2023-10-26"
 
-    # Load foundation food.
-    data_ff = pd.read_csv(
-        "tests/kg_v2/data/FDC/FoodData_Central_foundation_food_csv_2023-10-26/"
-        "food.csv",
-    ).query("data_type == 'foundation_food'")
-    data_ff_attr = pd.read_csv(
-        "tests/kg_v2/data/FDC/FoodData_Central_foundation_food_csv_2023-10-26/"
-        "food_attribute.csv",
-    ).set_index('fdc_id')
-    data_ff_attr_id = pd.read_csv(
-        "tests/kg_v2/data/FDC/FoodData_Central_foundation_food_csv_2023-10-26/"
-        "food_attribute_type.csv",
-    )
+    data_food = pd.read_csv(f"{PATH_DATA_DIR}/food.csv")
+    data_ff_ids = pd.read_csv(f"{PATH_DATA_DIR}/foundation_food.csv")['fdc_id'].tolist()
+    data_ff = data_food[data_food['fdc_id'].isin(data_ff_ids)]
+    data_ff_attr \
+        = pd.read_csv(f"{PATH_DATA_DIR}/food_attribute.csv").set_index('fdc_id')
 
     def _extract_ff_food_attributes(row):
         result = {
-            'common_names': [],
+            # 'common_names': [],
             'foodon_name': None,
             'foodon_url': None,
             'ncbi_taxon_url': None,
@@ -49,13 +39,17 @@ if __name__ == '__main__':
                 result[col_name] = attr.loc[attr_name, 'value'] \
                     if attr_name in attr.index else None
 
-        return pd.Series(result)
+    #     return pd.Series(result)
 
-    data_ff = pd.concat(
-        [data_ff, data_ff.apply(_extract_ff_food_attributes, axis=1)],
-        axis=1
-    )
+    # data_ff = pd.concat(
+    #     [data_ff, data_ff.apply(_extract_ff_food_attributes, axis=1)],
+    #     axis=1
+    # )
 
+    # return data_ff
+
+
+def get_legacy_food():
     # # Load legacy food.
     data_sr = pd.read_csv(
         "tests/kg_v2/data/FDC/FoodData_Central_sr_legacy_food_csv_2018-04/"
@@ -65,13 +59,6 @@ if __name__ == '__main__':
         "tests/kg_v2/data/FDC/FoodData_Central_sr_legacy_food_csv_2018-04/"
         "food_attribute.csv",
     ).set_index('fdc_id')
-    data_sr_attr_id = pd.read_csv(
-        "tests/kg_v2/data/FDC/FoodData_Central_sr_legacy_food_csv_2018-04/"
-        "food_attribute_type.csv",
-    )
-    print(data_sr)
-    print(data_sr_attr)
-    print(data_sr_attr_id)
 
     def _extract_sr_food_attributes(row):
         result = {
@@ -95,6 +82,14 @@ if __name__ == '__main__':
         axis=1
     )
 
+    return data_sr
+
+
+if __name__ == '__main__':
+    data_ff = get_foundation_food()
+    exit()
+    data_sr = get_legacy_food()
+
     # Construct food table.
     data = pd.concat(
         [data_ff, data_sr], ignore_index=True
@@ -104,5 +99,21 @@ if __name__ == '__main__':
             if x in food_categories.index else None
     )
 
+    food_categories = pd.read_csv(
+        "tests/kg_v2/data/FDC/FoodData_Central_sr_legacy_food_csv_2018-04/"
+        "food_category.csv"
+    ).set_index('id')
+    data = data.drop(columns=[
+        'food_category_id',
+        'common_names',
+
+    ])
+
+    data = data[[
+        'id',
+        'data_type',
+        'description'
+    ]]
+
     print(data)
-    data.to_csv('test/kg_v2/outputs/check.csv')
+    data.to_csv('tests/kg_v2/outputs/fdc.csv')
