@@ -122,8 +122,16 @@ Please follow the instructions in the [README](./food_atlas/kgc/README.md) file.
 For any questions, please contact us at tagkopouloslab@ucdavis.edu.
 
 ## Citation
-
-Citation will be updated later.
+```bibtex
+@article{youn2024foodatlas,
+  title={FoodAtlas: Automated Knowledge Extraction of Food and Chemicals from Literature},
+  author={Youn, Jason and Li, Fangzhou and Simmons, Gabriel and Kim, Shanghyeon and Tagkopoulos, Ilias},
+  journal={bioRxiv},
+  pages={2024--05},
+  year={2024},
+  publisher={Cold Spring Harbor Laboratory}
+}
+```
 
 ## License
 
