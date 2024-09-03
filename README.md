@@ -123,13 +123,16 @@ For any questions, please contact us at tagkopouloslab@ucdavis.edu.
 
 ## Citation
 ```bibtex
-@article{youn2024foodatlas,
-  title={FoodAtlas: Automated Knowledge Extraction of Food and Chemicals from Literature},
-  author={Youn, Jason and Li, Fangzhou and Simmons, Gabriel and Kim, Shanghyeon and Tagkopoulos, Ilias},
-  journal={bioRxiv},
-  pages={2024--05},
-  year={2024},
-  publisher={Cold Spring Harbor Laboratory}
+@article{YOUN2024109072,
+  title = {FoodAtlas: Automated knowledge extraction of food and chemicals from literature},
+  journal = {Computers in Biology and Medicine},
+  volume = {181},
+  pages = {109072},
+  year = {2024},
+  issn = {0010-4825},
+  doi = {https://doi.org/10.1016/j.compbiomed.2024.109072},
+  url = {https://www.sciencedirect.com/science/article/pii/S0010482524011570},
+  author = {Jason Youn and Fangzhou Li and Gabriel Simmons and Shanghyeon Kim and Ilias Tagkopoulos},
 }
 ```
 
