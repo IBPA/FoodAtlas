@@ -1,3 +1,4 @@
+# Note: For the lastest code repository, please visit https://github.com/AI-Institute-Food-Systems/foodatlas.
 
 ![FoodAtlas Logo](./figures/foodatlas_logo_black.png)
 
